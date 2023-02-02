@@ -1,0 +1,644 @@
+# coding: utf-8
+# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
+
+from __future__ import absolute_import
+
+from .add_em_managed_external_exadata_insight_members_details import AddEmManagedExternalExadataInsightMembersDetails
+from .add_exadata_insight_members_details import AddExadataInsightMembersDetails
+from .autonomous_database_configuration_summary import AutonomousDatabaseConfigurationSummary
+from .autonomous_database_insight import AutonomousDatabaseInsight
+from .autonomous_database_insight_summary import AutonomousDatabaseInsightSummary
+from .awr_database_collection import AwrDatabaseCollection
+from .awr_database_cpu_usage_collection import AwrDatabaseCpuUsageCollection
+from .awr_database_cpu_usage_summary import AwrDatabaseCpuUsageSummary
+from .awr_database_metric_collection import AwrDatabaseMetricCollection
+from .awr_database_metric_summary import AwrDatabaseMetricSummary
+from .awr_database_parameter_change_collection import AwrDatabaseParameterChangeCollection
+from .awr_database_parameter_change_summary import AwrDatabaseParameterChangeSummary
+from .awr_database_parameter_collection import AwrDatabaseParameterCollection
+from .awr_database_parameter_summary import AwrDatabaseParameterSummary
+from .awr_database_report import AwrDatabaseReport
+from .awr_database_snapshot_collection import AwrDatabaseSnapshotCollection
+from .awr_database_snapshot_range_collection import AwrDatabaseSnapshotRangeCollection
+from .awr_database_snapshot_range_summary import AwrDatabaseSnapshotRangeSummary
+from .awr_database_snapshot_summary import AwrDatabaseSnapshotSummary
+from .awr_database_sql_report import AwrDatabaseSqlReport
+from .awr_database_summary import AwrDatabaseSummary
+from .awr_database_sysstat_collection import AwrDatabaseSysstatCollection
+from .awr_database_sysstat_summary import AwrDatabaseSysstatSummary
+from .awr_database_top_wait_event_collection import AwrDatabaseTopWaitEventCollection
+from .awr_database_top_wait_event_summary import AwrDatabaseTopWaitEventSummary
+from .awr_database_wait_event_bucket_collection import AwrDatabaseWaitEventBucketCollection
+from .awr_database_wait_event_bucket_summary import AwrDatabaseWaitEventBucketSummary
+from .awr_database_wait_event_collection import AwrDatabaseWaitEventCollection
+from .awr_database_wait_event_summary import AwrDatabaseWaitEventSummary
+from .awr_hub import AwrHub
+from .awr_hub_summary import AwrHubSummary
+from .awr_hub_summary_collection import AwrHubSummaryCollection
+from .awr_hubs import AwrHubs
+from .awr_query_result import AwrQueryResult
+from .awr_report import AwrReport
+from .awr_snapshot_collection import AwrSnapshotCollection
+from .awr_snapshot_summary import AwrSnapshotSummary
+from .awr_source_summary import AwrSourceSummary
+from .change_database_insight_compartment_details import ChangeDatabaseInsightCompartmentDetails
+from .change_enterprise_manager_bridge_compartment_details import ChangeEnterpriseManagerBridgeCompartmentDetails
+from .change_exadata_insight_compartment_details import ChangeExadataInsightCompartmentDetails
+from .change_host_insight_compartment_details import ChangeHostInsightCompartmentDetails
+from .change_operations_insights_private_endpoint_compartment_details import ChangeOperationsInsightsPrivateEndpointCompartmentDetails
+from .change_pe_comanaged_database_insight_details import ChangePeComanagedDatabaseInsightDetails
+from .cloud_importable_compute_entity_summary import CloudImportableComputeEntitySummary
+from .connection_details import ConnectionDetails
+from .create_awr_hub_details import CreateAwrHubDetails
+from .create_database_insight_details import CreateDatabaseInsightDetails
+from .create_em_managed_external_database_insight_details import CreateEmManagedExternalDatabaseInsightDetails
+from .create_em_managed_external_exadata_insight_details import CreateEmManagedExternalExadataInsightDetails
+from .create_em_managed_external_exadata_member_entity_details import CreateEmManagedExternalExadataMemberEntityDetails
+from .create_em_managed_external_host_insight_details import CreateEmManagedExternalHostInsightDetails
+from .create_enterprise_manager_bridge_details import CreateEnterpriseManagerBridgeDetails
+from .create_exadata_insight_details import CreateExadataInsightDetails
+from .create_host_insight_details import CreateHostInsightDetails
+from .create_macs_managed_cloud_host_insight_details import CreateMacsManagedCloudHostInsightDetails
+from .create_macs_managed_external_host_insight_details import CreateMacsManagedExternalHostInsightDetails
+from .create_operations_insights_private_endpoint_details import CreateOperationsInsightsPrivateEndpointDetails
+from .create_operations_insights_warehouse_details import CreateOperationsInsightsWarehouseDetails
+from .create_operations_insights_warehouse_user_details import CreateOperationsInsightsWarehouseUserDetails
+from .create_pe_comanaged_database_insight_details import CreatePeComanagedDatabaseInsightDetails
+from .credential_by_vault import CredentialByVault
+from .credential_details import CredentialDetails
+from .credentials_by_source import CredentialsBySource
+from .db_external_instance import DBExternalInstance
+from .db_external_properties import DBExternalProperties
+from .dbos_config_instance import DBOSConfigInstance
+from .data_object_column_metadata import DataObjectColumnMetadata
+from .data_object_column_unit import DataObjectColumnUnit
+from .data_object_core_column_unit import DataObjectCoreColumnUnit
+from .data_object_custom_column_unit import DataObjectCustomColumnUnit
+from .data_object_data_size_column_unit import DataObjectDataSizeColumnUnit
+from .data_object_frequency_column_unit import DataObjectFrequencyColumnUnit
+from .data_object_other_standard_column_unit import DataObjectOtherStandardColumnUnit
+from .data_object_power_column_unit import DataObjectPowerColumnUnit
+from .data_object_query import DataObjectQuery
+from .data_object_query_time_filters import DataObjectQueryTimeFilters
+from .data_object_rate_column_unit import DataObjectRateColumnUnit
+from .data_object_temperature_column_unit import DataObjectTemperatureColumnUnit
+from .data_object_templatized_query import DataObjectTemplatizedQuery
+from .data_object_time_column_unit import DataObjectTimeColumnUnit
+from .database_configuration_collection import DatabaseConfigurationCollection
+from .database_configuration_metric_group import DatabaseConfigurationMetricGroup
+from .database_configuration_summary import DatabaseConfigurationSummary
+from .database_details import DatabaseDetails
+from .database_insight import DatabaseInsight
+from .database_insight_summary import DatabaseInsightSummary
+from .database_insights import DatabaseInsights
+from .database_insights_collection import DatabaseInsightsCollection
+from .database_insights_data_object import DatabaseInsightsDataObject
+from .database_insights_data_object_summary import DatabaseInsightsDataObjectSummary
+from .disk_group_details import DiskGroupDetails
+from .download_operations_insights_warehouse_wallet_details import DownloadOperationsInsightsWarehouseWalletDetails
+from .em_managed_external_database_configuration_summary import EmManagedExternalDatabaseConfigurationSummary
+from .em_managed_external_database_insight import EmManagedExternalDatabaseInsight
+from .em_managed_external_database_insight_summary import EmManagedExternalDatabaseInsightSummary
+from .em_managed_external_exadata_insight import EmManagedExternalExadataInsight
+from .em_managed_external_exadata_insight_summary import EmManagedExternalExadataInsightSummary
+from .em_managed_external_host_configuration_summary import EmManagedExternalHostConfigurationSummary
+from .em_managed_external_host_insight import EmManagedExternalHostInsight
+from .em_managed_external_host_insight_summary import EmManagedExternalHostInsightSummary
+from .enable_database_insight_details import EnableDatabaseInsightDetails
+from .enable_em_managed_external_database_insight_details import EnableEmManagedExternalDatabaseInsightDetails
+from .enable_em_managed_external_exadata_insight_details import EnableEmManagedExternalExadataInsightDetails
+from .enable_em_managed_external_host_insight_details import EnableEmManagedExternalHostInsightDetails
+from .enable_exadata_insight_details import EnableExadataInsightDetails
+from .enable_host_insight_details import EnableHostInsightDetails
+from .enable_macs_managed_cloud_host_insight_details import EnableMacsManagedCloudHostInsightDetails
+from .enable_macs_managed_external_host_insight_details import EnableMacsManagedExternalHostInsightDetails
+from .enable_pe_comanaged_database_insight_details import EnablePeComanagedDatabaseInsightDetails
+from .enterprise_manager_bridge import EnterpriseManagerBridge
+from .enterprise_manager_bridge_collection import EnterpriseManagerBridgeCollection
+from .enterprise_manager_bridge_summary import EnterpriseManagerBridgeSummary
+from .enterprise_manager_bridges import EnterpriseManagerBridges
+from .exadata_configuration_collection import ExadataConfigurationCollection
+from .exadata_configuration_summary import ExadataConfigurationSummary
+from .exadata_database_machine_configuration_summary import ExadataDatabaseMachineConfigurationSummary
+from .exadata_database_statistics_summary import ExadataDatabaseStatisticsSummary
+from .exadata_details import ExadataDetails
+from .exadata_diskgroup_statistics_summary import ExadataDiskgroupStatisticsSummary
+from .exadata_host_statistics_summary import ExadataHostStatisticsSummary
+from .exadata_insight import ExadataInsight
+from .exadata_insight_resource_capacity_trend_aggregation import ExadataInsightResourceCapacityTrendAggregation
+from .exadata_insight_resource_capacity_trend_summary import ExadataInsightResourceCapacityTrendSummary
+from .exadata_insight_resource_forecast_trend_summary import ExadataInsightResourceForecastTrendSummary
+from .exadata_insight_resource_insight_utilization_item import ExadataInsightResourceInsightUtilizationItem
+from .exadata_insight_resource_statistics import ExadataInsightResourceStatistics
+from .exadata_insight_resource_statistics_aggregation import ExadataInsightResourceStatisticsAggregation
+from .exadata_insight_summary import ExadataInsightSummary
+from .exadata_insight_summary_collection import ExadataInsightSummaryCollection
+from .exadata_insights import ExadataInsights
+from .exadata_insights_data_object import ExadataInsightsDataObject
+from .exadata_insights_data_object_summary import ExadataInsightsDataObjectSummary
+from .exadata_member_collection import ExadataMemberCollection
+from .exadata_member_summary import ExadataMemberSummary
+from .exadata_storage_server_statistics_summary import ExadataStorageServerStatisticsSummary
+from .historical_data_item import HistoricalDataItem
+from .host_configuration_collection import HostConfigurationCollection
+from .host_configuration_metric_group import HostConfigurationMetricGroup
+from .host_configuration_summary import HostConfigurationSummary
+from .host_cpu_hardware_configuration import HostCpuHardwareConfiguration
+from .host_cpu_statistics import HostCpuStatistics
+from .host_cpu_usage import HostCpuUsage
+from .host_details import HostDetails
+from .host_entities import HostEntities
+from .host_hardware_configuration import HostHardwareConfiguration
+from .host_importable_agent_entity_summary import HostImportableAgentEntitySummary
+from .host_insight import HostInsight
+from .host_insight_resource_statistics_aggregation import HostInsightResourceStatisticsAggregation
+from .host_insight_summary import HostInsightSummary
+from .host_insight_summary_collection import HostInsightSummaryCollection
+from .host_insights import HostInsights
+from .host_insights_data_object import HostInsightsDataObject
+from .host_insights_data_object_summary import HostInsightsDataObjectSummary
+from .host_instance_map import HostInstanceMap
+from .host_memory_configuration import HostMemoryConfiguration
+from .host_memory_statistics import HostMemoryStatistics
+from .host_memory_usage import HostMemoryUsage
+from .host_network_activity_summary import HostNetworkActivitySummary
+from .host_network_configuration import HostNetworkConfiguration
+from .host_performance_metric_group import HostPerformanceMetricGroup
+from .host_product import HostProduct
+from .host_resource_allocation import HostResourceAllocation
+from .host_resource_capacity_trend_aggregation import HostResourceCapacityTrendAggregation
+from .host_resource_statistics import HostResourceStatistics
+from .host_top_processes import HostTopProcesses
+from .hosted_entity_collection import HostedEntityCollection
+from .hosted_entity_summary import HostedEntitySummary
+from .importable_agent_entity_summary import ImportableAgentEntitySummary
+from .importable_agent_entity_summary_collection import ImportableAgentEntitySummaryCollection
+from .importable_compute_entity_summary import ImportableComputeEntitySummary
+from .importable_compute_entity_summary_collection import ImportableComputeEntitySummaryCollection
+from .importable_enterprise_manager_entity import ImportableEnterpriseManagerEntity
+from .importable_enterprise_manager_entity_collection import ImportableEnterpriseManagerEntityCollection
+from .ingest_database_configuration_details import IngestDatabaseConfigurationDetails
+from .ingest_database_configuration_response_details import IngestDatabaseConfigurationResponseDetails
+from .ingest_host_configuration_details import IngestHostConfigurationDetails
+from .ingest_host_configuration_response_details import IngestHostConfigurationResponseDetails
+from .ingest_host_metrics_details import IngestHostMetricsDetails
+from .ingest_host_metrics_response_details import IngestHostMetricsResponseDetails
+from .ingest_sql_bucket_details import IngestSqlBucketDetails
+from .ingest_sql_bucket_response_details import IngestSqlBucketResponseDetails
+from .ingest_sql_plan_lines_details import IngestSqlPlanLinesDetails
+from .ingest_sql_plan_lines_response_details import IngestSqlPlanLinesResponseDetails
+from .ingest_sql_stats_details import IngestSqlStatsDetails
+from .ingest_sql_stats_response_details import IngestSqlStatsResponseDetails
+from .ingest_sql_text_details import IngestSqlTextDetails
+from .ingest_sql_text_response_details import IngestSqlTextResponseDetails
+from .instance_metrics import InstanceMetrics
+from .macs_managed_cloud_host_configuration_summary import MacsManagedCloudHostConfigurationSummary
+from .macs_managed_cloud_host_insight import MacsManagedCloudHostInsight
+from .macs_managed_cloud_host_insight_summary import MacsManagedCloudHostInsightSummary
+from .macs_managed_external_database_configuration_summary import MacsManagedExternalDatabaseConfigurationSummary
+from .macs_managed_external_database_insight import MacsManagedExternalDatabaseInsight
+from .macs_managed_external_database_insight_summary import MacsManagedExternalDatabaseInsightSummary
+from .macs_managed_external_host_configuration_summary import MacsManagedExternalHostConfigurationSummary
+from .macs_managed_external_host_insight import MacsManagedExternalHostInsight
+from .macs_managed_external_host_insight_summary import MacsManagedExternalHostInsightSummary
+from .operations_insights_private_endpoint import OperationsInsightsPrivateEndpoint
+from .operations_insights_private_endpoint_collection import OperationsInsightsPrivateEndpointCollection
+from .operations_insights_private_endpoint_summary import OperationsInsightsPrivateEndpointSummary
+from .operations_insights_warehouse import OperationsInsightsWarehouse
+from .operations_insights_warehouse_summary import OperationsInsightsWarehouseSummary
+from .operations_insights_warehouse_summary_collection import OperationsInsightsWarehouseSummaryCollection
+from .operations_insights_warehouse_user import OperationsInsightsWarehouseUser
+from .operations_insights_warehouse_user_summary import OperationsInsightsWarehouseUserSummary
+from .operations_insights_warehouse_user_summary_collection import OperationsInsightsWarehouseUserSummaryCollection
+from .operations_insights_warehouse_users import OperationsInsightsWarehouseUsers
+from .operations_insights_warehouses import OperationsInsightsWarehouses
+from .opsi_configurations import OpsiConfigurations
+from .opsi_data_object import OpsiDataObject
+from .opsi_data_object_summary import OpsiDataObjectSummary
+from .opsi_data_objects import OpsiDataObjects
+from .opsi_data_objects_collection import OpsiDataObjectsCollection
+from .pe_comanaged_database_connection_details import PeComanagedDatabaseConnectionDetails
+from .pe_comanaged_database_host_details import PeComanagedDatabaseHostDetails
+from .pe_comanaged_database_insight import PeComanagedDatabaseInsight
+from .pe_comanaged_database_insight_summary import PeComanagedDatabaseInsightSummary
+from .pe_comanaged_host_configuration_summary import PeComanagedHostConfigurationSummary
+from .pe_comanaged_managed_external_database_configuration_summary import PeComanagedManagedExternalDatabaseConfigurationSummary
+from .projected_data_item import ProjectedDataItem
+from .query_data_object_json_result_set_rows_collection import QueryDataObjectJsonResultSetRowsCollection
+from .query_data_object_result_set_column_metadata import QueryDataObjectResultSetColumnMetadata
+from .query_data_object_result_set_rows_collection import QueryDataObjectResultSetRowsCollection
+from .query_opsi_data_object_data_details import QueryOpsiDataObjectDataDetails
+from .resource_capacity_trend_aggregation import ResourceCapacityTrendAggregation
+from .resource_filters import ResourceFilters
+from .resource_insight_current_utilization import ResourceInsightCurrentUtilization
+from .resource_insight_projected_utilization import ResourceInsightProjectedUtilization
+from .resource_insight_projected_utilization_item import ResourceInsightProjectedUtilizationItem
+from .resource_statistics import ResourceStatistics
+from .resource_statistics_aggregation import ResourceStatisticsAggregation
+from .resource_usage_summary import ResourceUsageSummary
+from .resource_usage_trend_aggregation import ResourceUsageTrendAggregation
+from .sql_bucket import SqlBucket
+from .sql_insight_aggregation import SqlInsightAggregation
+from .sql_insight_aggregation_collection import SqlInsightAggregationCollection
+from .sql_insight_thresholds import SqlInsightThresholds
+from .sql_inventory import SqlInventory
+from .sql_plan_collection import SqlPlanCollection
+from .sql_plan_insight_aggregation import SqlPlanInsightAggregation
+from .sql_plan_insight_aggregation_collection import SqlPlanInsightAggregationCollection
+from .sql_plan_insights import SqlPlanInsights
+from .sql_plan_line import SqlPlanLine
+from .sql_plan_summary import SqlPlanSummary
+from .sql_response_time_distribution_aggregation import SqlResponseTimeDistributionAggregation
+from .sql_response_time_distribution_aggregation_collection import SqlResponseTimeDistributionAggregationCollection
+from .sql_search_collection import SqlSearchCollection
+from .sql_search_summary import SqlSearchSummary
+from .sql_statistic_aggregation import SqlStatisticAggregation
+from .sql_statistic_aggregation_collection import SqlStatisticAggregationCollection
+from .sql_statistics import SqlStatistics
+from .sql_statistics_time_series import SqlStatisticsTimeSeries
+from .sql_statistics_time_series_aggregation import SqlStatisticsTimeSeriesAggregation
+from .sql_statistics_time_series_aggregation_collection import SqlStatisticsTimeSeriesAggregationCollection
+from .sql_statistics_time_series_by_plan_aggregation import SqlStatisticsTimeSeriesByPlanAggregation
+from .sql_statistics_time_series_by_plan_aggregation_collection import SqlStatisticsTimeSeriesByPlanAggregationCollection
+from .sql_stats import SqlStats
+from .sql_text import SqlText
+from .sql_text_collection import SqlTextCollection
+from .sql_text_summary import SqlTextSummary
+from .storage_server_details import StorageServerDetails
+from .summarize_awr_sources_summaries_collection import SummarizeAwrSourcesSummariesCollection
+from .summarize_database_insight_resource_capacity_trend_aggregation_collection import SummarizeDatabaseInsightResourceCapacityTrendAggregationCollection
+from .summarize_database_insight_resource_forecast_trend_aggregation import SummarizeDatabaseInsightResourceForecastTrendAggregation
+from .summarize_database_insight_resource_statistics_aggregation_collection import SummarizeDatabaseInsightResourceStatisticsAggregationCollection
+from .summarize_database_insight_resource_usage_aggregation import SummarizeDatabaseInsightResourceUsageAggregation
+from .summarize_database_insight_resource_usage_trend_aggregation_collection import SummarizeDatabaseInsightResourceUsageTrendAggregationCollection
+from .summarize_database_insight_resource_utilization_insight_aggregation import SummarizeDatabaseInsightResourceUtilizationInsightAggregation
+from .summarize_database_insight_tablespace_usage_trend_aggregation_collection import SummarizeDatabaseInsightTablespaceUsageTrendAggregationCollection
+from .summarize_exadata_insight_resource_capacity_trend_aggregation import SummarizeExadataInsightResourceCapacityTrendAggregation
+from .summarize_exadata_insight_resource_capacity_trend_collection import SummarizeExadataInsightResourceCapacityTrendCollection
+from .summarize_exadata_insight_resource_forecast_trend_aggregation import SummarizeExadataInsightResourceForecastTrendAggregation
+from .summarize_exadata_insight_resource_forecast_trend_collection import SummarizeExadataInsightResourceForecastTrendCollection
+from .summarize_exadata_insight_resource_statistics_aggregation_collection import SummarizeExadataInsightResourceStatisticsAggregationCollection
+from .summarize_exadata_insight_resource_usage_aggregation import SummarizeExadataInsightResourceUsageAggregation
+from .summarize_exadata_insight_resource_usage_collection import SummarizeExadataInsightResourceUsageCollection
+from .summarize_exadata_insight_resource_utilization_insight_aggregation import SummarizeExadataInsightResourceUtilizationInsightAggregation
+from .summarize_host_insight_resource_capacity_trend_aggregation_collection import SummarizeHostInsightResourceCapacityTrendAggregationCollection
+from .summarize_host_insight_resource_forecast_trend_aggregation import SummarizeHostInsightResourceForecastTrendAggregation
+from .summarize_host_insight_resource_statistics_aggregation_collection import SummarizeHostInsightResourceStatisticsAggregationCollection
+from .summarize_host_insight_resource_usage_aggregation import SummarizeHostInsightResourceUsageAggregation
+from .summarize_host_insight_resource_usage_trend_aggregation_collection import SummarizeHostInsightResourceUsageTrendAggregationCollection
+from .summarize_host_insight_resource_utilization_insight_aggregation import SummarizeHostInsightResourceUtilizationInsightAggregation
+from .summarize_host_insights_top_processes_usage_collection import SummarizeHostInsightsTopProcessesUsageCollection
+from .summarize_host_insights_top_processes_usage_trend_collection import SummarizeHostInsightsTopProcessesUsageTrendCollection
+from .summarize_operations_insights_warehouse_resource_usage_aggregation import SummarizeOperationsInsightsWarehouseResourceUsageAggregation
+from .summary_statistics import SummaryStatistics
+from .tablespace_usage_trend import TablespaceUsageTrend
+from .tablespace_usage_trend_aggregation import TablespaceUsageTrendAggregation
+from .top_processes_usage import TopProcessesUsage
+from .top_processes_usage_trend import TopProcessesUsageTrend
+from .top_processes_usage_trend_aggregation import TopProcessesUsageTrendAggregation
+from .update_autonomous_database_insight_details import UpdateAutonomousDatabaseInsightDetails
+from .update_awr_hub_details import UpdateAwrHubDetails
+from .update_database_insight_details import UpdateDatabaseInsightDetails
+from .update_em_managed_external_database_insight_details import UpdateEmManagedExternalDatabaseInsightDetails
+from .update_em_managed_external_exadata_insight_details import UpdateEmManagedExternalExadataInsightDetails
+from .update_em_managed_external_host_insight_details import UpdateEmManagedExternalHostInsightDetails
+from .update_enterprise_manager_bridge_details import UpdateEnterpriseManagerBridgeDetails
+from .update_exadata_insight_details import UpdateExadataInsightDetails
+from .update_host_insight_details import UpdateHostInsightDetails
+from .update_macs_managed_cloud_host_insight_details import UpdateMacsManagedCloudHostInsightDetails
+from .update_macs_managed_external_database_insight_details import UpdateMacsManagedExternalDatabaseInsightDetails
+from .update_macs_managed_external_host_insight_details import UpdateMacsManagedExternalHostInsightDetails
+from .update_operations_insights_private_endpoint_details import UpdateOperationsInsightsPrivateEndpointDetails
+from .update_operations_insights_warehouse_details import UpdateOperationsInsightsWarehouseDetails
+from .update_operations_insights_warehouse_user_details import UpdateOperationsInsightsWarehouseUserDetails
+from .update_pe_comanaged_database_insight_details import UpdatePeComanagedDatabaseInsightDetails
+from .work_request import WorkRequest
+from .work_request_collection import WorkRequestCollection
+from .work_request_error import WorkRequestError
+from .work_request_error_collection import WorkRequestErrorCollection
+from .work_request_log_entry import WorkRequestLogEntry
+from .work_request_log_entry_collection import WorkRequestLogEntryCollection
+from .work_request_resource import WorkRequestResource
+from .work_requests import WorkRequests
+
+# Maps type names to classes for opsi services.
+opsi_type_mapping = {
+    "AddEmManagedExternalExadataInsightMembersDetails": AddEmManagedExternalExadataInsightMembersDetails,
+    "AddExadataInsightMembersDetails": AddExadataInsightMembersDetails,
+    "AutonomousDatabaseConfigurationSummary": AutonomousDatabaseConfigurationSummary,
+    "AutonomousDatabaseInsight": AutonomousDatabaseInsight,
+    "AutonomousDatabaseInsightSummary": AutonomousDatabaseInsightSummary,
+    "AwrDatabaseCollection": AwrDatabaseCollection,
+    "AwrDatabaseCpuUsageCollection": AwrDatabaseCpuUsageCollection,
+    "AwrDatabaseCpuUsageSummary": AwrDatabaseCpuUsageSummary,
+    "AwrDatabaseMetricCollection": AwrDatabaseMetricCollection,
+    "AwrDatabaseMetricSummary": AwrDatabaseMetricSummary,
+    "AwrDatabaseParameterChangeCollection": AwrDatabaseParameterChangeCollection,
+    "AwrDatabaseParameterChangeSummary": AwrDatabaseParameterChangeSummary,
+    "AwrDatabaseParameterCollection": AwrDatabaseParameterCollection,
+    "AwrDatabaseParameterSummary": AwrDatabaseParameterSummary,
+    "AwrDatabaseReport": AwrDatabaseReport,
+    "AwrDatabaseSnapshotCollection": AwrDatabaseSnapshotCollection,
+    "AwrDatabaseSnapshotRangeCollection": AwrDatabaseSnapshotRangeCollection,
+    "AwrDatabaseSnapshotRangeSummary": AwrDatabaseSnapshotRangeSummary,
+    "AwrDatabaseSnapshotSummary": AwrDatabaseSnapshotSummary,
+    "AwrDatabaseSqlReport": AwrDatabaseSqlReport,
+    "AwrDatabaseSummary": AwrDatabaseSummary,
+    "AwrDatabaseSysstatCollection": AwrDatabaseSysstatCollection,
+    "AwrDatabaseSysstatSummary": AwrDatabaseSysstatSummary,
+    "AwrDatabaseTopWaitEventCollection": AwrDatabaseTopWaitEventCollection,
+    "AwrDatabaseTopWaitEventSummary": AwrDatabaseTopWaitEventSummary,
+    "AwrDatabaseWaitEventBucketCollection": AwrDatabaseWaitEventBucketCollection,
+    "AwrDatabaseWaitEventBucketSummary": AwrDatabaseWaitEventBucketSummary,
+    "AwrDatabaseWaitEventCollection": AwrDatabaseWaitEventCollection,
+    "AwrDatabaseWaitEventSummary": AwrDatabaseWaitEventSummary,
+    "AwrHub": AwrHub,
+    "AwrHubSummary": AwrHubSummary,
+    "AwrHubSummaryCollection": AwrHubSummaryCollection,
+    "AwrHubs": AwrHubs,
+    "AwrQueryResult": AwrQueryResult,
+    "AwrReport": AwrReport,
+    "AwrSnapshotCollection": AwrSnapshotCollection,
+    "AwrSnapshotSummary": AwrSnapshotSummary,
+    "AwrSourceSummary": AwrSourceSummary,
+    "ChangeDatabaseInsightCompartmentDetails": ChangeDatabaseInsightCompartmentDetails,
+    "ChangeEnterpriseManagerBridgeCompartmentDetails": ChangeEnterpriseManagerBridgeCompartmentDetails,
+    "ChangeExadataInsightCompartmentDetails": ChangeExadataInsightCompartmentDetails,
+    "ChangeHostInsightCompartmentDetails": ChangeHostInsightCompartmentDetails,
+    "ChangeOperationsInsightsPrivateEndpointCompartmentDetails": ChangeOperationsInsightsPrivateEndpointCompartmentDetails,
+    "ChangePeComanagedDatabaseInsightDetails": ChangePeComanagedDatabaseInsightDetails,
+    "CloudImportableComputeEntitySummary": CloudImportableComputeEntitySummary,
+    "ConnectionDetails": ConnectionDetails,
+    "CreateAwrHubDetails": CreateAwrHubDetails,
+    "CreateDatabaseInsightDetails": CreateDatabaseInsightDetails,
+    "CreateEmManagedExternalDatabaseInsightDetails": CreateEmManagedExternalDatabaseInsightDetails,
+    "CreateEmManagedExternalExadataInsightDetails": CreateEmManagedExternalExadataInsightDetails,
+    "CreateEmManagedExternalExadataMemberEntityDetails": CreateEmManagedExternalExadataMemberEntityDetails,
+    "CreateEmManagedExternalHostInsightDetails": CreateEmManagedExternalHostInsightDetails,
+    "CreateEnterpriseManagerBridgeDetails": CreateEnterpriseManagerBridgeDetails,
+    "CreateExadataInsightDetails": CreateExadataInsightDetails,
+    "CreateHostInsightDetails": CreateHostInsightDetails,
+    "CreateMacsManagedCloudHostInsightDetails": CreateMacsManagedCloudHostInsightDetails,
+    "CreateMacsManagedExternalHostInsightDetails": CreateMacsManagedExternalHostInsightDetails,
+    "CreateOperationsInsightsPrivateEndpointDetails": CreateOperationsInsightsPrivateEndpointDetails,
+    "CreateOperationsInsightsWarehouseDetails": CreateOperationsInsightsWarehouseDetails,
+    "CreateOperationsInsightsWarehouseUserDetails": CreateOperationsInsightsWarehouseUserDetails,
+    "CreatePeComanagedDatabaseInsightDetails": CreatePeComanagedDatabaseInsightDetails,
+    "CredentialByVault": CredentialByVault,
+    "CredentialDetails": CredentialDetails,
+    "CredentialsBySource": CredentialsBySource,
+    "DBExternalInstance": DBExternalInstance,
+    "DBExternalProperties": DBExternalProperties,
+    "DBOSConfigInstance": DBOSConfigInstance,
+    "DataObjectColumnMetadata": DataObjectColumnMetadata,
+    "DataObjectColumnUnit": DataObjectColumnUnit,
+    "DataObjectCoreColumnUnit": DataObjectCoreColumnUnit,
+    "DataObjectCustomColumnUnit": DataObjectCustomColumnUnit,
+    "DataObjectDataSizeColumnUnit": DataObjectDataSizeColumnUnit,
+    "DataObjectFrequencyColumnUnit": DataObjectFrequencyColumnUnit,
+    "DataObjectOtherStandardColumnUnit": DataObjectOtherStandardColumnUnit,
+    "DataObjectPowerColumnUnit": DataObjectPowerColumnUnit,
+    "DataObjectQuery": DataObjectQuery,
+    "DataObjectQueryTimeFilters": DataObjectQueryTimeFilters,
+    "DataObjectRateColumnUnit": DataObjectRateColumnUnit,
+    "DataObjectTemperatureColumnUnit": DataObjectTemperatureColumnUnit,
+    "DataObjectTemplatizedQuery": DataObjectTemplatizedQuery,
+    "DataObjectTimeColumnUnit": DataObjectTimeColumnUnit,
+    "DatabaseConfigurationCollection": DatabaseConfigurationCollection,
+    "DatabaseConfigurationMetricGroup": DatabaseConfigurationMetricGroup,
+    "DatabaseConfigurationSummary": DatabaseConfigurationSummary,
+    "DatabaseDetails": DatabaseDetails,
+    "DatabaseInsight": DatabaseInsight,
+    "DatabaseInsightSummary": DatabaseInsightSummary,
+    "DatabaseInsights": DatabaseInsights,
+    "DatabaseInsightsCollection": DatabaseInsightsCollection,
+    "DatabaseInsightsDataObject": DatabaseInsightsDataObject,
+    "DatabaseInsightsDataObjectSummary": DatabaseInsightsDataObjectSummary,
+    "DiskGroupDetails": DiskGroupDetails,
+    "DownloadOperationsInsightsWarehouseWalletDetails": DownloadOperationsInsightsWarehouseWalletDetails,
+    "EmManagedExternalDatabaseConfigurationSummary": EmManagedExternalDatabaseConfigurationSummary,
+    "EmManagedExternalDatabaseInsight": EmManagedExternalDatabaseInsight,
+    "EmManagedExternalDatabaseInsightSummary": EmManagedExternalDatabaseInsightSummary,
+    "EmManagedExternalExadataInsight": EmManagedExternalExadataInsight,
+    "EmManagedExternalExadataInsightSummary": EmManagedExternalExadataInsightSummary,
+    "EmManagedExternalHostConfigurationSummary": EmManagedExternalHostConfigurationSummary,
+    "EmManagedExternalHostInsight": EmManagedExternalHostInsight,
+    "EmManagedExternalHostInsightSummary": EmManagedExternalHostInsightSummary,
+    "EnableDatabaseInsightDetails": EnableDatabaseInsightDetails,
+    "EnableEmManagedExternalDatabaseInsightDetails": EnableEmManagedExternalDatabaseInsightDetails,
+    "EnableEmManagedExternalExadataInsightDetails": EnableEmManagedExternalExadataInsightDetails,
+    "EnableEmManagedExternalHostInsightDetails": EnableEmManagedExternalHostInsightDetails,
+    "EnableExadataInsightDetails": EnableExadataInsightDetails,
+    "EnableHostInsightDetails": EnableHostInsightDetails,
+    "EnableMacsManagedCloudHostInsightDetails": EnableMacsManagedCloudHostInsightDetails,
+    "EnableMacsManagedExternalHostInsightDetails": EnableMacsManagedExternalHostInsightDetails,
+    "EnablePeComanagedDatabaseInsightDetails": EnablePeComanagedDatabaseInsightDetails,
+    "EnterpriseManagerBridge": EnterpriseManagerBridge,
+    "EnterpriseManagerBridgeCollection": EnterpriseManagerBridgeCollection,
+    "EnterpriseManagerBridgeSummary": EnterpriseManagerBridgeSummary,
+    "EnterpriseManagerBridges": EnterpriseManagerBridges,
+    "ExadataConfigurationCollection": ExadataConfigurationCollection,
+    "ExadataConfigurationSummary": ExadataConfigurationSummary,
+    "ExadataDatabaseMachineConfigurationSummary": ExadataDatabaseMachineConfigurationSummary,
+    "ExadataDatabaseStatisticsSummary": ExadataDatabaseStatisticsSummary,
+    "ExadataDetails": ExadataDetails,
+    "ExadataDiskgroupStatisticsSummary": ExadataDiskgroupStatisticsSummary,
+    "ExadataHostStatisticsSummary": ExadataHostStatisticsSummary,
+    "ExadataInsight": ExadataInsight,
+    "ExadataInsightResourceCapacityTrendAggregation": ExadataInsightResourceCapacityTrendAggregation,
+    "ExadataInsightResourceCapacityTrendSummary": ExadataInsightResourceCapacityTrendSummary,
+    "ExadataInsightResourceForecastTrendSummary": ExadataInsightResourceForecastTrendSummary,
+    "ExadataInsightResourceInsightUtilizationItem": ExadataInsightResourceInsightUtilizationItem,
+    "ExadataInsightResourceStatistics": ExadataInsightResourceStatistics,
+    "ExadataInsightResourceStatisticsAggregation": ExadataInsightResourceStatisticsAggregation,
+    "ExadataInsightSummary": ExadataInsightSummary,
+    "ExadataInsightSummaryCollection": ExadataInsightSummaryCollection,
+    "ExadataInsights": ExadataInsights,
+    "ExadataInsightsDataObject": ExadataInsightsDataObject,
+    "ExadataInsightsDataObjectSummary": ExadataInsightsDataObjectSummary,
+    "ExadataMemberCollection": ExadataMemberCollection,
+    "ExadataMemberSummary": ExadataMemberSummary,
+    "ExadataStorageServerStatisticsSummary": ExadataStorageServerStatisticsSummary,
+    "HistoricalDataItem": HistoricalDataItem,
+    "HostConfigurationCollection": HostConfigurationCollection,
+    "HostConfigurationMetricGroup": HostConfigurationMetricGroup,
+    "HostConfigurationSummary": HostConfigurationSummary,
+    "HostCpuHardwareConfiguration": HostCpuHardwareConfiguration,
+    "HostCpuStatistics": HostCpuStatistics,
+    "HostCpuUsage": HostCpuUsage,
+    "HostDetails": HostDetails,
+    "HostEntities": HostEntities,
+    "HostHardwareConfiguration": HostHardwareConfiguration,
+    "HostImportableAgentEntitySummary": HostImportableAgentEntitySummary,
+    "HostInsight": HostInsight,
+    "HostInsightResourceStatisticsAggregation": HostInsightResourceStatisticsAggregation,
+    "HostInsightSummary": HostInsightSummary,
+    "HostInsightSummaryCollection": HostInsightSummaryCollection,
+    "HostInsights": HostInsights,
+    "HostInsightsDataObject": HostInsightsDataObject,
+    "HostInsightsDataObjectSummary": HostInsightsDataObjectSummary,
+    "HostInstanceMap": HostInstanceMap,
+    "HostMemoryConfiguration": HostMemoryConfiguration,
+    "HostMemoryStatistics": HostMemoryStatistics,
+    "HostMemoryUsage": HostMemoryUsage,
+    "HostNetworkActivitySummary": HostNetworkActivitySummary,
+    "HostNetworkConfiguration": HostNetworkConfiguration,
+    "HostPerformanceMetricGroup": HostPerformanceMetricGroup,
+    "HostProduct": HostProduct,
+    "HostResourceAllocation": HostResourceAllocation,
+    "HostResourceCapacityTrendAggregation": HostResourceCapacityTrendAggregation,
+    "HostResourceStatistics": HostResourceStatistics,
+    "HostTopProcesses": HostTopProcesses,
+    "HostedEntityCollection": HostedEntityCollection,
+    "HostedEntitySummary": HostedEntitySummary,
+    "ImportableAgentEntitySummary": ImportableAgentEntitySummary,
+    "ImportableAgentEntitySummaryCollection": ImportableAgentEntitySummaryCollection,
+    "ImportableComputeEntitySummary": ImportableComputeEntitySummary,
+    "ImportableComputeEntitySummaryCollection": ImportableComputeEntitySummaryCollection,
+    "ImportableEnterpriseManagerEntity": ImportableEnterpriseManagerEntity,
+    "ImportableEnterpriseManagerEntityCollection": ImportableEnterpriseManagerEntityCollection,
+    "IngestDatabaseConfigurationDetails": IngestDatabaseConfigurationDetails,
+    "IngestDatabaseConfigurationResponseDetails": IngestDatabaseConfigurationResponseDetails,
+    "IngestHostConfigurationDetails": IngestHostConfigurationDetails,
+    "IngestHostConfigurationResponseDetails": IngestHostConfigurationResponseDetails,
+    "IngestHostMetricsDetails": IngestHostMetricsDetails,
+    "IngestHostMetricsResponseDetails": IngestHostMetricsResponseDetails,
+    "IngestSqlBucketDetails": IngestSqlBucketDetails,
+    "IngestSqlBucketResponseDetails": IngestSqlBucketResponseDetails,
+    "IngestSqlPlanLinesDetails": IngestSqlPlanLinesDetails,
+    "IngestSqlPlanLinesResponseDetails": IngestSqlPlanLinesResponseDetails,
+    "IngestSqlStatsDetails": IngestSqlStatsDetails,
+    "IngestSqlStatsResponseDetails": IngestSqlStatsResponseDetails,
+    "IngestSqlTextDetails": IngestSqlTextDetails,
+    "IngestSqlTextResponseDetails": IngestSqlTextResponseDetails,
+    "InstanceMetrics": InstanceMetrics,
+    "MacsManagedCloudHostConfigurationSummary": MacsManagedCloudHostConfigurationSummary,
+    "MacsManagedCloudHostInsight": MacsManagedCloudHostInsight,
+    "MacsManagedCloudHostInsightSummary": MacsManagedCloudHostInsightSummary,
+    "MacsManagedExternalDatabaseConfigurationSummary": MacsManagedExternalDatabaseConfigurationSummary,
+    "MacsManagedExternalDatabaseInsight": MacsManagedExternalDatabaseInsight,
+    "MacsManagedExternalDatabaseInsightSummary": MacsManagedExternalDatabaseInsightSummary,
+    "MacsManagedExternalHostConfigurationSummary": MacsManagedExternalHostConfigurationSummary,
+    "MacsManagedExternalHostInsight": MacsManagedExternalHostInsight,
+    "MacsManagedExternalHostInsightSummary": MacsManagedExternalHostInsightSummary,
+    "OperationsInsightsPrivateEndpoint": OperationsInsightsPrivateEndpoint,
+    "OperationsInsightsPrivateEndpointCollection": OperationsInsightsPrivateEndpointCollection,
+    "OperationsInsightsPrivateEndpointSummary": OperationsInsightsPrivateEndpointSummary,
+    "OperationsInsightsWarehouse": OperationsInsightsWarehouse,
+    "OperationsInsightsWarehouseSummary": OperationsInsightsWarehouseSummary,
+    "OperationsInsightsWarehouseSummaryCollection": OperationsInsightsWarehouseSummaryCollection,
+    "OperationsInsightsWarehouseUser": OperationsInsightsWarehouseUser,
+    "OperationsInsightsWarehouseUserSummary": OperationsInsightsWarehouseUserSummary,
+    "OperationsInsightsWarehouseUserSummaryCollection": OperationsInsightsWarehouseUserSummaryCollection,
+    "OperationsInsightsWarehouseUsers": OperationsInsightsWarehouseUsers,
+    "OperationsInsightsWarehouses": OperationsInsightsWarehouses,
+    "OpsiConfigurations": OpsiConfigurations,
+    "OpsiDataObject": OpsiDataObject,
+    "OpsiDataObjectSummary": OpsiDataObjectSummary,
+    "OpsiDataObjects": OpsiDataObjects,
+    "OpsiDataObjectsCollection": OpsiDataObjectsCollection,
+    "PeComanagedDatabaseConnectionDetails": PeComanagedDatabaseConnectionDetails,
+    "PeComanagedDatabaseHostDetails": PeComanagedDatabaseHostDetails,
+    "PeComanagedDatabaseInsight": PeComanagedDatabaseInsight,
+    "PeComanagedDatabaseInsightSummary": PeComanagedDatabaseInsightSummary,
+    "PeComanagedHostConfigurationSummary": PeComanagedHostConfigurationSummary,
+    "PeComanagedManagedExternalDatabaseConfigurationSummary": PeComanagedManagedExternalDatabaseConfigurationSummary,
+    "ProjectedDataItem": ProjectedDataItem,
+    "QueryDataObjectJsonResultSetRowsCollection": QueryDataObjectJsonResultSetRowsCollection,
+    "QueryDataObjectResultSetColumnMetadata": QueryDataObjectResultSetColumnMetadata,
+    "QueryDataObjectResultSetRowsCollection": QueryDataObjectResultSetRowsCollection,
+    "QueryOpsiDataObjectDataDetails": QueryOpsiDataObjectDataDetails,
+    "ResourceCapacityTrendAggregation": ResourceCapacityTrendAggregation,
+    "ResourceFilters": ResourceFilters,
+    "ResourceInsightCurrentUtilization": ResourceInsightCurrentUtilization,
+    "ResourceInsightProjectedUtilization": ResourceInsightProjectedUtilization,
+    "ResourceInsightProjectedUtilizationItem": ResourceInsightProjectedUtilizationItem,
+    "ResourceStatistics": ResourceStatistics,
+    "ResourceStatisticsAggregation": ResourceStatisticsAggregation,
+    "ResourceUsageSummary": ResourceUsageSummary,
+    "ResourceUsageTrendAggregation": ResourceUsageTrendAggregation,
+    "SqlBucket": SqlBucket,
+    "SqlInsightAggregation": SqlInsightAggregation,
+    "SqlInsightAggregationCollection": SqlInsightAggregationCollection,
+    "SqlInsightThresholds": SqlInsightThresholds,
+    "SqlInventory": SqlInventory,
+    "SqlPlanCollection": SqlPlanCollection,
+    "SqlPlanInsightAggregation": SqlPlanInsightAggregation,
+    "SqlPlanInsightAggregationCollection": SqlPlanInsightAggregationCollection,
+    "SqlPlanInsights": SqlPlanInsights,
+    "SqlPlanLine": SqlPlanLine,
+    "SqlPlanSummary": SqlPlanSummary,
+    "SqlResponseTimeDistributionAggregation": SqlResponseTimeDistributionAggregation,
+    "SqlResponseTimeDistributionAggregationCollection": SqlResponseTimeDistributionAggregationCollection,
+    "SqlSearchCollection": SqlSearchCollection,
+    "SqlSearchSummary": SqlSearchSummary,
+    "SqlStatisticAggregation": SqlStatisticAggregation,
+    "SqlStatisticAggregationCollection": SqlStatisticAggregationCollection,
+    "SqlStatistics": SqlStatistics,
+    "SqlStatisticsTimeSeries": SqlStatisticsTimeSeries,
+    "SqlStatisticsTimeSeriesAggregation": SqlStatisticsTimeSeriesAggregation,
+    "SqlStatisticsTimeSeriesAggregationCollection": SqlStatisticsTimeSeriesAggregationCollection,
+    "SqlStatisticsTimeSeriesByPlanAggregation": SqlStatisticsTimeSeriesByPlanAggregation,
+    "SqlStatisticsTimeSeriesByPlanAggregationCollection": SqlStatisticsTimeSeriesByPlanAggregationCollection,
+    "SqlStats": SqlStats,
+    "SqlText": SqlText,
+    "SqlTextCollection": SqlTextCollection,
+    "SqlTextSummary": SqlTextSummary,
+    "StorageServerDetails": StorageServerDetails,
+    "SummarizeAwrSourcesSummariesCollection": SummarizeAwrSourcesSummariesCollection,
+    "SummarizeDatabaseInsightResourceCapacityTrendAggregationCollection": SummarizeDatabaseInsightResourceCapacityTrendAggregationCollection,
+    "SummarizeDatabaseInsightResourceForecastTrendAggregation": SummarizeDatabaseInsightResourceForecastTrendAggregation,
+    "SummarizeDatabaseInsightResourceStatisticsAggregationCollection": SummarizeDatabaseInsightResourceStatisticsAggregationCollection,
+    "SummarizeDatabaseInsightResourceUsageAggregation": SummarizeDatabaseInsightResourceUsageAggregation,
+    "SummarizeDatabaseInsightResourceUsageTrendAggregationCollection": SummarizeDatabaseInsightResourceUsageTrendAggregationCollection,
+    "SummarizeDatabaseInsightResourceUtilizationInsightAggregation": SummarizeDatabaseInsightResourceUtilizationInsightAggregation,
+    "SummarizeDatabaseInsightTablespaceUsageTrendAggregationCollection": SummarizeDatabaseInsightTablespaceUsageTrendAggregationCollection,
+    "SummarizeExadataInsightResourceCapacityTrendAggregation": SummarizeExadataInsightResourceCapacityTrendAggregation,
+    "SummarizeExadataInsightResourceCapacityTrendCollection": SummarizeExadataInsightResourceCapacityTrendCollection,
+    "SummarizeExadataInsightResourceForecastTrendAggregation": SummarizeExadataInsightResourceForecastTrendAggregation,
+    "SummarizeExadataInsightResourceForecastTrendCollection": SummarizeExadataInsightResourceForecastTrendCollection,
+    "SummarizeExadataInsightResourceStatisticsAggregationCollection": SummarizeExadataInsightResourceStatisticsAggregationCollection,
+    "SummarizeExadataInsightResourceUsageAggregation": SummarizeExadataInsightResourceUsageAggregation,
+    "SummarizeExadataInsightResourceUsageCollection": SummarizeExadataInsightResourceUsageCollection,
+    "SummarizeExadataInsightResourceUtilizationInsightAggregation": SummarizeExadataInsightResourceUtilizationInsightAggregation,
+    "SummarizeHostInsightResourceCapacityTrendAggregationCollection": SummarizeHostInsightResourceCapacityTrendAggregationCollection,
+    "SummarizeHostInsightResourceForecastTrendAggregation": SummarizeHostInsightResourceForecastTrendAggregation,
+    "SummarizeHostInsightResourceStatisticsAggregationCollection": SummarizeHostInsightResourceStatisticsAggregationCollection,
+    "SummarizeHostInsightResourceUsageAggregation": SummarizeHostInsightResourceUsageAggregation,
+    "SummarizeHostInsightResourceUsageTrendAggregationCollection": SummarizeHostInsightResourceUsageTrendAggregationCollection,
+    "SummarizeHostInsightResourceUtilizationInsightAggregation": SummarizeHostInsightResourceUtilizationInsightAggregation,
+    "SummarizeHostInsightsTopProcessesUsageCollection": SummarizeHostInsightsTopProcessesUsageCollection,
+    "SummarizeHostInsightsTopProcessesUsageTrendCollection": SummarizeHostInsightsTopProcessesUsageTrendCollection,
+    "SummarizeOperationsInsightsWarehouseResourceUsageAggregation": SummarizeOperationsInsightsWarehouseResourceUsageAggregation,
+    "SummaryStatistics": SummaryStatistics,
+    "TablespaceUsageTrend": TablespaceUsageTrend,
+    "TablespaceUsageTrendAggregation": TablespaceUsageTrendAggregation,
+    "TopProcessesUsage": TopProcessesUsage,
+    "TopProcessesUsageTrend": TopProcessesUsageTrend,
+    "TopProcessesUsageTrendAggregation": TopProcessesUsageTrendAggregation,
+    "UpdateAutonomousDatabaseInsightDetails": UpdateAutonomousDatabaseInsightDetails,
+    "UpdateAwrHubDetails": UpdateAwrHubDetails,
+    "UpdateDatabaseInsightDetails": UpdateDatabaseInsightDetails,
+    "UpdateEmManagedExternalDatabaseInsightDetails": UpdateEmManagedExternalDatabaseInsightDetails,
+    "UpdateEmManagedExternalExadataInsightDetails": UpdateEmManagedExternalExadataInsightDetails,
+    "UpdateEmManagedExternalHostInsightDetails": UpdateEmManagedExternalHostInsightDetails,
+    "UpdateEnterpriseManagerBridgeDetails": UpdateEnterpriseManagerBridgeDetails,
+    "UpdateExadataInsightDetails": UpdateExadataInsightDetails,
+    "UpdateHostInsightDetails": UpdateHostInsightDetails,
+    "UpdateMacsManagedCloudHostInsightDetails": UpdateMacsManagedCloudHostInsightDetails,
+    "UpdateMacsManagedExternalDatabaseInsightDetails": UpdateMacsManagedExternalDatabaseInsightDetails,
+    "UpdateMacsManagedExternalHostInsightDetails": UpdateMacsManagedExternalHostInsightDetails,
+    "UpdateOperationsInsightsPrivateEndpointDetails": UpdateOperationsInsightsPrivateEndpointDetails,
+    "UpdateOperationsInsightsWarehouseDetails": UpdateOperationsInsightsWarehouseDetails,
+    "UpdateOperationsInsightsWarehouseUserDetails": UpdateOperationsInsightsWarehouseUserDetails,
+    "UpdatePeComanagedDatabaseInsightDetails": UpdatePeComanagedDatabaseInsightDetails,
+    "WorkRequest": WorkRequest,
+    "WorkRequestCollection": WorkRequestCollection,
+    "WorkRequestError": WorkRequestError,
+    "WorkRequestErrorCollection": WorkRequestErrorCollection,
+    "WorkRequestLogEntry": WorkRequestLogEntry,
+    "WorkRequestLogEntryCollection": WorkRequestLogEntryCollection,
+    "WorkRequestResource": WorkRequestResource,
+    "WorkRequests": WorkRequests
+}
