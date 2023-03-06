@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -189,6 +189,8 @@ from .deploy_stage_collection import DeployStageCollection
 from .deploy_stage_execution_progress import DeployStageExecutionProgress
 from .deploy_stage_execution_progress_details import DeployStageExecutionProgressDetails
 from .deploy_stage_execution_step import DeployStageExecutionStep
+from .deploy_stage_override_argument import DeployStageOverrideArgument
+from .deploy_stage_override_argument_collection import DeployStageOverrideArgumentCollection
 from .deploy_stage_predecessor import DeployStagePredecessor
 from .deploy_stage_predecessor_collection import DeployStagePredecessorCollection
 from .deploy_stage_rollback_policy import DeployStageRollbackPolicy
@@ -621,6 +623,8 @@ devops_type_mapping = {
     "DeployStageExecutionProgress": DeployStageExecutionProgress,
     "DeployStageExecutionProgressDetails": DeployStageExecutionProgressDetails,
     "DeployStageExecutionStep": DeployStageExecutionStep,
+    "DeployStageOverrideArgument": DeployStageOverrideArgument,
+    "DeployStageOverrideArgumentCollection": DeployStageOverrideArgumentCollection,
     "DeployStagePredecessor": DeployStagePredecessor,
     "DeployStagePredecessorCollection": DeployStagePredecessorCollection,
     "DeployStageRollbackPolicy": DeployStageRollbackPolicy,

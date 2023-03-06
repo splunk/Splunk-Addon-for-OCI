@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from .rule_condition import RuleCondition
@@ -46,7 +46,7 @@ class SourceIpAddressCondition(RuleCondition):
     @property
     def attribute_value(self):
         """
-        Gets the attribute_value of this SourceIpAddressCondition.
+        **[Required]** Gets the attribute_value of this SourceIpAddressCondition.
         An IPv4 or IPv6 address range that the source IP address of an incoming packet must match.
         The service accepts only classless inter-domain routing (CIDR) format (x.x.x.x/y or x:x::x/y) strings.
         Specify 0.0.0.0/0 or ::/0 to match all incoming traffic.

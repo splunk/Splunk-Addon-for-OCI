@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from .create_autonomous_database_base import CreateAutonomousDatabaseBase
@@ -185,6 +185,10 @@ class CreateCrossRegionAutonomousDatabaseDataGuardDetails(CreateAutonomousDataba
             The value to assign to the defined_tags property of this CreateCrossRegionAutonomousDatabaseDataGuardDetails.
         :type defined_tags: dict(str, dict(str, object))
 
+        :param private_endpoint_ip:
+            The value to assign to the private_endpoint_ip property of this CreateCrossRegionAutonomousDatabaseDataGuardDetails.
+        :type private_endpoint_ip: str
+
         :param db_version:
             The value to assign to the db_version property of this CreateCrossRegionAutonomousDatabaseDataGuardDetails.
         :type db_version: str
@@ -259,6 +263,7 @@ class CreateCrossRegionAutonomousDatabaseDataGuardDetails(CreateAutonomousDataba
             'private_endpoint_label': 'str',
             'freeform_tags': 'dict(str, str)',
             'defined_tags': 'dict(str, dict(str, object))',
+            'private_endpoint_ip': 'str',
             'db_version': 'str',
             'source': 'str',
             'customer_contacts': 'list[CustomerContact]',
@@ -302,6 +307,7 @@ class CreateCrossRegionAutonomousDatabaseDataGuardDetails(CreateAutonomousDataba
             'private_endpoint_label': 'privateEndpointLabel',
             'freeform_tags': 'freeformTags',
             'defined_tags': 'definedTags',
+            'private_endpoint_ip': 'privateEndpointIp',
             'db_version': 'dbVersion',
             'source': 'source',
             'customer_contacts': 'customerContacts',
@@ -344,6 +350,7 @@ class CreateCrossRegionAutonomousDatabaseDataGuardDetails(CreateAutonomousDataba
         self._private_endpoint_label = None
         self._freeform_tags = None
         self._defined_tags = None
+        self._private_endpoint_ip = None
         self._db_version = None
         self._source = None
         self._customer_contacts = None

@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -46,6 +46,10 @@ class BuildPipelineSummary(object):
             The value to assign to the time_updated property of this BuildPipelineSummary.
         :type time_updated: datetime
 
+        :param lifecycle_details:
+            The value to assign to the lifecycle_details property of this BuildPipelineSummary.
+        :type lifecycle_details: str
+
         :param lifecycle_state:
             The value to assign to the lifecycle_state property of this BuildPipelineSummary.
         :type lifecycle_state: str
@@ -75,6 +79,7 @@ class BuildPipelineSummary(object):
             'project_id': 'str',
             'time_created': 'datetime',
             'time_updated': 'datetime',
+            'lifecycle_details': 'str',
             'lifecycle_state': 'str',
             'build_pipeline_parameters': 'BuildPipelineParameterCollection',
             'freeform_tags': 'dict(str, str)',
@@ -90,6 +95,7 @@ class BuildPipelineSummary(object):
             'project_id': 'projectId',
             'time_created': 'timeCreated',
             'time_updated': 'timeUpdated',
+            'lifecycle_details': 'lifecycleDetails',
             'lifecycle_state': 'lifecycleState',
             'build_pipeline_parameters': 'buildPipelineParameters',
             'freeform_tags': 'freeformTags',
@@ -104,6 +110,7 @@ class BuildPipelineSummary(object):
         self._project_id = None
         self._time_created = None
         self._time_updated = None
+        self._lifecycle_details = None
         self._lifecycle_state = None
         self._build_pipeline_parameters = None
         self._freeform_tags = None
@@ -285,6 +292,30 @@ class BuildPipelineSummary(object):
         :type: datetime
         """
         self._time_updated = time_updated
+
+    @property
+    def lifecycle_details(self):
+        """
+        Gets the lifecycle_details of this BuildPipelineSummary.
+        A detailed message describing the current state. For example, can be used to provide actionable information for a resource in Failed state.
+
+
+        :return: The lifecycle_details of this BuildPipelineSummary.
+        :rtype: str
+        """
+        return self._lifecycle_details
+
+    @lifecycle_details.setter
+    def lifecycle_details(self, lifecycle_details):
+        """
+        Sets the lifecycle_details of this BuildPipelineSummary.
+        A detailed message describing the current state. For example, can be used to provide actionable information for a resource in Failed state.
+
+
+        :param lifecycle_details: The lifecycle_details of this BuildPipelineSummary.
+        :type: str
+        """
+        self._lifecycle_details = lifecycle_details
 
     @property
     def lifecycle_state(self):

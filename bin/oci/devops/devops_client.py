@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -140,7 +140,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/approve_deployment.py.html>`__ to see an example of how to use approve_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/approve_deployment.py.html>`__ to see an example of how to use approve_deployment API.
         """
         resource_path = "/deployments/{deploymentId}/actions/approve"
         method = "POST"
@@ -250,7 +250,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/cancel_build_run.py.html>`__ to see an example of how to use cancel_build_run API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/cancel_build_run.py.html>`__ to see an example of how to use cancel_build_run API.
         """
         resource_path = "/buildRuns/{buildRunId}/actions/cancel"
         method = "POST"
@@ -360,7 +360,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/cancel_deployment.py.html>`__ to see an example of how to use cancel_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/cancel_deployment.py.html>`__ to see an example of how to use cancel_deployment API.
         """
         resource_path = "/deployments/{deploymentId}/actions/cancel"
         method = "POST"
@@ -434,6 +434,109 @@ class DevopsClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def cancel_scheduled_cascading_project_deletion(self, project_id, **kwargs):
+        """
+        Cascading operation that restores Project and child resources from a DELETING state to an active state
+
+
+        :param str project_id: (required)
+            Unique project identifier.
+
+        :param str if_match: (optional)
+            For optimistic concurrency control. In the PUT or DELETE call for a resource, set the `if-match` parameter to the value of the etag from a previous GET or POST response for that resource. The resource will be updated or deleted only if the etag you provide matches the resource's current etag value.
+
+        :param str opc_request_id: (optional)
+            Unique Oracle-assigned identifier for the request.  If you need to contact Oracle about a particular request, provide the request ID.
+
+        :param str opc_retry_token: (optional)
+            A token that uniquely identifies a request so it can be retried in case of a timeout or server error without risk of executing that same action again. Retry tokens expire after 24 hours, but can be invalidated earlier due to conflicting operations. For example, if a resource has been deleted and purged from the system, then a retry of the original creation request might be rejected.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/cancel_scheduled_cascading_project_deletion.py.html>`__ to see an example of how to use cancel_scheduled_cascading_project_deletion API.
+        """
+        resource_path = "/projects/{projectId}/actions/cancelScheduledCascadingProjectDeletion"
+        method = "POST"
+        operation_name = "cancel_scheduled_cascading_project_deletion"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/devops/20210630/Project/CancelScheduledCascadingProjectDeletion"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "if_match",
+            "opc_request_id",
+            "opc_retry_token"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "cancel_scheduled_cascading_project_deletion got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "projectId": project_id
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "if-match": kwargs.get("if_match", missing),
+            "opc-request-id": kwargs.get("opc_request_id", missing),
+            "opc-retry-token": kwargs.get("opc_retry_token", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_retry_token_if_needed(header_params)
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def change_project_compartment(self, project_id, change_project_compartment_details, **kwargs):
         """
         Moves a project resource from one compartment OCID to another.
@@ -470,7 +573,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/change_project_compartment.py.html>`__ to see an example of how to use change_project_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/change_project_compartment.py.html>`__ to see an example of how to use change_project_compartment API.
         """
         resource_path = "/projects/{projectId}/actions/changeCompartment"
         method = "POST"
@@ -572,7 +675,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/create_build_pipeline.py.html>`__ to see an example of how to use create_build_pipeline API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/create_build_pipeline.py.html>`__ to see an example of how to use create_build_pipeline API.
         """
         resource_path = "/buildPipelines"
         method = "POST"
@@ -662,7 +765,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/create_build_pipeline_stage.py.html>`__ to see an example of how to use create_build_pipeline_stage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/create_build_pipeline_stage.py.html>`__ to see an example of how to use create_build_pipeline_stage API.
         """
         resource_path = "/buildPipelineStages"
         method = "POST"
@@ -755,7 +858,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/create_build_run.py.html>`__ to see an example of how to use create_build_run API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/create_build_run.py.html>`__ to see an example of how to use create_build_run API.
         """
         resource_path = "/buildRuns"
         method = "POST"
@@ -847,7 +950,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/create_connection.py.html>`__ to see an example of how to use create_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/create_connection.py.html>`__ to see an example of how to use create_connection API.
         """
         resource_path = "/connections"
         method = "POST"
@@ -937,7 +1040,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/create_deploy_artifact.py.html>`__ to see an example of how to use create_deploy_artifact API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/create_deploy_artifact.py.html>`__ to see an example of how to use create_deploy_artifact API.
         """
         resource_path = "/deployArtifacts"
         method = "POST"
@@ -1027,7 +1130,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/create_deploy_environment.py.html>`__ to see an example of how to use create_deploy_environment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/create_deploy_environment.py.html>`__ to see an example of how to use create_deploy_environment API.
         """
         resource_path = "/deployEnvironments"
         method = "POST"
@@ -1117,7 +1220,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/create_deploy_pipeline.py.html>`__ to see an example of how to use create_deploy_pipeline API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/create_deploy_pipeline.py.html>`__ to see an example of how to use create_deploy_pipeline API.
         """
         resource_path = "/deployPipelines"
         method = "POST"
@@ -1207,7 +1310,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/create_deploy_stage.py.html>`__ to see an example of how to use create_deploy_stage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/create_deploy_stage.py.html>`__ to see an example of how to use create_deploy_stage API.
         """
         resource_path = "/deployStages"
         method = "POST"
@@ -1297,7 +1400,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/create_deployment.py.html>`__ to see an example of how to use create_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/create_deployment.py.html>`__ to see an example of how to use create_deployment API.
         """
         resource_path = "/deployments"
         method = "POST"
@@ -1387,7 +1490,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/create_project.py.html>`__ to see an example of how to use create_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/create_project.py.html>`__ to see an example of how to use create_project API.
         """
         resource_path = "/projects"
         method = "POST"
@@ -1477,7 +1580,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/create_repository.py.html>`__ to see an example of how to use create_repository API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/create_repository.py.html>`__ to see an example of how to use create_repository API.
         """
         resource_path = "/repositories"
         method = "POST"
@@ -1567,7 +1670,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/create_trigger.py.html>`__ to see an example of how to use create_trigger API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/create_trigger.py.html>`__ to see an example of how to use create_trigger API.
         """
         resource_path = "/triggers"
         method = "POST"
@@ -1657,7 +1760,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/delete_build_pipeline.py.html>`__ to see an example of how to use delete_build_pipeline API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/delete_build_pipeline.py.html>`__ to see an example of how to use delete_build_pipeline API.
         """
         resource_path = "/buildPipelines/{buildPipelineId}"
         method = "DELETE"
@@ -1754,7 +1857,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/delete_build_pipeline_stage.py.html>`__ to see an example of how to use delete_build_pipeline_stage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/delete_build_pipeline_stage.py.html>`__ to see an example of how to use delete_build_pipeline_stage API.
         """
         resource_path = "/buildPipelineStages/{buildPipelineStageId}"
         method = "DELETE"
@@ -1851,7 +1954,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/delete_connection.py.html>`__ to see an example of how to use delete_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/delete_connection.py.html>`__ to see an example of how to use delete_connection API.
         """
         resource_path = "/connections/{connectionId}"
         method = "DELETE"
@@ -1948,7 +2051,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/delete_deploy_artifact.py.html>`__ to see an example of how to use delete_deploy_artifact API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/delete_deploy_artifact.py.html>`__ to see an example of how to use delete_deploy_artifact API.
         """
         resource_path = "/deployArtifacts/{deployArtifactId}"
         method = "DELETE"
@@ -2045,7 +2148,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/delete_deploy_environment.py.html>`__ to see an example of how to use delete_deploy_environment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/delete_deploy_environment.py.html>`__ to see an example of how to use delete_deploy_environment API.
         """
         resource_path = "/deployEnvironments/{deployEnvironmentId}"
         method = "DELETE"
@@ -2142,7 +2245,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/delete_deploy_pipeline.py.html>`__ to see an example of how to use delete_deploy_pipeline API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/delete_deploy_pipeline.py.html>`__ to see an example of how to use delete_deploy_pipeline API.
         """
         resource_path = "/deployPipelines/{deployPipelineId}"
         method = "DELETE"
@@ -2239,7 +2342,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/delete_deploy_stage.py.html>`__ to see an example of how to use delete_deploy_stage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/delete_deploy_stage.py.html>`__ to see an example of how to use delete_deploy_stage API.
         """
         resource_path = "/deployStages/{deployStageId}"
         method = "DELETE"
@@ -2336,7 +2439,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/delete_project.py.html>`__ to see an example of how to use delete_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/delete_project.py.html>`__ to see an example of how to use delete_project API.
         """
         resource_path = "/projects/{projectId}"
         method = "DELETE"
@@ -2439,7 +2542,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/delete_ref.py.html>`__ to see an example of how to use delete_ref API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/delete_ref.py.html>`__ to see an example of how to use delete_ref API.
         """
         resource_path = "/repositories/{repositoryId}/refs/{refName}"
         method = "DELETE"
@@ -2540,7 +2643,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/delete_repository.py.html>`__ to see an example of how to use delete_repository API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/delete_repository.py.html>`__ to see an example of how to use delete_repository API.
         """
         resource_path = "/repositories/{repositoryId}"
         method = "DELETE"
@@ -2637,7 +2740,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/delete_trigger.py.html>`__ to see an example of how to use delete_trigger API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/delete_trigger.py.html>`__ to see an example of how to use delete_trigger API.
         """
         resource_path = "/triggers/{triggerId}"
         method = "DELETE"
@@ -2731,7 +2834,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_build_pipeline.py.html>`__ to see an example of how to use get_build_pipeline API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_build_pipeline.py.html>`__ to see an example of how to use get_build_pipeline API.
         """
         resource_path = "/buildPipelines/{buildPipelineId}"
         method = "GET"
@@ -2825,7 +2928,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_build_pipeline_stage.py.html>`__ to see an example of how to use get_build_pipeline_stage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_build_pipeline_stage.py.html>`__ to see an example of how to use get_build_pipeline_stage API.
         """
         resource_path = "/buildPipelineStages/{buildPipelineStageId}"
         method = "GET"
@@ -2919,7 +3022,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_build_run.py.html>`__ to see an example of how to use get_build_run API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_build_run.py.html>`__ to see an example of how to use get_build_run API.
         """
         resource_path = "/buildRuns/{buildRunId}"
         method = "GET"
@@ -3016,7 +3119,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_commit.py.html>`__ to see an example of how to use get_commit API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_commit.py.html>`__ to see an example of how to use get_commit API.
         """
         resource_path = "/repositories/{repositoryId}/commits/{commitId}"
         method = "GET"
@@ -3120,7 +3223,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_commit_diff.py.html>`__ to see an example of how to use get_commit_diff API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_commit_diff.py.html>`__ to see an example of how to use get_commit_diff API.
         """
         resource_path = "/repositories/{repositoryId}/diff"
         method = "GET"
@@ -3225,7 +3328,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_connection.py.html>`__ to see an example of how to use get_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_connection.py.html>`__ to see an example of how to use get_connection API.
         """
         resource_path = "/connections/{connectionId}"
         method = "GET"
@@ -3319,7 +3422,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_deploy_artifact.py.html>`__ to see an example of how to use get_deploy_artifact API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_deploy_artifact.py.html>`__ to see an example of how to use get_deploy_artifact API.
         """
         resource_path = "/deployArtifacts/{deployArtifactId}"
         method = "GET"
@@ -3413,7 +3516,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_deploy_environment.py.html>`__ to see an example of how to use get_deploy_environment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_deploy_environment.py.html>`__ to see an example of how to use get_deploy_environment API.
         """
         resource_path = "/deployEnvironments/{deployEnvironmentId}"
         method = "GET"
@@ -3507,7 +3610,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_deploy_pipeline.py.html>`__ to see an example of how to use get_deploy_pipeline API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_deploy_pipeline.py.html>`__ to see an example of how to use get_deploy_pipeline API.
         """
         resource_path = "/deployPipelines/{deployPipelineId}"
         method = "GET"
@@ -3601,7 +3704,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_deploy_stage.py.html>`__ to see an example of how to use get_deploy_stage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_deploy_stage.py.html>`__ to see an example of how to use get_deploy_stage API.
         """
         resource_path = "/deployStages/{deployStageId}"
         method = "GET"
@@ -3695,7 +3798,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_deployment.py.html>`__ to see an example of how to use get_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_deployment.py.html>`__ to see an example of how to use get_deployment API.
         """
         resource_path = "/deployments/{deploymentId}"
         method = "GET"
@@ -3801,7 +3904,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_file_diff.py.html>`__ to see an example of how to use get_file_diff API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_file_diff.py.html>`__ to see an example of how to use get_file_diff API.
         """
         resource_path = "/repositories/{repositoryId}/diffs/{filePath}"
         method = "GET"
@@ -3913,7 +4016,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_mirror_record.py.html>`__ to see an example of how to use get_mirror_record API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_mirror_record.py.html>`__ to see an example of how to use get_mirror_record API.
         """
         resource_path = "/repositories/{repositoryId}/mirrorRecords/{mirrorRecordType}"
         method = "GET"
@@ -4014,7 +4117,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_object.py.html>`__ to see an example of how to use get_object API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_object.py.html>`__ to see an example of how to use get_object API.
         """
         resource_path = "/repositories/{repositoryId}/object"
         method = "GET"
@@ -4124,7 +4227,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_object_content.py.html>`__ to see an example of how to use get_object_content API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_object_content.py.html>`__ to see an example of how to use get_object_content API.
         """
         resource_path = "/repositories/{repositoryId}/objects/{sha}/content"
         method = "GET"
@@ -4227,7 +4330,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_project.py.html>`__ to see an example of how to use get_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_project.py.html>`__ to see an example of how to use get_project API.
         """
         resource_path = "/projects/{projectId}"
         method = "GET"
@@ -4324,7 +4427,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_ref.py.html>`__ to see an example of how to use get_ref API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_ref.py.html>`__ to see an example of how to use get_ref API.
         """
         resource_path = "/repositories/{repositoryId}/refs/{refName}"
         method = "GET"
@@ -4431,7 +4534,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_repo_file_diff.py.html>`__ to see an example of how to use get_repo_file_diff API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_repo_file_diff.py.html>`__ to see an example of how to use get_repo_file_diff API.
         """
         resource_path = "/repositories/{repositoryId}/file/diffs"
         method = "GET"
@@ -4549,7 +4652,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_repo_file_lines.py.html>`__ to see an example of how to use get_repo_file_lines API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_repo_file_lines.py.html>`__ to see an example of how to use get_repo_file_lines API.
         """
         resource_path = "/repositories/{repositoryId}/file/lines"
         method = "GET"
@@ -4661,7 +4764,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_repository.py.html>`__ to see an example of how to use get_repository API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_repository.py.html>`__ to see an example of how to use get_repository API.
         """
         resource_path = "/repositories/{repositoryId}"
         method = "GET"
@@ -4777,7 +4880,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_repository_archive_content.py.html>`__ to see an example of how to use get_repository_archive_content API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_repository_archive_content.py.html>`__ to see an example of how to use get_repository_archive_content API.
         """
         resource_path = "/repositories/{repositoryId}/archive/content"
         method = "GET"
@@ -4893,7 +4996,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_repository_file_lines.py.html>`__ to see an example of how to use get_repository_file_lines API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_repository_file_lines.py.html>`__ to see an example of how to use get_repository_file_lines API.
         """
         resource_path = "/repositories/{repositoryId}/files/{filePath}/lines"
         method = "GET"
@@ -4999,7 +5102,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_trigger.py.html>`__ to see an example of how to use get_trigger API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_trigger.py.html>`__ to see an example of how to use get_trigger API.
         """
         resource_path = "/triggers/{triggerId}"
         method = "GET"
@@ -5093,7 +5196,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -5201,7 +5304,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_authors.py.html>`__ to see an example of how to use list_authors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_authors.py.html>`__ to see an example of how to use list_authors API.
         """
         resource_path = "/repositories/{repositoryId}/authors"
         method = "GET"
@@ -5346,7 +5449,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_build_pipeline_stages.py.html>`__ to see an example of how to use list_build_pipeline_stages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_build_pipeline_stages.py.html>`__ to see an example of how to use list_build_pipeline_stages API.
         """
         resource_path = "/buildPipelineStages"
         method = "GET"
@@ -5503,7 +5606,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_build_pipelines.py.html>`__ to see an example of how to use list_build_pipelines API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_build_pipelines.py.html>`__ to see an example of how to use list_build_pipelines API.
         """
         resource_path = "/buildPipelines"
         method = "GET"
@@ -5626,7 +5729,7 @@ class DevopsClient(object):
         :param str lifecycle_state: (optional)
             A filter to return only build runs that matches the given lifecycle state.
 
-            Allowed values are: "ACCEPTED", "IN_PROGRESS", "FAILED", "SUCCEEDED", "CANCELING", "CANCELED"
+            Allowed values are: "ACCEPTED", "IN_PROGRESS", "FAILED", "SUCCEEDED", "CANCELING", "CANCELED", "DELETING"
 
         :param int limit: (optional)
             The maximum number of items to return.
@@ -5663,7 +5766,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_build_runs.py.html>`__ to see an example of how to use list_build_runs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_build_runs.py.html>`__ to see an example of how to use list_build_runs API.
         """
         resource_path = "/buildRuns"
         method = "GET"
@@ -5692,7 +5795,7 @@ class DevopsClient(object):
                 "list_build_runs got unknown kwargs: {!r}".format(extra_kwargs))
 
         if 'lifecycle_state' in kwargs:
-            lifecycle_state_allowed_values = ["ACCEPTED", "IN_PROGRESS", "FAILED", "SUCCEEDED", "CANCELING", "CANCELED"]
+            lifecycle_state_allowed_values = ["ACCEPTED", "IN_PROGRESS", "FAILED", "SUCCEEDED", "CANCELING", "CANCELED", "DELETING"]
             if kwargs['lifecycle_state'] not in lifecycle_state_allowed_values:
                 raise ValueError(
                     "Invalid value for `lifecycle_state`, must be one of {0}".format(lifecycle_state_allowed_values)
@@ -5807,7 +5910,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_commit_diffs.py.html>`__ to see an example of how to use list_commit_diffs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_commit_diffs.py.html>`__ to see an example of how to use list_commit_diffs API.
         """
         resource_path = "/repositories/{repositoryId}/diffs"
         method = "GET"
@@ -5942,7 +6045,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_commits.py.html>`__ to see an example of how to use list_commits API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_commits.py.html>`__ to see an example of how to use list_commits API.
         """
         resource_path = "/repositories/{repositoryId}/commits"
         method = "GET"
@@ -6050,7 +6153,7 @@ class DevopsClient(object):
         :param str lifecycle_state: (optional)
             A filter to return only connections that matches the given lifecycle state.
 
-            Allowed values are: "ACTIVE"
+            Allowed values are: "ACTIVE", "DELETING"
 
         :param str display_name: (optional)
             A filter to return only resources that match the entire display name given.
@@ -6095,7 +6198,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_connections.py.html>`__ to see an example of how to use list_connections API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_connections.py.html>`__ to see an example of how to use list_connections API.
         """
         resource_path = "/connections"
         method = "GET"
@@ -6124,7 +6227,7 @@ class DevopsClient(object):
                 "list_connections got unknown kwargs: {!r}".format(extra_kwargs))
 
         if 'lifecycle_state' in kwargs:
-            lifecycle_state_allowed_values = ["ACTIVE"]
+            lifecycle_state_allowed_values = ["ACTIVE", "DELETING"]
             if kwargs['lifecycle_state'] not in lifecycle_state_allowed_values:
                 raise ValueError(
                     "Invalid value for `lifecycle_state`, must be one of {0}".format(lifecycle_state_allowed_values)
@@ -6261,7 +6364,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_deploy_artifacts.py.html>`__ to see an example of how to use list_deploy_artifacts API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_deploy_artifacts.py.html>`__ to see an example of how to use list_deploy_artifacts API.
         """
         resource_path = "/deployArtifacts"
         method = "GET"
@@ -6418,7 +6521,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_deploy_environments.py.html>`__ to see an example of how to use list_deploy_environments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_deploy_environments.py.html>`__ to see an example of how to use list_deploy_environments API.
         """
         resource_path = "/deployEnvironments"
         method = "GET"
@@ -6575,7 +6678,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_deploy_pipelines.py.html>`__ to see an example of how to use list_deploy_pipelines API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_deploy_pipelines.py.html>`__ to see an example of how to use list_deploy_pipelines API.
         """
         resource_path = "/deployPipelines"
         method = "GET"
@@ -6732,7 +6835,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_deploy_stages.py.html>`__ to see an example of how to use list_deploy_stages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_deploy_stages.py.html>`__ to see an example of how to use list_deploy_stages API.
         """
         resource_path = "/deployStages"
         method = "GET"
@@ -6902,7 +7005,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_deployments.py.html>`__ to see an example of how to use list_deployments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_deployments.py.html>`__ to see an example of how to use list_deployments API.
         """
         resource_path = "/deployments"
         method = "GET"
@@ -7046,7 +7149,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_mirror_records.py.html>`__ to see an example of how to use list_mirror_records API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_mirror_records.py.html>`__ to see an example of how to use list_mirror_records API.
         """
         resource_path = "/repositories/{repositoryId}/mirrorRecords"
         method = "GET"
@@ -7188,7 +7291,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_paths.py.html>`__ to see an example of how to use list_paths API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_paths.py.html>`__ to see an example of how to use list_paths API.
         """
         resource_path = "/repositories/{repositoryId}/paths"
         method = "GET"
@@ -7305,7 +7408,7 @@ class DevopsClient(object):
         :param str lifecycle_state: (optional)
             A filter to return only Projects that matches the given lifecycleState.
 
-            Allowed values are: "CREATING", "UPDATING", "ACTIVE", "DELETING", "DELETED", "FAILED"
+            Allowed values are: "CREATING", "UPDATING", "ACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION"
 
         :param str name: (optional)
             A filter to return only resources that match the entire name given.
@@ -7345,7 +7448,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_projects.py.html>`__ to see an example of how to use list_projects API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_projects.py.html>`__ to see an example of how to use list_projects API.
         """
         resource_path = "/projects"
         method = "GET"
@@ -7371,7 +7474,7 @@ class DevopsClient(object):
                 "list_projects got unknown kwargs: {!r}".format(extra_kwargs))
 
         if 'lifecycle_state' in kwargs:
-            lifecycle_state_allowed_values = ["CREATING", "UPDATING", "ACTIVE", "DELETING", "DELETED", "FAILED"]
+            lifecycle_state_allowed_values = ["CREATING", "UPDATING", "ACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION"]
             if kwargs['lifecycle_state'] not in lifecycle_state_allowed_values:
                 raise ValueError(
                     "Invalid value for `lifecycle_state`, must be one of {0}".format(lifecycle_state_allowed_values)
@@ -7496,7 +7599,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_refs.py.html>`__ to see an example of how to use list_refs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_refs.py.html>`__ to see an example of how to use list_refs API.
         """
         resource_path = "/repositories/{repositoryId}/refs"
         method = "GET"
@@ -7621,7 +7724,7 @@ class DevopsClient(object):
         :param str lifecycle_state: (optional)
             A filter to return only resources whose lifecycle state matches the given lifecycle state.
 
-            Allowed values are: "ACTIVE", "CREATING", "DELETED"
+            Allowed values are: "ACTIVE", "CREATING", "DELETED", "DELETING"
 
         :param str name: (optional)
             A filter to return only resources that match the entire name given.
@@ -7661,7 +7764,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_repositories.py.html>`__ to see an example of how to use list_repositories API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_repositories.py.html>`__ to see an example of how to use list_repositories API.
         """
         resource_path = "/repositories"
         method = "GET"
@@ -7689,7 +7792,7 @@ class DevopsClient(object):
                 "list_repositories got unknown kwargs: {!r}".format(extra_kwargs))
 
         if 'lifecycle_state' in kwargs:
-            lifecycle_state_allowed_values = ["ACTIVE", "CREATING", "DELETED"]
+            lifecycle_state_allowed_values = ["ACTIVE", "CREATING", "DELETED", "DELETING"]
             if kwargs['lifecycle_state'] not in lifecycle_state_allowed_values:
                 raise ValueError(
                     "Invalid value for `lifecycle_state`, must be one of {0}".format(lifecycle_state_allowed_values)
@@ -7775,7 +7878,7 @@ class DevopsClient(object):
         :param str lifecycle_state: (optional)
             A filter to return only triggers that matches the given lifecycle state.
 
-            Allowed values are: "ACTIVE"
+            Allowed values are: "ACTIVE", "DELETING"
 
         :param str display_name: (optional)
             A filter to return only resources that match the entire display name given.
@@ -7818,7 +7921,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_triggers.py.html>`__ to see an example of how to use list_triggers API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_triggers.py.html>`__ to see an example of how to use list_triggers API.
         """
         resource_path = "/triggers"
         method = "GET"
@@ -7846,7 +7949,7 @@ class DevopsClient(object):
                 "list_triggers got unknown kwargs: {!r}".format(extra_kwargs))
 
         if 'lifecycle_state' in kwargs:
-            lifecycle_state_allowed_values = ["ACTIVE"]
+            lifecycle_state_allowed_values = ["ACTIVE", "DELETING"]
             if kwargs['lifecycle_state'] not in lifecycle_state_allowed_values:
                 raise ValueError(
                     "Invalid value for `lifecycle_state`, must be one of {0}".format(lifecycle_state_allowed_values)
@@ -7961,7 +8064,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -8099,7 +8202,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -8208,7 +8311,7 @@ class DevopsClient(object):
         :param str status: (optional)
             A filter to return only resources where the lifecycle state matches the given operation status.
 
-            Allowed values are: "ACCEPTED", "IN_PROGRESS", "FAILED", "SUCCEEDED", "CANCELING", "CANCELED"
+            Allowed values are: "ACCEPTED", "IN_PROGRESS", "FAILED", "SUCCEEDED", "CANCELING", "CANCELED", "WAITING", "NEEDS_ATTENTION"
 
         :param str resource_id: (optional)
             The ID of the resource affected by the work request.
@@ -8232,6 +8335,9 @@ class DevopsClient(object):
 
             Allowed values are: "timeAccepted"
 
+        :param list[str] operation_type_multi_value_query: (optional)
+            A filter to return only resources where their Operation Types matches the parameter operation types
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -8248,7 +8354,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -8266,7 +8372,8 @@ class DevopsClient(object):
             "page",
             "limit",
             "sort_order",
-            "sort_by"
+            "sort_by",
+            "operation_type_multi_value_query"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -8274,7 +8381,7 @@ class DevopsClient(object):
                 "list_work_requests got unknown kwargs: {!r}".format(extra_kwargs))
 
         if 'status' in kwargs:
-            status_allowed_values = ["ACCEPTED", "IN_PROGRESS", "FAILED", "SUCCEEDED", "CANCELING", "CANCELED"]
+            status_allowed_values = ["ACCEPTED", "IN_PROGRESS", "FAILED", "SUCCEEDED", "CANCELING", "CANCELED", "WAITING", "NEEDS_ATTENTION"]
             if kwargs['status'] not in status_allowed_values:
                 raise ValueError(
                     "Invalid value for `status`, must be one of {0}".format(status_allowed_values)
@@ -8302,7 +8409,8 @@ class DevopsClient(object):
             "page": kwargs.get("page", missing),
             "limit": kwargs.get("limit", missing),
             "sortOrder": kwargs.get("sort_order", missing),
-            "sortBy": kwargs.get("sort_by", missing)
+            "sortBy": kwargs.get("sort_by", missing),
+            "operationTypeMultiValueQuery": self.base_client.generate_collection_format_param(kwargs.get("operation_type_multi_value_query", missing), 'multi')
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -8375,7 +8483,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/mirror_repository.py.html>`__ to see an example of how to use mirror_repository API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/mirror_repository.py.html>`__ to see an example of how to use mirror_repository API.
         """
         resource_path = "/repositories/{repositoryId}/actions/mirror"
         method = "POST"
@@ -8481,7 +8589,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/put_repository_ref.py.html>`__ to see an example of how to use put_repository_ref API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/put_repository_ref.py.html>`__ to see an example of how to use put_repository_ref API.
         """
         resource_path = "/repositories/{repositoryId}/refs/{refName}"
         method = "PUT"
@@ -8556,6 +8664,109 @@ class DevopsClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def schedule_cascading_project_deletion(self, project_id, **kwargs):
+        """
+        Cascading operation that marks Project and child DevOps resources in a DELETING state for a retention period
+
+
+        :param str project_id: (required)
+            Unique project identifier.
+
+        :param str if_match: (optional)
+            For optimistic concurrency control. In the PUT or DELETE call for a resource, set the `if-match` parameter to the value of the etag from a previous GET or POST response for that resource. The resource will be updated or deleted only if the etag you provide matches the resource's current etag value.
+
+        :param str opc_request_id: (optional)
+            Unique Oracle-assigned identifier for the request.  If you need to contact Oracle about a particular request, provide the request ID.
+
+        :param str opc_retry_token: (optional)
+            A token that uniquely identifies a request so it can be retried in case of a timeout or server error without risk of executing that same action again. Retry tokens expire after 24 hours, but can be invalidated earlier due to conflicting operations. For example, if a resource has been deleted and purged from the system, then a retry of the original creation request might be rejected.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/schedule_cascading_project_deletion.py.html>`__ to see an example of how to use schedule_cascading_project_deletion API.
+        """
+        resource_path = "/projects/{projectId}/actions/scheduleCascadingProjectDeletion"
+        method = "POST"
+        operation_name = "schedule_cascading_project_deletion"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/devops/20210630/Project/ScheduleCascadingProjectDeletion"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "if_match",
+            "opc_request_id",
+            "opc_retry_token"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "schedule_cascading_project_deletion got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "projectId": project_id
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "if-match": kwargs.get("if_match", missing),
+            "opc-request-id": kwargs.get("opc_request_id", missing),
+            "opc-retry-token": kwargs.get("opc_retry_token", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_retry_token_if_needed(header_params)
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def update_build_pipeline(self, build_pipeline_id, update_build_pipeline_details, **kwargs):
         """
         Updates the build pipeline.
@@ -8589,7 +8800,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/update_build_pipeline.py.html>`__ to see an example of how to use update_build_pipeline API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/update_build_pipeline.py.html>`__ to see an example of how to use update_build_pipeline API.
         """
         resource_path = "/buildPipelines/{buildPipelineId}"
         method = "PUT"
@@ -8693,7 +8904,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/update_build_pipeline_stage.py.html>`__ to see an example of how to use update_build_pipeline_stage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/update_build_pipeline_stage.py.html>`__ to see an example of how to use update_build_pipeline_stage API.
         """
         resource_path = "/buildPipelineStages/{buildPipelineStageId}"
         method = "PUT"
@@ -8797,7 +9008,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/update_build_run.py.html>`__ to see an example of how to use update_build_run API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/update_build_run.py.html>`__ to see an example of how to use update_build_run API.
         """
         resource_path = "/buildRuns/{buildRunId}"
         method = "PUT"
@@ -8901,7 +9112,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/update_connection.py.html>`__ to see an example of how to use update_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/update_connection.py.html>`__ to see an example of how to use update_connection API.
         """
         resource_path = "/connections/{connectionId}"
         method = "PUT"
@@ -9005,7 +9216,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/update_deploy_artifact.py.html>`__ to see an example of how to use update_deploy_artifact API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/update_deploy_artifact.py.html>`__ to see an example of how to use update_deploy_artifact API.
         """
         resource_path = "/deployArtifacts/{deployArtifactId}"
         method = "PUT"
@@ -9109,7 +9320,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/update_deploy_environment.py.html>`__ to see an example of how to use update_deploy_environment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/update_deploy_environment.py.html>`__ to see an example of how to use update_deploy_environment API.
         """
         resource_path = "/deployEnvironments/{deployEnvironmentId}"
         method = "PUT"
@@ -9213,7 +9424,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/update_deploy_pipeline.py.html>`__ to see an example of how to use update_deploy_pipeline API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/update_deploy_pipeline.py.html>`__ to see an example of how to use update_deploy_pipeline API.
         """
         resource_path = "/deployPipelines/{deployPipelineId}"
         method = "PUT"
@@ -9317,7 +9528,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/update_deploy_stage.py.html>`__ to see an example of how to use update_deploy_stage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/update_deploy_stage.py.html>`__ to see an example of how to use update_deploy_stage API.
         """
         resource_path = "/deployStages/{deployStageId}"
         method = "PUT"
@@ -9421,7 +9632,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/update_deployment.py.html>`__ to see an example of how to use update_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/update_deployment.py.html>`__ to see an example of how to use update_deployment API.
         """
         resource_path = "/deployments/{deploymentId}"
         method = "PUT"
@@ -9525,7 +9736,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/update_project.py.html>`__ to see an example of how to use update_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/update_project.py.html>`__ to see an example of how to use update_project API.
         """
         resource_path = "/projects/{projectId}"
         method = "PUT"
@@ -9629,7 +9840,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/update_repository.py.html>`__ to see an example of how to use update_repository API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/update_repository.py.html>`__ to see an example of how to use update_repository API.
         """
         resource_path = "/repositories/{repositoryId}"
         method = "PUT"
@@ -9733,7 +9944,7 @@ class DevopsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/devops/update_trigger.py.html>`__ to see an example of how to use update_trigger API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/devops/update_trigger.py.html>`__ to see an example of how to use update_trigger API.
         """
         resource_path = "/triggers/{triggerId}"
         method = "PUT"

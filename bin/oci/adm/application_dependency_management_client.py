@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -140,7 +140,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "DELETE"
@@ -253,7 +253,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/change_knowledge_base_compartment.py.html>`__ to see an example of how to use change_knowledge_base_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/change_knowledge_base_compartment.py.html>`__ to see an example of how to use change_knowledge_base_compartment API.
         """
         resource_path = "/knowledgeBases/{knowledgeBaseId}/actions/changeCompartment"
         method = "POST"
@@ -369,7 +369,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/change_vulnerability_audit_compartment.py.html>`__ to see an example of how to use change_vulnerability_audit_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/change_vulnerability_audit_compartment.py.html>`__ to see an example of how to use change_vulnerability_audit_compartment API.
         """
         resource_path = "/vulnerabilityAudits/{vulnerabilityAuditId}/actions/changeCompartment"
         method = "POST"
@@ -475,7 +475,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/create_knowledge_base.py.html>`__ to see an example of how to use create_knowledge_base API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/create_knowledge_base.py.html>`__ to see an example of how to use create_knowledge_base API.
         """
         resource_path = "/knowledgeBases"
         method = "POST"
@@ -574,7 +574,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/create_vulnerability_audit.py.html>`__ to see an example of how to use create_vulnerability_audit API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/create_vulnerability_audit.py.html>`__ to see an example of how to use create_vulnerability_audit API.
         """
         resource_path = "/vulnerabilityAudits"
         method = "POST"
@@ -672,7 +672,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/delete_knowledge_base.py.html>`__ to see an example of how to use delete_knowledge_base API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/delete_knowledge_base.py.html>`__ to see an example of how to use delete_knowledge_base API.
         """
         resource_path = "/knowledgeBases/{knowledgeBaseId}"
         method = "DELETE"
@@ -773,7 +773,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/delete_vulnerability_audit.py.html>`__ to see an example of how to use delete_vulnerability_audit API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/delete_vulnerability_audit.py.html>`__ to see an example of how to use delete_vulnerability_audit API.
         """
         resource_path = "/vulnerabilityAudits/{vulnerabilityAuditId}"
         method = "DELETE"
@@ -869,7 +869,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/get_knowledge_base.py.html>`__ to see an example of how to use get_knowledge_base API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/get_knowledge_base.py.html>`__ to see an example of how to use get_knowledge_base API.
         """
         resource_path = "/knowledgeBases/{knowledgeBaseId}"
         method = "GET"
@@ -963,7 +963,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/get_vulnerability_audit.py.html>`__ to see an example of how to use get_vulnerability_audit API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/get_vulnerability_audit.py.html>`__ to see an example of how to use get_vulnerability_audit API.
         """
         resource_path = "/vulnerabilityAudits/{vulnerabilityAuditId}"
         method = "GET"
@@ -1059,7 +1059,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -1194,7 +1194,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/list_application_dependency_vulnerabilities.py.html>`__ to see an example of how to use list_application_dependency_vulnerabilities API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/list_application_dependency_vulnerabilities.py.html>`__ to see an example of how to use list_application_dependency_vulnerabilities API.
         """
         resource_path = "/vulnerabilityAudits/{vulnerabilityAuditId}/applicationDependencyVulnerabilities"
         method = "GET"
@@ -1359,7 +1359,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/list_knowledge_bases.py.html>`__ to see an example of how to use list_knowledge_bases API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/list_knowledge_bases.py.html>`__ to see an example of how to use list_knowledge_bases API.
         """
         resource_path = "/knowledgeBases"
         method = "GET"
@@ -1525,7 +1525,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/list_vulnerability_audits.py.html>`__ to see an example of how to use list_vulnerability_audits API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/list_vulnerability_audits.py.html>`__ to see an example of how to use list_vulnerability_audits API.
         """
         resource_path = "/vulnerabilityAudits"
         method = "GET"
@@ -1672,7 +1672,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -1812,7 +1812,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -1963,7 +1963,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -2100,7 +2100,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/update_knowledge_base.py.html>`__ to see an example of how to use update_knowledge_base API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/update_knowledge_base.py.html>`__ to see an example of how to use update_knowledge_base API.
         """
         resource_path = "/knowledgeBases/{knowledgeBaseId}"
         method = "PUT"
@@ -2206,7 +2206,7 @@ class ApplicationDependencyManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/adm/update_vulnerability_audit.py.html>`__ to see an example of how to use update_vulnerability_audit API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/adm/update_vulnerability_audit.py.html>`__ to see an example of how to use update_vulnerability_audit API.
         """
         resource_path = "/vulnerabilityAudits/{vulnerabilityAuditId}"
         method = "PUT"

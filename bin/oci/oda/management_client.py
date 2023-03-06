@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -142,7 +142,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/configure_digital_assistant_parameters.py.html>`__ to see an example of how to use configure_digital_assistant_parameters API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/configure_digital_assistant_parameters.py.html>`__ to see an example of how to use configure_digital_assistant_parameters API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/actions/configureDigitalAssistantParameters"
         method = "POST"
@@ -248,7 +248,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/create_authentication_provider.py.html>`__ to see an example of how to use create_authentication_provider API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/create_authentication_provider.py.html>`__ to see an example of how to use create_authentication_provider API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/authenticationProviders"
         method = "POST"
@@ -356,7 +356,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/create_channel.py.html>`__ to see an example of how to use create_channel API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/create_channel.py.html>`__ to see an example of how to use create_channel API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/channels"
         method = "POST"
@@ -464,7 +464,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/create_digital_assistant.py.html>`__ to see an example of how to use create_digital_assistant API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/create_digital_assistant.py.html>`__ to see an example of how to use create_digital_assistant API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/digitalAssistants"
         method = "POST"
@@ -570,7 +570,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/create_skill.py.html>`__ to see an example of how to use create_skill API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/create_skill.py.html>`__ to see an example of how to use create_skill API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/skills"
         method = "POST"
@@ -679,7 +679,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/create_skill_parameter.py.html>`__ to see an example of how to use create_skill_parameter API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/create_skill_parameter.py.html>`__ to see an example of how to use create_skill_parameter API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/skills/{skillId}/parameters"
         method = "POST"
@@ -788,7 +788,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/create_translator.py.html>`__ to see an example of how to use create_translator API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/create_translator.py.html>`__ to see an example of how to use create_translator API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/translators"
         method = "POST"
@@ -896,7 +896,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/delete_authentication_provider.py.html>`__ to see an example of how to use delete_authentication_provider API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/delete_authentication_provider.py.html>`__ to see an example of how to use delete_authentication_provider API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/authenticationProviders/{authenticationProviderId}"
         method = "DELETE"
@@ -1000,7 +1000,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/delete_channel.py.html>`__ to see an example of how to use delete_channel API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/delete_channel.py.html>`__ to see an example of how to use delete_channel API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/channels/{channelId}"
         method = "DELETE"
@@ -1104,7 +1104,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/delete_digital_assistant.py.html>`__ to see an example of how to use delete_digital_assistant API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/delete_digital_assistant.py.html>`__ to see an example of how to use delete_digital_assistant API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/digitalAssistants/{digitalAssistantId}"
         method = "DELETE"
@@ -1208,7 +1208,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/delete_skill.py.html>`__ to see an example of how to use delete_skill API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/delete_skill.py.html>`__ to see an example of how to use delete_skill API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/skills/{skillId}"
         method = "DELETE"
@@ -1315,7 +1315,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/delete_skill_parameter.py.html>`__ to see an example of how to use delete_skill_parameter API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/delete_skill_parameter.py.html>`__ to see an example of how to use delete_skill_parameter API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/skills/{skillId}/parameters/{parameterName}"
         method = "DELETE"
@@ -1420,7 +1420,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/delete_translator.py.html>`__ to see an example of how to use delete_translator API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/delete_translator.py.html>`__ to see an example of how to use delete_translator API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/translators/{translatorId}"
         method = "DELETE"
@@ -1519,7 +1519,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/export_digital_assistant.py.html>`__ to see an example of how to use export_digital_assistant API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/export_digital_assistant.py.html>`__ to see an example of how to use export_digital_assistant API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/digitalAssistants/{digitalAssistantId}/actions/export"
         method = "POST"
@@ -1618,7 +1618,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/export_skill.py.html>`__ to see an example of how to use export_skill API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/export_skill.py.html>`__ to see an example of how to use export_skill API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/skills/{skillId}/actions/export"
         method = "POST"
@@ -1714,7 +1714,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/get_authentication_provider.py.html>`__ to see an example of how to use get_authentication_provider API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/get_authentication_provider.py.html>`__ to see an example of how to use get_authentication_provider API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/authenticationProviders/{authenticationProviderId}"
         method = "GET"
@@ -1810,7 +1810,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/get_channel.py.html>`__ to see an example of how to use get_channel API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/get_channel.py.html>`__ to see an example of how to use get_channel API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/channels/{channelId}"
         method = "GET"
@@ -1906,7 +1906,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/get_digital_assistant.py.html>`__ to see an example of how to use get_digital_assistant API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/get_digital_assistant.py.html>`__ to see an example of how to use get_digital_assistant API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/digitalAssistants/{digitalAssistantId}"
         method = "GET"
@@ -2005,7 +2005,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/get_digital_assistant_parameter.py.html>`__ to see an example of how to use get_digital_assistant_parameter API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/get_digital_assistant_parameter.py.html>`__ to see an example of how to use get_digital_assistant_parameter API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/digitalAssistants/{digitalAssistantId}/parameters/{parameterName}"
         method = "GET"
@@ -2102,7 +2102,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/get_skill.py.html>`__ to see an example of how to use get_skill API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/get_skill.py.html>`__ to see an example of how to use get_skill API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/skills/{skillId}"
         method = "GET"
@@ -2201,7 +2201,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/get_skill_parameter.py.html>`__ to see an example of how to use get_skill_parameter API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/get_skill_parameter.py.html>`__ to see an example of how to use get_skill_parameter API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/skills/{skillId}/parameters/{parameterName}"
         method = "GET"
@@ -2298,7 +2298,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/get_translator.py.html>`__ to see an example of how to use get_translator API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/get_translator.py.html>`__ to see an example of how to use get_translator API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/translators/{translatorId}"
         method = "GET"
@@ -2402,7 +2402,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/import_bot.py.html>`__ to see an example of how to use import_bot API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/import_bot.py.html>`__ to see an example of how to use import_bot API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/actions/importBot"
         method = "POST"
@@ -2543,7 +2543,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/list_authentication_providers.py.html>`__ to see an example of how to use list_authentication_providers API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/list_authentication_providers.py.html>`__ to see an example of how to use list_authentication_providers API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/authenticationProviders"
         method = "GET"
@@ -2735,7 +2735,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/list_channels.py.html>`__ to see an example of how to use list_channels API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/list_channels.py.html>`__ to see an example of how to use list_channels API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/channels"
         method = "GET"
@@ -2924,7 +2924,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/list_digital_assistant_parameters.py.html>`__ to see an example of how to use list_digital_assistant_parameters API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/list_digital_assistant_parameters.py.html>`__ to see an example of how to use list_digital_assistant_parameters API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/digitalAssistants/{digitalAssistantId}/parameters"
         method = "GET"
@@ -3116,7 +3116,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/list_digital_assistants.py.html>`__ to see an example of how to use list_digital_assistants API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/list_digital_assistants.py.html>`__ to see an example of how to use list_digital_assistants API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/digitalAssistants"
         method = "GET"
@@ -3297,7 +3297,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/list_skill_parameters.py.html>`__ to see an example of how to use list_skill_parameters API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/list_skill_parameters.py.html>`__ to see an example of how to use list_skill_parameters API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/skills/{skillId}/parameters"
         method = "GET"
@@ -3489,7 +3489,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/list_skills.py.html>`__ to see an example of how to use list_skills API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/list_skills.py.html>`__ to see an example of how to use list_skills API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/skills"
         method = "GET"
@@ -3678,7 +3678,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/list_translators.py.html>`__ to see an example of how to use list_translators API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/list_translators.py.html>`__ to see an example of how to use list_translators API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/translators"
         method = "GET"
@@ -3832,7 +3832,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/publish_digital_assistant.py.html>`__ to see an example of how to use publish_digital_assistant API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/publish_digital_assistant.py.html>`__ to see an example of how to use publish_digital_assistant API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/digitalAssistants/{digitalAssistantId}/actions/publish"
         method = "POST"
@@ -3939,7 +3939,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/publish_skill.py.html>`__ to see an example of how to use publish_skill API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/publish_skill.py.html>`__ to see an example of how to use publish_skill API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/skills/{skillId}/actions/publish"
         method = "POST"
@@ -4055,7 +4055,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/rotate_channel_keys.py.html>`__ to see an example of how to use rotate_channel_keys API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/rotate_channel_keys.py.html>`__ to see an example of how to use rotate_channel_keys API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/channels/{channelId}/actions/rotateKeys"
         method = "POST"
@@ -4172,7 +4172,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/start_channel.py.html>`__ to see an example of how to use start_channel API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/start_channel.py.html>`__ to see an example of how to use start_channel API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/channels/{channelId}/actions/start"
         method = "POST"
@@ -4289,7 +4289,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/stop_channel.py.html>`__ to see an example of how to use stop_channel API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/stop_channel.py.html>`__ to see an example of how to use stop_channel API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/channels/{channelId}/actions/stop"
         method = "POST"
@@ -4401,7 +4401,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/update_authentication_provider.py.html>`__ to see an example of how to use update_authentication_provider API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/update_authentication_provider.py.html>`__ to see an example of how to use update_authentication_provider API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/authenticationProviders/{authenticationProviderId}"
         method = "PUT"
@@ -4512,7 +4512,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/update_channel.py.html>`__ to see an example of how to use update_channel API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/update_channel.py.html>`__ to see an example of how to use update_channel API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/channels/{channelId}"
         method = "PUT"
@@ -4623,7 +4623,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/update_digital_assistant.py.html>`__ to see an example of how to use update_digital_assistant API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/update_digital_assistant.py.html>`__ to see an example of how to use update_digital_assistant API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/digitalAssistants/{digitalAssistantId}"
         method = "PUT"
@@ -4737,7 +4737,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/update_digital_assistant_parameter.py.html>`__ to see an example of how to use update_digital_assistant_parameter API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/update_digital_assistant_parameter.py.html>`__ to see an example of how to use update_digital_assistant_parameter API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/digitalAssistants/{digitalAssistantId}/parameters/{parameterName}"
         method = "PUT"
@@ -4849,7 +4849,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/update_skill.py.html>`__ to see an example of how to use update_skill API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/update_skill.py.html>`__ to see an example of how to use update_skill API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/skills/{skillId}"
         method = "PUT"
@@ -4963,7 +4963,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/update_skill_parameter.py.html>`__ to see an example of how to use update_skill_parameter API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/update_skill_parameter.py.html>`__ to see an example of how to use update_skill_parameter API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/skills/{skillId}/parameters/{parameterName}"
         method = "PUT"
@@ -5075,7 +5075,7 @@ class ManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/update_translator.py.html>`__ to see an example of how to use update_translator API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/update_translator.py.html>`__ to see an example of how to use update_translator API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/translators/{translatorId}"
         method = "PUT"

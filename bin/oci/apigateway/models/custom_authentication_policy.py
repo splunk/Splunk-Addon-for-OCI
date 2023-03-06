@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from .authentication_policy import AuthenticationPolicy
@@ -26,7 +26,7 @@ class CustomAuthenticationPolicy(AuthenticationPolicy):
 
         :param type:
             The value to assign to the type property of this CustomAuthenticationPolicy.
-            Allowed values for this property are: "CUSTOM_AUTHENTICATION", "JWT_AUTHENTICATION"
+            Allowed values for this property are: "CUSTOM_AUTHENTICATION", "JWT_AUTHENTICATION", "TOKEN_AUTHENTICATION"
         :type type: str
 
         :param function_id:

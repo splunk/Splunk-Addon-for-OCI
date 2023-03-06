@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -139,7 +139,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/create_custom_table.py.html>`__ to see an example of how to use create_custom_table API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/create_custom_table.py.html>`__ to see an example of how to use create_custom_table API.
         """
         resource_path = "/customTables"
         method = "POST"
@@ -232,7 +232,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/create_query.py.html>`__ to see an example of how to use create_query API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/create_query.py.html>`__ to see an example of how to use create_query API.
         """
         resource_path = "/queries"
         method = "POST"
@@ -325,7 +325,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/create_schedule.py.html>`__ to see an example of how to use create_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/create_schedule.py.html>`__ to see an example of how to use create_schedule API.
         """
         resource_path = "/schedules"
         method = "POST"
@@ -418,7 +418,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/delete_custom_table.py.html>`__ to see an example of how to use delete_custom_table API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/delete_custom_table.py.html>`__ to see an example of how to use delete_custom_table API.
         """
         resource_path = "/customTables/{customTableId}"
         method = "DELETE"
@@ -518,7 +518,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/delete_query.py.html>`__ to see an example of how to use delete_query API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/delete_query.py.html>`__ to see an example of how to use delete_query API.
         """
         resource_path = "/queries/{queryId}"
         method = "DELETE"
@@ -618,7 +618,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/delete_schedule.py.html>`__ to see an example of how to use delete_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/delete_schedule.py.html>`__ to see an example of how to use delete_schedule API.
         """
         resource_path = "/schedules/{scheduleId}"
         method = "DELETE"
@@ -711,7 +711,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/get_custom_table.py.html>`__ to see an example of how to use get_custom_table API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/get_custom_table.py.html>`__ to see an example of how to use get_custom_table API.
         """
         resource_path = "/customTables/{customTableId}"
         method = "GET"
@@ -804,7 +804,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/get_query.py.html>`__ to see an example of how to use get_query API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/get_query.py.html>`__ to see an example of how to use get_query API.
         """
         resource_path = "/queries/{queryId}"
         method = "GET"
@@ -897,7 +897,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/get_schedule.py.html>`__ to see an example of how to use get_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/get_schedule.py.html>`__ to see an example of how to use get_schedule API.
         """
         resource_path = "/schedules/{scheduleId}"
         method = "GET"
@@ -990,7 +990,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/get_scheduled_run.py.html>`__ to see an example of how to use get_scheduled_run API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/get_scheduled_run.py.html>`__ to see an example of how to use get_scheduled_run API.
         """
         resource_path = "/scheduledRuns/{scheduledRunId}"
         method = "GET"
@@ -1103,7 +1103,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/list_custom_tables.py.html>`__ to see an example of how to use list_custom_tables API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/list_custom_tables.py.html>`__ to see an example of how to use list_custom_tables API.
         """
         resource_path = "/customTables"
         method = "GET"
@@ -1231,7 +1231,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/list_queries.py.html>`__ to see an example of how to use list_queries API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/list_queries.py.html>`__ to see an example of how to use list_queries API.
         """
         resource_path = "/queries"
         method = "GET"
@@ -1358,7 +1358,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/list_scheduled_runs.py.html>`__ to see an example of how to use list_scheduled_runs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/list_scheduled_runs.py.html>`__ to see an example of how to use list_scheduled_runs API.
         """
         resource_path = "/scheduledRuns"
         method = "GET"
@@ -1488,7 +1488,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/list_schedules.py.html>`__ to see an example of how to use list_schedules API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/list_schedules.py.html>`__ to see an example of how to use list_schedules API.
         """
         resource_path = "/schedules"
         method = "GET"
@@ -1600,7 +1600,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/request_summarized_configurations.py.html>`__ to see an example of how to use request_summarized_configurations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/request_summarized_configurations.py.html>`__ to see an example of how to use request_summarized_configurations API.
         """
         resource_path = "/configuration"
         method = "GET"
@@ -1695,7 +1695,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/request_summarized_usages.py.html>`__ to see an example of how to use request_summarized_usages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/request_summarized_usages.py.html>`__ to see an example of how to use request_summarized_usages API.
         """
         resource_path = "/usage"
         method = "POST"
@@ -1798,7 +1798,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/update_custom_table.py.html>`__ to see an example of how to use update_custom_table API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/update_custom_table.py.html>`__ to see an example of how to use update_custom_table API.
         """
         resource_path = "/customTables/{customTableId}"
         method = "PUT"
@@ -1905,7 +1905,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/update_query.py.html>`__ to see an example of how to use update_query API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/update_query.py.html>`__ to see an example of how to use update_query API.
         """
         resource_path = "/queries/{queryId}"
         method = "PUT"
@@ -2012,7 +2012,7 @@ class UsageapiClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/usageapi/update_schedule.py.html>`__ to see an example of how to use update_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usageapi/update_schedule.py.html>`__ to see an example of how to use update_schedule API.
         """
         resource_path = "/schedules/{scheduleId}"
         method = "PUT"

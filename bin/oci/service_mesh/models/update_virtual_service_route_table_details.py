@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -28,7 +28,7 @@ class UpdateVirtualServiceRouteTableDetails(object):
 
         :param route_rules:
             The value to assign to the route_rules property of this UpdateVirtualServiceRouteTableDetails.
-        :type route_rules: list[oci.service_mesh.models.VirtualServiceTrafficRouteRule]
+        :type route_rules: list[oci.service_mesh.models.VirtualServiceTrafficRouteRuleDetails]
 
         :param freeform_tags:
             The value to assign to the freeform_tags property of this UpdateVirtualServiceRouteTableDetails.
@@ -42,7 +42,7 @@ class UpdateVirtualServiceRouteTableDetails(object):
         self.swagger_types = {
             'description': 'str',
             'priority': 'int',
-            'route_rules': 'list[VirtualServiceTrafficRouteRule]',
+            'route_rules': 'list[VirtualServiceTrafficRouteRuleDetails]',
             'freeform_tags': 'dict(str, str)',
             'defined_tags': 'dict(str, dict(str, object))'
         }
@@ -123,7 +123,7 @@ class UpdateVirtualServiceRouteTableDetails(object):
 
 
         :return: The route_rules of this UpdateVirtualServiceRouteTableDetails.
-        :rtype: list[oci.service_mesh.models.VirtualServiceTrafficRouteRule]
+        :rtype: list[oci.service_mesh.models.VirtualServiceTrafficRouteRuleDetails]
         """
         return self._route_rules
 
@@ -135,7 +135,7 @@ class UpdateVirtualServiceRouteTableDetails(object):
 
 
         :param route_rules: The route_rules of this UpdateVirtualServiceRouteTableDetails.
-        :type: list[oci.service_mesh.models.VirtualServiceTrafficRouteRule]
+        :type: list[oci.service_mesh.models.VirtualServiceTrafficRouteRuleDetails]
         """
         self._route_rules = route_rules
 

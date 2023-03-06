@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -154,7 +154,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/change_database_tools_connection_compartment.py.html>`__ to see an example of how to use change_database_tools_connection_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/change_database_tools_connection_compartment.py.html>`__ to see an example of how to use change_database_tools_connection_compartment API.
         """
         resource_path = "/databaseToolsConnections/{databaseToolsConnectionId}/actions/changeCompartment"
         method = "POST"
@@ -274,7 +274,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/change_database_tools_private_endpoint_compartment.py.html>`__ to see an example of how to use change_database_tools_private_endpoint_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/change_database_tools_private_endpoint_compartment.py.html>`__ to see an example of how to use change_database_tools_private_endpoint_compartment API.
         """
         resource_path = "/databaseToolsPrivateEndpoints/{databaseToolsPrivateEndpointId}/actions/changeCompartment"
         method = "POST"
@@ -378,7 +378,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/create_database_tools_connection.py.html>`__ to see an example of how to use create_database_tools_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/create_database_tools_connection.py.html>`__ to see an example of how to use create_database_tools_connection API.
         """
         resource_path = "/databaseToolsConnections"
         method = "POST"
@@ -470,7 +470,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/create_database_tools_private_endpoint.py.html>`__ to see an example of how to use create_database_tools_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/create_database_tools_private_endpoint.py.html>`__ to see an example of how to use create_database_tools_private_endpoint API.
         """
         resource_path = "/databaseToolsPrivateEndpoints"
         method = "POST"
@@ -564,7 +564,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/delete_database_tools_connection.py.html>`__ to see an example of how to use delete_database_tools_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/delete_database_tools_connection.py.html>`__ to see an example of how to use delete_database_tools_connection API.
         """
         resource_path = "/databaseToolsConnections/{databaseToolsConnectionId}"
         method = "DELETE"
@@ -665,7 +665,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/delete_database_tools_private_endpoint.py.html>`__ to see an example of how to use delete_database_tools_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/delete_database_tools_private_endpoint.py.html>`__ to see an example of how to use delete_database_tools_private_endpoint API.
         """
         resource_path = "/databaseToolsPrivateEndpoints/{databaseToolsPrivateEndpointId}"
         method = "DELETE"
@@ -759,7 +759,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/get_database_tools_connection.py.html>`__ to see an example of how to use get_database_tools_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/get_database_tools_connection.py.html>`__ to see an example of how to use get_database_tools_connection API.
         """
         resource_path = "/databaseToolsConnections/{databaseToolsConnectionId}"
         method = "GET"
@@ -855,7 +855,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/get_database_tools_endpoint_service.py.html>`__ to see an example of how to use get_database_tools_endpoint_service API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/get_database_tools_endpoint_service.py.html>`__ to see an example of how to use get_database_tools_endpoint_service API.
         """
         resource_path = "/databaseToolsEndpointServices/{databaseToolsEndpointServiceId}"
         method = "GET"
@@ -951,7 +951,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/get_database_tools_private_endpoint.py.html>`__ to see an example of how to use get_database_tools_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/get_database_tools_private_endpoint.py.html>`__ to see an example of how to use get_database_tools_private_endpoint API.
         """
         resource_path = "/databaseToolsPrivateEndpoints/{databaseToolsPrivateEndpointId}"
         method = "GET"
@@ -1045,7 +1045,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -1168,7 +1168,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/list_database_tools_connections.py.html>`__ to see an example of how to use list_database_tools_connections API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/list_database_tools_connections.py.html>`__ to see an example of how to use list_database_tools_connections API.
         """
         resource_path = "/databaseToolsConnections"
         method = "GET"
@@ -1327,7 +1327,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/list_database_tools_endpoint_services.py.html>`__ to see an example of how to use list_database_tools_endpoint_services API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/list_database_tools_endpoint_services.py.html>`__ to see an example of how to use list_database_tools_endpoint_services API.
         """
         resource_path = "/databaseToolsEndpointServices"
         method = "GET"
@@ -1481,7 +1481,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/list_database_tools_private_endpoints.py.html>`__ to see an example of how to use list_database_tools_private_endpoints API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/list_database_tools_private_endpoints.py.html>`__ to see an example of how to use list_database_tools_private_endpoints API.
         """
         resource_path = "/databaseToolsPrivateEndpoints"
         method = "GET"
@@ -1623,7 +1623,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -1761,7 +1761,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -1904,7 +1904,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -2029,7 +2029,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/update_database_tools_connection.py.html>`__ to see an example of how to use update_database_tools_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/update_database_tools_connection.py.html>`__ to see an example of how to use update_database_tools_connection API.
         """
         resource_path = "/databaseToolsConnections/{databaseToolsConnectionId}"
         method = "PUT"
@@ -2135,7 +2135,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/update_database_tools_private_endpoint.py.html>`__ to see an example of how to use update_database_tools_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/update_database_tools_private_endpoint.py.html>`__ to see an example of how to use update_database_tools_private_endpoint API.
         """
         resource_path = "/databaseToolsPrivateEndpoints/{databaseToolsPrivateEndpointId}"
         method = "PUT"
@@ -2241,7 +2241,7 @@ class DatabaseToolsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasetools/validate_database_tools_connection.py.html>`__ to see an example of how to use validate_database_tools_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasetools/validate_database_tools_connection.py.html>`__ to see an example of how to use validate_database_tools_connection API.
         """
         resource_path = "/databaseToolsConnections/{databaseToolsConnectionId}/actions/validateConnection"
         method = "POST"

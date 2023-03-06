@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -90,7 +90,7 @@ class AnnouncementsPreferencesClient(object):
             'regional_client': True,
             'service_endpoint': kwargs.get('service_endpoint'),
             'base_path': '/20180904',
-            'service_endpoint_template': 'https://announcements.{region}.oci.{secondLevelDomain}',
+            'service_endpoint_template': 'https://announcements.{region}.{secondLevelDomain}',
             'skip_deserialization': kwargs.get('skip_deserialization', False),
             'circuit_breaker_strategy': kwargs.get('circuit_breaker_strategy', circuit_breaker.GLOBAL_CIRCUIT_BREAKER_STRATEGY)
         }
@@ -137,7 +137,7 @@ class AnnouncementsPreferencesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/announcementsservice/create_announcements_preference.py.html>`__ to see an example of how to use create_announcements_preference API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/create_announcements_preference.py.html>`__ to see an example of how to use create_announcements_preference API.
         """
         resource_path = "/announcementsPreferences"
         method = "POST"
@@ -225,7 +225,7 @@ class AnnouncementsPreferencesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/announcementsservice/get_announcements_preference.py.html>`__ to see an example of how to use get_announcements_preference API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/get_announcements_preference.py.html>`__ to see an example of how to use get_announcements_preference API.
         """
         resource_path = "/announcementsPreferences/{preferenceId}"
         method = "GET"
@@ -326,7 +326,7 @@ class AnnouncementsPreferencesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/announcementsservice/list_announcements_preferences.py.html>`__ to see an example of how to use list_announcements_preferences API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/list_announcements_preferences.py.html>`__ to see an example of how to use list_announcements_preferences API.
         """
         resource_path = "/announcementsPreferences"
         method = "GET"
@@ -426,7 +426,7 @@ class AnnouncementsPreferencesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/announcementsservice/update_announcements_preference.py.html>`__ to see an example of how to use update_announcements_preference API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/update_announcements_preference.py.html>`__ to see an example of how to use update_announcements_preference API.
         """
         resource_path = "/announcementsPreferences/{preferenceId}"
         method = "PUT"

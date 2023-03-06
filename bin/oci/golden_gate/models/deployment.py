@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -112,6 +112,10 @@ class Deployment(object):
     #: A constant which can be used with the deployment_type property of a Deployment.
     #: This constant has a value of "DATABASE_MYSQL"
     DEPLOYMENT_TYPE_DATABASE_MYSQL = "DATABASE_MYSQL"
+
+    #: A constant which can be used with the deployment_type property of a Deployment.
+    #: This constant has a value of "DATABASE_POSTGRESQL"
+    DEPLOYMENT_TYPE_DATABASE_POSTGRESQL = "DATABASE_POSTGRESQL"
 
     def __init__(self, **kwargs):
         """
@@ -238,13 +242,17 @@ class Deployment(object):
 
         :param deployment_type:
             The value to assign to the deployment_type property of this Deployment.
-            Allowed values for this property are: "OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MYSQL", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for this property are: "OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MYSQL", "DATABASE_POSTGRESQL", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type deployment_type: str
 
         :param ogg_data:
             The value to assign to the ogg_data property of this Deployment.
         :type ogg_data: oci.golden_gate.models.OggDeployment
+
+        :param deployment_diagnostic_data:
+            The value to assign to the deployment_diagnostic_data property of this Deployment.
+        :type deployment_diagnostic_data: oci.golden_gate.models.DeploymentDiagnosticData
 
         """
         self.swagger_types = {
@@ -277,7 +285,8 @@ class Deployment(object):
             'storage_utilization_in_bytes': 'int',
             'is_storage_utilization_limit_exceeded': 'bool',
             'deployment_type': 'str',
-            'ogg_data': 'OggDeployment'
+            'ogg_data': 'OggDeployment',
+            'deployment_diagnostic_data': 'DeploymentDiagnosticData'
         }
 
         self.attribute_map = {
@@ -310,7 +319,8 @@ class Deployment(object):
             'storage_utilization_in_bytes': 'storageUtilizationInBytes',
             'is_storage_utilization_limit_exceeded': 'isStorageUtilizationLimitExceeded',
             'deployment_type': 'deploymentType',
-            'ogg_data': 'oggData'
+            'ogg_data': 'oggData',
+            'deployment_diagnostic_data': 'deploymentDiagnosticData'
         }
 
         self._id = None
@@ -343,6 +353,7 @@ class Deployment(object):
         self._is_storage_utilization_limit_exceeded = None
         self._deployment_type = None
         self._ogg_data = None
+        self._deployment_diagnostic_data = None
 
     @property
     def id(self):
@@ -1106,7 +1117,7 @@ class Deployment(object):
         NOTE: Use of the value 'OGG' is maintained for backward compatibility purposes.  Its use is discouraged
               in favor of the equivalent 'DATABASE_ORACLE' value.
 
-        Allowed values for this property are: "OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MYSQL", 'UNKNOWN_ENUM_VALUE'.
+        Allowed values for this property are: "OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MYSQL", "DATABASE_POSTGRESQL", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
 
 
@@ -1127,7 +1138,7 @@ class Deployment(object):
         :param deployment_type: The deployment_type of this Deployment.
         :type: str
         """
-        allowed_values = ["OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MYSQL"]
+        allowed_values = ["OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MYSQL", "DATABASE_POSTGRESQL"]
         if not value_allowed_none_or_none_sentinel(deployment_type, allowed_values):
             deployment_type = 'UNKNOWN_ENUM_VALUE'
         self._deployment_type = deployment_type
@@ -1151,6 +1162,26 @@ class Deployment(object):
         :type: oci.golden_gate.models.OggDeployment
         """
         self._ogg_data = ogg_data
+
+    @property
+    def deployment_diagnostic_data(self):
+        """
+        Gets the deployment_diagnostic_data of this Deployment.
+
+        :return: The deployment_diagnostic_data of this Deployment.
+        :rtype: oci.golden_gate.models.DeploymentDiagnosticData
+        """
+        return self._deployment_diagnostic_data
+
+    @deployment_diagnostic_data.setter
+    def deployment_diagnostic_data(self, deployment_diagnostic_data):
+        """
+        Sets the deployment_diagnostic_data of this Deployment.
+
+        :param deployment_diagnostic_data: The deployment_diagnostic_data of this Deployment.
+        :type: oci.golden_gate.models.DeploymentDiagnosticData
+        """
+        self._deployment_diagnostic_data = deployment_diagnostic_data
 
     def __repr__(self):
         return formatted_flat_dict(self)

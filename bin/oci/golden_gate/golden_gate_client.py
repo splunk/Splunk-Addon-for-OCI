@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -147,7 +147,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/cancel_deployment_backup.py.html>`__ to see an example of how to use cancel_deployment_backup API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/cancel_deployment_backup.py.html>`__ to see an example of how to use cancel_deployment_backup API.
         """
         resource_path = "/deploymentBackups/{deploymentBackupId}/actions/cancel"
         method = "POST"
@@ -262,7 +262,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/change_connection_compartment.py.html>`__ to see an example of how to use change_connection_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/change_connection_compartment.py.html>`__ to see an example of how to use change_connection_compartment API.
         """
         resource_path = "/connections/{connectionId}/actions/changeCompartment"
         method = "POST"
@@ -380,7 +380,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/change_database_registration_compartment.py.html>`__ to see an example of how to use change_database_registration_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/change_database_registration_compartment.py.html>`__ to see an example of how to use change_database_registration_compartment API.
         """
         resource_path = "/databaseRegistrations/{databaseRegistrationId}/actions/changeCompartment"
         method = "POST"
@@ -500,7 +500,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/change_deployment_backup_compartment.py.html>`__ to see an example of how to use change_deployment_backup_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/change_deployment_backup_compartment.py.html>`__ to see an example of how to use change_deployment_backup_compartment API.
         """
         resource_path = "/deploymentBackups/{deploymentBackupId}/actions/changeCompartment"
         method = "POST"
@@ -620,7 +620,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/change_deployment_compartment.py.html>`__ to see an example of how to use change_deployment_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/change_deployment_compartment.py.html>`__ to see an example of how to use change_deployment_compartment API.
         """
         resource_path = "/deployments/{deploymentId}/actions/changeCompartment"
         method = "POST"
@@ -692,6 +692,121 @@ class GoldenGateClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def collect_deployment_diagnostic(self, deployment_id, collect_deployment_diagnostic_details, **kwargs):
+        """
+        Collects the diagnostic of a Deployment. When provided, If-Match is checked against ETag values of the resource.
+
+
+        :param str deployment_id: (required)
+            A unique Deployment identifier.
+
+        :param oci.golden_gate.models.CollectDeploymentDiagnosticDetails collect_deployment_diagnostic_details: (required)
+            Metadata about the deployment diagnostic. This also includes the Object storage information where the diagnostic will be uploaded
+
+        :param str if_match: (optional)
+            For optimistic concurrency control. In the PUT or DELETE call for a resource, set the
+            `if-match` parameter to the value of the etag from a previous GET or POST response for that
+            resource.  The resource is updated or deleted only if the etag you provide matches the
+            resource's current etag value.
+
+        :param str opc_request_id: (optional)
+            The client request ID for tracing.
+
+        :param str opc_retry_token: (optional)
+            A token that uniquely identifies a request so it can be retried, in case of a timeout or
+            server error, without risk of executing that same action again. Retry tokens expire after 24
+            hours, but can be invalidated before then due to conflicting operations. For example, if a
+            resource has been deleted and purged from the system, then a retry of the original creation
+            request is rejected.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/collect_deployment_diagnostic.py.html>`__ to see an example of how to use collect_deployment_diagnostic API.
+        """
+        resource_path = "/deployments/{deploymentId}/actions/collectDiagnostics"
+        method = "POST"
+        operation_name = "collect_deployment_diagnostic"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/goldengate/20200407/Deployment/CollectDeploymentDiagnostic"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "if_match",
+            "opc_request_id",
+            "opc_retry_token"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "collect_deployment_diagnostic got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "deploymentId": deployment_id
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "if-match": kwargs.get("if_match", missing),
+            "opc-request-id": kwargs.get("opc_request_id", missing),
+            "opc-retry-token": kwargs.get("opc_retry_token", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_retry_token_if_needed(header_params)
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=collect_deployment_diagnostic_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=collect_deployment_diagnostic_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def create_connection(self, create_connection_details, **kwargs):
         """
         Creates a new Connection.
@@ -726,7 +841,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/create_connection.py.html>`__ to see an example of how to use create_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/create_connection.py.html>`__ to see an example of how to use create_connection API.
         """
         resource_path = "/connections"
         method = "POST"
@@ -820,7 +935,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/create_connection_assignment.py.html>`__ to see an example of how to use create_connection_assignment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/create_connection_assignment.py.html>`__ to see an example of how to use create_connection_assignment API.
         """
         resource_path = "/connectionAssignments"
         method = "POST"
@@ -915,7 +1030,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/create_database_registration.py.html>`__ to see an example of how to use create_database_registration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/create_database_registration.py.html>`__ to see an example of how to use create_database_registration API.
         """
         resource_path = "/databaseRegistrations"
         method = "POST"
@@ -1009,7 +1124,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/create_deployment.py.html>`__ to see an example of how to use create_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/create_deployment.py.html>`__ to see an example of how to use create_deployment API.
         """
         resource_path = "/deployments"
         method = "POST"
@@ -1103,7 +1218,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/create_deployment_backup.py.html>`__ to see an example of how to use create_deployment_backup API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/create_deployment_backup.py.html>`__ to see an example of how to use create_deployment_backup API.
         """
         resource_path = "/deploymentBackups"
         method = "POST"
@@ -1196,7 +1311,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/delete_connection.py.html>`__ to see an example of how to use delete_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/delete_connection.py.html>`__ to see an example of how to use delete_connection API.
         """
         resource_path = "/connections/{connectionId}"
         method = "DELETE"
@@ -1298,7 +1413,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/delete_connection_assignment.py.html>`__ to see an example of how to use delete_connection_assignment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/delete_connection_assignment.py.html>`__ to see an example of how to use delete_connection_assignment API.
         """
         resource_path = "/connectionAssignments/{connectionAssignmentId}"
         method = "DELETE"
@@ -1399,7 +1514,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/delete_database_registration.py.html>`__ to see an example of how to use delete_database_registration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/delete_database_registration.py.html>`__ to see an example of how to use delete_database_registration API.
         """
         resource_path = "/databaseRegistrations/{databaseRegistrationId}"
         method = "DELETE"
@@ -1499,7 +1614,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/delete_deployment.py.html>`__ to see an example of how to use delete_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/delete_deployment.py.html>`__ to see an example of how to use delete_deployment API.
         """
         resource_path = "/deployments/{deploymentId}"
         method = "DELETE"
@@ -1599,7 +1714,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/delete_deployment_backup.py.html>`__ to see an example of how to use delete_deployment_backup API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/delete_deployment_backup.py.html>`__ to see an example of how to use delete_deployment_backup API.
         """
         resource_path = "/deploymentBackups/{deploymentBackupId}"
         method = "DELETE"
@@ -1695,7 +1810,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/get_connection.py.html>`__ to see an example of how to use get_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/get_connection.py.html>`__ to see an example of how to use get_connection API.
         """
         resource_path = "/connections/{connectionId}"
         method = "GET"
@@ -1791,7 +1906,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/get_connection_assignment.py.html>`__ to see an example of how to use get_connection_assignment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/get_connection_assignment.py.html>`__ to see an example of how to use get_connection_assignment API.
         """
         resource_path = "/connectionAssignments/{connectionAssignmentId}"
         method = "GET"
@@ -1886,7 +2001,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/get_database_registration.py.html>`__ to see an example of how to use get_database_registration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/get_database_registration.py.html>`__ to see an example of how to use get_database_registration API.
         """
         resource_path = "/databaseRegistrations/{databaseRegistrationId}"
         method = "GET"
@@ -1980,7 +2095,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/get_deployment.py.html>`__ to see an example of how to use get_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/get_deployment.py.html>`__ to see an example of how to use get_deployment API.
         """
         resource_path = "/deployments/{deploymentId}"
         method = "GET"
@@ -2074,7 +2189,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/get_deployment_backup.py.html>`__ to see an example of how to use get_deployment_backup API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/get_deployment_backup.py.html>`__ to see an example of how to use get_deployment_backup API.
         """
         resource_path = "/deploymentBackups/{deploymentBackupId}"
         method = "GET"
@@ -2168,7 +2283,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/get_deployment_upgrade.py.html>`__ to see an example of how to use get_deployment_upgrade API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/get_deployment_upgrade.py.html>`__ to see an example of how to use get_deployment_upgrade API.
         """
         resource_path = "/deploymentUpgrades/{deploymentUpgradeId}"
         method = "GET"
@@ -2264,7 +2379,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -2397,7 +2512,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/list_connection_assignments.py.html>`__ to see an example of how to use list_connection_assignments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/list_connection_assignments.py.html>`__ to see an example of how to use list_connection_assignments API.
         """
         resource_path = "/connectionAssignments"
         method = "GET"
@@ -2509,12 +2624,12 @@ class GoldenGateClient(object):
         :param list[str] technology_type: (optional)
             The array of technology types.
 
-            Allowed values are: "OCI_AUTONOMOUS_DATABASE", "OCI_MYSQL", "OCI_OBJECT_STORAGE", "OCI_STREAMING", "ORACLE_DATABASE", "ORACLE_EXADATA", "AMAZON_RDS_ORACLE", "AMAZON_AURORA_MYSQL", "AMAZON_RDS_MARIADB", "AMAZON_RDS_MYSQL", "APACHE_KAFKA", "AZURE_MYSQL", "GOLDENGATE", "GOOGLE_CLOUD_SQL_MYSQL", "MARIADB", "MYSQL_SERVER"
+            Allowed values are: "GOLDENGATE", "OCI_AUTONOMOUS_DATABASE", "OCI_MYSQL", "OCI_OBJECT_STORAGE", "OCI_STREAMING", "ORACLE_DATABASE", "ORACLE_EXADATA", "AMAZON_RDS_ORACLE", "AMAZON_AURORA_MYSQL", "AMAZON_AURORA_POSTGRESQL", "AMAZON_RDS_MARIADB", "AMAZON_RDS_MYSQL", "AMAZON_RDS_POSTGRESQL", "APACHE_KAFKA", "AZURE_DATA_LAKE_STORAGE", "AZURE_EVENT_HUBS", "AZURE_MYSQL", "AZURE_POSTGRESQL", "AZURE_SYNAPSE_ANALYTICS", "CONFLUENT_KAFKA", "CONFLUENT_SCHEMA_REGISTRY", "GOOGLE_CLOUD_SQL_MYSQL", "GOOGLE_CLOUD_SQL_POSTGRESQL", "MARIADB", "MYSQL_SERVER", "POSTGRESQL_SERVER"
 
         :param list[str] connection_type: (optional)
             The array of connection types.
 
-            Allowed values are: "GOLDENGATE", "KAFKA", "MYSQL", "OCI_OBJECT_STORAGE", "ORACLE"
+            Allowed values are: "GOLDENGATE", "KAFKA", "KAFKA_SCHEMA_REGISTRY", "MYSQL", "OCI_OBJECT_STORAGE", "ORACLE", "AZURE_DATA_LAKE_STORAGE", "POSTGRESQL", "AZURE_SYNAPSE_ANALYTICS"
 
         :param str assigned_deployment_id: (optional)
             The OCID of the deployment which for the connection must be assigned.
@@ -2525,7 +2640,7 @@ class GoldenGateClient(object):
         :param str assignable_deployment_type: (optional)
             Filters for connections which can be assigned to the latest version of the specified deployment type.
 
-            Allowed values are: "OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MYSQL"
+            Allowed values are: "OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MYSQL", "DATABASE_POSTGRESQL"
 
         :param str lifecycle_state: (optional)
             A filter to return only connections having the 'lifecycleState' given.
@@ -2573,7 +2688,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/list_connections.py.html>`__ to see an example of how to use list_connections API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/list_connections.py.html>`__ to see an example of how to use list_connections API.
         """
         resource_path = "/connections"
         method = "GET"
@@ -2603,7 +2718,7 @@ class GoldenGateClient(object):
                 "list_connections got unknown kwargs: {!r}".format(extra_kwargs))
 
         if 'technology_type' in kwargs:
-            technology_type_allowed_values = ["OCI_AUTONOMOUS_DATABASE", "OCI_MYSQL", "OCI_OBJECT_STORAGE", "OCI_STREAMING", "ORACLE_DATABASE", "ORACLE_EXADATA", "AMAZON_RDS_ORACLE", "AMAZON_AURORA_MYSQL", "AMAZON_RDS_MARIADB", "AMAZON_RDS_MYSQL", "APACHE_KAFKA", "AZURE_MYSQL", "GOLDENGATE", "GOOGLE_CLOUD_SQL_MYSQL", "MARIADB", "MYSQL_SERVER"]
+            technology_type_allowed_values = ["GOLDENGATE", "OCI_AUTONOMOUS_DATABASE", "OCI_MYSQL", "OCI_OBJECT_STORAGE", "OCI_STREAMING", "ORACLE_DATABASE", "ORACLE_EXADATA", "AMAZON_RDS_ORACLE", "AMAZON_AURORA_MYSQL", "AMAZON_AURORA_POSTGRESQL", "AMAZON_RDS_MARIADB", "AMAZON_RDS_MYSQL", "AMAZON_RDS_POSTGRESQL", "APACHE_KAFKA", "AZURE_DATA_LAKE_STORAGE", "AZURE_EVENT_HUBS", "AZURE_MYSQL", "AZURE_POSTGRESQL", "AZURE_SYNAPSE_ANALYTICS", "CONFLUENT_KAFKA", "CONFLUENT_SCHEMA_REGISTRY", "GOOGLE_CLOUD_SQL_MYSQL", "GOOGLE_CLOUD_SQL_POSTGRESQL", "MARIADB", "MYSQL_SERVER", "POSTGRESQL_SERVER"]
             for technology_type_item in kwargs['technology_type']:
                 if technology_type_item not in technology_type_allowed_values:
                     raise ValueError(
@@ -2611,7 +2726,7 @@ class GoldenGateClient(object):
                     )
 
         if 'connection_type' in kwargs:
-            connection_type_allowed_values = ["GOLDENGATE", "KAFKA", "MYSQL", "OCI_OBJECT_STORAGE", "ORACLE"]
+            connection_type_allowed_values = ["GOLDENGATE", "KAFKA", "KAFKA_SCHEMA_REGISTRY", "MYSQL", "OCI_OBJECT_STORAGE", "ORACLE", "AZURE_DATA_LAKE_STORAGE", "POSTGRESQL", "AZURE_SYNAPSE_ANALYTICS"]
             for connection_type_item in kwargs['connection_type']:
                 if connection_type_item not in connection_type_allowed_values:
                     raise ValueError(
@@ -2619,7 +2734,7 @@ class GoldenGateClient(object):
                     )
 
         if 'assignable_deployment_type' in kwargs:
-            assignable_deployment_type_allowed_values = ["OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MYSQL"]
+            assignable_deployment_type_allowed_values = ["OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MYSQL", "DATABASE_POSTGRESQL"]
             if kwargs['assignable_deployment_type'] not in assignable_deployment_type_allowed_values:
                 raise ValueError(
                     "Invalid value for `assignable_deployment_type`, must be one of {0}".format(assignable_deployment_type_allowed_values)
@@ -2758,7 +2873,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/list_database_registrations.py.html>`__ to see an example of how to use list_database_registrations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/list_database_registrations.py.html>`__ to see an example of how to use list_database_registrations API.
         """
         resource_path = "/databaseRegistrations"
         method = "GET"
@@ -2914,7 +3029,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/list_deployment_backups.py.html>`__ to see an example of how to use list_deployment_backups API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/list_deployment_backups.py.html>`__ to see an example of how to use list_deployment_backups API.
         """
         resource_path = "/deploymentBackups"
         method = "GET"
@@ -3062,7 +3177,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/list_deployment_types.py.html>`__ to see an example of how to use list_deployment_types API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/list_deployment_types.py.html>`__ to see an example of how to use list_deployment_types API.
         """
         resource_path = "/deploymentTypes"
         method = "GET"
@@ -3209,7 +3324,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/list_deployment_upgrades.py.html>`__ to see an example of how to use list_deployment_upgrades API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/list_deployment_upgrades.py.html>`__ to see an example of how to use list_deployment_upgrades API.
         """
         resource_path = "/deploymentUpgrades"
         method = "GET"
@@ -3319,7 +3434,7 @@ class GoldenGateClient(object):
         :param str supported_connection_type: (optional)
             The connection type which the deployment must support.
 
-            Allowed values are: "GOLDENGATE", "KAFKA", "MYSQL", "OCI_OBJECT_STORAGE", "ORACLE"
+            Allowed values are: "GOLDENGATE", "KAFKA", "KAFKA_SCHEMA_REGISTRY", "MYSQL", "OCI_OBJECT_STORAGE", "ORACLE", "AZURE_DATA_LAKE_STORAGE", "POSTGRESQL", "AZURE_SYNAPSE_ANALYTICS"
 
         :param str assigned_connection_id: (optional)
             The OCID of the connection which for the deployment must be assigned.
@@ -3381,7 +3496,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/list_deployments.py.html>`__ to see an example of how to use list_deployments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/list_deployments.py.html>`__ to see an example of how to use list_deployments API.
         """
         resource_path = "/deployments"
         method = "GET"
@@ -3411,7 +3526,7 @@ class GoldenGateClient(object):
                 "list_deployments got unknown kwargs: {!r}".format(extra_kwargs))
 
         if 'supported_connection_type' in kwargs:
-            supported_connection_type_allowed_values = ["GOLDENGATE", "KAFKA", "MYSQL", "OCI_OBJECT_STORAGE", "ORACLE"]
+            supported_connection_type_allowed_values = ["GOLDENGATE", "KAFKA", "KAFKA_SCHEMA_REGISTRY", "MYSQL", "OCI_OBJECT_STORAGE", "ORACLE", "AZURE_DATA_LAKE_STORAGE", "POSTGRESQL", "AZURE_SYNAPSE_ANALYTICS"]
             if kwargs['supported_connection_type'] not in supported_connection_type_allowed_values:
                 raise ValueError(
                     "Invalid value for `supported_connection_type`, must be one of {0}".format(supported_connection_type_allowed_values)
@@ -3534,7 +3649,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/list_messages.py.html>`__ to see an example of how to use list_messages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/list_messages.py.html>`__ to see an example of how to use list_messages API.
         """
         resource_path = "/messages"
         method = "GET"
@@ -3652,7 +3767,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/list_trail_files.py.html>`__ to see an example of how to use list_trail_files API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/list_trail_files.py.html>`__ to see an example of how to use list_trail_files API.
         """
         resource_path = "/trailFiles"
         method = "GET"
@@ -3795,7 +3910,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/list_trail_sequences.py.html>`__ to see an example of how to use list_trail_sequences API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/list_trail_sequences.py.html>`__ to see an example of how to use list_trail_sequences API.
         """
         resource_path = "/trailSequences"
         method = "GET"
@@ -3920,7 +4035,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -4033,7 +4148,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -4151,7 +4266,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -4262,7 +4377,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/restore_deployment.py.html>`__ to see an example of how to use restore_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/restore_deployment.py.html>`__ to see an example of how to use restore_deployment API.
         """
         resource_path = "/deploymentBackups/{deploymentBackupId}/actions/restore"
         method = "POST"
@@ -4377,7 +4492,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/start_deployment.py.html>`__ to see an example of how to use start_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/start_deployment.py.html>`__ to see an example of how to use start_deployment API.
         """
         resource_path = "/deployments/{deploymentId}/actions/start"
         method = "POST"
@@ -4492,7 +4607,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/stop_deployment.py.html>`__ to see an example of how to use stop_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/stop_deployment.py.html>`__ to see an example of how to use stop_deployment API.
         """
         resource_path = "/deployments/{deploymentId}/actions/stop"
         method = "POST"
@@ -4602,7 +4717,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/update_connection.py.html>`__ to see an example of how to use update_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/update_connection.py.html>`__ to see an example of how to use update_connection API.
         """
         resource_path = "/connections/{connectionId}"
         method = "PUT"
@@ -4708,7 +4823,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/update_database_registration.py.html>`__ to see an example of how to use update_database_registration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/update_database_registration.py.html>`__ to see an example of how to use update_database_registration API.
         """
         resource_path = "/databaseRegistrations/{databaseRegistrationId}"
         method = "PUT"
@@ -4813,7 +4928,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/update_deployment.py.html>`__ to see an example of how to use update_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/update_deployment.py.html>`__ to see an example of how to use update_deployment API.
         """
         resource_path = "/deployments/{deploymentId}"
         method = "PUT"
@@ -4918,7 +5033,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/update_deployment_backup.py.html>`__ to see an example of how to use update_deployment_backup API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/update_deployment_backup.py.html>`__ to see an example of how to use update_deployment_backup API.
         """
         resource_path = "/deploymentBackups/{deploymentBackupId}"
         method = "PUT"
@@ -5032,7 +5147,7 @@ class GoldenGateClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/goldengate/upgrade_deployment.py.html>`__ to see an example of how to use upgrade_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/goldengate/upgrade_deployment.py.html>`__ to see an example of how to use upgrade_deployment API.
         """
         resource_path = "/deployments/{deploymentId}/actions/upgrade"
         method = "POST"

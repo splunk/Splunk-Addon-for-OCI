@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -185,6 +185,10 @@ class UpdateAutonomousDatabaseDetails(object):
             The value to assign to the private_endpoint_label property of this UpdateAutonomousDatabaseDetails.
         :type private_endpoint_label: str
 
+        :param private_endpoint_ip:
+            The value to assign to the private_endpoint_ip property of this UpdateAutonomousDatabaseDetails.
+        :type private_endpoint_ip: str
+
         :param nsg_ids:
             The value to assign to the nsg_ids property of this UpdateAutonomousDatabaseDetails.
         :type nsg_ids: list[str]
@@ -242,6 +246,7 @@ class UpdateAutonomousDatabaseDetails(object):
             'permission_level': 'str',
             'subnet_id': 'str',
             'private_endpoint_label': 'str',
+            'private_endpoint_ip': 'str',
             'nsg_ids': 'list[str]',
             'customer_contacts': 'list[CustomerContact]',
             'is_mtls_connection_required': 'bool',
@@ -279,6 +284,7 @@ class UpdateAutonomousDatabaseDetails(object):
             'permission_level': 'permissionLevel',
             'subnet_id': 'subnetId',
             'private_endpoint_label': 'privateEndpointLabel',
+            'private_endpoint_ip': 'privateEndpointIp',
             'nsg_ids': 'nsgIds',
             'customer_contacts': 'customerContacts',
             'is_mtls_connection_required': 'isMtlsConnectionRequired',
@@ -315,6 +321,7 @@ class UpdateAutonomousDatabaseDetails(object):
         self._permission_level = None
         self._subnet_id = None
         self._private_endpoint_label = None
+        self._private_endpoint_ip = None
         self._nsg_ids = None
         self._customer_contacts = None
         self._is_mtls_connection_required = None
@@ -1220,6 +1227,30 @@ class UpdateAutonomousDatabaseDetails(object):
         :type: str
         """
         self._private_endpoint_label = private_endpoint_label
+
+    @property
+    def private_endpoint_ip(self):
+        """
+        Gets the private_endpoint_ip of this UpdateAutonomousDatabaseDetails.
+        The private endpoint Ip address for the resource.
+
+
+        :return: The private_endpoint_ip of this UpdateAutonomousDatabaseDetails.
+        :rtype: str
+        """
+        return self._private_endpoint_ip
+
+    @private_endpoint_ip.setter
+    def private_endpoint_ip(self, private_endpoint_ip):
+        """
+        Sets the private_endpoint_ip of this UpdateAutonomousDatabaseDetails.
+        The private endpoint Ip address for the resource.
+
+
+        :param private_endpoint_ip: The private_endpoint_ip of this UpdateAutonomousDatabaseDetails.
+        :type: str
+        """
+        self._private_endpoint_ip = private_endpoint_ip
 
     @property
     def nsg_ids(self):

@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -22,21 +22,28 @@ class PatchAlertsDetails(object):
             The value to assign to the items property of this PatchAlertsDetails.
         :type items: list[oci.data_safe.models.PatchInstruction]
 
+        :param compartment_id:
+            The value to assign to the compartment_id property of this PatchAlertsDetails.
+        :type compartment_id: str
+
         """
         self.swagger_types = {
-            'items': 'list[PatchInstruction]'
+            'items': 'list[PatchInstruction]',
+            'compartment_id': 'str'
         }
 
         self.attribute_map = {
-            'items': 'items'
+            'items': 'items',
+            'compartment_id': 'compartmentId'
         }
 
         self._items = None
+        self._compartment_id = None
 
     @property
     def items(self):
         """
-        Gets the items of this PatchAlertsDetails.
+        **[Required]** Gets the items of this PatchAlertsDetails.
         Array of patch instructions.
 
 
@@ -56,6 +63,30 @@ class PatchAlertsDetails(object):
         :type: list[oci.data_safe.models.PatchInstruction]
         """
         self._items = items
+
+    @property
+    def compartment_id(self):
+        """
+        **[Required]** Gets the compartment_id of this PatchAlertsDetails.
+        The OCID of the compartment that contains the alerts.
+
+
+        :return: The compartment_id of this PatchAlertsDetails.
+        :rtype: str
+        """
+        return self._compartment_id
+
+    @compartment_id.setter
+    def compartment_id(self, compartment_id):
+        """
+        Sets the compartment_id of this PatchAlertsDetails.
+        The OCID of the compartment that contains the alerts.
+
+
+        :param compartment_id: The compartment_id of this PatchAlertsDetails.
+        :type: str
+        """
+        self._compartment_id = compartment_id
 
     def __repr__(self):
         return formatted_flat_dict(self)

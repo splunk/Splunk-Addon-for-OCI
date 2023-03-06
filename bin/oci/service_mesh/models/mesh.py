@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -230,9 +230,10 @@ class Mesh(object):
     @property
     def certificate_authorities(self):
         """
-        **[Required]** Gets the certificate_authorities of this Mesh.
+        Gets the certificate_authorities of this Mesh.
         A list of certificate authority resources to use for creating leaf certificates for mTLS authentication.
-        Currently we only support one certificate authority, but this may expand in future releases.
+        Currently we only support one certificate authority, but this may expand in future releases. Request with
+        more than one certificate authority will be rejected.
 
 
         :return: The certificate_authorities of this Mesh.
@@ -245,7 +246,8 @@ class Mesh(object):
         """
         Sets the certificate_authorities of this Mesh.
         A list of certificate authority resources to use for creating leaf certificates for mTLS authentication.
-        Currently we only support one certificate authority, but this may expand in future releases.
+        Currently we only support one certificate authority, but this may expand in future releases. Request with
+        more than one certificate authority will be rejected.
 
 
         :param certificate_authorities: The certificate_authorities of this Mesh.

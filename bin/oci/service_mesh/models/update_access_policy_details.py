@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -24,7 +24,7 @@ class UpdateAccessPolicyDetails(object):
 
         :param rules:
             The value to assign to the rules property of this UpdateAccessPolicyDetails.
-        :type rules: list[oci.service_mesh.models.AccessPolicyRule]
+        :type rules: list[oci.service_mesh.models.AccessPolicyRuleDetails]
 
         :param freeform_tags:
             The value to assign to the freeform_tags property of this UpdateAccessPolicyDetails.
@@ -37,7 +37,7 @@ class UpdateAccessPolicyDetails(object):
         """
         self.swagger_types = {
             'description': 'str',
-            'rules': 'list[AccessPolicyRule]',
+            'rules': 'list[AccessPolicyRuleDetails]',
             'freeform_tags': 'dict(str, str)',
             'defined_tags': 'dict(str, dict(str, object))'
         }
@@ -92,7 +92,7 @@ class UpdateAccessPolicyDetails(object):
 
 
         :return: The rules of this UpdateAccessPolicyDetails.
-        :rtype: list[oci.service_mesh.models.AccessPolicyRule]
+        :rtype: list[oci.service_mesh.models.AccessPolicyRuleDetails]
         """
         return self._rules
 
@@ -104,7 +104,7 @@ class UpdateAccessPolicyDetails(object):
 
 
         :param rules: The rules of this UpdateAccessPolicyDetails.
-        :type: list[oci.service_mesh.models.AccessPolicyRule]
+        :type: list[oci.service_mesh.models.AccessPolicyRuleDetails]
         """
         self._rules = rules
 

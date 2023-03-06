@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -151,7 +151,7 @@ class AccessRequestsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/operatoraccesscontrol/approve_access_request.py.html>`__ to see an example of how to use approve_access_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/approve_access_request.py.html>`__ to see an example of how to use approve_access_request API.
         """
         resource_path = "/accessRequests/{accessRequestId}/action/approve"
         method = "POST"
@@ -248,7 +248,7 @@ class AccessRequestsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/operatoraccesscontrol/get_access_request.py.html>`__ to see an example of how to use get_access_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/get_access_request.py.html>`__ to see an example of how to use get_access_request API.
         """
         resource_path = "/accessRequests/{accessRequestId}"
         method = "GET"
@@ -357,7 +357,7 @@ class AccessRequestsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/operatoraccesscontrol/interaction_request.py.html>`__ to see an example of how to use interaction_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/interaction_request.py.html>`__ to see an example of how to use interaction_request API.
         """
         resource_path = "/accessRequests/{accessRequestId}/action/interactionRequest"
         method = "POST"
@@ -462,7 +462,7 @@ class AccessRequestsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/operatoraccesscontrol/list_access_request_histories.py.html>`__ to see an example of how to use list_access_request_histories API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/list_access_request_histories.py.html>`__ to see an example of how to use list_access_request_histories API.
         """
         resource_path = "/accessRequests/{accessRequestId}/history"
         method = "GET"
@@ -601,7 +601,7 @@ class AccessRequestsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/operatoraccesscontrol/list_access_requests.py.html>`__ to see an example of how to use list_access_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/list_access_requests.py.html>`__ to see an example of how to use list_access_requests API.
         """
         resource_path = "/accessRequests"
         method = "GET"
@@ -733,7 +733,7 @@ class AccessRequestsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/operatoraccesscontrol/list_interactions.py.html>`__ to see an example of how to use list_interactions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/list_interactions.py.html>`__ to see an example of how to use list_interactions API.
         """
         resource_path = "/accessRequests/{accessRequestId}/interactions"
         method = "GET"
@@ -852,7 +852,7 @@ class AccessRequestsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/operatoraccesscontrol/reject_access_request.py.html>`__ to see an example of how to use reject_access_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/reject_access_request.py.html>`__ to see an example of how to use reject_access_request API.
         """
         resource_path = "/accessRequests/{accessRequestId}/action/reject"
         method = "POST"
@@ -966,7 +966,7 @@ class AccessRequestsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/operatoraccesscontrol/review_access_request.py.html>`__ to see an example of how to use review_access_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/review_access_request.py.html>`__ to see an example of how to use review_access_request API.
         """
         resource_path = "/accessRequests/{accessRequestId}/action/review"
         method = "POST"
@@ -1082,7 +1082,7 @@ class AccessRequestsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/operatoraccesscontrol/revoke_access_request.py.html>`__ to see an example of how to use revoke_access_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/revoke_access_request.py.html>`__ to see an example of how to use revoke_access_request API.
         """
         resource_path = "/accessRequests/{accessRequestId}/action/revoke"
         method = "POST"

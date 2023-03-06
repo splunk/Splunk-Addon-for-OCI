@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -37,7 +37,7 @@ class RemoveVirtualMachineFromCloudVmClusterDetails(object):
     def db_servers(self):
         """
         **[Required]** Gets the db_servers of this RemoveVirtualMachineFromCloudVmClusterDetails.
-        The list of ExaCS DB servers for the cluster to be removed.
+        The list of ExaDB-D DB server for the cluster to be removed.
 
 
         :return: The db_servers of this RemoveVirtualMachineFromCloudVmClusterDetails.
@@ -49,7 +49,7 @@ class RemoveVirtualMachineFromCloudVmClusterDetails(object):
     def db_servers(self, db_servers):
         """
         Sets the db_servers of this RemoveVirtualMachineFromCloudVmClusterDetails.
-        The list of ExaCS DB servers for the cluster to be removed.
+        The list of ExaDB-D DB server for the cluster to be removed.
 
 
         :param db_servers: The db_servers of this RemoveVirtualMachineFromCloudVmClusterDetails.

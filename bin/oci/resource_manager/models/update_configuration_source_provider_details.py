@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -18,6 +18,8 @@ class UpdateConfigurationSourceProviderDetails(object):
         Initializes a new UpdateConfigurationSourceProviderDetails object with values from keyword arguments. This class has the following subclasses and if you are using this class as input
         to a service operations then you should favor using a subclass over the base class:
 
+        * :class:`~oci.resource_manager.models.UpdateBitbucketCloudUsernameAppPasswordConfigurationSourceProviderDetails`
+        * :class:`~oci.resource_manager.models.UpdateBitbucketServerAccessTokenConfigurationSourceProviderDetails`
         * :class:`~oci.resource_manager.models.UpdateGitlabAccessTokenConfigurationSourceProviderDetails`
         * :class:`~oci.resource_manager.models.UpdateGithubAccessTokenConfigurationSourceProviderDetails`
 
@@ -81,6 +83,12 @@ class UpdateConfigurationSourceProviderDetails(object):
         """
         type = object_dictionary['configSourceProviderType']
 
+        if type == 'BITBUCKET_CLOUD_USERNAME_APPPASSWORD':
+            return 'UpdateBitbucketCloudUsernameAppPasswordConfigurationSourceProviderDetails'
+
+        if type == 'BITBUCKET_SERVER_ACCESS_TOKEN':
+            return 'UpdateBitbucketServerAccessTokenConfigurationSourceProviderDetails'
+
         if type == 'GITLAB_ACCESS_TOKEN':
             return 'UpdateGitlabAccessTokenConfigurationSourceProviderDetails'
 
@@ -142,6 +150,8 @@ class UpdateConfigurationSourceProviderDetails(object):
         """
         Gets the config_source_provider_type of this UpdateConfigurationSourceProviderDetails.
         The type of configuration source provider.
+        The `BITBUCKET_CLOUD_USERNAME_APPPASSWORD` type corresponds to Bitbucket Cloud.
+        The `BITBUCKET_SERVER_ACCESS_TOKEN` type corresponds to Bitbucket Server.
         The `GITLAB_ACCESS_TOKEN` type corresponds to GitLab.
         The `GITHUB_ACCESS_TOKEN` type corresponds to GitHub.
 
@@ -156,6 +166,8 @@ class UpdateConfigurationSourceProviderDetails(object):
         """
         Sets the config_source_provider_type of this UpdateConfigurationSourceProviderDetails.
         The type of configuration source provider.
+        The `BITBUCKET_CLOUD_USERNAME_APPPASSWORD` type corresponds to Bitbucket Cloud.
+        The `BITBUCKET_SERVER_ACCESS_TOKEN` type corresponds to Bitbucket Server.
         The `GITLAB_ACCESS_TOKEN` type corresponds to GitLab.
         The `GITHUB_ACCESS_TOKEN` type corresponds to GitHub.
 

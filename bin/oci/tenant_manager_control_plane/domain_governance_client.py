@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -138,7 +138,7 @@ class DomainGovernanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/tenantmanagercontrolplane/create_domain_governance.py.html>`__ to see an example of how to use create_domain_governance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/create_domain_governance.py.html>`__ to see an example of how to use create_domain_governance API.
         """
         resource_path = "/domainGovernances"
         method = "POST"
@@ -230,7 +230,7 @@ class DomainGovernanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/tenantmanagercontrolplane/delete_domain_governance.py.html>`__ to see an example of how to use delete_domain_governance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/delete_domain_governance.py.html>`__ to see an example of how to use delete_domain_governance API.
         """
         resource_path = "/domainGovernances/{domainGovernanceId}"
         method = "DELETE"
@@ -322,7 +322,7 @@ class DomainGovernanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/tenantmanagercontrolplane/get_domain_governance.py.html>`__ to see an example of how to use get_domain_governance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/get_domain_governance.py.html>`__ to see an example of how to use get_domain_governance API.
         """
         resource_path = "/domainGovernances/{domainGovernanceId}"
         method = "GET"
@@ -447,7 +447,7 @@ class DomainGovernanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/tenantmanagercontrolplane/list_domain_governances.py.html>`__ to see an example of how to use list_domain_governances API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/list_domain_governances.py.html>`__ to see an example of how to use list_domain_governances API.
         """
         resource_path = "/domainGovernances"
         method = "GET"
@@ -581,7 +581,7 @@ class DomainGovernanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/tenantmanagercontrolplane/update_domain_governance.py.html>`__ to see an example of how to use update_domain_governance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/update_domain_governance.py.html>`__ to see an example of how to use update_domain_governance API.
         """
         resource_path = "/domainGovernances/{domainGovernanceId}"
         method = "PUT"

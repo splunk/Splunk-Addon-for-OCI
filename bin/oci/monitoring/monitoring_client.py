@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -155,7 +155,7 @@ class MonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/monitoring/change_alarm_compartment.py.html>`__ to see an example of how to use change_alarm_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/monitoring/change_alarm_compartment.py.html>`__ to see an example of how to use change_alarm_compartment API.
         """
         resource_path = "/alarms/{alarmId}/actions/changeCompartment"
         method = "POST"
@@ -267,7 +267,7 @@ class MonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/monitoring/create_alarm.py.html>`__ to see an example of how to use create_alarm API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/monitoring/create_alarm.py.html>`__ to see an example of how to use create_alarm API.
         """
         resource_path = "/alarms"
         method = "POST"
@@ -367,7 +367,7 @@ class MonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/monitoring/delete_alarm.py.html>`__ to see an example of how to use delete_alarm API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/monitoring/delete_alarm.py.html>`__ to see an example of how to use delete_alarm API.
         """
         resource_path = "/alarms/{alarmId}"
         method = "DELETE"
@@ -469,7 +469,7 @@ class MonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/monitoring/get_alarm.py.html>`__ to see an example of how to use get_alarm API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/monitoring/get_alarm.py.html>`__ to see an example of how to use get_alarm API.
         """
         resource_path = "/alarms/{alarmId}"
         method = "GET"
@@ -605,7 +605,7 @@ class MonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/monitoring/get_alarm_history.py.html>`__ to see an example of how to use get_alarm_history API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/monitoring/get_alarm_history.py.html>`__ to see an example of how to use get_alarm_history API.
         """
         resource_path = "/alarms/{alarmId}/history"
         method = "GET"
@@ -780,7 +780,7 @@ class MonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/monitoring/list_alarms.py.html>`__ to see an example of how to use list_alarms API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/monitoring/list_alarms.py.html>`__ to see an example of how to use list_alarms API.
         """
         resource_path = "/alarms"
         method = "GET"
@@ -960,7 +960,7 @@ class MonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/monitoring/list_alarms_status.py.html>`__ to see an example of how to use list_alarms_status API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/monitoring/list_alarms_status.py.html>`__ to see an example of how to use list_alarms_status API.
         """
         resource_path = "/alarms/status"
         method = "GET"
@@ -1113,7 +1113,7 @@ class MonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/monitoring/list_metrics.py.html>`__ to see an example of how to use list_metrics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/monitoring/list_metrics.py.html>`__ to see an example of how to use list_metrics API.
         """
         resource_path = "/metrics/actions/listMetrics"
         method = "POST"
@@ -1233,7 +1233,7 @@ class MonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/monitoring/post_metric_data.py.html>`__ to see an example of how to use post_metric_data API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/monitoring/post_metric_data.py.html>`__ to see an example of how to use post_metric_data API.
         """
         resource_path = "/metrics"
         method = "POST"
@@ -1332,7 +1332,7 @@ class MonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/monitoring/remove_alarm_suppression.py.html>`__ to see an example of how to use remove_alarm_suppression API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/monitoring/remove_alarm_suppression.py.html>`__ to see an example of how to use remove_alarm_suppression API.
         """
         resource_path = "/alarms/{alarmId}/actions/removeSuppression"
         method = "POST"
@@ -1457,7 +1457,7 @@ class MonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/monitoring/retrieve_dimension_states.py.html>`__ to see an example of how to use retrieve_dimension_states API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/monitoring/retrieve_dimension_states.py.html>`__ to see an example of how to use retrieve_dimension_states API.
         """
         resource_path = "/alarms/{alarmId}/actions/retrieveDimensionStates"
         method = "POST"
@@ -1586,7 +1586,7 @@ class MonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/monitoring/summarize_metrics_data.py.html>`__ to see an example of how to use summarize_metrics_data API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/monitoring/summarize_metrics_data.py.html>`__ to see an example of how to use summarize_metrics_data API.
         """
         resource_path = "/metrics/actions/summarizeMetricsData"
         method = "POST"
@@ -1695,7 +1695,7 @@ class MonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/monitoring/update_alarm.py.html>`__ to see an example of how to use update_alarm API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/monitoring/update_alarm.py.html>`__ to see an example of how to use update_alarm API.
         """
         resource_path = "/alarms/{alarmId}"
         method = "PUT"

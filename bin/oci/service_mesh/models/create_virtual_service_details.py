@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -40,7 +40,7 @@ class CreateVirtualServiceDetails(object):
 
         :param mtls:
             The value to assign to the mtls property of this CreateVirtualServiceDetails.
-        :type mtls: oci.service_mesh.models.CreateMutualTransportLayerSecurityDetails
+        :type mtls: oci.service_mesh.models.VirtualServiceMutualTransportLayerSecurityDetails
 
         :param compartment_id:
             The value to assign to the compartment_id property of this CreateVirtualServiceDetails.
@@ -61,7 +61,7 @@ class CreateVirtualServiceDetails(object):
             'description': 'str',
             'default_routing_policy': 'DefaultVirtualServiceRoutingPolicy',
             'hosts': 'list[str]',
-            'mtls': 'CreateMutualTransportLayerSecurityDetails',
+            'mtls': 'VirtualServiceMutualTransportLayerSecurityDetails',
             'compartment_id': 'str',
             'freeform_tags': 'dict(str, str)',
             'defined_tags': 'dict(str, dict(str, object))'
@@ -229,7 +229,7 @@ class CreateVirtualServiceDetails(object):
         Gets the mtls of this CreateVirtualServiceDetails.
 
         :return: The mtls of this CreateVirtualServiceDetails.
-        :rtype: oci.service_mesh.models.CreateMutualTransportLayerSecurityDetails
+        :rtype: oci.service_mesh.models.VirtualServiceMutualTransportLayerSecurityDetails
         """
         return self._mtls
 
@@ -239,7 +239,7 @@ class CreateVirtualServiceDetails(object):
         Sets the mtls of this CreateVirtualServiceDetails.
 
         :param mtls: The mtls of this CreateVirtualServiceDetails.
-        :type: oci.service_mesh.models.CreateMutualTransportLayerSecurityDetails
+        :type: oci.service_mesh.models.VirtualServiceMutualTransportLayerSecurityDetails
         """
         self._mtls = mtls
 

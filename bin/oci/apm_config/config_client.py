@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -147,7 +147,7 @@ class ConfigClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmconfig/create_config.py.html>`__ to see an example of how to use create_config API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmconfig/create_config.py.html>`__ to see an example of how to use create_config API.
         """
         resource_path = "/configs"
         method = "POST"
@@ -256,7 +256,7 @@ class ConfigClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmconfig/delete_config.py.html>`__ to see an example of how to use delete_config API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmconfig/delete_config.py.html>`__ to see an example of how to use delete_config API.
         """
         resource_path = "/configs/{configId}"
         method = "DELETE"
@@ -363,7 +363,7 @@ class ConfigClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmconfig/get_config.py.html>`__ to see an example of how to use get_config API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmconfig/get_config.py.html>`__ to see an example of how to use get_config API.
         """
         resource_path = "/configs/{configId}"
         method = "GET"
@@ -522,7 +522,7 @@ class ConfigClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmconfig/list_configs.py.html>`__ to see an example of how to use list_configs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmconfig/list_configs.py.html>`__ to see an example of how to use list_configs API.
         """
         resource_path = "/configs"
         method = "GET"
@@ -651,7 +651,7 @@ class ConfigClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmconfig/retrieve_namespace_metrics.py.html>`__ to see an example of how to use retrieve_namespace_metrics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmconfig/retrieve_namespace_metrics.py.html>`__ to see an example of how to use retrieve_namespace_metrics API.
         """
         resource_path = "/actions/retrieveNamespaceMetrics"
         method = "POST"
@@ -743,7 +743,7 @@ class ConfigClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmconfig/retrieve_namespaces.py.html>`__ to see an example of how to use retrieve_namespaces API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmconfig/retrieve_namespaces.py.html>`__ to see an example of how to use retrieve_namespaces API.
         """
         resource_path = "/actions/retrieveNamespaces"
         method = "POST"
@@ -852,7 +852,7 @@ class ConfigClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmconfig/update_config.py.html>`__ to see an example of how to use update_config API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmconfig/update_config.py.html>`__ to see an example of how to use update_config API.
         """
         resource_path = "/configs/{configId}"
         method = "PUT"
@@ -964,7 +964,7 @@ class ConfigClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmconfig/validate_span_filter_pattern.py.html>`__ to see an example of how to use validate_span_filter_pattern API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmconfig/validate_span_filter_pattern.py.html>`__ to see an example of how to use validate_span_filter_pattern API.
         """
         resource_path = "/actions/validateSpanFilterPattern"
         method = "POST"

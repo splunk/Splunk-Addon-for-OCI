@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -152,7 +152,7 @@ class DbBackupsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/change_backup_compartment.py.html>`__ to see an example of how to use change_backup_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/change_backup_compartment.py.html>`__ to see an example of how to use change_backup_compartment API.
         """
         resource_path = "/backups/{backupId}/actions/changeCompartment"
         method = "POST"
@@ -259,7 +259,7 @@ class DbBackupsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/create_backup.py.html>`__ to see an example of how to use create_backup API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/create_backup.py.html>`__ to see an example of how to use create_backup API.
         """
         resource_path = "/backups"
         method = "POST"
@@ -355,7 +355,7 @@ class DbBackupsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/delete_backup.py.html>`__ to see an example of how to use delete_backup API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/delete_backup.py.html>`__ to see an example of how to use delete_backup API.
         """
         resource_path = "/backups/{backupId}"
         method = "DELETE"
@@ -458,7 +458,7 @@ class DbBackupsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/get_backup.py.html>`__ to see an example of how to use get_backup API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/get_backup.py.html>`__ to see an example of how to use get_backup API.
         """
         resource_path = "/backups/{backupId}"
         method = "GET"
@@ -602,7 +602,7 @@ class DbBackupsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/list_backups.py.html>`__ to see an example of how to use list_backups API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/list_backups.py.html>`__ to see an example of how to use list_backups API.
         """
         resource_path = "/backups"
         method = "GET"
@@ -749,7 +749,7 @@ class DbBackupsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/update_backup.py.html>`__ to see an example of how to use update_backup API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/update_backup.py.html>`__ to see an example of how to use update_backup API.
         """
         resource_path = "/backups/{backupId}"
         method = "PUT"

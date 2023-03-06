@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -154,7 +154,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/add_analytics_cluster.py.html>`__ to see an example of how to use add_analytics_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/add_analytics_cluster.py.html>`__ to see an example of how to use add_analytics_cluster API.
         """
         resource_path = "/dbSystems/{dbSystemId}/analyticsCluster/actions/add"
         method = "POST"
@@ -277,7 +277,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/add_heat_wave_cluster.py.html>`__ to see an example of how to use add_heat_wave_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/add_heat_wave_cluster.py.html>`__ to see an example of how to use add_heat_wave_cluster API.
         """
         resource_path = "/dbSystems/{dbSystemId}/heatWaveCluster/actions/add"
         method = "POST"
@@ -388,7 +388,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/create_db_system.py.html>`__ to see an example of how to use create_db_system API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/create_db_system.py.html>`__ to see an example of how to use create_db_system API.
         """
         resource_path = "/dbSystems"
         method = "POST"
@@ -488,7 +488,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/delete_analytics_cluster.py.html>`__ to see an example of how to use delete_analytics_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/delete_analytics_cluster.py.html>`__ to see an example of how to use delete_analytics_cluster API.
         """
         resource_path = "/dbSystems/{dbSystemId}/analyticsCluster"
         method = "DELETE"
@@ -594,7 +594,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/delete_db_system.py.html>`__ to see an example of how to use delete_db_system API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/delete_db_system.py.html>`__ to see an example of how to use delete_db_system API.
         """
         resource_path = "/dbSystems/{dbSystemId}"
         method = "DELETE"
@@ -700,7 +700,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/delete_heat_wave_cluster.py.html>`__ to see an example of how to use delete_heat_wave_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/delete_heat_wave_cluster.py.html>`__ to see an example of how to use delete_heat_wave_cluster API.
         """
         resource_path = "/dbSystems/{dbSystemId}/heatWaveCluster"
         method = "DELETE"
@@ -807,7 +807,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/generate_analytics_cluster_memory_estimate.py.html>`__ to see an example of how to use generate_analytics_cluster_memory_estimate API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/generate_analytics_cluster_memory_estimate.py.html>`__ to see an example of how to use generate_analytics_cluster_memory_estimate API.
         """
         resource_path = "/dbSystems/{dbSystemId}/analyticsClusterMemoryEstimate/actions/generate"
         method = "POST"
@@ -916,7 +916,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/generate_heat_wave_cluster_memory_estimate.py.html>`__ to see an example of how to use generate_heat_wave_cluster_memory_estimate API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/generate_heat_wave_cluster_memory_estimate.py.html>`__ to see an example of how to use generate_heat_wave_cluster_memory_estimate API.
         """
         resource_path = "/dbSystems/{dbSystemId}/heatWaveClusterMemoryEstimate/actions/generate"
         method = "POST"
@@ -1025,7 +1025,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/get_analytics_cluster.py.html>`__ to see an example of how to use get_analytics_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/get_analytics_cluster.py.html>`__ to see an example of how to use get_analytics_cluster API.
         """
         resource_path = "/dbSystems/{dbSystemId}/analyticsCluster"
         method = "GET"
@@ -1127,7 +1127,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/get_analytics_cluster_memory_estimate.py.html>`__ to see an example of how to use get_analytics_cluster_memory_estimate API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/get_analytics_cluster_memory_estimate.py.html>`__ to see an example of how to use get_analytics_cluster_memory_estimate API.
         """
         resource_path = "/dbSystems/{dbSystemId}/analyticsClusterMemoryEstimate"
         method = "GET"
@@ -1232,7 +1232,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/get_db_system.py.html>`__ to see an example of how to use get_db_system API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/get_db_system.py.html>`__ to see an example of how to use get_db_system API.
         """
         resource_path = "/dbSystems/{dbSystemId}"
         method = "GET"
@@ -1339,7 +1339,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/get_heat_wave_cluster.py.html>`__ to see an example of how to use get_heat_wave_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/get_heat_wave_cluster.py.html>`__ to see an example of how to use get_heat_wave_cluster API.
         """
         resource_path = "/dbSystems/{dbSystemId}/heatWaveCluster"
         method = "GET"
@@ -1440,7 +1440,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/get_heat_wave_cluster_memory_estimate.py.html>`__ to see an example of how to use get_heat_wave_cluster_memory_estimate API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/get_heat_wave_cluster_memory_estimate.py.html>`__ to see an example of how to use get_heat_wave_cluster_memory_estimate API.
         """
         resource_path = "/dbSystems/{dbSystemId}/heatWaveClusterMemoryEstimate"
         method = "GET"
@@ -1593,7 +1593,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/list_db_systems.py.html>`__ to see an example of how to use list_db_systems API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/list_db_systems.py.html>`__ to see an example of how to use list_db_systems API.
         """
         resource_path = "/dbSystems"
         method = "GET"
@@ -1745,7 +1745,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/restart_analytics_cluster.py.html>`__ to see an example of how to use restart_analytics_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/restart_analytics_cluster.py.html>`__ to see an example of how to use restart_analytics_cluster API.
         """
         resource_path = "/dbSystems/{dbSystemId}/analyticsCluster/actions/restart"
         method = "POST"
@@ -1864,7 +1864,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/restart_db_system.py.html>`__ to see an example of how to use restart_db_system API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/restart_db_system.py.html>`__ to see an example of how to use restart_db_system API.
         """
         resource_path = "/dbSystems/{dbSystemId}/actions/restart"
         method = "POST"
@@ -1982,7 +1982,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/restart_heat_wave_cluster.py.html>`__ to see an example of how to use restart_heat_wave_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/restart_heat_wave_cluster.py.html>`__ to see an example of how to use restart_heat_wave_cluster API.
         """
         resource_path = "/dbSystems/{dbSystemId}/heatWaveCluster/actions/restart"
         method = "POST"
@@ -2099,7 +2099,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/start_analytics_cluster.py.html>`__ to see an example of how to use start_analytics_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/start_analytics_cluster.py.html>`__ to see an example of how to use start_analytics_cluster API.
         """
         resource_path = "/dbSystems/{dbSystemId}/analyticsCluster/actions/start"
         method = "POST"
@@ -2215,7 +2215,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/start_db_system.py.html>`__ to see an example of how to use start_db_system API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/start_db_system.py.html>`__ to see an example of how to use start_db_system API.
         """
         resource_path = "/dbSystems/{dbSystemId}/actions/start"
         method = "POST"
@@ -2331,7 +2331,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/start_heat_wave_cluster.py.html>`__ to see an example of how to use start_heat_wave_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/start_heat_wave_cluster.py.html>`__ to see an example of how to use start_heat_wave_cluster API.
         """
         resource_path = "/dbSystems/{dbSystemId}/heatWaveCluster/actions/start"
         method = "POST"
@@ -2448,7 +2448,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/stop_analytics_cluster.py.html>`__ to see an example of how to use stop_analytics_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/stop_analytics_cluster.py.html>`__ to see an example of how to use stop_analytics_cluster API.
         """
         resource_path = "/dbSystems/{dbSystemId}/analyticsCluster/actions/stop"
         method = "POST"
@@ -2569,7 +2569,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/stop_db_system.py.html>`__ to see an example of how to use stop_db_system API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/stop_db_system.py.html>`__ to see an example of how to use stop_db_system API.
         """
         resource_path = "/dbSystems/{dbSystemId}/actions/stop"
         method = "POST"
@@ -2687,7 +2687,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/stop_heat_wave_cluster.py.html>`__ to see an example of how to use stop_heat_wave_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/stop_heat_wave_cluster.py.html>`__ to see an example of how to use stop_heat_wave_cluster API.
         """
         resource_path = "/dbSystems/{dbSystemId}/heatWaveCluster/actions/stop"
         method = "POST"
@@ -2799,7 +2799,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/update_analytics_cluster.py.html>`__ to see an example of how to use update_analytics_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/update_analytics_cluster.py.html>`__ to see an example of how to use update_analytics_cluster API.
         """
         resource_path = "/dbSystems/{dbSystemId}/analyticsCluster"
         method = "PUT"
@@ -2916,7 +2916,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/update_db_system.py.html>`__ to see an example of how to use update_db_system API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/update_db_system.py.html>`__ to see an example of how to use update_db_system API.
         """
         resource_path = "/dbSystems/{dbSystemId}"
         method = "PUT"
@@ -3026,7 +3026,7 @@ class DbSystemClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/mysql/update_heat_wave_cluster.py.html>`__ to see an example of how to use update_heat_wave_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/update_heat_wave_cluster.py.html>`__ to see an example of how to use update_heat_wave_cluster API.
         """
         resource_path = "/dbSystems/{dbSystemId}/heatWaveCluster"
         method = "PUT"

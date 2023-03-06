@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -151,7 +151,7 @@ class OperatorControlClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/operatoraccesscontrol/change_operator_control_compartment.py.html>`__ to see an example of how to use change_operator_control_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/change_operator_control_compartment.py.html>`__ to see an example of how to use change_operator_control_compartment API.
         """
         resource_path = "/operatorControls/{operatorControlId}/actions/changeCompartment"
         method = "POST"
@@ -255,7 +255,7 @@ class OperatorControlClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/operatoraccesscontrol/create_operator_control.py.html>`__ to see an example of how to use create_operator_control API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/create_operator_control.py.html>`__ to see an example of how to use create_operator_control API.
         """
         resource_path = "/operatorControls"
         method = "POST"
@@ -354,7 +354,7 @@ class OperatorControlClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/operatoraccesscontrol/delete_operator_control.py.html>`__ to see an example of how to use delete_operator_control API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/delete_operator_control.py.html>`__ to see an example of how to use delete_operator_control API.
         """
         resource_path = "/operatorControls/{operatorControlId}"
         method = "DELETE"
@@ -454,7 +454,7 @@ class OperatorControlClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/operatoraccesscontrol/get_operator_control.py.html>`__ to see an example of how to use get_operator_control API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/get_operator_control.py.html>`__ to see an example of how to use get_operator_control API.
         """
         resource_path = "/operatorControls/{operatorControlId}"
         method = "GET"
@@ -573,7 +573,7 @@ class OperatorControlClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/operatoraccesscontrol/list_operator_controls.py.html>`__ to see an example of how to use list_operator_controls API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/list_operator_controls.py.html>`__ to see an example of how to use list_operator_controls API.
         """
         resource_path = "/operatorControls"
         method = "GET"
@@ -705,7 +705,7 @@ class OperatorControlClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/operatoraccesscontrol/update_operator_control.py.html>`__ to see an example of how to use update_operator_control API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/update_operator_control.py.html>`__ to see an example of how to use update_operator_control API.
         """
         resource_path = "/operatorControls/{operatorControlId}"
         method = "PUT"

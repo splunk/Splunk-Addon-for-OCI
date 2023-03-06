@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -307,7 +307,7 @@ class CreateCloudAutonomousVmClusterDetails(object):
     def cpu_core_count_per_node(self):
         """
         Gets the cpu_core_count_per_node of this CreateCloudAutonomousVmClusterDetails.
-        The number of OCPU cores to enable per VM cluster node.
+        The number of OCPU cores to be enabled per VM cluster node.
 
 
         :return: The cpu_core_count_per_node of this CreateCloudAutonomousVmClusterDetails.
@@ -319,7 +319,7 @@ class CreateCloudAutonomousVmClusterDetails(object):
     def cpu_core_count_per_node(self, cpu_core_count_per_node):
         """
         Sets the cpu_core_count_per_node of this CreateCloudAutonomousVmClusterDetails.
-        The number of OCPU cores to enable per VM cluster node.
+        The number of OCPU cores to be enabled per VM cluster node.
 
 
         :param cpu_core_count_per_node: The cpu_core_count_per_node of this CreateCloudAutonomousVmClusterDetails.
@@ -407,7 +407,7 @@ class CreateCloudAutonomousVmClusterDetails(object):
     def db_servers(self):
         """
         Gets the db_servers of this CreateCloudAutonomousVmClusterDetails.
-        The list of Db server.
+        The list of database servers.
 
 
         :return: The db_servers of this CreateCloudAutonomousVmClusterDetails.
@@ -419,7 +419,7 @@ class CreateCloudAutonomousVmClusterDetails(object):
     def db_servers(self, db_servers):
         """
         Sets the db_servers of this CreateCloudAutonomousVmClusterDetails.
-        The list of Db server.
+        The list of database servers.
 
 
         :param db_servers: The db_servers of this CreateCloudAutonomousVmClusterDetails.

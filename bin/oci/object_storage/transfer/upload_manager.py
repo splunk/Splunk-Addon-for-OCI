@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import print_function
@@ -98,6 +98,12 @@ class UploadManager:
 
         :param str content_encoding (optional):
             The content encoding of the object to upload.
+
+        :param str content_disposition (optional):
+            The content disposition of the object to upload.
+
+        :param str cache_control (optional):
+            The cache control for the object to upload.
 
         :param dict metadata (optional):
             A dictionary of string to string values to associate with the object to upload
@@ -214,6 +220,12 @@ class UploadManager:
 
         :param str content_encoding (optional):
             The content encoding of the object to upload.
+
+        :param str content_disposition (optional):
+            The content disposition of the object to upload.
+
+        :param str cache_control (optional):
+            The cache control for the object to upload.
 
         :param dict metadata (optional):
             A dictionary of string to string values to associate with the object to upload

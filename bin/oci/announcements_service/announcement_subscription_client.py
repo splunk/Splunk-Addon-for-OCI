@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -90,7 +90,7 @@ class AnnouncementSubscriptionClient(object):
             'regional_client': True,
             'service_endpoint': kwargs.get('service_endpoint'),
             'base_path': '/20180904',
-            'service_endpoint_template': 'https://announcements.{region}.oci.{secondLevelDomain}',
+            'service_endpoint_template': 'https://announcements.{region}.{secondLevelDomain}',
             'skip_deserialization': kwargs.get('skip_deserialization', False),
             'circuit_breaker_strategy': kwargs.get('circuit_breaker_strategy', circuit_breaker.GLOBAL_CIRCUIT_BREAKER_STRATEGY)
         }
@@ -140,7 +140,7 @@ class AnnouncementSubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/announcementsservice/change_announcement_subscription_compartment.py.html>`__ to see an example of how to use change_announcement_subscription_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/change_announcement_subscription_compartment.py.html>`__ to see an example of how to use change_announcement_subscription_compartment API.
         """
         resource_path = "/announcementSubscriptions/{announcementSubscriptionId}/actions/changeCompartment"
         method = "POST"
@@ -244,7 +244,7 @@ class AnnouncementSubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/announcementsservice/create_announcement_subscription.py.html>`__ to see an example of how to use create_announcement_subscription API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/create_announcement_subscription.py.html>`__ to see an example of how to use create_announcement_subscription API.
         """
         resource_path = "/announcementSubscriptions"
         method = "POST"
@@ -345,7 +345,7 @@ class AnnouncementSubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/announcementsservice/create_filter_group.py.html>`__ to see an example of how to use create_filter_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/create_filter_group.py.html>`__ to see an example of how to use create_filter_group API.
         """
         resource_path = "/announcementSubscriptions/{announcementSubscriptionId}/filterGroups"
         method = "POST"
@@ -450,7 +450,7 @@ class AnnouncementSubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/announcementsservice/delete_announcement_subscription.py.html>`__ to see an example of how to use delete_announcement_subscription API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/delete_announcement_subscription.py.html>`__ to see an example of how to use delete_announcement_subscription API.
         """
         resource_path = "/announcementSubscriptions/{announcementSubscriptionId}"
         method = "DELETE"
@@ -551,7 +551,7 @@ class AnnouncementSubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/announcementsservice/delete_filter_group.py.html>`__ to see an example of how to use delete_filter_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/delete_filter_group.py.html>`__ to see an example of how to use delete_filter_group API.
         """
         resource_path = "/announcementSubscriptions/{announcementSubscriptionId}/filterGroups/{filterGroupName}"
         method = "DELETE"
@@ -647,7 +647,7 @@ class AnnouncementSubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/announcementsservice/get_announcement_subscription.py.html>`__ to see an example of how to use get_announcement_subscription API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/get_announcement_subscription.py.html>`__ to see an example of how to use get_announcement_subscription API.
         """
         resource_path = "/announcementSubscriptions/{announcementSubscriptionId}"
         method = "GET"
@@ -769,7 +769,7 @@ class AnnouncementSubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/announcementsservice/list_announcement_subscriptions.py.html>`__ to see an example of how to use list_announcement_subscriptions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/list_announcement_subscriptions.py.html>`__ to see an example of how to use list_announcement_subscriptions API.
         """
         resource_path = "/announcementSubscriptions"
         method = "GET"
@@ -900,7 +900,7 @@ class AnnouncementSubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/announcementsservice/update_announcement_subscription.py.html>`__ to see an example of how to use update_announcement_subscription API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/update_announcement_subscription.py.html>`__ to see an example of how to use update_announcement_subscription API.
         """
         resource_path = "/announcementSubscriptions/{announcementSubscriptionId}"
         method = "PUT"
@@ -1008,7 +1008,7 @@ class AnnouncementSubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/announcementsservice/update_filter_group.py.html>`__ to see an example of how to use update_filter_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/update_filter_group.py.html>`__ to see an example of how to use update_filter_group API.
         """
         resource_path = "/announcementSubscriptions/{announcementSubscriptionId}/filterGroups/{filterGroupName}"
         method = "PUT"

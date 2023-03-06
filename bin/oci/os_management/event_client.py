@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -152,7 +152,7 @@ class EventClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/osmanagement/delete_event_content.py.html>`__ to see an example of how to use delete_event_content API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/delete_event_content.py.html>`__ to see an example of how to use delete_event_content API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/events/{eventId}/content"
         method = "DELETE"
@@ -261,7 +261,7 @@ class EventClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/osmanagement/get_event.py.html>`__ to see an example of how to use get_event API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/get_event.py.html>`__ to see an example of how to use get_event API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/events/{eventId}"
         method = "GET"
@@ -367,7 +367,7 @@ class EventClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/osmanagement/get_event_content.py.html>`__ to see an example of how to use get_event_content API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/get_event_content.py.html>`__ to see an example of how to use get_event_content API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/events/{eventId}/content"
         method = "GET"
@@ -478,7 +478,7 @@ class EventClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/osmanagement/get_event_report.py.html>`__ to see an example of how to use get_event_report API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/get_event_report.py.html>`__ to see an example of how to use get_event_report API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/events/report"
         method = "GET"
@@ -616,7 +616,7 @@ class EventClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/osmanagement/list_events.py.html>`__ to see an example of how to use list_events API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_events.py.html>`__ to see an example of how to use list_events API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/events"
         method = "GET"
@@ -779,7 +779,7 @@ class EventClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/osmanagement/list_related_events.py.html>`__ to see an example of how to use list_related_events API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_related_events.py.html>`__ to see an example of how to use list_related_events API.
         """
         resource_path = "/relatedEvents"
         method = "GET"
@@ -909,7 +909,7 @@ class EventClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/osmanagement/update_event.py.html>`__ to see an example of how to use update_event API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/update_event.py.html>`__ to see an example of how to use update_event API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/events/{eventId}"
         method = "PUT"
@@ -1033,7 +1033,7 @@ class EventClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/osmanagement/upload_event_content.py.html>`__ to see an example of how to use upload_event_content API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/upload_event_content.py.html>`__ to see an example of how to use upload_event_content API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/events/{eventId}/content/actions/upload"
         method = "POST"

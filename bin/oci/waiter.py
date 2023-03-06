@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 import time
@@ -8,6 +8,8 @@ from .exceptions import MaximumWaitTimeExceeded, WaitUntilNotSupported, ServiceE
 from .util import WAIT_RESOURCE_NOT_FOUND
 from . import retry
 from oci.work_requests.models import WorkRequest
+
+MAX_RETRIES_ON_401 = 2
 
 
 def wait_until(client, response, property=None, state=None, max_interval_seconds=30, max_wait_seconds=1200, succeed_on_not_found=False, **kwargs):
@@ -90,6 +92,7 @@ def wait_until(client, response, property=None, state=None, max_interval_seconds
     start_time = time.time()
 
     times_checked = 0
+    retry_count_401 = 0
     while True:
         if property:
             if isinstance(state, tuple):
@@ -116,6 +119,7 @@ def wait_until(client, response, property=None, state=None, max_interval_seconds
 
         try:
             response = kwargs.get('fetch_func')(response=response)
+            retry_count_401 = 0
             times_checked += 1
         except ServiceError as se:
             if se.status == 404:
@@ -126,6 +130,10 @@ def wait_until(client, response, property=None, state=None, max_interval_seconds
                     # a sentinel flagging that the resource we tried to wait on was not
                     # found
                     return WAIT_RESOURCE_NOT_FOUND
+            elif se.status == 401 and retry_count_401 < MAX_RETRIES_ON_401 and \
+                    client.base_client.is_instance_principal_or_resource_principal_signer():
+                retry_count_401 += 1
+                client.base_client.signer.refresh_security_token()
             else:
                 raise
 
