@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -151,7 +151,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/activate_bds_metastore_configuration.py.html>`__ to see an example of how to use activate_bds_metastore_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/activate_bds_metastore_configuration.py.html>`__ to see an example of how to use activate_bds_metastore_configuration API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/metastoreConfigs/{metastoreConfigId}/actions/activate"
         method = "POST"
@@ -266,7 +266,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/add_auto_scaling_configuration.py.html>`__ to see an example of how to use add_auto_scaling_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/add_auto_scaling_configuration.py.html>`__ to see an example of how to use add_auto_scaling_configuration API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/autoScalingConfiguration"
         method = "POST"
@@ -380,7 +380,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/add_block_storage.py.html>`__ to see an example of how to use add_block_storage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/add_block_storage.py.html>`__ to see an example of how to use add_block_storage API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/actions/addBlockStorage"
         method = "POST"
@@ -494,7 +494,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/add_cloud_sql.py.html>`__ to see an example of how to use add_cloud_sql API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/add_cloud_sql.py.html>`__ to see an example of how to use add_cloud_sql API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/actions/addCloudSql"
         method = "POST"
@@ -608,7 +608,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/add_worker_nodes.py.html>`__ to see an example of how to use add_worker_nodes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/add_worker_nodes.py.html>`__ to see an example of how to use add_worker_nodes API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/actions/addWorkerNodes"
         method = "POST"
@@ -722,7 +722,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/change_bds_instance_compartment.py.html>`__ to see an example of how to use change_bds_instance_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/change_bds_instance_compartment.py.html>`__ to see an example of how to use change_bds_instance_compartment API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/actions/changeCompartment"
         method = "POST"
@@ -836,7 +836,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/change_shape.py.html>`__ to see an example of how to use change_shape API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/change_shape.py.html>`__ to see an example of how to use change_shape API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/actions/changeShape"
         method = "POST"
@@ -943,7 +943,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/create_bds_api_key.py.html>`__ to see an example of how to use create_bds_api_key API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/create_bds_api_key.py.html>`__ to see an example of how to use create_bds_api_key API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/apiKeys"
         method = "POST"
@@ -1045,7 +1045,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/create_bds_instance.py.html>`__ to see an example of how to use create_bds_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/create_bds_instance.py.html>`__ to see an example of how to use create_bds_instance API.
         """
         resource_path = "/bdsInstances"
         method = "POST"
@@ -1138,7 +1138,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/create_bds_metastore_configuration.py.html>`__ to see an example of how to use create_bds_metastore_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/create_bds_metastore_configuration.py.html>`__ to see an example of how to use create_bds_metastore_configuration API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/metastoreConfigs"
         method = "POST"
@@ -1243,7 +1243,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/delete_bds_api_key.py.html>`__ to see an example of how to use delete_bds_api_key API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/delete_bds_api_key.py.html>`__ to see an example of how to use delete_bds_api_key API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/apiKeys/{apiKeyId}"
         method = "DELETE"
@@ -1343,7 +1343,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/delete_bds_instance.py.html>`__ to see an example of how to use delete_bds_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/delete_bds_instance.py.html>`__ to see an example of how to use delete_bds_instance API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}"
         method = "DELETE"
@@ -1445,7 +1445,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/delete_bds_metastore_configuration.py.html>`__ to see an example of how to use delete_bds_metastore_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/delete_bds_metastore_configuration.py.html>`__ to see an example of how to use delete_bds_metastore_configuration API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/metastoreConfigs/{metastoreConfigId}"
         method = "DELETE"
@@ -1541,7 +1541,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/get_auto_scaling_configuration.py.html>`__ to see an example of how to use get_auto_scaling_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/get_auto_scaling_configuration.py.html>`__ to see an example of how to use get_auto_scaling_configuration API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/autoScalingConfiguration/{autoScalingConfigurationId}"
         method = "GET"
@@ -1637,7 +1637,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/get_bds_api_key.py.html>`__ to see an example of how to use get_bds_api_key API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/get_bds_api_key.py.html>`__ to see an example of how to use get_bds_api_key API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/apiKeys/{apiKeyId}"
         method = "GET"
@@ -1730,7 +1730,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/get_bds_instance.py.html>`__ to see an example of how to use get_bds_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/get_bds_instance.py.html>`__ to see an example of how to use get_bds_instance API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}"
         method = "GET"
@@ -1825,7 +1825,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/get_bds_metastore_configuration.py.html>`__ to see an example of how to use get_bds_metastore_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/get_bds_metastore_configuration.py.html>`__ to see an example of how to use get_bds_metastore_configuration API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/metastoreConfigs/{metastoreConfigId}"
         method = "GET"
@@ -1918,7 +1918,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -2027,7 +2027,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/install_patch.py.html>`__ to see an example of how to use install_patch API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/install_patch.py.html>`__ to see an example of how to use install_patch API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/actions/installPatch"
         method = "POST"
@@ -2151,7 +2151,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/list_auto_scaling_configurations.py.html>`__ to see an example of how to use list_auto_scaling_configurations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/list_auto_scaling_configurations.py.html>`__ to see an example of how to use list_auto_scaling_configurations API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/autoScalingConfiguration"
         method = "GET"
@@ -2310,7 +2310,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/list_bds_api_keys.py.html>`__ to see an example of how to use list_bds_api_keys API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/list_bds_api_keys.py.html>`__ to see an example of how to use list_bds_api_keys API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/apiKeys"
         method = "GET"
@@ -2467,7 +2467,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/list_bds_instances.py.html>`__ to see an example of how to use list_bds_instances API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/list_bds_instances.py.html>`__ to see an example of how to use list_bds_instances API.
         """
         resource_path = "/bdsInstances"
         method = "GET"
@@ -2622,7 +2622,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/list_bds_metastore_configurations.py.html>`__ to see an example of how to use list_bds_metastore_configurations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/list_bds_metastore_configurations.py.html>`__ to see an example of how to use list_bds_metastore_configurations API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/metastoreConfigs"
         method = "GET"
@@ -2790,7 +2790,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/list_patch_histories.py.html>`__ to see an example of how to use list_patch_histories API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/list_patch_histories.py.html>`__ to see an example of how to use list_patch_histories API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/patchHistory"
         method = "GET"
@@ -2927,7 +2927,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/list_patches.py.html>`__ to see an example of how to use list_patches API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/list_patches.py.html>`__ to see an example of how to use list_patches API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/patches"
         method = "GET"
@@ -3045,7 +3045,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -3181,7 +3181,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -3320,7 +3320,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -3451,7 +3451,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/remove_auto_scaling_configuration.py.html>`__ to see an example of how to use remove_auto_scaling_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/remove_auto_scaling_configuration.py.html>`__ to see an example of how to use remove_auto_scaling_configuration API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/autoScalingConfiguration/{autoScalingConfigurationId}/actions/remove"
         method = "POST"
@@ -3566,7 +3566,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/remove_cloud_sql.py.html>`__ to see an example of how to use remove_cloud_sql API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/remove_cloud_sql.py.html>`__ to see an example of how to use remove_cloud_sql API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/actions/removeCloudSql"
         method = "POST"
@@ -3673,7 +3673,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/remove_node.py.html>`__ to see an example of how to use remove_node API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/remove_node.py.html>`__ to see an example of how to use remove_node API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/actions/removeNode"
         method = "POST"
@@ -3784,7 +3784,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/restart_node.py.html>`__ to see an example of how to use restart_node API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/restart_node.py.html>`__ to see an example of how to use restart_node API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/actions/restartNode"
         method = "POST"
@@ -3891,7 +3891,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/start_bds_instance.py.html>`__ to see an example of how to use start_bds_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/start_bds_instance.py.html>`__ to see an example of how to use start_bds_instance API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/actions/start"
         method = "POST"
@@ -3995,7 +3995,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/stop_bds_instance.py.html>`__ to see an example of how to use stop_bds_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/stop_bds_instance.py.html>`__ to see an example of how to use stop_bds_instance API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/actions/stop"
         method = "POST"
@@ -4102,7 +4102,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/test_bds_metastore_configuration.py.html>`__ to see an example of how to use test_bds_metastore_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/test_bds_metastore_configuration.py.html>`__ to see an example of how to use test_bds_metastore_configuration API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/metastoreConfigs/{metastoreConfigId}/actions/test"
         method = "POST"
@@ -4203,7 +4203,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/test_bds_object_storage_connection.py.html>`__ to see an example of how to use test_bds_object_storage_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/test_bds_object_storage_connection.py.html>`__ to see an example of how to use test_bds_object_storage_connection API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/apiKeys/{apiKeyId}/actions/testObjectStorageConnection"
         method = "POST"
@@ -4316,7 +4316,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/update_auto_scaling_configuration.py.html>`__ to see an example of how to use update_auto_scaling_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/update_auto_scaling_configuration.py.html>`__ to see an example of how to use update_auto_scaling_configuration API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/autoScalingConfiguration/{autoScalingConfigurationId}"
         method = "PUT"
@@ -4424,7 +4424,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/update_bds_instance.py.html>`__ to see an example of how to use update_bds_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/update_bds_instance.py.html>`__ to see an example of how to use update_bds_instance API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}"
         method = "PUT"
@@ -4531,7 +4531,7 @@ class BdsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/bds/update_bds_metastore_configuration.py.html>`__ to see an example of how to use update_bds_metastore_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/bds/update_bds_metastore_configuration.py.html>`__ to see an example of how to use update_bds_metastore_configuration API.
         """
         resource_path = "/bdsInstances/{bdsInstanceId}/metastoreConfigs/{metastoreConfigId}"
         method = "PUT"

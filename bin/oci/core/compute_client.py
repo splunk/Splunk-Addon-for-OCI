@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -150,7 +150,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/accept_shielded_integrity_policy.py.html>`__ to see an example of how to use accept_shielded_integrity_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/accept_shielded_integrity_policy.py.html>`__ to see an example of how to use accept_shielded_integrity_policy API.
         """
         resource_path = "/instances/{instanceId}/actions/acceptShieldedIntegrityPolicy"
         method = "POST"
@@ -250,7 +250,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/add_image_shape_compatibility_entry.py.html>`__ to see an example of how to use add_image_shape_compatibility_entry API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/add_image_shape_compatibility_entry.py.html>`__ to see an example of how to use add_image_shape_compatibility_entry API.
         """
         resource_path = "/images/{imageId}/shapes/{shapeName}"
         method = "PUT"
@@ -347,7 +347,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/attach_boot_volume.py.html>`__ to see an example of how to use attach_boot_volume API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/attach_boot_volume.py.html>`__ to see an example of how to use attach_boot_volume API.
         """
         resource_path = "/bootVolumeAttachments"
         method = "POST"
@@ -438,7 +438,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/attach_vnic.py.html>`__ to see an example of how to use attach_vnic API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/attach_vnic.py.html>`__ to see an example of how to use attach_vnic API.
         """
         resource_path = "/vnicAttachments"
         method = "POST"
@@ -525,7 +525,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/attach_volume.py.html>`__ to see an example of how to use attach_volume API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/attach_volume.py.html>`__ to see an example of how to use attach_volume API.
         """
         resource_path = "/volumeAttachments"
         method = "POST"
@@ -628,7 +628,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/capture_console_history.py.html>`__ to see an example of how to use capture_console_history API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/capture_console_history.py.html>`__ to see an example of how to use capture_console_history API.
         """
         resource_path = "/instanceConsoleHistories"
         method = "POST"
@@ -731,7 +731,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/change_compute_capacity_reservation_compartment.py.html>`__ to see an example of how to use change_compute_capacity_reservation_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/change_compute_capacity_reservation_compartment.py.html>`__ to see an example of how to use change_compute_capacity_reservation_compartment API.
         """
         resource_path = "/computeCapacityReservations/{capacityReservationId}/actions/changeCompartment"
         method = "POST"
@@ -848,7 +848,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/change_compute_image_capability_schema_compartment.py.html>`__ to see an example of how to use change_compute_image_capability_schema_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/change_compute_image_capability_schema_compartment.py.html>`__ to see an example of how to use change_compute_image_capability_schema_compartment API.
         """
         resource_path = "/computeImageCapabilitySchemas/{computeImageCapabilitySchemaId}/actions/changeCompartment"
         method = "POST"
@@ -961,7 +961,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/change_dedicated_vm_host_compartment.py.html>`__ to see an example of how to use change_dedicated_vm_host_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/change_dedicated_vm_host_compartment.py.html>`__ to see an example of how to use change_dedicated_vm_host_compartment API.
         """
         resource_path = "/dedicatedVmHosts/{dedicatedVmHostId}/actions/changeCompartment"
         method = "POST"
@@ -1080,7 +1080,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/change_image_compartment.py.html>`__ to see an example of how to use change_image_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/change_image_compartment.py.html>`__ to see an example of how to use change_image_compartment API.
         """
         resource_path = "/images/{imageId}/actions/changeCompartment"
         method = "POST"
@@ -1202,7 +1202,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/change_instance_compartment.py.html>`__ to see an example of how to use change_instance_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/change_instance_compartment.py.html>`__ to see an example of how to use change_instance_compartment API.
         """
         resource_path = "/instances/{instanceId}/actions/changeCompartment"
         method = "POST"
@@ -1303,7 +1303,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/create_app_catalog_subscription.py.html>`__ to see an example of how to use create_app_catalog_subscription API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/create_app_catalog_subscription.py.html>`__ to see an example of how to use create_app_catalog_subscription API.
         """
         resource_path = "/appCatalogSubscriptions"
         method = "POST"
@@ -1402,7 +1402,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/create_compute_capacity_reservation.py.html>`__ to see an example of how to use create_compute_capacity_reservation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/create_compute_capacity_reservation.py.html>`__ to see an example of how to use create_compute_capacity_reservation API.
         """
         resource_path = "/computeCapacityReservations"
         method = "POST"
@@ -1491,7 +1491,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/create_compute_image_capability_schema.py.html>`__ to see an example of how to use create_compute_image_capability_schema API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/create_compute_image_capability_schema.py.html>`__ to see an example of how to use create_compute_image_capability_schema API.
         """
         resource_path = "/computeImageCapabilitySchemas"
         method = "POST"
@@ -1587,7 +1587,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/create_dedicated_vm_host.py.html>`__ to see an example of how to use create_dedicated_vm_host API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/create_dedicated_vm_host.py.html>`__ to see an example of how to use create_dedicated_vm_host API.
         """
         resource_path = "/dedicatedVmHosts"
         method = "POST"
@@ -1703,7 +1703,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/create_image.py.html>`__ to see an example of how to use create_image API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/create_image.py.html>`__ to see an example of how to use create_image API.
         """
         resource_path = "/images"
         method = "POST"
@@ -1796,7 +1796,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/create_instance_console_connection.py.html>`__ to see an example of how to use create_instance_console_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/create_instance_console_connection.py.html>`__ to see an example of how to use create_instance_console_connection API.
         """
         resource_path = "/instanceConsoleConnections"
         method = "POST"
@@ -1884,7 +1884,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/delete_app_catalog_subscription.py.html>`__ to see an example of how to use delete_app_catalog_subscription API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/delete_app_catalog_subscription.py.html>`__ to see an example of how to use delete_app_catalog_subscription API.
         """
         resource_path = "/appCatalogSubscriptions"
         method = "DELETE"
@@ -1970,7 +1970,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/delete_compute_capacity_reservation.py.html>`__ to see an example of how to use delete_compute_capacity_reservation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/delete_compute_capacity_reservation.py.html>`__ to see an example of how to use delete_compute_capacity_reservation API.
         """
         resource_path = "/computeCapacityReservations/{capacityReservationId}"
         method = "DELETE"
@@ -2064,7 +2064,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/delete_compute_image_capability_schema.py.html>`__ to see an example of how to use delete_compute_image_capability_schema API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/delete_compute_image_capability_schema.py.html>`__ to see an example of how to use delete_compute_image_capability_schema API.
         """
         resource_path = "/computeImageCapabilitySchemas/{computeImageCapabilitySchemaId}"
         method = "DELETE"
@@ -2156,7 +2156,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/delete_console_history.py.html>`__ to see an example of how to use delete_console_history API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/delete_console_history.py.html>`__ to see an example of how to use delete_console_history API.
         """
         resource_path = "/instanceConsoleHistories/{instanceConsoleHistoryId}"
         method = "DELETE"
@@ -2250,7 +2250,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/delete_dedicated_vm_host.py.html>`__ to see an example of how to use delete_dedicated_vm_host API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/delete_dedicated_vm_host.py.html>`__ to see an example of how to use delete_dedicated_vm_host API.
         """
         resource_path = "/dedicatedVmHosts/{dedicatedVmHostId}"
         method = "DELETE"
@@ -2344,7 +2344,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/delete_image.py.html>`__ to see an example of how to use delete_image API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/delete_image.py.html>`__ to see an example of how to use delete_image API.
         """
         resource_path = "/images/{imageId}"
         method = "DELETE"
@@ -2436,7 +2436,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/delete_instance_console_connection.py.html>`__ to see an example of how to use delete_instance_console_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/delete_instance_console_connection.py.html>`__ to see an example of how to use delete_instance_console_connection API.
         """
         resource_path = "/instanceConsoleConnections/{instanceConsoleConnectionId}"
         method = "DELETE"
@@ -2531,7 +2531,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/detach_boot_volume.py.html>`__ to see an example of how to use detach_boot_volume API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/detach_boot_volume.py.html>`__ to see an example of how to use detach_boot_volume API.
         """
         resource_path = "/bootVolumeAttachments/{bootVolumeAttachmentId}"
         method = "DELETE"
@@ -2634,7 +2634,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/detach_vnic.py.html>`__ to see an example of how to use detach_vnic API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/detach_vnic.py.html>`__ to see an example of how to use detach_vnic API.
         """
         resource_path = "/vnicAttachments/{vnicAttachmentId}"
         method = "DELETE"
@@ -2729,7 +2729,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/detach_volume.py.html>`__ to see an example of how to use detach_volume API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/detach_volume.py.html>`__ to see an example of how to use detach_volume API.
         """
         resource_path = "/volumeAttachments/{volumeAttachmentId}"
         method = "DELETE"
@@ -2847,7 +2847,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/export_image.py.html>`__ to see an example of how to use export_image API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/export_image.py.html>`__ to see an example of how to use export_image API.
         """
         resource_path = "/images/{imageId}/actions/export"
         method = "POST"
@@ -2941,7 +2941,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_app_catalog_listing.py.html>`__ to see an example of how to use get_app_catalog_listing API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_app_catalog_listing.py.html>`__ to see an example of how to use get_app_catalog_listing API.
         """
         resource_path = "/appCatalogListings/{listingId}"
         method = "GET"
@@ -3026,7 +3026,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_app_catalog_listing_agreements.py.html>`__ to see an example of how to use get_app_catalog_listing_agreements API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_app_catalog_listing_agreements.py.html>`__ to see an example of how to use get_app_catalog_listing_agreements API.
         """
         resource_path = "/appCatalogListings/{listingId}/resourceVersions/{resourceVersion}/agreements"
         method = "GET"
@@ -3112,7 +3112,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_app_catalog_listing_resource_version.py.html>`__ to see an example of how to use get_app_catalog_listing_resource_version API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_app_catalog_listing_resource_version.py.html>`__ to see an example of how to use get_app_catalog_listing_resource_version API.
         """
         resource_path = "/appCatalogListings/{listingId}/resourceVersions/{resourceVersion}"
         method = "GET"
@@ -3195,7 +3195,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_boot_volume_attachment.py.html>`__ to see an example of how to use get_boot_volume_attachment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_boot_volume_attachment.py.html>`__ to see an example of how to use get_boot_volume_attachment API.
         """
         resource_path = "/bootVolumeAttachments/{bootVolumeAttachmentId}"
         method = "GET"
@@ -3281,7 +3281,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_compute_capacity_reservation.py.html>`__ to see an example of how to use get_compute_capacity_reservation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_compute_capacity_reservation.py.html>`__ to see an example of how to use get_compute_capacity_reservation API.
         """
         resource_path = "/computeCapacityReservations/{capacityReservationId}"
         method = "GET"
@@ -3372,7 +3372,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_compute_global_image_capability_schema.py.html>`__ to see an example of how to use get_compute_global_image_capability_schema API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_compute_global_image_capability_schema.py.html>`__ to see an example of how to use get_compute_global_image_capability_schema API.
         """
         resource_path = "/computeGlobalImageCapabilitySchemas/{computeGlobalImageCapabilitySchemaId}"
         method = "GET"
@@ -3459,7 +3459,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_compute_global_image_capability_schema_version.py.html>`__ to see an example of how to use get_compute_global_image_capability_schema_version API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_compute_global_image_capability_schema_version.py.html>`__ to see an example of how to use get_compute_global_image_capability_schema_version API.
         """
         resource_path = "/computeGlobalImageCapabilitySchemas/{computeGlobalImageCapabilitySchemaId}/versions/{computeGlobalImageCapabilitySchemaVersionName}"
         method = "GET"
@@ -3545,7 +3545,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_compute_image_capability_schema.py.html>`__ to see an example of how to use get_compute_image_capability_schema API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_compute_image_capability_schema.py.html>`__ to see an example of how to use get_compute_image_capability_schema API.
         """
         resource_path = "/computeImageCapabilitySchemas/{computeImageCapabilitySchemaId}"
         method = "GET"
@@ -3641,7 +3641,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_console_history.py.html>`__ to see an example of how to use get_console_history API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_console_history.py.html>`__ to see an example of how to use get_console_history API.
         """
         resource_path = "/instanceConsoleHistories/{instanceConsoleHistoryId}"
         method = "GET"
@@ -3731,7 +3731,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_console_history_content.py.html>`__ to see an example of how to use get_console_history_content API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_console_history_content.py.html>`__ to see an example of how to use get_console_history_content API.
         """
         resource_path = "/instanceConsoleHistories/{instanceConsoleHistoryId}/data"
         method = "GET"
@@ -3831,7 +3831,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_dedicated_vm_host.py.html>`__ to see an example of how to use get_dedicated_vm_host API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_dedicated_vm_host.py.html>`__ to see an example of how to use get_dedicated_vm_host API.
         """
         resource_path = "/dedicatedVmHosts/{dedicatedVmHostId}"
         method = "GET"
@@ -3922,7 +3922,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_image.py.html>`__ to see an example of how to use get_image API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_image.py.html>`__ to see an example of how to use get_image API.
         """
         resource_path = "/images/{imageId}"
         method = "GET"
@@ -4013,7 +4013,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_image_shape_compatibility_entry.py.html>`__ to see an example of how to use get_image_shape_compatibility_entry API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_image_shape_compatibility_entry.py.html>`__ to see an example of how to use get_image_shape_compatibility_entry API.
         """
         resource_path = "/images/{imageId}/shapes/{shapeName}"
         method = "GET"
@@ -4105,7 +4105,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_instance.py.html>`__ to see an example of how to use get_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_instance.py.html>`__ to see an example of how to use get_instance API.
         """
         resource_path = "/instances/{instanceId}"
         method = "GET"
@@ -4187,7 +4187,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_instance_console_connection.py.html>`__ to see an example of how to use get_instance_console_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_instance_console_connection.py.html>`__ to see an example of how to use get_instance_console_connection API.
         """
         resource_path = "/instanceConsoleConnections/{instanceConsoleConnectionId}"
         method = "GET"
@@ -4275,7 +4275,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_instance_maintenance_reboot.py.html>`__ to see an example of how to use get_instance_maintenance_reboot API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_instance_maintenance_reboot.py.html>`__ to see an example of how to use get_instance_maintenance_reboot API.
         """
         resource_path = "/instances/{instanceId}/maintenanceReboot"
         method = "GET"
@@ -4370,7 +4370,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_measured_boot_report.py.html>`__ to see an example of how to use get_measured_boot_report API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_measured_boot_report.py.html>`__ to see an example of how to use get_measured_boot_report API.
         """
         resource_path = "/instances/{instanceId}/measuredBootReport"
         method = "GET"
@@ -4459,7 +4459,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_vnic_attachment.py.html>`__ to see an example of how to use get_vnic_attachment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_vnic_attachment.py.html>`__ to see an example of how to use get_vnic_attachment API.
         """
         resource_path = "/vnicAttachments/{vnicAttachmentId}"
         method = "GET"
@@ -4541,7 +4541,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_volume_attachment.py.html>`__ to see an example of how to use get_volume_attachment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_volume_attachment.py.html>`__ to see an example of how to use get_volume_attachment API.
         """
         resource_path = "/volumeAttachments/{volumeAttachmentId}"
         method = "GET"
@@ -4626,7 +4626,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/get_windows_instance_initial_credentials.py.html>`__ to see an example of how to use get_windows_instance_initial_credentials API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/get_windows_instance_initial_credentials.py.html>`__ to see an example of how to use get_windows_instance_initial_credentials API.
         """
         resource_path = "/instances/{instanceId}/initialCredentials"
         method = "GET"
@@ -4774,7 +4774,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/instance_action.py.html>`__ to see an example of how to use instance_action API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/instance_action.py.html>`__ to see an example of how to use instance_action API.
         """
         resource_path = "/instances/{instanceId}"
         method = "POST"
@@ -4926,7 +4926,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/launch_instance.py.html>`__ to see an example of how to use launch_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/launch_instance.py.html>`__ to see an example of how to use launch_instance API.
         """
         resource_path = "/instances"
         method = "POST"
@@ -5028,7 +5028,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_app_catalog_listing_resource_versions.py.html>`__ to see an example of how to use list_app_catalog_listing_resource_versions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_app_catalog_listing_resource_versions.py.html>`__ to see an example of how to use list_app_catalog_listing_resource_versions API.
         """
         resource_path = "/appCatalogListings/{listingId}/resourceVersions"
         method = "GET"
@@ -5161,7 +5161,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_app_catalog_listings.py.html>`__ to see an example of how to use list_app_catalog_listings API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_app_catalog_listings.py.html>`__ to see an example of how to use list_app_catalog_listings API.
         """
         resource_path = "/appCatalogListings"
         method = "GET"
@@ -5299,7 +5299,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_app_catalog_subscriptions.py.html>`__ to see an example of how to use list_app_catalog_subscriptions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_app_catalog_subscriptions.py.html>`__ to see an example of how to use list_app_catalog_subscriptions API.
         """
         resource_path = "/appCatalogSubscriptions"
         method = "GET"
@@ -5434,7 +5434,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_boot_volume_attachments.py.html>`__ to see an example of how to use list_boot_volume_attachments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_boot_volume_attachments.py.html>`__ to see an example of how to use list_boot_volume_attachments API.
         """
         resource_path = "/bootVolumeAttachments"
         method = "GET"
@@ -5572,7 +5572,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_compute_capacity_reservation_instance_shapes.py.html>`__ to see an example of how to use list_compute_capacity_reservation_instance_shapes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_compute_capacity_reservation_instance_shapes.py.html>`__ to see an example of how to use list_compute_capacity_reservation_instance_shapes API.
         """
         resource_path = "/computeCapacityReservationInstanceShapes"
         method = "GET"
@@ -5730,7 +5730,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_compute_capacity_reservation_instances.py.html>`__ to see an example of how to use list_compute_capacity_reservation_instances API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_compute_capacity_reservation_instances.py.html>`__ to see an example of how to use list_compute_capacity_reservation_instances API.
         """
         resource_path = "/computeCapacityReservations/{capacityReservationId}/instances"
         method = "GET"
@@ -5907,7 +5907,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_compute_capacity_reservations.py.html>`__ to see an example of how to use list_compute_capacity_reservations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_compute_capacity_reservations.py.html>`__ to see an example of how to use list_compute_capacity_reservations API.
         """
         resource_path = "/computeCapacityReservations"
         method = "GET"
@@ -6065,7 +6065,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_compute_global_image_capability_schema_versions.py.html>`__ to see an example of how to use list_compute_global_image_capability_schema_versions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_compute_global_image_capability_schema_versions.py.html>`__ to see an example of how to use list_compute_global_image_capability_schema_versions API.
         """
         resource_path = "/computeGlobalImageCapabilitySchemas/{computeGlobalImageCapabilitySchemaId}/versions"
         method = "GET"
@@ -6218,7 +6218,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_compute_global_image_capability_schemas.py.html>`__ to see an example of how to use list_compute_global_image_capability_schemas API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_compute_global_image_capability_schemas.py.html>`__ to see an example of how to use list_compute_global_image_capability_schemas API.
         """
         resource_path = "/computeGlobalImageCapabilitySchemas"
         method = "GET"
@@ -6366,7 +6366,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_compute_image_capability_schemas.py.html>`__ to see an example of how to use list_compute_image_capability_schemas API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_compute_image_capability_schemas.py.html>`__ to see an example of how to use list_compute_image_capability_schemas API.
         """
         resource_path = "/computeImageCapabilitySchemas"
         method = "GET"
@@ -6524,7 +6524,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_console_histories.py.html>`__ to see an example of how to use list_console_histories API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_console_histories.py.html>`__ to see an example of how to use list_console_histories API.
         """
         resource_path = "/instanceConsoleHistories"
         method = "GET"
@@ -6671,7 +6671,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_dedicated_vm_host_instance_shapes.py.html>`__ to see an example of how to use list_dedicated_vm_host_instance_shapes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_dedicated_vm_host_instance_shapes.py.html>`__ to see an example of how to use list_dedicated_vm_host_instance_shapes API.
         """
         resource_path = "/dedicatedVmHostInstanceShapes"
         method = "GET"
@@ -6811,7 +6811,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_dedicated_vm_host_instances.py.html>`__ to see an example of how to use list_dedicated_vm_host_instances API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_dedicated_vm_host_instances.py.html>`__ to see an example of how to use list_dedicated_vm_host_instances API.
         """
         resource_path = "/dedicatedVmHosts/{dedicatedVmHostId}/instances"
         method = "GET"
@@ -6961,7 +6961,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_dedicated_vm_host_shapes.py.html>`__ to see an example of how to use list_dedicated_vm_host_shapes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_dedicated_vm_host_shapes.py.html>`__ to see an example of how to use list_dedicated_vm_host_shapes API.
         """
         resource_path = "/dedicatedVmHostShapes"
         method = "GET"
@@ -7118,7 +7118,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_dedicated_vm_hosts.py.html>`__ to see an example of how to use list_dedicated_vm_hosts API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_dedicated_vm_hosts.py.html>`__ to see an example of how to use list_dedicated_vm_hosts API.
         """
         resource_path = "/dedicatedVmHosts"
         method = "GET"
@@ -7265,7 +7265,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_image_shape_compatibility_entries.py.html>`__ to see an example of how to use list_image_shape_compatibility_entries API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_image_shape_compatibility_entries.py.html>`__ to see an example of how to use list_image_shape_compatibility_entries API.
         """
         resource_path = "/images/{imageId}/shapes"
         method = "GET"
@@ -7435,7 +7435,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_images.py.html>`__ to see an example of how to use list_images API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_images.py.html>`__ to see an example of how to use list_images API.
         """
         resource_path = "/images"
         method = "GET"
@@ -7580,7 +7580,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_instance_console_connections.py.html>`__ to see an example of how to use list_instance_console_connections API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_instance_console_connections.py.html>`__ to see an example of how to use list_instance_console_connections API.
         """
         resource_path = "/instanceConsoleConnections"
         method = "GET"
@@ -7713,7 +7713,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_instance_devices.py.html>`__ to see an example of how to use list_instance_devices API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_instance_devices.py.html>`__ to see an example of how to use list_instance_devices API.
         """
         resource_path = "/instances/{instanceId}/devices"
         method = "GET"
@@ -7889,7 +7889,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_instances.py.html>`__ to see an example of how to use list_instances API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_instances.py.html>`__ to see an example of how to use list_instances API.
         """
         resource_path = "/instances"
         method = "GET"
@@ -8036,7 +8036,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_shapes.py.html>`__ to see an example of how to use list_shapes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_shapes.py.html>`__ to see an example of how to use list_shapes API.
         """
         resource_path = "/shapes"
         method = "GET"
@@ -8156,7 +8156,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_vnic_attachments.py.html>`__ to see an example of how to use list_vnic_attachments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_vnic_attachments.py.html>`__ to see an example of how to use list_vnic_attachments API.
         """
         resource_path = "/vnicAttachments"
         method = "GET"
@@ -8280,7 +8280,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/list_volume_attachments.py.html>`__ to see an example of how to use list_volume_attachments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/list_volume_attachments.py.html>`__ to see an example of how to use list_volume_attachments API.
         """
         resource_path = "/volumeAttachments"
         method = "GET"
@@ -8376,7 +8376,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/remove_image_shape_compatibility_entry.py.html>`__ to see an example of how to use remove_image_shape_compatibility_entry API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/remove_image_shape_compatibility_entry.py.html>`__ to see an example of how to use remove_image_shape_compatibility_entry API.
         """
         resource_path = "/images/{imageId}/shapes/{shapeName}"
         method = "DELETE"
@@ -8475,7 +8475,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/terminate_instance.py.html>`__ to see an example of how to use terminate_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/terminate_instance.py.html>`__ to see an example of how to use terminate_instance API.
         """
         resource_path = "/instances/{instanceId}"
         method = "DELETE"
@@ -8584,7 +8584,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/update_compute_capacity_reservation.py.html>`__ to see an example of how to use update_compute_capacity_reservation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/update_compute_capacity_reservation.py.html>`__ to see an example of how to use update_compute_capacity_reservation API.
         """
         resource_path = "/computeCapacityReservations/{capacityReservationId}"
         method = "PUT"
@@ -8683,7 +8683,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/update_compute_image_capability_schema.py.html>`__ to see an example of how to use update_compute_image_capability_schema API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/update_compute_image_capability_schema.py.html>`__ to see an example of how to use update_compute_image_capability_schema API.
         """
         resource_path = "/computeImageCapabilitySchemas/{computeImageCapabilitySchemaId}"
         method = "PUT"
@@ -8782,7 +8782,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/update_console_history.py.html>`__ to see an example of how to use update_console_history API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/update_console_history.py.html>`__ to see an example of how to use update_console_history API.
         """
         resource_path = "/instanceConsoleHistories/{instanceConsoleHistoryId}"
         method = "PUT"
@@ -8893,7 +8893,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/update_dedicated_vm_host.py.html>`__ to see an example of how to use update_dedicated_vm_host API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/update_dedicated_vm_host.py.html>`__ to see an example of how to use update_dedicated_vm_host API.
         """
         resource_path = "/dedicatedVmHosts/{dedicatedVmHostId}"
         method = "PUT"
@@ -9006,7 +9006,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/update_image.py.html>`__ to see an example of how to use update_image API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/update_image.py.html>`__ to see an example of how to use update_image API.
         """
         resource_path = "/images/{imageId}"
         method = "PUT"
@@ -9123,7 +9123,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/update_instance.py.html>`__ to see an example of how to use update_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/update_instance.py.html>`__ to see an example of how to use update_instance API.
         """
         resource_path = "/instances/{instanceId}"
         method = "PUT"
@@ -9229,7 +9229,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/update_instance_console_connection.py.html>`__ to see an example of how to use update_instance_console_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/update_instance_console_connection.py.html>`__ to see an example of how to use update_instance_console_connection API.
         """
         resource_path = "/instanceConsoleConnections/{instanceConsoleConnectionId}"
         method = "PUT"
@@ -9334,7 +9334,7 @@ class ComputeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/core/update_volume_attachment.py.html>`__ to see an example of how to use update_volume_attachment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/core/update_volume_attachment.py.html>`__ to see an example of how to use update_volume_attachment API.
         """
         resource_path = "/volumeAttachments/{volumeAttachmentId}"
         method = "PUT"

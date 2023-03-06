@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -140,7 +140,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "DELETE"
@@ -249,7 +249,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/change_ai_private_endpoint_compartment.py.html>`__ to see an example of how to use change_ai_private_endpoint_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/change_ai_private_endpoint_compartment.py.html>`__ to see an example of how to use change_ai_private_endpoint_compartment API.
         """
         resource_path = "/aiPrivateEndpoints/{aiPrivateEndpointId}/actions/changeCompartment"
         method = "POST"
@@ -363,7 +363,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/change_data_asset_compartment.py.html>`__ to see an example of how to use change_data_asset_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/change_data_asset_compartment.py.html>`__ to see an example of how to use change_data_asset_compartment API.
         """
         resource_path = "/dataAssets/{dataAssetId}/actions/changeCompartment"
         method = "POST"
@@ -479,7 +479,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/change_model_compartment.py.html>`__ to see an example of how to use change_model_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/change_model_compartment.py.html>`__ to see an example of how to use change_model_compartment API.
         """
         resource_path = "/models/{modelId}/actions/changeCompartment"
         method = "POST"
@@ -593,7 +593,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/change_project_compartment.py.html>`__ to see an example of how to use change_project_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/change_project_compartment.py.html>`__ to see an example of how to use change_project_compartment API.
         """
         resource_path = "/projects/{projectId}/actions/changeCompartment"
         method = "POST"
@@ -697,7 +697,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/create_ai_private_endpoint.py.html>`__ to see an example of how to use create_ai_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/create_ai_private_endpoint.py.html>`__ to see an example of how to use create_ai_private_endpoint API.
         """
         resource_path = "/aiPrivateEndpoints"
         method = "POST"
@@ -787,7 +787,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/create_data_asset.py.html>`__ to see an example of how to use create_data_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/create_data_asset.py.html>`__ to see an example of how to use create_data_asset API.
         """
         resource_path = "/dataAssets"
         method = "POST"
@@ -879,7 +879,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/create_model.py.html>`__ to see an example of how to use create_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/create_model.py.html>`__ to see an example of how to use create_model API.
         """
         resource_path = "/models"
         method = "POST"
@@ -971,7 +971,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/create_project.py.html>`__ to see an example of how to use create_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/create_project.py.html>`__ to see an example of how to use create_project API.
         """
         resource_path = "/projects"
         method = "POST"
@@ -1063,7 +1063,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/delete_ai_private_endpoint.py.html>`__ to see an example of how to use delete_ai_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/delete_ai_private_endpoint.py.html>`__ to see an example of how to use delete_ai_private_endpoint API.
         """
         resource_path = "/aiPrivateEndpoints/{aiPrivateEndpointId}"
         method = "DELETE"
@@ -1162,7 +1162,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/delete_data_asset.py.html>`__ to see an example of how to use delete_data_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/delete_data_asset.py.html>`__ to see an example of how to use delete_data_asset API.
         """
         resource_path = "/dataAssets/{dataAssetId}"
         method = "DELETE"
@@ -1261,7 +1261,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/delete_model.py.html>`__ to see an example of how to use delete_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/delete_model.py.html>`__ to see an example of how to use delete_model API.
         """
         resource_path = "/models/{modelId}"
         method = "DELETE"
@@ -1360,7 +1360,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/delete_project.py.html>`__ to see an example of how to use delete_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/delete_project.py.html>`__ to see an example of how to use delete_project API.
         """
         resource_path = "/projects/{projectId}"
         method = "DELETE"
@@ -1474,7 +1474,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/detect_anomalies.py.html>`__ to see an example of how to use detect_anomalies API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/detect_anomalies.py.html>`__ to see an example of how to use detect_anomalies API.
         """
         resource_path = "/actions/detectAnomalies"
         method = "POST"
@@ -1561,7 +1561,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/get_ai_private_endpoint.py.html>`__ to see an example of how to use get_ai_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/get_ai_private_endpoint.py.html>`__ to see an example of how to use get_ai_private_endpoint API.
         """
         resource_path = "/aiPrivateEndpoints/{aiPrivateEndpointId}"
         method = "GET"
@@ -1653,7 +1653,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/get_data_asset.py.html>`__ to see an example of how to use get_data_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/get_data_asset.py.html>`__ to see an example of how to use get_data_asset API.
         """
         resource_path = "/dataAssets/{dataAssetId}"
         method = "GET"
@@ -1745,7 +1745,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/get_model.py.html>`__ to see an example of how to use get_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/get_model.py.html>`__ to see an example of how to use get_model API.
         """
         resource_path = "/models/{modelId}"
         method = "GET"
@@ -1837,7 +1837,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/get_project.py.html>`__ to see an example of how to use get_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/get_project.py.html>`__ to see an example of how to use get_project API.
         """
         resource_path = "/projects/{projectId}"
         method = "GET"
@@ -1929,7 +1929,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -2049,7 +2049,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/list_ai_private_endpoints.py.html>`__ to see an example of how to use list_ai_private_endpoints API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/list_ai_private_endpoints.py.html>`__ to see an example of how to use list_ai_private_endpoints API.
         """
         resource_path = "/aiPrivateEndpoints"
         method = "GET"
@@ -2199,7 +2199,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/list_data_assets.py.html>`__ to see an example of how to use list_data_assets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/list_data_assets.py.html>`__ to see an example of how to use list_data_assets API.
         """
         resource_path = "/dataAssets"
         method = "GET"
@@ -2352,7 +2352,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/list_models.py.html>`__ to see an example of how to use list_models API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/list_models.py.html>`__ to see an example of how to use list_models API.
         """
         resource_path = "/models"
         method = "GET"
@@ -2502,7 +2502,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/list_projects.py.html>`__ to see an example of how to use list_projects API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/list_projects.py.html>`__ to see an example of how to use list_projects API.
         """
         resource_path = "/projects"
         method = "GET"
@@ -2628,7 +2628,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -2736,7 +2736,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -2847,7 +2847,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -2950,7 +2950,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/update_ai_private_endpoint.py.html>`__ to see an example of how to use update_ai_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/update_ai_private_endpoint.py.html>`__ to see an example of how to use update_ai_private_endpoint API.
         """
         resource_path = "/aiPrivateEndpoints/{aiPrivateEndpointId}"
         method = "PUT"
@@ -3054,7 +3054,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/update_data_asset.py.html>`__ to see an example of how to use update_data_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/update_data_asset.py.html>`__ to see an example of how to use update_data_asset API.
         """
         resource_path = "/dataAssets/{dataAssetId}"
         method = "PUT"
@@ -3160,7 +3160,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/update_model.py.html>`__ to see an example of how to use update_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/update_model.py.html>`__ to see an example of how to use update_model API.
         """
         resource_path = "/models/{modelId}"
         method = "PUT"
@@ -3264,7 +3264,7 @@ class AnomalyDetectionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/aianomalydetection/update_project.py.html>`__ to see an example of how to use update_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aianomalydetection/update_project.py.html>`__ to see an example of how to use update_project API.
         """
         resource_path = "/projects/{projectId}"
         method = "PUT"

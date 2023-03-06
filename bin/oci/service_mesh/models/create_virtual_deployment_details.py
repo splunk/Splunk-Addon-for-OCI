@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -176,7 +176,7 @@ class CreateVirtualDeploymentDetails(object):
     @property
     def service_discovery(self):
         """
-        **[Required]** Gets the service_discovery of this CreateVirtualDeploymentDetails.
+        Gets the service_discovery of this CreateVirtualDeploymentDetails.
 
         :return: The service_discovery of this CreateVirtualDeploymentDetails.
         :rtype: oci.service_mesh.models.ServiceDiscoveryConfiguration
@@ -196,7 +196,7 @@ class CreateVirtualDeploymentDetails(object):
     @property
     def listeners(self):
         """
-        **[Required]** Gets the listeners of this CreateVirtualDeploymentDetails.
+        Gets the listeners of this CreateVirtualDeploymentDetails.
         The listeners for the virtual deployment.
 
 

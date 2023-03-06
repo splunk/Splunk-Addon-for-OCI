@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -146,7 +146,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/change_publication_compartment.py.html>`__ to see an example of how to use change_publication_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/change_publication_compartment.py.html>`__ to see an example of how to use change_publication_compartment API.
         """
         resource_path = "/publications/{publicationId}/actions/changeCompartment"
         method = "POST"
@@ -253,7 +253,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/create_accepted_agreement.py.html>`__ to see an example of how to use create_accepted_agreement API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/create_accepted_agreement.py.html>`__ to see an example of how to use create_accepted_agreement API.
         """
         resource_path = "/acceptedAgreements"
         method = "POST"
@@ -347,7 +347,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/create_publication.py.html>`__ to see an example of how to use create_publication API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/create_publication.py.html>`__ to see an example of how to use create_publication API.
         """
         resource_path = "/publications"
         method = "POST"
@@ -445,7 +445,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/delete_accepted_agreement.py.html>`__ to see an example of how to use delete_accepted_agreement API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/delete_accepted_agreement.py.html>`__ to see an example of how to use delete_accepted_agreement API.
         """
         resource_path = "/acceptedAgreements/{acceptedAgreementId}"
         method = "DELETE"
@@ -553,7 +553,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/delete_publication.py.html>`__ to see an example of how to use delete_publication API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/delete_publication.py.html>`__ to see an example of how to use delete_publication API.
         """
         resource_path = "/publications/{publicationId}"
         method = "DELETE"
@@ -648,7 +648,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/get_accepted_agreement.py.html>`__ to see an example of how to use get_accepted_agreement API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/get_accepted_agreement.py.html>`__ to see an example of how to use get_accepted_agreement API.
         """
         resource_path = "/acceptedAgreements/{acceptedAgreementId}"
         method = "GET"
@@ -753,7 +753,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/get_agreement.py.html>`__ to see an example of how to use get_agreement API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/get_agreement.py.html>`__ to see an example of how to use get_agreement API.
         """
         resource_path = "/listings/{listingId}/packages/{packageVersion}/agreements/{agreementId}"
         method = "GET"
@@ -881,7 +881,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/get_listing.py.html>`__ to see an example of how to use get_listing API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/get_listing.py.html>`__ to see an example of how to use get_listing API.
         """
         resource_path = "/listings/{listingId}"
         method = "GET"
@@ -1009,7 +1009,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/get_package.py.html>`__ to see an example of how to use get_package API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/get_package.py.html>`__ to see an example of how to use get_package API.
         """
         resource_path = "/listings/{listingId}/packages/{packageVersion}"
         method = "GET"
@@ -1113,7 +1113,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/get_publication.py.html>`__ to see an example of how to use get_publication API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/get_publication.py.html>`__ to see an example of how to use get_publication API.
         """
         resource_path = "/publications/{publicationId}"
         method = "GET"
@@ -1211,7 +1211,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/get_publication_package.py.html>`__ to see an example of how to use get_publication_package API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/get_publication_package.py.html>`__ to see an example of how to use get_publication_package API.
         """
         resource_path = "/publications/{publicationId}/packages/{packageVersion}"
         method = "GET"
@@ -1338,7 +1338,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/list_accepted_agreements.py.html>`__ to see an example of how to use list_accepted_agreements API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/list_accepted_agreements.py.html>`__ to see an example of how to use list_accepted_agreements API.
         """
         resource_path = "/acceptedAgreements"
         method = "GET"
@@ -1470,7 +1470,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/list_agreements.py.html>`__ to see an example of how to use list_agreements API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/list_agreements.py.html>`__ to see an example of how to use list_agreements API.
         """
         resource_path = "/listings/{listingId}/packages/{packageVersion}/agreements"
         method = "GET"
@@ -1585,7 +1585,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/list_categories.py.html>`__ to see an example of how to use list_categories API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/list_categories.py.html>`__ to see an example of how to use list_categories API.
         """
         resource_path = "/categories"
         method = "GET"
@@ -1754,7 +1754,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/list_listings.py.html>`__ to see an example of how to use list_listings API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/list_listings.py.html>`__ to see an example of how to use list_listings API.
         """
         resource_path = "/listings"
         method = "GET"
@@ -1949,7 +1949,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/list_packages.py.html>`__ to see an example of how to use list_packages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/list_packages.py.html>`__ to see an example of how to use list_packages API.
         """
         resource_path = "/listings/{listingId}/packages"
         method = "GET"
@@ -2102,7 +2102,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/list_publication_packages.py.html>`__ to see an example of how to use list_publication_packages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/list_publication_packages.py.html>`__ to see an example of how to use list_publication_packages API.
         """
         resource_path = "/publications/{publicationId}/packages"
         method = "GET"
@@ -2261,7 +2261,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/list_publications.py.html>`__ to see an example of how to use list_publications API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/list_publications.py.html>`__ to see an example of how to use list_publications API.
         """
         resource_path = "/publications"
         method = "GET"
@@ -2395,7 +2395,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/list_publishers.py.html>`__ to see an example of how to use list_publishers API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/list_publishers.py.html>`__ to see an example of how to use list_publishers API.
         """
         resource_path = "/publishers"
         method = "GET"
@@ -2495,7 +2495,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/list_report_types.py.html>`__ to see an example of how to use list_report_types API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/list_report_types.py.html>`__ to see an example of how to use list_report_types API.
         """
         resource_path = "/reportTypes"
         method = "GET"
@@ -2598,7 +2598,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/list_reports.py.html>`__ to see an example of how to use list_reports API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/list_reports.py.html>`__ to see an example of how to use list_reports API.
         """
         resource_path = "/reports"
         method = "GET"
@@ -2695,7 +2695,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/list_taxes.py.html>`__ to see an example of how to use list_taxes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/list_taxes.py.html>`__ to see an example of how to use list_taxes API.
         """
         resource_path = "/listings/{listingId}/taxes"
         method = "GET"
@@ -2805,7 +2805,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/search_listings.py.html>`__ to see an example of how to use search_listings API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/search_listings.py.html>`__ to see an example of how to use search_listings API.
         """
         resource_path = "/searchListings"
         method = "POST"
@@ -2914,7 +2914,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/update_accepted_agreement.py.html>`__ to see an example of how to use update_accepted_agreement API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/update_accepted_agreement.py.html>`__ to see an example of how to use update_accepted_agreement API.
         """
         resource_path = "/acceptedAgreements/{acceptedAgreementId}"
         method = "PUT"
@@ -3030,7 +3030,7 @@ class MarketplaceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/marketplace/update_publication.py.html>`__ to see an example of how to use update_publication API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/update_publication.py.html>`__ to see an example of how to use update_publication API.
         """
         resource_path = "/publications/{publicationId}"
         method = "PUT"

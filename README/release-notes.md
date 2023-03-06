@@ -1,8 +1,16 @@
 # OCI Logging Add-On v2
 
+## Release 2.3.0
+- Native integration for Cloud Guard problems written to OCI Streams via OCI Events.
+    - This allows any OCI Event written to the OCI Stream to be written into Splunk
+- Improved Error handling for 401 and 404 errors
+- Updated Splunk Lib
+- Updated OCI SDK to 2.90.3
+- Updated app file permissions
+- Added a README.txt with binary documentation
+
 ## Release 2.2.2
-- Fix related to multi-threading support
-- Updated OCI Python SDK to 2.64.0
+- Updated OCI SDK to 2.88.1
 
 ## Release 2.2.1
 - Local File System Key is the default

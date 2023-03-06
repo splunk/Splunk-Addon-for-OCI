@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -36,6 +36,10 @@ class Project(object):
     #: A constant which can be used with the lifecycle_state property of a Project.
     #: This constant has a value of "FAILED"
     LIFECYCLE_STATE_FAILED = "FAILED"
+
+    #: A constant which can be used with the lifecycle_state property of a Project.
+    #: This constant has a value of "NEEDS_ATTENTION"
+    LIFECYCLE_STATE_NEEDS_ATTENTION = "NEEDS_ATTENTION"
 
     def __init__(self, **kwargs):
         """
@@ -76,7 +80,7 @@ class Project(object):
 
         :param lifecycle_state:
             The value to assign to the lifecycle_state property of this Project.
-            Allowed values for this property are: "CREATING", "UPDATING", "ACTIVE", "DELETING", "DELETED", "FAILED", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for this property are: "CREATING", "UPDATING", "ACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type lifecycle_state: str
 
@@ -345,7 +349,7 @@ class Project(object):
         Gets the lifecycle_state of this Project.
         The current state of the project.
 
-        Allowed values for this property are: "CREATING", "UPDATING", "ACTIVE", "DELETING", "DELETED", "FAILED", 'UNKNOWN_ENUM_VALUE'.
+        Allowed values for this property are: "CREATING", "UPDATING", "ACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
 
 
@@ -364,7 +368,7 @@ class Project(object):
         :param lifecycle_state: The lifecycle_state of this Project.
         :type: str
         """
-        allowed_values = ["CREATING", "UPDATING", "ACTIVE", "DELETING", "DELETED", "FAILED"]
+        allowed_values = ["CREATING", "UPDATING", "ACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION"]
         if not value_allowed_none_or_none_sentinel(lifecycle_state, allowed_values):
             lifecycle_state = 'UNKNOWN_ENUM_VALUE'
         self._lifecycle_state = lifecycle_state

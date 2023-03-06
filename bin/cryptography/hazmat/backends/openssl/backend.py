@@ -90,6 +90,8 @@ from cryptography.hazmat.primitives.ciphers import (
 )
 from cryptography.hazmat.primitives.ciphers.algorithms import (
     AES,
+    AES128,
+    AES256,
     ARC4,
     Camellia,
     ChaCha20,
@@ -114,6 +116,7 @@ from cryptography.hazmat.primitives.ciphers.modes import (
 from cryptography.hazmat.primitives.kdf import scrypt
 from cryptography.hazmat.primitives.serialization import pkcs7, ssh
 from cryptography.hazmat.primitives.serialization.pkcs12 import (
+    PBES,
     PKCS12Certificate,
     PKCS12KeyAndCertificates,
     _ALLOWED_PKCS12_TYPES,
@@ -378,12 +381,15 @@ class Backend:
         self._cipher_registry[cipher_cls, mode_cls] = adapter
 
     def _register_default_ciphers(self) -> None:
-        for mode_cls in [CBC, CTR, ECB, OFB, CFB, CFB8, GCM]:
-            self.register_cipher_adapter(
-                AES,
-                mode_cls,
-                GetCipherByName("{cipher.name}-{cipher.key_size}-{mode.name}"),
-            )
+        for cipher_cls in [AES, AES128, AES256]:
+            for mode_cls in [CBC, CTR, ECB, OFB, CFB, CFB8, GCM]:
+                self.register_cipher_adapter(
+                    cipher_cls,
+                    mode_cls,
+                    GetCipherByName(
+                        "{cipher.name}-{cipher.key_size}-{mode.name}"
+                    ),
+                )
         for mode_cls in [CBC, CTR, ECB, OFB, CFB]:
             self.register_cipher_adapter(
                 Camellia,
@@ -706,6 +712,19 @@ class Backend:
             self.openssl_assert(rsa_cdata != self._ffi.NULL)
             rsa_cdata = self._ffi.gc(rsa_cdata, self._lib.RSA_free)
             return _RSAPublicKey(self, rsa_cdata, evp_pkey)
+        elif (
+            key_type == self._lib.EVP_PKEY_RSA_PSS
+            and not self._lib.CRYPTOGRAPHY_IS_LIBRESSL
+            and not self._lib.CRYPTOGRAPHY_IS_BORINGSSL
+            and not self._lib.CRYPTOGRAPHY_OPENSSL_LESS_THAN_111E
+        ):
+            rsa_cdata = self._lib.EVP_PKEY_get1_RSA(evp_pkey)
+            self.openssl_assert(rsa_cdata != self._ffi.NULL)
+            rsa_cdata = self._ffi.gc(rsa_cdata, self._lib.RSA_free)
+            bio = self._create_mem_bio_gc()
+            res = self._lib.i2d_RSAPublicKey_bio(bio, rsa_cdata)
+            self.openssl_assert(res == 1)
+            return self.load_der_public_key(self._read_mem_bio(bio))
         elif key_type == self._lib.EVP_PKEY_DSA:
             dsa_cdata = self._lib.EVP_PKEY_get1_DSA(evp_pkey)
             self.openssl_assert(dsa_cdata != self._ffi.NULL)
@@ -713,7 +732,9 @@ class Backend:
             return _DSAPublicKey(self, dsa_cdata, evp_pkey)
         elif key_type == self._lib.EVP_PKEY_EC:
             ec_cdata = self._lib.EVP_PKEY_get1_EC_KEY(evp_pkey)
-            self.openssl_assert(ec_cdata != self._ffi.NULL)
+            if ec_cdata == self._ffi.NULL:
+                errors = self._consume_errors_with_text()
+                raise ValueError("Unable to load EC key", errors)
             ec_cdata = self._ffi.gc(ec_cdata, self._lib.EC_KEY_free)
             return _EllipticCurvePublicKey(self, ec_cdata, evp_pkey)
         elif key_type in self._dh_types:
@@ -1513,6 +1534,15 @@ class Backend:
                     "Passwords longer than 1023 bytes are not supported by "
                     "this backend"
                 )
+        elif (
+            isinstance(
+                encryption_algorithm, serialization._KeySerializationEncryption
+            )
+            and encryption_algorithm._format
+            is format
+            is serialization.PrivateFormat.OpenSSH
+        ):
+            password = encryption_algorithm.password
         else:
             raise ValueError("Unsupported encryption type")
 
@@ -1577,7 +1607,9 @@ class Backend:
         # OpenSSH + PEM
         if format is serialization.PrivateFormat.OpenSSH:
             if encoding is serialization.Encoding.PEM:
-                return ssh.serialize_ssh_private_key(key, password)
+                return ssh._serialize_ssh_private_key(
+                    key, password, encryption_algorithm
+                )
 
             raise ValueError(
                 "OpenSSH private key format can only be used"
@@ -2158,14 +2190,11 @@ class Backend:
             res = self._lib.PKCS12_parse(
                 p12, password_buf, evp_pkey_ptr, x509_ptr, sk_x509_ptr
             )
-
-        # Workaround for
-        # https://github.com/libressl-portable/portable/issues/659
-        if self._lib.CRYPTOGRAPHY_LIBRESSL_LESS_THAN_340:
-            self._consume_errors()
-
+        # OpenSSL 3.0.6 leaves errors on the stack even in success, so
+        # we consume all errors unconditionally.
+        # https://github.com/openssl/openssl/issues/19389
+        self._consume_errors()
         if res == 0:
-            self._consume_errors()
             raise ValueError("Invalid password or PKCS12 data")
 
         cert = None
@@ -2232,20 +2261,75 @@ class Backend:
             nid_key = -1
             pkcs12_iter = 0
             mac_iter = 0
+            mac_alg = self._ffi.NULL
         elif isinstance(
             encryption_algorithm, serialization.BestAvailableEncryption
         ):
             # PKCS12 encryption is hopeless trash and can never be fixed.
-            # This is the least terrible option.
-            nid_cert = self._lib.NID_pbe_WithSHA1And3_Key_TripleDES_CBC
-            nid_key = self._lib.NID_pbe_WithSHA1And3_Key_TripleDES_CBC
+            # OpenSSL 3 supports PBESv2, but Libre and Boring do not, so
+            # we use PBESv1 with 3DES on the older paths.
+            if self._lib.CRYPTOGRAPHY_OPENSSL_300_OR_GREATER:
+                nid_cert = self._lib.NID_aes_256_cbc
+                nid_key = self._lib.NID_aes_256_cbc
+            else:
+                nid_cert = self._lib.NID_pbe_WithSHA1And3_Key_TripleDES_CBC
+                nid_key = self._lib.NID_pbe_WithSHA1And3_Key_TripleDES_CBC
             # At least we can set this higher than OpenSSL's default
             pkcs12_iter = 20000
             # mac_iter chosen for compatibility reasons, see:
             # https://www.openssl.org/docs/man1.1.1/man3/PKCS12_create.html
             # Did we mention how lousy PKCS12 encryption is?
             mac_iter = 1
+            # MAC algorithm can only be set on OpenSSL 3.0.0+
+            mac_alg = self._ffi.NULL
             password = encryption_algorithm.password
+        elif (
+            isinstance(
+                encryption_algorithm, serialization._KeySerializationEncryption
+            )
+            and encryption_algorithm._format
+            is serialization.PrivateFormat.PKCS12
+        ):
+            # Default to OpenSSL's defaults. Behavior will vary based on the
+            # version of OpenSSL cryptography is compiled against.
+            nid_cert = 0
+            nid_key = 0
+            # Use the default iters we use in best available
+            pkcs12_iter = 20000
+            # See the Best Available comment for why this is 1
+            mac_iter = 1
+            password = encryption_algorithm.password
+            keycertalg = encryption_algorithm._key_cert_algorithm
+            if keycertalg is PBES.PBESv1SHA1And3KeyTripleDESCBC:
+                nid_cert = self._lib.NID_pbe_WithSHA1And3_Key_TripleDES_CBC
+                nid_key = self._lib.NID_pbe_WithSHA1And3_Key_TripleDES_CBC
+            elif keycertalg is PBES.PBESv2SHA256AndAES256CBC:
+                if not self._lib.CRYPTOGRAPHY_OPENSSL_300_OR_GREATER:
+                    raise UnsupportedAlgorithm(
+                        "PBESv2 is not supported by this version of OpenSSL"
+                    )
+                nid_cert = self._lib.NID_aes_256_cbc
+                nid_key = self._lib.NID_aes_256_cbc
+            else:
+                assert keycertalg is None
+                # We use OpenSSL's defaults
+
+            if encryption_algorithm._hmac_hash is not None:
+                if not self._lib.Cryptography_HAS_PKCS12_SET_MAC:
+                    raise UnsupportedAlgorithm(
+                        "Setting MAC algorithm is not supported by this "
+                        "version of OpenSSL."
+                    )
+                mac_alg = self._evp_md_non_null_from_algorithm(
+                    encryption_algorithm._hmac_hash
+                )
+                self.openssl_assert(mac_alg != self._ffi.NULL)
+            else:
+                mac_alg = self._ffi.NULL
+
+            if encryption_algorithm._kdf_rounds is not None:
+                pkcs12_iter = encryption_algorithm._kdf_rounds
+
         else:
             raise ValueError("Unsupported key encryption type")
 
@@ -2293,6 +2377,20 @@ class Backend:
                     pkcs12_iter,
                     mac_iter,
                     0,
+                )
+
+            if (
+                self._lib.Cryptography_HAS_PKCS12_SET_MAC
+                and mac_alg != self._ffi.NULL
+            ):
+                self._lib.PKCS12_set_mac(
+                    p12,
+                    password_buf,
+                    -1,
+                    self._ffi.NULL,
+                    0,
+                    mac_iter,
+                    mac_alg,
                 )
 
         self.openssl_assert(p12 != self._ffi.NULL)
@@ -2524,7 +2622,23 @@ class GetCipherByName:
 
     def __call__(self, backend: Backend, cipher: CipherAlgorithm, mode: Mode):
         cipher_name = self._fmt.format(cipher=cipher, mode=mode).lower()
-        return backend._lib.EVP_get_cipherbyname(cipher_name.encode("ascii"))
+        evp_cipher = backend._lib.EVP_get_cipherbyname(
+            cipher_name.encode("ascii")
+        )
+
+        # try EVP_CIPHER_fetch if present
+        if (
+            evp_cipher == backend._ffi.NULL
+            and backend._lib.Cryptography_HAS_300_EVP_CIPHER
+        ):
+            evp_cipher = backend._lib.EVP_CIPHER_fetch(
+                backend._ffi.NULL,
+                cipher_name.encode("ascii"),
+                backend._ffi.NULL,
+            )
+
+        backend._consume_errors()
+        return evp_cipher
 
 
 def _get_xts_cipher(backend: Backend, cipher: AES, mode):

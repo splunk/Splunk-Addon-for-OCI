@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -142,7 +142,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/cluster_migrate_to_native_vcn.py.html>`__ to see an example of how to use cluster_migrate_to_native_vcn API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/cluster_migrate_to_native_vcn.py.html>`__ to see an example of how to use cluster_migrate_to_native_vcn API.
         """
         resource_path = "/clusters/{clusterId}/actions/migrateToNativeVcn"
         method = "POST"
@@ -243,7 +243,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/create_cluster.py.html>`__ to see an example of how to use create_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/create_cluster.py.html>`__ to see an example of how to use create_cluster API.
         """
         resource_path = "/clusters"
         method = "POST"
@@ -332,7 +332,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/create_kubeconfig.py.html>`__ to see an example of how to use create_kubeconfig API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/create_kubeconfig.py.html>`__ to see an example of how to use create_kubeconfig API.
         """
         resource_path = "/clusters/{clusterId}/kubeconfig/content"
         method = "POST"
@@ -434,7 +434,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/create_node_pool.py.html>`__ to see an example of how to use create_node_pool API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/create_node_pool.py.html>`__ to see an example of how to use create_node_pool API.
         """
         resource_path = "/nodePools"
         method = "POST"
@@ -525,7 +525,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/delete_cluster.py.html>`__ to see an example of how to use delete_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/delete_cluster.py.html>`__ to see an example of how to use delete_cluster API.
         """
         resource_path = "/clusters/{clusterId}"
         method = "DELETE"
@@ -638,7 +638,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/delete_node.py.html>`__ to see an example of how to use delete_node API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/delete_node.py.html>`__ to see an example of how to use delete_node API.
         """
         resource_path = "/nodePools/{nodePoolId}/node/{nodeId}"
         method = "DELETE"
@@ -758,7 +758,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/delete_node_pool.py.html>`__ to see an example of how to use delete_node_pool API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/delete_node_pool.py.html>`__ to see an example of how to use delete_node_pool API.
         """
         resource_path = "/nodePools/{nodePoolId}"
         method = "DELETE"
@@ -868,7 +868,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/delete_work_request.py.html>`__ to see an example of how to use delete_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/delete_work_request.py.html>`__ to see an example of how to use delete_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "DELETE"
@@ -963,7 +963,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/get_cluster.py.html>`__ to see an example of how to use get_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/get_cluster.py.html>`__ to see an example of how to use get_cluster API.
         """
         resource_path = "/clusters/{clusterId}"
         method = "GET"
@@ -1058,7 +1058,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/get_cluster_migrate_to_native_vcn_status.py.html>`__ to see an example of how to use get_cluster_migrate_to_native_vcn_status API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/get_cluster_migrate_to_native_vcn_status.py.html>`__ to see an example of how to use get_cluster_migrate_to_native_vcn_status API.
         """
         resource_path = "/clusters/{clusterId}/migrateToNativeVcnStatus"
         method = "GET"
@@ -1156,7 +1156,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/get_cluster_options.py.html>`__ to see an example of how to use get_cluster_options API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/get_cluster_options.py.html>`__ to see an example of how to use get_cluster_options API.
         """
         resource_path = "/clusterOptions/{clusterOptionId}"
         method = "GET"
@@ -1259,7 +1259,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/get_node_pool.py.html>`__ to see an example of how to use get_node_pool API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/get_node_pool.py.html>`__ to see an example of how to use get_node_pool API.
         """
         resource_path = "/nodePools/{nodePoolId}"
         method = "GET"
@@ -1357,7 +1357,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/get_node_pool_options.py.html>`__ to see an example of how to use get_node_pool_options API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/get_node_pool_options.py.html>`__ to see an example of how to use get_node_pool_options API.
         """
         resource_path = "/nodePoolOptions/{nodePoolOptionId}"
         method = "GET"
@@ -1460,7 +1460,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -1586,7 +1586,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/list_clusters.py.html>`__ to see an example of how to use list_clusters API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/list_clusters.py.html>`__ to see an example of how to use list_clusters API.
         """
         resource_path = "/clusters"
         method = "GET"
@@ -1744,7 +1744,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/list_node_pools.py.html>`__ to see an example of how to use list_node_pools API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/list_node_pools.py.html>`__ to see an example of how to use list_node_pools API.
         """
         resource_path = "/nodePools"
         method = "GET"
@@ -1873,7 +1873,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -1978,7 +1978,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -2117,7 +2117,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -2252,7 +2252,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/update_cluster.py.html>`__ to see an example of how to use update_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/update_cluster.py.html>`__ to see an example of how to use update_cluster API.
         """
         resource_path = "/clusters/{clusterId}"
         method = "PUT"
@@ -2357,7 +2357,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/update_cluster_endpoint_config.py.html>`__ to see an example of how to use update_cluster_endpoint_config API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/update_cluster_endpoint_config.py.html>`__ to see an example of how to use update_cluster_endpoint_config API.
         """
         resource_path = "/clusters/{clusterId}/actions/updateEndpointConfig"
         method = "POST"
@@ -2469,7 +2469,7 @@ class ContainerEngineClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/containerengine/update_node_pool.py.html>`__ to see an example of how to use update_node_pool API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerengine/update_node_pool.py.html>`__ to see an example of how to use update_node_pool API.
         """
         resource_path = "/nodePools/{nodePoolId}"
         method = "PUT"

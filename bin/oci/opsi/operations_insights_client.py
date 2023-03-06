@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -150,7 +150,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/add_exadata_insight_members.py.html>`__ to see an example of how to use add_exadata_insight_members API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/add_exadata_insight_members.py.html>`__ to see an example of how to use add_exadata_insight_members API.
         """
         resource_path = "/exadataInsights/{exadataInsightId}/actions/addMembers"
         method = "POST"
@@ -266,7 +266,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/change_database_insight_compartment.py.html>`__ to see an example of how to use change_database_insight_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/change_database_insight_compartment.py.html>`__ to see an example of how to use change_database_insight_compartment API.
         """
         resource_path = "/databaseInsights/{databaseInsightId}/actions/changeCompartment"
         method = "POST"
@@ -374,7 +374,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/change_enterprise_manager_bridge_compartment.py.html>`__ to see an example of how to use change_enterprise_manager_bridge_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/change_enterprise_manager_bridge_compartment.py.html>`__ to see an example of how to use change_enterprise_manager_bridge_compartment API.
         """
         resource_path = "/enterpriseManagerBridges/{enterpriseManagerBridgeId}/actions/changeCompartment"
         method = "POST"
@@ -487,7 +487,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/change_exadata_insight_compartment.py.html>`__ to see an example of how to use change_exadata_insight_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/change_exadata_insight_compartment.py.html>`__ to see an example of how to use change_exadata_insight_compartment API.
         """
         resource_path = "/exadataInsights/{exadataInsightId}/actions/changeCompartment"
         method = "POST"
@@ -603,7 +603,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/change_host_insight_compartment.py.html>`__ to see an example of how to use change_host_insight_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/change_host_insight_compartment.py.html>`__ to see an example of how to use change_host_insight_compartment API.
         """
         resource_path = "/hostInsights/{hostInsightId}/actions/changeCompartment"
         method = "POST"
@@ -721,7 +721,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/change_operations_insights_private_endpoint_compartment.py.html>`__ to see an example of how to use change_operations_insights_private_endpoint_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/change_operations_insights_private_endpoint_compartment.py.html>`__ to see an example of how to use change_operations_insights_private_endpoint_compartment API.
         """
         resource_path = "/operationsInsightsPrivateEndpoints/{operationsInsightsPrivateEndpointId}/actions/changeCompartment"
         method = "POST"
@@ -837,7 +837,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/change_pe_comanaged_database_insight.py.html>`__ to see an example of how to use change_pe_comanaged_database_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/change_pe_comanaged_database_insight.py.html>`__ to see an example of how to use change_pe_comanaged_database_insight API.
         """
         resource_path = "/databaseInsights/{databaseInsightId}/actions/changePeComanagedDatabaseInsightDetails"
         method = "POST"
@@ -946,7 +946,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/create_awr_hub.py.html>`__ to see an example of how to use create_awr_hub API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/create_awr_hub.py.html>`__ to see an example of how to use create_awr_hub API.
         """
         resource_path = "/awrHubs"
         method = "POST"
@@ -1042,7 +1042,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/create_database_insight.py.html>`__ to see an example of how to use create_database_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/create_database_insight.py.html>`__ to see an example of how to use create_database_insight API.
         """
         resource_path = "/databaseInsights"
         method = "POST"
@@ -1138,7 +1138,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/create_enterprise_manager_bridge.py.html>`__ to see an example of how to use create_enterprise_manager_bridge API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/create_enterprise_manager_bridge.py.html>`__ to see an example of how to use create_enterprise_manager_bridge API.
         """
         resource_path = "/enterpriseManagerBridges"
         method = "POST"
@@ -1234,7 +1234,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/create_exadata_insight.py.html>`__ to see an example of how to use create_exadata_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/create_exadata_insight.py.html>`__ to see an example of how to use create_exadata_insight API.
         """
         resource_path = "/exadataInsights"
         method = "POST"
@@ -1330,7 +1330,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/create_host_insight.py.html>`__ to see an example of how to use create_host_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/create_host_insight.py.html>`__ to see an example of how to use create_host_insight API.
         """
         resource_path = "/hostInsights"
         method = "POST"
@@ -1427,7 +1427,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/create_operations_insights_private_endpoint.py.html>`__ to see an example of how to use create_operations_insights_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/create_operations_insights_private_endpoint.py.html>`__ to see an example of how to use create_operations_insights_private_endpoint API.
         """
         resource_path = "/operationsInsightsPrivateEndpoints"
         method = "POST"
@@ -1525,7 +1525,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/create_operations_insights_warehouse.py.html>`__ to see an example of how to use create_operations_insights_warehouse API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/create_operations_insights_warehouse.py.html>`__ to see an example of how to use create_operations_insights_warehouse API.
         """
         resource_path = "/operationsInsightsWarehouses"
         method = "POST"
@@ -1622,7 +1622,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/create_operations_insights_warehouse_user.py.html>`__ to see an example of how to use create_operations_insights_warehouse_user API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/create_operations_insights_warehouse_user.py.html>`__ to see an example of how to use create_operations_insights_warehouse_user API.
         """
         resource_path = "/operationsInsightsWarehouseUsers"
         method = "POST"
@@ -1715,7 +1715,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/delete_awr_hub.py.html>`__ to see an example of how to use delete_awr_hub API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/delete_awr_hub.py.html>`__ to see an example of how to use delete_awr_hub API.
         """
         resource_path = "/awrHubs/{awrHubId}"
         method = "DELETE"
@@ -1815,7 +1815,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/delete_database_insight.py.html>`__ to see an example of how to use delete_database_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/delete_database_insight.py.html>`__ to see an example of how to use delete_database_insight API.
         """
         resource_path = "/databaseInsights/{databaseInsightId}"
         method = "DELETE"
@@ -1915,7 +1915,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/delete_enterprise_manager_bridge.py.html>`__ to see an example of how to use delete_enterprise_manager_bridge API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/delete_enterprise_manager_bridge.py.html>`__ to see an example of how to use delete_enterprise_manager_bridge API.
         """
         resource_path = "/enterpriseManagerBridges/{enterpriseManagerBridgeId}"
         method = "DELETE"
@@ -2015,7 +2015,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/delete_exadata_insight.py.html>`__ to see an example of how to use delete_exadata_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/delete_exadata_insight.py.html>`__ to see an example of how to use delete_exadata_insight API.
         """
         resource_path = "/exadataInsights/{exadataInsightId}"
         method = "DELETE"
@@ -2115,7 +2115,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/delete_host_insight.py.html>`__ to see an example of how to use delete_host_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/delete_host_insight.py.html>`__ to see an example of how to use delete_host_insight API.
         """
         resource_path = "/hostInsights/{hostInsightId}"
         method = "DELETE"
@@ -2217,7 +2217,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/delete_operations_insights_private_endpoint.py.html>`__ to see an example of how to use delete_operations_insights_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/delete_operations_insights_private_endpoint.py.html>`__ to see an example of how to use delete_operations_insights_private_endpoint API.
         """
         resource_path = "/operationsInsightsPrivateEndpoints/{operationsInsightsPrivateEndpointId}"
         method = "DELETE"
@@ -2320,7 +2320,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/delete_operations_insights_warehouse.py.html>`__ to see an example of how to use delete_operations_insights_warehouse API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/delete_operations_insights_warehouse.py.html>`__ to see an example of how to use delete_operations_insights_warehouse API.
         """
         resource_path = "/operationsInsightsWarehouses/{operationsInsightsWarehouseId}"
         method = "DELETE"
@@ -2420,7 +2420,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/delete_operations_insights_warehouse_user.py.html>`__ to see an example of how to use delete_operations_insights_warehouse_user API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/delete_operations_insights_warehouse_user.py.html>`__ to see an example of how to use delete_operations_insights_warehouse_user API.
         """
         resource_path = "/operationsInsightsWarehouseUsers/{operationsInsightsWarehouseUserId}"
         method = "DELETE"
@@ -2528,7 +2528,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/disable_database_insight.py.html>`__ to see an example of how to use disable_database_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/disable_database_insight.py.html>`__ to see an example of how to use disable_database_insight API.
         """
         resource_path = "/databaseInsights/{databaseInsightId}/actions/disable"
         method = "POST"
@@ -2639,7 +2639,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/disable_exadata_insight.py.html>`__ to see an example of how to use disable_exadata_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/disable_exadata_insight.py.html>`__ to see an example of how to use disable_exadata_insight API.
         """
         resource_path = "/exadataInsights/{exadataInsightId}/actions/disable"
         method = "POST"
@@ -2750,7 +2750,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/disable_host_insight.py.html>`__ to see an example of how to use disable_host_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/disable_host_insight.py.html>`__ to see an example of how to use disable_host_insight API.
         """
         resource_path = "/hostInsights/{hostInsightId}/actions/disable"
         method = "POST"
@@ -2859,7 +2859,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/download_operations_insights_warehouse_wallet.py.html>`__ to see an example of how to use download_operations_insights_warehouse_wallet API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/download_operations_insights_warehouse_wallet.py.html>`__ to see an example of how to use download_operations_insights_warehouse_wallet API.
         """
         resource_path = "/operationsInsightsWarehouses/{operationsInsightsWarehouseId}/actions/downloadWarehouseWallet"
         method = "POST"
@@ -2975,7 +2975,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/enable_database_insight.py.html>`__ to see an example of how to use enable_database_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/enable_database_insight.py.html>`__ to see an example of how to use enable_database_insight API.
         """
         resource_path = "/databaseInsights/{databaseInsightId}/actions/enable"
         method = "POST"
@@ -3091,7 +3091,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/enable_exadata_insight.py.html>`__ to see an example of how to use enable_exadata_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/enable_exadata_insight.py.html>`__ to see an example of how to use enable_exadata_insight API.
         """
         resource_path = "/exadataInsights/{exadataInsightId}/actions/enable"
         method = "POST"
@@ -3207,7 +3207,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/enable_host_insight.py.html>`__ to see an example of how to use enable_host_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/enable_host_insight.py.html>`__ to see an example of how to use enable_host_insight API.
         """
         resource_path = "/hostInsights/{hostInsightId}/actions/enable"
         method = "POST"
@@ -3339,7 +3339,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/get_awr_database_report.py.html>`__ to see an example of how to use get_awr_database_report API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/get_awr_database_report.py.html>`__ to see an example of how to use get_awr_database_report API.
         """
         resource_path = "/awrHubs/{awrHubId}/awrDatabaseReport"
         method = "GET"
@@ -3499,7 +3499,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/get_awr_database_sql_report.py.html>`__ to see an example of how to use get_awr_database_sql_report API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/get_awr_database_sql_report.py.html>`__ to see an example of how to use get_awr_database_sql_report API.
         """
         resource_path = "/awrHubs/{awrHubId}/awrDatabaseSqlReport"
         method = "GET"
@@ -3621,7 +3621,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/get_awr_hub.py.html>`__ to see an example of how to use get_awr_hub API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/get_awr_hub.py.html>`__ to see an example of how to use get_awr_hub API.
         """
         resource_path = "/awrHubs/{awrHubId}"
         method = "GET"
@@ -3740,7 +3740,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/get_awr_report.py.html>`__ to see an example of how to use get_awr_report API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/get_awr_report.py.html>`__ to see an example of how to use get_awr_report API.
         """
         resource_path = "/awrHubs/{awrHubId}/awrReport"
         method = "GET"
@@ -3861,7 +3861,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/get_database_insight.py.html>`__ to see an example of how to use get_database_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/get_database_insight.py.html>`__ to see an example of how to use get_database_insight API.
         """
         resource_path = "/databaseInsights/{databaseInsightId}"
         method = "GET"
@@ -3956,7 +3956,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/get_enterprise_manager_bridge.py.html>`__ to see an example of how to use get_enterprise_manager_bridge API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/get_enterprise_manager_bridge.py.html>`__ to see an example of how to use get_enterprise_manager_bridge API.
         """
         resource_path = "/enterpriseManagerBridges/{enterpriseManagerBridgeId}"
         method = "GET"
@@ -4051,7 +4051,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/get_exadata_insight.py.html>`__ to see an example of how to use get_exadata_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/get_exadata_insight.py.html>`__ to see an example of how to use get_exadata_insight API.
         """
         resource_path = "/exadataInsights/{exadataInsightId}"
         method = "GET"
@@ -4146,7 +4146,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/get_host_insight.py.html>`__ to see an example of how to use get_host_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/get_host_insight.py.html>`__ to see an example of how to use get_host_insight API.
         """
         resource_path = "/hostInsights/{hostInsightId}"
         method = "GET"
@@ -4243,7 +4243,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/get_operations_insights_private_endpoint.py.html>`__ to see an example of how to use get_operations_insights_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/get_operations_insights_private_endpoint.py.html>`__ to see an example of how to use get_operations_insights_private_endpoint API.
         """
         resource_path = "/operationsInsightsPrivateEndpoints/{operationsInsightsPrivateEndpointId}"
         method = "GET"
@@ -4339,7 +4339,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/get_operations_insights_warehouse.py.html>`__ to see an example of how to use get_operations_insights_warehouse API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/get_operations_insights_warehouse.py.html>`__ to see an example of how to use get_operations_insights_warehouse API.
         """
         resource_path = "/operationsInsightsWarehouses/{operationsInsightsWarehouseId}"
         method = "GET"
@@ -4434,7 +4434,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/get_operations_insights_warehouse_user.py.html>`__ to see an example of how to use get_operations_insights_warehouse_user API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/get_operations_insights_warehouse_user.py.html>`__ to see an example of how to use get_operations_insights_warehouse_user API.
         """
         resource_path = "/operationsInsightsWarehouseUsers/{operationsInsightsWarehouseUserId}"
         method = "GET"
@@ -4534,7 +4534,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/get_opsi_data_object.py.html>`__ to see an example of how to use get_opsi_data_object API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/get_opsi_data_object.py.html>`__ to see an example of how to use get_opsi_data_object API.
         """
         resource_path = "/opsiDataObjects/{opsiDataObjectIdentifier}"
         method = "GET"
@@ -4636,7 +4636,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -4754,7 +4754,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/ingest_database_configuration.py.html>`__ to see an example of how to use ingest_database_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/ingest_database_configuration.py.html>`__ to see an example of how to use ingest_database_configuration API.
         """
         resource_path = "/databaseInsights/actions/ingestDatabaseConfiguration"
         method = "POST"
@@ -4872,7 +4872,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/ingest_host_configuration.py.html>`__ to see an example of how to use ingest_host_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/ingest_host_configuration.py.html>`__ to see an example of how to use ingest_host_configuration API.
         """
         resource_path = "/hostInsights/actions/ingestHostConfiguration"
         method = "POST"
@@ -4987,7 +4987,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/ingest_host_metrics.py.html>`__ to see an example of how to use ingest_host_metrics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/ingest_host_metrics.py.html>`__ to see an example of how to use ingest_host_metrics API.
         """
         resource_path = "/hostInsights/actions/ingestHostMetrics"
         method = "POST"
@@ -5113,7 +5113,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/ingest_sql_bucket.py.html>`__ to see an example of how to use ingest_sql_bucket API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/ingest_sql_bucket.py.html>`__ to see an example of how to use ingest_sql_bucket API.
         """
         resource_path = "/databaseInsights/actions/ingestSqlBucket"
         method = "POST"
@@ -5244,7 +5244,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/ingest_sql_plan_lines.py.html>`__ to see an example of how to use ingest_sql_plan_lines API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/ingest_sql_plan_lines.py.html>`__ to see an example of how to use ingest_sql_plan_lines API.
         """
         resource_path = "/databaseInsights/actions/ingestSqlPlanLines"
         method = "POST"
@@ -5370,7 +5370,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/ingest_sql_stats.py.html>`__ to see an example of how to use ingest_sql_stats API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/ingest_sql_stats.py.html>`__ to see an example of how to use ingest_sql_stats API.
         """
         resource_path = "/databaseInsights/actions/ingestSqlStatsMetric"
         method = "POST"
@@ -5500,7 +5500,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/ingest_sql_text.py.html>`__ to see an example of how to use ingest_sql_text API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/ingest_sql_text.py.html>`__ to see an example of how to use ingest_sql_text API.
         """
         resource_path = "/databaseInsights/actions/ingestSqlText"
         method = "POST"
@@ -5650,7 +5650,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_awr_database_snapshots.py.html>`__ to see an example of how to use list_awr_database_snapshots API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_awr_database_snapshots.py.html>`__ to see an example of how to use list_awr_database_snapshots API.
         """
         resource_path = "/awrHubs/{awrHubId}/awrDatabaseSnapshots"
         method = "GET"
@@ -5819,7 +5819,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_awr_databases.py.html>`__ to see an example of how to use list_awr_databases API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_awr_databases.py.html>`__ to see an example of how to use list_awr_databases API.
         """
         resource_path = "/awrHubs/{awrHubId}/awrDatabases"
         method = "GET"
@@ -5990,7 +5990,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_awr_hubs.py.html>`__ to see an example of how to use list_awr_hubs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_awr_hubs.py.html>`__ to see an example of how to use list_awr_hubs API.
         """
         resource_path = "/awrHubs"
         method = "GET"
@@ -6154,7 +6154,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_awr_snapshots.py.html>`__ to see an example of how to use list_awr_snapshots API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_awr_snapshots.py.html>`__ to see an example of how to use list_awr_snapshots API.
         """
         resource_path = "/awrHubs/{awrHubId}/awrSnapshots"
         method = "GET"
@@ -6353,6 +6353,9 @@ class OperationsInsightsClient(object):
         :param bool compartment_id_in_subtree: (optional)
             A flag to search all resources within a given compartment and all sub-compartments.
 
+        :param list[str] vmcluster_name: (optional)
+            Optional list of Exadata Insight VM cluster name.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -6369,7 +6372,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_database_configurations.py.html>`__ to see an example of how to use list_database_configurations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_database_configurations.py.html>`__ to see an example of how to use list_database_configurations API.
         """
         resource_path = "/databaseInsights/databaseConfigurations"
         method = "GET"
@@ -6397,7 +6400,8 @@ class OperationsInsightsClient(object):
             "freeform_tag_equals",
             "defined_tag_exists",
             "freeform_tag_exists",
-            "compartment_id_in_subtree"
+            "compartment_id_in_subtree",
+            "vmcluster_name"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -6443,7 +6447,8 @@ class OperationsInsightsClient(object):
             "freeformTagEquals": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_equals", missing), 'multi'),
             "definedTagExists": self.base_client.generate_collection_format_param(kwargs.get("defined_tag_exists", missing), 'multi'),
             "freeformTagExists": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_exists", missing), 'multi'),
-            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing)
+            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
+            "vmclusterName": self.base_client.generate_collection_format_param(kwargs.get("vmcluster_name", missing), 'multi')
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -6588,7 +6593,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_database_insights.py.html>`__ to see an example of how to use list_database_insights API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_database_insights.py.html>`__ to see an example of how to use list_database_insights API.
         """
         resource_path = "/databaseInsights"
         method = "GET"
@@ -6796,7 +6801,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_enterprise_manager_bridges.py.html>`__ to see an example of how to use list_enterprise_manager_bridges API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_enterprise_manager_bridges.py.html>`__ to see an example of how to use list_enterprise_manager_bridges API.
         """
         resource_path = "/enterpriseManagerBridges"
         method = "GET"
@@ -6987,7 +6992,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_exadata_configurations.py.html>`__ to see an example of how to use list_exadata_configurations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_exadata_configurations.py.html>`__ to see an example of how to use list_exadata_configurations API.
         """
         resource_path = "/exadataInsights/exadataConfigurations"
         method = "GET"
@@ -7166,7 +7171,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_exadata_insights.py.html>`__ to see an example of how to use list_exadata_insights API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_exadata_insights.py.html>`__ to see an example of how to use list_exadata_insights API.
         """
         resource_path = "/exadataInsights"
         method = "GET"
@@ -7378,6 +7383,9 @@ class OperationsInsightsClient(object):
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
+        :param list[str] vmcluster_name: (optional)
+            Optional list of Exadata Insight VM cluster name.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -7394,7 +7402,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_host_configurations.py.html>`__ to see an example of how to use list_host_configurations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_host_configurations.py.html>`__ to see an example of how to use list_host_configurations API.
         """
         resource_path = "/hostInsights/hostConfigurations"
         method = "GET"
@@ -7421,7 +7429,8 @@ class OperationsInsightsClient(object):
             "freeform_tag_exists",
             "compartment_id_in_subtree",
             "host_type",
-            "host_id"
+            "host_id",
+            "vmcluster_name"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -7466,7 +7475,8 @@ class OperationsInsightsClient(object):
             "freeformTagExists": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_exists", missing), 'multi'),
             "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
             "hostType": self.base_client.generate_collection_format_param(kwargs.get("host_type", missing), 'multi'),
-            "hostId": kwargs.get("host_id", missing)
+            "hostId": kwargs.get("host_id", missing),
+            "vmclusterName": self.base_client.generate_collection_format_param(kwargs.get("vmcluster_name", missing), 'multi')
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -7604,7 +7614,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_host_insights.py.html>`__ to see an example of how to use list_host_insights API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_host_insights.py.html>`__ to see an example of how to use list_host_insights API.
         """
         resource_path = "/hostInsights"
         method = "GET"
@@ -7831,7 +7841,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_hosted_entities.py.html>`__ to see an example of how to use list_hosted_entities API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_hosted_entities.py.html>`__ to see an example of how to use list_hosted_entities API.
         """
         resource_path = "/hostInsights/hostedEntities"
         method = "GET"
@@ -7998,7 +8008,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_importable_agent_entities.py.html>`__ to see an example of how to use list_importable_agent_entities API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_importable_agent_entities.py.html>`__ to see an example of how to use list_importable_agent_entities API.
         """
         resource_path = "/importableAgentEntities"
         method = "GET"
@@ -8144,7 +8154,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_importable_compute_entities.py.html>`__ to see an example of how to use list_importable_compute_entities API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_importable_compute_entities.py.html>`__ to see an example of how to use list_importable_compute_entities API.
         """
         resource_path = "/importableComputeEntities"
         method = "GET"
@@ -8281,7 +8291,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_importable_enterprise_manager_entities.py.html>`__ to see an example of how to use list_importable_enterprise_manager_entities API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_importable_enterprise_manager_entities.py.html>`__ to see an example of how to use list_importable_enterprise_manager_entities API.
         """
         resource_path = "/enterpriseManagerBridges/{enterpriseManagerBridgeId}/importableEnterpriseManagerEntities"
         method = "GET"
@@ -8442,7 +8452,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_operations_insights_private_endpoints.py.html>`__ to see an example of how to use list_operations_insights_private_endpoints API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_operations_insights_private_endpoints.py.html>`__ to see an example of how to use list_operations_insights_private_endpoints API.
         """
         resource_path = "/operationsInsightsPrivateEndpoints"
         method = "GET"
@@ -8617,7 +8627,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_operations_insights_warehouse_users.py.html>`__ to see an example of how to use list_operations_insights_warehouse_users API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_operations_insights_warehouse_users.py.html>`__ to see an example of how to use list_operations_insights_warehouse_users API.
         """
         resource_path = "/operationsInsightsWarehouseUsers"
         method = "GET"
@@ -8785,7 +8795,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_operations_insights_warehouses.py.html>`__ to see an example of how to use list_operations_insights_warehouses API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_operations_insights_warehouses.py.html>`__ to see an example of how to use list_operations_insights_warehouses API.
         """
         resource_path = "/operationsInsightsWarehouses"
         method = "GET"
@@ -8948,7 +8958,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_opsi_data_objects.py.html>`__ to see an example of how to use list_opsi_data_objects API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_opsi_data_objects.py.html>`__ to see an example of how to use list_opsi_data_objects API.
         """
         resource_path = "/opsiDataObjects"
         method = "GET"
@@ -9100,7 +9110,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_sql_plans.py.html>`__ to see an example of how to use list_sql_plans API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_sql_plans.py.html>`__ to see an example of how to use list_sql_plans API.
         """
         resource_path = "/databaseInsights/sqlPlans"
         method = "GET"
@@ -9259,7 +9269,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_sql_searches.py.html>`__ to see an example of how to use list_sql_searches API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_sql_searches.py.html>`__ to see an example of how to use list_sql_searches API.
         """
         resource_path = "/databaseInsights/sqlSearches"
         method = "GET"
@@ -9419,7 +9429,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_sql_texts.py.html>`__ to see an example of how to use list_sql_texts API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_sql_texts.py.html>`__ to see an example of how to use list_sql_texts API.
         """
         resource_path = "/databaseInsights/sqlTexts"
         method = "GET"
@@ -9552,7 +9562,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -9701,7 +9711,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -9866,7 +9876,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -10016,7 +10026,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/query_opsi_data_object_data.py.html>`__ to see an example of how to use query_opsi_data_object_data API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/query_opsi_data_object_data.py.html>`__ to see an example of how to use query_opsi_data_object_data API.
         """
         resource_path = "/opsiDataObjects/actions/queryData"
         method = "POST"
@@ -10117,7 +10127,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/rotate_operations_insights_warehouse_wallet.py.html>`__ to see an example of how to use rotate_operations_insights_warehouse_wallet API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/rotate_operations_insights_warehouse_wallet.py.html>`__ to see an example of how to use rotate_operations_insights_warehouse_wallet API.
         """
         resource_path = "/operationsInsightsWarehouses/{operationsInsightsWarehouseId}/actions/rotateWarehouseWallet"
         method = "POST"
@@ -10269,7 +10279,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_awr_database_cpu_usages.py.html>`__ to see an example of how to use summarize_awr_database_cpu_usages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_awr_database_cpu_usages.py.html>`__ to see an example of how to use summarize_awr_database_cpu_usages API.
         """
         resource_path = "/awrHubs/{awrHubId}/awrDatabaseCpuUsages"
         method = "GET"
@@ -10463,7 +10473,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_awr_database_metrics.py.html>`__ to see an example of how to use summarize_awr_database_metrics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_awr_database_metrics.py.html>`__ to see an example of how to use summarize_awr_database_metrics API.
         """
         resource_path = "/awrHubs/{awrHubId}/awrDatabaseMetrics"
         method = "GET"
@@ -10653,7 +10663,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_awr_database_parameter_changes.py.html>`__ to see an example of how to use summarize_awr_database_parameter_changes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_awr_database_parameter_changes.py.html>`__ to see an example of how to use summarize_awr_database_parameter_changes API.
         """
         resource_path = "/awrHubs/{awrHubId}/awrDatabaseParameterChanges"
         method = "GET"
@@ -10867,7 +10877,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_awr_database_parameters.py.html>`__ to see an example of how to use summarize_awr_database_parameters API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_awr_database_parameters.py.html>`__ to see an example of how to use summarize_awr_database_parameters API.
         """
         resource_path = "/awrHubs/{awrHubId}/awrDatabaseParameters"
         method = "GET"
@@ -11067,7 +11077,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_awr_database_snapshot_ranges.py.html>`__ to see an example of how to use summarize_awr_database_snapshot_ranges API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_awr_database_snapshot_ranges.py.html>`__ to see an example of how to use summarize_awr_database_snapshot_ranges API.
         """
         resource_path = "/awrHubs/{awrHubId}/awrDatabaseSnapshotRanges"
         method = "GET"
@@ -11247,7 +11257,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_awr_database_sysstats.py.html>`__ to see an example of how to use summarize_awr_database_sysstats API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_awr_database_sysstats.py.html>`__ to see an example of how to use summarize_awr_database_sysstats API.
         """
         resource_path = "/awrHubs/{awrHubId}/awrDatabaseSysstats"
         method = "GET"
@@ -11422,7 +11432,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_awr_database_top_wait_events.py.html>`__ to see an example of how to use summarize_awr_database_top_wait_events API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_awr_database_top_wait_events.py.html>`__ to see an example of how to use summarize_awr_database_top_wait_events API.
         """
         resource_path = "/awrHubs/{awrHubId}/awrDatabaseTopWaitEvents"
         method = "GET"
@@ -11623,7 +11633,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_awr_database_wait_event_buckets.py.html>`__ to see an example of how to use summarize_awr_database_wait_event_buckets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_awr_database_wait_event_buckets.py.html>`__ to see an example of how to use summarize_awr_database_wait_event_buckets API.
         """
         resource_path = "/awrHubs/{awrHubId}/awrDatabaseWaitEventBuckets"
         method = "GET"
@@ -11820,7 +11830,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_awr_database_wait_events.py.html>`__ to see an example of how to use summarize_awr_database_wait_events API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_awr_database_wait_events.py.html>`__ to see an example of how to use summarize_awr_database_wait_events API.
         """
         resource_path = "/awrHubs/{awrHubId}/awrDatabaseWaitEvents"
         method = "GET"
@@ -11999,7 +12009,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_awr_sources_summaries.py.html>`__ to see an example of how to use summarize_awr_sources_summaries API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_awr_sources_summaries.py.html>`__ to see an example of how to use summarize_awr_sources_summaries API.
         """
         resource_path = "/awrHubs/{awrHubId}/awrSourcesSummary"
         method = "GET"
@@ -12226,6 +12236,9 @@ class OperationsInsightsClient(object):
         :param bool compartment_id_in_subtree: (optional)
             A flag to search all resources within a given compartment and all sub-compartments.
 
+        :param list[str] vmcluster_name: (optional)
+            Optional list of Exadata Insight VM cluster name.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -12242,7 +12255,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_database_insight_resource_capacity_trend.py.html>`__ to see an example of how to use summarize_database_insight_resource_capacity_trend API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_database_insight_resource_capacity_trend.py.html>`__ to see an example of how to use summarize_database_insight_resource_capacity_trend API.
         """
         resource_path = "/databaseInsights/resourceCapacityTrend"
         method = "GET"
@@ -12273,7 +12286,8 @@ class OperationsInsightsClient(object):
             "freeform_tag_equals",
             "defined_tag_exists",
             "freeform_tag_exists",
-            "compartment_id_in_subtree"
+            "compartment_id_in_subtree",
+            "vmcluster_name"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -12331,7 +12345,8 @@ class OperationsInsightsClient(object):
             "freeformTagEquals": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_equals", missing), 'multi'),
             "definedTagExists": self.base_client.generate_collection_format_param(kwargs.get("defined_tag_exists", missing), 'multi'),
             "freeformTagExists": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_exists", missing), 'multi'),
-            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing)
+            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
+            "vmclusterName": self.base_client.generate_collection_format_param(kwargs.get("vmcluster_name", missing), 'multi')
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -12515,6 +12530,9 @@ class OperationsInsightsClient(object):
         :param bool compartment_id_in_subtree: (optional)
             A flag to search all resources within a given compartment and all sub-compartments.
 
+        :param list[str] vmcluster_name: (optional)
+            Optional list of Exadata Insight VM cluster name.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -12531,7 +12549,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_database_insight_resource_forecast_trend.py.html>`__ to see an example of how to use summarize_database_insight_resource_forecast_trend API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_database_insight_resource_forecast_trend.py.html>`__ to see an example of how to use summarize_database_insight_resource_forecast_trend API.
         """
         resource_path = "/databaseInsights/resourceForecastTrend"
         method = "GET"
@@ -12564,7 +12582,8 @@ class OperationsInsightsClient(object):
             "freeform_tag_equals",
             "defined_tag_exists",
             "freeform_tag_exists",
-            "compartment_id_in_subtree"
+            "compartment_id_in_subtree",
+            "vmcluster_name"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -12624,7 +12643,8 @@ class OperationsInsightsClient(object):
             "freeformTagEquals": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_equals", missing), 'multi'),
             "definedTagExists": self.base_client.generate_collection_format_param(kwargs.get("defined_tag_exists", missing), 'multi'),
             "freeformTagExists": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_exists", missing), 'multi'),
-            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing)
+            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
+            "vmclusterName": self.base_client.generate_collection_format_param(kwargs.get("vmcluster_name", missing), 'multi')
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -12802,6 +12822,9 @@ class OperationsInsightsClient(object):
         :param bool compartment_id_in_subtree: (optional)
             A flag to search all resources within a given compartment and all sub-compartments.
 
+        :param list[str] vmcluster_name: (optional)
+            Optional list of Exadata Insight VM cluster name.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -12818,7 +12841,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_database_insight_resource_statistics.py.html>`__ to see an example of how to use summarize_database_insight_resource_statistics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_database_insight_resource_statistics.py.html>`__ to see an example of how to use summarize_database_insight_resource_statistics API.
         """
         resource_path = "/databaseInsights/resourceStatistics"
         method = "GET"
@@ -12851,7 +12874,8 @@ class OperationsInsightsClient(object):
             "freeform_tag_equals",
             "defined_tag_exists",
             "freeform_tag_exists",
-            "compartment_id_in_subtree"
+            "compartment_id_in_subtree",
+            "vmcluster_name"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -12904,7 +12928,8 @@ class OperationsInsightsClient(object):
             "freeformTagEquals": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_equals", missing), 'multi'),
             "definedTagExists": self.base_client.generate_collection_format_param(kwargs.get("defined_tag_exists", missing), 'multi'),
             "freeformTagExists": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_exists", missing), 'multi'),
-            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing)
+            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
+            "vmclusterName": self.base_client.generate_collection_format_param(kwargs.get("vmcluster_name", missing), 'multi')
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -13054,6 +13079,9 @@ class OperationsInsightsClient(object):
         :param bool compartment_id_in_subtree: (optional)
             A flag to search all resources within a given compartment and all sub-compartments.
 
+        :param list[str] vmcluster_name: (optional)
+            Optional list of Exadata Insight VM cluster name.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -13070,7 +13098,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_database_insight_resource_usage.py.html>`__ to see an example of how to use summarize_database_insight_resource_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_database_insight_resource_usage.py.html>`__ to see an example of how to use summarize_database_insight_resource_usage API.
         """
         resource_path = "/databaseInsights/resourceUsageSummary"
         method = "GET"
@@ -13097,7 +13125,8 @@ class OperationsInsightsClient(object):
             "freeform_tag_equals",
             "defined_tag_exists",
             "freeform_tag_exists",
-            "compartment_id_in_subtree"
+            "compartment_id_in_subtree",
+            "vmcluster_name"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -13130,7 +13159,8 @@ class OperationsInsightsClient(object):
             "freeformTagEquals": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_equals", missing), 'multi'),
             "definedTagExists": self.base_client.generate_collection_format_param(kwargs.get("defined_tag_exists", missing), 'multi'),
             "freeformTagExists": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_exists", missing), 'multi'),
-            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing)
+            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
+            "vmclusterName": self.base_client.generate_collection_format_param(kwargs.get("vmcluster_name", missing), 'multi')
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -13286,6 +13316,9 @@ class OperationsInsightsClient(object):
         :param bool compartment_id_in_subtree: (optional)
             A flag to search all resources within a given compartment and all sub-compartments.
 
+        :param list[str] vmcluster_name: (optional)
+            Optional list of Exadata Insight VM cluster name.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -13302,7 +13335,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_database_insight_resource_usage_trend.py.html>`__ to see an example of how to use summarize_database_insight_resource_usage_trend API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_database_insight_resource_usage_trend.py.html>`__ to see an example of how to use summarize_database_insight_resource_usage_trend API.
         """
         resource_path = "/databaseInsights/resourceUsageTrend"
         method = "GET"
@@ -13330,7 +13363,8 @@ class OperationsInsightsClient(object):
             "freeform_tag_equals",
             "defined_tag_exists",
             "freeform_tag_exists",
-            "compartment_id_in_subtree"
+            "compartment_id_in_subtree",
+            "vmcluster_name"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -13378,7 +13412,8 @@ class OperationsInsightsClient(object):
             "freeformTagEquals": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_equals", missing), 'multi'),
             "definedTagExists": self.base_client.generate_collection_format_param(kwargs.get("defined_tag_exists", missing), 'multi'),
             "freeformTagExists": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_exists", missing), 'multi'),
-            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing)
+            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
+            "vmclusterName": self.base_client.generate_collection_format_param(kwargs.get("vmcluster_name", missing), 'multi')
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -13526,6 +13561,9 @@ class OperationsInsightsClient(object):
         :param bool compartment_id_in_subtree: (optional)
             A flag to search all resources within a given compartment and all sub-compartments.
 
+        :param list[str] vmcluster_name: (optional)
+            Optional list of Exadata Insight VM cluster name.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -13542,7 +13580,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_database_insight_resource_utilization_insight.py.html>`__ to see an example of how to use summarize_database_insight_resource_utilization_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_database_insight_resource_utilization_insight.py.html>`__ to see an example of how to use summarize_database_insight_resource_utilization_insight API.
         """
         resource_path = "/databaseInsights/resourceUtilizationInsight"
         method = "GET"
@@ -13569,7 +13607,8 @@ class OperationsInsightsClient(object):
             "freeform_tag_equals",
             "defined_tag_exists",
             "freeform_tag_exists",
-            "compartment_id_in_subtree"
+            "compartment_id_in_subtree",
+            "vmcluster_name"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -13602,7 +13641,8 @@ class OperationsInsightsClient(object):
             "freeformTagEquals": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_equals", missing), 'multi'),
             "definedTagExists": self.base_client.generate_collection_format_param(kwargs.get("defined_tag_exists", missing), 'multi'),
             "freeformTagExists": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_exists", missing), 'multi'),
-            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing)
+            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
+            "vmclusterName": self.base_client.generate_collection_format_param(kwargs.get("vmcluster_name", missing), 'multi')
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -13722,7 +13762,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_database_insight_tablespace_usage_trend.py.html>`__ to see an example of how to use summarize_database_insight_tablespace_usage_trend API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_database_insight_tablespace_usage_trend.py.html>`__ to see an example of how to use summarize_database_insight_tablespace_usage_trend API.
         """
         resource_path = "/databaseInsights/tablespaceUsageTrend"
         method = "GET"
@@ -13916,7 +13956,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_exadata_insight_resource_capacity_trend.py.html>`__ to see an example of how to use summarize_exadata_insight_resource_capacity_trend API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_exadata_insight_resource_capacity_trend.py.html>`__ to see an example of how to use summarize_exadata_insight_resource_capacity_trend API.
         """
         resource_path = "/exadataInsights/resourceCapacityTrend"
         method = "GET"
@@ -14140,7 +14180,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_exadata_insight_resource_capacity_trend_aggregated.py.html>`__ to see an example of how to use summarize_exadata_insight_resource_capacity_trend_aggregated API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_exadata_insight_resource_capacity_trend_aggregated.py.html>`__ to see an example of how to use summarize_exadata_insight_resource_capacity_trend_aggregated API.
         """
         resource_path = "/exadataInsights/resourceCapacityTrendAggregated"
         method = "GET"
@@ -14387,7 +14427,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_exadata_insight_resource_forecast_trend.py.html>`__ to see an example of how to use summarize_exadata_insight_resource_forecast_trend API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_exadata_insight_resource_forecast_trend.py.html>`__ to see an example of how to use summarize_exadata_insight_resource_forecast_trend API.
         """
         resource_path = "/exadataInsights/resourceForecastTrend"
         method = "GET"
@@ -14649,7 +14689,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_exadata_insight_resource_forecast_trend_aggregated.py.html>`__ to see an example of how to use summarize_exadata_insight_resource_forecast_trend_aggregated API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_exadata_insight_resource_forecast_trend_aggregated.py.html>`__ to see an example of how to use summarize_exadata_insight_resource_forecast_trend_aggregated API.
         """
         resource_path = "/exadataInsights/resourceForecastTrendAggregated"
         method = "GET"
@@ -14862,7 +14902,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_exadata_insight_resource_statistics.py.html>`__ to see an example of how to use summarize_exadata_insight_resource_statistics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_exadata_insight_resource_statistics.py.html>`__ to see an example of how to use summarize_exadata_insight_resource_statistics API.
         """
         resource_path = "/exadataInsights/resourceStatistics"
         method = "GET"
@@ -15093,7 +15133,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_exadata_insight_resource_usage.py.html>`__ to see an example of how to use summarize_exadata_insight_resource_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_exadata_insight_resource_usage.py.html>`__ to see an example of how to use summarize_exadata_insight_resource_usage API.
         """
         resource_path = "/exadataInsights/resourceUsageSummary"
         method = "GET"
@@ -15315,7 +15355,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_exadata_insight_resource_usage_aggregated.py.html>`__ to see an example of how to use summarize_exadata_insight_resource_usage_aggregated API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_exadata_insight_resource_usage_aggregated.py.html>`__ to see an example of how to use summarize_exadata_insight_resource_usage_aggregated API.
         """
         resource_path = "/exadataInsights/resourceUsageSummaryAggregated"
         method = "GET"
@@ -15524,7 +15564,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_exadata_insight_resource_utilization_insight.py.html>`__ to see an example of how to use summarize_exadata_insight_resource_utilization_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_exadata_insight_resource_utilization_insight.py.html>`__ to see an example of how to use summarize_exadata_insight_resource_utilization_insight API.
         """
         resource_path = "/exadataInsights/resourceUtilizationInsight"
         method = "GET"
@@ -15678,7 +15718,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_exadata_members.py.html>`__ to see an example of how to use summarize_exadata_members API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_exadata_members.py.html>`__ to see an example of how to use summarize_exadata_members API.
         """
         resource_path = "/exadataInsights/exadataMembers"
         method = "GET"
@@ -15884,6 +15924,9 @@ class OperationsInsightsClient(object):
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
+        :param list[str] vmcluster_name: (optional)
+            Optional list of Exadata Insight VM cluster name.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -15900,7 +15943,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_host_insight_resource_capacity_trend.py.html>`__ to see an example of how to use summarize_host_insight_resource_capacity_trend API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_host_insight_resource_capacity_trend.py.html>`__ to see an example of how to use summarize_host_insight_resource_capacity_trend API.
         """
         resource_path = "/hostInsights/resourceCapacityTrend"
         method = "GET"
@@ -15928,7 +15971,8 @@ class OperationsInsightsClient(object):
             "freeform_tag_exists",
             "compartment_id_in_subtree",
             "host_type",
-            "host_id"
+            "host_id",
+            "vmcluster_name"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -15983,7 +16027,8 @@ class OperationsInsightsClient(object):
             "freeformTagExists": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_exists", missing), 'multi'),
             "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
             "hostType": self.base_client.generate_collection_format_param(kwargs.get("host_type", missing), 'multi'),
-            "hostId": kwargs.get("host_id", missing)
+            "hostId": kwargs.get("host_id", missing),
+            "vmclusterName": self.base_client.generate_collection_format_param(kwargs.get("vmcluster_name", missing), 'multi')
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -16159,6 +16204,9 @@ class OperationsInsightsClient(object):
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
+        :param list[str] vmcluster_name: (optional)
+            Optional list of Exadata Insight VM cluster name.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -16175,7 +16223,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_host_insight_resource_forecast_trend.py.html>`__ to see an example of how to use summarize_host_insight_resource_forecast_trend API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_host_insight_resource_forecast_trend.py.html>`__ to see an example of how to use summarize_host_insight_resource_forecast_trend API.
         """
         resource_path = "/hostInsights/resourceForecastTrend"
         method = "GET"
@@ -16205,7 +16253,8 @@ class OperationsInsightsClient(object):
             "freeform_tag_exists",
             "compartment_id_in_subtree",
             "host_type",
-            "host_id"
+            "host_id",
+            "vmcluster_name"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -16262,7 +16311,8 @@ class OperationsInsightsClient(object):
             "freeformTagExists": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_exists", missing), 'multi'),
             "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
             "hostType": self.base_client.generate_collection_format_param(kwargs.get("host_type", missing), 'multi'),
-            "hostId": kwargs.get("host_id", missing)
+            "hostId": kwargs.get("host_id", missing),
+            "vmclusterName": self.base_client.generate_collection_format_param(kwargs.get("vmcluster_name", missing), 'multi')
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -16435,6 +16485,9 @@ class OperationsInsightsClient(object):
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
+        :param list[str] vmcluster_name: (optional)
+            Optional list of Exadata Insight VM cluster name.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -16451,7 +16504,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_host_insight_resource_statistics.py.html>`__ to see an example of how to use summarize_host_insight_resource_statistics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_host_insight_resource_statistics.py.html>`__ to see an example of how to use summarize_host_insight_resource_statistics API.
         """
         resource_path = "/hostInsights/resourceStatistics"
         method = "GET"
@@ -16482,7 +16535,8 @@ class OperationsInsightsClient(object):
             "freeform_tag_exists",
             "compartment_id_in_subtree",
             "host_type",
-            "host_id"
+            "host_id",
+            "vmcluster_name"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -16533,7 +16587,8 @@ class OperationsInsightsClient(object):
             "freeformTagExists": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_exists", missing), 'multi'),
             "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
             "hostType": self.base_client.generate_collection_format_param(kwargs.get("host_type", missing), 'multi'),
-            "hostId": kwargs.get("host_id", missing)
+            "hostId": kwargs.get("host_id", missing),
+            "vmclusterName": self.base_client.generate_collection_format_param(kwargs.get("vmcluster_name", missing), 'multi')
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -16681,6 +16736,9 @@ class OperationsInsightsClient(object):
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
+        :param list[str] vmcluster_name: (optional)
+            Optional list of Exadata Insight VM cluster name.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -16697,7 +16755,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_host_insight_resource_usage.py.html>`__ to see an example of how to use summarize_host_insight_resource_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_host_insight_resource_usage.py.html>`__ to see an example of how to use summarize_host_insight_resource_usage API.
         """
         resource_path = "/hostInsights/resourceUsageSummary"
         method = "GET"
@@ -16723,7 +16781,8 @@ class OperationsInsightsClient(object):
             "freeform_tag_exists",
             "compartment_id_in_subtree",
             "host_type",
-            "host_id"
+            "host_id",
+            "vmcluster_name"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -16755,7 +16814,8 @@ class OperationsInsightsClient(object):
             "freeformTagExists": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_exists", missing), 'multi'),
             "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
             "hostType": self.base_client.generate_collection_format_param(kwargs.get("host_type", missing), 'multi'),
-            "hostId": kwargs.get("host_id", missing)
+            "hostId": kwargs.get("host_id", missing),
+            "vmclusterName": self.base_client.generate_collection_format_param(kwargs.get("vmcluster_name", missing), 'multi')
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -16909,6 +16969,9 @@ class OperationsInsightsClient(object):
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
+        :param list[str] vmcluster_name: (optional)
+            Optional list of Exadata Insight VM cluster name.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -16925,7 +16988,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_host_insight_resource_usage_trend.py.html>`__ to see an example of how to use summarize_host_insight_resource_usage_trend API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_host_insight_resource_usage_trend.py.html>`__ to see an example of how to use summarize_host_insight_resource_usage_trend API.
         """
         resource_path = "/hostInsights/resourceUsageTrend"
         method = "GET"
@@ -16952,7 +17015,8 @@ class OperationsInsightsClient(object):
             "freeform_tag_exists",
             "compartment_id_in_subtree",
             "host_type",
-            "host_id"
+            "host_id",
+            "vmcluster_name"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -16999,7 +17063,8 @@ class OperationsInsightsClient(object):
             "freeformTagExists": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_exists", missing), 'multi'),
             "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
             "hostType": self.base_client.generate_collection_format_param(kwargs.get("host_type", missing), 'multi'),
-            "hostId": kwargs.get("host_id", missing)
+            "hostId": kwargs.get("host_id", missing),
+            "vmclusterName": self.base_client.generate_collection_format_param(kwargs.get("vmcluster_name", missing), 'multi')
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -17145,6 +17210,9 @@ class OperationsInsightsClient(object):
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
+        :param list[str] vmcluster_name: (optional)
+            Optional list of Exadata Insight VM cluster name.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -17161,7 +17229,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_host_insight_resource_utilization_insight.py.html>`__ to see an example of how to use summarize_host_insight_resource_utilization_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_host_insight_resource_utilization_insight.py.html>`__ to see an example of how to use summarize_host_insight_resource_utilization_insight API.
         """
         resource_path = "/hostInsights/resourceUtilizationInsight"
         method = "GET"
@@ -17187,7 +17255,8 @@ class OperationsInsightsClient(object):
             "freeform_tag_exists",
             "compartment_id_in_subtree",
             "host_type",
-            "host_id"
+            "host_id",
+            "vmcluster_name"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -17219,7 +17288,8 @@ class OperationsInsightsClient(object):
             "freeformTagExists": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_exists", missing), 'multi'),
             "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
             "hostType": self.base_client.generate_collection_format_param(kwargs.get("host_type", missing), 'multi'),
-            "hostId": kwargs.get("host_id", missing)
+            "hostId": kwargs.get("host_id", missing),
+            "vmclusterName": self.base_client.generate_collection_format_param(kwargs.get("vmcluster_name", missing), 'multi')
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -17351,7 +17421,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_host_insight_top_processes_usage.py.html>`__ to see an example of how to use summarize_host_insight_top_processes_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_host_insight_top_processes_usage.py.html>`__ to see an example of how to use summarize_host_insight_top_processes_usage API.
         """
         resource_path = "/hostInsights/topProcessesUsage"
         method = "GET"
@@ -17518,7 +17588,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_host_insight_top_processes_usage_trend.py.html>`__ to see an example of how to use summarize_host_insight_top_processes_usage_trend API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_host_insight_top_processes_usage_trend.py.html>`__ to see an example of how to use summarize_host_insight_top_processes_usage_trend API.
         """
         resource_path = "/hostInsights/topProcessesUsageTrend"
         method = "GET"
@@ -17627,7 +17697,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_operations_insights_warehouse_resource_usage.py.html>`__ to see an example of how to use summarize_operations_insights_warehouse_resource_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_operations_insights_warehouse_resource_usage.py.html>`__ to see an example of how to use summarize_operations_insights_warehouse_resource_usage API.
         """
         resource_path = "/operationsInsightsWarehouses/{operationsInsightsWarehouseId}/resourceUsageSummary"
         method = "GET"
@@ -17809,7 +17879,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_sql_insights.py.html>`__ to see an example of how to use summarize_sql_insights API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_sql_insights.py.html>`__ to see an example of how to use summarize_sql_insights API.
         """
         resource_path = "/databaseInsights/sqlInsights"
         method = "GET"
@@ -17982,7 +18052,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_sql_plan_insights.py.html>`__ to see an example of how to use summarize_sql_plan_insights API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_sql_plan_insights.py.html>`__ to see an example of how to use summarize_sql_plan_insights API.
         """
         resource_path = "/databaseInsights/sqlPlanInsights"
         method = "GET"
@@ -18128,7 +18198,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_sql_response_time_distributions.py.html>`__ to see an example of how to use summarize_sql_response_time_distributions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_sql_response_time_distributions.py.html>`__ to see an example of how to use summarize_sql_response_time_distributions API.
         """
         resource_path = "/databaseInsights/sqlResponseTimeDistributions"
         method = "GET"
@@ -18331,6 +18401,9 @@ class OperationsInsightsClient(object):
         :param bool compartment_id_in_subtree: (optional)
             A flag to search all resources within a given compartment and all sub-compartments.
 
+        :param list[str] vmcluster_name: (optional)
+            Optional list of Exadata Insight VM cluster name.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -18347,7 +18420,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_sql_statistics.py.html>`__ to see an example of how to use summarize_sql_statistics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_sql_statistics.py.html>`__ to see an example of how to use summarize_sql_statistics API.
         """
         resource_path = "/databaseInsights/sqlStatistics"
         method = "GET"
@@ -18379,7 +18452,8 @@ class OperationsInsightsClient(object):
             "freeform_tag_equals",
             "defined_tag_exists",
             "freeform_tag_exists",
-            "compartment_id_in_subtree"
+            "compartment_id_in_subtree",
+            "vmcluster_name"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -18438,7 +18512,8 @@ class OperationsInsightsClient(object):
             "freeformTagEquals": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_equals", missing), 'multi'),
             "definedTagExists": self.base_client.generate_collection_format_param(kwargs.get("defined_tag_exists", missing), 'multi'),
             "freeformTagExists": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_exists", missing), 'multi'),
-            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing)
+            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
+            "vmclusterName": self.base_client.generate_collection_format_param(kwargs.get("vmcluster_name", missing), 'multi')
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -18575,6 +18650,9 @@ class OperationsInsightsClient(object):
         :param bool compartment_id_in_subtree: (optional)
             A flag to search all resources within a given compartment and all sub-compartments.
 
+        :param list[str] vmcluster_name: (optional)
+            Optional list of Exadata Insight VM cluster name.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -18591,7 +18669,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_sql_statistics_time_series.py.html>`__ to see an example of how to use summarize_sql_statistics_time_series API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_sql_statistics_time_series.py.html>`__ to see an example of how to use summarize_sql_statistics_time_series API.
         """
         resource_path = "/databaseInsights/sqlStatisticsTimeSeries"
         method = "GET"
@@ -18616,7 +18694,8 @@ class OperationsInsightsClient(object):
             "freeform_tag_equals",
             "defined_tag_exists",
             "freeform_tag_exists",
-            "compartment_id_in_subtree"
+            "compartment_id_in_subtree",
+            "vmcluster_name"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -18639,7 +18718,8 @@ class OperationsInsightsClient(object):
             "freeformTagEquals": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_equals", missing), 'multi'),
             "definedTagExists": self.base_client.generate_collection_format_param(kwargs.get("defined_tag_exists", missing), 'multi'),
             "freeformTagExists": self.base_client.generate_collection_format_param(kwargs.get("freeform_tag_exists", missing), 'multi'),
-            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing)
+            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
+            "vmclusterName": self.base_client.generate_collection_format_param(kwargs.get("vmcluster_name", missing), 'multi')
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -18753,7 +18833,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/summarize_sql_statistics_time_series_by_plan.py.html>`__ to see an example of how to use summarize_sql_statistics_time_series_by_plan API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/summarize_sql_statistics_time_series_by_plan.py.html>`__ to see an example of how to use summarize_sql_statistics_time_series_by_plan API.
         """
         resource_path = "/databaseInsights/sqlStatisticsTimeSeriesByPlan"
         method = "GET"
@@ -18864,7 +18944,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/update_awr_hub.py.html>`__ to see an example of how to use update_awr_hub API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/update_awr_hub.py.html>`__ to see an example of how to use update_awr_hub API.
         """
         resource_path = "/awrHubs/{awrHubId}"
         method = "PUT"
@@ -18969,7 +19049,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/update_database_insight.py.html>`__ to see an example of how to use update_database_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/update_database_insight.py.html>`__ to see an example of how to use update_database_insight API.
         """
         resource_path = "/databaseInsights/{databaseInsightId}"
         method = "PUT"
@@ -19074,7 +19154,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/update_enterprise_manager_bridge.py.html>`__ to see an example of how to use update_enterprise_manager_bridge API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/update_enterprise_manager_bridge.py.html>`__ to see an example of how to use update_enterprise_manager_bridge API.
         """
         resource_path = "/enterpriseManagerBridges/{enterpriseManagerBridgeId}"
         method = "PUT"
@@ -19179,7 +19259,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/update_exadata_insight.py.html>`__ to see an example of how to use update_exadata_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/update_exadata_insight.py.html>`__ to see an example of how to use update_exadata_insight API.
         """
         resource_path = "/exadataInsights/{exadataInsightId}"
         method = "PUT"
@@ -19284,7 +19364,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/update_host_insight.py.html>`__ to see an example of how to use update_host_insight API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/update_host_insight.py.html>`__ to see an example of how to use update_host_insight API.
         """
         resource_path = "/hostInsights/{hostInsightId}"
         method = "PUT"
@@ -19391,7 +19471,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/update_operations_insights_private_endpoint.py.html>`__ to see an example of how to use update_operations_insights_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/update_operations_insights_private_endpoint.py.html>`__ to see an example of how to use update_operations_insights_private_endpoint API.
         """
         resource_path = "/operationsInsightsPrivateEndpoints/{operationsInsightsPrivateEndpointId}"
         method = "PUT"
@@ -19497,7 +19577,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/update_operations_insights_warehouse.py.html>`__ to see an example of how to use update_operations_insights_warehouse API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/update_operations_insights_warehouse.py.html>`__ to see an example of how to use update_operations_insights_warehouse API.
         """
         resource_path = "/operationsInsightsWarehouses/{operationsInsightsWarehouseId}"
         method = "PUT"
@@ -19602,7 +19682,7 @@ class OperationsInsightsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/opsi/update_operations_insights_warehouse_user.py.html>`__ to see an example of how to use update_operations_insights_warehouse_user API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opsi/update_operations_insights_warehouse_user.py.html>`__ to see an example of how to use update_operations_insights_warehouse_user API.
         """
         resource_path = "/operationsInsightsWarehouseUsers/{operationsInsightsWarehouseUserId}"
         method = "PUT"

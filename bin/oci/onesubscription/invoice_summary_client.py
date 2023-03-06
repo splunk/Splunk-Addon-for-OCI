@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -158,7 +158,7 @@ class InvoiceSummaryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/onesubscription/list_invoiceline_computed_usages.py.html>`__ to see an example of how to use list_invoiceline_computed_usages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/onesubscription/list_invoiceline_computed_usages.py.html>`__ to see an example of how to use list_invoiceline_computed_usages API.
         """
         resource_path = "/invoiceLineComputedUsages"
         method = "GET"
@@ -303,7 +303,7 @@ class InvoiceSummaryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/onesubscription/list_invoices.py.html>`__ to see an example of how to use list_invoices API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/onesubscription/list_invoices.py.html>`__ to see an example of how to use list_invoices API.
         """
         resource_path = "/invoice"
         method = "GET"

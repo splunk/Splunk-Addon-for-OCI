@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -141,7 +141,7 @@ class BudgetClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/budget/create_alert_rule.py.html>`__ to see an example of how to use create_alert_rule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/budget/create_alert_rule.py.html>`__ to see an example of how to use create_alert_rule API.
         """
         resource_path = "/budgets/{budgetId}/alertRules"
         method = "POST"
@@ -245,7 +245,7 @@ class BudgetClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/budget/create_budget.py.html>`__ to see an example of how to use create_budget API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/budget/create_budget.py.html>`__ to see an example of how to use create_budget API.
         """
         resource_path = "/budgets"
         method = "POST"
@@ -340,7 +340,7 @@ class BudgetClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/budget/delete_alert_rule.py.html>`__ to see an example of how to use delete_alert_rule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/budget/delete_alert_rule.py.html>`__ to see an example of how to use delete_alert_rule API.
         """
         resource_path = "/budgets/{budgetId}/alertRules/{alertRuleId}"
         method = "DELETE"
@@ -440,7 +440,7 @@ class BudgetClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/budget/delete_budget.py.html>`__ to see an example of how to use delete_budget API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/budget/delete_budget.py.html>`__ to see an example of how to use delete_budget API.
         """
         resource_path = "/budgets/{budgetId}"
         method = "DELETE"
@@ -535,7 +535,7 @@ class BudgetClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/budget/get_alert_rule.py.html>`__ to see an example of how to use get_alert_rule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/budget/get_alert_rule.py.html>`__ to see an example of how to use get_alert_rule API.
         """
         resource_path = "/budgets/{budgetId}/alertRules/{alertRuleId}"
         method = "GET"
@@ -628,7 +628,7 @@ class BudgetClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/budget/get_budget.py.html>`__ to see an example of how to use get_budget API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/budget/get_budget.py.html>`__ to see an example of how to use get_budget API.
         """
         resource_path = "/budgets/{budgetId}"
         method = "GET"
@@ -748,7 +748,7 @@ class BudgetClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/budget/list_alert_rules.py.html>`__ to see an example of how to use list_alert_rules API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/budget/list_alert_rules.py.html>`__ to see an example of how to use list_alert_rules API.
         """
         resource_path = "/budgets/{budgetId}/alertRules"
         method = "GET"
@@ -922,7 +922,7 @@ class BudgetClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/budget/list_budgets.py.html>`__ to see an example of how to use list_budgets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/budget/list_budgets.py.html>`__ to see an example of how to use list_budgets API.
         """
         resource_path = "/budgets"
         method = "GET"
@@ -1064,7 +1064,7 @@ class BudgetClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/budget/update_alert_rule.py.html>`__ to see an example of how to use update_alert_rule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/budget/update_alert_rule.py.html>`__ to see an example of how to use update_alert_rule API.
         """
         resource_path = "/budgets/{budgetId}/alertRules/{alertRuleId}"
         method = "PUT"
@@ -1171,7 +1171,7 @@ class BudgetClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/budget/update_budget.py.html>`__ to see an example of how to use update_budget API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/budget/update_budget.py.html>`__ to see an example of how to use update_budget API.
         """
         resource_path = "/budgets/{budgetId}"
         method = "PUT"

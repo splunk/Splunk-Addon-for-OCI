@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -145,7 +145,7 @@ class EsxiHostClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ocvp/create_esxi_host.py.html>`__ to see an example of how to use create_esxi_host API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/create_esxi_host.py.html>`__ to see an example of how to use create_esxi_host API.
         """
         resource_path = "/esxiHosts"
         method = "POST"
@@ -253,7 +253,7 @@ class EsxiHostClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ocvp/delete_esxi_host.py.html>`__ to see an example of how to use delete_esxi_host API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/delete_esxi_host.py.html>`__ to see an example of how to use delete_esxi_host API.
         """
         resource_path = "/esxiHosts/{esxiHostId}"
         method = "DELETE"
@@ -350,7 +350,7 @@ class EsxiHostClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ocvp/get_esxi_host.py.html>`__ to see an example of how to use get_esxi_host API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/get_esxi_host.py.html>`__ to see an example of how to use get_esxi_host API.
         """
         resource_path = "/esxiHosts/{esxiHostId}"
         method = "GET"
@@ -500,7 +500,7 @@ class EsxiHostClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ocvp/list_esxi_hosts.py.html>`__ to see an example of how to use list_esxi_hosts API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/list_esxi_hosts.py.html>`__ to see an example of how to use list_esxi_hosts API.
         """
         resource_path = "/esxiHosts"
         method = "GET"
@@ -638,7 +638,7 @@ class EsxiHostClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ocvp/update_esxi_host.py.html>`__ to see an example of how to use update_esxi_host API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/update_esxi_host.py.html>`__ to see an example of how to use update_esxi_host API.
         """
         resource_path = "/esxiHosts/{esxiHostId}"
         method = "PUT"

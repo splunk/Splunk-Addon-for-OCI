@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -150,7 +150,7 @@ class DiscoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cloudbridge/change_asset_source_compartment.py.html>`__ to see an example of how to use change_asset_source_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/change_asset_source_compartment.py.html>`__ to see an example of how to use change_asset_source_compartment API.
         """
         resource_path = "/assetSources/{assetSourceId}/actions/changeCompartment"
         method = "POST"
@@ -268,7 +268,7 @@ class DiscoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cloudbridge/change_discovery_schedule_compartment.py.html>`__ to see an example of how to use change_discovery_schedule_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/change_discovery_schedule_compartment.py.html>`__ to see an example of how to use change_discovery_schedule_compartment API.
         """
         resource_path = "/discoverySchedules/{discoveryScheduleId}/actions/changeCompartment"
         method = "POST"
@@ -374,7 +374,7 @@ class DiscoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cloudbridge/create_asset_source.py.html>`__ to see an example of how to use create_asset_source API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/create_asset_source.py.html>`__ to see an example of how to use create_asset_source API.
         """
         resource_path = "/assetSources"
         method = "POST"
@@ -468,7 +468,7 @@ class DiscoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cloudbridge/create_discovery_schedule.py.html>`__ to see an example of how to use create_discovery_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/create_discovery_schedule.py.html>`__ to see an example of how to use create_discovery_schedule API.
         """
         resource_path = "/discoverySchedules"
         method = "POST"
@@ -564,7 +564,7 @@ class DiscoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cloudbridge/delete_asset_source.py.html>`__ to see an example of how to use delete_asset_source API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/delete_asset_source.py.html>`__ to see an example of how to use delete_asset_source API.
         """
         resource_path = "/assetSources/{assetSourceId}"
         method = "DELETE"
@@ -667,7 +667,7 @@ class DiscoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cloudbridge/delete_discovery_schedule.py.html>`__ to see an example of how to use delete_discovery_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/delete_discovery_schedule.py.html>`__ to see an example of how to use delete_discovery_schedule API.
         """
         resource_path = "/discoverySchedules/{discoveryScheduleId}"
         method = "DELETE"
@@ -763,7 +763,7 @@ class DiscoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cloudbridge/get_asset_source.py.html>`__ to see an example of how to use get_asset_source API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/get_asset_source.py.html>`__ to see an example of how to use get_asset_source API.
         """
         resource_path = "/assetSources/{assetSourceId}"
         method = "GET"
@@ -859,7 +859,7 @@ class DiscoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cloudbridge/get_discovery_schedule.py.html>`__ to see an example of how to use get_discovery_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/get_discovery_schedule.py.html>`__ to see an example of how to use get_discovery_schedule API.
         """
         resource_path = "/discoverySchedules/{discoveryScheduleId}"
         method = "GET"
@@ -961,7 +961,7 @@ class DiscoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cloudbridge/list_asset_source_connections.py.html>`__ to see an example of how to use list_asset_source_connections API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/list_asset_source_connections.py.html>`__ to see an example of how to use list_asset_source_connections API.
         """
         resource_path = "/assetSources/{assetSourceId}/actions/listConnections"
         method = "POST"
@@ -1094,7 +1094,7 @@ class DiscoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cloudbridge/list_asset_sources.py.html>`__ to see an example of how to use list_asset_sources API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/list_asset_sources.py.html>`__ to see an example of how to use list_asset_sources API.
         """
         resource_path = "/assetSources"
         method = "GET"
@@ -1247,7 +1247,7 @@ class DiscoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cloudbridge/list_discovery_schedules.py.html>`__ to see an example of how to use list_discovery_schedules API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/list_discovery_schedules.py.html>`__ to see an example of how to use list_discovery_schedules API.
         """
         resource_path = "/discoverySchedules"
         method = "GET"
@@ -1380,7 +1380,7 @@ class DiscoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cloudbridge/refresh_asset_source.py.html>`__ to see an example of how to use refresh_asset_source API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/refresh_asset_source.py.html>`__ to see an example of how to use refresh_asset_source API.
         """
         resource_path = "/assetSources/{assetSourceId}/actions/refresh"
         method = "POST"
@@ -1487,7 +1487,7 @@ class DiscoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cloudbridge/update_asset_source.py.html>`__ to see an example of how to use update_asset_source API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/update_asset_source.py.html>`__ to see an example of how to use update_asset_source API.
         """
         resource_path = "/assetSources/{assetSourceId}"
         method = "PUT"
@@ -1595,7 +1595,7 @@ class DiscoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cloudbridge/update_discovery_schedule.py.html>`__ to see an example of how to use update_discovery_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/update_discovery_schedule.py.html>`__ to see an example of how to use update_discovery_schedule API.
         """
         resource_path = "/discoverySchedules/{discoveryScheduleId}"
         method = "PUT"

@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from .exadata_insight import ExadataInsight
@@ -21,7 +21,7 @@ class EmManagedExternalExadataInsight(ExadataInsight):
 
         :param entity_source:
             The value to assign to the entity_source property of this EmManagedExternalExadataInsight.
-            Allowed values for this property are: "EM_MANAGED_EXTERNAL_EXADATA"
+            Allowed values for this property are: "EM_MANAGED_EXTERNAL_EXADATA", "PE_COMANAGED_EXADATA"
         :type entity_source: str
 
         :param id:
@@ -47,7 +47,7 @@ class EmManagedExternalExadataInsight(ExadataInsight):
 
         :param exadata_rack_type:
             The value to assign to the exadata_rack_type property of this EmManagedExternalExadataInsight.
-            Allowed values for this property are: "FULL", "HALF", "QUARTER", "EIGHTH"
+            Allowed values for this property are: "FULL", "HALF", "QUARTER", "EIGHTH", "FLEX"
         :type exadata_rack_type: str
 
         :param is_virtualized_exadata:

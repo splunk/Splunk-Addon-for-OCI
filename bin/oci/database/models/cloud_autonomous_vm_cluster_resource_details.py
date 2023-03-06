@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -10,7 +10,7 @@ from oci.decorators import init_model_state_from_kwargs
 @init_model_state_from_kwargs
 class CloudAutonomousVmClusterResourceDetails(object):
     """
-    Unallocated resource details of the CAVM
+    Unallocated resource details of the Cloud Autonomous VM Cluster.
     """
 
     def __init__(self, **kwargs):
@@ -72,7 +72,7 @@ class CloudAutonomousVmClusterResourceDetails(object):
     def un_allocated_adb_storage_in_tbs(self):
         """
         **[Required]** Gets the un_allocated_adb_storage_in_tbs of this CloudAutonomousVmClusterResourceDetails.
-        Total unallocated autonomous data storage in the CAVM in TBs.
+        Total unallocated autonomous data storage in the Cloud Autonomous VM Cluster in TBs.
 
 
         :return: The un_allocated_adb_storage_in_tbs of this CloudAutonomousVmClusterResourceDetails.
@@ -84,7 +84,7 @@ class CloudAutonomousVmClusterResourceDetails(object):
     def un_allocated_adb_storage_in_tbs(self, un_allocated_adb_storage_in_tbs):
         """
         Sets the un_allocated_adb_storage_in_tbs of this CloudAutonomousVmClusterResourceDetails.
-        Total unallocated autonomous data storage in the CAVM in TBs.
+        Total unallocated autonomous data storage in the Cloud Autonomous VM Cluster in TBs.
 
 
         :param un_allocated_adb_storage_in_tbs: The un_allocated_adb_storage_in_tbs of this CloudAutonomousVmClusterResourceDetails.

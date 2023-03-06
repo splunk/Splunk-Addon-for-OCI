@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -145,7 +145,7 @@ class SubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/tenantmanagercontrolplane/create_subscription_mapping.py.html>`__ to see an example of how to use create_subscription_mapping API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/create_subscription_mapping.py.html>`__ to see an example of how to use create_subscription_mapping API.
         """
         resource_path = "/subscriptionMappings"
         method = "POST"
@@ -239,7 +239,7 @@ class SubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/tenantmanagercontrolplane/delete_subscription_mapping.py.html>`__ to see an example of how to use delete_subscription_mapping API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/delete_subscription_mapping.py.html>`__ to see an example of how to use delete_subscription_mapping API.
         """
         resource_path = "/subscriptionMappings/{subscriptionMappingId}"
         method = "DELETE"
@@ -331,7 +331,7 @@ class SubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/tenantmanagercontrolplane/get_assigned_subscription.py.html>`__ to see an example of how to use get_assigned_subscription API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/get_assigned_subscription.py.html>`__ to see an example of how to use get_assigned_subscription API.
         """
         resource_path = "/assignedSubscriptions/{assignedSubscriptionId}"
         method = "GET"
@@ -423,7 +423,7 @@ class SubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/tenantmanagercontrolplane/get_subscription.py.html>`__ to see an example of how to use get_subscription API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/get_subscription.py.html>`__ to see an example of how to use get_subscription API.
         """
         resource_path = "/subscriptions/{subscriptionId}"
         method = "GET"
@@ -515,7 +515,7 @@ class SubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/tenantmanagercontrolplane/get_subscription_mapping.py.html>`__ to see an example of how to use get_subscription_mapping API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/get_subscription_mapping.py.html>`__ to see an example of how to use get_subscription_mapping API.
         """
         resource_path = "/subscriptionMappings/{subscriptionMappingId}"
         method = "GET"
@@ -629,7 +629,7 @@ class SubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/tenantmanagercontrolplane/list_assigned_subscriptions.py.html>`__ to see an example of how to use list_assigned_subscriptions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/list_assigned_subscriptions.py.html>`__ to see an example of how to use list_assigned_subscriptions API.
         """
         resource_path = "/assignedSubscriptions"
         method = "GET"
@@ -743,7 +743,7 @@ class SubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/tenantmanagercontrolplane/list_available_regions.py.html>`__ to see an example of how to use list_available_regions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/list_available_regions.py.html>`__ to see an example of how to use list_available_regions API.
         """
         resource_path = "/subscriptions/{subscriptionId}/availableRegions"
         method = "GET"
@@ -873,7 +873,7 @@ class SubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/tenantmanagercontrolplane/list_subscription_mappings.py.html>`__ to see an example of how to use list_subscription_mappings API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/list_subscription_mappings.py.html>`__ to see an example of how to use list_subscription_mappings API.
         """
         resource_path = "/subscriptionMappings"
         method = "GET"
@@ -1017,7 +1017,7 @@ class SubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/tenantmanagercontrolplane/list_subscriptions.py.html>`__ to see an example of how to use list_subscriptions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/list_subscriptions.py.html>`__ to see an example of how to use list_subscriptions API.
         """
         resource_path = "/subscriptions"
         method = "GET"

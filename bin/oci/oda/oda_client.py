@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -151,7 +151,7 @@ class OdaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/change_oda_instance_compartment.py.html>`__ to see an example of how to use change_oda_instance_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/change_oda_instance_compartment.py.html>`__ to see an example of how to use change_oda_instance_compartment API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/actions/changeCompartment"
         method = "POST"
@@ -259,7 +259,7 @@ class OdaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/create_oda_instance.py.html>`__ to see an example of how to use create_oda_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/create_oda_instance.py.html>`__ to see an example of how to use create_oda_instance API.
         """
         resource_path = "/odaInstances"
         method = "POST"
@@ -358,7 +358,7 @@ class OdaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/create_oda_instance_attachment.py.html>`__ to see an example of how to use create_oda_instance_attachment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/create_oda_instance_attachment.py.html>`__ to see an example of how to use create_oda_instance_attachment API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/attachments"
         method = "POST"
@@ -462,7 +462,7 @@ class OdaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/delete_oda_instance.py.html>`__ to see an example of how to use delete_oda_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/delete_oda_instance.py.html>`__ to see an example of how to use delete_oda_instance API.
         """
         resource_path = "/odaInstances/{odaInstanceId}"
         method = "DELETE"
@@ -565,7 +565,7 @@ class OdaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/delete_oda_instance_attachment.py.html>`__ to see an example of how to use delete_oda_instance_attachment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/delete_oda_instance_attachment.py.html>`__ to see an example of how to use delete_oda_instance_attachment API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/attachments/{attachmentId}"
         method = "DELETE"
@@ -658,7 +658,7 @@ class OdaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/get_oda_instance.py.html>`__ to see an example of how to use get_oda_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/get_oda_instance.py.html>`__ to see an example of how to use get_oda_instance API.
         """
         resource_path = "/odaInstances/{odaInstanceId}"
         method = "GET"
@@ -756,7 +756,7 @@ class OdaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/get_oda_instance_attachment.py.html>`__ to see an example of how to use get_oda_instance_attachment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/get_oda_instance_attachment.py.html>`__ to see an example of how to use get_oda_instance_attachment API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/attachments/{attachmentId}"
         method = "GET"
@@ -860,7 +860,7 @@ class OdaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -982,7 +982,7 @@ class OdaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/list_oda_instance_attachments.py.html>`__ to see an example of how to use list_oda_instance_attachments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/list_oda_instance_attachments.py.html>`__ to see an example of how to use list_oda_instance_attachments API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/attachments"
         method = "GET"
@@ -1151,7 +1151,7 @@ class OdaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/list_oda_instances.py.html>`__ to see an example of how to use list_oda_instances API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/list_oda_instances.py.html>`__ to see an example of how to use list_oda_instances API.
         """
         resource_path = "/odaInstances"
         method = "GET"
@@ -1298,7 +1298,7 @@ class OdaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -1445,7 +1445,7 @@ class OdaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -1595,7 +1595,7 @@ class OdaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -1723,7 +1723,7 @@ class OdaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/start_oda_instance.py.html>`__ to see an example of how to use start_oda_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/start_oda_instance.py.html>`__ to see an example of how to use start_oda_instance API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/actions/start"
         method = "POST"
@@ -1836,7 +1836,7 @@ class OdaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/stop_oda_instance.py.html>`__ to see an example of how to use stop_oda_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/stop_oda_instance.py.html>`__ to see an example of how to use stop_oda_instance API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/actions/stop"
         method = "POST"
@@ -1942,7 +1942,7 @@ class OdaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/update_oda_instance.py.html>`__ to see an example of how to use update_oda_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/update_oda_instance.py.html>`__ to see an example of how to use update_oda_instance API.
         """
         resource_path = "/odaInstances/{odaInstanceId}"
         method = "PUT"
@@ -2052,7 +2052,7 @@ class OdaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/oda/update_oda_instance_attachment.py.html>`__ to see an example of how to use update_oda_instance_attachment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/oda/update_oda_instance_attachment.py.html>`__ to see an example of how to use update_oda_instance_attachment API.
         """
         resource_path = "/odaInstances/{odaInstanceId}/attachments/{attachmentId}"
         method = "PUT"

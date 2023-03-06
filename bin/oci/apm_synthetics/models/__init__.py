@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -7,6 +7,7 @@ from __future__ import absolute_import
 from .aggregate_network_data_details import AggregateNetworkDataDetails
 from .aggregated_network_data import AggregatedNetworkData
 from .aggregated_network_data_result import AggregatedNetworkDataResult
+from .availability_configuration import AvailabilityConfiguration
 from .browser_monitor_configuration import BrowserMonitorConfiguration
 from .create_dedicated_vantage_point_details import CreateDedicatedVantagePointDetails
 from .create_monitor_details import CreateMonitorDetails
@@ -19,6 +20,7 @@ from .dvp_stack_details import DvpStackDetails
 from .geo_summary import GeoSummary
 from .header import Header
 from .link import Link
+from .maintenance_window_schedule import MaintenanceWindowSchedule
 from .monitor import Monitor
 from .monitor_collection import MonitorCollection
 from .monitor_configuration import MonitorConfiguration
@@ -56,6 +58,7 @@ apm_synthetics_type_mapping = {
     "AggregateNetworkDataDetails": AggregateNetworkDataDetails,
     "AggregatedNetworkData": AggregatedNetworkData,
     "AggregatedNetworkDataResult": AggregatedNetworkDataResult,
+    "AvailabilityConfiguration": AvailabilityConfiguration,
     "BrowserMonitorConfiguration": BrowserMonitorConfiguration,
     "CreateDedicatedVantagePointDetails": CreateDedicatedVantagePointDetails,
     "CreateMonitorDetails": CreateMonitorDetails,
@@ -68,6 +71,7 @@ apm_synthetics_type_mapping = {
     "GeoSummary": GeoSummary,
     "Header": Header,
     "Link": Link,
+    "MaintenanceWindowSchedule": MaintenanceWindowSchedule,
     "Monitor": Monitor,
     "MonitorCollection": MonitorCollection,
     "MonitorConfiguration": MonitorConfiguration,

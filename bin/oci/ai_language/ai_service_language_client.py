@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -142,7 +142,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/batch_detect_dominant_language.py.html>`__ to see an example of how to use batch_detect_dominant_language API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/batch_detect_dominant_language.py.html>`__ to see an example of how to use batch_detect_dominant_language API.
         """
         resource_path = "/actions/batchDetectDominantLanguage"
         method = "POST"
@@ -233,7 +233,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/batch_detect_language_entities.py.html>`__ to see an example of how to use batch_detect_language_entities API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/batch_detect_language_entities.py.html>`__ to see an example of how to use batch_detect_language_entities API.
         """
         resource_path = "/actions/batchDetectLanguageEntities"
         method = "POST"
@@ -320,7 +320,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/batch_detect_language_key_phrases.py.html>`__ to see an example of how to use batch_detect_language_key_phrases API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/batch_detect_language_key_phrases.py.html>`__ to see an example of how to use batch_detect_language_key_phrases API.
         """
         resource_path = "/actions/batchDetectLanguageKeyPhrases"
         method = "POST"
@@ -375,6 +375,93 @@ class AIServiceLanguageClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def batch_detect_language_pii_entities(self, batch_detect_language_pii_entities_details, **kwargs):
+        """
+        The API extracts pii entities in text records. For each entity, its type and confidence score (between 0 and 1) is returned.  It supports passing a batch of records.
+
+        Limitations:
+        - A batch may have up to 100 records.
+        - A record may be up to 5000 characters long.
+        - The total of characters to process in a request can be up to 20,000 characters.
+
+
+        :param oci.ai_language.models.BatchDetectLanguagePiiEntitiesDetails batch_detect_language_pii_entities_details: (required)
+            The details to make a PII entity detect call.
+
+        :param str opc_request_id: (optional)
+            The client request ID for tracing.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type :class:`~oci.ai_language.models.BatchDetectLanguagePiiEntitiesResult`
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/batch_detect_language_pii_entities.py.html>`__ to see an example of how to use batch_detect_language_pii_entities API.
+        """
+        resource_path = "/actions/batchDetectLanguagePiiEntities"
+        method = "POST"
+        operation_name = "batch_detect_language_pii_entities"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/language/20221001/BatchDetectLanguagePiiEntities/BatchDetectLanguagePiiEntities"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "opc_request_id"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "batch_detect_language_pii_entities got unknown kwargs: {!r}".format(extra_kwargs))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=batch_detect_language_pii_entities_details,
+                response_type="BatchDetectLanguagePiiEntitiesResult",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=batch_detect_language_pii_entities_details,
+                response_type="BatchDetectLanguagePiiEntitiesResult",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def batch_detect_language_sentiments(self, batch_detect_language_sentiments_details, **kwargs):
         """
         The API extracts aspect-based and sentence level sentiment in text records.
@@ -423,7 +510,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/batch_detect_language_sentiments.py.html>`__ to see an example of how to use batch_detect_language_sentiments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/batch_detect_language_sentiments.py.html>`__ to see an example of how to use batch_detect_language_sentiments API.
         """
         resource_path = "/actions/batchDetectLanguageSentiments"
         method = "POST"
@@ -532,7 +619,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/batch_detect_language_text_classification.py.html>`__ to see an example of how to use batch_detect_language_text_classification API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/batch_detect_language_text_classification.py.html>`__ to see an example of how to use batch_detect_language_text_classification API.
         """
         resource_path = "/actions/batchDetectLanguageTextClassification"
         method = "POST"
@@ -619,7 +706,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/batch_language_translation.py.html>`__ to see an example of how to use batch_language_translation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/batch_language_translation.py.html>`__ to see an example of how to use batch_language_translation API.
         """
         resource_path = "/actions/batchLanguageTranslation"
         method = "POST"
@@ -716,7 +803,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/change_endpoint_compartment.py.html>`__ to see an example of how to use change_endpoint_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/change_endpoint_compartment.py.html>`__ to see an example of how to use change_endpoint_compartment API.
         """
         resource_path = "/endpoints/{endpointId}/actions/changeCompartment"
         method = "POST"
@@ -830,7 +917,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/change_model_compartment.py.html>`__ to see an example of how to use change_model_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/change_model_compartment.py.html>`__ to see an example of how to use change_model_compartment API.
         """
         resource_path = "/models/{modelId}/actions/changeCompartment"
         method = "POST"
@@ -944,7 +1031,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/change_project_compartment.py.html>`__ to see an example of how to use change_project_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/change_project_compartment.py.html>`__ to see an example of how to use change_project_compartment API.
         """
         resource_path = "/projects/{projectId}/actions/changeCompartment"
         method = "POST"
@@ -1050,7 +1137,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/create_endpoint.py.html>`__ to see an example of how to use create_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/create_endpoint.py.html>`__ to see an example of how to use create_endpoint API.
         """
         resource_path = "/endpoints"
         method = "POST"
@@ -1144,7 +1231,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/create_model.py.html>`__ to see an example of how to use create_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/create_model.py.html>`__ to see an example of how to use create_model API.
         """
         resource_path = "/models"
         method = "POST"
@@ -1238,7 +1325,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/create_project.py.html>`__ to see an example of how to use create_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/create_project.py.html>`__ to see an example of how to use create_project API.
         """
         resource_path = "/projects"
         method = "POST"
@@ -1332,7 +1419,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/delete_endpoint.py.html>`__ to see an example of how to use delete_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/delete_endpoint.py.html>`__ to see an example of how to use delete_endpoint API.
         """
         resource_path = "/endpoints/{endpointId}"
         method = "DELETE"
@@ -1433,7 +1520,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/delete_model.py.html>`__ to see an example of how to use delete_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/delete_model.py.html>`__ to see an example of how to use delete_model API.
         """
         resource_path = "/models/{modelId}"
         method = "DELETE"
@@ -1534,7 +1621,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/delete_project.py.html>`__ to see an example of how to use delete_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/delete_project.py.html>`__ to see an example of how to use delete_project API.
         """
         resource_path = "/projects/{projectId}"
         method = "DELETE"
@@ -1603,13 +1690,17 @@ class AIServiceLanguageClient(object):
 
     def detect_dominant_language(self, detect_dominant_language_details, **kwargs):
         """
-        The API returns the detected language and a related confidence score (between 0 and 1).
+        **Deprecated**: This API will be retired Tuesday, 10 Oct 2023 00:00:00 GMT.
+        We recommend you replace this API with the batch API, `BatchDetectDominantLanguage`__.
 
-        `List of supported languages.`__
+        The DetectDominantLanguage API returns the detected language and a related confidence score (between 0 and 1).
+
+        `List of supported languages`__
 
         Limitations:
         - A record may be up to 1000 characters long.
 
+        __ https://docs.cloud.oracle.com/iaas/api/#/en/language/20221001/BatchDetectDominantLanguage/BatchDetectDominantLanguage
         __ https://docs.cloud.oracle.com/iaas/language/using/pretrain-models.htm#lang-detect
 
 
@@ -1635,7 +1726,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/detect_dominant_language.py.html>`__ to see an example of how to use detect_dominant_language API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/detect_dominant_language.py.html>`__ to see an example of how to use detect_dominant_language API.
         """
         resource_path = "/actions/detectDominantLanguage"
         method = "POST"
@@ -1692,10 +1783,15 @@ class AIServiceLanguageClient(object):
 
     def detect_language_entities(self, detect_language_entities_details, **kwargs):
         """
-        The API extracts entities in text records. For each entity, its type and confidence score (between 0 and 1) is returned.
+        **Deprecated**: This API will be retired Tuesday, 10 Oct 2023 00:00:00 GMT.
+        We recommend you replace this API with the batch API, `BatchDetectLanguageEntities`__.
+
+        The DetectLanguageEntities API extracts entities in text records. For each entity, its type and confidence score (between 0 and 1) is returned.
 
         Limitations:
         - A text may be up to 1000 characters long.
+
+        __ https://docs.cloud.oracle.com/iaas/api/#/en/language/20221001/BatchDetectLanguageEntities/BatchDetectLanguageEntities
 
 
         :param oci.ai_language.models.DetectLanguageEntitiesDetails detect_language_entities_details: (required)
@@ -1729,7 +1825,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/detect_language_entities.py.html>`__ to see an example of how to use detect_language_entities API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/detect_language_entities.py.html>`__ to see an example of how to use detect_language_entities API.
         """
         resource_path = "/actions/detectLanguageEntities"
         method = "POST"
@@ -1803,10 +1899,15 @@ class AIServiceLanguageClient(object):
 
     def detect_language_key_phrases(self, detect_language_key_phrases_details, **kwargs):
         """
-        The API extracts key-phrases in text records. For each key-phrase, a score (between 0 and 1) is returned that highlights the importance of the key-phrase in the context of the text.
+        **Deprecated**: This API will be retired Tuesday, 10 Oct 2023 00:00:00 GMT.
+        We recommend you replace this API with the batch API, `BatchDetectLanguageKeyPhrases`__.
+
+        The DetectLanguageKeyPhrases API extracts key-phrases in text records. For each key-phrase, a score (between 0 and 1) is returned that highlights the importance of the key-phrase in the context of the text.
 
         Limitations:
         - A record may be up to 1000 characters long.
+
+        __ https://docs.cloud.oracle.com/iaas/api/#/en/language/20221001/BatchDetectLanguageKeyPhrases/BatchDetectLanguageKeyPhrases
 
 
         :param oci.ai_language.models.DetectLanguageKeyPhrasesDetails detect_language_key_phrases_details: (required)
@@ -1831,7 +1932,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/detect_language_key_phrases.py.html>`__ to see an example of how to use detect_language_key_phrases API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/detect_language_key_phrases.py.html>`__ to see an example of how to use detect_language_key_phrases API.
         """
         resource_path = "/actions/detectLanguageKeyPhrases"
         method = "POST"
@@ -1888,7 +1989,10 @@ class AIServiceLanguageClient(object):
 
     def detect_language_sentiments(self, detect_language_sentiments_details, **kwargs):
         """
-        The API extracts aspect-based in text records.
+        **Deprecated**: This API will be retired Tuesday, 10 Oct 2023 00:00:00 GMT.
+        We recommend you replace this API with the batch API, `BatchDetectLanguageSentiments`__.
+
+        The DetectLanguageSentiments API extracts aspect-based in text records.
 
         For aspect-based sentiment analysis, a set of aspects and their respective sentiment is returned.
 
@@ -1899,6 +2003,7 @@ class AIServiceLanguageClient(object):
         Limitations:
          - A record may be up to 1000 characters long.
 
+        __ https://docs.cloud.oracle.com/iaas/api/#/en/language/20221001/BatchDetectLanguageSentiments/BatchDetectLanguageSentiments
         __ https://docs.cloud.oracle.com/iaas/language/using/pretrain-models.htm#sentiment
 
 
@@ -1924,7 +2029,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/detect_language_sentiments.py.html>`__ to see an example of how to use detect_language_sentiments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/detect_language_sentiments.py.html>`__ to see an example of how to use detect_language_sentiments API.
         """
         resource_path = "/actions/detectLanguageSentiments"
         method = "POST"
@@ -1981,13 +2086,17 @@ class AIServiceLanguageClient(object):
 
     def detect_language_text_classification(self, detect_language_text_classification_details, **kwargs):
         """
-        The API automatically classifies text into a set of pre-determined classes and sub-classes. A single class/subclass is returned for each record classified.
+        **Deprecated**: This API will be retired Tuesday, 10 Oct 2023 00:00:00 GMT.
+        We recommend you replace this API with the batch API, `BatchDetectLanguageTextClassification`__.
+
+        The DetectLanguageTextClassification API automatically classifies text into a set of pre-determined classes and sub-classes. A single class/subclass is returned for each record classified.
 
         Learn more about text classification `here`__.
 
         Limitations:
         - A record may be up to 1000 characters long.
 
+        __ https://docs.cloud.oracle.com/iaas/api/#/en/language/20221001/BatchDetectLanguageTextClassification/BatchDetectLanguageTextClassification
         __ https://docs.cloud.oracle.com/iaas/language/using/pretrain-models.htm#text-class
 
 
@@ -2013,7 +2122,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/detect_language_text_classification.py.html>`__ to see an example of how to use detect_language_text_classification API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/detect_language_text_classification.py.html>`__ to see an example of how to use detect_language_text_classification API.
         """
         resource_path = "/actions/detectLanguageTextClassification"
         method = "POST"
@@ -2095,7 +2204,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/get_endpoint.py.html>`__ to see an example of how to use get_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/get_endpoint.py.html>`__ to see an example of how to use get_endpoint API.
         """
         resource_path = "/endpoints/{endpointId}"
         method = "GET"
@@ -2189,7 +2298,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/get_model.py.html>`__ to see an example of how to use get_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/get_model.py.html>`__ to see an example of how to use get_model API.
         """
         resource_path = "/models/{modelId}"
         method = "GET"
@@ -2283,7 +2392,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/get_project.py.html>`__ to see an example of how to use get_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/get_project.py.html>`__ to see an example of how to use get_project API.
         """
         resource_path = "/projects/{projectId}"
         method = "GET"
@@ -2377,7 +2486,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -2508,7 +2617,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/list_endpoints.py.html>`__ to see an example of how to use list_endpoints API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/list_endpoints.py.html>`__ to see an example of how to use list_endpoints API.
         """
         resource_path = "/endpoints"
         method = "GET"
@@ -2642,7 +2751,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/list_evaluation_results.py.html>`__ to see an example of how to use list_evaluation_results API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/list_evaluation_results.py.html>`__ to see an example of how to use list_evaluation_results API.
         """
         resource_path = "/models/{modelId}/evaluationResults"
         method = "GET"
@@ -2780,7 +2889,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/list_models.py.html>`__ to see an example of how to use list_models API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/list_models.py.html>`__ to see an example of how to use list_models API.
         """
         resource_path = "/models"
         method = "GET"
@@ -2937,7 +3046,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/list_projects.py.html>`__ to see an example of how to use list_projects API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/list_projects.py.html>`__ to see an example of how to use list_projects API.
         """
         resource_path = "/projects"
         method = "GET"
@@ -3077,7 +3186,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -3215,7 +3324,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -3359,7 +3468,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -3484,7 +3593,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/update_endpoint.py.html>`__ to see an example of how to use update_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/update_endpoint.py.html>`__ to see an example of how to use update_endpoint API.
         """
         resource_path = "/endpoints/{endpointId}"
         method = "PUT"
@@ -3590,7 +3699,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/update_model.py.html>`__ to see an example of how to use update_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/update_model.py.html>`__ to see an example of how to use update_model API.
         """
         resource_path = "/models/{modelId}"
         method = "PUT"
@@ -3696,7 +3805,7 @@ class AIServiceLanguageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ailanguage/update_project.py.html>`__ to see an example of how to use update_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ailanguage/update_project.py.html>`__ to see an example of how to use update_project API.
         """
         resource_path = "/projects/{projectId}"
         method = "PUT"

@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -144,7 +144,7 @@ class ComputeInstanceAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/computeinstanceagent/cancel_instance_agent_command.py.html>`__ to see an example of how to use cancel_instance_agent_command API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/computeinstanceagent/cancel_instance_agent_command.py.html>`__ to see an example of how to use cancel_instance_agent_command API.
         """
         resource_path = "/instanceAgentCommands/{instanceAgentCommandId}"
         method = "DELETE"
@@ -250,7 +250,7 @@ class ComputeInstanceAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/computeinstanceagent/create_instance_agent_command.py.html>`__ to see an example of how to use create_instance_agent_command API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/computeinstanceagent/create_instance_agent_command.py.html>`__ to see an example of how to use create_instance_agent_command API.
         """
         resource_path = "/instanceAgentCommands"
         method = "POST"
@@ -338,7 +338,7 @@ class ComputeInstanceAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/computeinstanceagent/get_instance_agent_command.py.html>`__ to see an example of how to use get_instance_agent_command API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/computeinstanceagent/get_instance_agent_command.py.html>`__ to see an example of how to use get_instance_agent_command API.
         """
         resource_path = "/instanceAgentCommands/{instanceAgentCommandId}"
         method = "GET"
@@ -438,7 +438,7 @@ class ComputeInstanceAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/computeinstanceagent/get_instance_agent_command_execution.py.html>`__ to see an example of how to use get_instance_agent_command_execution API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/computeinstanceagent/get_instance_agent_command_execution.py.html>`__ to see an example of how to use get_instance_agent_command_execution API.
         """
         resource_path = "/instanceAgentCommands/{instanceAgentCommandId}/status"
         method = "GET"
@@ -582,7 +582,7 @@ class ComputeInstanceAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/computeinstanceagent/list_instance_agent_command_executions.py.html>`__ to see an example of how to use list_instance_agent_command_executions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/computeinstanceagent/list_instance_agent_command_executions.py.html>`__ to see an example of how to use list_instance_agent_command_executions API.
         """
         resource_path = "/instanceAgentCommandExecutions"
         method = "GET"
@@ -735,7 +735,7 @@ class ComputeInstanceAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/computeinstanceagent/list_instance_agent_commands.py.html>`__ to see an example of how to use list_instance_agent_commands API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/computeinstanceagent/list_instance_agent_commands.py.html>`__ to see an example of how to use list_instance_agent_commands API.
         """
         resource_path = "/instanceAgentCommands"
         method = "GET"

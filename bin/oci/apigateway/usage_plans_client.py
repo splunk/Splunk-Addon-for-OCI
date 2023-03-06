@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -150,7 +150,7 @@ class UsagePlansClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apigateway/change_usage_plan_compartment.py.html>`__ to see an example of how to use change_usage_plan_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/change_usage_plan_compartment.py.html>`__ to see an example of how to use change_usage_plan_compartment API.
         """
         resource_path = "/usagePlans/{usagePlanId}/actions/changeCompartment"
         method = "POST"
@@ -254,7 +254,7 @@ class UsagePlansClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apigateway/create_usage_plan.py.html>`__ to see an example of how to use create_usage_plan API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/create_usage_plan.py.html>`__ to see an example of how to use create_usage_plan API.
         """
         resource_path = "/usagePlans"
         method = "POST"
@@ -348,7 +348,7 @@ class UsagePlansClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apigateway/delete_usage_plan.py.html>`__ to see an example of how to use delete_usage_plan API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/delete_usage_plan.py.html>`__ to see an example of how to use delete_usage_plan API.
         """
         resource_path = "/usagePlans/{usagePlanId}"
         method = "DELETE"
@@ -440,7 +440,7 @@ class UsagePlansClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apigateway/get_usage_plan.py.html>`__ to see an example of how to use get_usage_plan API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/get_usage_plan.py.html>`__ to see an example of how to use get_usage_plan API.
         """
         resource_path = "/usagePlans/{usagePlanId}"
         method = "GET"
@@ -564,7 +564,7 @@ class UsagePlansClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apigateway/list_usage_plans.py.html>`__ to see an example of how to use list_usage_plans API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/list_usage_plans.py.html>`__ to see an example of how to use list_usage_plans API.
         """
         resource_path = "/usagePlans"
         method = "GET"
@@ -696,7 +696,7 @@ class UsagePlansClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apigateway/update_usage_plan.py.html>`__ to see an example of how to use update_usage_plan API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/update_usage_plan.py.html>`__ to see an example of how to use update_usage_plan API.
         """
         resource_path = "/usagePlans/{usagePlanId}"
         method = "PUT"

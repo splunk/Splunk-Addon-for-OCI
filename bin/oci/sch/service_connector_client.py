@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -158,7 +158,7 @@ class ServiceConnectorClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/sch/activate_service_connector.py.html>`__ to see an example of how to use activate_service_connector API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/sch/activate_service_connector.py.html>`__ to see an example of how to use activate_service_connector API.
         """
         resource_path = "/serviceConnectors/{serviceConnectorId}/actions/activate"
         method = "POST"
@@ -272,7 +272,7 @@ class ServiceConnectorClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/sch/change_service_connector_compartment.py.html>`__ to see an example of how to use change_service_connector_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/sch/change_service_connector_compartment.py.html>`__ to see an example of how to use change_service_connector_compartment API.
         """
         resource_path = "/serviceConnectors/{serviceConnectorId}/actions/changeCompartment"
         method = "POST"
@@ -399,7 +399,7 @@ class ServiceConnectorClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/sch/create_service_connector.py.html>`__ to see an example of how to use create_service_connector API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/sch/create_service_connector.py.html>`__ to see an example of how to use create_service_connector API.
         """
         resource_path = "/serviceConnectors"
         method = "POST"
@@ -506,7 +506,7 @@ class ServiceConnectorClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/sch/deactivate_service_connector.py.html>`__ to see an example of how to use deactivate_service_connector API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/sch/deactivate_service_connector.py.html>`__ to see an example of how to use deactivate_service_connector API.
         """
         resource_path = "/serviceConnectors/{serviceConnectorId}/actions/deactivate"
         method = "POST"
@@ -614,7 +614,7 @@ class ServiceConnectorClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/sch/delete_service_connector.py.html>`__ to see an example of how to use delete_service_connector API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/sch/delete_service_connector.py.html>`__ to see an example of how to use delete_service_connector API.
         """
         resource_path = "/serviceConnectors/{serviceConnectorId}"
         method = "DELETE"
@@ -709,7 +709,7 @@ class ServiceConnectorClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/sch/get_service_connector.py.html>`__ to see an example of how to use get_service_connector API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/sch/get_service_connector.py.html>`__ to see an example of how to use get_service_connector API.
         """
         resource_path = "/serviceConnectors/{serviceConnectorId}"
         method = "GET"
@@ -804,7 +804,7 @@ class ServiceConnectorClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/sch/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/sch/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -936,7 +936,7 @@ class ServiceConnectorClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/sch/list_service_connectors.py.html>`__ to see an example of how to use list_service_connectors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/sch/list_service_connectors.py.html>`__ to see an example of how to use list_service_connectors API.
         """
         resource_path = "/serviceConnectors"
         method = "GET"
@@ -1073,7 +1073,7 @@ class ServiceConnectorClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/sch/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/sch/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -1192,7 +1192,7 @@ class ServiceConnectorClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/sch/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/sch/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -1311,7 +1311,7 @@ class ServiceConnectorClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/sch/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/sch/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -1419,7 +1419,7 @@ class ServiceConnectorClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/sch/update_service_connector.py.html>`__ to see an example of how to use update_service_connector API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/sch/update_service_connector.py.html>`__ to see an example of how to use update_service_connector API.
         """
         resource_path = "/serviceConnectors/{serviceConnectorId}"
         method = "PUT"

@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -148,7 +148,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/add_data_files.py.html>`__ to see an example of how to use add_data_files API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/add_data_files.py.html>`__ to see an example of how to use add_data_files API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/tablespaces/{tablespaceName}/actions/addDataFiles"
         method = "POST"
@@ -260,7 +260,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/add_managed_database_to_managed_database_group.py.html>`__ to see an example of how to use add_managed_database_to_managed_database_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/add_managed_database_to_managed_database_group.py.html>`__ to see an example of how to use add_managed_database_to_managed_database_group API.
         """
         resource_path = "/managedDatabaseGroups/{managedDatabaseGroupId}/actions/addManagedDatabase"
         method = "POST"
@@ -381,7 +381,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/addm_tasks.py.html>`__ to see an example of how to use addm_tasks API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/addm_tasks.py.html>`__ to see an example of how to use addm_tasks API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/addmTasks"
         method = "GET"
@@ -527,7 +527,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/change_database_parameters.py.html>`__ to see an example of how to use change_database_parameters API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/change_database_parameters.py.html>`__ to see an example of how to use change_database_parameters API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/actions/changeDatabaseParameters"
         method = "POST"
@@ -643,7 +643,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/change_db_management_private_endpoint_compartment.py.html>`__ to see an example of how to use change_db_management_private_endpoint_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/change_db_management_private_endpoint_compartment.py.html>`__ to see an example of how to use change_db_management_private_endpoint_compartment API.
         """
         resource_path = "/dbManagementPrivateEndpoints/{dbManagementPrivateEndpointId}/actions/changeCompartment"
         method = "POST"
@@ -759,7 +759,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/change_job_compartment.py.html>`__ to see an example of how to use change_job_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/change_job_compartment.py.html>`__ to see an example of how to use change_job_compartment API.
         """
         resource_path = "/jobs/{jobId}/actions/changeCompartment"
         method = "POST"
@@ -879,7 +879,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/change_managed_database_group_compartment.py.html>`__ to see an example of how to use change_managed_database_group_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/change_managed_database_group_compartment.py.html>`__ to see an example of how to use change_managed_database_group_compartment API.
         """
         resource_path = "/managedDatabaseGroups/{managedDatabaseGroupId}/actions/changeCompartment"
         method = "POST"
@@ -983,7 +983,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/create_db_management_private_endpoint.py.html>`__ to see an example of how to use create_db_management_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/create_db_management_private_endpoint.py.html>`__ to see an example of how to use create_db_management_private_endpoint API.
         """
         resource_path = "/dbManagementPrivateEndpoints"
         method = "POST"
@@ -1077,7 +1077,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/create_job.py.html>`__ to see an example of how to use create_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/create_job.py.html>`__ to see an example of how to use create_job API.
         """
         resource_path = "/jobs"
         method = "POST"
@@ -1170,7 +1170,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/create_managed_database_group.py.html>`__ to see an example of how to use create_managed_database_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/create_managed_database_group.py.html>`__ to see an example of how to use create_managed_database_group API.
         """
         resource_path = "/managedDatabaseGroups"
         method = "POST"
@@ -1267,7 +1267,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/create_tablespace.py.html>`__ to see an example of how to use create_tablespace API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/create_tablespace.py.html>`__ to see an example of how to use create_tablespace API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/tablespaces"
         method = "POST"
@@ -1373,7 +1373,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/delete_db_management_private_endpoint.py.html>`__ to see an example of how to use delete_db_management_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/delete_db_management_private_endpoint.py.html>`__ to see an example of how to use delete_db_management_private_endpoint API.
         """
         resource_path = "/dbManagementPrivateEndpoints/{dbManagementPrivateEndpointId}"
         method = "DELETE"
@@ -1472,7 +1472,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/delete_job.py.html>`__ to see an example of how to use delete_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/delete_job.py.html>`__ to see an example of how to use delete_job API.
         """
         resource_path = "/jobs/{jobId}"
         method = "DELETE"
@@ -1574,7 +1574,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/delete_managed_database_group.py.html>`__ to see an example of how to use delete_managed_database_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/delete_managed_database_group.py.html>`__ to see an example of how to use delete_managed_database_group API.
         """
         resource_path = "/managedDatabaseGroups/{managedDatabaseGroupId}"
         method = "DELETE"
@@ -1671,7 +1671,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/delete_preferred_credential.py.html>`__ to see an example of how to use delete_preferred_credential API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/delete_preferred_credential.py.html>`__ to see an example of how to use delete_preferred_credential API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/preferredCredentials/{credentialName}"
         method = "DELETE"
@@ -1777,7 +1777,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/drop_tablespace.py.html>`__ to see an example of how to use drop_tablespace API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/drop_tablespace.py.html>`__ to see an example of how to use drop_tablespace API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/tablespaces/{tablespaceName}/actions/dropTablespace"
         method = "POST"
@@ -1884,7 +1884,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/generate_awr_snapshot.py.html>`__ to see an example of how to use generate_awr_snapshot API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/generate_awr_snapshot.py.html>`__ to see an example of how to use generate_awr_snapshot API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/actions/generateAwrSnapshot"
         method = "POST"
@@ -2023,7 +2023,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_awr_db_report.py.html>`__ to see an example of how to use get_awr_db_report API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_awr_db_report.py.html>`__ to see an example of how to use get_awr_db_report API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/awrDbs/{awrDbId}/awrDbReport"
         method = "GET"
@@ -2197,7 +2197,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_awr_db_sql_report.py.html>`__ to see an example of how to use get_awr_db_sql_report API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_awr_db_sql_report.py.html>`__ to see an example of how to use get_awr_db_sql_report API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/awrDbs/{awrDbId}/awrDbSqlReport"
         method = "GET"
@@ -2333,7 +2333,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_cluster_cache_metric.py.html>`__ to see an example of how to use get_cluster_cache_metric API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_cluster_cache_metric.py.html>`__ to see an example of how to use get_cluster_cache_metric API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/clusterCacheMetrics"
         method = "GET"
@@ -2467,7 +2467,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_database_fleet_health_metrics.py.html>`__ to see an example of how to use get_database_fleet_health_metrics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_database_fleet_health_metrics.py.html>`__ to see an example of how to use get_database_fleet_health_metrics API.
         """
         resource_path = "/fleetMetrics"
         method = "GET"
@@ -2588,7 +2588,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_database_home_metrics.py.html>`__ to see an example of how to use get_database_home_metrics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_database_home_metrics.py.html>`__ to see an example of how to use get_database_home_metrics API.
         """
         resource_path = "/databaseHomeMetrics"
         method = "GET"
@@ -2679,7 +2679,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_db_management_private_endpoint.py.html>`__ to see an example of how to use get_db_management_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_db_management_private_endpoint.py.html>`__ to see an example of how to use get_db_management_private_endpoint API.
         """
         resource_path = "/dbManagementPrivateEndpoints/{dbManagementPrivateEndpointId}"
         method = "GET"
@@ -2771,7 +2771,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_job.py.html>`__ to see an example of how to use get_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_job.py.html>`__ to see an example of how to use get_job API.
         """
         resource_path = "/jobs/{jobId}"
         method = "GET"
@@ -2863,7 +2863,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_job_execution.py.html>`__ to see an example of how to use get_job_execution API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_job_execution.py.html>`__ to see an example of how to use get_job_execution API.
         """
         resource_path = "/jobExecutions/{jobExecutionId}"
         method = "GET"
@@ -2955,7 +2955,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_job_run.py.html>`__ to see an example of how to use get_job_run API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_job_run.py.html>`__ to see an example of how to use get_job_run API.
         """
         resource_path = "/jobRuns/{jobRunId}"
         method = "GET"
@@ -3049,7 +3049,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_managed_database.py.html>`__ to see an example of how to use get_managed_database API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_managed_database.py.html>`__ to see an example of how to use get_managed_database API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}"
         method = "GET"
@@ -3143,7 +3143,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_managed_database_group.py.html>`__ to see an example of how to use get_managed_database_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_managed_database_group.py.html>`__ to see an example of how to use get_managed_database_group API.
         """
         resource_path = "/managedDatabaseGroups/{managedDatabaseGroupId}"
         method = "GET"
@@ -3244,7 +3244,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_optimizer_statistics_advisor_execution.py.html>`__ to see an example of how to use get_optimizer_statistics_advisor_execution API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_optimizer_statistics_advisor_execution.py.html>`__ to see an example of how to use get_optimizer_statistics_advisor_execution API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/optimizerStatisticsAdvisorExecutions/{executionName}"
         method = "GET"
@@ -3352,7 +3352,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_optimizer_statistics_advisor_execution_script.py.html>`__ to see an example of how to use get_optimizer_statistics_advisor_execution_script API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_optimizer_statistics_advisor_execution_script.py.html>`__ to see an example of how to use get_optimizer_statistics_advisor_execution_script API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/optimizerStatisticsAdvisorExecutions/{executionName}/script"
         method = "GET"
@@ -3457,7 +3457,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_optimizer_statistics_collection_operation.py.html>`__ to see an example of how to use get_optimizer_statistics_collection_operation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_optimizer_statistics_collection_operation.py.html>`__ to see an example of how to use get_optimizer_statistics_collection_operation API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/optimizerStatisticsCollectionOperations/{optimizerStatisticsCollectionOperationId}"
         method = "GET"
@@ -3576,7 +3576,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_pdb_metrics.py.html>`__ to see an example of how to use get_pdb_metrics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_pdb_metrics.py.html>`__ to see an example of how to use get_pdb_metrics API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/pdbMetrics"
         method = "GET"
@@ -3694,7 +3694,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_preferred_credential.py.html>`__ to see an example of how to use get_preferred_credential API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_preferred_credential.py.html>`__ to see an example of how to use get_preferred_credential API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/preferredCredentials/{credentialName}"
         method = "GET"
@@ -3792,7 +3792,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_tablespace.py.html>`__ to see an example of how to use get_tablespace API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_tablespace.py.html>`__ to see an example of how to use get_tablespace API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/tablespaces/{tablespaceName}"
         method = "GET"
@@ -3890,7 +3890,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_user.py.html>`__ to see an example of how to use get_user API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_user.py.html>`__ to see an example of how to use get_user API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/users/{userName}"
         method = "GET"
@@ -3985,7 +3985,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -4085,7 +4085,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/implement_optimizer_statistics_advisor_recommendations.py.html>`__ to see an example of how to use implement_optimizer_statistics_advisor_recommendations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/implement_optimizer_statistics_advisor_recommendations.py.html>`__ to see an example of how to use implement_optimizer_statistics_advisor_recommendations API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/optimizerStatisticsAdvisorExecutions/{executionName}/actions/implementRecommendations"
         method = "POST"
@@ -4204,7 +4204,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_asm_properties.py.html>`__ to see an example of how to use list_asm_properties API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_asm_properties.py.html>`__ to see an example of how to use list_asm_properties API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/asmProperties"
         method = "GET"
@@ -4350,7 +4350,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_associated_databases.py.html>`__ to see an example of how to use list_associated_databases API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_associated_databases.py.html>`__ to see an example of how to use list_associated_databases API.
         """
         resource_path = "/dbManagementPrivateEndpoints/{dbManagementPrivateEndpointId}/associatedDatabases"
         method = "GET"
@@ -4522,7 +4522,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_awr_db_snapshots.py.html>`__ to see an example of how to use list_awr_db_snapshots API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_awr_db_snapshots.py.html>`__ to see an example of how to use list_awr_db_snapshots API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/awrDbs/{awrDbId}/awrDbSnapshots"
         method = "GET"
@@ -4693,7 +4693,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_awr_dbs.py.html>`__ to see an example of how to use list_awr_dbs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_awr_dbs.py.html>`__ to see an example of how to use list_awr_dbs API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/awrDbs"
         method = "GET"
@@ -4848,7 +4848,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_consumer_group_privileges.py.html>`__ to see an example of how to use list_consumer_group_privileges API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_consumer_group_privileges.py.html>`__ to see an example of how to use list_consumer_group_privileges API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/users/{userName}/consumerGroupPrivileges"
         method = "GET"
@@ -4997,7 +4997,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_data_access_containers.py.html>`__ to see an example of how to use list_data_access_containers API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_data_access_containers.py.html>`__ to see an example of how to use list_data_access_containers API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/users/{userName}/dataAccessContainers"
         method = "GET"
@@ -5147,7 +5147,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_database_parameters.py.html>`__ to see an example of how to use list_database_parameters API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_database_parameters.py.html>`__ to see an example of how to use list_database_parameters API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/databaseParameters"
         method = "GET"
@@ -5313,7 +5313,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_db_management_private_endpoints.py.html>`__ to see an example of how to use list_db_management_private_endpoints API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_db_management_private_endpoints.py.html>`__ to see an example of how to use list_db_management_private_endpoints API.
         """
         resource_path = "/dbManagementPrivateEndpoints"
         method = "GET"
@@ -5486,7 +5486,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_job_executions.py.html>`__ to see an example of how to use list_job_executions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_job_executions.py.html>`__ to see an example of how to use list_job_executions API.
         """
         resource_path = "/jobExecutions"
         method = "GET"
@@ -5655,7 +5655,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_job_runs.py.html>`__ to see an example of how to use list_job_runs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_job_runs.py.html>`__ to see an example of how to use list_job_runs API.
         """
         resource_path = "/jobRuns"
         method = "GET"
@@ -5821,7 +5821,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_jobs.py.html>`__ to see an example of how to use list_jobs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_jobs.py.html>`__ to see an example of how to use list_jobs API.
         """
         resource_path = "/jobs"
         method = "GET"
@@ -5982,7 +5982,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_managed_database_groups.py.html>`__ to see an example of how to use list_managed_database_groups API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_managed_database_groups.py.html>`__ to see an example of how to use list_managed_database_groups API.
         """
         resource_path = "/managedDatabaseGroups"
         method = "GET"
@@ -6146,7 +6146,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_managed_databases.py.html>`__ to see an example of how to use list_managed_databases API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_managed_databases.py.html>`__ to see an example of how to use list_managed_databases API.
         """
         resource_path = "/managedDatabases"
         method = "GET"
@@ -6303,7 +6303,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_object_privileges.py.html>`__ to see an example of how to use list_object_privileges API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_object_privileges.py.html>`__ to see an example of how to use list_object_privileges API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/users/{userName}/objectPrivileges"
         method = "GET"
@@ -6438,7 +6438,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_optimizer_statistics_advisor_executions.py.html>`__ to see an example of how to use list_optimizer_statistics_advisor_executions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_optimizer_statistics_advisor_executions.py.html>`__ to see an example of how to use list_optimizer_statistics_advisor_executions API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/optimizerStatisticsAdvisorExecutions"
         method = "GET"
@@ -6572,7 +6572,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_optimizer_statistics_collection_aggregations.py.html>`__ to see an example of how to use list_optimizer_statistics_collection_aggregations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_optimizer_statistics_collection_aggregations.py.html>`__ to see an example of how to use list_optimizer_statistics_collection_aggregations API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/optimizerStatisticsCollectionAggregations"
         method = "GET"
@@ -6738,7 +6738,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_optimizer_statistics_collection_operations.py.html>`__ to see an example of how to use list_optimizer_statistics_collection_operations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_optimizer_statistics_collection_operations.py.html>`__ to see an example of how to use list_optimizer_statistics_collection_operations API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/optimizerStatisticsCollectionOperations"
         method = "GET"
@@ -6875,7 +6875,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_preferred_credentials.py.html>`__ to see an example of how to use list_preferred_credentials API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_preferred_credentials.py.html>`__ to see an example of how to use list_preferred_credentials API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/preferredCredentials"
         method = "GET"
@@ -6993,7 +6993,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_proxied_for_users.py.html>`__ to see an example of how to use list_proxied_for_users API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_proxied_for_users.py.html>`__ to see an example of how to use list_proxied_for_users API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/users/{userName}/proxiedForUsers"
         method = "GET"
@@ -7142,7 +7142,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_proxy_users.py.html>`__ to see an example of how to use list_proxy_users API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_proxy_users.py.html>`__ to see an example of how to use list_proxy_users API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/users/{userName}/proxyUsers"
         method = "GET"
@@ -7291,7 +7291,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_roles.py.html>`__ to see an example of how to use list_roles API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_roles.py.html>`__ to see an example of how to use list_roles API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/users/{userName}/roles"
         method = "GET"
@@ -7440,7 +7440,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_system_privileges.py.html>`__ to see an example of how to use list_system_privileges API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_system_privileges.py.html>`__ to see an example of how to use list_system_privileges API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/users/{userName}/systemPrivileges"
         method = "GET"
@@ -7566,7 +7566,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_table_statistics.py.html>`__ to see an example of how to use list_table_statistics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_table_statistics.py.html>`__ to see an example of how to use list_table_statistics API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/tableStatistics"
         method = "GET"
@@ -7682,7 +7682,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_tablespaces.py.html>`__ to see an example of how to use list_tablespaces API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_tablespaces.py.html>`__ to see an example of how to use list_tablespaces API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/tablespaces"
         method = "GET"
@@ -7828,7 +7828,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_users.py.html>`__ to see an example of how to use list_users API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_users.py.html>`__ to see an example of how to use list_users API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/users"
         method = "GET"
@@ -7969,7 +7969,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -8108,7 +8108,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -8262,7 +8262,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -8399,7 +8399,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/remove_data_file.py.html>`__ to see an example of how to use remove_data_file API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/remove_data_file.py.html>`__ to see an example of how to use remove_data_file API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/tablespaces/{tablespaceName}/actions/removeDataFile"
         method = "POST"
@@ -8512,7 +8512,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/remove_managed_database_from_managed_database_group.py.html>`__ to see an example of how to use remove_managed_database_from_managed_database_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/remove_managed_database_from_managed_database_group.py.html>`__ to see an example of how to use remove_managed_database_from_managed_database_group API.
         """
         resource_path = "/managedDatabaseGroups/{managedDatabaseGroupId}/actions/removeManagedDatabase"
         method = "POST"
@@ -8619,7 +8619,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/reset_database_parameters.py.html>`__ to see an example of how to use reset_database_parameters API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/reset_database_parameters.py.html>`__ to see an example of how to use reset_database_parameters API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/actions/resetDatabaseParameters"
         method = "POST"
@@ -8731,7 +8731,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/resize_data_file.py.html>`__ to see an example of how to use resize_data_file API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/resize_data_file.py.html>`__ to see an example of how to use resize_data_file API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/tablespaces/{tablespaceName}/actions/resizeDataFile"
         method = "POST"
@@ -8842,7 +8842,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/run_historic_addm.py.html>`__ to see an example of how to use run_historic_addm API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/run_historic_addm.py.html>`__ to see an example of how to use run_historic_addm API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/actions/runHistoricAddm"
         method = "POST"
@@ -8995,7 +8995,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/summarize_awr_db_cpu_usages.py.html>`__ to see an example of how to use summarize_awr_db_cpu_usages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/summarize_awr_db_cpu_usages.py.html>`__ to see an example of how to use summarize_awr_db_cpu_usages API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/awrDbs/{awrDbId}/awrDbCpuUsages"
         method = "GET"
@@ -9194,7 +9194,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/summarize_awr_db_metrics.py.html>`__ to see an example of how to use summarize_awr_db_metrics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/summarize_awr_db_metrics.py.html>`__ to see an example of how to use summarize_awr_db_metrics API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/awrDbs/{awrDbId}/awrDbMetrics"
         method = "GET"
@@ -9389,7 +9389,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/summarize_awr_db_parameter_changes.py.html>`__ to see an example of how to use summarize_awr_db_parameter_changes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/summarize_awr_db_parameter_changes.py.html>`__ to see an example of how to use summarize_awr_db_parameter_changes API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/awrDbs/{awrDbId}/awrDbParameterChanges"
         method = "GET"
@@ -9608,7 +9608,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/summarize_awr_db_parameters.py.html>`__ to see an example of how to use summarize_awr_db_parameters API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/summarize_awr_db_parameters.py.html>`__ to see an example of how to use summarize_awr_db_parameters API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/awrDbs/{awrDbId}/awrDbParameters"
         method = "GET"
@@ -9810,7 +9810,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/summarize_awr_db_snapshot_ranges.py.html>`__ to see an example of how to use summarize_awr_db_snapshot_ranges API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/summarize_awr_db_snapshot_ranges.py.html>`__ to see an example of how to use summarize_awr_db_snapshot_ranges API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/awrDbSnapshotRanges"
         method = "GET"
@@ -9993,7 +9993,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/summarize_awr_db_sysstats.py.html>`__ to see an example of how to use summarize_awr_db_sysstats API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/summarize_awr_db_sysstats.py.html>`__ to see an example of how to use summarize_awr_db_sysstats API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/awrDbs/{awrDbId}/awrDbSysstats"
         method = "GET"
@@ -10182,7 +10182,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/summarize_awr_db_top_wait_events.py.html>`__ to see an example of how to use summarize_awr_db_top_wait_events API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/summarize_awr_db_top_wait_events.py.html>`__ to see an example of how to use summarize_awr_db_top_wait_events API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/awrDbs/{awrDbId}/awrDbTopWaitEvents"
         method = "GET"
@@ -10388,7 +10388,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/summarize_awr_db_wait_event_buckets.py.html>`__ to see an example of how to use summarize_awr_db_wait_event_buckets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/summarize_awr_db_wait_event_buckets.py.html>`__ to see an example of how to use summarize_awr_db_wait_event_buckets API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/awrDbs/{awrDbId}/awrDbWaitEventBuckets"
         method = "GET"
@@ -10590,7 +10590,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/summarize_awr_db_wait_events.py.html>`__ to see an example of how to use summarize_awr_db_wait_events API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/summarize_awr_db_wait_events.py.html>`__ to see an example of how to use summarize_awr_db_wait_events API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/awrDbs/{awrDbId}/awrDbWaitEvents"
         method = "GET"
@@ -10775,7 +10775,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/summarize_job_executions_statuses.py.html>`__ to see an example of how to use summarize_job_executions_statuses API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/summarize_job_executions_statuses.py.html>`__ to see an example of how to use summarize_job_executions_statuses API.
         """
         resource_path = "/jobExecutionsStatus"
         method = "GET"
@@ -10898,7 +10898,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/test_preferred_credential.py.html>`__ to see an example of how to use test_preferred_credential API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/test_preferred_credential.py.html>`__ to see an example of how to use test_preferred_credential API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/preferredCredentials/{credentialName}/actions/test"
         method = "POST"
@@ -11006,7 +11006,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/update_db_management_private_endpoint.py.html>`__ to see an example of how to use update_db_management_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/update_db_management_private_endpoint.py.html>`__ to see an example of how to use update_db_management_private_endpoint API.
         """
         resource_path = "/dbManagementPrivateEndpoints/{dbManagementPrivateEndpointId}"
         method = "PUT"
@@ -11112,7 +11112,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/update_job.py.html>`__ to see an example of how to use update_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/update_job.py.html>`__ to see an example of how to use update_job API.
         """
         resource_path = "/jobs/{jobId}"
         method = "PUT"
@@ -11220,7 +11220,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/update_managed_database_group.py.html>`__ to see an example of how to use update_managed_database_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/update_managed_database_group.py.html>`__ to see an example of how to use update_managed_database_group API.
         """
         resource_path = "/managedDatabaseGroups/{managedDatabaseGroupId}"
         method = "PUT"
@@ -11331,7 +11331,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/update_preferred_credential.py.html>`__ to see an example of how to use update_preferred_credential API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/update_preferred_credential.py.html>`__ to see an example of how to use update_preferred_credential API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/preferredCredentials/{credentialName}"
         method = "PUT"
@@ -11436,7 +11436,7 @@ class DbManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemanagement/update_tablespace.py.html>`__ to see an example of how to use update_tablespace API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/update_tablespace.py.html>`__ to see an example of how to use update_tablespace API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/tablespaces/{tablespaceName}"
         method = "PUT"

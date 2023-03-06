@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -139,7 +139,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/create_management_agent_install_key.py.html>`__ to see an example of how to use create_management_agent_install_key API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/create_management_agent_install_key.py.html>`__ to see an example of how to use create_management_agent_install_key API.
         """
         resource_path = "/managementAgentInstallKeys"
         method = "POST"
@@ -231,7 +231,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/delete_management_agent.py.html>`__ to see an example of how to use delete_management_agent API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/delete_management_agent.py.html>`__ to see an example of how to use delete_management_agent API.
         """
         resource_path = "/managementAgents/{managementAgentId}"
         method = "DELETE"
@@ -330,7 +330,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/delete_management_agent_install_key.py.html>`__ to see an example of how to use delete_management_agent_install_key API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/delete_management_agent_install_key.py.html>`__ to see an example of how to use delete_management_agent_install_key API.
         """
         resource_path = "/managementAgentInstallKeys/{managementAgentInstallKeyId}"
         method = "DELETE"
@@ -429,7 +429,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/delete_work_request.py.html>`__ to see an example of how to use delete_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/delete_work_request.py.html>`__ to see an example of how to use delete_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "DELETE"
@@ -528,7 +528,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/deploy_plugins.py.html>`__ to see an example of how to use deploy_plugins API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/deploy_plugins.py.html>`__ to see an example of how to use deploy_plugins API.
         """
         resource_path = "/managementAgents/actions/deployPlugins"
         method = "POST"
@@ -612,7 +612,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/get_auto_upgradable_config.py.html>`__ to see an example of how to use get_auto_upgradable_config API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/get_auto_upgradable_config.py.html>`__ to see an example of how to use get_auto_upgradable_config API.
         """
         resource_path = "/managementAgents/actions/getAutoUpgradableConfig"
         method = "GET"
@@ -699,7 +699,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/get_management_agent.py.html>`__ to see an example of how to use get_management_agent API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/get_management_agent.py.html>`__ to see an example of how to use get_management_agent API.
         """
         resource_path = "/managementAgents/{managementAgentId}"
         method = "GET"
@@ -791,7 +791,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/get_management_agent_install_key.py.html>`__ to see an example of how to use get_management_agent_install_key API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/get_management_agent_install_key.py.html>`__ to see an example of how to use get_management_agent_install_key API.
         """
         resource_path = "/managementAgentInstallKeys/{managementAgentInstallKeyId}"
         method = "GET"
@@ -886,7 +886,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/get_management_agent_install_key_content.py.html>`__ to see an example of how to use get_management_agent_install_key_content API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/get_management_agent_install_key_content.py.html>`__ to see an example of how to use get_management_agent_install_key_content API.
         """
         resource_path = "/managementAgentInstallKeys/{managementAgentInstallKeyId}/content"
         method = "GET"
@@ -986,7 +986,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -1108,7 +1108,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/list_availability_histories.py.html>`__ to see an example of how to use list_availability_histories API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/list_availability_histories.py.html>`__ to see an example of how to use list_availability_histories API.
         """
         resource_path = "/managementAgents/{managementAgentId}/availabilityHistories"
         method = "GET"
@@ -1268,7 +1268,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/list_management_agent_images.py.html>`__ to see an example of how to use list_management_agent_images API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/list_management_agent_images.py.html>`__ to see an example of how to use list_management_agent_images API.
         """
         resource_path = "/managementAgentImages"
         method = "GET"
@@ -1427,7 +1427,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/list_management_agent_install_keys.py.html>`__ to see an example of how to use list_management_agent_install_keys API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/list_management_agent_install_keys.py.html>`__ to see an example of how to use list_management_agent_install_keys API.
         """
         resource_path = "/managementAgentInstallKeys"
         method = "GET"
@@ -1581,7 +1581,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/list_management_agent_plugins.py.html>`__ to see an example of how to use list_management_agent_plugins API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/list_management_agent_plugins.py.html>`__ to see an example of how to use list_management_agent_plugins API.
         """
         resource_path = "/managementAgentPlugins"
         method = "GET"
@@ -1772,7 +1772,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/list_management_agents.py.html>`__ to see an example of how to use list_management_agents API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/list_management_agents.py.html>`__ to see an example of how to use list_management_agents API.
         """
         resource_path = "/managementAgents"
         method = "GET"
@@ -1948,7 +1948,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -2084,7 +2084,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -2238,7 +2238,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -2377,7 +2377,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/set_auto_upgradable_config.py.html>`__ to see an example of how to use set_auto_upgradable_config API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/set_auto_upgradable_config.py.html>`__ to see an example of how to use set_auto_upgradable_config API.
         """
         resource_path = "/managementAgents/actions/setAutoUpgradableConfig"
         method = "POST"
@@ -2479,7 +2479,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/summarize_management_agent_counts.py.html>`__ to see an example of how to use summarize_management_agent_counts API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/summarize_management_agent_counts.py.html>`__ to see an example of how to use summarize_management_agent_counts API.
         """
         resource_path = "/managementAgentCounts"
         method = "GET"
@@ -2596,7 +2596,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/summarize_management_agent_plugin_counts.py.html>`__ to see an example of how to use summarize_management_agent_plugin_counts API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/summarize_management_agent_plugin_counts.py.html>`__ to see an example of how to use summarize_management_agent_plugin_counts API.
         """
         resource_path = "/managementAgentPluginCounts"
         method = "GET"
@@ -2709,7 +2709,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/update_management_agent.py.html>`__ to see an example of how to use update_management_agent API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/update_management_agent.py.html>`__ to see an example of how to use update_management_agent API.
         """
         resource_path = "/managementAgents/{managementAgentId}"
         method = "PUT"
@@ -2825,7 +2825,7 @@ class ManagementAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/managementagent/update_management_agent_install_key.py.html>`__ to see an example of how to use update_management_agent_install_key API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/managementagent/update_management_agent_install_key.py.html>`__ to see an example of how to use update_management_agent_install_key API.
         """
         resource_path = "/managementAgentInstallKeys/{managementAgentInstallKeyId}"
         method = "PUT"

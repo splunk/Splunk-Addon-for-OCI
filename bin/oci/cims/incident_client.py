@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -137,7 +137,7 @@ class IncidentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cims/create_incident.py.html>`__ to see an example of how to use create_incident API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cims/create_incident.py.html>`__ to see an example of how to use create_incident API.
         """
         resource_path = "/v2/incidents"
         method = "POST"
@@ -234,7 +234,7 @@ class IncidentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cims/get_incident.py.html>`__ to see an example of how to use get_incident API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cims/get_incident.py.html>`__ to see an example of how to use get_incident API.
         """
         resource_path = "/v2/incidents/{incidentKey}"
         method = "GET"
@@ -338,7 +338,7 @@ class IncidentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cims/get_status.py.html>`__ to see an example of how to use get_status API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cims/get_status.py.html>`__ to see an example of how to use get_status API.
         """
         resource_path = "/v2/incidents/status/{source}"
         method = "GET"
@@ -468,7 +468,7 @@ class IncidentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cims/list_incident_resource_types.py.html>`__ to see an example of how to use list_incident_resource_types API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cims/list_incident_resource_types.py.html>`__ to see an example of how to use list_incident_resource_types API.
         """
         resource_path = "/v2/incidents/incidentResourceTypes"
         method = "GET"
@@ -621,7 +621,7 @@ class IncidentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cims/list_incidents.py.html>`__ to see an example of how to use list_incidents API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cims/list_incidents.py.html>`__ to see an example of how to use list_incidents API.
         """
         resource_path = "/v2/incidents"
         method = "GET"
@@ -760,7 +760,7 @@ class IncidentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cims/update_incident.py.html>`__ to see an example of how to use update_incident API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cims/update_incident.py.html>`__ to see an example of how to use update_incident API.
         """
         resource_path = "/v2/incidents/{incidentKey}"
         method = "PUT"
@@ -869,7 +869,7 @@ class IncidentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/cims/validate_user.py.html>`__ to see an example of how to use validate_user API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cims/validate_user.py.html>`__ to see an example of how to use validate_user API.
         """
         resource_path = "/v2/incidents/user/validate"
         method = "GET"

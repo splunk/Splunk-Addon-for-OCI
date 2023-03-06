@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -28,6 +28,10 @@ class WorkRequestSummary(object):
     #: A constant which can be used with the operation_type property of a WorkRequestSummary.
     #: This constant has a value of "NOTEBOOK_SESSION_DEACTIVATE"
     OPERATION_TYPE_NOTEBOOK_SESSION_DEACTIVATE = "NOTEBOOK_SESSION_DEACTIVATE"
+
+    #: A constant which can be used with the operation_type property of a WorkRequestSummary.
+    #: This constant has a value of "MODELVERSIONSET_DELETE"
+    OPERATION_TYPE_MODELVERSIONSET_DELETE = "MODELVERSIONSET_DELETE"
 
     #: A constant which can be used with the operation_type property of a WorkRequestSummary.
     #: This constant has a value of "EXPORT_MODEL_ARTIFACT"
@@ -69,6 +73,26 @@ class WorkRequestSummary(object):
     #: This constant has a value of "JOB_DELETE"
     OPERATION_TYPE_JOB_DELETE = "JOB_DELETE"
 
+    #: A constant which can be used with the operation_type property of a WorkRequestSummary.
+    #: This constant has a value of "PIPELINE_CREATE"
+    OPERATION_TYPE_PIPELINE_CREATE = "PIPELINE_CREATE"
+
+    #: A constant which can be used with the operation_type property of a WorkRequestSummary.
+    #: This constant has a value of "PIPELINE_DELETE"
+    OPERATION_TYPE_PIPELINE_DELETE = "PIPELINE_DELETE"
+
+    #: A constant which can be used with the operation_type property of a WorkRequestSummary.
+    #: This constant has a value of "PIPELINE_RUN_CREATE"
+    OPERATION_TYPE_PIPELINE_RUN_CREATE = "PIPELINE_RUN_CREATE"
+
+    #: A constant which can be used with the operation_type property of a WorkRequestSummary.
+    #: This constant has a value of "PIPELINE_RUN_CANCEL"
+    OPERATION_TYPE_PIPELINE_RUN_CANCEL = "PIPELINE_RUN_CANCEL"
+
+    #: A constant which can be used with the operation_type property of a WorkRequestSummary.
+    #: This constant has a value of "PIPELINE_RUN_DELETE"
+    OPERATION_TYPE_PIPELINE_RUN_DELETE = "PIPELINE_RUN_DELETE"
+
     #: A constant which can be used with the status property of a WorkRequestSummary.
     #: This constant has a value of "ACCEPTED"
     STATUS_ACCEPTED = "ACCEPTED"
@@ -104,7 +128,7 @@ class WorkRequestSummary(object):
 
         :param operation_type:
             The value to assign to the operation_type property of this WorkRequestSummary.
-            Allowed values for this property are: "NOTEBOOK_SESSION_CREATE", "NOTEBOOK_SESSION_DELETE", "NOTEBOOK_SESSION_ACTIVATE", "NOTEBOOK_SESSION_DEACTIVATE", "EXPORT_MODEL_ARTIFACT", "IMPORT_MODEL_ARTIFACT", "MODEL_DEPLOYMENT_CREATE", "MODEL_DEPLOYMENT_DELETE", "MODEL_DEPLOYMENT_ACTIVATE", "MODEL_DEPLOYMENT_DEACTIVATE", "MODEL_DEPLOYMENT_UPDATE", "PROJECT_DELETE", "WORKREQUEST_CANCEL", "JOB_DELETE", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for this property are: "NOTEBOOK_SESSION_CREATE", "NOTEBOOK_SESSION_DELETE", "NOTEBOOK_SESSION_ACTIVATE", "NOTEBOOK_SESSION_DEACTIVATE", "MODELVERSIONSET_DELETE", "EXPORT_MODEL_ARTIFACT", "IMPORT_MODEL_ARTIFACT", "MODEL_DEPLOYMENT_CREATE", "MODEL_DEPLOYMENT_DELETE", "MODEL_DEPLOYMENT_ACTIVATE", "MODEL_DEPLOYMENT_DEACTIVATE", "MODEL_DEPLOYMENT_UPDATE", "PROJECT_DELETE", "WORKREQUEST_CANCEL", "JOB_DELETE", "PIPELINE_CREATE", "PIPELINE_DELETE", "PIPELINE_RUN_CREATE", "PIPELINE_RUN_CANCEL", "PIPELINE_RUN_DELETE", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type operation_type: str
 
@@ -207,7 +231,7 @@ class WorkRequestSummary(object):
         **[Required]** Gets the operation_type of this WorkRequestSummary.
         The type of work the work request is doing.
 
-        Allowed values for this property are: "NOTEBOOK_SESSION_CREATE", "NOTEBOOK_SESSION_DELETE", "NOTEBOOK_SESSION_ACTIVATE", "NOTEBOOK_SESSION_DEACTIVATE", "EXPORT_MODEL_ARTIFACT", "IMPORT_MODEL_ARTIFACT", "MODEL_DEPLOYMENT_CREATE", "MODEL_DEPLOYMENT_DELETE", "MODEL_DEPLOYMENT_ACTIVATE", "MODEL_DEPLOYMENT_DEACTIVATE", "MODEL_DEPLOYMENT_UPDATE", "PROJECT_DELETE", "WORKREQUEST_CANCEL", "JOB_DELETE", 'UNKNOWN_ENUM_VALUE'.
+        Allowed values for this property are: "NOTEBOOK_SESSION_CREATE", "NOTEBOOK_SESSION_DELETE", "NOTEBOOK_SESSION_ACTIVATE", "NOTEBOOK_SESSION_DEACTIVATE", "MODELVERSIONSET_DELETE", "EXPORT_MODEL_ARTIFACT", "IMPORT_MODEL_ARTIFACT", "MODEL_DEPLOYMENT_CREATE", "MODEL_DEPLOYMENT_DELETE", "MODEL_DEPLOYMENT_ACTIVATE", "MODEL_DEPLOYMENT_DEACTIVATE", "MODEL_DEPLOYMENT_UPDATE", "PROJECT_DELETE", "WORKREQUEST_CANCEL", "JOB_DELETE", "PIPELINE_CREATE", "PIPELINE_DELETE", "PIPELINE_RUN_CREATE", "PIPELINE_RUN_CANCEL", "PIPELINE_RUN_DELETE", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
 
 
@@ -226,7 +250,7 @@ class WorkRequestSummary(object):
         :param operation_type: The operation_type of this WorkRequestSummary.
         :type: str
         """
-        allowed_values = ["NOTEBOOK_SESSION_CREATE", "NOTEBOOK_SESSION_DELETE", "NOTEBOOK_SESSION_ACTIVATE", "NOTEBOOK_SESSION_DEACTIVATE", "EXPORT_MODEL_ARTIFACT", "IMPORT_MODEL_ARTIFACT", "MODEL_DEPLOYMENT_CREATE", "MODEL_DEPLOYMENT_DELETE", "MODEL_DEPLOYMENT_ACTIVATE", "MODEL_DEPLOYMENT_DEACTIVATE", "MODEL_DEPLOYMENT_UPDATE", "PROJECT_DELETE", "WORKREQUEST_CANCEL", "JOB_DELETE"]
+        allowed_values = ["NOTEBOOK_SESSION_CREATE", "NOTEBOOK_SESSION_DELETE", "NOTEBOOK_SESSION_ACTIVATE", "NOTEBOOK_SESSION_DEACTIVATE", "MODELVERSIONSET_DELETE", "EXPORT_MODEL_ARTIFACT", "IMPORT_MODEL_ARTIFACT", "MODEL_DEPLOYMENT_CREATE", "MODEL_DEPLOYMENT_DELETE", "MODEL_DEPLOYMENT_ACTIVATE", "MODEL_DEPLOYMENT_DEACTIVATE", "MODEL_DEPLOYMENT_UPDATE", "PROJECT_DELETE", "WORKREQUEST_CANCEL", "JOB_DELETE", "PIPELINE_CREATE", "PIPELINE_DELETE", "PIPELINE_RUN_CREATE", "PIPELINE_RUN_CANCEL", "PIPELINE_RUN_DELETE"]
         if not value_allowed_none_or_none_sentinel(operation_type, allowed_values):
             operation_type = 'UNKNOWN_ENUM_VALUE'
         self._operation_type = operation_type

@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from .create_service_attachment_details import CreateServiceAttachmentDetails
@@ -76,7 +76,7 @@ class AttachExistingInstanceDetails(CreateServiceAttachmentDetails):
     @property
     def service_instance_type(self):
         """
-        Gets the service_instance_type of this AttachExistingInstanceDetails.
+        **[Required]** Gets the service_instance_type of this AttachExistingInstanceDetails.
         Type of the ServiceInstance being attached.
 
         Allowed values for this property are: "INTEGRATION_CLOUD", "ANALYTICS_WAREHOUSE"
@@ -108,7 +108,7 @@ class AttachExistingInstanceDetails(CreateServiceAttachmentDetails):
     @property
     def instance_id(self):
         """
-        Gets the instance_id of this AttachExistingInstanceDetails.
+        **[Required]** Gets the instance_id of this AttachExistingInstanceDetails.
         The service instance OCID of the instance being attached
 
 

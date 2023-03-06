@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -148,7 +148,7 @@ class RoverEntitlementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/rover/change_rover_entitlement_compartment.py.html>`__ to see an example of how to use change_rover_entitlement_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/change_rover_entitlement_compartment.py.html>`__ to see an example of how to use change_rover_entitlement_compartment API.
         """
         resource_path = "/roverEntitlements/{roverEntitlementId}/actions/changeCompartment"
         method = "POST"
@@ -254,7 +254,7 @@ class RoverEntitlementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/rover/create_rover_entitlement.py.html>`__ to see an example of how to use create_rover_entitlement API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/create_rover_entitlement.py.html>`__ to see an example of how to use create_rover_entitlement API.
         """
         resource_path = "/roverEntitlements"
         method = "POST"
@@ -355,7 +355,7 @@ class RoverEntitlementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/rover/delete_rover_entitlement.py.html>`__ to see an example of how to use delete_rover_entitlement API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/delete_rover_entitlement.py.html>`__ to see an example of how to use delete_rover_entitlement API.
         """
         resource_path = "/roverEntitlements/{roverEntitlementId}"
         method = "DELETE"
@@ -462,7 +462,7 @@ class RoverEntitlementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/rover/get_rover_entitlement.py.html>`__ to see an example of how to use get_rover_entitlement API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/get_rover_entitlement.py.html>`__ to see an example of how to use get_rover_entitlement API.
         """
         resource_path = "/roverEntitlements/{roverEntitlementId}"
         method = "GET"
@@ -593,7 +593,7 @@ class RoverEntitlementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/rover/list_rover_entitlements.py.html>`__ to see an example of how to use list_rover_entitlements API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/list_rover_entitlements.py.html>`__ to see an example of how to use list_rover_entitlements API.
         """
         resource_path = "/roverEntitlements"
         method = "GET"
@@ -727,7 +727,7 @@ class RoverEntitlementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/rover/update_rover_entitlement.py.html>`__ to see an example of how to use update_rover_entitlement API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/update_rover_entitlement.py.html>`__ to see an example of how to use update_rover_entitlement API.
         """
         resource_path = "/roverEntitlements/{roverEntitlementId}"
         method = "PUT"

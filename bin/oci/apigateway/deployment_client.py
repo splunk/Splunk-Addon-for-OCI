@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -150,7 +150,7 @@ class DeploymentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apigateway/change_deployment_compartment.py.html>`__ to see an example of how to use change_deployment_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/change_deployment_compartment.py.html>`__ to see an example of how to use change_deployment_compartment API.
         """
         resource_path = "/deployments/{deploymentId}/actions/changeCompartment"
         method = "POST"
@@ -254,7 +254,7 @@ class DeploymentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apigateway/create_deployment.py.html>`__ to see an example of how to use create_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/create_deployment.py.html>`__ to see an example of how to use create_deployment API.
         """
         resource_path = "/deployments"
         method = "POST"
@@ -348,7 +348,7 @@ class DeploymentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apigateway/delete_deployment.py.html>`__ to see an example of how to use delete_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/delete_deployment.py.html>`__ to see an example of how to use delete_deployment API.
         """
         resource_path = "/deployments/{deploymentId}"
         method = "DELETE"
@@ -440,7 +440,7 @@ class DeploymentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apigateway/get_deployment.py.html>`__ to see an example of how to use get_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/get_deployment.py.html>`__ to see an example of how to use get_deployment API.
         """
         resource_path = "/deployments/{deploymentId}"
         method = "GET"
@@ -568,7 +568,7 @@ class DeploymentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apigateway/list_deployments.py.html>`__ to see an example of how to use list_deployments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/list_deployments.py.html>`__ to see an example of how to use list_deployments API.
         """
         resource_path = "/deployments"
         method = "GET"
@@ -702,7 +702,7 @@ class DeploymentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apigateway/update_deployment.py.html>`__ to see an example of how to use update_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/update_deployment.py.html>`__ to see an example of how to use update_deployment API.
         """
         resource_path = "/deployments/{deploymentId}"
         method = "PUT"

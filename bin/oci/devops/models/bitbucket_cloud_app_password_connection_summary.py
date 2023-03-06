@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from .connection_summary import ConnectionSummary
@@ -52,6 +52,10 @@ class BitbucketCloudAppPasswordConnectionSummary(ConnectionSummary):
             The value to assign to the time_updated property of this BitbucketCloudAppPasswordConnectionSummary.
         :type time_updated: datetime
 
+        :param lifecycle_details:
+            The value to assign to the lifecycle_details property of this BitbucketCloudAppPasswordConnectionSummary.
+        :type lifecycle_details: str
+
         :param lifecycle_state:
             The value to assign to the lifecycle_state property of this BitbucketCloudAppPasswordConnectionSummary.
         :type lifecycle_state: str
@@ -86,6 +90,7 @@ class BitbucketCloudAppPasswordConnectionSummary(ConnectionSummary):
             'connection_type': 'str',
             'time_created': 'datetime',
             'time_updated': 'datetime',
+            'lifecycle_details': 'str',
             'lifecycle_state': 'str',
             'freeform_tags': 'dict(str, str)',
             'defined_tags': 'dict(str, dict(str, object))',
@@ -103,6 +108,7 @@ class BitbucketCloudAppPasswordConnectionSummary(ConnectionSummary):
             'connection_type': 'connectionType',
             'time_created': 'timeCreated',
             'time_updated': 'timeUpdated',
+            'lifecycle_details': 'lifecycleDetails',
             'lifecycle_state': 'lifecycleState',
             'freeform_tags': 'freeformTags',
             'defined_tags': 'definedTags',
@@ -119,6 +125,7 @@ class BitbucketCloudAppPasswordConnectionSummary(ConnectionSummary):
         self._connection_type = None
         self._time_created = None
         self._time_updated = None
+        self._lifecycle_details = None
         self._lifecycle_state = None
         self._freeform_tags = None
         self._defined_tags = None

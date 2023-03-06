@@ -1,10 +1,10 @@
 import os
 import socket
-from sys import platform
-from functools import wraps, partial
-from itertools import count, chain
-from weakref import WeakValueDictionary
 from errno import errorcode
+from functools import partial, wraps
+from itertools import chain, count
+from sys import platform
+from weakref import WeakValueDictionary
 
 from OpenSSL._util import (
     UNSPECIFIED as _UNSPECIFIED,
@@ -12,18 +12,17 @@ from OpenSSL._util import (
     ffi as _ffi,
     lib as _lib,
     make_assert as _make_assert,
+    no_zero_allocator as _no_zero_allocator,
     path_bytes as _path_bytes,
     text_to_bytes_and_warn as _text_to_bytes_and_warn,
-    no_zero_allocator as _no_zero_allocator,
 )
-
 from OpenSSL.crypto import (
     FILETYPE_PEM,
-    _PassphraseHelper,
     PKey,
-    X509Name,
     X509,
+    X509Name,
     X509Store,
+    _PassphraseHelper,
 )
 
 __all__ = [
@@ -33,10 +32,13 @@ __all__ = [
     "SSLEAY_PLATFORM",
     "SSLEAY_DIR",
     "SSLEAY_BUILT_ON",
+    "OPENSSL_VERSION",
+    "OPENSSL_CFLAGS",
+    "OPENSSL_PLATFORM",
+    "OPENSSL_DIR",
+    "OPENSSL_BUILT_ON",
     "SENT_SHUTDOWN",
     "RECEIVED_SHUTDOWN",
-    "SSLv2_METHOD",
-    "SSLv3_METHOD",
     "SSLv23_METHOD",
     "TLSv1_METHOD",
     "TLSv1_1_METHOD",
@@ -83,6 +85,7 @@ __all__ = [
     "OP_COOKIE_EXCHANGE",
     "OP_NO_TICKET",
     "OP_NO_RENEGOTIATION",
+    "OP_IGNORE_UNEXPECTED_EOF",
     "OP_ALL",
     "VERIFY_PEER",
     "VERIFY_FAIL_IF_NO_PEER_CERT",
@@ -127,17 +130,15 @@ __all__ = [
 
 
 OPENSSL_VERSION_NUMBER = _lib.OPENSSL_VERSION_NUMBER
-SSLEAY_VERSION = _lib.SSLEAY_VERSION
-SSLEAY_CFLAGS = _lib.SSLEAY_CFLAGS
-SSLEAY_PLATFORM = _lib.SSLEAY_PLATFORM
-SSLEAY_DIR = _lib.SSLEAY_DIR
-SSLEAY_BUILT_ON = _lib.SSLEAY_BUILT_ON
+OPENSSL_VERSION = SSLEAY_VERSION = _lib.OPENSSL_VERSION
+OPENSSL_CFLAGS = SSLEAY_CFLAGS = _lib.OPENSSL_CFLAGS
+OPENSSL_PLATFORM = SSLEAY_PLATFORM = _lib.OPENSSL_PLATFORM
+OPENSSL_DIR = SSLEAY_DIR = _lib.OPENSSL_DIR
+OPENSSL_BUILT_ON = SSLEAY_BUILT_ON = _lib.OPENSSL_BUILT_ON
 
 SENT_SHUTDOWN = _lib.SSL_SENT_SHUTDOWN
 RECEIVED_SHUTDOWN = _lib.SSL_RECEIVED_SHUTDOWN
 
-SSLv2_METHOD = 1
-SSLv3_METHOD = 2
 SSLv23_METHOD = 3
 TLSv1_METHOD = 4
 TLSv1_1_METHOD = 5
@@ -207,6 +208,11 @@ OP_NO_TICKET = _lib.SSL_OP_NO_TICKET
 
 try:
     OP_NO_RENEGOTIATION = _lib.SSL_OP_NO_RENEGOTIATION
+except AttributeError:
+    pass
+
+try:
+    OP_IGNORE_UNEXPECTED_EOF = _lib.SSL_OP_IGNORE_UNEXPECTED_EOF
 except AttributeError:
     pass
 
@@ -293,7 +299,7 @@ class SysCallError(Error):
     pass
 
 
-class _CallbackExceptionHelper(object):
+class _CallbackExceptionHelper:
     """
     A base class for wrapper classes that allow for intelligent exception
     handling in OpenSSL callbacks.
@@ -613,13 +619,16 @@ def _asFileDescriptor(obj):
     return fd
 
 
-def SSLeay_version(type):
+def OpenSSL_version(type):
     """
     Return a string describing the version of OpenSSL in use.
 
-    :param type: One of the :const:`SSLEAY_` constants defined in this module.
+    :param type: One of the :const:`OPENSSL_` constants defined in this module.
     """
-    return _ffi.string(_lib.SSLeay_version(type))
+    return _ffi.string(_lib.OpenSSL_version(type))
+
+
+SSLeay_version = OpenSSL_version
 
 
 def _make_requires(flag, error):
@@ -657,7 +666,7 @@ _requires_keylog = _make_requires(
 )
 
 
-class Session(object):
+class Session:
     """
     A class representing an SSL session.  A session defines certain connection
     parameters which may be re-used to speed up the setup of subsequent
@@ -669,7 +678,7 @@ class Session(object):
     pass
 
 
-class Context(object):
+class Context:
     """
     :class:`OpenSSL.SSL.Context` instances define the parameters for setting
     up new SSL connections.
@@ -681,31 +690,24 @@ class Context(object):
     """
 
     _methods = {
-        SSLv2_METHOD: "SSLv2_method",
-        SSLv3_METHOD: "SSLv3_method",
-        SSLv23_METHOD: "SSLv23_method",
-        TLSv1_METHOD: "TLSv1_method",
-        TLSv1_1_METHOD: "TLSv1_1_method",
-        TLSv1_2_METHOD: "TLSv1_2_method",
-        TLS_METHOD: "TLS_method",
-        TLS_SERVER_METHOD: "TLS_server_method",
-        TLS_CLIENT_METHOD: "TLS_client_method",
-        DTLS_METHOD: "DTLS_method",
-        DTLS_SERVER_METHOD: "DTLS_server_method",
-        DTLS_CLIENT_METHOD: "DTLS_client_method",
+        SSLv23_METHOD: (_lib.TLS_method, None),
+        TLSv1_METHOD: (_lib.TLS_method, TLS1_VERSION),
+        TLSv1_1_METHOD: (_lib.TLS_method, TLS1_1_VERSION),
+        TLSv1_2_METHOD: (_lib.TLS_method, TLS1_2_VERSION),
+        TLS_METHOD: (_lib.TLS_method, None),
+        TLS_SERVER_METHOD: (_lib.TLS_server_method, None),
+        TLS_CLIENT_METHOD: (_lib.TLS_client_method, None),
+        DTLS_METHOD: (_lib.DTLS_method, None),
+        DTLS_SERVER_METHOD: (_lib.DTLS_server_method, None),
+        DTLS_CLIENT_METHOD: (_lib.DTLS_client_method, None),
     }
-    _methods = dict(
-        (identifier, getattr(_lib, name))
-        for (identifier, name) in _methods.items()
-        if getattr(_lib, name, None) is not None
-    )
 
     def __init__(self, method):
         if not isinstance(method, int):
             raise TypeError("method must be an integer")
 
         try:
-            method_func = self._methods[method]
+            method_func, version = self._methods[method]
         except KeyError:
             raise ValueError("No such protocol")
 
@@ -735,6 +737,9 @@ class Context(object):
         self._cookie_verify_helper = None
 
         self.set_mode(_lib.SSL_MODE_ENABLE_PARTIAL_WRITE)
+        if version is not None:
+            self.set_min_proto_version(version)
+            self.set_max_proto_version(version)
 
     def set_min_proto_version(self, version):
         """
@@ -957,6 +962,7 @@ class Context(object):
         :param cert: The X509 object
         :return: None
         """
+        # Mirrored at Connection.use_certificate
         if not isinstance(cert, X509):
             raise TypeError("cert must be an X509 instance")
 
@@ -1018,6 +1024,7 @@ class Context(object):
         :param pkey: The PKey object
         :return: None
         """
+        # Mirrored at Connection.use_privatekey
         if not isinstance(pkey, PKey):
             raise TypeError("pkey must be a PKey instance")
 
@@ -1588,7 +1595,7 @@ class Context(object):
         )
 
 
-class Connection(object):
+class Connection:
     _reverse_mapping = WeakValueDictionary()
 
     def __init__(self, context, socket=None):
@@ -1694,6 +1701,24 @@ class Connection(object):
             else:
                 # TODO: This is untested.
                 _raise_current_error()
+        elif error == _lib.SSL_ERROR_SSL and _lib.ERR_peek_error() != 0:
+            # In 3.0.x an unexpected EOF no longer triggers syscall error
+            # but we want to maintain compatibility so we check here and
+            # raise syscall if it is an EOF. Since we're not actually sure
+            # what else could raise SSL_ERROR_SSL we check for the presence
+            # of the OpenSSL 3 constant SSL_R_UNEXPECTED_EOF_WHILE_READING
+            # and if it's not present we just raise an error, which matches
+            # the behavior before we added this elif section
+            peeked_error = _lib.ERR_peek_error()
+            reason = _lib.ERR_GET_REASON(peeked_error)
+            if _lib.Cryptography_HAS_UNEXPECTED_EOF_WHILE_READING:
+                _openssl_assert(
+                    reason == _lib.SSL_R_UNEXPECTED_EOF_WHILE_READING
+                )
+                _lib.ERR_clear_error()
+                raise SysCallError(-1, "Unexpected EOF")
+            else:
+                _raise_current_error()
         elif error == _lib.SSL_ERROR_NONE:
             pass
         else:
@@ -1735,6 +1760,65 @@ class Connection(object):
             return None
 
         return _ffi.string(name)
+
+    def set_verify(self, mode, callback=None):
+        """
+        Override the Context object's verification flags for this specific
+        connection. See :py:meth:`Context.set_verify` for details.
+        """
+        if not isinstance(mode, int):
+            raise TypeError("mode must be an integer")
+
+        if callback is None:
+            self._verify_helper = None
+            self._verify_callback = None
+            _lib.SSL_set_verify(self._ssl, mode, _ffi.NULL)
+        else:
+            if not callable(callback):
+                raise TypeError("callback must be callable")
+
+            self._verify_helper = _VerifyHelper(callback)
+            self._verify_callback = self._verify_helper.callback
+            _lib.SSL_set_verify(self._ssl, mode, self._verify_callback)
+
+    def get_verify_mode(self):
+        """
+        Retrieve the Connection object's verify mode, as set by
+        :meth:`set_verify`.
+
+        :return: The verify mode
+        """
+        return _lib.SSL_get_verify_mode(self._ssl)
+
+    def use_certificate(self, cert):
+        """
+        Load a certificate from a X509 object
+
+        :param cert: The X509 object
+        :return: None
+        """
+        # Mirrored from Context.use_certificate
+        if not isinstance(cert, X509):
+            raise TypeError("cert must be an X509 instance")
+
+        use_result = _lib.SSL_use_certificate(self._ssl, cert._x509)
+        if not use_result:
+            _raise_current_error()
+
+    def use_privatekey(self, pkey):
+        """
+        Load a private key from a PKey object
+
+        :param pkey: The PKey object
+        :return: None
+        """
+        # Mirrored from Context.use_privatekey
+        if not isinstance(pkey, PKey):
+            raise TypeError("pkey must be a PKey instance")
+
+        use_result = _lib.SSL_use_PrivateKey(self._ssl, pkey._pkey)
+        if not use_result:
+            self._context._raise_passphrase_exception()
 
     def set_ciphertext_mtu(self, mtu):
         """
@@ -2604,7 +2688,7 @@ class Connection(object):
         Get the protocol that was negotiated by ALPN.
 
         :returns: A bytestring of the protocol name.  If no protocol has been
-            negotiated yet, returns an empty string.
+            negotiated yet, returns an empty bytestring.
         """
         data = _ffi.new("unsigned char **")
         data_len = _ffi.new("unsigned int *")
@@ -2627,8 +2711,3 @@ class Connection(object):
             self._ssl, _lib.TLSEXT_STATUSTYPE_ocsp
         )
         _openssl_assert(rc == 1)
-
-
-# This is similar to the initialization calls at the end of OpenSSL/crypto.py
-# but is exercised mostly by the Context initializer.
-_lib.SSL_library_init()

@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -138,7 +138,8 @@ class UpdateMaskingColumnDetails(object):
     def sensitive_type_id(self):
         """
         Gets the sensitive_type_id of this UpdateMaskingColumnDetails.
-        The OCID of the sensitive type to be associated with the masking column.
+        The OCID of the sensitive type to be associated with the masking column. Note that there will be no change in
+        assigned masking format when sensitive type is changed.
 
 
         :return: The sensitive_type_id of this UpdateMaskingColumnDetails.
@@ -150,7 +151,8 @@ class UpdateMaskingColumnDetails(object):
     def sensitive_type_id(self, sensitive_type_id):
         """
         Sets the sensitive_type_id of this UpdateMaskingColumnDetails.
-        The OCID of the sensitive type to be associated with the masking column.
+        The OCID of the sensitive type to be associated with the masking column. Note that there will be no change in
+        assigned masking format when sensitive type is changed.
 
 
         :param sensitive_type_id: The sensitive_type_id of this UpdateMaskingColumnDetails.

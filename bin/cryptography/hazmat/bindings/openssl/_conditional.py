@@ -119,6 +119,12 @@ def cryptography_has_fips() -> typing.List[str]:
     ]
 
 
+def cryptography_has_ssl_sigalgs() -> typing.List[str]:
+    return [
+        "SSL_CTX_set1_sigalgs_list",
+    ]
+
+
 def cryptography_has_psk() -> typing.List[str]:
     return [
         "SSL_CTX_use_psk_identity_hint",
@@ -305,6 +311,16 @@ def cryptography_has_unexpected_eof_while_reading() -> typing.List[str]:
     return ["SSL_R_UNEXPECTED_EOF_WHILE_READING"]
 
 
+def cryptography_has_pkcs12_set_mac() -> typing.List[str]:
+    return ["PKCS12_set_mac"]
+
+
+def cryptography_has_ssl_op_ignore_unexpected_eof() -> typing.List[str]:
+    return [
+        "SSL_OP_IGNORE_UNEXPECTED_EOF",
+    ]
+
+
 # This is a mapping of
 # {condition: function-returning-names-dependent-on-that-condition} so we can
 # loop over them and delete unsupported names at runtime. It will be removed
@@ -335,6 +351,7 @@ CONDITIONAL_NAMES = {
         cryptography_has_evp_pkey_get_set_tls_encodedpoint
     ),
     "Cryptography_HAS_FIPS": cryptography_has_fips,
+    "Cryptography_HAS_SIGALGS": cryptography_has_ssl_sigalgs,
     "Cryptography_HAS_PSK": cryptography_has_psk,
     "Cryptography_HAS_PSK_TLSv1_3": cryptography_has_psk_tlsv13,
     "Cryptography_HAS_CUSTOM_EXT": cryptography_has_custom_ext,
@@ -363,5 +380,9 @@ CONDITIONAL_NAMES = {
     "Cryptography_HAS_300_EVP_CIPHER": cryptography_has_300_evp_cipher,
     "Cryptography_HAS_UNEXPECTED_EOF_WHILE_READING": (
         cryptography_has_unexpected_eof_while_reading
+    ),
+    "Cryptography_HAS_PKCS12_SET_MAC": cryptography_has_pkcs12_set_mac,
+    "Cryptography_HAS_SSL_OP_IGNORE_UNEXPECTED_EOF": (
+        cryptography_has_ssl_op_ignore_unexpected_eof
     ),
 }

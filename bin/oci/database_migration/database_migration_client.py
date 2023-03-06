@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -133,7 +133,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -146,7 +146,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/abort_job.py.html>`__ to see an example of how to use abort_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/abort_job.py.html>`__ to see an example of how to use abort_job API.
         """
         resource_path = "/jobs/{jobId}/actions/abort"
         method = "POST"
@@ -189,6 +189,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -241,7 +243,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -254,7 +256,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/add_migration_objects.py.html>`__ to see an example of how to use add_migration_objects API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/add_migration_objects.py.html>`__ to see an example of how to use add_migration_objects API.
         """
         resource_path = "/migrations/{migrationId}/actions/addMigrationObjects"
         method = "POST"
@@ -295,6 +297,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -353,7 +357,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -366,7 +370,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/change_agent_compartment.py.html>`__ to see an example of how to use change_agent_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/change_agent_compartment.py.html>`__ to see an example of how to use change_agent_compartment API.
         """
         resource_path = "/agents/{agentId}/actions/changeCompartment"
         method = "POST"
@@ -409,6 +413,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -468,7 +474,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -481,7 +487,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/change_connection_compartment.py.html>`__ to see an example of how to use change_connection_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/change_connection_compartment.py.html>`__ to see an example of how to use change_connection_compartment API.
         """
         resource_path = "/connections/{connectionId}/actions/changeCompartment"
         method = "POST"
@@ -524,6 +530,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -583,7 +591,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -596,7 +604,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/change_migration_compartment.py.html>`__ to see an example of how to use change_migration_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/change_migration_compartment.py.html>`__ to see an example of how to use change_migration_compartment API.
         """
         resource_path = "/migrations/{migrationId}/actions/changeCompartment"
         method = "POST"
@@ -639,6 +647,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -698,7 +708,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -711,7 +721,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/clone_migration.py.html>`__ to see an example of how to use clone_migration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/clone_migration.py.html>`__ to see an example of how to use clone_migration API.
         """
         resource_path = "/migrations/{migrationId}/actions/clone"
         method = "POST"
@@ -754,6 +764,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -806,7 +818,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -819,7 +831,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/create_connection.py.html>`__ to see an example of how to use create_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/create_connection.py.html>`__ to see an example of how to use create_connection API.
         """
         resource_path = "/connections"
         method = "POST"
@@ -850,6 +862,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -901,7 +915,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -914,7 +928,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/create_migration.py.html>`__ to see an example of how to use create_migration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/create_migration.py.html>`__ to see an example of how to use create_migration API.
         """
         resource_path = "/migrations"
         method = "POST"
@@ -945,6 +959,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -994,7 +1010,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1007,7 +1023,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/delete_agent.py.html>`__ to see an example of how to use delete_agent API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/delete_agent.py.html>`__ to see an example of how to use delete_agent API.
         """
         resource_path = "/agents/{agentId}"
         method = "DELETE"
@@ -1048,6 +1064,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1094,7 +1112,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1107,7 +1125,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/delete_connection.py.html>`__ to see an example of how to use delete_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/delete_connection.py.html>`__ to see an example of how to use delete_connection API.
         """
         resource_path = "/connections/{connectionId}"
         method = "DELETE"
@@ -1148,6 +1166,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1194,7 +1214,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1207,7 +1227,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/delete_job.py.html>`__ to see an example of how to use delete_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/delete_job.py.html>`__ to see an example of how to use delete_job API.
         """
         resource_path = "/jobs/{jobId}"
         method = "DELETE"
@@ -1248,6 +1268,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1294,7 +1316,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1307,7 +1329,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/delete_migration.py.html>`__ to see an example of how to use delete_migration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/delete_migration.py.html>`__ to see an example of how to use delete_migration API.
         """
         resource_path = "/migrations/{migrationId}"
         method = "DELETE"
@@ -1348,6 +1370,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1401,7 +1425,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1414,7 +1438,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/evaluate_migration.py.html>`__ to see an example of how to use evaluate_migration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/evaluate_migration.py.html>`__ to see an example of how to use evaluate_migration API.
         """
         resource_path = "/migrations/{migrationId}/actions/validate"
         method = "POST"
@@ -1457,6 +1481,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1499,7 +1525,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1512,7 +1538,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/get_advisor_report.py.html>`__ to see an example of how to use get_advisor_report API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/get_advisor_report.py.html>`__ to see an example of how to use get_advisor_report API.
         """
         resource_path = "/jobs/{jobId}/advisorReport"
         method = "GET"
@@ -1551,6 +1577,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1592,7 +1620,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1605,7 +1633,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/get_agent.py.html>`__ to see an example of how to use get_agent API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/get_agent.py.html>`__ to see an example of how to use get_agent API.
         """
         resource_path = "/agents/{agentId}"
         method = "GET"
@@ -1644,6 +1672,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1685,7 +1715,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1698,7 +1728,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/get_connection.py.html>`__ to see an example of how to use get_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/get_connection.py.html>`__ to see an example of how to use get_connection API.
         """
         resource_path = "/connections/{connectionId}"
         method = "GET"
@@ -1737,6 +1767,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1778,7 +1810,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1791,7 +1823,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/get_job.py.html>`__ to see an example of how to use get_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/get_job.py.html>`__ to see an example of how to use get_job API.
         """
         resource_path = "/jobs/{jobId}"
         method = "GET"
@@ -1830,6 +1862,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1871,7 +1905,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1884,7 +1918,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/get_job_output_content.py.html>`__ to see an example of how to use get_job_output_content API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/get_job_output_content.py.html>`__ to see an example of how to use get_job_output_content API.
         """
         resource_path = "/jobs/{jobId}/output/content"
         method = "GET"
@@ -1923,6 +1957,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1971,7 +2007,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1984,7 +2020,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/get_migration.py.html>`__ to see an example of how to use get_migration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/get_migration.py.html>`__ to see an example of how to use get_migration API.
         """
         resource_path = "/migrations/{migrationId}"
         method = "GET"
@@ -2025,6 +2061,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -2066,7 +2104,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -2079,7 +2117,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -2118,6 +2156,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -2167,7 +2207,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -2180,7 +2220,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/list_agent_images.py.html>`__ to see an example of how to use list_agent_images API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/list_agent_images.py.html>`__ to see an example of how to use list_agent_images API.
         """
         resource_path = "/agentImages"
         method = "GET"
@@ -2226,6 +2266,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -2292,7 +2334,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -2305,7 +2347,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/list_agents.py.html>`__ to see an example of how to use list_agents API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/list_agents.py.html>`__ to see an example of how to use list_agents API.
         """
         resource_path = "/agents"
         method = "GET"
@@ -2372,6 +2414,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -2438,7 +2482,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -2451,7 +2495,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/list_connections.py.html>`__ to see an example of how to use list_connections API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/list_connections.py.html>`__ to see an example of how to use list_connections API.
         """
         resource_path = "/connections"
         method = "GET"
@@ -2518,6 +2562,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -2600,7 +2646,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -2613,7 +2659,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/list_excluded_objects.py.html>`__ to see an example of how to use list_excluded_objects API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/list_excluded_objects.py.html>`__ to see an example of how to use list_excluded_objects API.
         """
         resource_path = "/jobs/{jobId}/excludedObjects"
         method = "GET"
@@ -2699,6 +2745,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -2748,7 +2796,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -2761,7 +2809,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/list_job_outputs.py.html>`__ to see an example of how to use list_job_outputs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/list_job_outputs.py.html>`__ to see an example of how to use list_job_outputs API.
         """
         resource_path = "/jobs/{jobId}/output"
         method = "GET"
@@ -2808,6 +2856,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -2877,7 +2927,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -2890,7 +2940,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/list_jobs.py.html>`__ to see an example of how to use list_jobs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/list_jobs.py.html>`__ to see an example of how to use list_jobs API.
         """
         resource_path = "/jobs"
         method = "GET"
@@ -2957,6 +3007,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -3012,7 +3064,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -3025,7 +3077,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/list_migration_object_types.py.html>`__ to see an example of how to use list_migration_object_types API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/list_migration_object_types.py.html>`__ to see an example of how to use list_migration_object_types API.
         """
         resource_path = "/migrationObjectTypes"
         method = "GET"
@@ -3080,6 +3132,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -3134,7 +3188,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -3147,7 +3201,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/list_migration_objects.py.html>`__ to see an example of how to use list_migration_objects API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/list_migration_objects.py.html>`__ to see an example of how to use list_migration_objects API.
         """
         resource_path = "/migrations/{migrationId}/migrationObjects"
         method = "GET"
@@ -3196,6 +3250,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -3269,7 +3325,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -3282,7 +3338,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/list_migrations.py.html>`__ to see an example of how to use list_migrations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/list_migrations.py.html>`__ to see an example of how to use list_migrations API.
         """
         resource_path = "/migrations"
         method = "GET"
@@ -3358,6 +3414,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -3415,7 +3473,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -3428,7 +3486,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -3493,6 +3551,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -3552,7 +3612,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -3565,7 +3625,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -3630,6 +3690,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -3699,7 +3761,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -3712,7 +3774,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -3779,6 +3841,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -3830,7 +3894,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -3843,7 +3907,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/remove_migration_objects.py.html>`__ to see an example of how to use remove_migration_objects API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/remove_migration_objects.py.html>`__ to see an example of how to use remove_migration_objects API.
         """
         resource_path = "/migrations/{migrationId}/actions/removeMigrationObjects"
         method = "POST"
@@ -3884,6 +3948,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -3942,7 +4008,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -3955,7 +4021,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/resume_job.py.html>`__ to see an example of how to use resume_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/resume_job.py.html>`__ to see an example of how to use resume_job API.
         """
         resource_path = "/jobs/{jobId}/actions/resume"
         method = "POST"
@@ -3999,6 +4065,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -4043,7 +4111,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -4056,7 +4124,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/retrieve_supported_phases.py.html>`__ to see an example of how to use retrieve_supported_phases API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/retrieve_supported_phases.py.html>`__ to see an example of how to use retrieve_supported_phases API.
         """
         resource_path = "/migrations/{migrationId}/actions/getSupportedPhases"
         method = "POST"
@@ -4095,6 +4163,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -4153,7 +4223,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -4166,7 +4236,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/start_migration.py.html>`__ to see an example of how to use start_migration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/start_migration.py.html>`__ to see an example of how to use start_migration API.
         """
         resource_path = "/migrations/{migrationId}/actions/start"
         method = "POST"
@@ -4210,6 +4280,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -4271,7 +4343,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -4284,7 +4356,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/update_agent.py.html>`__ to see an example of how to use update_agent API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/update_agent.py.html>`__ to see an example of how to use update_agent API.
         """
         resource_path = "/agents/{agentId}"
         method = "PUT"
@@ -4327,6 +4399,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -4381,7 +4455,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -4394,7 +4468,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/update_connection.py.html>`__ to see an example of how to use update_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/update_connection.py.html>`__ to see an example of how to use update_connection API.
         """
         resource_path = "/connections/{connectionId}"
         method = "PUT"
@@ -4435,6 +4509,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -4486,7 +4562,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -4499,7 +4575,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/update_job.py.html>`__ to see an example of how to use update_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/update_job.py.html>`__ to see an example of how to use update_job API.
         """
         resource_path = "/jobs/{jobId}"
         method = "PUT"
@@ -4540,6 +4616,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -4593,7 +4671,7 @@ class DatabaseMigrationClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -4606,7 +4684,7 @@ class DatabaseMigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/databasemigration/update_migration.py.html>`__ to see an example of how to use update_migration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemigration/update_migration.py.html>`__ to see an example of how to use update_migration API.
         """
         resource_path = "/migrations/{migrationId}"
         method = "PUT"
@@ -4647,6 +4725,8 @@ class DatabaseMigrationClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):

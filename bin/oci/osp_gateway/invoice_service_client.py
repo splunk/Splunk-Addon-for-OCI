@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -140,7 +140,7 @@ class InvoiceServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ospgateway/download_pdf_content.py.html>`__ to see an example of how to use download_pdf_content API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ospgateway/download_pdf_content.py.html>`__ to see an example of how to use download_pdf_content API.
         """
         resource_path = "/invoices/{internalInvoiceId}/actions/downloadPdfContent"
         method = "POST"
@@ -249,7 +249,7 @@ class InvoiceServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ospgateway/get_invoice.py.html>`__ to see an example of how to use get_invoice API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ospgateway/get_invoice.py.html>`__ to see an example of how to use get_invoice API.
         """
         resource_path = "/invoices/{internalInvoiceId}"
         method = "GET"
@@ -364,7 +364,7 @@ class InvoiceServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ospgateway/list_invoice_lines.py.html>`__ to see an example of how to use list_invoice_lines API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ospgateway/list_invoice_lines.py.html>`__ to see an example of how to use list_invoice_lines API.
         """
         resource_path = "/invoices/{internalInvoiceId}/invoiceLines"
         method = "GET"
@@ -521,7 +521,7 @@ class InvoiceServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ospgateway/list_invoices.py.html>`__ to see an example of how to use list_invoices API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ospgateway/list_invoices.py.html>`__ to see an example of how to use list_invoices API.
         """
         resource_path = "/invoices"
         method = "GET"
@@ -686,7 +686,7 @@ class InvoiceServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/ospgateway/pay_invoice.py.html>`__ to see an example of how to use pay_invoice API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ospgateway/pay_invoice.py.html>`__ to see an example of how to use pay_invoice API.
         """
         resource_path = "/invoices/{internalInvoiceId}/actions/pay"
         method = "POST"

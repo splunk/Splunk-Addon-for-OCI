@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -153,7 +153,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/associate_dr_protection_group.py.html>`__ to see an example of how to use associate_dr_protection_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/associate_dr_protection_group.py.html>`__ to see an example of how to use associate_dr_protection_group API.
         """
         resource_path = "/drProtectionGroups/{drProtectionGroupId}/actions/associate"
         method = "POST"
@@ -269,7 +269,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/cancel_dr_plan_execution.py.html>`__ to see an example of how to use cancel_dr_plan_execution API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/cancel_dr_plan_execution.py.html>`__ to see an example of how to use cancel_dr_plan_execution API.
         """
         resource_path = "/drPlanExecutions/{drPlanExecutionId}/actions/cancel"
         method = "POST"
@@ -375,7 +375,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "DELETE"
@@ -486,7 +486,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/change_dr_protection_group_compartment.py.html>`__ to see an example of how to use change_dr_protection_group_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/change_dr_protection_group_compartment.py.html>`__ to see an example of how to use change_dr_protection_group_compartment API.
         """
         resource_path = "/drProtectionGroups/{drProtectionGroupId}/actions/changeCompartment"
         method = "POST"
@@ -590,7 +590,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/create_dr_plan.py.html>`__ to see an example of how to use create_dr_plan API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/create_dr_plan.py.html>`__ to see an example of how to use create_dr_plan API.
         """
         resource_path = "/drPlans"
         method = "POST"
@@ -682,7 +682,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/create_dr_plan_execution.py.html>`__ to see an example of how to use create_dr_plan_execution API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/create_dr_plan_execution.py.html>`__ to see an example of how to use create_dr_plan_execution API.
         """
         resource_path = "/drPlanExecutions"
         method = "POST"
@@ -774,7 +774,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/create_dr_protection_group.py.html>`__ to see an example of how to use create_dr_protection_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/create_dr_protection_group.py.html>`__ to see an example of how to use create_dr_protection_group API.
         """
         resource_path = "/drProtectionGroups"
         method = "POST"
@@ -868,7 +868,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/delete_dr_plan.py.html>`__ to see an example of how to use delete_dr_plan API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/delete_dr_plan.py.html>`__ to see an example of how to use delete_dr_plan API.
         """
         resource_path = "/drPlans/{drPlanId}"
         method = "DELETE"
@@ -969,7 +969,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/delete_dr_plan_execution.py.html>`__ to see an example of how to use delete_dr_plan_execution API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/delete_dr_plan_execution.py.html>`__ to see an example of how to use delete_dr_plan_execution API.
         """
         resource_path = "/drPlanExecutions/{drPlanExecutionId}"
         method = "DELETE"
@@ -1070,7 +1070,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/delete_dr_protection_group.py.html>`__ to see an example of how to use delete_dr_protection_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/delete_dr_protection_group.py.html>`__ to see an example of how to use delete_dr_protection_group API.
         """
         resource_path = "/drProtectionGroups/{drProtectionGroupId}"
         method = "DELETE"
@@ -1182,7 +1182,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/disassociate_dr_protection_group.py.html>`__ to see an example of how to use disassociate_dr_protection_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/disassociate_dr_protection_group.py.html>`__ to see an example of how to use disassociate_dr_protection_group API.
         """
         resource_path = "/drProtectionGroups/{drProtectionGroupId}/actions/disassociate"
         method = "POST"
@@ -1281,7 +1281,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/get_dr_plan.py.html>`__ to see an example of how to use get_dr_plan API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/get_dr_plan.py.html>`__ to see an example of how to use get_dr_plan API.
         """
         resource_path = "/drPlans/{drPlanId}"
         method = "GET"
@@ -1375,7 +1375,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/get_dr_plan_execution.py.html>`__ to see an example of how to use get_dr_plan_execution API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/get_dr_plan_execution.py.html>`__ to see an example of how to use get_dr_plan_execution API.
         """
         resource_path = "/drPlanExecutions/{drPlanExecutionId}"
         method = "GET"
@@ -1469,7 +1469,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/get_dr_protection_group.py.html>`__ to see an example of how to use get_dr_protection_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/get_dr_protection_group.py.html>`__ to see an example of how to use get_dr_protection_group API.
         """
         resource_path = "/drProtectionGroups/{drProtectionGroupId}"
         method = "GET"
@@ -1563,7 +1563,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -1674,7 +1674,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/ignore_dr_plan_execution.py.html>`__ to see an example of how to use ignore_dr_plan_execution API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/ignore_dr_plan_execution.py.html>`__ to see an example of how to use ignore_dr_plan_execution API.
         """
         resource_path = "/drPlanExecutions/{drPlanExecutionId}/actions/ignore"
         method = "POST"
@@ -1827,7 +1827,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/list_dr_plan_executions.py.html>`__ to see an example of how to use list_dr_plan_executions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/list_dr_plan_executions.py.html>`__ to see an example of how to use list_dr_plan_executions API.
         """
         resource_path = "/drPlanExecutions"
         method = "GET"
@@ -2014,7 +2014,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/list_dr_plans.py.html>`__ to see an example of how to use list_dr_plans API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/list_dr_plans.py.html>`__ to see an example of how to use list_dr_plans API.
         """
         resource_path = "/drPlans"
         method = "GET"
@@ -2196,7 +2196,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/list_dr_protection_groups.py.html>`__ to see an example of how to use list_dr_protection_groups API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/list_dr_protection_groups.py.html>`__ to see an example of how to use list_dr_protection_groups API.
         """
         resource_path = "/drProtectionGroups"
         method = "GET"
@@ -2352,7 +2352,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -2506,7 +2506,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -2674,7 +2674,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -2816,7 +2816,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/pause_dr_plan_execution.py.html>`__ to see an example of how to use pause_dr_plan_execution API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/pause_dr_plan_execution.py.html>`__ to see an example of how to use pause_dr_plan_execution API.
         """
         resource_path = "/drPlanExecutions/{drPlanExecutionId}/actions/pause"
         method = "POST"
@@ -2932,7 +2932,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/resume_dr_plan_execution.py.html>`__ to see an example of how to use resume_dr_plan_execution API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/resume_dr_plan_execution.py.html>`__ to see an example of how to use resume_dr_plan_execution API.
         """
         resource_path = "/drPlanExecutions/{drPlanExecutionId}/actions/resume"
         method = "POST"
@@ -3048,7 +3048,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/retry_dr_plan_execution.py.html>`__ to see an example of how to use retry_dr_plan_execution API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/retry_dr_plan_execution.py.html>`__ to see an example of how to use retry_dr_plan_execution API.
         """
         resource_path = "/drPlanExecutions/{drPlanExecutionId}/actions/retry"
         method = "POST"
@@ -3157,7 +3157,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/update_dr_plan.py.html>`__ to see an example of how to use update_dr_plan API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/update_dr_plan.py.html>`__ to see an example of how to use update_dr_plan API.
         """
         resource_path = "/drPlans/{drPlanId}"
         method = "PUT"
@@ -3263,7 +3263,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/update_dr_plan_execution.py.html>`__ to see an example of how to use update_dr_plan_execution API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/update_dr_plan_execution.py.html>`__ to see an example of how to use update_dr_plan_execution API.
         """
         resource_path = "/drPlanExecutions/{drPlanExecutionId}"
         method = "PUT"
@@ -3369,7 +3369,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/update_dr_protection_group.py.html>`__ to see an example of how to use update_dr_protection_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/update_dr_protection_group.py.html>`__ to see an example of how to use update_dr_protection_group API.
         """
         resource_path = "/drProtectionGroups/{drProtectionGroupId}"
         method = "PUT"
@@ -3482,7 +3482,7 @@ class DisasterRecoveryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/disasterrecovery/update_dr_protection_group_role.py.html>`__ to see an example of how to use update_dr_protection_group_role API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/disasterrecovery/update_dr_protection_group_role.py.html>`__ to see an example of how to use update_dr_protection_group_role API.
         """
         resource_path = "/drProtectionGroups/{drProtectionGroupId}/actions/updateRole"
         method = "POST"

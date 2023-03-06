@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -145,7 +145,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/abort_multipart_upload.py.html>`__ to see an example of how to use abort_multipart_upload API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/abort_multipart_upload.py.html>`__ to see an example of how to use abort_multipart_upload API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/u/{objectName}"
         method = "DELETE"
@@ -246,7 +246,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "DELETE"
@@ -361,7 +361,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/commit_multipart_upload.py.html>`__ to see an example of how to use commit_multipart_upload API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/commit_multipart_upload.py.html>`__ to see an example of how to use commit_multipart_upload API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/u/{objectName}"
         method = "POST"
@@ -528,7 +528,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/copy_object.py.html>`__ to see an example of how to use copy_object API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/copy_object.py.html>`__ to see an example of how to use copy_object API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/actions/copyObject"
         method = "POST"
@@ -641,7 +641,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/create_bucket.py.html>`__ to see an example of how to use create_bucket API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/create_bucket.py.html>`__ to see an example of how to use create_bucket API.
         """
         resource_path = "/n/{namespaceName}/b"
         method = "POST"
@@ -784,7 +784,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/create_multipart_upload.py.html>`__ to see an example of how to use create_multipart_upload API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/create_multipart_upload.py.html>`__ to see an example of how to use create_multipart_upload API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/u"
         method = "POST"
@@ -900,7 +900,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/create_preauthenticated_request.py.html>`__ to see an example of how to use create_preauthenticated_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/create_preauthenticated_request.py.html>`__ to see an example of how to use create_preauthenticated_request API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/p"
         method = "POST"
@@ -1004,7 +1004,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/create_replication_policy.py.html>`__ to see an example of how to use create_replication_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/create_replication_policy.py.html>`__ to see an example of how to use create_replication_policy API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/replicationPolicies"
         method = "POST"
@@ -1109,7 +1109,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/create_retention_rule.py.html>`__ to see an example of how to use create_retention_rule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/create_retention_rule.py.html>`__ to see an example of how to use create_retention_rule API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/retentionRules"
         method = "POST"
@@ -1218,7 +1218,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/delete_bucket.py.html>`__ to see an example of how to use delete_bucket API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/delete_bucket.py.html>`__ to see an example of how to use delete_bucket API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}"
         method = "DELETE"
@@ -1329,7 +1329,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/delete_object.py.html>`__ to see an example of how to use delete_object API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/delete_object.py.html>`__ to see an example of how to use delete_object API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/o/{objectName}"
         method = "DELETE"
@@ -1442,7 +1442,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/delete_object_lifecycle_policy.py.html>`__ to see an example of how to use delete_object_lifecycle_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/delete_object_lifecycle_policy.py.html>`__ to see an example of how to use delete_object_lifecycle_policy API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/l"
         method = "DELETE"
@@ -1545,7 +1545,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/delete_preauthenticated_request.py.html>`__ to see an example of how to use delete_preauthenticated_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/delete_preauthenticated_request.py.html>`__ to see an example of how to use delete_preauthenticated_request API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/p/{parId}"
         method = "DELETE"
@@ -1646,7 +1646,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/delete_replication_policy.py.html>`__ to see an example of how to use delete_replication_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/delete_replication_policy.py.html>`__ to see an example of how to use delete_replication_policy API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/replicationPolicies/{replicationId}"
         method = "DELETE"
@@ -1752,7 +1752,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/delete_retention_rule.py.html>`__ to see an example of how to use delete_retention_rule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/delete_retention_rule.py.html>`__ to see an example of how to use delete_retention_rule API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/retentionRules/{retentionRuleId}"
         method = "DELETE"
@@ -1870,7 +1870,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/get_bucket.py.html>`__ to see an example of how to use get_bucket API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/get_bucket.py.html>`__ to see an example of how to use get_bucket API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}"
         method = "GET"
@@ -1995,7 +1995,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/get_namespace.py.html>`__ to see an example of how to use get_namespace API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/get_namespace.py.html>`__ to see an example of how to use get_namespace API.
         """
         resource_path = "/n"
         method = "GET"
@@ -2093,7 +2093,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/get_namespace_metadata.py.html>`__ to see an example of how to use get_namespace_metadata API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/get_namespace_metadata.py.html>`__ to see an example of how to use get_namespace_metadata API.
         """
         resource_path = "/n/{namespaceName}"
         method = "GET"
@@ -2252,7 +2252,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/get_object.py.html>`__ to see an example of how to use get_object API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/get_object.py.html>`__ to see an example of how to use get_object API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/o/{objectName}"
         method = "GET"
@@ -2384,7 +2384,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/get_object_lifecycle_policy.py.html>`__ to see an example of how to use get_object_lifecycle_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/get_object_lifecycle_policy.py.html>`__ to see an example of how to use get_object_lifecycle_policy API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/l"
         method = "GET"
@@ -2487,7 +2487,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/get_preauthenticated_request.py.html>`__ to see an example of how to use get_preauthenticated_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/get_preauthenticated_request.py.html>`__ to see an example of how to use get_preauthenticated_request API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/p/{parId}"
         method = "GET"
@@ -2590,7 +2590,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/get_replication_policy.py.html>`__ to see an example of how to use get_replication_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/get_replication_policy.py.html>`__ to see an example of how to use get_replication_policy API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/replicationPolicies/{replicationId}"
         method = "GET"
@@ -2693,7 +2693,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/get_retention_rule.py.html>`__ to see an example of how to use get_retention_rule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/get_retention_rule.py.html>`__ to see an example of how to use get_retention_rule API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/retentionRules/{retentionRuleId}"
         method = "GET"
@@ -2789,7 +2789,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -2897,7 +2897,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/head_bucket.py.html>`__ to see an example of how to use head_bucket API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/head_bucket.py.html>`__ to see an example of how to use head_bucket API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}"
         method = "HEAD"
@@ -3035,7 +3035,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/head_object.py.html>`__ to see an example of how to use head_object API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/head_object.py.html>`__ to see an example of how to use head_object API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/o/{objectName}"
         method = "HEAD"
@@ -3179,7 +3179,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/list_buckets.py.html>`__ to see an example of how to use list_buckets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/list_buckets.py.html>`__ to see an example of how to use list_buckets API.
         """
         resource_path = "/n/{namespaceName}/b"
         method = "GET"
@@ -3318,7 +3318,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/list_multipart_upload_parts.py.html>`__ to see an example of how to use list_multipart_upload_parts API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/list_multipart_upload_parts.py.html>`__ to see an example of how to use list_multipart_upload_parts API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/u/{objectName}"
         method = "GET"
@@ -3442,7 +3442,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/list_multipart_uploads.py.html>`__ to see an example of how to use list_multipart_uploads API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/list_multipart_uploads.py.html>`__ to see an example of how to use list_multipart_uploads API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/u"
         method = "GET"
@@ -3601,7 +3601,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/list_object_versions.py.html>`__ to see an example of how to use list_object_versions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/list_object_versions.py.html>`__ to see an example of how to use list_object_versions API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/objectversions"
         method = "GET"
@@ -3768,7 +3768,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/list_objects.py.html>`__ to see an example of how to use list_objects API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/list_objects.py.html>`__ to see an example of how to use list_objects API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/o"
         method = "GET"
@@ -3903,7 +3903,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/list_preauthenticated_requests.py.html>`__ to see an example of how to use list_preauthenticated_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/list_preauthenticated_requests.py.html>`__ to see an example of how to use list_preauthenticated_requests API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/p"
         method = "GET"
@@ -4027,7 +4027,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/list_replication_policies.py.html>`__ to see an example of how to use list_replication_policies API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/list_replication_policies.py.html>`__ to see an example of how to use list_replication_policies API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/replicationPolicies"
         method = "GET"
@@ -4149,7 +4149,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/list_replication_sources.py.html>`__ to see an example of how to use list_replication_sources API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/list_replication_sources.py.html>`__ to see an example of how to use list_replication_sources API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/replicationSources"
         method = "GET"
@@ -4262,7 +4262,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/list_retention_rules.py.html>`__ to see an example of how to use list_retention_rules API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/list_retention_rules.py.html>`__ to see an example of how to use list_retention_rules API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/retentionRules"
         method = "GET"
@@ -4375,7 +4375,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -4492,7 +4492,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -4609,7 +4609,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -4709,7 +4709,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/make_bucket_writable.py.html>`__ to see an example of how to use make_bucket_writable API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/make_bucket_writable.py.html>`__ to see an example of how to use make_bucket_writable API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/actions/makeBucketWritable"
         method = "POST"
@@ -4923,7 +4923,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/put_object.py.html>`__ to see an example of how to use put_object API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/put_object.py.html>`__ to see an example of how to use put_object API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/o/{objectName}"
         method = "PUT"
@@ -5096,7 +5096,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/put_object_lifecycle_policy.py.html>`__ to see an example of how to use put_object_lifecycle_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/put_object_lifecycle_policy.py.html>`__ to see an example of how to use put_object_lifecycle_policy API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/l"
         method = "PUT"
@@ -5215,7 +5215,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/reencrypt_bucket.py.html>`__ to see an example of how to use reencrypt_bucket API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/reencrypt_bucket.py.html>`__ to see an example of how to use reencrypt_bucket API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/actions/reencrypt"
         method = "POST"
@@ -5330,7 +5330,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/reencrypt_object.py.html>`__ to see an example of how to use reencrypt_object API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/reencrypt_object.py.html>`__ to see an example of how to use reencrypt_object API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/actions/reencrypt/{objectName}"
         method = "POST"
@@ -5446,7 +5446,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/rename_object.py.html>`__ to see an example of how to use rename_object API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/rename_object.py.html>`__ to see an example of how to use rename_object API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/actions/renameObject"
         method = "POST"
@@ -5549,7 +5549,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/restore_objects.py.html>`__ to see an example of how to use restore_objects API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/restore_objects.py.html>`__ to see an example of how to use restore_objects API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/actions/restoreObjects"
         method = "POST"
@@ -5662,7 +5662,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/update_bucket.py.html>`__ to see an example of how to use update_bucket API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/update_bucket.py.html>`__ to see an example of how to use update_bucket API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}"
         method = "POST"
@@ -5770,7 +5770,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/update_namespace_metadata.py.html>`__ to see an example of how to use update_namespace_metadata API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/update_namespace_metadata.py.html>`__ to see an example of how to use update_namespace_metadata API.
         """
         resource_path = "/n/{namespaceName}"
         method = "PUT"
@@ -5873,7 +5873,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/update_object_storage_tier.py.html>`__ to see an example of how to use update_object_storage_tier API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/update_object_storage_tier.py.html>`__ to see an example of how to use update_object_storage_tier API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/actions/updateObjectStorageTier"
         method = "POST"
@@ -5983,7 +5983,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/update_retention_rule.py.html>`__ to see an example of how to use update_retention_rule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/update_retention_rule.py.html>`__ to see an example of how to use update_retention_rule API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/retentionRules/{retentionRuleId}"
         method = "PUT"
@@ -6158,7 +6158,7 @@ class ObjectStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/objectstorage/upload_part.py.html>`__ to see an example of how to use upload_part API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/objectstorage/upload_part.py.html>`__ to see an example of how to use upload_part API.
         """
         resource_path = "/n/{namespaceName}/b/{bucketName}/u/{objectName}"
         method = "PUT"

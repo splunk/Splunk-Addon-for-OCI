@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -146,6 +146,10 @@ class WorkRequest(object):
     STATUS_WAITING = "WAITING"
 
     #: A constant which can be used with the status property of a WorkRequest.
+    #: This constant has a value of "NEEDS_ATTENTION"
+    STATUS_NEEDS_ATTENTION = "NEEDS_ATTENTION"
+
+    #: A constant which can be used with the status property of a WorkRequest.
     #: This constant has a value of "CANCELING"
     STATUS_CANCELING = "CANCELING"
 
@@ -166,7 +170,7 @@ class WorkRequest(object):
 
         :param status:
             The value to assign to the status property of this WorkRequest.
-            Allowed values for this property are: "ACCEPTED", "IN_PROGRESS", "FAILED", "SUCCEEDED", "WAITING", "CANCELING", "CANCELED", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for this property are: "ACCEPTED", "IN_PROGRESS", "FAILED", "SUCCEEDED", "WAITING", "NEEDS_ATTENTION", "CANCELING", "CANCELED", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type status: str
 
@@ -269,7 +273,7 @@ class WorkRequest(object):
         **[Required]** Gets the status of this WorkRequest.
         Status of current work request.
 
-        Allowed values for this property are: "ACCEPTED", "IN_PROGRESS", "FAILED", "SUCCEEDED", "WAITING", "CANCELING", "CANCELED", 'UNKNOWN_ENUM_VALUE'.
+        Allowed values for this property are: "ACCEPTED", "IN_PROGRESS", "FAILED", "SUCCEEDED", "WAITING", "NEEDS_ATTENTION", "CANCELING", "CANCELED", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
 
 
@@ -288,7 +292,7 @@ class WorkRequest(object):
         :param status: The status of this WorkRequest.
         :type: str
         """
-        allowed_values = ["ACCEPTED", "IN_PROGRESS", "FAILED", "SUCCEEDED", "WAITING", "CANCELING", "CANCELED"]
+        allowed_values = ["ACCEPTED", "IN_PROGRESS", "FAILED", "SUCCEEDED", "WAITING", "NEEDS_ATTENTION", "CANCELING", "CANCELED"]
         if not value_allowed_none_or_none_sentinel(status, allowed_values):
             status = 'UNKNOWN_ENUM_VALUE'
         self._status = status

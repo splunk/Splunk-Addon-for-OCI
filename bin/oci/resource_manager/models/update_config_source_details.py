@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -18,9 +18,12 @@ class UpdateConfigSourceDetails(object):
         Initializes a new UpdateConfigSourceDetails object with values from keyword arguments. This class has the following subclasses and if you are using this class as input
         to a service operations then you should favor using a subclass over the base class:
 
+        * :class:`~oci.resource_manager.models.UpdateBitbucketCloudConfigSourceDetails`
+        * :class:`~oci.resource_manager.models.UpdateBitbucketServerConfigSourceDetails`
         * :class:`~oci.resource_manager.models.UpdateGitConfigSourceDetails`
         * :class:`~oci.resource_manager.models.UpdateObjectStorageConfigSourceDetails`
         * :class:`~oci.resource_manager.models.UpdateZipUploadConfigSourceDetails`
+        * :class:`~oci.resource_manager.models.UpdateDevOpsConfigSourceDetails`
 
         The following keyword arguments are supported (corresponding to the getters/setters of this class):
 
@@ -54,6 +57,12 @@ class UpdateConfigSourceDetails(object):
         """
         type = object_dictionary['configSourceType']
 
+        if type == 'BITBUCKET_CLOUD_CONFIG_SOURCE':
+            return 'UpdateBitbucketCloudConfigSourceDetails'
+
+        if type == 'BITBUCKET_SERVER_CONFIG_SOURCE':
+            return 'UpdateBitbucketServerConfigSourceDetails'
+
         if type == 'GIT_CONFIG_SOURCE':
             return 'UpdateGitConfigSourceDetails'
 
@@ -62,6 +71,9 @@ class UpdateConfigSourceDetails(object):
 
         if type == 'ZIP_UPLOAD':
             return 'UpdateZipUploadConfigSourceDetails'
+
+        if type == 'DEVOPS_CONFIG_SOURCE':
+            return 'UpdateDevOpsConfigSourceDetails'
         else:
             return 'UpdateConfigSourceDetails'
 

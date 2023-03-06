@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from .host_configuration_summary import HostConfigurationSummary
@@ -109,6 +109,10 @@ class PeComanagedHostConfigurationSummary(HostConfigurationSummary):
             The value to assign to the parent_id property of this PeComanagedHostConfigurationSummary.
         :type parent_id: str
 
+        :param exadata_details:
+            The value to assign to the exadata_details property of this PeComanagedHostConfigurationSummary.
+        :type exadata_details: oci.opsi.models.ExadataDetails
+
         """
         self.swagger_types = {
             'host_insight_id': 'str',
@@ -132,7 +136,8 @@ class PeComanagedHostConfigurationSummary(HostConfigurationSummary):
             'defined_tags': 'dict(str, dict(str, object))',
             'freeform_tags': 'dict(str, str)',
             'opsi_private_endpoint_id': 'str',
-            'parent_id': 'str'
+            'parent_id': 'str',
+            'exadata_details': 'ExadataDetails'
         }
 
         self.attribute_map = {
@@ -157,7 +162,8 @@ class PeComanagedHostConfigurationSummary(HostConfigurationSummary):
             'defined_tags': 'definedTags',
             'freeform_tags': 'freeformTags',
             'opsi_private_endpoint_id': 'opsiPrivateEndpointId',
-            'parent_id': 'parentId'
+            'parent_id': 'parentId',
+            'exadata_details': 'exadataDetails'
         }
 
         self._host_insight_id = None
@@ -182,6 +188,7 @@ class PeComanagedHostConfigurationSummary(HostConfigurationSummary):
         self._freeform_tags = None
         self._opsi_private_endpoint_id = None
         self._parent_id = None
+        self._exadata_details = None
         self._entity_source = 'PE_COMANAGED_HOST'
 
     @property
@@ -239,6 +246,26 @@ class PeComanagedHostConfigurationSummary(HostConfigurationSummary):
         :type: str
         """
         self._parent_id = parent_id
+
+    @property
+    def exadata_details(self):
+        """
+        **[Required]** Gets the exadata_details of this PeComanagedHostConfigurationSummary.
+
+        :return: The exadata_details of this PeComanagedHostConfigurationSummary.
+        :rtype: oci.opsi.models.ExadataDetails
+        """
+        return self._exadata_details
+
+    @exadata_details.setter
+    def exadata_details(self, exadata_details):
+        """
+        Sets the exadata_details of this PeComanagedHostConfigurationSummary.
+
+        :param exadata_details: The exadata_details of this PeComanagedHostConfigurationSummary.
+        :type: oci.opsi.models.ExadataDetails
+        """
+        self._exadata_details = exadata_details
 
     def __repr__(self):
         return formatted_flat_dict(self)

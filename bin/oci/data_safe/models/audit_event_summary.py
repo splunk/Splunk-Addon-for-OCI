@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -842,7 +842,7 @@ class AuditEventSummary(object):
     def audit_trail_id(self):
         """
         Gets the audit_trail_id of this AuditEventSummary.
-        The OCID of the audit trail that generated this audit event.
+        The OCID of the audit trail that generated this audit event. To be noted, this field has been deprecated.
 
 
         :return: The audit_trail_id of this AuditEventSummary.
@@ -854,7 +854,7 @@ class AuditEventSummary(object):
     def audit_trail_id(self, audit_trail_id):
         """
         Sets the audit_trail_id of this AuditEventSummary.
-        The OCID of the audit trail that generated this audit event.
+        The OCID of the audit trail that generated this audit event. To be noted, this field has been deprecated.
 
 
         :param audit_trail_id: The audit_trail_id of this AuditEventSummary.

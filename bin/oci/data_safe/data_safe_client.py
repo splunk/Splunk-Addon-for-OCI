@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -148,7 +148,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/activate_target_database.py.html>`__ to see an example of how to use activate_target_database API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/activate_target_database.py.html>`__ to see an example of how to use activate_target_database API.
         """
         resource_path = "/targetDatabases/{targetDatabaseId}/actions/activate"
         method = "POST"
@@ -257,7 +257,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/add_masking_columns_from_sdm.py.html>`__ to see an example of how to use add_masking_columns_from_sdm API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/add_masking_columns_from_sdm.py.html>`__ to see an example of how to use add_masking_columns_from_sdm API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}/actions/addMaskingColumnsFromSdm"
         method = "POST"
@@ -324,6 +324,135 @@ class DataSafeClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def alerts_update(self, alerts_update_details, **kwargs):
+        """
+        Update alerts within a given compartment.
+
+
+        :param oci.data_safe.models.AlertsUpdateDetails alerts_update_details: (required)
+            Details to update alerts within a given compartment.
+
+        :param str opc_request_id: (optional)
+            Unique identifier for the request.
+
+        :param str if_match: (optional)
+            For optimistic concurrency control. In the PUT or DELETE call
+            for a resource, set the if-match parameter to the value of the
+            etag from a previous GET or POST response for that resource.
+            The resource will be updated or deleted only if the etag you
+            provide matches the resource's current etag value.
+
+        :param str opc_retry_token: (optional)
+            A token that uniquely identifies a request so it can be retried in case of a timeout or
+            server error without risk of executing that same action again. Retry tokens expire after 24
+            hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+            has been deleted and purged from the system, then a retry of the original creation request might be rejected.
+
+        :param bool compartment_id_in_subtree: (optional)
+            Default is false.
+            When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the 'accessLevel' setting.
+
+        :param str access_level: (optional)
+            Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED.
+            Setting this to ACCESSIBLE returns only those compartments for which the
+            user has INSPECT permissions directly or indirectly (permissions can be on a
+            resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
+
+            Allowed values are: "RESTRICTED", "ACCESSIBLE"
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/alerts_update.py.html>`__ to see an example of how to use alerts_update API.
+        """
+        resource_path = "/alerts/actions/updateAll"
+        method = "POST"
+        operation_name = "alerts_update"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-safe/20181201/Alert/AlertsUpdate"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "opc_request_id",
+            "if_match",
+            "opc_retry_token",
+            "compartment_id_in_subtree",
+            "access_level"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "alerts_update got unknown kwargs: {!r}".format(extra_kwargs))
+
+        if 'access_level' in kwargs:
+            access_level_allowed_values = ["RESTRICTED", "ACCESSIBLE"]
+            if kwargs['access_level'] not in access_level_allowed_values:
+                raise ValueError(
+                    "Invalid value for `access_level`, must be one of {0}".format(access_level_allowed_values)
+                )
+
+        query_params = {
+            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
+            "accessLevel": kwargs.get("access_level", missing)
+        }
+        query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-request-id": kwargs.get("opc_request_id", missing),
+            "if-match": kwargs.get("if_match", missing),
+            "opc-retry-token": kwargs.get("opc_retry_token", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_retry_token_if_needed(header_params)
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                query_params=query_params,
+                header_params=header_params,
+                body=alerts_update_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                query_params=query_params,
+                header_params=header_params,
+                body=alerts_update_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def apply_discovery_job_results(self, sensitive_data_model_id, apply_discovery_job_results_details, **kwargs):
         """
         Applies the results of a discovery job to the specified sensitive data model. Note that the plannedAction attribute
@@ -364,7 +493,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/apply_discovery_job_results.py.html>`__ to see an example of how to use apply_discovery_job_results API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/apply_discovery_job_results.py.html>`__ to see an example of how to use apply_discovery_job_results API.
         """
         resource_path = "/sensitiveDataModels/{sensitiveDataModelId}/sensitiveColumns/actions/applyDiscoveryJobResults"
         method = "POST"
@@ -476,7 +605,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/calculate_audit_volume_available.py.html>`__ to see an example of how to use calculate_audit_volume_available API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/calculate_audit_volume_available.py.html>`__ to see an example of how to use calculate_audit_volume_available API.
         """
         resource_path = "/auditProfiles/{auditProfileId}/actions/calculateAuditVolumeAvailable"
         method = "POST"
@@ -591,7 +720,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/calculate_audit_volume_collected.py.html>`__ to see an example of how to use calculate_audit_volume_collected API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/calculate_audit_volume_collected.py.html>`__ to see an example of how to use calculate_audit_volume_collected API.
         """
         resource_path = "/auditProfiles/{auditProfileId}/actions/calculateAuditVolumeCollected"
         method = "POST"
@@ -703,7 +832,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "DELETE"
@@ -816,7 +945,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_alert_compartment.py.html>`__ to see an example of how to use change_alert_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_alert_compartment.py.html>`__ to see an example of how to use change_alert_compartment API.
         """
         resource_path = "/alerts/{alertId}/actions/changeCompartment"
         method = "POST"
@@ -931,7 +1060,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_audit_archive_retrieval_compartment.py.html>`__ to see an example of how to use change_audit_archive_retrieval_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_audit_archive_retrieval_compartment.py.html>`__ to see an example of how to use change_audit_archive_retrieval_compartment API.
         """
         resource_path = "/auditArchiveRetrievals/{auditArchiveRetrievalId}/actions/changeCompartment"
         method = "POST"
@@ -1046,7 +1175,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_audit_policy_compartment.py.html>`__ to see an example of how to use change_audit_policy_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_audit_policy_compartment.py.html>`__ to see an example of how to use change_audit_policy_compartment API.
         """
         resource_path = "/auditPolicies/{auditPolicyId}/actions/changeCompartment"
         method = "POST"
@@ -1161,7 +1290,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_audit_profile_compartment.py.html>`__ to see an example of how to use change_audit_profile_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_audit_profile_compartment.py.html>`__ to see an example of how to use change_audit_profile_compartment API.
         """
         resource_path = "/auditProfiles/{auditProfileId}/actions/changeCompartment"
         method = "POST"
@@ -1270,7 +1399,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_data_safe_private_endpoint_compartment.py.html>`__ to see an example of how to use change_data_safe_private_endpoint_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_data_safe_private_endpoint_compartment.py.html>`__ to see an example of how to use change_data_safe_private_endpoint_compartment API.
         """
         resource_path = "/dataSafePrivateEndpoints/{dataSafePrivateEndpointId}/actions/changeCompartment"
         method = "POST"
@@ -1382,7 +1511,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_discovery_job_compartment.py.html>`__ to see an example of how to use change_discovery_job_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_discovery_job_compartment.py.html>`__ to see an example of how to use change_discovery_job_compartment API.
         """
         resource_path = "/discoveryJobs/{discoveryJobId}/actions/changeCompartment"
         method = "POST"
@@ -1497,7 +1626,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_library_masking_format_compartment.py.html>`__ to see an example of how to use change_library_masking_format_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_library_masking_format_compartment.py.html>`__ to see an example of how to use change_library_masking_format_compartment API.
         """
         resource_path = "/libraryMaskingFormats/{libraryMaskingFormatId}/actions/changeCompartment"
         method = "POST"
@@ -1612,7 +1741,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_masking_policy_compartment.py.html>`__ to see an example of how to use change_masking_policy_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_masking_policy_compartment.py.html>`__ to see an example of how to use change_masking_policy_compartment API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}/actions/changeCompartment"
         method = "POST"
@@ -1727,7 +1856,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_on_prem_connector_compartment.py.html>`__ to see an example of how to use change_on_prem_connector_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_on_prem_connector_compartment.py.html>`__ to see an example of how to use change_on_prem_connector_compartment API.
         """
         resource_path = "/onPremConnectors/{onPremConnectorId}/actions/changeCompartment"
         method = "POST"
@@ -1842,7 +1971,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_report_compartment.py.html>`__ to see an example of how to use change_report_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_report_compartment.py.html>`__ to see an example of how to use change_report_compartment API.
         """
         resource_path = "/reports/{reportId}/actions/changeCompartment"
         method = "POST"
@@ -1957,7 +2086,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_report_definition_compartment.py.html>`__ to see an example of how to use change_report_definition_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_report_definition_compartment.py.html>`__ to see an example of how to use change_report_definition_compartment API.
         """
         resource_path = "/reportDefinitions/{reportDefinitionId}/actions/changeCompartment"
         method = "POST"
@@ -2072,7 +2201,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_retention.py.html>`__ to see an example of how to use change_retention API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_retention.py.html>`__ to see an example of how to use change_retention API.
         """
         resource_path = "/auditProfiles/{auditProfileId}/actions/changeRetention"
         method = "POST"
@@ -2191,7 +2320,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_security_assessment_compartment.py.html>`__ to see an example of how to use change_security_assessment_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_security_assessment_compartment.py.html>`__ to see an example of how to use change_security_assessment_compartment API.
         """
         resource_path = "/securityAssessments/{securityAssessmentId}/actions/changeCompartment"
         method = "POST"
@@ -2306,7 +2435,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_sensitive_data_model_compartment.py.html>`__ to see an example of how to use change_sensitive_data_model_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_sensitive_data_model_compartment.py.html>`__ to see an example of how to use change_sensitive_data_model_compartment API.
         """
         resource_path = "/sensitiveDataModels/{sensitiveDataModelId}/actions/changeCompartment"
         method = "POST"
@@ -2421,7 +2550,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_sensitive_type_compartment.py.html>`__ to see an example of how to use change_sensitive_type_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_sensitive_type_compartment.py.html>`__ to see an example of how to use change_sensitive_type_compartment API.
         """
         resource_path = "/sensitiveTypes/{sensitiveTypeId}/actions/changeCompartment"
         method = "POST"
@@ -2536,7 +2665,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_target_alert_policy_association_compartment.py.html>`__ to see an example of how to use change_target_alert_policy_association_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_target_alert_policy_association_compartment.py.html>`__ to see an example of how to use change_target_alert_policy_association_compartment API.
         """
         resource_path = "/targetAlertPolicyAssociations/{targetAlertPolicyAssociationId}/actions/changeCompartment"
         method = "POST"
@@ -2651,7 +2780,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_target_database_compartment.py.html>`__ to see an example of how to use change_target_database_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_target_database_compartment.py.html>`__ to see an example of how to use change_target_database_compartment API.
         """
         resource_path = "/targetDatabases/{targetDatabaseId}/actions/changeCompartment"
         method = "POST"
@@ -2770,7 +2899,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/change_user_assessment_compartment.py.html>`__ to see an example of how to use change_user_assessment_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/change_user_assessment_compartment.py.html>`__ to see an example of how to use change_user_assessment_compartment API.
         """
         resource_path = "/userAssessments/{userAssessmentId}/actions/changeCompartment"
         method = "POST"
@@ -2886,7 +3015,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/compare_security_assessment.py.html>`__ to see an example of how to use compare_security_assessment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/compare_security_assessment.py.html>`__ to see an example of how to use compare_security_assessment API.
         """
         resource_path = "/securityAssessments/{securityAssessmentId}/actions/compare"
         method = "POST"
@@ -3002,7 +3131,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/compare_user_assessment.py.html>`__ to see an example of how to use compare_user_assessment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/compare_user_assessment.py.html>`__ to see an example of how to use compare_user_assessment API.
         """
         resource_path = "/userAssessments/{userAssessmentId}/actions/compare"
         method = "POST"
@@ -3109,7 +3238,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/create_audit_archive_retrieval.py.html>`__ to see an example of how to use create_audit_archive_retrieval API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/create_audit_archive_retrieval.py.html>`__ to see an example of how to use create_audit_archive_retrieval API.
         """
         resource_path = "/auditArchiveRetrievals"
         method = "POST"
@@ -3202,7 +3331,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/create_data_safe_private_endpoint.py.html>`__ to see an example of how to use create_data_safe_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/create_data_safe_private_endpoint.py.html>`__ to see an example of how to use create_data_safe_private_endpoint API.
         """
         resource_path = "/dataSafePrivateEndpoints"
         method = "POST"
@@ -3299,7 +3428,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/create_discovery_job.py.html>`__ to see an example of how to use create_discovery_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/create_discovery_job.py.html>`__ to see an example of how to use create_discovery_job API.
         """
         resource_path = "/discoveryJobs"
         method = "POST"
@@ -3396,7 +3525,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/create_library_masking_format.py.html>`__ to see an example of how to use create_library_masking_format API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/create_library_masking_format.py.html>`__ to see an example of how to use create_library_masking_format API.
         """
         resource_path = "/libraryMaskingFormats"
         method = "POST"
@@ -3511,7 +3640,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/create_masking_column.py.html>`__ to see an example of how to use create_masking_column API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/create_masking_column.py.html>`__ to see an example of how to use create_masking_column API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}/maskingColumns"
         method = "POST"
@@ -3630,7 +3759,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/create_masking_policy.py.html>`__ to see an example of how to use create_masking_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/create_masking_policy.py.html>`__ to see an example of how to use create_masking_policy API.
         """
         resource_path = "/maskingPolicies"
         method = "POST"
@@ -3723,7 +3852,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/create_on_prem_connector.py.html>`__ to see an example of how to use create_on_prem_connector API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/create_on_prem_connector.py.html>`__ to see an example of how to use create_on_prem_connector API.
         """
         resource_path = "/onPremConnectors"
         method = "POST"
@@ -3816,7 +3945,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/create_report_definition.py.html>`__ to see an example of how to use create_report_definition API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/create_report_definition.py.html>`__ to see an example of how to use create_report_definition API.
         """
         resource_path = "/reportDefinitions"
         method = "POST"
@@ -3913,7 +4042,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/create_security_assessment.py.html>`__ to see an example of how to use create_security_assessment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/create_security_assessment.py.html>`__ to see an example of how to use create_security_assessment API.
         """
         resource_path = "/securityAssessments"
         method = "POST"
@@ -4009,7 +4138,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/create_sensitive_column.py.html>`__ to see an example of how to use create_sensitive_column API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/create_sensitive_column.py.html>`__ to see an example of how to use create_sensitive_column API.
         """
         resource_path = "/sensitiveDataModels/{sensitiveDataModelId}/sensitiveColumns"
         method = "POST"
@@ -4114,7 +4243,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/create_sensitive_data_model.py.html>`__ to see an example of how to use create_sensitive_data_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/create_sensitive_data_model.py.html>`__ to see an example of how to use create_sensitive_data_model API.
         """
         resource_path = "/sensitiveDataModels"
         method = "POST"
@@ -4209,7 +4338,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/create_sensitive_type.py.html>`__ to see an example of how to use create_sensitive_type API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/create_sensitive_type.py.html>`__ to see an example of how to use create_sensitive_type API.
         """
         resource_path = "/sensitiveTypes"
         method = "POST"
@@ -4302,7 +4431,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/create_target_alert_policy_association.py.html>`__ to see an example of how to use create_target_alert_policy_association API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/create_target_alert_policy_association.py.html>`__ to see an example of how to use create_target_alert_policy_association API.
         """
         resource_path = "/targetAlertPolicyAssociations"
         method = "POST"
@@ -4395,7 +4524,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/create_target_database.py.html>`__ to see an example of how to use create_target_database API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/create_target_database.py.html>`__ to see an example of how to use create_target_database API.
         """
         resource_path = "/targetDatabases"
         method = "POST"
@@ -4492,7 +4621,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/create_user_assessment.py.html>`__ to see an example of how to use create_user_assessment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/create_user_assessment.py.html>`__ to see an example of how to use create_user_assessment API.
         """
         resource_path = "/userAssessments"
         method = "POST"
@@ -4592,7 +4721,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/deactivate_target_database.py.html>`__ to see an example of how to use deactivate_target_database API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/deactivate_target_database.py.html>`__ to see an example of how to use deactivate_target_database API.
         """
         resource_path = "/targetDatabases/{targetDatabaseId}/actions/deactivate"
         method = "POST"
@@ -4697,7 +4826,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/delete_audit_archive_retrieval.py.html>`__ to see an example of how to use delete_audit_archive_retrieval API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/delete_audit_archive_retrieval.py.html>`__ to see an example of how to use delete_audit_archive_retrieval API.
         """
         resource_path = "/auditArchiveRetrievals/{auditArchiveRetrievalId}"
         method = "DELETE"
@@ -4798,7 +4927,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/delete_audit_trail.py.html>`__ to see an example of how to use delete_audit_trail API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/delete_audit_trail.py.html>`__ to see an example of how to use delete_audit_trail API.
         """
         resource_path = "/auditTrails/{auditTrailId}"
         method = "DELETE"
@@ -4899,7 +5028,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/delete_data_safe_private_endpoint.py.html>`__ to see an example of how to use delete_data_safe_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/delete_data_safe_private_endpoint.py.html>`__ to see an example of how to use delete_data_safe_private_endpoint API.
         """
         resource_path = "/dataSafePrivateEndpoints/{dataSafePrivateEndpointId}"
         method = "DELETE"
@@ -5000,7 +5129,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/delete_discovery_job.py.html>`__ to see an example of how to use delete_discovery_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/delete_discovery_job.py.html>`__ to see an example of how to use delete_discovery_job API.
         """
         resource_path = "/discoveryJobs/{discoveryJobId}"
         method = "DELETE"
@@ -5104,7 +5233,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/delete_discovery_job_result.py.html>`__ to see an example of how to use delete_discovery_job_result API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/delete_discovery_job_result.py.html>`__ to see an example of how to use delete_discovery_job_result API.
         """
         resource_path = "/discoveryJobs/{discoveryJobId}/results/{resultKey}"
         method = "DELETE"
@@ -5206,7 +5335,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/delete_library_masking_format.py.html>`__ to see an example of how to use delete_library_masking_format API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/delete_library_masking_format.py.html>`__ to see an example of how to use delete_library_masking_format API.
         """
         resource_path = "/libraryMaskingFormats/{libraryMaskingFormatId}"
         method = "DELETE"
@@ -5310,7 +5439,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/delete_masking_column.py.html>`__ to see an example of how to use delete_masking_column API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/delete_masking_column.py.html>`__ to see an example of how to use delete_masking_column API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}/maskingColumns/{maskingColumnKey}"
         method = "DELETE"
@@ -5412,7 +5541,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/delete_masking_policy.py.html>`__ to see an example of how to use delete_masking_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/delete_masking_policy.py.html>`__ to see an example of how to use delete_masking_policy API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}"
         method = "DELETE"
@@ -5513,7 +5642,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/delete_on_prem_connector.py.html>`__ to see an example of how to use delete_on_prem_connector API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/delete_on_prem_connector.py.html>`__ to see an example of how to use delete_on_prem_connector API.
         """
         resource_path = "/onPremConnectors/{onPremConnectorId}"
         method = "DELETE"
@@ -5614,7 +5743,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/delete_report_definition.py.html>`__ to see an example of how to use delete_report_definition API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/delete_report_definition.py.html>`__ to see an example of how to use delete_report_definition API.
         """
         resource_path = "/reportDefinitions/{reportDefinitionId}"
         method = "DELETE"
@@ -5718,7 +5847,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/delete_security_assessment.py.html>`__ to see an example of how to use delete_security_assessment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/delete_security_assessment.py.html>`__ to see an example of how to use delete_security_assessment API.
         """
         resource_path = "/securityAssessments/{securityAssessmentId}"
         method = "DELETE"
@@ -5822,7 +5951,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/delete_sensitive_column.py.html>`__ to see an example of how to use delete_sensitive_column API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/delete_sensitive_column.py.html>`__ to see an example of how to use delete_sensitive_column API.
         """
         resource_path = "/sensitiveDataModels/{sensitiveDataModelId}/sensitiveColumns/{sensitiveColumnKey}"
         method = "DELETE"
@@ -5924,7 +6053,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/delete_sensitive_data_model.py.html>`__ to see an example of how to use delete_sensitive_data_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/delete_sensitive_data_model.py.html>`__ to see an example of how to use delete_sensitive_data_model API.
         """
         resource_path = "/sensitiveDataModels/{sensitiveDataModelId}"
         method = "DELETE"
@@ -6025,7 +6154,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/delete_sensitive_type.py.html>`__ to see an example of how to use delete_sensitive_type API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/delete_sensitive_type.py.html>`__ to see an example of how to use delete_sensitive_type API.
         """
         resource_path = "/sensitiveTypes/{sensitiveTypeId}"
         method = "DELETE"
@@ -6126,7 +6255,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/delete_target_alert_policy_association.py.html>`__ to see an example of how to use delete_target_alert_policy_association API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/delete_target_alert_policy_association.py.html>`__ to see an example of how to use delete_target_alert_policy_association API.
         """
         resource_path = "/targetAlertPolicyAssociations/{targetAlertPolicyAssociationId}"
         method = "DELETE"
@@ -6227,7 +6356,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/delete_target_database.py.html>`__ to see an example of how to use delete_target_database API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/delete_target_database.py.html>`__ to see an example of how to use delete_target_database API.
         """
         resource_path = "/targetDatabases/{targetDatabaseId}"
         method = "DELETE"
@@ -6331,7 +6460,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/delete_user_assessment.py.html>`__ to see an example of how to use delete_user_assessment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/delete_user_assessment.py.html>`__ to see an example of how to use delete_user_assessment API.
         """
         resource_path = "/userAssessments/{userAssessmentId}"
         method = "DELETE"
@@ -6441,7 +6570,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/discover_audit_trails.py.html>`__ to see an example of how to use discover_audit_trails API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/discover_audit_trails.py.html>`__ to see an example of how to use discover_audit_trails API.
         """
         resource_path = "/auditProfiles/{auditProfileId}/actions/discoverAuditTrails"
         method = "POST"
@@ -6544,7 +6673,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/download_discovery_report.py.html>`__ to see an example of how to use download_discovery_report API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/download_discovery_report.py.html>`__ to see an example of how to use download_discovery_report API.
         """
         resource_path = "/sensitiveDataModels/{sensitiveDataModelId}/actions/downloadReport"
         method = "POST"
@@ -6643,7 +6772,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/download_masking_log.py.html>`__ to see an example of how to use download_masking_log API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/download_masking_log.py.html>`__ to see an example of how to use download_masking_log API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}/actions/downloadLog"
         method = "POST"
@@ -6745,7 +6874,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/download_masking_policy.py.html>`__ to see an example of how to use download_masking_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/download_masking_policy.py.html>`__ to see an example of how to use download_masking_policy API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}/actions/download"
         method = "POST"
@@ -6846,7 +6975,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/download_masking_report.py.html>`__ to see an example of how to use download_masking_report API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/download_masking_report.py.html>`__ to see an example of how to use download_masking_report API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}/actions/downloadReport"
         method = "POST"
@@ -6952,7 +7081,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/download_privilege_script.py.html>`__ to see an example of how to use download_privilege_script API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/download_privilege_script.py.html>`__ to see an example of how to use download_privilege_script API.
         """
         resource_path = "/actions/downloadPrivilegeScript"
         method = "POST"
@@ -7056,7 +7185,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/download_security_assessment_report.py.html>`__ to see an example of how to use download_security_assessment_report API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/download_security_assessment_report.py.html>`__ to see an example of how to use download_security_assessment_report API.
         """
         resource_path = "/securityAssessments/{securityAssessmentId}/actions/downloadReport"
         method = "POST"
@@ -7163,7 +7292,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/download_sensitive_data_model.py.html>`__ to see an example of how to use download_sensitive_data_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/download_sensitive_data_model.py.html>`__ to see an example of how to use download_sensitive_data_model API.
         """
         resource_path = "/sensitiveDataModels/{sensitiveDataModelId}/actions/download"
         method = "POST"
@@ -7276,7 +7405,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/download_user_assessment_report.py.html>`__ to see an example of how to use download_user_assessment_report API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/download_user_assessment_report.py.html>`__ to see an example of how to use download_user_assessment_report API.
         """
         resource_path = "/userAssessments/{userAssessmentId}/actions/downloadReport"
         method = "POST"
@@ -7387,7 +7516,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/enable_data_safe_configuration.py.html>`__ to see an example of how to use enable_data_safe_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/enable_data_safe_configuration.py.html>`__ to see an example of how to use enable_data_safe_configuration API.
         """
         resource_path = "/configuration"
         method = "PUT"
@@ -7485,7 +7614,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/generate_discovery_report_for_download.py.html>`__ to see an example of how to use generate_discovery_report_for_download API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/generate_discovery_report_for_download.py.html>`__ to see an example of how to use generate_discovery_report_for_download API.
         """
         resource_path = "/sensitiveDataModels/{sensitiveDataModelId}/actions/generateReportForDownload"
         method = "POST"
@@ -7586,7 +7715,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/generate_masking_policy_for_download.py.html>`__ to see an example of how to use generate_masking_policy_for_download API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/generate_masking_policy_for_download.py.html>`__ to see an example of how to use generate_masking_policy_for_download API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}/actions/generatePolicyForDownload"
         method = "POST"
@@ -7686,7 +7815,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/generate_masking_report_for_download.py.html>`__ to see an example of how to use generate_masking_report_for_download API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/generate_masking_report_for_download.py.html>`__ to see an example of how to use generate_masking_report_for_download API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}/actions/generateReportForDownload"
         method = "POST"
@@ -7796,7 +7925,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/generate_on_prem_connector_configuration.py.html>`__ to see an example of how to use generate_on_prem_connector_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/generate_on_prem_connector_configuration.py.html>`__ to see an example of how to use generate_on_prem_connector_configuration API.
         """
         resource_path = "/onPremConnectors/{onPremConnectorId}/actions/generateConfiguration"
         method = "POST"
@@ -7924,7 +8053,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/generate_report.py.html>`__ to see an example of how to use generate_report API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/generate_report.py.html>`__ to see an example of how to use generate_report API.
         """
         resource_path = "/reportDefinitions/{reportDefinitionId}/actions/generateReport"
         method = "POST"
@@ -8048,7 +8177,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/generate_security_assessment_report.py.html>`__ to see an example of how to use generate_security_assessment_report API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/generate_security_assessment_report.py.html>`__ to see an example of how to use generate_security_assessment_report API.
         """
         resource_path = "/securityAssessments/{securityAssessmentId}/actions/generateReport"
         method = "POST"
@@ -8153,7 +8282,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/generate_sensitive_data_model_for_download.py.html>`__ to see an example of how to use generate_sensitive_data_model_for_download API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/generate_sensitive_data_model_for_download.py.html>`__ to see an example of how to use generate_sensitive_data_model_for_download API.
         """
         resource_path = "/sensitiveDataModels/{sensitiveDataModelId}/actions/generateDataModelForDownload"
         method = "POST"
@@ -8264,7 +8393,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/generate_user_assessment_report.py.html>`__ to see an example of how to use generate_user_assessment_report API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/generate_user_assessment_report.py.html>`__ to see an example of how to use generate_user_assessment_report API.
         """
         resource_path = "/userAssessments/{userAssessmentId}/actions/generateReport"
         method = "POST"
@@ -8363,7 +8492,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_alert.py.html>`__ to see an example of how to use get_alert API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_alert.py.html>`__ to see an example of how to use get_alert API.
         """
         resource_path = "/alerts/{alertId}"
         method = "GET"
@@ -8457,7 +8586,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_alert_policy.py.html>`__ to see an example of how to use get_alert_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_alert_policy.py.html>`__ to see an example of how to use get_alert_policy API.
         """
         resource_path = "/alertPolicies/{alertPolicyId}"
         method = "GET"
@@ -8558,7 +8687,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_audit_archive_retrieval.py.html>`__ to see an example of how to use get_audit_archive_retrieval API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_audit_archive_retrieval.py.html>`__ to see an example of how to use get_audit_archive_retrieval API.
         """
         resource_path = "/auditArchiveRetrievals/{auditArchiveRetrievalId}"
         method = "GET"
@@ -8654,7 +8783,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_audit_policy.py.html>`__ to see an example of how to use get_audit_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_audit_policy.py.html>`__ to see an example of how to use get_audit_policy API.
         """
         resource_path = "/auditPolicies/{auditPolicyId}"
         method = "GET"
@@ -8748,7 +8877,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_audit_profile.py.html>`__ to see an example of how to use get_audit_profile API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_audit_profile.py.html>`__ to see an example of how to use get_audit_profile API.
         """
         resource_path = "/auditProfiles/{auditProfileId}"
         method = "GET"
@@ -8842,7 +8971,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_audit_trail.py.html>`__ to see an example of how to use get_audit_trail API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_audit_trail.py.html>`__ to see an example of how to use get_audit_trail API.
         """
         resource_path = "/auditTrails/{auditTrailId}"
         method = "GET"
@@ -8949,7 +9078,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_compatible_formats_for_data_types.py.html>`__ to see an example of how to use get_compatible_formats_for_data_types API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_compatible_formats_for_data_types.py.html>`__ to see an example of how to use get_compatible_formats_for_data_types API.
         """
         resource_path = "/compatibleFormatsForDataTypes"
         method = "GET"
@@ -9066,7 +9195,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_compatible_formats_for_sensitive_types.py.html>`__ to see an example of how to use get_compatible_formats_for_sensitive_types API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_compatible_formats_for_sensitive_types.py.html>`__ to see an example of how to use get_compatible_formats_for_sensitive_types API.
         """
         resource_path = "/compatibleFormatsForSensitiveTypes"
         method = "GET"
@@ -9170,7 +9299,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_data_safe_configuration.py.html>`__ to see an example of how to use get_data_safe_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_data_safe_configuration.py.html>`__ to see an example of how to use get_data_safe_configuration API.
         """
         resource_path = "/configuration"
         method = "GET"
@@ -9260,7 +9389,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_data_safe_private_endpoint.py.html>`__ to see an example of how to use get_data_safe_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_data_safe_private_endpoint.py.html>`__ to see an example of how to use get_data_safe_private_endpoint API.
         """
         resource_path = "/dataSafePrivateEndpoints/{dataSafePrivateEndpointId}"
         method = "GET"
@@ -9354,7 +9483,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_discovery_job.py.html>`__ to see an example of how to use get_discovery_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_discovery_job.py.html>`__ to see an example of how to use get_discovery_job API.
         """
         resource_path = "/discoveryJobs/{discoveryJobId}"
         method = "GET"
@@ -9451,7 +9580,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_discovery_job_result.py.html>`__ to see an example of how to use get_discovery_job_result API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_discovery_job_result.py.html>`__ to see an example of how to use get_discovery_job_result API.
         """
         resource_path = "/discoveryJobs/{discoveryJobId}/results/{resultKey}"
         method = "GET"
@@ -9546,7 +9675,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_library_masking_format.py.html>`__ to see an example of how to use get_library_masking_format API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_library_masking_format.py.html>`__ to see an example of how to use get_library_masking_format API.
         """
         resource_path = "/libraryMaskingFormats/{libraryMaskingFormatId}"
         method = "GET"
@@ -9643,7 +9772,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_masking_column.py.html>`__ to see an example of how to use get_masking_column API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_masking_column.py.html>`__ to see an example of how to use get_masking_column API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}/maskingColumns/{maskingColumnKey}"
         method = "GET"
@@ -9738,7 +9867,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_masking_policy.py.html>`__ to see an example of how to use get_masking_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_masking_policy.py.html>`__ to see an example of how to use get_masking_policy API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}"
         method = "GET"
@@ -9832,7 +9961,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_masking_report.py.html>`__ to see an example of how to use get_masking_report API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_masking_report.py.html>`__ to see an example of how to use get_masking_report API.
         """
         resource_path = "/maskingReports/{maskingReportId}"
         method = "GET"
@@ -9926,7 +10055,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_on_prem_connector.py.html>`__ to see an example of how to use get_on_prem_connector API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_on_prem_connector.py.html>`__ to see an example of how to use get_on_prem_connector API.
         """
         resource_path = "/onPremConnectors/{onPremConnectorId}"
         method = "GET"
@@ -10020,7 +10149,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_report.py.html>`__ to see an example of how to use get_report API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_report.py.html>`__ to see an example of how to use get_report API.
         """
         resource_path = "/reports/{reportId}"
         method = "GET"
@@ -10114,7 +10243,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_report_content.py.html>`__ to see an example of how to use get_report_content API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_report_content.py.html>`__ to see an example of how to use get_report_content API.
         """
         resource_path = "/reports/{reportId}/content"
         method = "GET"
@@ -10208,7 +10337,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_report_definition.py.html>`__ to see an example of how to use get_report_definition API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_report_definition.py.html>`__ to see an example of how to use get_report_definition API.
         """
         resource_path = "/reportDefinitions/{reportDefinitionId}"
         method = "GET"
@@ -10302,7 +10431,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_security_assessment.py.html>`__ to see an example of how to use get_security_assessment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_security_assessment.py.html>`__ to see an example of how to use get_security_assessment API.
         """
         resource_path = "/securityAssessments/{securityAssessmentId}"
         method = "GET"
@@ -10399,7 +10528,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_security_assessment_comparison.py.html>`__ to see an example of how to use get_security_assessment_comparison API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_security_assessment_comparison.py.html>`__ to see an example of how to use get_security_assessment_comparison API.
         """
         resource_path = "/securityAssessments/{securityAssessmentId}/comparison/{comparisonSecurityAssessmentId}"
         method = "GET"
@@ -10497,7 +10626,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_sensitive_column.py.html>`__ to see an example of how to use get_sensitive_column API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_sensitive_column.py.html>`__ to see an example of how to use get_sensitive_column API.
         """
         resource_path = "/sensitiveDataModels/{sensitiveDataModelId}/sensitiveColumns/{sensitiveColumnKey}"
         method = "GET"
@@ -10592,7 +10721,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_sensitive_data_model.py.html>`__ to see an example of how to use get_sensitive_data_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_sensitive_data_model.py.html>`__ to see an example of how to use get_sensitive_data_model API.
         """
         resource_path = "/sensitiveDataModels/{sensitiveDataModelId}"
         method = "GET"
@@ -10686,7 +10815,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_sensitive_type.py.html>`__ to see an example of how to use get_sensitive_type API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_sensitive_type.py.html>`__ to see an example of how to use get_sensitive_type API.
         """
         resource_path = "/sensitiveTypes/{sensitiveTypeId}"
         method = "GET"
@@ -10780,7 +10909,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_target_alert_policy_association.py.html>`__ to see an example of how to use get_target_alert_policy_association API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_target_alert_policy_association.py.html>`__ to see an example of how to use get_target_alert_policy_association API.
         """
         resource_path = "/targetAlertPolicyAssociations/{targetAlertPolicyAssociationId}"
         method = "GET"
@@ -10874,7 +11003,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_target_database.py.html>`__ to see an example of how to use get_target_database API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_target_database.py.html>`__ to see an example of how to use get_target_database API.
         """
         resource_path = "/targetDatabases/{targetDatabaseId}"
         method = "GET"
@@ -10968,7 +11097,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_user_assessment.py.html>`__ to see an example of how to use get_user_assessment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_user_assessment.py.html>`__ to see an example of how to use get_user_assessment API.
         """
         resource_path = "/userAssessments/{userAssessmentId}"
         method = "GET"
@@ -11065,7 +11194,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_user_assessment_comparison.py.html>`__ to see an example of how to use get_user_assessment_comparison API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_user_assessment_comparison.py.html>`__ to see an example of how to use get_user_assessment_comparison API.
         """
         resource_path = "/userAssessments/{userAssessmentId}/comparison/{comparisonUserAssessmentId}"
         method = "GET"
@@ -11160,7 +11289,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -11347,7 +11476,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_alert_analytics.py.html>`__ to see an example of how to use list_alert_analytics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_alert_analytics.py.html>`__ to see an example of how to use list_alert_analytics API.
         """
         resource_path = "/alertAnalytics"
         method = "GET"
@@ -11570,7 +11699,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_alert_policies.py.html>`__ to see an example of how to use list_alert_policies API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_alert_policies.py.html>`__ to see an example of how to use list_alert_policies API.
         """
         resource_path = "/alertPolicies"
         method = "GET"
@@ -11731,7 +11860,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_alert_policy_rules.py.html>`__ to see an example of how to use list_alert_policy_rules API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_alert_policy_rules.py.html>`__ to see an example of how to use list_alert_policy_rules API.
         """
         resource_path = "/alertPolicies/{alertPolicyId}/rules"
         method = "GET"
@@ -11897,7 +12026,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_alerts.py.html>`__ to see an example of how to use list_alerts API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_alerts.py.html>`__ to see an example of how to use list_alerts API.
         """
         resource_path = "/alerts"
         method = "GET"
@@ -12084,7 +12213,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_audit_archive_retrievals.py.html>`__ to see an example of how to use list_audit_archive_retrievals API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_audit_archive_retrievals.py.html>`__ to see an example of how to use list_audit_archive_retrievals API.
         """
         resource_path = "/auditArchiveRetrievals"
         method = "GET"
@@ -12311,7 +12440,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_audit_event_analytics.py.html>`__ to see an example of how to use list_audit_event_analytics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_audit_event_analytics.py.html>`__ to see an example of how to use list_audit_event_analytics API.
         """
         resource_path = "/auditEventAnalytics"
         method = "GET"
@@ -12522,7 +12651,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_audit_events.py.html>`__ to see an example of how to use list_audit_events API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_audit_events.py.html>`__ to see an example of how to use list_audit_events API.
         """
         resource_path = "/auditEvents"
         method = "GET"
@@ -12708,7 +12837,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_audit_policies.py.html>`__ to see an example of how to use list_audit_policies API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_audit_policies.py.html>`__ to see an example of how to use list_audit_policies API.
         """
         resource_path = "/auditPolicies"
         method = "GET"
@@ -12884,7 +13013,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_audit_profile_analytics.py.html>`__ to see an example of how to use list_audit_profile_analytics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_audit_profile_analytics.py.html>`__ to see an example of how to use list_audit_profile_analytics API.
         """
         resource_path = "/auditProfileAnalytics"
         method = "GET"
@@ -13072,7 +13201,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_audit_profiles.py.html>`__ to see an example of how to use list_audit_profiles API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_audit_profiles.py.html>`__ to see an example of how to use list_audit_profiles API.
         """
         resource_path = "/auditProfiles"
         method = "GET"
@@ -13257,7 +13386,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_audit_trail_analytics.py.html>`__ to see an example of how to use list_audit_trail_analytics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_audit_trail_analytics.py.html>`__ to see an example of how to use list_audit_trail_analytics API.
         """
         resource_path = "/auditTrailAnalytics"
         method = "GET"
@@ -13406,7 +13535,7 @@ class DataSafeClient(object):
         :param str status: (optional)
             A optional filter to return only resources that match the specified sub-state of audit trail.
 
-            Allowed values are: "STARTING", "COLLECTING", "RECOVERING", "IDLE", "STOPPING", "STOPPED", "RESUMING", "RETRYING"
+            Allowed values are: "STARTING", "COLLECTING", "RECOVERING", "IDLE", "STOPPING", "STOPPED", "RESUMING", "RETRYING", "NOT_STARTED", "STOPPED_NEEDS_ATTN", "STOPPED_FAILED"
 
         :param str sort_order: (optional)
             The sort order to use, either ascending (ASC) or descending (DESC).
@@ -13439,7 +13568,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_audit_trails.py.html>`__ to see an example of how to use list_audit_trails API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_audit_trails.py.html>`__ to see an example of how to use list_audit_trails API.
         """
         resource_path = "/auditTrails"
         method = "GET"
@@ -13483,7 +13612,7 @@ class DataSafeClient(object):
                 )
 
         if 'status' in kwargs:
-            status_allowed_values = ["STARTING", "COLLECTING", "RECOVERING", "IDLE", "STOPPING", "STOPPED", "RESUMING", "RETRYING"]
+            status_allowed_values = ["STARTING", "COLLECTING", "RECOVERING", "IDLE", "STOPPING", "STOPPED", "RESUMING", "RETRYING", "NOT_STARTED", "STOPPED_NEEDS_ATTN", "STOPPED_FAILED"]
             if kwargs['status'] not in status_allowed_values:
                 raise ValueError(
                     "Invalid value for `status`, must be one of {0}".format(status_allowed_values)
@@ -13631,7 +13760,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_available_audit_volumes.py.html>`__ to see an example of how to use list_available_audit_volumes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_available_audit_volumes.py.html>`__ to see an example of how to use list_available_audit_volumes API.
         """
         resource_path = "/auditProfiles/{auditProfileId}/availableAuditVolumes"
         method = "GET"
@@ -13803,7 +13932,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_collected_audit_volumes.py.html>`__ to see an example of how to use list_collected_audit_volumes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_collected_audit_volumes.py.html>`__ to see an example of how to use list_collected_audit_volumes API.
         """
         resource_path = "/auditProfiles/{auditProfileId}/collectedAuditVolumes"
         method = "GET"
@@ -13971,7 +14100,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_columns.py.html>`__ to see an example of how to use list_columns API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_columns.py.html>`__ to see an example of how to use list_columns API.
         """
         resource_path = "/targetDatabases/{targetDatabaseId}/columns"
         method = "GET"
@@ -14152,7 +14281,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_data_safe_private_endpoints.py.html>`__ to see an example of how to use list_data_safe_private_endpoints API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_data_safe_private_endpoints.py.html>`__ to see an example of how to use list_data_safe_private_endpoints API.
         """
         resource_path = "/dataSafePrivateEndpoints"
         method = "GET"
@@ -14263,6 +14392,8 @@ class DataSafeClient(object):
     def list_discovery_analytics(self, compartment_id, **kwargs):
         """
         Gets consolidated discovery analytics data based on the specified query parameters.
+        If CompartmentIdInSubtreeQueryParam is specified as true, the behaviour
+        is equivalent to accessLevel \"ACCESSIBLE\" by default.
 
 
         :param str compartment_id: (required)
@@ -14312,7 +14443,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_discovery_analytics.py.html>`__ to see an example of how to use list_discovery_analytics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_discovery_analytics.py.html>`__ to see an example of how to use list_discovery_analytics API.
         """
         resource_path = "/discoveryAnalytics"
         method = "GET"
@@ -14463,7 +14594,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_discovery_job_results.py.html>`__ to see an example of how to use list_discovery_job_results API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_discovery_job_results.py.html>`__ to see an example of how to use list_discovery_job_results API.
         """
         resource_path = "/discoveryJobs/{discoveryJobId}/results"
         method = "GET"
@@ -14661,7 +14792,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_discovery_jobs.py.html>`__ to see an example of how to use list_discovery_jobs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_discovery_jobs.py.html>`__ to see an example of how to use list_discovery_jobs API.
         """
         resource_path = "/discoveryJobs"
         method = "GET"
@@ -14830,7 +14961,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_findings.py.html>`__ to see an example of how to use list_findings API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_findings.py.html>`__ to see an example of how to use list_findings API.
         """
         resource_path = "/securityAssessments/{securityAssessmentId}/findings"
         method = "GET"
@@ -15003,7 +15134,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_grants.py.html>`__ to see an example of how to use list_grants API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_grants.py.html>`__ to see an example of how to use list_grants API.
         """
         resource_path = "/userAssessments/{userAssessmentId}/users/{userKey}/grants"
         method = "GET"
@@ -15206,7 +15337,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_library_masking_formats.py.html>`__ to see an example of how to use list_library_masking_formats API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_library_masking_formats.py.html>`__ to see an example of how to use list_library_masking_formats API.
         """
         resource_path = "/libraryMaskingFormats"
         method = "GET"
@@ -15394,7 +15525,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_masked_columns.py.html>`__ to see an example of how to use list_masked_columns API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_masked_columns.py.html>`__ to see an example of how to use list_masked_columns API.
         """
         resource_path = "/maskingReports/{maskingReportId}/maskedColumns"
         method = "GET"
@@ -15512,6 +15643,8 @@ class DataSafeClient(object):
     def list_masking_analytics(self, compartment_id, **kwargs):
         """
         Gets consolidated masking analytics data based on the specified query parameters.
+        If CompartmentIdInSubtreeQueryParam is specified as true, the behaviour
+        is equivalent to accessLevel \"ACCESSIBLE\" by default.
 
 
         :param str compartment_id: (required)
@@ -15561,7 +15694,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_masking_analytics.py.html>`__ to see an example of how to use list_masking_analytics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_masking_analytics.py.html>`__ to see an example of how to use list_masking_analytics API.
         """
         resource_path = "/maskingAnalytics"
         method = "GET"
@@ -15669,7 +15802,7 @@ class DataSafeClient(object):
             The field to sort by. You can specify only one sort order (sortOrder). The default order for timeCreated is descending.
             The default order for other fields is ascending.
 
-            Allowed values are: "timeCreated", "schemaName", "objectName"
+            Allowed values are: "timeCreated", "schemaName", "objectName", "dataType"
 
         :param str masking_column_lifecycle_state: (optional)
             A filter to return only the resources that match the specified lifecycle states.
@@ -15761,7 +15894,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_masking_columns.py.html>`__ to see an example of how to use list_masking_columns API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_masking_columns.py.html>`__ to see an example of how to use list_masking_columns API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}/maskingColumns"
         method = "GET"
@@ -15815,7 +15948,7 @@ class DataSafeClient(object):
                 )
 
         if 'sort_by' in kwargs:
-            sort_by_allowed_values = ["timeCreated", "schemaName", "objectName"]
+            sort_by_allowed_values = ["timeCreated", "schemaName", "objectName", "dataType"]
             if kwargs['sort_by'] not in sort_by_allowed_values:
                 raise ValueError(
                     "Invalid value for `sort_by`, must be one of {0}".format(sort_by_allowed_values)
@@ -16001,7 +16134,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_masking_policies.py.html>`__ to see an example of how to use list_masking_policies API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_masking_policies.py.html>`__ to see an example of how to use list_masking_policies API.
         """
         resource_path = "/maskingPolicies"
         method = "GET"
@@ -16182,7 +16315,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_masking_reports.py.html>`__ to see an example of how to use list_masking_reports API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_masking_reports.py.html>`__ to see an example of how to use list_masking_reports API.
         """
         resource_path = "/maskingReports"
         method = "GET"
@@ -16298,7 +16431,7 @@ class DataSafeClient(object):
         :param str on_prem_connector_lifecycle_state: (optional)
             A filter to return only on-premises connector resources that match the specified lifecycle state.
 
-            Allowed values are: "CREATING", "UPDATING", "ACTIVE", "INACTIVE", "DELETING", "DELETED", "FAILED"
+            Allowed values are: "CREATING", "UPDATING", "ACTIVE", "INACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION"
 
         :param int limit: (optional)
             For list pagination. The maximum number of items to return per page in a paginated \"List\" call. For details about how pagination works, see `List Pagination`__.
@@ -16353,7 +16486,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_on_prem_connectors.py.html>`__ to see an example of how to use list_on_prem_connectors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_on_prem_connectors.py.html>`__ to see an example of how to use list_on_prem_connectors API.
         """
         resource_path = "/onPremConnectors"
         method = "GET"
@@ -16381,7 +16514,7 @@ class DataSafeClient(object):
                 "list_on_prem_connectors got unknown kwargs: {!r}".format(extra_kwargs))
 
         if 'on_prem_connector_lifecycle_state' in kwargs:
-            on_prem_connector_lifecycle_state_allowed_values = ["CREATING", "UPDATING", "ACTIVE", "INACTIVE", "DELETING", "DELETED", "FAILED"]
+            on_prem_connector_lifecycle_state_allowed_values = ["CREATING", "UPDATING", "ACTIVE", "INACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION"]
             if kwargs['on_prem_connector_lifecycle_state'] not in on_prem_connector_lifecycle_state_allowed_values:
                 raise ValueError(
                     "Invalid value for `on_prem_connector_lifecycle_state`, must be one of {0}".format(on_prem_connector_lifecycle_state_allowed_values)
@@ -16545,7 +16678,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_report_definitions.py.html>`__ to see an example of how to use list_report_definitions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_report_definitions.py.html>`__ to see an example of how to use list_report_definitions API.
         """
         resource_path = "/reportDefinitions"
         method = "GET"
@@ -16725,6 +16858,11 @@ class DataSafeClient(object):
 
             Allowed values are: "UPDATING", "ACTIVE"
 
+        :param str type: (optional)
+            An optional filter to return only resources that match the specified type.
+
+            Allowed values are: "GENERATED", "SCHEDULED"
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -16741,7 +16879,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_reports.py.html>`__ to see an example of how to use list_reports API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_reports.py.html>`__ to see an example of how to use list_reports API.
         """
         resource_path = "/reports"
         method = "GET"
@@ -16761,7 +16899,8 @@ class DataSafeClient(object):
             "sort_by",
             "report_definition_id",
             "opc_request_id",
-            "lifecycle_state"
+            "lifecycle_state",
+            "type"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -16796,6 +16935,13 @@ class DataSafeClient(object):
                     "Invalid value for `lifecycle_state`, must be one of {0}".format(lifecycle_state_allowed_values)
                 )
 
+        if 'type' in kwargs:
+            type_allowed_values = ["GENERATED", "SCHEDULED"]
+            if kwargs['type'] not in type_allowed_values:
+                raise ValueError(
+                    "Invalid value for `type`, must be one of {0}".format(type_allowed_values)
+                )
+
         query_params = {
             "compartmentId": compartment_id,
             "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
@@ -16806,7 +16952,8 @@ class DataSafeClient(object):
             "sortOrder": kwargs.get("sort_order", missing),
             "sortBy": kwargs.get("sort_by", missing),
             "reportDefinitionId": kwargs.get("report_definition_id", missing),
-            "lifecycleState": kwargs.get("lifecycle_state", missing)
+            "lifecycleState": kwargs.get("lifecycle_state", missing),
+            "type": kwargs.get("type", missing)
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -16908,7 +17055,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_roles.py.html>`__ to see an example of how to use list_roles API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_roles.py.html>`__ to see an example of how to use list_roles API.
         """
         resource_path = "/targetDatabases/{targetDatabaseId}/roles"
         method = "GET"
@@ -17067,7 +17214,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_schemas.py.html>`__ to see an example of how to use list_schemas API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_schemas.py.html>`__ to see an example of how to use list_schemas API.
         """
         resource_path = "/targetDatabases/{targetDatabaseId}/schemas"
         method = "GET"
@@ -17288,7 +17435,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_security_assessments.py.html>`__ to see an example of how to use list_security_assessments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_security_assessments.py.html>`__ to see an example of how to use list_security_assessments API.
         """
         resource_path = "/securityAssessments"
         method = "GET"
@@ -17527,7 +17674,7 @@ class DataSafeClient(object):
             The field to sort by. You can specify only one sort order (sortOrder). The default order for timeCreated is descending.
             The default order for schemaName, objectName, and columnName is ascending.
 
-            Allowed values are: "timeCreated", "schemaName", "objectName", "columnName"
+            Allowed values are: "timeCreated", "schemaName", "objectName", "columnName", "dataType"
 
         :param str opc_request_id: (optional)
             Unique identifier for the request.
@@ -17548,7 +17695,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_sensitive_columns.py.html>`__ to see an example of how to use list_sensitive_columns API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_sensitive_columns.py.html>`__ to see an example of how to use list_sensitive_columns API.
         """
         resource_path = "/sensitiveDataModels/{sensitiveDataModelId}/sensitiveColumns"
         method = "GET"
@@ -17634,7 +17781,7 @@ class DataSafeClient(object):
                 )
 
         if 'sort_by' in kwargs:
-            sort_by_allowed_values = ["timeCreated", "schemaName", "objectName", "columnName"]
+            sort_by_allowed_values = ["timeCreated", "schemaName", "objectName", "columnName", "dataType"]
             if kwargs['sort_by'] not in sort_by_allowed_values:
                 raise ValueError(
                     "Invalid value for `sort_by`, must be one of {0}".format(sort_by_allowed_values)
@@ -17795,7 +17942,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_sensitive_data_models.py.html>`__ to see an example of how to use list_sensitive_data_models API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_sensitive_data_models.py.html>`__ to see an example of how to use list_sensitive_data_models API.
         """
         resource_path = "/sensitiveDataModels"
         method = "GET"
@@ -18013,7 +18160,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_sensitive_types.py.html>`__ to see an example of how to use list_sensitive_types API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_sensitive_types.py.html>`__ to see an example of how to use list_sensitive_types API.
         """
         resource_path = "/sensitiveTypes"
         method = "GET"
@@ -18206,7 +18353,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_tables.py.html>`__ to see an example of how to use list_tables API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_tables.py.html>`__ to see an example of how to use list_tables API.
         """
         resource_path = "/targetDatabases/{targetDatabaseId}/tables"
         method = "GET"
@@ -18347,11 +18494,9 @@ class DataSafeClient(object):
             Allowed values are: "ASC", "DESC"
 
         :param str sort_by: (optional)
-            The field used for sorting. Only one sorting order (sortOrder) can be specified.
-            The default order for TIMECREATED is descending. The default order for DISPLAYNAME is ascending.
-            The DISPLAYNAME sort order is case sensitive.
+            The field to sort by. Only one sort order may be provided.
 
-            Allowed values are: "TIMECREATED", "DISPLAYNAME"
+            Allowed values are: "DISPLAYNAME", "TIMECREATED", "TIMEUPDATED"
 
         :param str opc_request_id: (optional)
             Unique identifier for the request.
@@ -18401,7 +18546,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_target_alert_policy_associations.py.html>`__ to see an example of how to use list_target_alert_policy_associations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_target_alert_policy_associations.py.html>`__ to see an example of how to use list_target_alert_policy_associations API.
         """
         resource_path = "/targetAlertPolicyAssociations"
         method = "GET"
@@ -18446,7 +18591,7 @@ class DataSafeClient(object):
                 )
 
         if 'sort_by' in kwargs:
-            sort_by_allowed_values = ["TIMECREATED", "DISPLAYNAME"]
+            sort_by_allowed_values = ["DISPLAYNAME", "TIMECREATED", "TIMEUPDATED"]
             if kwargs['sort_by'] not in sort_by_allowed_values:
                 raise ValueError(
                     "Invalid value for `sort_by`, must be one of {0}".format(sort_by_allowed_values)
@@ -18600,7 +18745,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_target_databases.py.html>`__ to see an example of how to use list_target_databases API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_target_databases.py.html>`__ to see an example of how to use list_target_databases API.
         """
         resource_path = "/targetDatabases"
         method = "GET"
@@ -18858,7 +19003,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_user_analytics.py.html>`__ to see an example of how to use list_user_analytics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_user_analytics.py.html>`__ to see an example of how to use list_user_analytics API.
         """
         resource_path = "/userAssessments/{userAssessmentId}/userAnalytics"
         method = "GET"
@@ -19108,7 +19253,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_user_assessments.py.html>`__ to see an example of how to use list_user_assessments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_user_assessments.py.html>`__ to see an example of how to use list_user_assessments API.
         """
         resource_path = "/userAssessments"
         method = "GET"
@@ -19363,7 +19508,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_users.py.html>`__ to see an example of how to use list_users API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_users.py.html>`__ to see an example of how to use list_users API.
         """
         resource_path = "/userAssessments/{userAssessmentId}/users"
         method = "GET"
@@ -19530,7 +19675,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -19644,7 +19789,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -19778,7 +19923,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -19898,7 +20043,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/mask_data.py.html>`__ to see an example of how to use mask_data API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/mask_data.py.html>`__ to see an example of how to use mask_data API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}/actions/mask"
         method = "POST"
@@ -20008,7 +20153,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/modify_global_settings.py.html>`__ to see an example of how to use modify_global_settings API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/modify_global_settings.py.html>`__ to see an example of how to use modify_global_settings API.
         """
         resource_path = "/configuration/{compartmentId}/actions/modifyGlobalSettings"
         method = "POST"
@@ -20098,6 +20243,18 @@ class DataSafeClient(object):
             The resource will be updated or deleted only if the etag you
             provide matches the resource's current etag value.
 
+        :param bool compartment_id_in_subtree: (optional)
+            Default is false.
+            When set to true, the hierarchy of compartments is traversed and all compartments and subcompartments in the tenancy are returned. Depends on the 'accessLevel' setting.
+
+        :param str access_level: (optional)
+            Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED.
+            Setting this to ACCESSIBLE returns only those compartments for which the
+            user has INSPECT permissions directly or indirectly (permissions can be on a
+            resource in a subcompartment). When set to RESTRICTED permissions are checked and no partial results are displayed.
+
+            Allowed values are: "RESTRICTED", "ACCESSIBLE"
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -20114,7 +20271,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/patch_alerts.py.html>`__ to see an example of how to use patch_alerts API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/patch_alerts.py.html>`__ to see an example of how to use patch_alerts API.
         """
         resource_path = "/alerts"
         method = "PATCH"
@@ -20126,12 +20283,27 @@ class DataSafeClient(object):
             "allow_control_chars",
             "retry_strategy",
             "opc_request_id",
-            "if_match"
+            "if_match",
+            "compartment_id_in_subtree",
+            "access_level"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
             raise ValueError(
                 "patch_alerts got unknown kwargs: {!r}".format(extra_kwargs))
+
+        if 'access_level' in kwargs:
+            access_level_allowed_values = ["RESTRICTED", "ACCESSIBLE"]
+            if kwargs['access_level'] not in access_level_allowed_values:
+                raise ValueError(
+                    "Invalid value for `access_level`, must be one of {0}".format(access_level_allowed_values)
+                )
+
+        query_params = {
+            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing),
+            "accessLevel": kwargs.get("access_level", missing)
+        }
+        query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
         header_params = {
             "accept": "application/json",
@@ -20156,6 +20328,7 @@ class DataSafeClient(object):
                 self.base_client.call_api,
                 resource_path=resource_path,
                 method=method,
+                query_params=query_params,
                 header_params=header_params,
                 body=patch_alerts_details,
                 allow_control_chars=kwargs.get('allow_control_chars'),
@@ -20165,6 +20338,7 @@ class DataSafeClient(object):
             return self.base_client.call_api(
                 resource_path=resource_path,
                 method=method,
+                query_params=query_params,
                 header_params=header_params,
                 body=patch_alerts_details,
                 allow_control_chars=kwargs.get('allow_control_chars'),
@@ -20209,7 +20383,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/patch_discovery_job_results.py.html>`__ to see an example of how to use patch_discovery_job_results API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/patch_discovery_job_results.py.html>`__ to see an example of how to use patch_discovery_job_results API.
         """
         resource_path = "/discoveryJobs/{discoveryJobId}/results"
         method = "PATCH"
@@ -20317,7 +20491,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/patch_masking_columns.py.html>`__ to see an example of how to use patch_masking_columns API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/patch_masking_columns.py.html>`__ to see an example of how to use patch_masking_columns API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}/maskingColumns"
         method = "PATCH"
@@ -20425,7 +20599,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/patch_sensitive_columns.py.html>`__ to see an example of how to use patch_sensitive_columns API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/patch_sensitive_columns.py.html>`__ to see an example of how to use patch_sensitive_columns API.
         """
         resource_path = "/sensitiveDataModels/{sensitiveDataModelId}/sensitiveColumns"
         method = "PATCH"
@@ -20494,6 +20668,97 @@ class DataSafeClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def patch_target_alert_policy_association(self, patch_target_alert_policy_association_details, **kwargs):
+        """
+        Creates new target-alert policy associations that will be applied on target.
+
+
+        :param oci.data_safe.models.PatchTargetAlertPolicyAssociationDetails patch_target_alert_policy_association_details: (required)
+            The details used to patch target-alert policy associations.
+
+        :param str opc_request_id: (optional)
+            Unique identifier for the request.
+
+        :param str if_match: (optional)
+            For optimistic concurrency control. In the PUT or DELETE call
+            for a resource, set the if-match parameter to the value of the
+            etag from a previous GET or POST response for that resource.
+            The resource will be updated or deleted only if the etag you
+            provide matches the resource's current etag value.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/patch_target_alert_policy_association.py.html>`__ to see an example of how to use patch_target_alert_policy_association API.
+        """
+        resource_path = "/targetAlertPolicyAssociations"
+        method = "PATCH"
+        operation_name = "patch_target_alert_policy_association"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-safe/20181201/TargetAlertPolicyAssociation/PatchTargetAlertPolicyAssociation"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "opc_request_id",
+            "if_match"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "patch_target_alert_policy_association got unknown kwargs: {!r}".format(extra_kwargs))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-request-id": kwargs.get("opc_request_id", missing),
+            "if-match": kwargs.get("if_match", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=patch_target_alert_policy_association_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=patch_target_alert_policy_association_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def provision_audit_policy(self, provision_audit_policy_details, audit_policy_id, **kwargs):
         """
         Provision audit policy.
@@ -20537,7 +20802,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/provision_audit_policy.py.html>`__ to see an example of how to use provision_audit_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/provision_audit_policy.py.html>`__ to see an example of how to use provision_audit_policy API.
         """
         resource_path = "/auditPolicies/{auditPolicyId}/actions/provision"
         method = "POST"
@@ -20653,7 +20918,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/refresh_security_assessment.py.html>`__ to see an example of how to use refresh_security_assessment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/refresh_security_assessment.py.html>`__ to see an example of how to use refresh_security_assessment API.
         """
         resource_path = "/securityAssessments/{securityAssessmentId}/actions/refresh"
         method = "POST"
@@ -20770,7 +21035,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/refresh_user_assessment.py.html>`__ to see an example of how to use refresh_user_assessment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/refresh_user_assessment.py.html>`__ to see an example of how to use refresh_user_assessment API.
         """
         resource_path = "/userAssessments/{userAssessmentId}/actions/refresh"
         method = "POST"
@@ -20842,6 +21107,116 @@ class DataSafeClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def remove_schedule_report(self, report_definition_id, **kwargs):
+        """
+        Deletes schedule of a PDF or XLS report.
+
+
+        :param str report_definition_id: (required)
+            Unique report definition identifier
+
+        :param str if_match: (optional)
+            For optimistic concurrency control. In the PUT or DELETE call
+            for a resource, set the if-match parameter to the value of the
+            etag from a previous GET or POST response for that resource.
+            The resource will be updated or deleted only if the etag you
+            provide matches the resource's current etag value.
+
+        :param str opc_request_id: (optional)
+            Unique identifier for the request.
+
+        :param str opc_retry_token: (optional)
+            A token that uniquely identifies a request so it can be retried in case of a timeout or
+            server error without risk of executing that same action again. Retry tokens expire after 24
+            hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+            has been deleted and purged from the system, then a retry of the original creation request might be rejected.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/remove_schedule_report.py.html>`__ to see an example of how to use remove_schedule_report API.
+        """
+        resource_path = "/reportDefinitions/{reportDefinitionId}/actions/removeScheduleReport"
+        method = "POST"
+        operation_name = "remove_schedule_report"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-safe/20181201/ReportDefinition/RemoveScheduleReport"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "if_match",
+            "opc_request_id",
+            "opc_retry_token"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "remove_schedule_report got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "reportDefinitionId": report_definition_id
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "if-match": kwargs.get("if_match", missing),
+            "opc-request-id": kwargs.get("opc_request_id", missing),
+            "opc-retry-token": kwargs.get("opc_retry_token", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_retry_token_if_needed(header_params)
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def resume_audit_trail(self, audit_trail_id, **kwargs):
         """
         Resumes the specified audit trail once it got stopped.
@@ -20876,7 +21251,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/resume_audit_trail.py.html>`__ to see an example of how to use resume_audit_trail API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/resume_audit_trail.py.html>`__ to see an example of how to use resume_audit_trail API.
         """
         resource_path = "/auditTrails/{auditTrailId}/actions/resume"
         method = "POST"
@@ -20983,7 +21358,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/resume_work_request.py.html>`__ to see an example of how to use resume_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/resume_work_request.py.html>`__ to see an example of how to use resume_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}/actions/resume"
         method = "POST"
@@ -21093,7 +21468,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/retrieve_audit_policies.py.html>`__ to see an example of how to use retrieve_audit_policies API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/retrieve_audit_policies.py.html>`__ to see an example of how to use retrieve_audit_policies API.
         """
         resource_path = "/auditPolicies/{auditPolicyId}/actions/retrieveFromTarget"
         method = "POST"
@@ -21163,6 +21538,121 @@ class DataSafeClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def schedule_report(self, report_definition_id, schedule_report_details, **kwargs):
+        """
+        Schedules a PDF or XLS report based on parameters and report definition.
+
+
+        :param str report_definition_id: (required)
+            Unique report definition identifier
+
+        :param oci.data_safe.models.ScheduleReportDetails schedule_report_details: (required)
+            Details for report schedule. It contains details such as schedule, PDF/XLS and number of rows.
+
+        :param str if_match: (optional)
+            For optimistic concurrency control. In the PUT or DELETE call
+            for a resource, set the if-match parameter to the value of the
+            etag from a previous GET or POST response for that resource.
+            The resource will be updated or deleted only if the etag you
+            provide matches the resource's current etag value.
+
+        :param str opc_request_id: (optional)
+            Unique identifier for the request.
+
+        :param str opc_retry_token: (optional)
+            A token that uniquely identifies a request so it can be retried in case of a timeout or
+            server error without risk of executing that same action again. Retry tokens expire after 24
+            hours, but can be invalidated before then due to conflicting operations. For example, if a resource
+            has been deleted and purged from the system, then a retry of the original creation request might be rejected.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/schedule_report.py.html>`__ to see an example of how to use schedule_report API.
+        """
+        resource_path = "/reportDefinitions/{reportDefinitionId}/actions/scheduleReport"
+        method = "POST"
+        operation_name = "schedule_report"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-safe/20181201/ReportDefinition/ScheduleReport"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "if_match",
+            "opc_request_id",
+            "opc_retry_token"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "schedule_report got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "reportDefinitionId": report_definition_id
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "if-match": kwargs.get("if_match", missing),
+            "opc-request-id": kwargs.get("opc_request_id", missing),
+            "opc-retry-token": kwargs.get("opc_retry_token", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_retry_token_if_needed(header_params)
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=schedule_report_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=schedule_report_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def set_security_assessment_baseline(self, security_assessment_id, **kwargs):
         """
         Sets the saved security assessment as the baseline in the compartment where the the specified assessment resides. The security assessment needs to be of type 'SAVED'.
@@ -21206,7 +21696,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/set_security_assessment_baseline.py.html>`__ to see an example of how to use set_security_assessment_baseline API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/set_security_assessment_baseline.py.html>`__ to see an example of how to use set_security_assessment_baseline API.
         """
         resource_path = "/securityAssessments/{securityAssessmentId}/actions/setBaseline"
         method = "POST"
@@ -21322,7 +21812,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/set_user_assessment_baseline.py.html>`__ to see an example of how to use set_user_assessment_baseline API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/set_user_assessment_baseline.py.html>`__ to see an example of how to use set_user_assessment_baseline API.
         """
         resource_path = "/userAssessments/{userAssessmentId}/actions/setBaseline"
         method = "POST"
@@ -21438,7 +21928,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/start_audit_trail.py.html>`__ to see an example of how to use start_audit_trail API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/start_audit_trail.py.html>`__ to see an example of how to use start_audit_trail API.
         """
         resource_path = "/auditTrails/{auditTrailId}/actions/start"
         method = "POST"
@@ -21544,7 +22034,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/stop_audit_trail.py.html>`__ to see an example of how to use stop_audit_trail API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/stop_audit_trail.py.html>`__ to see an example of how to use stop_audit_trail API.
         """
         resource_path = "/auditTrails/{auditTrailId}/actions/stop"
         method = "POST"
@@ -21651,7 +22141,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/suspend_work_request.py.html>`__ to see an example of how to use suspend_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/suspend_work_request.py.html>`__ to see an example of how to use suspend_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}/actions/suspend"
         method = "POST"
@@ -21762,7 +22252,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/unset_security_assessment_baseline.py.html>`__ to see an example of how to use unset_security_assessment_baseline API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/unset_security_assessment_baseline.py.html>`__ to see an example of how to use unset_security_assessment_baseline API.
         """
         resource_path = "/securityAssessments/{securityAssessmentId}/actions/unsetBaseline"
         method = "POST"
@@ -21873,7 +22363,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/unset_user_assessment_baseline.py.html>`__ to see an example of how to use unset_user_assessment_baseline API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/unset_user_assessment_baseline.py.html>`__ to see an example of how to use unset_user_assessment_baseline API.
         """
         resource_path = "/userAssessments/{userAssessmentId}/actions/unsetBaseline"
         method = "POST"
@@ -21980,7 +22470,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_alert.py.html>`__ to see an example of how to use update_alert API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_alert.py.html>`__ to see an example of how to use update_alert API.
         """
         resource_path = "/alerts/{alertId}"
         method = "PUT"
@@ -22088,7 +22578,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_audit_archive_retrieval.py.html>`__ to see an example of how to use update_audit_archive_retrieval API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_audit_archive_retrieval.py.html>`__ to see an example of how to use update_audit_archive_retrieval API.
         """
         resource_path = "/auditArchiveRetrievals/{auditArchiveRetrievalId}"
         method = "PUT"
@@ -22194,7 +22684,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_audit_policy.py.html>`__ to see an example of how to use update_audit_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_audit_policy.py.html>`__ to see an example of how to use update_audit_policy API.
         """
         resource_path = "/auditPolicies/{auditPolicyId}"
         method = "PUT"
@@ -22300,7 +22790,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_audit_profile.py.html>`__ to see an example of how to use update_audit_profile API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_audit_profile.py.html>`__ to see an example of how to use update_audit_profile API.
         """
         resource_path = "/auditProfiles/{auditProfileId}"
         method = "PUT"
@@ -22406,7 +22896,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_audit_trail.py.html>`__ to see an example of how to use update_audit_trail API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_audit_trail.py.html>`__ to see an example of how to use update_audit_trail API.
         """
         resource_path = "/auditTrails/{auditTrailId}"
         method = "PUT"
@@ -22512,7 +23002,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_data_safe_private_endpoint.py.html>`__ to see an example of how to use update_data_safe_private_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_data_safe_private_endpoint.py.html>`__ to see an example of how to use update_data_safe_private_endpoint API.
         """
         resource_path = "/dataSafePrivateEndpoints/{dataSafePrivateEndpointId}"
         method = "PUT"
@@ -22618,7 +23108,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_library_masking_format.py.html>`__ to see an example of how to use update_library_masking_format API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_library_masking_format.py.html>`__ to see an example of how to use update_library_masking_format API.
         """
         resource_path = "/libraryMaskingFormats/{libraryMaskingFormatId}"
         method = "PUT"
@@ -22728,7 +23218,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_masking_column.py.html>`__ to see an example of how to use update_masking_column API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_masking_column.py.html>`__ to see an example of how to use update_masking_column API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}/maskingColumns/{maskingColumnKey}"
         method = "PUT"
@@ -22835,7 +23325,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_masking_policy.py.html>`__ to see an example of how to use update_masking_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_masking_policy.py.html>`__ to see an example of how to use update_masking_policy API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}"
         method = "PUT"
@@ -22941,7 +23431,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_on_prem_connector.py.html>`__ to see an example of how to use update_on_prem_connector API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_on_prem_connector.py.html>`__ to see an example of how to use update_on_prem_connector API.
         """
         resource_path = "/onPremConnectors/{onPremConnectorId}"
         method = "PUT"
@@ -23053,7 +23543,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_on_prem_connector_wallet.py.html>`__ to see an example of how to use update_on_prem_connector_wallet API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_on_prem_connector_wallet.py.html>`__ to see an example of how to use update_on_prem_connector_wallet API.
         """
         resource_path = "/onPremConnectors/{onPremConnectorId}/wallet"
         method = "PUT"
@@ -23168,7 +23658,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_report_definition.py.html>`__ to see an example of how to use update_report_definition API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_report_definition.py.html>`__ to see an example of how to use update_report_definition API.
         """
         resource_path = "/reportDefinitions/{reportDefinitionId}"
         method = "PUT"
@@ -23277,7 +23767,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_security_assessment.py.html>`__ to see an example of how to use update_security_assessment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_security_assessment.py.html>`__ to see an example of how to use update_security_assessment API.
         """
         resource_path = "/securityAssessments/{securityAssessmentId}"
         method = "PUT"
@@ -23386,7 +23876,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_sensitive_column.py.html>`__ to see an example of how to use update_sensitive_column API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_sensitive_column.py.html>`__ to see an example of how to use update_sensitive_column API.
         """
         resource_path = "/sensitiveDataModels/{sensitiveDataModelId}/sensitiveColumns/{sensitiveColumnKey}"
         method = "PUT"
@@ -23494,7 +23984,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_sensitive_data_model.py.html>`__ to see an example of how to use update_sensitive_data_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_sensitive_data_model.py.html>`__ to see an example of how to use update_sensitive_data_model API.
         """
         resource_path = "/sensitiveDataModels/{sensitiveDataModelId}"
         method = "PUT"
@@ -23600,7 +24090,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_sensitive_type.py.html>`__ to see an example of how to use update_sensitive_type API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_sensitive_type.py.html>`__ to see an example of how to use update_sensitive_type API.
         """
         resource_path = "/sensitiveTypes/{sensitiveTypeId}"
         method = "PUT"
@@ -23706,7 +24196,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_target_alert_policy_association.py.html>`__ to see an example of how to use update_target_alert_policy_association API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_target_alert_policy_association.py.html>`__ to see an example of how to use update_target_alert_policy_association API.
         """
         resource_path = "/targetAlertPolicyAssociations/{targetAlertPolicyAssociationId}"
         method = "PUT"
@@ -23818,7 +24308,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_target_database.py.html>`__ to see an example of how to use update_target_database API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_target_database.py.html>`__ to see an example of how to use update_target_database API.
         """
         resource_path = "/targetDatabases/{targetDatabaseId}"
         method = "PUT"
@@ -23927,7 +24417,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/update_user_assessment.py.html>`__ to see an example of how to use update_user_assessment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/update_user_assessment.py.html>`__ to see an example of how to use update_user_assessment API.
         """
         resource_path = "/userAssessments/{userAssessmentId}"
         method = "PUT"
@@ -24044,7 +24534,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/upload_masking_policy.py.html>`__ to see an example of how to use upload_masking_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/upload_masking_policy.py.html>`__ to see an example of how to use upload_masking_policy API.
         """
         resource_path = "/maskingPolicies/{maskingPolicyId}/actions/upload"
         method = "POST"
@@ -24181,7 +24671,7 @@ class DataSafeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datasafe/upload_sensitive_data_model.py.html>`__ to see an example of how to use upload_sensitive_data_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datasafe/upload_sensitive_data_model.py.html>`__ to see an example of how to use upload_sensitive_data_model API.
         """
         resource_path = "/sensitiveDataModels/{sensitiveDataModelId}/actions/upload"
         method = "POST"

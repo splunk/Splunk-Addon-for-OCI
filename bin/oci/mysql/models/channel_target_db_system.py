@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from .channel_target import ChannelTarget
@@ -36,25 +36,32 @@ class ChannelTargetDbSystem(ChannelTarget):
             The value to assign to the applier_username property of this ChannelTargetDbSystem.
         :type applier_username: str
 
+        :param filters:
+            The value to assign to the filters property of this ChannelTargetDbSystem.
+        :type filters: list[oci.mysql.models.ChannelFilter]
+
         """
         self.swagger_types = {
             'target_type': 'str',
             'db_system_id': 'str',
             'channel_name': 'str',
-            'applier_username': 'str'
+            'applier_username': 'str',
+            'filters': 'list[ChannelFilter]'
         }
 
         self.attribute_map = {
             'target_type': 'targetType',
             'db_system_id': 'dbSystemId',
             'channel_name': 'channelName',
-            'applier_username': 'applierUsername'
+            'applier_username': 'applierUsername',
+            'filters': 'filters'
         }
 
         self._target_type = None
         self._db_system_id = None
         self._channel_name = None
         self._applier_username = None
+        self._filters = None
         self._target_type = 'DBSYSTEM'
 
     @property
@@ -136,6 +143,30 @@ class ChannelTargetDbSystem(ChannelTarget):
         :type: str
         """
         self._applier_username = applier_username
+
+    @property
+    def filters(self):
+        """
+        Gets the filters of this ChannelTargetDbSystem.
+        Replication filter rules to be applied at the DB System Channel target.
+
+
+        :return: The filters of this ChannelTargetDbSystem.
+        :rtype: list[oci.mysql.models.ChannelFilter]
+        """
+        return self._filters
+
+    @filters.setter
+    def filters(self, filters):
+        """
+        Sets the filters of this ChannelTargetDbSystem.
+        Replication filter rules to be applied at the DB System Channel target.
+
+
+        :param filters: The filters of this ChannelTargetDbSystem.
+        :type: list[oci.mysql.models.ChannelFilter]
+        """
+        self._filters = filters
 
     def __repr__(self):
         return formatted_flat_dict(self)

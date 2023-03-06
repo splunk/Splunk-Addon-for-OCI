@@ -15,9 +15,11 @@ from cryptography.hazmat.primitives.asymmetric import dsa, ec, ed25519, rsa
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives.serialization import (
     Encoding,
+    KeySerializationEncryption,
     NoEncryption,
     PrivateFormat,
     PublicFormat,
+    _KeySerializationEncryption,
 )
 
 try:
@@ -53,7 +55,6 @@ _BCRYPT = b"bcrypt"
 _NONE = b"none"
 _DEFAULT_CIPHER = b"aes256-ctr"
 _DEFAULT_ROUNDS = 16
-_MAX_PASSWORD = 72
 
 # re is only way to work on bytes-like data
 _PEM_RC = re.compile(_SK_START + b"(.*?)" + _SK_END, re.DOTALL)
@@ -173,7 +174,9 @@ class _FragList:
 
     flist: typing.List[bytes]
 
-    def __init__(self, init: typing.List[bytes] = None) -> None:
+    def __init__(
+        self, init: typing.Optional[typing.List[bytes]] = None
+    ) -> None:
         self.flist = []
         if init:
             self.flist.extend(init)
@@ -602,18 +605,13 @@ def load_ssh_private_key(
     return private_key
 
 
-def serialize_ssh_private_key(
+def _serialize_ssh_private_key(
     private_key: _SSH_PRIVATE_KEY_TYPES,
-    password: typing.Optional[bytes] = None,
+    password: bytes,
+    encryption_algorithm: KeySerializationEncryption,
 ) -> bytes:
     """Serialize private key with OpenSSH custom encoding."""
-    if password is not None:
-        utils._check_bytes("password", password)
-    if password and len(password) > _MAX_PASSWORD:
-        raise ValueError(
-            "Passwords longer than 72 bytes are not supported by "
-            "OpenSSH private key format"
-        )
+    utils._check_bytes("password", password)
 
     if isinstance(private_key, ec.EllipticCurvePrivateKey):
         key_type = _ecdsa_key_type(private_key.public_key())
@@ -634,6 +632,11 @@ def serialize_ssh_private_key(
         blklen = _SSH_CIPHERS[ciphername][3]
         kdfname = _BCRYPT
         rounds = _DEFAULT_ROUNDS
+        if (
+            isinstance(encryption_algorithm, _KeySerializationEncryption)
+            and encryption_algorithm._kdf_rounds is not None
+        ):
+            rounds = encryption_algorithm._kdf_rounds
         salt = os.urandom(16)
         f_kdfoptions.put_sshstr(salt)
         f_kdfoptions.put_u32(rounds)
@@ -678,9 +681,7 @@ def serialize_ssh_private_key(
     if ciph is not None:
         ciph.encryptor().update_into(buf[ofs:mlen], buf[ofs:])
 
-    txt = _ssh_pem_encode(buf[:mlen])
-    buf[ofs:mlen] = bytearray(slen)
-    return txt
+    return _ssh_pem_encode(buf[:mlen])
 
 
 _SSH_PUBLIC_KEY_TYPES = typing.Union[

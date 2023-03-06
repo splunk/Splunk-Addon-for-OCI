@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -138,7 +138,7 @@ class EmDataLakeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/emwarehouse/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/emwarehouse/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "DELETE"
@@ -247,7 +247,7 @@ class EmDataLakeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/emwarehouse/change_em_warehouse_compartment.py.html>`__ to see an example of how to use change_em_warehouse_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/emwarehouse/change_em_warehouse_compartment.py.html>`__ to see an example of how to use change_em_warehouse_compartment API.
         """
         resource_path = "/emWarehouses/{emWarehouseId}/actions/changeCompartment"
         method = "POST"
@@ -351,7 +351,7 @@ class EmDataLakeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/emwarehouse/create_em_warehouse.py.html>`__ to see an example of how to use create_em_warehouse API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/emwarehouse/create_em_warehouse.py.html>`__ to see an example of how to use create_em_warehouse API.
         """
         resource_path = "/emWarehouses"
         method = "POST"
@@ -441,7 +441,7 @@ class EmDataLakeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/emwarehouse/delete_em_warehouse.py.html>`__ to see an example of how to use delete_em_warehouse API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/emwarehouse/delete_em_warehouse.py.html>`__ to see an example of how to use delete_em_warehouse API.
         """
         resource_path = "/emWarehouses/{emWarehouseId}"
         method = "DELETE"
@@ -533,7 +533,7 @@ class EmDataLakeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/emwarehouse/get_em_warehouse.py.html>`__ to see an example of how to use get_em_warehouse API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/emwarehouse/get_em_warehouse.py.html>`__ to see an example of how to use get_em_warehouse API.
         """
         resource_path = "/emWarehouses/{emWarehouseId}"
         method = "GET"
@@ -625,7 +625,7 @@ class EmDataLakeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/emwarehouse/get_em_warehouse_resource_usage.py.html>`__ to see an example of how to use get_em_warehouse_resource_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/emwarehouse/get_em_warehouse_resource_usage.py.html>`__ to see an example of how to use get_em_warehouse_resource_usage API.
         """
         resource_path = "/emWarehouses/{emWarehouseId}/resourceUsage"
         method = "GET"
@@ -717,7 +717,7 @@ class EmDataLakeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/emwarehouse/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/emwarehouse/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -839,7 +839,7 @@ class EmDataLakeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/emwarehouse/list_em_warehouses.py.html>`__ to see an example of how to use list_em_warehouses API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/emwarehouse/list_em_warehouses.py.html>`__ to see an example of how to use list_em_warehouses API.
         """
         resource_path = "/emWarehouses"
         method = "GET"
@@ -986,7 +986,7 @@ class EmDataLakeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/emwarehouse/list_etl_runs.py.html>`__ to see an example of how to use list_etl_runs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/emwarehouse/list_etl_runs.py.html>`__ to see an example of how to use list_etl_runs API.
         """
         resource_path = "/emWarehouses/{emWarehouseId}/etlRuns"
         method = "GET"
@@ -1126,7 +1126,7 @@ class EmDataLakeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/emwarehouse/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/emwarehouse/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -1262,7 +1262,7 @@ class EmDataLakeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/emwarehouse/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/emwarehouse/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -1409,7 +1409,7 @@ class EmDataLakeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/emwarehouse/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/emwarehouse/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -1542,7 +1542,7 @@ class EmDataLakeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/emwarehouse/update_em_warehouse.py.html>`__ to see an example of how to use update_em_warehouse API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/emwarehouse/update_em_warehouse.py.html>`__ to see an example of how to use update_em_warehouse API.
         """
         resource_path = "/emWarehouses/{emWarehouseId}"
         method = "PUT"

@@ -28,7 +28,7 @@ import multiprocess as mp
 import uuid
 import logging as logger
 # Imports for Splunk Libraries
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "lib"))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".", "lib"))
 from base64 import b64encode, b64decode
 from urllib.parse import urlparse
 from splunklib import six
@@ -43,7 +43,7 @@ logger.basicConfig(level=logger.ERROR, format='%(asctime)s %(levelname)s %(messa
 guid = str(uuid.uuid4())
 global_stream_clients = {}
 active = "true"
-retries = 5
+retries = 10
 global_cursors = {}
 global_retries = {}
 global_interval = 90
@@ -143,9 +143,12 @@ def get_messages(config_items, cursor, i):
                     update_details = oci.streaming.models.UpdateGroupDetails(type=oci.streaming.models.UpdateGroupDetails.TYPE_LATEST)
                     update = global_stream_clients[i].update_group(stream_id, stream_id, update_details, retry_strategy=oci.retry.DEFAULT_RETRY_STRATEGY)
                     return ("400 Cursor Old")
-            elif e.status == 404 or e.status == 401:
-                logger.error("UNAUTHORIZED: This could be related to OCI IAM permissions.")
-                sys.exit()
+            elif e.status == 404:
+                logger.info("function: get_messages 404: " + str(e.message))
+                time.sleep(int(global_interval))
+            elif e.status == 401:
+                logger.info("UNAUTHORIZED: This could be related to OCI IAM permissions./n" + str(e.message))
+                time.sleep(int(global_interval))
             else:
                 logger.error("Unknown Error: " + str(e))
                 time.sleep(int(global_interval))
@@ -319,6 +322,7 @@ class Stream(Script):
         global retries 
         self.input_name, self.input_item = inputs.inputs.popitem()
         global_interval = self.input_item["retry_interval"]
+
         logger.debug("function: stream events: entering stream_private_key type is: " + str(self.input_item["private_key"]))
         logger.debug("function: stream events: entering stream_private_key is: " + self.input_item["private_key"])
 
@@ -519,17 +523,34 @@ class Stream(Script):
                                         if data:
                                             try:
                                                 y = json.loads(data)
+                                                logger.debug("function: stream_event: Loaded JSON from stream")
                                                 if 'subject' in y:
+                                                    logger.debug("function: stream_event: Record has Subject")
                                                     host = y["subject"]
-                                                else:
+                                                    record_time = y["time"]
+                                                elif 'oracle' in y:
+                                                    # Code for Audit Logs
+                                                    logger.debug("function: stream_event: Record has ['oracle']['compartmentid']")
                                                     host = y["oracle"]["compartmentid"]
-                                                logevent = Event(data=data, time=y["time"], host=host, index=output_index, done=True, unbroken=True)
+                                                    record_time = y["time"]
+
+                                                else:
+                                                    # Code for Events
+                                                    logger.info("Cloud Guard Event: " + str(data))
+                                                    logger.debug("function: stream_event: Record has Source")
+                                                    host = y["source"]
+                                                    record_time = y["eventTime"]
+
+
+                                                logevent = Event(data=data, time=record_time, host=host, index=output_index, done=True, unbroken=True)
                                                 ew.write_event(logevent)
                                                 logger.debug("function: stream_event: Wrote Event to Splunk")
                                                 global_cursors[str(posi)] = get_response.headers["opc-next-cursor"]
                                                 global_retries[str(posi)] = 0 
                                             except Exception as e:
                                                 logger.info("function: stream_event: Unsupported Record: " + str(data))
+                                                logger.info("function: stream_event: Message: " + str(e))
+
                             posi = posi + 1
                             logger.debug("function: stream_event: End of for R Posi is: " + str(posi))
                 except Exception as e:

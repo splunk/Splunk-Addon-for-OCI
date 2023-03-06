@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -1152,7 +1152,7 @@ class AutonomousVmCluster(object):
     def is_mtls_enabled(self):
         """
         Gets the is_mtls_enabled of this AutonomousVmCluster.
-        Enable mutual TLS(mTLS) authentication for database at time of provisioning a VMCluster. Default is TLS.
+        Enable mutual TLS(mTLS) authentication for database while provisioning a VMCluster. Default is TLS.
 
 
         :return: The is_mtls_enabled of this AutonomousVmCluster.
@@ -1164,7 +1164,7 @@ class AutonomousVmCluster(object):
     def is_mtls_enabled(self, is_mtls_enabled):
         """
         Sets the is_mtls_enabled of this AutonomousVmCluster.
-        Enable mutual TLS(mTLS) authentication for database at time of provisioning a VMCluster. Default is TLS.
+        Enable mutual TLS(mTLS) authentication for database while provisioning a VMCluster. Default is TLS.
 
 
         :param is_mtls_enabled: The is_mtls_enabled of this AutonomousVmCluster.

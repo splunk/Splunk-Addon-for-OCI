@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from .create_service_instance_details import CreateServiceInstanceDetails
@@ -74,7 +74,7 @@ class CreateOaxServiceInstanceDetails(CreateServiceInstanceDetails):
     @property
     def name(self):
         """
-        Gets the name of this CreateOaxServiceInstanceDetails.
+        **[Required]** Gets the name of this CreateOaxServiceInstanceDetails.
         A unique Name for Analytics Warehouse.
 
 
@@ -123,8 +123,6 @@ class CreateOaxServiceInstanceDetails(CreateServiceInstanceDetails):
     def faw_admin_info(self):
         """
         Gets the faw_admin_info of this CreateOaxServiceInstanceDetails.
-        Admin information to provision Analytics Warehouse Servcie
-
 
         :return: The faw_admin_info of this CreateOaxServiceInstanceDetails.
         :rtype: oci.fusion_apps.models.FawAdminInfoDetails
@@ -135,8 +133,6 @@ class CreateOaxServiceInstanceDetails(CreateServiceInstanceDetails):
     def faw_admin_info(self, faw_admin_info):
         """
         Sets the faw_admin_info of this CreateOaxServiceInstanceDetails.
-        Admin information to provision Analytics Warehouse Servcie
-
 
         :param faw_admin_info: The faw_admin_info of this CreateOaxServiceInstanceDetails.
         :type: oci.fusion_apps.models.FawAdminInfoDetails

@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -148,7 +148,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/change_analytics_instance_compartment.py.html>`__ to see an example of how to use change_analytics_instance_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/change_analytics_instance_compartment.py.html>`__ to see an example of how to use change_analytics_instance_compartment API.
         """
         resource_path = "/analyticsInstances/{analyticsInstanceId}/actions/changeCompartment"
         method = "POST"
@@ -262,7 +262,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/change_analytics_instance_network_endpoint.py.html>`__ to see an example of how to use change_analytics_instance_network_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/change_analytics_instance_network_endpoint.py.html>`__ to see an example of how to use change_analytics_instance_network_endpoint API.
         """
         resource_path = "/analyticsInstances/{analyticsInstanceId}/actions/changeNetworkEndpoint"
         method = "POST"
@@ -368,7 +368,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/create_analytics_instance.py.html>`__ to see an example of how to use create_analytics_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/create_analytics_instance.py.html>`__ to see an example of how to use create_analytics_instance API.
         """
         resource_path = "/analyticsInstances"
         method = "POST"
@@ -465,7 +465,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/create_private_access_channel.py.html>`__ to see an example of how to use create_private_access_channel API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/create_private_access_channel.py.html>`__ to see an example of how to use create_private_access_channel API.
         """
         resource_path = "/analyticsInstances/{analyticsInstanceId}/privateAccessChannels"
         method = "POST"
@@ -572,7 +572,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/create_vanity_url.py.html>`__ to see an example of how to use create_vanity_url API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/create_vanity_url.py.html>`__ to see an example of how to use create_vanity_url API.
         """
         resource_path = "/analyticsInstances/{analyticsInstanceId}/vanityUrls"
         method = "POST"
@@ -681,7 +681,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/delete_analytics_instance.py.html>`__ to see an example of how to use delete_analytics_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/delete_analytics_instance.py.html>`__ to see an example of how to use delete_analytics_instance API.
         """
         resource_path = "/analyticsInstances/{analyticsInstanceId}"
         method = "DELETE"
@@ -792,7 +792,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/delete_private_access_channel.py.html>`__ to see an example of how to use delete_private_access_channel API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/delete_private_access_channel.py.html>`__ to see an example of how to use delete_private_access_channel API.
         """
         resource_path = "/analyticsInstances/{analyticsInstanceId}/privateAccessChannels/{privateAccessChannelKey}"
         method = "DELETE"
@@ -904,7 +904,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/delete_vanity_url.py.html>`__ to see an example of how to use delete_vanity_url API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/delete_vanity_url.py.html>`__ to see an example of how to use delete_vanity_url API.
         """
         resource_path = "/analyticsInstances/{analyticsInstanceId}/vanityUrls/{vanityUrlKey}"
         method = "DELETE"
@@ -1006,7 +1006,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/delete_work_request.py.html>`__ to see an example of how to use delete_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/delete_work_request.py.html>`__ to see an example of how to use delete_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "DELETE"
@@ -1099,7 +1099,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/get_analytics_instance.py.html>`__ to see an example of how to use get_analytics_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/get_analytics_instance.py.html>`__ to see an example of how to use get_analytics_instance API.
         """
         resource_path = "/analyticsInstances/{analyticsInstanceId}"
         method = "GET"
@@ -1195,7 +1195,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/get_private_access_channel.py.html>`__ to see an example of how to use get_private_access_channel API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/get_private_access_channel.py.html>`__ to see an example of how to use get_private_access_channel API.
         """
         resource_path = "/analyticsInstances/{analyticsInstanceId}/privateAccessChannels/{privateAccessChannelKey}"
         method = "GET"
@@ -1289,7 +1289,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -1430,7 +1430,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/list_analytics_instances.py.html>`__ to see an example of how to use list_analytics_instances API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/list_analytics_instances.py.html>`__ to see an example of how to use list_analytics_instances API.
         """
         resource_path = "/analyticsInstances"
         method = "GET"
@@ -1585,7 +1585,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -1704,7 +1704,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -1846,7 +1846,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -1993,7 +1993,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/scale_analytics_instance.py.html>`__ to see an example of how to use scale_analytics_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/scale_analytics_instance.py.html>`__ to see an example of how to use scale_analytics_instance API.
         """
         resource_path = "/analyticsInstances/{analyticsInstanceId}/actions/scale"
         method = "POST"
@@ -2106,7 +2106,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/set_kms_key.py.html>`__ to see an example of how to use set_kms_key API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/set_kms_key.py.html>`__ to see an example of how to use set_kms_key API.
         """
         resource_path = "/analyticsInstances/{analyticsInstanceId}/actions/setKmsKey"
         method = "POST"
@@ -2217,7 +2217,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/start_analytics_instance.py.html>`__ to see an example of how to use start_analytics_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/start_analytics_instance.py.html>`__ to see an example of how to use start_analytics_instance API.
         """
         resource_path = "/analyticsInstances/{analyticsInstanceId}/actions/start"
         method = "POST"
@@ -2326,7 +2326,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/stop_analytics_instance.py.html>`__ to see an example of how to use stop_analytics_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/stop_analytics_instance.py.html>`__ to see an example of how to use stop_analytics_instance API.
         """
         resource_path = "/analyticsInstances/{analyticsInstanceId}/actions/stop"
         method = "POST"
@@ -2432,7 +2432,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/update_analytics_instance.py.html>`__ to see an example of how to use update_analytics_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/update_analytics_instance.py.html>`__ to see an example of how to use update_analytics_instance API.
         """
         resource_path = "/analyticsInstances/{analyticsInstanceId}"
         method = "PUT"
@@ -2547,7 +2547,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/update_private_access_channel.py.html>`__ to see an example of how to use update_private_access_channel API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/update_private_access_channel.py.html>`__ to see an example of how to use update_private_access_channel API.
         """
         resource_path = "/analyticsInstances/{analyticsInstanceId}/privateAccessChannels/{privateAccessChannelKey}"
         method = "PUT"
@@ -2664,7 +2664,7 @@ class AnalyticsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/analytics/update_vanity_url.py.html>`__ to see an example of how to use update_vanity_url API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/analytics/update_vanity_url.py.html>`__ to see an example of how to use update_vanity_url API.
         """
         resource_path = "/analyticsInstances/{analyticsInstanceId}/vanityUrls/{vanityUrlKey}"
         method = "PUT"

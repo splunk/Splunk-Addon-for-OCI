@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -10,7 +10,8 @@ from oci.decorators import init_model_state_from_kwargs
 @init_model_state_from_kwargs
 class JavaFamilyCollection(object):
     """
-    Contains summary of the Java release family details.
+    Collection of the Java release family summary.
+    A Java release family is typically a major version in the Java version identifier.
     """
 
     def __init__(self, **kwargs):
@@ -37,7 +38,7 @@ class JavaFamilyCollection(object):
     def items(self):
         """
         **[Required]** Gets the items of this JavaFamilyCollection.
-        A list of the Java Release family details.
+        A list of the Java Release family summary.
 
 
         :return: The items of this JavaFamilyCollection.
@@ -49,7 +50,7 @@ class JavaFamilyCollection(object):
     def items(self, items):
         """
         Sets the items of this JavaFamilyCollection.
-        A list of the Java Release family details.
+        A list of the Java Release family summary.
 
 
         :param items: The items of this JavaFamilyCollection.

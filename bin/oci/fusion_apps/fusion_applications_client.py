@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -18,7 +18,7 @@ missing = Sentinel("Missing")
 
 class FusionApplicationsClient(object):
     """
-    Use the Fusion Applications Environment Management API to manage the environments where your Fusion Applications run. For more information, see the [Fusion Applications Environment Management documentation](/iaas/Content/Identity/fusion-applications/home.htm).
+    Use the Fusion Applications Environment Management API to manage the environments where your Fusion Applications run. For more information, see the [Fusion Applications Environment Management documentation](/iaas/Content/fusion-applications/home.htm).
     """
 
     def __init__(self, config, **kwargs):
@@ -136,7 +136,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -149,7 +149,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/change_fusion_environment_compartment.py.html>`__ to see an example of how to use change_fusion_environment_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/change_fusion_environment_compartment.py.html>`__ to see an example of how to use change_fusion_environment_compartment API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/actions/changeCompartment"
         method = "POST"
@@ -192,6 +192,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -251,7 +253,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -264,7 +266,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/change_fusion_environment_family_compartment.py.html>`__ to see an example of how to use change_fusion_environment_family_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/change_fusion_environment_family_compartment.py.html>`__ to see an example of how to use change_fusion_environment_family_compartment API.
         """
         resource_path = "/fusionEnvironmentFamilies/{fusionEnvironmentFamilyId}/actions/changeCompartment"
         method = "POST"
@@ -307,6 +309,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -358,7 +362,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -371,7 +375,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/create_data_masking_activity.py.html>`__ to see an example of how to use create_data_masking_activity API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/create_data_masking_activity.py.html>`__ to see an example of how to use create_data_masking_activity API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/dataMaskingActivities"
         method = "POST"
@@ -412,6 +416,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -460,7 +466,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -473,7 +479,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/create_fusion_environment.py.html>`__ to see an example of how to use create_fusion_environment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/create_fusion_environment.py.html>`__ to see an example of how to use create_fusion_environment API.
         """
         resource_path = "/fusionEnvironments"
         method = "POST"
@@ -504,6 +510,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -553,7 +561,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -566,7 +574,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/create_fusion_environment_admin_user.py.html>`__ to see an example of how to use create_fusion_environment_admin_user API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/create_fusion_environment_admin_user.py.html>`__ to see an example of how to use create_fusion_environment_admin_user API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/adminUsers"
         method = "POST"
@@ -607,6 +615,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -655,7 +665,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -668,7 +678,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/create_fusion_environment_family.py.html>`__ to see an example of how to use create_fusion_environment_family API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/create_fusion_environment_family.py.html>`__ to see an example of how to use create_fusion_environment_family API.
         """
         resource_path = "/fusionEnvironmentFamilies"
         method = "POST"
@@ -699,6 +709,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -748,7 +760,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -761,7 +773,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/create_refresh_activity.py.html>`__ to see an example of how to use create_refresh_activity API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/create_refresh_activity.py.html>`__ to see an example of how to use create_refresh_activity API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/refreshActivities"
         method = "POST"
@@ -802,6 +814,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -850,7 +864,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -863,7 +877,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/delete_fusion_environment.py.html>`__ to see an example of how to use delete_fusion_environment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/delete_fusion_environment.py.html>`__ to see an example of how to use delete_fusion_environment API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}"
         method = "DELETE"
@@ -904,6 +918,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -952,7 +968,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -965,7 +981,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/delete_fusion_environment_admin_user.py.html>`__ to see an example of how to use delete_fusion_environment_admin_user API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/delete_fusion_environment_admin_user.py.html>`__ to see an example of how to use delete_fusion_environment_admin_user API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/adminUsers/{adminUsername}"
         method = "DELETE"
@@ -1007,6 +1023,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1052,7 +1070,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1065,7 +1083,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/delete_fusion_environment_family.py.html>`__ to see an example of how to use delete_fusion_environment_family API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/delete_fusion_environment_family.py.html>`__ to see an example of how to use delete_fusion_environment_family API.
         """
         resource_path = "/fusionEnvironmentFamilies/{fusionEnvironmentFamilyId}"
         method = "DELETE"
@@ -1106,6 +1124,113 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
+    def delete_refresh_activity(self, fusion_environment_id, refresh_activity_id, **kwargs):
+        """
+        Deletes a scheduled RefreshActivity resource by identifier
+
+
+        :param str fusion_environment_id: (required)
+            unique FusionEnvironment identifier
+
+        :param str refresh_activity_id: (required)
+            The unique identifier (OCID) of the Refresh activity.
+
+        :param str if_match: (optional)
+            For optimistic concurrency control. In the PUT or DELETE call
+            for a resource, set the `if-match` parameter to the value of the
+            etag from a previous GET or POST response for that resource.
+            The resource will be updated or deleted only if the etag you
+            provide matches the resource's current etag value.
+
+        :param str opc_request_id: (optional)
+            The client request ID for tracing.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/delete_refresh_activity.py.html>`__ to see an example of how to use delete_refresh_activity API.
+        """
+        resource_path = "/fusionEnvironments/{fusionEnvironmentId}/refreshActivities/{refreshActivityId}"
+        method = "DELETE"
+        operation_name = "delete_refresh_activity"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/fusion-applications/20211201/RefreshActivity/DeleteRefreshActivity"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "if_match",
+            "opc_request_id"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "delete_refresh_activity got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "fusionEnvironmentId": fusion_environment_id,
+            "refreshActivityId": refresh_activity_id
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "if-match": kwargs.get("if_match", missing),
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1147,7 +1272,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1160,7 +1285,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/get_data_masking_activity.py.html>`__ to see an example of how to use get_data_masking_activity API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/get_data_masking_activity.py.html>`__ to see an example of how to use get_data_masking_activity API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/dataMaskingActivities/{dataMaskingActivityId}"
         method = "GET"
@@ -1200,6 +1325,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1240,7 +1367,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1253,7 +1380,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/get_fusion_environment.py.html>`__ to see an example of how to use get_fusion_environment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/get_fusion_environment.py.html>`__ to see an example of how to use get_fusion_environment API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}"
         method = "GET"
@@ -1292,6 +1419,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1332,7 +1461,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1345,7 +1474,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/get_fusion_environment_family.py.html>`__ to see an example of how to use get_fusion_environment_family API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/get_fusion_environment_family.py.html>`__ to see an example of how to use get_fusion_environment_family API.
         """
         resource_path = "/fusionEnvironmentFamilies/{fusionEnvironmentFamilyId}"
         method = "GET"
@@ -1384,6 +1513,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1424,7 +1555,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1437,7 +1568,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/get_fusion_environment_family_limits_and_usage.py.html>`__ to see an example of how to use get_fusion_environment_family_limits_and_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/get_fusion_environment_family_limits_and_usage.py.html>`__ to see an example of how to use get_fusion_environment_family_limits_and_usage API.
         """
         resource_path = "/fusionEnvironmentFamilies/{fusionEnvironmentFamilyId}/limitsAndUsage"
         method = "GET"
@@ -1476,6 +1607,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1516,7 +1649,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1529,7 +1662,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/get_fusion_environment_family_subscription_detail.py.html>`__ to see an example of how to use get_fusion_environment_family_subscription_detail API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/get_fusion_environment_family_subscription_detail.py.html>`__ to see an example of how to use get_fusion_environment_family_subscription_detail API.
         """
         resource_path = "/fusionEnvironmentFamilies/{fusionEnvironmentFamilyId}/subscriptionDetails"
         method = "GET"
@@ -1568,6 +1701,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1608,7 +1743,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1621,7 +1756,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/get_fusion_environment_status.py.html>`__ to see an example of how to use get_fusion_environment_status API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/get_fusion_environment_status.py.html>`__ to see an example of how to use get_fusion_environment_status API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/status"
         method = "GET"
@@ -1660,6 +1795,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1703,7 +1840,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1716,7 +1853,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/get_refresh_activity.py.html>`__ to see an example of how to use get_refresh_activity API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/get_refresh_activity.py.html>`__ to see an example of how to use get_refresh_activity API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/refreshActivities/{refreshActivityId}"
         method = "GET"
@@ -1756,6 +1893,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1799,7 +1938,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1812,7 +1951,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/get_scheduled_activity.py.html>`__ to see an example of how to use get_scheduled_activity API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/get_scheduled_activity.py.html>`__ to see an example of how to use get_scheduled_activity API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/scheduledActivities/{scheduledActivityId}"
         method = "GET"
@@ -1852,6 +1991,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1895,7 +2036,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -1908,7 +2049,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/get_service_attachment.py.html>`__ to see an example of how to use get_service_attachment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/get_service_attachment.py.html>`__ to see an example of how to use get_service_attachment API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/serviceAttachments/{serviceAttachmentId}"
         method = "GET"
@@ -1948,6 +2089,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -1988,7 +2131,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -2001,7 +2144,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -2040,6 +2183,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -2080,7 +2225,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -2093,7 +2238,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/list_admin_users.py.html>`__ to see an example of how to use list_admin_users API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_admin_users.py.html>`__ to see an example of how to use list_admin_users API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/adminUsers"
         method = "GET"
@@ -2132,6 +2277,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -2193,7 +2340,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -2206,7 +2353,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/list_data_masking_activities.py.html>`__ to see an example of how to use list_data_masking_activities API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_data_masking_activities.py.html>`__ to see an example of how to use list_data_masking_activities API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/dataMaskingActivities"
         method = "GET"
@@ -2280,6 +2427,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -2349,7 +2498,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -2362,7 +2511,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/list_fusion_environment_families.py.html>`__ to see an example of how to use list_fusion_environment_families API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_fusion_environment_families.py.html>`__ to see an example of how to use list_fusion_environment_families API.
         """
         resource_path = "/fusionEnvironmentFamilies"
         method = "GET"
@@ -2431,6 +2580,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -2498,7 +2649,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -2511,7 +2662,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/list_fusion_environments.py.html>`__ to see an example of how to use list_fusion_environments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_fusion_environments.py.html>`__ to see an example of how to use list_fusion_environments API.
         """
         resource_path = "/fusionEnvironments"
         method = "GET"
@@ -2580,6 +2731,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -2626,7 +2779,7 @@ class FusionApplicationsClient(object):
         :param str lifecycle_state: (optional)
             A filter that returns all resources that match the specified status
 
-            Allowed values are: "ACCEPTED", "IN_PROGRESS", "FAILED", "SUCCEEDED", "CANCELED"
+            Allowed values are: "ACCEPTED", "IN_PROGRESS", "NEEDS_ATTENTION", "FAILED", "SUCCEEDED", "CANCELED"
 
         :param int limit: (optional)
             The maximum number of items to return.
@@ -2650,7 +2803,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -2663,7 +2816,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/list_refresh_activities.py.html>`__ to see an example of how to use list_refresh_activities API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_refresh_activities.py.html>`__ to see an example of how to use list_refresh_activities API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/refreshActivities"
         method = "GET"
@@ -2700,7 +2853,7 @@ class FusionApplicationsClient(object):
                 raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
 
         if 'lifecycle_state' in kwargs:
-            lifecycle_state_allowed_values = ["ACCEPTED", "IN_PROGRESS", "FAILED", "SUCCEEDED", "CANCELED"]
+            lifecycle_state_allowed_values = ["ACCEPTED", "IN_PROGRESS", "NEEDS_ATTENTION", "FAILED", "SUCCEEDED", "CANCELED"]
             if kwargs['lifecycle_state'] not in lifecycle_state_allowed_values:
                 raise ValueError(
                     "Invalid value for `lifecycle_state`, must be one of {0}".format(lifecycle_state_allowed_values)
@@ -2743,6 +2896,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -2820,7 +2975,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -2833,7 +2988,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/list_scheduled_activities.py.html>`__ to see an example of how to use list_scheduled_activities API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_scheduled_activities.py.html>`__ to see an example of how to use list_scheduled_activities API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/scheduledActivities"
         method = "GET"
@@ -2922,6 +3077,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -2993,7 +3150,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -3006,7 +3163,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/list_service_attachments.py.html>`__ to see an example of how to use list_service_attachments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_service_attachments.py.html>`__ to see an example of how to use list_service_attachments API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/serviceAttachments"
         method = "GET"
@@ -3091,6 +3248,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -3149,7 +3308,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -3162,7 +3321,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/list_time_available_for_refreshes.py.html>`__ to see an example of how to use list_time_available_for_refreshes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_time_available_for_refreshes.py.html>`__ to see an example of how to use list_time_available_for_refreshes API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/timeAvailableForRefresh"
         method = "GET"
@@ -3227,6 +3386,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -3285,7 +3446,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -3298,7 +3459,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -3363,6 +3524,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -3421,7 +3584,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -3434,7 +3597,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -3499,6 +3662,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -3565,7 +3730,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -3578,7 +3743,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -3645,6 +3810,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -3705,7 +3872,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -3718,7 +3885,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/reset_fusion_environment_password.py.html>`__ to see an example of how to use reset_fusion_environment_password API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/reset_fusion_environment_password.py.html>`__ to see an example of how to use reset_fusion_environment_password API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/adminUsers/{adminUsername}/actions/resetPassword"
         method = "POST"
@@ -3762,6 +3929,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -3813,7 +3982,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -3826,7 +3995,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/update_fusion_environment.py.html>`__ to see an example of how to use update_fusion_environment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/update_fusion_environment.py.html>`__ to see an example of how to use update_fusion_environment API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}"
         method = "PUT"
@@ -3867,6 +4036,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -3917,7 +4088,7 @@ class FusionApplicationsClient(object):
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
-            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
             The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
 
             To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
@@ -3930,7 +4101,7 @@ class FusionApplicationsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/fusionapps/update_fusion_environment_family.py.html>`__ to see an example of how to use update_fusion_environment_family API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/update_fusion_environment_family.py.html>`__ to see an example of how to use update_fusion_environment_family API.
         """
         resource_path = "/fusionEnvironmentFamilies/{fusionEnvironmentFamilyId}"
         method = "PUT"
@@ -3971,6 +4142,8 @@ class FusionApplicationsClient(object):
             operation_retry_strategy=kwargs.get('retry_strategy'),
             client_retry_strategy=self.retry_strategy
         )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
 
         if retry_strategy:
             if not isinstance(retry_strategy, retry.NoneRetryStrategy):
@@ -3993,6 +4166,118 @@ class FusionApplicationsClient(object):
                 path_params=path_params,
                 header_params=header_params,
                 body=update_fusion_environment_family_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
+    def update_refresh_activity(self, fusion_environment_id, refresh_activity_id, update_refresh_activity_details, **kwargs):
+        """
+        Updates a scheduled RefreshActivity.
+
+
+        :param str fusion_environment_id: (required)
+            unique FusionEnvironment identifier
+
+        :param str refresh_activity_id: (required)
+            The unique identifier (OCID) of the Refresh activity.
+
+        :param oci.fusion_apps.models.UpdateRefreshActivityDetails update_refresh_activity_details: (required)
+            Details for the updating scheduled RefreshActivity.
+
+        :param str opc_request_id: (optional)
+            The client request ID for tracing.
+
+        :param str if_match: (optional)
+            For optimistic concurrency control. In the PUT or DELETE call
+            for a resource, set the `if-match` parameter to the value of the
+            etag from a previous GET or POST response for that resource.
+            The resource will be updated or deleted only if the etag you
+            provide matches the resource's current etag value.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type :class:`~oci.fusion_apps.models.RefreshActivity`
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/update_refresh_activity.py.html>`__ to see an example of how to use update_refresh_activity API.
+        """
+        resource_path = "/fusionEnvironments/{fusionEnvironmentId}/refreshActivities/{refreshActivityId}"
+        method = "PUT"
+        operation_name = "update_refresh_activity"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/fusion-applications/20211201/UpdateRefreshActivityDetails/UpdateRefreshActivity"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "opc_request_id",
+            "if_match"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "update_refresh_activity got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "fusionEnvironmentId": fusion_environment_id,
+            "refreshActivityId": refresh_activity_id
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-request-id": kwargs.get("opc_request_id", missing),
+            "if-match": kwargs.get("if_match", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=update_refresh_activity_details,
+                response_type="RefreshActivity",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=update_refresh_activity_details,
+                response_type="RefreshActivity",
                 allow_control_chars=kwargs.get('allow_control_chars'),
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)

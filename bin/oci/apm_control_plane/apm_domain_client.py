@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -148,7 +148,7 @@ class ApmDomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmcontrolplane/change_apm_domain_compartment.py.html>`__ to see an example of how to use change_apm_domain_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmcontrolplane/change_apm_domain_compartment.py.html>`__ to see an example of how to use change_apm_domain_compartment API.
         """
         resource_path = "/apmDomains/{apmDomainId}/actions/changeCompartment"
         method = "POST"
@@ -254,7 +254,7 @@ class ApmDomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmcontrolplane/create_apm_domain.py.html>`__ to see an example of how to use create_apm_domain API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmcontrolplane/create_apm_domain.py.html>`__ to see an example of how to use create_apm_domain API.
         """
         resource_path = "/apmDomains"
         method = "POST"
@@ -347,7 +347,7 @@ class ApmDomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmcontrolplane/delete_apm_domain.py.html>`__ to see an example of how to use delete_apm_domain API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmcontrolplane/delete_apm_domain.py.html>`__ to see an example of how to use delete_apm_domain API.
         """
         resource_path = "/apmDomains/{apmDomainId}"
         method = "DELETE"
@@ -451,7 +451,7 @@ class ApmDomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmcontrolplane/generate_data_keys.py.html>`__ to see an example of how to use generate_data_keys API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmcontrolplane/generate_data_keys.py.html>`__ to see an example of how to use generate_data_keys API.
         """
         resource_path = "/apmDomains/{apmDomainId}/actions/generateDataKeys"
         method = "POST"
@@ -547,7 +547,7 @@ class ApmDomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmcontrolplane/get_apm_domain.py.html>`__ to see an example of how to use get_apm_domain API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmcontrolplane/get_apm_domain.py.html>`__ to see an example of how to use get_apm_domain API.
         """
         resource_path = "/apmDomains/{apmDomainId}"
         method = "GET"
@@ -641,7 +641,7 @@ class ApmDomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmcontrolplane/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmcontrolplane/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -741,7 +741,7 @@ class ApmDomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmcontrolplane/list_apm_domain_work_requests.py.html>`__ to see an example of how to use list_apm_domain_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmcontrolplane/list_apm_domain_work_requests.py.html>`__ to see an example of how to use list_apm_domain_work_requests API.
         """
         resource_path = "/apmDomains/{apmDomainId}/workRequests"
         method = "GET"
@@ -869,7 +869,7 @@ class ApmDomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmcontrolplane/list_apm_domains.py.html>`__ to see an example of how to use list_apm_domains API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmcontrolplane/list_apm_domains.py.html>`__ to see an example of how to use list_apm_domains API.
         """
         resource_path = "/apmDomains"
         method = "GET"
@@ -997,7 +997,7 @@ class ApmDomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmcontrolplane/list_data_keys.py.html>`__ to see an example of how to use list_data_keys API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmcontrolplane/list_data_keys.py.html>`__ to see an example of how to use list_data_keys API.
         """
         resource_path = "/apmDomains/{apmDomainId}/dataKeys"
         method = "GET"
@@ -1112,7 +1112,7 @@ class ApmDomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmcontrolplane/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmcontrolplane/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -1222,7 +1222,7 @@ class ApmDomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmcontrolplane/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmcontrolplane/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -1332,7 +1332,7 @@ class ApmDomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmcontrolplane/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmcontrolplane/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -1435,7 +1435,7 @@ class ApmDomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmcontrolplane/remove_data_keys.py.html>`__ to see an example of how to use remove_data_keys API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmcontrolplane/remove_data_keys.py.html>`__ to see an example of how to use remove_data_keys API.
         """
         resource_path = "/apmDomains/{apmDomainId}/actions/removeDataKeys"
         method = "POST"
@@ -1540,7 +1540,7 @@ class ApmDomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/apmcontrolplane/update_apm_domain.py.html>`__ to see an example of how to use update_apm_domain API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmcontrolplane/update_apm_domain.py.html>`__ to see an example of how to use update_apm_domain API.
         """
         resource_path = "/apmDomains/{apmDomainId}"
         method = "PUT"

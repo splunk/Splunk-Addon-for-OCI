@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -138,7 +138,7 @@ class DataLabelingClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datalabelingservicedataplane/create_annotation.py.html>`__ to see an example of how to use create_annotation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservicedataplane/create_annotation.py.html>`__ to see an example of how to use create_annotation API.
         """
         resource_path = "/annotations"
         method = "POST"
@@ -232,7 +232,7 @@ class DataLabelingClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datalabelingservicedataplane/create_record.py.html>`__ to see an example of how to use create_record API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservicedataplane/create_record.py.html>`__ to see an example of how to use create_record API.
         """
         resource_path = "/records"
         method = "POST"
@@ -326,7 +326,7 @@ class DataLabelingClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datalabelingservicedataplane/delete_annotation.py.html>`__ to see an example of how to use delete_annotation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservicedataplane/delete_annotation.py.html>`__ to see an example of how to use delete_annotation API.
         """
         resource_path = "/annotations/{annotationId}"
         method = "DELETE"
@@ -427,7 +427,7 @@ class DataLabelingClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datalabelingservicedataplane/delete_record.py.html>`__ to see an example of how to use delete_record API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservicedataplane/delete_record.py.html>`__ to see an example of how to use delete_record API.
         """
         resource_path = "/records/{recordId}"
         method = "DELETE"
@@ -521,7 +521,7 @@ class DataLabelingClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datalabelingservicedataplane/get_annotation.py.html>`__ to see an example of how to use get_annotation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservicedataplane/get_annotation.py.html>`__ to see an example of how to use get_annotation API.
         """
         resource_path = "/annotations/{annotationId}"
         method = "GET"
@@ -615,7 +615,7 @@ class DataLabelingClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datalabelingservicedataplane/get_dataset.py.html>`__ to see an example of how to use get_dataset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservicedataplane/get_dataset.py.html>`__ to see an example of how to use get_dataset API.
         """
         resource_path = "/datasets/{datasetId}"
         method = "GET"
@@ -709,7 +709,7 @@ class DataLabelingClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datalabelingservicedataplane/get_record.py.html>`__ to see an example of how to use get_record API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservicedataplane/get_record.py.html>`__ to see an example of how to use get_record API.
         """
         resource_path = "/records/{recordId}"
         method = "GET"
@@ -810,7 +810,7 @@ class DataLabelingClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datalabelingservicedataplane/get_record_content.py.html>`__ to see an example of how to use get_record_content API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservicedataplane/get_record_content.py.html>`__ to see an example of how to use get_record_content API.
         """
         resource_path = "/records/{recordId}/content"
         method = "GET"
@@ -913,7 +913,7 @@ class DataLabelingClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datalabelingservicedataplane/get_record_preview_content.py.html>`__ to see an example of how to use get_record_preview_content API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservicedataplane/get_record_preview_content.py.html>`__ to see an example of how to use get_record_preview_content API.
         """
         resource_path = "/records/{recordId}/preview/content"
         method = "GET"
@@ -1048,7 +1048,7 @@ class DataLabelingClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datalabelingservicedataplane/list_annotations.py.html>`__ to see an example of how to use list_annotations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservicedataplane/list_annotations.py.html>`__ to see an example of how to use list_annotations API.
         """
         resource_path = "/annotations"
         method = "GET"
@@ -1215,7 +1215,7 @@ class DataLabelingClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datalabelingservicedataplane/list_records.py.html>`__ to see an example of how to use list_records API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservicedataplane/list_records.py.html>`__ to see an example of how to use list_records API.
         """
         resource_path = "/records"
         method = "GET"
@@ -1376,7 +1376,7 @@ class DataLabelingClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datalabelingservicedataplane/summarize_annotation_analytics.py.html>`__ to see an example of how to use summarize_annotation_analytics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservicedataplane/summarize_annotation_analytics.py.html>`__ to see an example of how to use summarize_annotation_analytics API.
         """
         resource_path = "/annotationAnalytics"
         method = "GET"
@@ -1537,7 +1537,7 @@ class DataLabelingClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datalabelingservicedataplane/summarize_record_analytics.py.html>`__ to see an example of how to use summarize_record_analytics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservicedataplane/summarize_record_analytics.py.html>`__ to see an example of how to use summarize_record_analytics API.
         """
         resource_path = "/recordAnalytics"
         method = "GET"
@@ -1677,7 +1677,7 @@ class DataLabelingClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datalabelingservicedataplane/update_annotation.py.html>`__ to see an example of how to use update_annotation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservicedataplane/update_annotation.py.html>`__ to see an example of how to use update_annotation API.
         """
         resource_path = "/annotations/{annotationId}"
         method = "PUT"
@@ -1785,7 +1785,7 @@ class DataLabelingClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.88.1/datalabelingservicedataplane/update_record.py.html>`__ to see an example of how to use update_record API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservicedataplane/update_record.py.html>`__ to see an example of how to use update_record API.
         """
         resource_path = "/records/{recordId}"
         method = "PUT"

@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from __future__ import absolute_import
@@ -27,6 +27,7 @@ from .image_dataset_format_details import ImageDatasetFormatDetails
 from .image_metadata import ImageMetadata
 from .image_object_selection_entity import ImageObjectSelectionEntity
 from .initial_record_generation_configuration import InitialRecordGenerationConfiguration
+from .key_value_selection_entity import KeyValueSelectionEntity
 from .label import Label
 from .label_name import LabelName
 from .label_set import LabelSet
@@ -74,6 +75,7 @@ data_labeling_service_dataplane_type_mapping = {
     "ImageMetadata": ImageMetadata,
     "ImageObjectSelectionEntity": ImageObjectSelectionEntity,
     "InitialRecordGenerationConfiguration": InitialRecordGenerationConfiguration,
+    "KeyValueSelectionEntity": KeyValueSelectionEntity,
     "Label": Label,
     "LabelName": LabelName,
     "LabelSet": LabelSet,

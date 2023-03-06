@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 
@@ -32,7 +32,7 @@ class UpdateIngressGatewayDetails(object):
 
         :param mtls:
             The value to assign to the mtls property of this UpdateIngressGatewayDetails.
-        :type mtls: oci.service_mesh.models.CreateIngressGatewayMutualTransportLayerSecurityDetails
+        :type mtls: oci.service_mesh.models.IngressGatewayMutualTransportLayerSecurityDetails
 
         :param freeform_tags:
             The value to assign to the freeform_tags property of this UpdateIngressGatewayDetails.
@@ -47,7 +47,7 @@ class UpdateIngressGatewayDetails(object):
             'description': 'str',
             'hosts': 'list[IngressGatewayHost]',
             'access_logging': 'AccessLoggingConfiguration',
-            'mtls': 'CreateIngressGatewayMutualTransportLayerSecurityDetails',
+            'mtls': 'IngressGatewayMutualTransportLayerSecurityDetails',
             'freeform_tags': 'dict(str, str)',
             'defined_tags': 'dict(str, dict(str, object))'
         }
@@ -148,7 +148,7 @@ class UpdateIngressGatewayDetails(object):
         Gets the mtls of this UpdateIngressGatewayDetails.
 
         :return: The mtls of this UpdateIngressGatewayDetails.
-        :rtype: oci.service_mesh.models.CreateIngressGatewayMutualTransportLayerSecurityDetails
+        :rtype: oci.service_mesh.models.IngressGatewayMutualTransportLayerSecurityDetails
         """
         return self._mtls
 
@@ -158,7 +158,7 @@ class UpdateIngressGatewayDetails(object):
         Sets the mtls of this UpdateIngressGatewayDetails.
 
         :param mtls: The mtls of this UpdateIngressGatewayDetails.
-        :type: oci.service_mesh.models.CreateIngressGatewayMutualTransportLayerSecurityDetails
+        :type: oci.service_mesh.models.IngressGatewayMutualTransportLayerSecurityDetails
         """
         self._mtls = mtls
 

@@ -1,5 +1,5 @@
 # coding: utf-8
-# Copyright (c) 2016, 2022, Oracle and/or its affiliates.  All rights reserved.
+# Copyright (c) 2016, 2023, Oracle and/or its affiliates.  All rights reserved.
 # This software is dual-licensed to you under the Universal Permissive License (UPL) 1.0 as shown at https://oss.oracle.com/licenses/upl or Apache License 2.0 as shown at http://www.apache.org/licenses/LICENSE-2.0. You may choose either license.
 
 from .base_announcement import BaseAnnouncement
@@ -55,7 +55,7 @@ class Announcement(BaseAnnouncement):
 
         :param time_two_type:
             The value to assign to the time_two_type property of this Announcement.
-            Allowed values for this property are: "END_TIME", "NEW_END_TIME", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for this property are: "END_TIME", "NEW_END_TIME", "ESTIMATED_END_TIME", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type time_two_type: str
 
