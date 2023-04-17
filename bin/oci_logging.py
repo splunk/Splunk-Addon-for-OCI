@@ -149,6 +149,9 @@ def get_messages(config_items, cursor, i):
             elif e.status == 401:
                 logger.info("UNAUTHORIZED: This could be related to OCI IAM permissions./n" + str(e.message))
                 time.sleep(int(global_interval))
+            elif e.status in [500, 503]:
+                logger.info("500 or 503 Sleeping for error:" + str(e.message))
+                time.sleep(int(global_interval))
             else:
                 logger.error("Unknown Error: " + str(e))
                 time.sleep(int(global_interval))
