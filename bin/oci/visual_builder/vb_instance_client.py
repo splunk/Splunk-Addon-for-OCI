@@ -150,7 +150,7 @@ class VbInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/visualbuilder/change_vb_instance_compartment.py.html>`__ to see an example of how to use change_vb_instance_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/visualbuilder/change_vb_instance_compartment.py.html>`__ to see an example of how to use change_vb_instance_compartment API.
         """
         resource_path = "/vbInstances/{vbInstanceId}/actions/changeCompartment"
         method = "POST"
@@ -255,7 +255,7 @@ class VbInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/visualbuilder/create_vb_instance.py.html>`__ to see an example of how to use create_vb_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/visualbuilder/create_vb_instance.py.html>`__ to see an example of how to use create_vb_instance API.
         """
         resource_path = "/vbInstances"
         method = "POST"
@@ -345,7 +345,7 @@ class VbInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/visualbuilder/delete_vb_instance.py.html>`__ to see an example of how to use delete_vb_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/visualbuilder/delete_vb_instance.py.html>`__ to see an example of how to use delete_vb_instance API.
         """
         resource_path = "/vbInstances/{vbInstanceId}"
         method = "DELETE"
@@ -437,7 +437,7 @@ class VbInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/visualbuilder/get_vb_instance.py.html>`__ to see an example of how to use get_vb_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/visualbuilder/get_vb_instance.py.html>`__ to see an example of how to use get_vb_instance API.
         """
         resource_path = "/vbInstances/{vbInstanceId}"
         method = "GET"
@@ -531,7 +531,7 @@ class VbInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/visualbuilder/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/visualbuilder/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -653,7 +653,7 @@ class VbInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/visualbuilder/list_vb_instances.py.html>`__ to see an example of how to use list_vb_instances API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/visualbuilder/list_vb_instances.py.html>`__ to see an example of how to use list_vb_instances API.
         """
         resource_path = "/vbInstances"
         method = "GET"
@@ -784,7 +784,7 @@ class VbInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/visualbuilder/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/visualbuilder/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -898,7 +898,7 @@ class VbInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/visualbuilder/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/visualbuilder/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -1012,7 +1012,7 @@ class VbInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/visualbuilder/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/visualbuilder/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -1125,7 +1125,7 @@ class VbInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/visualbuilder/request_summarized_applications.py.html>`__ to see an example of how to use request_summarized_applications API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/visualbuilder/request_summarized_applications.py.html>`__ to see an example of how to use request_summarized_applications API.
         """
         resource_path = "/vbInstances/{vbInstanceId}/actions/applications"
         method = "POST"
@@ -1240,7 +1240,7 @@ class VbInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/visualbuilder/start_vb_instance.py.html>`__ to see an example of how to use start_vb_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/visualbuilder/start_vb_instance.py.html>`__ to see an example of how to use start_vb_instance API.
         """
         resource_path = "/vbInstances/{vbInstanceId}/actions/start"
         method = "POST"
@@ -1351,7 +1351,7 @@ class VbInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/visualbuilder/stop_vb_instance.py.html>`__ to see an example of how to use stop_vb_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/visualbuilder/stop_vb_instance.py.html>`__ to see an example of how to use stop_vb_instance API.
         """
         resource_path = "/vbInstances/{vbInstanceId}/actions/stop"
         method = "POST"
@@ -1456,7 +1456,7 @@ class VbInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/visualbuilder/update_vb_instance.py.html>`__ to see an example of how to use update_vb_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/visualbuilder/update_vb_instance.py.html>`__ to see an example of how to use update_vb_instance API.
         """
         resource_path = "/vbInstances/{vbInstanceId}"
         method = "PUT"

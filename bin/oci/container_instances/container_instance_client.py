@@ -141,7 +141,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/change_container_instance_compartment.py.html>`__ to see an example of how to use change_container_instance_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/change_container_instance_compartment.py.html>`__ to see an example of how to use change_container_instance_compartment API.
         """
         resource_path = "/containerInstances/{containerInstanceId}/actions/changeCompartment"
         method = "POST"
@@ -244,7 +244,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/create_container_instance.py.html>`__ to see an example of how to use create_container_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/create_container_instance.py.html>`__ to see an example of how to use create_container_instance API.
         """
         resource_path = "/containerInstances"
         method = "POST"
@@ -338,7 +338,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/delete_container_instance.py.html>`__ to see an example of how to use delete_container_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/delete_container_instance.py.html>`__ to see an example of how to use delete_container_instance API.
         """
         resource_path = "/containerInstances/{containerInstanceId}"
         method = "DELETE"
@@ -432,7 +432,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/get_container.py.html>`__ to see an example of how to use get_container API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/get_container.py.html>`__ to see an example of how to use get_container API.
         """
         resource_path = "/containers/{containerId}"
         method = "GET"
@@ -526,7 +526,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/get_container_instance.py.html>`__ to see an example of how to use get_container_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/get_container_instance.py.html>`__ to see an example of how to use get_container_instance API.
         """
         resource_path = "/containerInstances/{containerInstanceId}"
         method = "GET"
@@ -620,7 +620,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -725,7 +725,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/list_container_instance_shapes.py.html>`__ to see an example of how to use list_container_instance_shapes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/list_container_instance_shapes.py.html>`__ to see an example of how to use list_container_instance_shapes API.
         """
         resource_path = "/containerInstanceShapes"
         method = "GET"
@@ -849,7 +849,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/list_container_instances.py.html>`__ to see an example of how to use list_container_instances API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/list_container_instances.py.html>`__ to see an example of how to use list_container_instances API.
         """
         resource_path = "/containerInstances"
         method = "GET"
@@ -1005,7 +1005,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/list_containers.py.html>`__ to see an example of how to use list_containers API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/list_containers.py.html>`__ to see an example of how to use list_containers API.
         """
         resource_path = "/containers"
         method = "GET"
@@ -1137,7 +1137,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -1247,7 +1247,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -1360,7 +1360,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -1462,7 +1462,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/restart_container_instance.py.html>`__ to see an example of how to use restart_container_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/restart_container_instance.py.html>`__ to see an example of how to use restart_container_instance API.
         """
         resource_path = "/containerInstances/{containerInstanceId}/actions/restart"
         method = "POST"
@@ -1556,7 +1556,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/retrieve_logs.py.html>`__ to see an example of how to use retrieve_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/retrieve_logs.py.html>`__ to see an example of how to use retrieve_logs API.
         """
         resource_path = "/containers/{containerId}/actions/retrieveLogs"
         method = "POST"
@@ -1657,7 +1657,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/start_container_instance.py.html>`__ to see an example of how to use start_container_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/start_container_instance.py.html>`__ to see an example of how to use start_container_instance API.
         """
         resource_path = "/containerInstances/{containerInstanceId}/actions/start"
         method = "POST"
@@ -1758,7 +1758,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/stop_container_instance.py.html>`__ to see an example of how to use stop_container_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/stop_container_instance.py.html>`__ to see an example of how to use stop_container_instance API.
         """
         resource_path = "/containerInstances/{containerInstanceId}/actions/stop"
         method = "POST"
@@ -1862,7 +1862,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/update_container.py.html>`__ to see an example of how to use update_container API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/update_container.py.html>`__ to see an example of how to use update_container API.
         """
         resource_path = "/containers/{containerId}"
         method = "PUT"
@@ -1968,7 +1968,7 @@ class ContainerInstanceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/containerinstances/update_container_instance.py.html>`__ to see an example of how to use update_container_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/containerinstances/update_container_instance.py.html>`__ to see an example of how to use update_container_instance API.
         """
         resource_path = "/containerInstances/{containerInstanceId}"
         method = "PUT"

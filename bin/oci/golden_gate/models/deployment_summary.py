@@ -61,6 +61,10 @@ class DeploymentSummary(object):
     #: This constant has a value of "SUCCEEDED"
     LIFECYCLE_STATE_SUCCEEDED = "SUCCEEDED"
 
+    #: A constant which can be used with the lifecycle_state property of a DeploymentSummary.
+    #: This constant has a value of "WAITING"
+    LIFECYCLE_STATE_WAITING = "WAITING"
+
     #: A constant which can be used with the lifecycle_sub_state property of a DeploymentSummary.
     #: This constant has a value of "RECOVERING"
     LIFECYCLE_SUB_STATE_RECOVERING = "RECOVERING"
@@ -89,6 +93,10 @@ class DeploymentSummary(object):
     #: This constant has a value of "BACKUP_IN_PROGRESS"
     LIFECYCLE_SUB_STATE_BACKUP_IN_PROGRESS = "BACKUP_IN_PROGRESS"
 
+    #: A constant which can be used with the lifecycle_sub_state property of a DeploymentSummary.
+    #: This constant has a value of "ROLLBACK_IN_PROGRESS"
+    LIFECYCLE_SUB_STATE_ROLLBACK_IN_PROGRESS = "ROLLBACK_IN_PROGRESS"
+
     #: A constant which can be used with the license_model property of a DeploymentSummary.
     #: This constant has a value of "LICENSE_INCLUDED"
     LICENSE_MODEL_LICENSE_INCLUDED = "LICENSE_INCLUDED"
@@ -108,6 +116,10 @@ class DeploymentSummary(object):
     #: A constant which can be used with the deployment_type property of a DeploymentSummary.
     #: This constant has a value of "BIGDATA"
     DEPLOYMENT_TYPE_BIGDATA = "BIGDATA"
+
+    #: A constant which can be used with the deployment_type property of a DeploymentSummary.
+    #: This constant has a value of "DATABASE_MICROSOFT_SQLSERVER"
+    DEPLOYMENT_TYPE_DATABASE_MICROSOFT_SQLSERVER = "DATABASE_MICROSOFT_SQLSERVER"
 
     #: A constant which can be used with the deployment_type property of a DeploymentSummary.
     #: This constant has a value of "DATABASE_MYSQL"
@@ -148,13 +160,13 @@ class DeploymentSummary(object):
 
         :param lifecycle_state:
             The value to assign to the lifecycle_state property of this DeploymentSummary.
-            Allowed values for this property are: "CREATING", "UPDATING", "ACTIVE", "INACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION", "IN_PROGRESS", "CANCELING", "CANCELED", "SUCCEEDED", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for this property are: "CREATING", "UPDATING", "ACTIVE", "INACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION", "IN_PROGRESS", "CANCELING", "CANCELED", "SUCCEEDED", "WAITING", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type lifecycle_state: str
 
         :param lifecycle_sub_state:
             The value to assign to the lifecycle_sub_state property of this DeploymentSummary.
-            Allowed values for this property are: "RECOVERING", "STARTING", "STOPPING", "MOVING", "UPGRADING", "RESTORING", "BACKUP_IN_PROGRESS", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for this property are: "RECOVERING", "STARTING", "STOPPING", "MOVING", "UPGRADING", "RESTORING", "BACKUP_IN_PROGRESS", "ROLLBACK_IN_PROGRESS", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type lifecycle_sub_state: str
 
@@ -222,7 +234,7 @@ class DeploymentSummary(object):
 
         :param deployment_type:
             The value to assign to the deployment_type property of this DeploymentSummary.
-            Allowed values for this property are: "OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MYSQL", "DATABASE_POSTGRESQL", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for this property are: "OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MICROSOFT_SQLSERVER", "DATABASE_MYSQL", "DATABASE_POSTGRESQL", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type deployment_type: str
 
@@ -490,7 +502,7 @@ class DeploymentSummary(object):
         Gets the lifecycle_state of this DeploymentSummary.
         Possible lifecycle states.
 
-        Allowed values for this property are: "CREATING", "UPDATING", "ACTIVE", "INACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION", "IN_PROGRESS", "CANCELING", "CANCELED", "SUCCEEDED", 'UNKNOWN_ENUM_VALUE'.
+        Allowed values for this property are: "CREATING", "UPDATING", "ACTIVE", "INACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION", "IN_PROGRESS", "CANCELING", "CANCELED", "SUCCEEDED", "WAITING", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
 
 
@@ -509,7 +521,7 @@ class DeploymentSummary(object):
         :param lifecycle_state: The lifecycle_state of this DeploymentSummary.
         :type: str
         """
-        allowed_values = ["CREATING", "UPDATING", "ACTIVE", "INACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION", "IN_PROGRESS", "CANCELING", "CANCELED", "SUCCEEDED"]
+        allowed_values = ["CREATING", "UPDATING", "ACTIVE", "INACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION", "IN_PROGRESS", "CANCELING", "CANCELED", "SUCCEEDED", "WAITING"]
         if not value_allowed_none_or_none_sentinel(lifecycle_state, allowed_values):
             lifecycle_state = 'UNKNOWN_ENUM_VALUE'
         self._lifecycle_state = lifecycle_state
@@ -520,7 +532,7 @@ class DeploymentSummary(object):
         Gets the lifecycle_sub_state of this DeploymentSummary.
         Possible GGS lifecycle sub-states.
 
-        Allowed values for this property are: "RECOVERING", "STARTING", "STOPPING", "MOVING", "UPGRADING", "RESTORING", "BACKUP_IN_PROGRESS", 'UNKNOWN_ENUM_VALUE'.
+        Allowed values for this property are: "RECOVERING", "STARTING", "STOPPING", "MOVING", "UPGRADING", "RESTORING", "BACKUP_IN_PROGRESS", "ROLLBACK_IN_PROGRESS", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
 
 
@@ -539,7 +551,7 @@ class DeploymentSummary(object):
         :param lifecycle_sub_state: The lifecycle_sub_state of this DeploymentSummary.
         :type: str
         """
-        allowed_values = ["RECOVERING", "STARTING", "STOPPING", "MOVING", "UPGRADING", "RESTORING", "BACKUP_IN_PROGRESS"]
+        allowed_values = ["RECOVERING", "STARTING", "STOPPING", "MOVING", "UPGRADING", "RESTORING", "BACKUP_IN_PROGRESS", "ROLLBACK_IN_PROGRESS"]
         if not value_allowed_none_or_none_sentinel(lifecycle_sub_state, allowed_values):
             lifecycle_sub_state = 'UNKNOWN_ENUM_VALUE'
         self._lifecycle_sub_state = lifecycle_sub_state
@@ -920,6 +932,9 @@ class DeploymentSummary(object):
     def time_upgrade_required(self):
         """
         Gets the time_upgrade_required of this DeploymentSummary.
+        Note: Deprecated: Use timeOfNextMaintenance instead, or related upgrade records
+        to check, when deployment will be forced to upgrade to a newer version.
+        Old description:
         The date the existing version in use will no longer be considered as usable
         and an upgrade will be required.  This date is typically 6 months after the
         version was released for use by GGS.  The format is defined by
@@ -937,6 +952,9 @@ class DeploymentSummary(object):
     def time_upgrade_required(self, time_upgrade_required):
         """
         Sets the time_upgrade_required of this DeploymentSummary.
+        Note: Deprecated: Use timeOfNextMaintenance instead, or related upgrade records
+        to check, when deployment will be forced to upgrade to a newer version.
+        Old description:
         The date the existing version in use will no longer be considered as usable
         and an upgrade will be required.  This date is typically 6 months after the
         version was released for use by GGS.  The format is defined by
@@ -954,11 +972,11 @@ class DeploymentSummary(object):
     def deployment_type(self):
         """
         Gets the deployment_type of this DeploymentSummary.
-        The type of deployment, the value determines the exact 'type' of service executed in the Deployment.
-        NOTE: Use of the value 'OGG' is maintained for backward compatibility purposes.  Its use is discouraged
-              in favor of the equivalent 'DATABASE_ORACLE' value.
+        The type of deployment, which can be any one of the Allowed values.
+        NOTE: Use of the value 'OGG' is maintained for backward compatibility purposes.
+            Its use is discouraged in favor of 'DATABASE_ORACLE'.
 
-        Allowed values for this property are: "OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MYSQL", "DATABASE_POSTGRESQL", 'UNKNOWN_ENUM_VALUE'.
+        Allowed values for this property are: "OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MICROSOFT_SQLSERVER", "DATABASE_MYSQL", "DATABASE_POSTGRESQL", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
 
 
@@ -971,15 +989,15 @@ class DeploymentSummary(object):
     def deployment_type(self, deployment_type):
         """
         Sets the deployment_type of this DeploymentSummary.
-        The type of deployment, the value determines the exact 'type' of service executed in the Deployment.
-        NOTE: Use of the value 'OGG' is maintained for backward compatibility purposes.  Its use is discouraged
-              in favor of the equivalent 'DATABASE_ORACLE' value.
+        The type of deployment, which can be any one of the Allowed values.
+        NOTE: Use of the value 'OGG' is maintained for backward compatibility purposes.
+            Its use is discouraged in favor of 'DATABASE_ORACLE'.
 
 
         :param deployment_type: The deployment_type of this DeploymentSummary.
         :type: str
         """
-        allowed_values = ["OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MYSQL", "DATABASE_POSTGRESQL"]
+        allowed_values = ["OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MICROSOFT_SQLSERVER", "DATABASE_MYSQL", "DATABASE_POSTGRESQL"]
         if not value_allowed_none_or_none_sentinel(deployment_type, allowed_values):
             deployment_type = 'UNKNOWN_ENUM_VALUE'
         self._deployment_type = deployment_type

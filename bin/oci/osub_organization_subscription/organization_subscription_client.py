@@ -155,7 +155,7 @@ class OrganizationSubscriptionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osuborganizationsubscription/list_organization_subscriptions.py.html>`__ to see an example of how to use list_organization_subscriptions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osuborganizationsubscription/list_organization_subscriptions.py.html>`__ to see an example of how to use list_organization_subscriptions API.
         """
         resource_path = "/organizationSubscription"
         method = "GET"

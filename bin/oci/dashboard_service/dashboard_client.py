@@ -150,7 +150,7 @@ class DashboardClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dashboardservice/change_dashboard_group.py.html>`__ to see an example of how to use change_dashboard_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dashboardservice/change_dashboard_group.py.html>`__ to see an example of how to use change_dashboard_group API.
         """
         resource_path = "/dashboards/{dashboardId}/actions/changeDashboardGroup"
         method = "POST"
@@ -263,7 +263,7 @@ class DashboardClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dashboardservice/create_dashboard.py.html>`__ to see an example of how to use create_dashboard API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dashboardservice/create_dashboard.py.html>`__ to see an example of how to use create_dashboard API.
         """
         resource_path = "/dashboards"
         method = "POST"
@@ -366,7 +366,7 @@ class DashboardClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dashboardservice/delete_dashboard.py.html>`__ to see an example of how to use delete_dashboard API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dashboardservice/delete_dashboard.py.html>`__ to see an example of how to use delete_dashboard API.
         """
         resource_path = "/dashboards/{dashboardId}"
         method = "DELETE"
@@ -469,7 +469,7 @@ class DashboardClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dashboardservice/get_dashboard.py.html>`__ to see an example of how to use get_dashboard API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dashboardservice/get_dashboard.py.html>`__ to see an example of how to use get_dashboard API.
         """
         resource_path = "/dashboards/{dashboardId}"
         method = "GET"
@@ -606,7 +606,7 @@ class DashboardClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dashboardservice/list_dashboards.py.html>`__ to see an example of how to use list_dashboards API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dashboardservice/list_dashboards.py.html>`__ to see an example of how to use list_dashboards API.
         """
         resource_path = "/dashboards"
         method = "GET"
@@ -751,7 +751,7 @@ class DashboardClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dashboardservice/update_dashboard.py.html>`__ to see an example of how to use update_dashboard API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dashboardservice/update_dashboard.py.html>`__ to see an example of how to use update_dashboard API.
         """
         resource_path = "/dashboards/{dashboardId}"
         method = "PUT"

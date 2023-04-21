@@ -154,7 +154,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/change_network_load_balancer_compartment.py.html>`__ to see an example of how to use change_network_load_balancer_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/change_network_load_balancer_compartment.py.html>`__ to see an example of how to use change_network_load_balancer_compartment API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/actions/changeCompartment"
         method = "POST"
@@ -276,7 +276,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/create_backend.py.html>`__ to see an example of how to use create_backend API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/create_backend.py.html>`__ to see an example of how to use create_backend API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/backendSets/{backendSetName}/backends"
         method = "POST"
@@ -394,7 +394,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/create_backend_set.py.html>`__ to see an example of how to use create_backend_set API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/create_backend_set.py.html>`__ to see an example of how to use create_backend_set API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/backendSets"
         method = "POST"
@@ -511,7 +511,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/create_listener.py.html>`__ to see an example of how to use create_listener API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/create_listener.py.html>`__ to see an example of how to use create_listener API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/listeners"
         method = "POST"
@@ -616,7 +616,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/create_network_load_balancer.py.html>`__ to see an example of how to use create_network_load_balancer API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/create_network_load_balancer.py.html>`__ to see an example of how to use create_network_load_balancer API.
         """
         resource_path = "/networkLoadBalancers"
         method = "POST"
@@ -724,7 +724,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/delete_backend.py.html>`__ to see an example of how to use delete_backend API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/delete_backend.py.html>`__ to see an example of how to use delete_backend API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/backendSets/{backendSetName}/backends/{backendName}"
         method = "DELETE"
@@ -835,7 +835,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/delete_backend_set.py.html>`__ to see an example of how to use delete_backend_set API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/delete_backend_set.py.html>`__ to see an example of how to use delete_backend_set API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/backendSets/{backendSetName}"
         method = "DELETE"
@@ -943,7 +943,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/delete_listener.py.html>`__ to see an example of how to use delete_listener API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/delete_listener.py.html>`__ to see an example of how to use delete_listener API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/listeners/{listenerName}"
         method = "DELETE"
@@ -1046,7 +1046,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/delete_network_load_balancer.py.html>`__ to see an example of how to use delete_network_load_balancer API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/delete_network_load_balancer.py.html>`__ to see an example of how to use delete_network_load_balancer API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}"
         method = "DELETE"
@@ -1161,7 +1161,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/get_backend.py.html>`__ to see an example of how to use get_backend API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/get_backend.py.html>`__ to see an example of how to use get_backend API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/backendSets/{backendSetName}/backends/{backendName}"
         method = "GET"
@@ -1273,7 +1273,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/get_backend_health.py.html>`__ to see an example of how to use get_backend_health API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/get_backend_health.py.html>`__ to see an example of how to use get_backend_health API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/backendSets/{backendSetName}/backends/{backendName}/health"
         method = "GET"
@@ -1382,7 +1382,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/get_backend_set.py.html>`__ to see an example of how to use get_backend_set API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/get_backend_set.py.html>`__ to see an example of how to use get_backend_set API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/backendSets/{backendSetName}"
         method = "GET"
@@ -1485,7 +1485,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/get_backend_set_health.py.html>`__ to see an example of how to use get_backend_set_health API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/get_backend_set_health.py.html>`__ to see an example of how to use get_backend_set_health API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/backendSets/{backendSetName}/health"
         method = "GET"
@@ -1600,7 +1600,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/get_health_checker.py.html>`__ to see an example of how to use get_health_checker API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/get_health_checker.py.html>`__ to see an example of how to use get_health_checker API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/backendSets/{backendSetName}/healthChecker"
         method = "GET"
@@ -1713,7 +1713,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/get_listener.py.html>`__ to see an example of how to use get_listener API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/get_listener.py.html>`__ to see an example of how to use get_listener API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/listeners/{listenerName}"
         method = "GET"
@@ -1818,7 +1818,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/get_network_load_balancer.py.html>`__ to see an example of how to use get_network_load_balancer API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/get_network_load_balancer.py.html>`__ to see an example of how to use get_network_load_balancer API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}"
         method = "GET"
@@ -1915,7 +1915,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/get_network_load_balancer_health.py.html>`__ to see an example of how to use get_network_load_balancer_health API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/get_network_load_balancer_health.py.html>`__ to see an example of how to use get_network_load_balancer_health API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/health"
         method = "GET"
@@ -2008,7 +2008,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -2134,7 +2134,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/list_backend_sets.py.html>`__ to see an example of how to use list_backend_sets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/list_backend_sets.py.html>`__ to see an example of how to use list_backend_sets API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/backendSets"
         method = "GET"
@@ -2295,7 +2295,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/list_backends.py.html>`__ to see an example of how to use list_backends API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/list_backends.py.html>`__ to see an example of how to use list_backends API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/backendSets/{backendSetName}/backends"
         method = "GET"
@@ -2452,7 +2452,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/list_listeners.py.html>`__ to see an example of how to use list_listeners API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/list_listeners.py.html>`__ to see an example of how to use list_listeners API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/listeners"
         method = "GET"
@@ -2601,7 +2601,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/list_network_load_balancer_healths.py.html>`__ to see an example of how to use list_network_load_balancer_healths API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/list_network_load_balancer_healths.py.html>`__ to see an example of how to use list_network_load_balancer_healths API.
         """
         resource_path = "/networkLoadBalancers/health"
         method = "GET"
@@ -2745,7 +2745,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/list_network_load_balancers.py.html>`__ to see an example of how to use list_network_load_balancers API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/list_network_load_balancers.py.html>`__ to see an example of how to use list_network_load_balancers API.
         """
         resource_path = "/networkLoadBalancers"
         method = "GET"
@@ -2887,7 +2887,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/list_network_load_balancers_policies.py.html>`__ to see an example of how to use list_network_load_balancers_policies API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/list_network_load_balancers_policies.py.html>`__ to see an example of how to use list_network_load_balancers_policies API.
         """
         resource_path = "/networkLoadBalancersPolicies"
         method = "GET"
@@ -3018,7 +3018,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/list_network_load_balancers_protocols.py.html>`__ to see an example of how to use list_network_load_balancers_protocols API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/list_network_load_balancers_protocols.py.html>`__ to see an example of how to use list_network_load_balancers_protocols API.
         """
         resource_path = "/networkLoadBalancersProtocols"
         method = "GET"
@@ -3145,7 +3145,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -3267,7 +3267,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -3386,7 +3386,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -3510,7 +3510,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/update_backend.py.html>`__ to see an example of how to use update_backend API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/update_backend.py.html>`__ to see an example of how to use update_backend API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/backendSets/{backendSetName}/backends/{backendName}"
         method = "PUT"
@@ -3634,7 +3634,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/update_backend_set.py.html>`__ to see an example of how to use update_backend_set API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/update_backend_set.py.html>`__ to see an example of how to use update_backend_set API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/backendSets/{backendSetName}"
         method = "PUT"
@@ -3757,7 +3757,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/update_health_checker.py.html>`__ to see an example of how to use update_health_checker API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/update_health_checker.py.html>`__ to see an example of how to use update_health_checker API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/backendSets/{backendSetName}/healthChecker"
         method = "PUT"
@@ -3880,7 +3880,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/update_listener.py.html>`__ to see an example of how to use update_listener API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/update_listener.py.html>`__ to see an example of how to use update_listener API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/listeners/{listenerName}"
         method = "PUT"
@@ -3991,7 +3991,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/update_network_load_balancer.py.html>`__ to see an example of how to use update_network_load_balancer API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/update_network_load_balancer.py.html>`__ to see an example of how to use update_network_load_balancer API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}"
         method = "PUT"
@@ -4105,7 +4105,7 @@ class NetworkLoadBalancerClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkloadbalancer/update_network_security_groups.py.html>`__ to see an example of how to use update_network_security_groups API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkloadbalancer/update_network_security_groups.py.html>`__ to see an example of how to use update_network_security_groups API.
         """
         resource_path = "/networkLoadBalancers/{networkLoadBalancerId}/networkSecurityGroups"
         method = "PUT"

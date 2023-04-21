@@ -61,6 +61,10 @@ class DatabaseRegistrationSummary(object):
     #: This constant has a value of "SUCCEEDED"
     LIFECYCLE_STATE_SUCCEEDED = "SUCCEEDED"
 
+    #: A constant which can be used with the lifecycle_state property of a DatabaseRegistrationSummary.
+    #: This constant has a value of "WAITING"
+    LIFECYCLE_STATE_WAITING = "WAITING"
+
     #: A constant which can be used with the session_mode property of a DatabaseRegistrationSummary.
     #: This constant has a value of "DIRECT"
     SESSION_MODE_DIRECT = "DIRECT"
@@ -100,7 +104,7 @@ class DatabaseRegistrationSummary(object):
 
         :param lifecycle_state:
             The value to assign to the lifecycle_state property of this DatabaseRegistrationSummary.
-            Allowed values for this property are: "CREATING", "UPDATING", "ACTIVE", "INACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION", "IN_PROGRESS", "CANCELING", "CANCELED", "SUCCEEDED", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for this property are: "CREATING", "UPDATING", "ACTIVE", "INACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION", "IN_PROGRESS", "CANCELING", "CANCELED", "SUCCEEDED", "WAITING", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type lifecycle_state: str
 
@@ -391,7 +395,7 @@ class DatabaseRegistrationSummary(object):
         Gets the lifecycle_state of this DatabaseRegistrationSummary.
         Possible lifecycle states.
 
-        Allowed values for this property are: "CREATING", "UPDATING", "ACTIVE", "INACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION", "IN_PROGRESS", "CANCELING", "CANCELED", "SUCCEEDED", 'UNKNOWN_ENUM_VALUE'.
+        Allowed values for this property are: "CREATING", "UPDATING", "ACTIVE", "INACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION", "IN_PROGRESS", "CANCELING", "CANCELED", "SUCCEEDED", "WAITING", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
 
 
@@ -410,7 +414,7 @@ class DatabaseRegistrationSummary(object):
         :param lifecycle_state: The lifecycle_state of this DatabaseRegistrationSummary.
         :type: str
         """
-        allowed_values = ["CREATING", "UPDATING", "ACTIVE", "INACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION", "IN_PROGRESS", "CANCELING", "CANCELED", "SUCCEEDED"]
+        allowed_values = ["CREATING", "UPDATING", "ACTIVE", "INACTIVE", "DELETING", "DELETED", "FAILED", "NEEDS_ATTENTION", "IN_PROGRESS", "CANCELING", "CANCELED", "SUCCEEDED", "WAITING"]
         if not value_allowed_none_or_none_sentinel(lifecycle_state, allowed_values):
             lifecycle_state = 'UNKNOWN_ENUM_VALUE'
         self._lifecycle_state = lifecycle_state
@@ -619,9 +623,9 @@ class DatabaseRegistrationSummary(object):
     def username(self):
         """
         Gets the username of this DatabaseRegistrationSummary.
-        The username Oracle GoldenGate uses to connect the associated RDBMS.  This username must
-        already exist and be available for use by the database.  It must conform to the security
-        requirements implemented by the database including length, case sensitivity, and so on.
+        The username Oracle GoldenGate uses to connect the associated system of the given technology.
+        This username must already exist and be available by the system/application to be connected to
+        and must conform to the case sensitivty requirments defined in it.
 
 
         :return: The username of this DatabaseRegistrationSummary.
@@ -633,9 +637,9 @@ class DatabaseRegistrationSummary(object):
     def username(self, username):
         """
         Sets the username of this DatabaseRegistrationSummary.
-        The username Oracle GoldenGate uses to connect the associated RDBMS.  This username must
-        already exist and be available for use by the database.  It must conform to the security
-        requirements implemented by the database including length, case sensitivity, and so on.
+        The username Oracle GoldenGate uses to connect the associated system of the given technology.
+        This username must already exist and be available by the system/application to be connected to
+        and must conform to the case sensitivty requirments defined in it.
 
 
         :param username: The username of this DatabaseRegistrationSummary.
@@ -647,8 +651,7 @@ class DatabaseRegistrationSummary(object):
     def connection_string(self):
         """
         Gets the connection_string of this DatabaseRegistrationSummary.
-        Connect descriptor or Easy Connect Naming method that Oracle GoldenGate uses to connect to a
-        database.
+        Connect descriptor or Easy Connect Naming method used to connect to a database.
 
 
         :return: The connection_string of this DatabaseRegistrationSummary.
@@ -660,8 +663,7 @@ class DatabaseRegistrationSummary(object):
     def connection_string(self, connection_string):
         """
         Sets the connection_string of this DatabaseRegistrationSummary.
-        Connect descriptor or Easy Connect Naming method that Oracle GoldenGate uses to connect to a
-        database.
+        Connect descriptor or Easy Connect Naming method used to connect to a database.
 
 
         :param connection_string: The connection_string of this DatabaseRegistrationSummary.
@@ -733,12 +735,9 @@ class DatabaseRegistrationSummary(object):
     def secret_id(self):
         """
         Gets the secret_id of this DatabaseRegistrationSummary.
-        The `OCID`__ of the customer GGS Secret being
-        referenced.
-        If provided, this will reference a key which the customer will be required to ensure
-        the policies are established to permit the GoldenGate Service to utilize this Secret
-
-        __ https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm
+        The OCID of the customer's GoldenGate Service Secret.
+        If provided, it references a key that customers will be required to ensure the policies are established
+        to permit GoldenGate to use this Secret.
 
 
         :return: The secret_id of this DatabaseRegistrationSummary.
@@ -750,12 +749,9 @@ class DatabaseRegistrationSummary(object):
     def secret_id(self, secret_id):
         """
         Sets the secret_id of this DatabaseRegistrationSummary.
-        The `OCID`__ of the customer GGS Secret being
-        referenced.
-        If provided, this will reference a key which the customer will be required to ensure
-        the policies are established to permit the GoldenGate Service to utilize this Secret
-
-        __ https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm
+        The OCID of the customer's GoldenGate Service Secret.
+        If provided, it references a key that customers will be required to ensure the policies are established
+        to permit GoldenGate to use this Secret.
 
 
         :param secret_id: The secret_id of this DatabaseRegistrationSummary.

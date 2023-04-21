@@ -137,7 +137,7 @@ class AnnouncementsPreferencesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/create_announcements_preference.py.html>`__ to see an example of how to use create_announcements_preference API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/announcementsservice/create_announcements_preference.py.html>`__ to see an example of how to use create_announcements_preference API.
         """
         resource_path = "/announcementsPreferences"
         method = "POST"
@@ -225,7 +225,7 @@ class AnnouncementsPreferencesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/get_announcements_preference.py.html>`__ to see an example of how to use get_announcements_preference API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/announcementsservice/get_announcements_preference.py.html>`__ to see an example of how to use get_announcements_preference API.
         """
         resource_path = "/announcementsPreferences/{preferenceId}"
         method = "GET"
@@ -326,7 +326,7 @@ class AnnouncementsPreferencesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/list_announcements_preferences.py.html>`__ to see an example of how to use list_announcements_preferences API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/announcementsservice/list_announcements_preferences.py.html>`__ to see an example of how to use list_announcements_preferences API.
         """
         resource_path = "/announcementsPreferences"
         method = "GET"
@@ -426,7 +426,7 @@ class AnnouncementsPreferencesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/update_announcements_preference.py.html>`__ to see an example of how to use update_announcements_preference API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/announcementsservice/update_announcements_preference.py.html>`__ to see an example of how to use update_announcements_preference API.
         """
         resource_path = "/announcementsPreferences/{preferenceId}"
         method = "PUT"

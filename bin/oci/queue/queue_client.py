@@ -134,7 +134,7 @@ class QueueClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/queue/delete_message.py.html>`__ to see an example of how to use delete_message API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/queue/delete_message.py.html>`__ to see an example of how to use delete_message API.
         """
         resource_path = "/queues/{queueId}/messages/{messageReceipt}"
         method = "DELETE"
@@ -230,7 +230,7 @@ class QueueClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/queue/delete_messages.py.html>`__ to see an example of how to use delete_messages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/queue/delete_messages.py.html>`__ to see an example of how to use delete_messages API.
         """
         resource_path = "/queues/{queueId}/messages/actions/deleteMessages"
         method = "POST"
@@ -342,7 +342,7 @@ class QueueClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/queue/get_messages.py.html>`__ to see an example of how to use get_messages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/queue/get_messages.py.html>`__ to see an example of how to use get_messages API.
         """
         resource_path = "/queues/{queueId}/messages"
         method = "GET"
@@ -446,7 +446,7 @@ class QueueClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/queue/get_stats.py.html>`__ to see an example of how to use get_stats API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/queue/get_stats.py.html>`__ to see an example of how to use get_stats API.
         """
         resource_path = "/queues/{queueId}/stats"
         method = "GET"
@@ -543,7 +543,7 @@ class QueueClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/queue/put_messages.py.html>`__ to see an example of how to use put_messages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/queue/put_messages.py.html>`__ to see an example of how to use put_messages API.
         """
         resource_path = "/queues/{queueId}/messages"
         method = "POST"
@@ -643,7 +643,7 @@ class QueueClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/queue/update_message.py.html>`__ to see an example of how to use update_message API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/queue/update_message.py.html>`__ to see an example of how to use update_message API.
         """
         resource_path = "/queues/{queueId}/messages/{messageReceipt}"
         method = "PUT"
@@ -743,7 +743,7 @@ class QueueClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/queue/update_messages.py.html>`__ to see an example of how to use update_messages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/queue/update_messages.py.html>`__ to see an example of how to use update_messages API.
         """
         resource_path = "/queues/{queueId}/messages/actions/updateMessages"
         method = "POST"

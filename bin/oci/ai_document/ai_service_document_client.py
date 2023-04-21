@@ -138,7 +138,7 @@ class AIServiceDocumentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aidocument/cancel_processor_job.py.html>`__ to see an example of how to use cancel_processor_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aidocument/cancel_processor_job.py.html>`__ to see an example of how to use cancel_processor_job API.
         """
         resource_path = "/processorJobs/{processorJobId}/actions/cancel"
         method = "POST"
@@ -237,7 +237,7 @@ class AIServiceDocumentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aidocument/create_processor_job.py.html>`__ to see an example of how to use create_processor_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aidocument/create_processor_job.py.html>`__ to see an example of how to use create_processor_job API.
         """
         resource_path = "/processorJobs"
         method = "POST"
@@ -324,7 +324,7 @@ class AIServiceDocumentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aidocument/get_processor_job.py.html>`__ to see an example of how to use get_processor_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aidocument/get_processor_job.py.html>`__ to see an example of how to use get_processor_job API.
         """
         resource_path = "/processorJobs/{processorJobId}"
         method = "GET"

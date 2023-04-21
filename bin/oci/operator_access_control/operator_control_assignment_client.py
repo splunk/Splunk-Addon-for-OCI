@@ -151,7 +151,7 @@ class OperatorControlAssignmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/change_operator_control_assignment_compartment.py.html>`__ to see an example of how to use change_operator_control_assignment_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/operatoraccesscontrol/change_operator_control_assignment_compartment.py.html>`__ to see an example of how to use change_operator_control_assignment_compartment API.
         """
         resource_path = "/operatorControlAssignments/{operatorControlAssignmentId}/actions/changeCompartment"
         method = "POST"
@@ -255,7 +255,7 @@ class OperatorControlAssignmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/create_operator_control_assignment.py.html>`__ to see an example of how to use create_operator_control_assignment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/operatoraccesscontrol/create_operator_control_assignment.py.html>`__ to see an example of how to use create_operator_control_assignment API.
         """
         resource_path = "/operatorControlAssignments"
         method = "POST"
@@ -350,7 +350,7 @@ class OperatorControlAssignmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/delete_operator_control_assignment.py.html>`__ to see an example of how to use delete_operator_control_assignment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/operatoraccesscontrol/delete_operator_control_assignment.py.html>`__ to see an example of how to use delete_operator_control_assignment API.
         """
         resource_path = "/operatorControlAssignments/{operatorControlAssignmentId}"
         method = "DELETE"
@@ -450,7 +450,7 @@ class OperatorControlAssignmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/get_operator_control_assignment.py.html>`__ to see an example of how to use get_operator_control_assignment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/operatoraccesscontrol/get_operator_control_assignment.py.html>`__ to see an example of how to use get_operator_control_assignment API.
         """
         resource_path = "/operatorControlAssignments/{operatorControlAssignmentId}"
         method = "GET"
@@ -572,7 +572,7 @@ class OperatorControlAssignmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/list_operator_control_assignments.py.html>`__ to see an example of how to use list_operator_control_assignments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/operatoraccesscontrol/list_operator_control_assignments.py.html>`__ to see an example of how to use list_operator_control_assignments API.
         """
         resource_path = "/operatorControlAssignments"
         method = "GET"
@@ -706,7 +706,7 @@ class OperatorControlAssignmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/update_operator_control_assignment.py.html>`__ to see an example of how to use update_operator_control_assignment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/operatoraccesscontrol/update_operator_control_assignment.py.html>`__ to see an example of how to use update_operator_control_assignment API.
         """
         resource_path = "/operatorControlAssignments/{operatorControlAssignmentId}"
         method = "PUT"

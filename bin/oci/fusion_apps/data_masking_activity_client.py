@@ -141,7 +141,7 @@ class DataMaskingActivityClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/create_data_masking_activity.py.html>`__ to see an example of how to use create_data_masking_activity API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/create_data_masking_activity.py.html>`__ to see an example of how to use create_data_masking_activity API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/dataMaskingActivities"
         method = "POST"
@@ -239,7 +239,7 @@ class DataMaskingActivityClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/get_data_masking_activity.py.html>`__ to see an example of how to use get_data_masking_activity API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/get_data_masking_activity.py.html>`__ to see an example of how to use get_data_masking_activity API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/dataMaskingActivities/{dataMaskingActivityId}"
         method = "GET"
@@ -353,7 +353,7 @@ class DataMaskingActivityClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_data_masking_activities.py.html>`__ to see an example of how to use list_data_masking_activities API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/list_data_masking_activities.py.html>`__ to see an example of how to use list_data_masking_activities API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/dataMaskingActivities"
         method = "GET"

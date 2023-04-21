@@ -59,8 +59,8 @@ from .connection_from_bip import ConnectionFromBIP
 from .connection_from_bip_details import ConnectionFromBipDetails
 from .connection_from_jdbc import ConnectionFromJdbc
 from .connection_from_jdbc_details import ConnectionFromJdbcDetails
-from .connection_from_lakehouse import ConnectionFromLakehouse
-from .connection_from_lakehouse_details import ConnectionFromLakehouseDetails
+from .connection_from_lake import ConnectionFromLake
+from .connection_from_lake_details import ConnectionFromLakeDetails
 from .connection_from_my_sql import ConnectionFromMySQL
 from .connection_from_my_sql_details import ConnectionFromMySQLDetails
 from .connection_from_object_storage import ConnectionFromObjectStorage
@@ -80,7 +80,7 @@ from .connection_summary_from_atp import ConnectionSummaryFromAtp
 from .connection_summary_from_bicc import ConnectionSummaryFromBICC
 from .connection_summary_from_bip import ConnectionSummaryFromBIP
 from .connection_summary_from_jdbc import ConnectionSummaryFromJdbc
-from .connection_summary_from_lakehouse import ConnectionSummaryFromLakehouse
+from .connection_summary_from_lake import ConnectionSummaryFromLake
 from .connection_summary_from_my_sql import ConnectionSummaryFromMySQL
 from .connection_summary_from_object_storage import ConnectionSummaryFromObjectStorage
 from .connection_summary_from_oracle import ConnectionSummaryFromOracle
@@ -90,6 +90,11 @@ from .connection_validation import ConnectionValidation
 from .connection_validation_summary import ConnectionValidationSummary
 from .connection_validation_summary_collection import ConnectionValidationSummaryCollection
 from .connector_attribute import ConnectorAttribute
+from .copy_conflict_resolution import CopyConflictResolution
+from .copy_object_metadata_summary import CopyObjectMetadataSummary
+from .copy_object_request import CopyObjectRequest
+from .copy_object_request_summary import CopyObjectRequestSummary
+from .copy_object_request_summary_collection import CopyObjectRequestSummaryCollection
 from .count_statistic import CountStatistic
 from .count_statistic_summary import CountStatisticSummary
 from .create_application_details import CreateApplicationDetails
@@ -101,26 +106,28 @@ from .create_connection_from_atp import CreateConnectionFromAtp
 from .create_connection_from_bicc import CreateConnectionFromBICC
 from .create_connection_from_bip import CreateConnectionFromBIP
 from .create_connection_from_jdbc import CreateConnectionFromJdbc
-from .create_connection_from_lakehouse import CreateConnectionFromLakehouse
+from .create_connection_from_lake import CreateConnectionFromLake
 from .create_connection_from_my_sql import CreateConnectionFromMySQL
 from .create_connection_from_object_storage import CreateConnectionFromObjectStorage
 from .create_connection_from_oracle import CreateConnectionFromOracle
 from .create_connection_from_rest_basic_auth import CreateConnectionFromRestBasicAuth
 from .create_connection_from_rest_no_auth import CreateConnectionFromRestNoAuth
 from .create_connection_validation_details import CreateConnectionValidationDetails
+from .create_copy_object_request_details import CreateCopyObjectRequestDetails
 from .create_data_asset_details import CreateDataAssetDetails
 from .create_data_asset_from_adwc import CreateDataAssetFromAdwc
 from .create_data_asset_from_amazon_s3 import CreateDataAssetFromAmazonS3
 from .create_data_asset_from_atp import CreateDataAssetFromAtp
 from .create_data_asset_from_fusion_app import CreateDataAssetFromFusionApp
 from .create_data_asset_from_jdbc import CreateDataAssetFromJdbc
-from .create_data_asset_from_lakehouse import CreateDataAssetFromLakehouse
+from .create_data_asset_from_lake import CreateDataAssetFromLake
 from .create_data_asset_from_my_sql import CreateDataAssetFromMySQL
 from .create_data_asset_from_object_storage import CreateDataAssetFromObjectStorage
 from .create_data_asset_from_oracle import CreateDataAssetFromOracle
 from .create_data_asset_from_rest import CreateDataAssetFromRest
 from .create_data_flow_details import CreateDataFlowDetails
 from .create_data_flow_validation_details import CreateDataFlowValidationDetails
+from .create_detailed_description_details import CreateDetailedDescriptionDetails
 from .create_dis_application_details import CreateDisApplicationDetails
 from .create_entity_shape_details import CreateEntityShapeDetails
 from .create_entity_shape_from_file import CreateEntityShapeFromFile
@@ -160,7 +167,7 @@ from .data_asset_from_amazon_s3 import DataAssetFromAmazonS3
 from .data_asset_from_atp_details import DataAssetFromAtpDetails
 from .data_asset_from_fusion_app import DataAssetFromFusionApp
 from .data_asset_from_jdbc import DataAssetFromJdbc
-from .data_asset_from_lakehouse_details import DataAssetFromLakehouseDetails
+from .data_asset_from_lake_details import DataAssetFromLakeDetails
 from .data_asset_from_my_sql import DataAssetFromMySQL
 from .data_asset_from_object_storage_details import DataAssetFromObjectStorageDetails
 from .data_asset_from_oracle_details import DataAssetFromOracleDetails
@@ -172,7 +179,7 @@ from .data_asset_summary_from_amazon_s3 import DataAssetSummaryFromAmazonS3
 from .data_asset_summary_from_atp import DataAssetSummaryFromAtp
 from .data_asset_summary_from_fusion_app import DataAssetSummaryFromFusionApp
 from .data_asset_summary_from_jdbc import DataAssetSummaryFromJdbc
-from .data_asset_summary_from_lakehouse import DataAssetSummaryFromLakehouse
+from .data_asset_summary_from_lake import DataAssetSummaryFromLake
 from .data_asset_summary_from_my_sql import DataAssetSummaryFromMySQL
 from .data_asset_summary_from_object_storage import DataAssetSummaryFromObjectStorage
 from .data_asset_summary_from_oracle import DataAssetSummaryFromOracle
@@ -214,6 +221,7 @@ from .dependent_object_summary_collection import DependentObjectSummaryCollectio
 from .derived_entity import DerivedEntity
 from .derived_field import DerivedField
 from .derived_type import DerivedType
+from .detailed_description import DetailedDescription
 from .direct_field_map import DirectFieldMap
 from .direct_named_field_map import DirectNamedFieldMap
 from .dis_application import DisApplication
@@ -435,6 +443,7 @@ from .task_summary_from_sql_task import TaskSummaryFromSQLTask
 from .task_validation import TaskValidation
 from .task_validation_summary import TaskValidationSummary
 from .task_validation_summary_collection import TaskValidationSummaryCollection
+from .template import Template
 from .template_summary import TemplateSummary
 from .template_summary_collection import TemplateSummaryCollection
 from .time import Time
@@ -457,24 +466,26 @@ from .update_connection_from_atp import UpdateConnectionFromAtp
 from .update_connection_from_bicc import UpdateConnectionFromBICC
 from .update_connection_from_bip import UpdateConnectionFromBIP
 from .update_connection_from_jdbc import UpdateConnectionFromJdbc
-from .update_connection_from_lakehouse import UpdateConnectionFromLakehouse
+from .update_connection_from_lake import UpdateConnectionFromLake
 from .update_connection_from_my_sql import UpdateConnectionFromMySQL
 from .update_connection_from_object_storage import UpdateConnectionFromObjectStorage
 from .update_connection_from_oracle import UpdateConnectionFromOracle
 from .update_connection_from_rest_basic_auth import UpdateConnectionFromRestBasicAuth
 from .update_connection_from_rest_no_auth import UpdateConnectionFromRestNoAuth
+from .update_copy_object_request_details import UpdateCopyObjectRequestDetails
 from .update_data_asset_details import UpdateDataAssetDetails
 from .update_data_asset_from_adwc import UpdateDataAssetFromAdwc
 from .update_data_asset_from_amazon_s3 import UpdateDataAssetFromAmazonS3
 from .update_data_asset_from_atp import UpdateDataAssetFromAtp
 from .update_data_asset_from_fusion_app import UpdateDataAssetFromFusionApp
 from .update_data_asset_from_jdbc import UpdateDataAssetFromJdbc
-from .update_data_asset_from_lakehouse import UpdateDataAssetFromLakehouse
+from .update_data_asset_from_lake import UpdateDataAssetFromLake
 from .update_data_asset_from_my_sql import UpdateDataAssetFromMySQL
 from .update_data_asset_from_object_storage import UpdateDataAssetFromObjectStorage
 from .update_data_asset_from_oracle import UpdateDataAssetFromOracle
 from .update_data_asset_from_rest import UpdateDataAssetFromRest
 from .update_data_flow_details import UpdateDataFlowDetails
+from .update_detailed_description_details import UpdateDetailedDescriptionDetails
 from .update_dis_application_details import UpdateDisApplicationDetails
 from .update_external_publication_details import UpdateExternalPublicationDetails
 from .update_folder_details import UpdateFolderDetails
@@ -570,8 +581,8 @@ data_integration_type_mapping = {
     "ConnectionFromBipDetails": ConnectionFromBipDetails,
     "ConnectionFromJdbc": ConnectionFromJdbc,
     "ConnectionFromJdbcDetails": ConnectionFromJdbcDetails,
-    "ConnectionFromLakehouse": ConnectionFromLakehouse,
-    "ConnectionFromLakehouseDetails": ConnectionFromLakehouseDetails,
+    "ConnectionFromLake": ConnectionFromLake,
+    "ConnectionFromLakeDetails": ConnectionFromLakeDetails,
     "ConnectionFromMySQL": ConnectionFromMySQL,
     "ConnectionFromMySQLDetails": ConnectionFromMySQLDetails,
     "ConnectionFromObjectStorage": ConnectionFromObjectStorage,
@@ -591,7 +602,7 @@ data_integration_type_mapping = {
     "ConnectionSummaryFromBICC": ConnectionSummaryFromBICC,
     "ConnectionSummaryFromBIP": ConnectionSummaryFromBIP,
     "ConnectionSummaryFromJdbc": ConnectionSummaryFromJdbc,
-    "ConnectionSummaryFromLakehouse": ConnectionSummaryFromLakehouse,
+    "ConnectionSummaryFromLake": ConnectionSummaryFromLake,
     "ConnectionSummaryFromMySQL": ConnectionSummaryFromMySQL,
     "ConnectionSummaryFromObjectStorage": ConnectionSummaryFromObjectStorage,
     "ConnectionSummaryFromOracle": ConnectionSummaryFromOracle,
@@ -601,6 +612,11 @@ data_integration_type_mapping = {
     "ConnectionValidationSummary": ConnectionValidationSummary,
     "ConnectionValidationSummaryCollection": ConnectionValidationSummaryCollection,
     "ConnectorAttribute": ConnectorAttribute,
+    "CopyConflictResolution": CopyConflictResolution,
+    "CopyObjectMetadataSummary": CopyObjectMetadataSummary,
+    "CopyObjectRequest": CopyObjectRequest,
+    "CopyObjectRequestSummary": CopyObjectRequestSummary,
+    "CopyObjectRequestSummaryCollection": CopyObjectRequestSummaryCollection,
     "CountStatistic": CountStatistic,
     "CountStatisticSummary": CountStatisticSummary,
     "CreateApplicationDetails": CreateApplicationDetails,
@@ -612,26 +628,28 @@ data_integration_type_mapping = {
     "CreateConnectionFromBICC": CreateConnectionFromBICC,
     "CreateConnectionFromBIP": CreateConnectionFromBIP,
     "CreateConnectionFromJdbc": CreateConnectionFromJdbc,
-    "CreateConnectionFromLakehouse": CreateConnectionFromLakehouse,
+    "CreateConnectionFromLake": CreateConnectionFromLake,
     "CreateConnectionFromMySQL": CreateConnectionFromMySQL,
     "CreateConnectionFromObjectStorage": CreateConnectionFromObjectStorage,
     "CreateConnectionFromOracle": CreateConnectionFromOracle,
     "CreateConnectionFromRestBasicAuth": CreateConnectionFromRestBasicAuth,
     "CreateConnectionFromRestNoAuth": CreateConnectionFromRestNoAuth,
     "CreateConnectionValidationDetails": CreateConnectionValidationDetails,
+    "CreateCopyObjectRequestDetails": CreateCopyObjectRequestDetails,
     "CreateDataAssetDetails": CreateDataAssetDetails,
     "CreateDataAssetFromAdwc": CreateDataAssetFromAdwc,
     "CreateDataAssetFromAmazonS3": CreateDataAssetFromAmazonS3,
     "CreateDataAssetFromAtp": CreateDataAssetFromAtp,
     "CreateDataAssetFromFusionApp": CreateDataAssetFromFusionApp,
     "CreateDataAssetFromJdbc": CreateDataAssetFromJdbc,
-    "CreateDataAssetFromLakehouse": CreateDataAssetFromLakehouse,
+    "CreateDataAssetFromLake": CreateDataAssetFromLake,
     "CreateDataAssetFromMySQL": CreateDataAssetFromMySQL,
     "CreateDataAssetFromObjectStorage": CreateDataAssetFromObjectStorage,
     "CreateDataAssetFromOracle": CreateDataAssetFromOracle,
     "CreateDataAssetFromRest": CreateDataAssetFromRest,
     "CreateDataFlowDetails": CreateDataFlowDetails,
     "CreateDataFlowValidationDetails": CreateDataFlowValidationDetails,
+    "CreateDetailedDescriptionDetails": CreateDetailedDescriptionDetails,
     "CreateDisApplicationDetails": CreateDisApplicationDetails,
     "CreateEntityShapeDetails": CreateEntityShapeDetails,
     "CreateEntityShapeFromFile": CreateEntityShapeFromFile,
@@ -671,7 +689,7 @@ data_integration_type_mapping = {
     "DataAssetFromAtpDetails": DataAssetFromAtpDetails,
     "DataAssetFromFusionApp": DataAssetFromFusionApp,
     "DataAssetFromJdbc": DataAssetFromJdbc,
-    "DataAssetFromLakehouseDetails": DataAssetFromLakehouseDetails,
+    "DataAssetFromLakeDetails": DataAssetFromLakeDetails,
     "DataAssetFromMySQL": DataAssetFromMySQL,
     "DataAssetFromObjectStorageDetails": DataAssetFromObjectStorageDetails,
     "DataAssetFromOracleDetails": DataAssetFromOracleDetails,
@@ -683,7 +701,7 @@ data_integration_type_mapping = {
     "DataAssetSummaryFromAtp": DataAssetSummaryFromAtp,
     "DataAssetSummaryFromFusionApp": DataAssetSummaryFromFusionApp,
     "DataAssetSummaryFromJdbc": DataAssetSummaryFromJdbc,
-    "DataAssetSummaryFromLakehouse": DataAssetSummaryFromLakehouse,
+    "DataAssetSummaryFromLake": DataAssetSummaryFromLake,
     "DataAssetSummaryFromMySQL": DataAssetSummaryFromMySQL,
     "DataAssetSummaryFromObjectStorage": DataAssetSummaryFromObjectStorage,
     "DataAssetSummaryFromOracle": DataAssetSummaryFromOracle,
@@ -725,6 +743,7 @@ data_integration_type_mapping = {
     "DerivedEntity": DerivedEntity,
     "DerivedField": DerivedField,
     "DerivedType": DerivedType,
+    "DetailedDescription": DetailedDescription,
     "DirectFieldMap": DirectFieldMap,
     "DirectNamedFieldMap": DirectNamedFieldMap,
     "DisApplication": DisApplication,
@@ -946,6 +965,7 @@ data_integration_type_mapping = {
     "TaskValidation": TaskValidation,
     "TaskValidationSummary": TaskValidationSummary,
     "TaskValidationSummaryCollection": TaskValidationSummaryCollection,
+    "Template": Template,
     "TemplateSummary": TemplateSummary,
     "TemplateSummaryCollection": TemplateSummaryCollection,
     "Time": Time,
@@ -968,24 +988,26 @@ data_integration_type_mapping = {
     "UpdateConnectionFromBICC": UpdateConnectionFromBICC,
     "UpdateConnectionFromBIP": UpdateConnectionFromBIP,
     "UpdateConnectionFromJdbc": UpdateConnectionFromJdbc,
-    "UpdateConnectionFromLakehouse": UpdateConnectionFromLakehouse,
+    "UpdateConnectionFromLake": UpdateConnectionFromLake,
     "UpdateConnectionFromMySQL": UpdateConnectionFromMySQL,
     "UpdateConnectionFromObjectStorage": UpdateConnectionFromObjectStorage,
     "UpdateConnectionFromOracle": UpdateConnectionFromOracle,
     "UpdateConnectionFromRestBasicAuth": UpdateConnectionFromRestBasicAuth,
     "UpdateConnectionFromRestNoAuth": UpdateConnectionFromRestNoAuth,
+    "UpdateCopyObjectRequestDetails": UpdateCopyObjectRequestDetails,
     "UpdateDataAssetDetails": UpdateDataAssetDetails,
     "UpdateDataAssetFromAdwc": UpdateDataAssetFromAdwc,
     "UpdateDataAssetFromAmazonS3": UpdateDataAssetFromAmazonS3,
     "UpdateDataAssetFromAtp": UpdateDataAssetFromAtp,
     "UpdateDataAssetFromFusionApp": UpdateDataAssetFromFusionApp,
     "UpdateDataAssetFromJdbc": UpdateDataAssetFromJdbc,
-    "UpdateDataAssetFromLakehouse": UpdateDataAssetFromLakehouse,
+    "UpdateDataAssetFromLake": UpdateDataAssetFromLake,
     "UpdateDataAssetFromMySQL": UpdateDataAssetFromMySQL,
     "UpdateDataAssetFromObjectStorage": UpdateDataAssetFromObjectStorage,
     "UpdateDataAssetFromOracle": UpdateDataAssetFromOracle,
     "UpdateDataAssetFromRest": UpdateDataAssetFromRest,
     "UpdateDataFlowDetails": UpdateDataFlowDetails,
+    "UpdateDetailedDescriptionDetails": UpdateDetailedDescriptionDetails,
     "UpdateDisApplicationDetails": UpdateDisApplicationDetails,
     "UpdateExternalPublicationDetails": UpdateExternalPublicationDetails,
     "UpdateFolderDetails": UpdateFolderDetails,

@@ -144,7 +144,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/change_compartment.py.html>`__ to see an example of how to use change_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/change_compartment.py.html>`__ to see an example of how to use change_compartment API.
         """
         resource_path = "/workspaces/{workspaceId}/actions/changeCompartment"
         method = "POST"
@@ -257,7 +257,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/change_dis_application_compartment.py.html>`__ to see an example of how to use change_dis_application_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/change_dis_application_compartment.py.html>`__ to see an example of how to use change_dis_application_compartment API.
         """
         resource_path = "/workspaces/{workspaceId}/disApplications/{disApplicationId}/actions/changeCompartment"
         method = "POST"
@@ -363,7 +363,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_application.py.html>`__ to see an example of how to use create_application API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_application.py.html>`__ to see an example of how to use create_application API.
         """
         resource_path = "/workspaces/{workspaceId}/applications"
         method = "POST"
@@ -433,6 +433,115 @@ class DataIntegrationClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def create_application_detailed_description(self, workspace_id, application_key, create_application_detailed_description_details, **kwargs):
+        """
+        Creates detailed description for an application.
+
+
+        :param str workspace_id: (required)
+            The workspace ID.
+
+        :param str application_key: (required)
+            The application key.
+
+        :param oci.data_integration.models.CreateDetailedDescriptionDetails create_application_detailed_description_details: (required)
+            Detailed description of an application.
+
+        :param str opc_request_id: (optional)
+            Unique Oracle-assigned identifier for the request. If
+            you need to contact Oracle about a particular request,
+            please provide the request ID.
+
+        :param str opc_retry_token: (optional)
+            A token that uniquely identifies a request so it can be retried in case of a timeout or server error without risk of executing that same action again.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type :class:`~oci.data_integration.models.DetailedDescription`
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_application_detailed_description.py.html>`__ to see an example of how to use create_application_detailed_description API.
+        """
+        resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/detailedDescription"
+        method = "POST"
+        operation_name = "create_application_detailed_description"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DetailedDescription/CreateApplicationDetailedDescription"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "opc_request_id",
+            "opc_retry_token"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "create_application_detailed_description got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "workspaceId": workspace_id,
+            "applicationKey": application_key
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-request-id": kwargs.get("opc_request_id", missing),
+            "opc-retry-token": kwargs.get("opc_retry_token", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_retry_token_if_needed(header_params)
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=create_application_detailed_description_details,
+                response_type="DetailedDescription",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=create_application_detailed_description_details,
+                response_type="DetailedDescription",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def create_connection(self, workspace_id, create_connection_details, **kwargs):
         """
         Creates a connection under an existing data asset.
@@ -468,7 +577,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_connection.py.html>`__ to see an example of how to use create_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_connection.py.html>`__ to see an example of how to use create_connection API.
         """
         resource_path = "/workspaces/{workspaceId}/connections"
         method = "POST"
@@ -573,7 +682,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_connection_validation.py.html>`__ to see an example of how to use create_connection_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_connection_validation.py.html>`__ to see an example of how to use create_connection_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/connectionValidations"
         method = "POST"
@@ -643,6 +752,111 @@ class DataIntegrationClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def create_copy_object_request(self, workspace_id, create_copy_object_request_details, **kwargs):
+        """
+        Copy Metadata Object.
+
+
+        :param str workspace_id: (required)
+            The workspace ID.
+
+        :param oci.data_integration.models.CreateCopyObjectRequestDetails create_copy_object_request_details: (required)
+            The details needed to copy metadata object.
+
+        :param str opc_request_id: (optional)
+            Unique Oracle-assigned identifier for the request. If
+            you need to contact Oracle about a particular request,
+            please provide the request ID.
+
+        :param str opc_retry_token: (optional)
+            A token that uniquely identifies a request so it can be retried in case of a timeout or server error without risk of executing that same action again.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type :class:`~oci.data_integration.models.CopyObjectRequest`
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_copy_object_request.py.html>`__ to see an example of how to use create_copy_object_request API.
+        """
+        resource_path = "/workspaces/{workspaceId}/copyObjectRequests"
+        method = "POST"
+        operation_name = "create_copy_object_request"
+        api_reference_link = ""
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "opc_request_id",
+            "opc_retry_token"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "create_copy_object_request got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "workspaceId": workspace_id
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-request-id": kwargs.get("opc_request_id", missing),
+            "opc-retry-token": kwargs.get("opc_retry_token", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_retry_token_if_needed(header_params)
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=create_copy_object_request_details,
+                response_type="CopyObjectRequest",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=create_copy_object_request_details,
+                response_type="CopyObjectRequest",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def create_data_asset(self, workspace_id, create_data_asset_details, **kwargs):
         """
         Creates a data asset with default connection.
@@ -678,7 +892,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_data_asset.py.html>`__ to see an example of how to use create_data_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_data_asset.py.html>`__ to see an example of how to use create_data_asset API.
         """
         resource_path = "/workspaces/{workspaceId}/dataAssets"
         method = "POST"
@@ -783,7 +997,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_data_flow.py.html>`__ to see an example of how to use create_data_flow API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_data_flow.py.html>`__ to see an example of how to use create_data_flow API.
         """
         resource_path = "/workspaces/{workspaceId}/dataFlows"
         method = "POST"
@@ -888,7 +1102,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_data_flow_validation.py.html>`__ to see an example of how to use create_data_flow_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_data_flow_validation.py.html>`__ to see an example of how to use create_data_flow_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/dataFlowValidations"
         method = "POST"
@@ -993,7 +1207,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_dis_application.py.html>`__ to see an example of how to use create_dis_application API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_dis_application.py.html>`__ to see an example of how to use create_dis_application API.
         """
         resource_path = "/workspaces/{workspaceId}/disApplications"
         method = "POST"
@@ -1063,6 +1277,115 @@ class DataIntegrationClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def create_dis_application_detailed_description(self, workspace_id, application_key, create_dis_application_detailed_description_details, **kwargs):
+        """
+        Creates detailed description for an application.
+
+
+        :param str workspace_id: (required)
+            The workspace ID.
+
+        :param str application_key: (required)
+            The application key.
+
+        :param oci.data_integration.models.CreateDetailedDescriptionDetails create_dis_application_detailed_description_details: (required)
+            Detailed description of an application.
+
+        :param str opc_request_id: (optional)
+            Unique Oracle-assigned identifier for the request. If
+            you need to contact Oracle about a particular request,
+            please provide the request ID.
+
+        :param str opc_retry_token: (optional)
+            A token that uniquely identifies a request so it can be retried in case of a timeout or server error without risk of executing that same action again.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type :class:`~oci.data_integration.models.DetailedDescription`
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_dis_application_detailed_description.py.html>`__ to see an example of how to use create_dis_application_detailed_description API.
+        """
+        resource_path = "/workspaces/{workspaceId}/disApplications/{applicationKey}/detailedDescription"
+        method = "POST"
+        operation_name = "create_dis_application_detailed_description"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DetailedDescription/CreateDisApplicationDetailedDescription"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "opc_request_id",
+            "opc_retry_token"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "create_dis_application_detailed_description got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "workspaceId": workspace_id,
+            "applicationKey": application_key
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-request-id": kwargs.get("opc_request_id", missing),
+            "opc-retry-token": kwargs.get("opc_retry_token", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_retry_token_if_needed(header_params)
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=create_dis_application_detailed_description_details,
+                response_type="DetailedDescription",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=create_dis_application_detailed_description_details,
+                response_type="DetailedDescription",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def create_entity_shape(self, workspace_id, connection_key, schema_resource_name, create_entity_shape_details, **kwargs):
         """
         Creates the data entity shape using the shape from the data asset.
@@ -1109,7 +1432,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_entity_shape.py.html>`__ to see an example of how to use create_entity_shape API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_entity_shape.py.html>`__ to see an example of how to use create_entity_shape API.
         """
         resource_path = "/workspaces/{workspaceId}/connections/{connectionKey}/schemas/{schemaResourceName}/entityShapes"
         method = "POST"
@@ -1221,7 +1544,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_external_publication.py.html>`__ to see an example of how to use create_external_publication API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_external_publication.py.html>`__ to see an example of how to use create_external_publication API.
         """
         resource_path = "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublications"
         method = "POST"
@@ -1330,7 +1653,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_external_publication_validation.py.html>`__ to see an example of how to use create_external_publication_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_external_publication_validation.py.html>`__ to see an example of how to use create_external_publication_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublicationValidations"
         method = "POST"
@@ -1437,7 +1760,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_folder.py.html>`__ to see an example of how to use create_folder API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_folder.py.html>`__ to see an example of how to use create_folder API.
         """
         resource_path = "/workspaces/{workspaceId}/folders"
         method = "POST"
@@ -1543,7 +1866,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_function_library.py.html>`__ to see an example of how to use create_function_library API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_function_library.py.html>`__ to see an example of how to use create_function_library API.
         """
         resource_path = "/workspaces/{workspaceId}/functionLibraries"
         method = "POST"
@@ -1651,7 +1974,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_patch.py.html>`__ to see an example of how to use create_patch API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_patch.py.html>`__ to see an example of how to use create_patch API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/patches"
         method = "POST"
@@ -1757,7 +2080,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_pipeline.py.html>`__ to see an example of how to use create_pipeline API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_pipeline.py.html>`__ to see an example of how to use create_pipeline API.
         """
         resource_path = "/workspaces/{workspaceId}/pipelines"
         method = "POST"
@@ -1862,7 +2185,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_pipeline_validation.py.html>`__ to see an example of how to use create_pipeline_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_pipeline_validation.py.html>`__ to see an example of how to use create_pipeline_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/pipelineValidations"
         method = "POST"
@@ -1967,7 +2290,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_project.py.html>`__ to see an example of how to use create_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_project.py.html>`__ to see an example of how to use create_project API.
         """
         resource_path = "/workspaces/{workspaceId}/projects"
         method = "POST"
@@ -2075,7 +2398,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_schedule.py.html>`__ to see an example of how to use create_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_schedule.py.html>`__ to see an example of how to use create_schedule API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/schedules"
         method = "POST"
@@ -2181,7 +2504,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_task.py.html>`__ to see an example of how to use create_task API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_task.py.html>`__ to see an example of how to use create_task API.
         """
         resource_path = "/workspaces/{workspaceId}/tasks"
         method = "POST"
@@ -2289,7 +2612,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_task_run.py.html>`__ to see an example of how to use create_task_run API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_task_run.py.html>`__ to see an example of how to use create_task_run API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/taskRuns"
         method = "POST"
@@ -2398,7 +2721,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_task_schedule.py.html>`__ to see an example of how to use create_task_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_task_schedule.py.html>`__ to see an example of how to use create_task_schedule API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/taskSchedules"
         method = "POST"
@@ -2504,7 +2827,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_task_validation.py.html>`__ to see an example of how to use create_task_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_task_validation.py.html>`__ to see an example of how to use create_task_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/taskValidations"
         method = "POST"
@@ -2609,7 +2932,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_user_defined_function.py.html>`__ to see an example of how to use create_user_defined_function API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_user_defined_function.py.html>`__ to see an example of how to use create_user_defined_function API.
         """
         resource_path = "/workspaces/{workspaceId}/userDefinedFunctions"
         method = "POST"
@@ -2714,7 +3037,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_user_defined_function_validation.py.html>`__ to see an example of how to use create_user_defined_function_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_user_defined_function_validation.py.html>`__ to see an example of how to use create_user_defined_function_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/userDefinedFunctionValidations"
         method = "POST"
@@ -2816,7 +3139,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/create_workspace.py.html>`__ to see an example of how to use create_workspace API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/create_workspace.py.html>`__ to see an example of how to use create_workspace API.
         """
         resource_path = "/workspaces"
         method = "POST"
@@ -2909,7 +3232,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_application.py.html>`__ to see an example of how to use delete_application API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_application.py.html>`__ to see an example of how to use delete_application API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}"
         method = "DELETE"
@@ -2927,6 +3250,109 @@ class DataIntegrationClient(object):
         if extra_kwargs:
             raise ValueError(
                 "delete_application got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "workspaceId": workspace_id,
+            "applicationKey": application_key
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "if-match": kwargs.get("if_match", missing),
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
+    def delete_application_detailed_description(self, workspace_id, application_key, **kwargs):
+        """
+        Deletes detailed description of an Application.
+
+
+        :param str workspace_id: (required)
+            The workspace ID.
+
+        :param str application_key: (required)
+            The application key.
+
+        :param str if_match: (optional)
+            For optimistic concurrency control. In the PUT or DELETE call for a resource, set the `if-match` parameter to the value of the `etag` from a previous GET or POST response for that resource.
+            The resource will be updated or deleted only if the `etag` you provide matches the resource's current `etag` value.
+            When 'if-match' is provided and its value does not exactly match the 'etag' of the resource on the server, the request fails with the 412 response code.
+
+        :param str opc_request_id: (optional)
+            Unique Oracle-assigned identifier for the request. If
+            you need to contact Oracle about a particular request,
+            please provide the request ID.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_application_detailed_description.py.html>`__ to see an example of how to use delete_application_detailed_description API.
+        """
+        resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/detailedDescription"
+        method = "DELETE"
+        operation_name = "delete_application_detailed_description"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DetailedDescription/DeleteApplicationDetailedDescription"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "if_match",
+            "opc_request_id"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "delete_application_detailed_description got unknown kwargs: {!r}".format(extra_kwargs))
 
         path_params = {
             "workspaceId": workspace_id,
@@ -3012,7 +3438,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_connection.py.html>`__ to see an example of how to use delete_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_connection.py.html>`__ to see an example of how to use delete_connection API.
         """
         resource_path = "/workspaces/{workspaceId}/connections/{connectionKey}"
         method = "DELETE"
@@ -3115,7 +3541,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_connection_validation.py.html>`__ to see an example of how to use delete_connection_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_connection_validation.py.html>`__ to see an example of how to use delete_connection_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/connectionValidations/{connectionValidationKey}"
         method = "DELETE"
@@ -3150,6 +3576,109 @@ class DataIntegrationClient(object):
             "content-type": "application/json",
             "if-match": kwargs.get("if_match", missing),
             "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
+    def delete_copy_object_request(self, workspace_id, copy_object_request_key, **kwargs):
+        """
+        Delete copy object request using the specified identifier.
+
+
+        :param str workspace_id: (required)
+            The workspace ID.
+
+        :param str copy_object_request_key: (required)
+            The key of the object to be copied, for example this could be the key of a project.
+
+        :param str opc_request_id: (optional)
+            Unique Oracle-assigned identifier for the request. If
+            you need to contact Oracle about a particular request,
+            please provide the request ID.
+
+        :param str if_match: (optional)
+            For optimistic concurrency control. In the PUT or DELETE call for a resource, set the `if-match` parameter to the value of the `etag` from a previous GET or POST response for that resource.
+            The resource will be updated or deleted only if the `etag` you provide matches the resource's current `etag` value.
+            When 'if-match' is provided and its value does not exactly match the 'etag' of the resource on the server, the request fails with the 412 response code.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_copy_object_request.py.html>`__ to see an example of how to use delete_copy_object_request API.
+        """
+        resource_path = "/workspaces/{workspaceId}/copyObjectRequests/{copyObjectRequestKey}"
+        method = "DELETE"
+        operation_name = "delete_copy_object_request"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Workspace/DeleteCopyObjectRequest"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "opc_request_id",
+            "if_match"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "delete_copy_object_request got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "workspaceId": workspace_id,
+            "copyObjectRequestKey": copy_object_request_key
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-request-id": kwargs.get("opc_request_id", missing),
+            "if-match": kwargs.get("if_match", missing)
         }
         header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
 
@@ -3218,7 +3747,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_data_asset.py.html>`__ to see an example of how to use delete_data_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_data_asset.py.html>`__ to see an example of how to use delete_data_asset API.
         """
         resource_path = "/workspaces/{workspaceId}/dataAssets/{dataAssetKey}"
         method = "DELETE"
@@ -3321,7 +3850,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_data_flow.py.html>`__ to see an example of how to use delete_data_flow API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_data_flow.py.html>`__ to see an example of how to use delete_data_flow API.
         """
         resource_path = "/workspaces/{workspaceId}/dataFlows/{dataFlowKey}"
         method = "DELETE"
@@ -3424,7 +3953,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_data_flow_validation.py.html>`__ to see an example of how to use delete_data_flow_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_data_flow_validation.py.html>`__ to see an example of how to use delete_data_flow_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/dataFlowValidations/{dataFlowValidationKey}"
         method = "DELETE"
@@ -3527,7 +4056,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_dis_application.py.html>`__ to see an example of how to use delete_dis_application API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_dis_application.py.html>`__ to see an example of how to use delete_dis_application API.
         """
         resource_path = "/workspaces/{workspaceId}/disApplications/{disApplicationId}"
         method = "DELETE"
@@ -3549,6 +4078,109 @@ class DataIntegrationClient(object):
         path_params = {
             "workspaceId": workspace_id,
             "disApplicationId": dis_application_id
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "if-match": kwargs.get("if_match", missing),
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
+    def delete_dis_application_detailed_description(self, workspace_id, application_key, **kwargs):
+        """
+        Deletes detailed description of an Application.
+
+
+        :param str workspace_id: (required)
+            The workspace ID.
+
+        :param str application_key: (required)
+            The application key.
+
+        :param str if_match: (optional)
+            For optimistic concurrency control. In the PUT or DELETE call for a resource, set the `if-match` parameter to the value of the `etag` from a previous GET or POST response for that resource.
+            The resource will be updated or deleted only if the `etag` you provide matches the resource's current `etag` value.
+            When 'if-match' is provided and its value does not exactly match the 'etag' of the resource on the server, the request fails with the 412 response code.
+
+        :param str opc_request_id: (optional)
+            Unique Oracle-assigned identifier for the request. If
+            you need to contact Oracle about a particular request,
+            please provide the request ID.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_dis_application_detailed_description.py.html>`__ to see an example of how to use delete_dis_application_detailed_description API.
+        """
+        resource_path = "/workspaces/{workspaceId}/disApplications/{applicationKey}/detailedDescription"
+        method = "DELETE"
+        operation_name = "delete_dis_application_detailed_description"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DetailedDescription/DeleteDisApplicationDetailedDescription"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "if_match",
+            "opc_request_id"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "delete_dis_application_detailed_description got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "workspaceId": workspace_id,
+            "applicationKey": application_key
         }
 
         path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
@@ -3633,7 +4265,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_external_publication.py.html>`__ to see an example of how to use delete_external_publication API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_external_publication.py.html>`__ to see an example of how to use delete_external_publication API.
         """
         resource_path = "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublications/{externalPublicationsKey}"
         method = "DELETE"
@@ -3740,7 +4372,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_external_publication_validation.py.html>`__ to see an example of how to use delete_external_publication_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_external_publication_validation.py.html>`__ to see an example of how to use delete_external_publication_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublicationValidations/{externalPublicationValidationKey}"
         method = "DELETE"
@@ -3844,7 +4476,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_folder.py.html>`__ to see an example of how to use delete_folder API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_folder.py.html>`__ to see an example of how to use delete_folder API.
         """
         resource_path = "/workspaces/{workspaceId}/folders/{folderKey}"
         method = "DELETE"
@@ -3947,7 +4579,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_function_library.py.html>`__ to see an example of how to use delete_function_library API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_function_library.py.html>`__ to see an example of how to use delete_function_library API.
         """
         resource_path = "/workspaces/{workspaceId}/functionLibraries/{functionLibraryKey}"
         method = "DELETE"
@@ -4053,7 +4685,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_patch.py.html>`__ to see an example of how to use delete_patch API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_patch.py.html>`__ to see an example of how to use delete_patch API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/patches/{patchKey}"
         method = "DELETE"
@@ -4157,7 +4789,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_pipeline.py.html>`__ to see an example of how to use delete_pipeline API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_pipeline.py.html>`__ to see an example of how to use delete_pipeline API.
         """
         resource_path = "/workspaces/{workspaceId}/pipelines/{pipelineKey}"
         method = "DELETE"
@@ -4260,7 +4892,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_pipeline_validation.py.html>`__ to see an example of how to use delete_pipeline_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_pipeline_validation.py.html>`__ to see an example of how to use delete_pipeline_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/pipelineValidations/{pipelineValidationKey}"
         method = "DELETE"
@@ -4363,7 +4995,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_project.py.html>`__ to see an example of how to use delete_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_project.py.html>`__ to see an example of how to use delete_project API.
         """
         resource_path = "/workspaces/{workspaceId}/projects/{projectKey}"
         method = "DELETE"
@@ -4469,7 +5101,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_schedule.py.html>`__ to see an example of how to use delete_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_schedule.py.html>`__ to see an example of how to use delete_schedule API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/schedules/{scheduleKey}"
         method = "DELETE"
@@ -4573,7 +5205,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_task.py.html>`__ to see an example of how to use delete_task API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_task.py.html>`__ to see an example of how to use delete_task API.
         """
         resource_path = "/workspaces/{workspaceId}/tasks/{taskKey}"
         method = "DELETE"
@@ -4679,7 +5311,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_task_run.py.html>`__ to see an example of how to use delete_task_run API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_task_run.py.html>`__ to see an example of how to use delete_task_run API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/taskRuns/{taskRunKey}"
         method = "DELETE"
@@ -4786,7 +5418,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_task_schedule.py.html>`__ to see an example of how to use delete_task_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_task_schedule.py.html>`__ to see an example of how to use delete_task_schedule API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/taskSchedules/{taskScheduleKey}"
         method = "DELETE"
@@ -4890,7 +5522,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_task_validation.py.html>`__ to see an example of how to use delete_task_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_task_validation.py.html>`__ to see an example of how to use delete_task_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/taskValidations/{taskValidationKey}"
         method = "DELETE"
@@ -4993,7 +5625,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_user_defined_function.py.html>`__ to see an example of how to use delete_user_defined_function API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_user_defined_function.py.html>`__ to see an example of how to use delete_user_defined_function API.
         """
         resource_path = "/workspaces/{workspaceId}/userDefinedFunctions/{userDefinedFunctionKey}"
         method = "DELETE"
@@ -5096,7 +5728,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_user_defined_function_validation.py.html>`__ to see an example of how to use delete_user_defined_function_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_user_defined_function_validation.py.html>`__ to see an example of how to use delete_user_defined_function_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/userDefinedFunctionValidations/{userDefinedFunctionValidationKey}"
         method = "DELETE"
@@ -5202,7 +5834,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/delete_workspace.py.html>`__ to see an example of how to use delete_workspace API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/delete_workspace.py.html>`__ to see an example of how to use delete_workspace API.
         """
         resource_path = "/workspaces/{workspaceId}"
         method = "DELETE"
@@ -5309,7 +5941,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_application.py.html>`__ to see an example of how to use get_application API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_application.py.html>`__ to see an example of how to use get_application API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}"
         method = "GET"
@@ -5375,6 +6007,104 @@ class DataIntegrationClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def get_application_detailed_description(self, workspace_id, application_key, **kwargs):
+        """
+        Retrieves detailed description of an Application
+
+
+        :param str workspace_id: (required)
+            The workspace ID.
+
+        :param str application_key: (required)
+            The application key.
+
+        :param str opc_request_id: (optional)
+            Unique Oracle-assigned identifier for the request. If
+            you need to contact Oracle about a particular request,
+            please provide the request ID.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type :class:`~oci.data_integration.models.DetailedDescription`
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_application_detailed_description.py.html>`__ to see an example of how to use get_application_detailed_description API.
+        """
+        resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/detailedDescription"
+        method = "GET"
+        operation_name = "get_application_detailed_description"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DetailedDescription/GetApplicationDetailedDescription"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "opc_request_id"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "get_application_detailed_description got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "workspaceId": workspace_id,
+            "applicationKey": application_key
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                response_type="DetailedDescription",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                response_type="DetailedDescription",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def get_connection(self, workspace_id, connection_key, **kwargs):
         """
         Retrieves the connection details using the specified identifier.
@@ -5407,7 +6137,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_connection.py.html>`__ to see an example of how to use get_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_connection.py.html>`__ to see an example of how to use get_connection API.
         """
         resource_path = "/workspaces/{workspaceId}/connections/{connectionKey}"
         method = "GET"
@@ -5505,7 +6235,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_connection_validation.py.html>`__ to see an example of how to use get_connection_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_connection_validation.py.html>`__ to see an example of how to use get_connection_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/connectionValidations/{connectionValidationKey}"
         method = "GET"
@@ -5571,6 +6301,104 @@ class DataIntegrationClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def get_copy_object_request(self, workspace_id, copy_object_request_key, **kwargs):
+        """
+        This endpoint can be used to get the summary/details of object being copied.
+
+
+        :param str workspace_id: (required)
+            The workspace ID.
+
+        :param str copy_object_request_key: (required)
+            The key of the object to be copied, for example this could be the key of a project.
+
+        :param str opc_request_id: (optional)
+            Unique Oracle-assigned identifier for the request. If
+            you need to contact Oracle about a particular request,
+            please provide the request ID.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type :class:`~oci.data_integration.models.CopyObjectRequest`
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_copy_object_request.py.html>`__ to see an example of how to use get_copy_object_request API.
+        """
+        resource_path = "/workspaces/{workspaceId}/copyObjectRequests/{copyObjectRequestKey}"
+        method = "GET"
+        operation_name = "get_copy_object_request"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/CopyObjectRequest/GetCopyObjectRequest"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "opc_request_id"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "get_copy_object_request got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "workspaceId": workspace_id,
+            "copyObjectRequestKey": copy_object_request_key
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                response_type="CopyObjectRequest",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                response_type="CopyObjectRequest",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def get_count_statistic(self, workspace_id, count_statistic_key, **kwargs):
         """
         Retrieves statistics on a workspace. It returns an object with an array of property values, such as the number of projects, |
@@ -5604,7 +6432,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_count_statistic.py.html>`__ to see an example of how to use get_count_statistic API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_count_statistic.py.html>`__ to see an example of how to use get_count_statistic API.
         """
         resource_path = "/workspaces/{workspaceId}/countStatistics/{countStatisticKey}"
         method = "GET"
@@ -5702,7 +6530,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_data_asset.py.html>`__ to see an example of how to use get_data_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_data_asset.py.html>`__ to see an example of how to use get_data_asset API.
         """
         resource_path = "/workspaces/{workspaceId}/dataAssets/{dataAssetKey}"
         method = "GET"
@@ -5806,7 +6634,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_data_entity.py.html>`__ to see an example of how to use get_data_entity API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_data_entity.py.html>`__ to see an example of how to use get_data_entity API.
         """
         resource_path = "/workspaces/{workspaceId}/connections/{connectionKey}/schemas/{schemaResourceName}/dataEntities/{dataEntityKey}"
         method = "GET"
@@ -5909,7 +6737,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_data_flow.py.html>`__ to see an example of how to use get_data_flow API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_data_flow.py.html>`__ to see an example of how to use get_data_flow API.
         """
         resource_path = "/workspaces/{workspaceId}/dataFlows/{dataFlowKey}"
         method = "GET"
@@ -6015,7 +6843,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_data_flow_validation.py.html>`__ to see an example of how to use get_data_flow_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_data_flow_validation.py.html>`__ to see an example of how to use get_data_flow_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/dataFlowValidations/{dataFlowValidationKey}"
         method = "GET"
@@ -6116,7 +6944,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_dependent_object.py.html>`__ to see an example of how to use get_dependent_object API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_dependent_object.py.html>`__ to see an example of how to use get_dependent_object API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/dependentObjects/{dependentObjectKey}"
         method = "GET"
@@ -6215,7 +7043,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_dis_application.py.html>`__ to see an example of how to use get_dis_application API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_dis_application.py.html>`__ to see an example of how to use get_dis_application API.
         """
         resource_path = "/workspaces/{workspaceId}/disApplications/{disApplicationId}"
         method = "GET"
@@ -6281,6 +7109,104 @@ class DataIntegrationClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def get_dis_application_detailed_description(self, workspace_id, application_key, **kwargs):
+        """
+        Retrieves detailed description of an Application.
+
+
+        :param str workspace_id: (required)
+            The workspace ID.
+
+        :param str application_key: (required)
+            The application key.
+
+        :param str opc_request_id: (optional)
+            Unique Oracle-assigned identifier for the request. If
+            you need to contact Oracle about a particular request,
+            please provide the request ID.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type :class:`~oci.data_integration.models.DetailedDescription`
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_dis_application_detailed_description.py.html>`__ to see an example of how to use get_dis_application_detailed_description API.
+        """
+        resource_path = "/workspaces/{workspaceId}/disApplications/{applicationKey}/detailedDescription"
+        method = "GET"
+        operation_name = "get_dis_application_detailed_description"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DetailedDescription/GetDisApplicationDetailedDescription"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "opc_request_id"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "get_dis_application_detailed_description got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "workspaceId": workspace_id,
+            "applicationKey": application_key
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                response_type="DetailedDescription",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                response_type="DetailedDescription",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def get_external_publication(self, workspace_id, task_key, external_publications_key, **kwargs):
         """
         Retrieves a publshed object in an task using the specified identifier.
@@ -6316,7 +7242,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_external_publication.py.html>`__ to see an example of how to use get_external_publication API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_external_publication.py.html>`__ to see an example of how to use get_external_publication API.
         """
         resource_path = "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublications/{externalPublicationsKey}"
         method = "GET"
@@ -6418,7 +7344,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_external_publication_validation.py.html>`__ to see an example of how to use get_external_publication_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_external_publication_validation.py.html>`__ to see an example of how to use get_external_publication_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublicationValidations/{externalPublicationValidationKey}"
         method = "GET"
@@ -6522,7 +7448,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_folder.py.html>`__ to see an example of how to use get_folder API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_folder.py.html>`__ to see an example of how to use get_folder API.
         """
         resource_path = "/workspaces/{workspaceId}/folders/{folderKey}"
         method = "GET"
@@ -6641,7 +7567,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_function_library.py.html>`__ to see an example of how to use get_function_library API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_function_library.py.html>`__ to see an example of how to use get_function_library API.
         """
         resource_path = "/workspaces/{workspaceId}/functionLibraries/{functionLibraryKey}"
         method = "GET"
@@ -6758,7 +7684,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_patch.py.html>`__ to see an example of how to use get_patch API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_patch.py.html>`__ to see an example of how to use get_patch API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/patches/{patchKey}"
         method = "GET"
@@ -6860,7 +7786,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_pipeline.py.html>`__ to see an example of how to use get_pipeline API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_pipeline.py.html>`__ to see an example of how to use get_pipeline API.
         """
         resource_path = "/workspaces/{workspaceId}/pipelines/{pipelineKey}"
         method = "GET"
@@ -6966,7 +7892,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_pipeline_validation.py.html>`__ to see an example of how to use get_pipeline_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_pipeline_validation.py.html>`__ to see an example of how to use get_pipeline_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/pipelineValidations/{pipelineValidationKey}"
         method = "GET"
@@ -7069,7 +7995,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_project.py.html>`__ to see an example of how to use get_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_project.py.html>`__ to see an example of how to use get_project API.
         """
         resource_path = "/workspaces/{workspaceId}/projects/{projectKey}"
         method = "GET"
@@ -7189,7 +8115,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_published_object.py.html>`__ to see an example of how to use get_published_object API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_published_object.py.html>`__ to see an example of how to use get_published_object API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/publishedObjects/{publishedObjectKey}"
         method = "GET"
@@ -7299,7 +8225,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_reference.py.html>`__ to see an example of how to use get_reference API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_reference.py.html>`__ to see an example of how to use get_reference API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/references/{referenceKey}"
         method = "GET"
@@ -7404,7 +8330,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_runtime_operator.py.html>`__ to see an example of how to use get_runtime_operator API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_runtime_operator.py.html>`__ to see an example of how to use get_runtime_operator API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/runtimePipelines/{runtimePipelineKey}/runtimeOperators/{runtimeOperatorKey}"
         method = "GET"
@@ -7510,7 +8436,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_runtime_pipeline.py.html>`__ to see an example of how to use get_runtime_pipeline API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_runtime_pipeline.py.html>`__ to see an example of how to use get_runtime_pipeline API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/runtimePipelines/{runtimePipelineKey}"
         method = "GET"
@@ -7620,7 +8546,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_schedule.py.html>`__ to see an example of how to use get_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_schedule.py.html>`__ to see an example of how to use get_schedule API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/schedules/{scheduleKey}"
         method = "GET"
@@ -7722,7 +8648,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_schema.py.html>`__ to see an example of how to use get_schema API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_schema.py.html>`__ to see an example of how to use get_schema API.
         """
         resource_path = "/workspaces/{workspaceId}/connections/{connectionKey}/schemas/{schemaResourceName}"
         method = "GET"
@@ -7824,7 +8750,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_task.py.html>`__ to see an example of how to use get_task API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_task.py.html>`__ to see an example of how to use get_task API.
         """
         resource_path = "/workspaces/{workspaceId}/tasks/{taskKey}"
         method = "GET"
@@ -7933,7 +8859,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_task_run.py.html>`__ to see an example of how to use get_task_run API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_task_run.py.html>`__ to see an example of how to use get_task_run API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/taskRuns/{taskRunKey}"
         method = "GET"
@@ -8035,7 +8961,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_task_schedule.py.html>`__ to see an example of how to use get_task_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_task_schedule.py.html>`__ to see an example of how to use get_task_schedule API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/taskSchedules/{taskScheduleKey}"
         method = "GET"
@@ -8134,7 +9060,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_task_validation.py.html>`__ to see an example of how to use get_task_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_task_validation.py.html>`__ to see an example of how to use get_task_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/taskValidations/{taskValidationKey}"
         method = "GET"
@@ -8200,6 +9126,104 @@ class DataIntegrationClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def get_template(self, workspace_id, template_id, **kwargs):
+        """
+        This endpoint can be used to get an application template using a key.
+
+
+        :param str workspace_id: (required)
+            The workspace ID.
+
+        :param str template_id: (required)
+            The OCID of the template.
+
+        :param str opc_request_id: (optional)
+            Unique Oracle-assigned identifier for the request. If
+            you need to contact Oracle about a particular request,
+            please provide the request ID.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type :class:`~oci.data_integration.models.Template`
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_template.py.html>`__ to see an example of how to use get_template API.
+        """
+        resource_path = "/workspaces/{workspaceId}/templates/{templateId}"
+        method = "GET"
+        operation_name = "get_template"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Template/GetTemplate"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "opc_request_id"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "get_template got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "workspaceId": workspace_id,
+            "templateId": template_id
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                response_type="Template",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                response_type="Template",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def get_user_defined_function(self, workspace_id, user_defined_function_key, **kwargs):
         """
         Retrieves a UserDefinedFunction using the specified identifier.
@@ -8232,7 +9256,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_user_defined_function.py.html>`__ to see an example of how to use get_user_defined_function API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_user_defined_function.py.html>`__ to see an example of how to use get_user_defined_function API.
         """
         resource_path = "/workspaces/{workspaceId}/userDefinedFunctions/{userDefinedFunctionKey}"
         method = "GET"
@@ -8330,7 +9354,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_user_defined_function_validation.py.html>`__ to see an example of how to use get_user_defined_function_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_user_defined_function_validation.py.html>`__ to see an example of how to use get_user_defined_function_validation API.
         """
         resource_path = "/workspaces/{workspaceId}/userDefinedFunctionValidations/{userDefinedFunctionValidationKey}"
         method = "GET"
@@ -8425,7 +9449,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -8519,7 +9543,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/get_workspace.py.html>`__ to see an example of how to use get_workspace API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/get_workspace.py.html>`__ to see an example of how to use get_workspace API.
         """
         resource_path = "/workspaces/{workspaceId}"
         method = "GET"
@@ -8645,7 +9669,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_applications.py.html>`__ to see an example of how to use list_applications API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_applications.py.html>`__ to see an example of how to use list_applications API.
         """
         resource_path = "/workspaces/{workspaceId}/applications"
         method = "GET"
@@ -8807,7 +9831,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_connection_validations.py.html>`__ to see an example of how to use list_connection_validations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_connection_validations.py.html>`__ to see an example of how to use list_connection_validations API.
         """
         resource_path = "/workspaces/{workspaceId}/connectionValidations"
         method = "GET"
@@ -8969,7 +9993,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_connections.py.html>`__ to see an example of how to use list_connections API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_connections.py.html>`__ to see an example of how to use list_connections API.
         """
         resource_path = "/workspaces/{workspaceId}/connections"
         method = "GET"
@@ -9069,6 +10093,191 @@ class DataIntegrationClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def list_copy_object_requests(self, workspace_id, **kwargs):
+        """
+        This endpoint can be used to get the list of copy object requests.
+
+
+        :param str workspace_id: (required)
+            The workspace ID.
+
+        :param str opc_request_id: (optional)
+            Unique Oracle-assigned identifier for the request. If
+            you need to contact Oracle about a particular request,
+            please provide the request ID.
+
+        :param int limit: (optional)
+            Sets the maximum number of results per page, or items to return in a paginated `List` call. See `List Pagination`__.
+
+            __ https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine
+
+        :param str page: (optional)
+            For list pagination. The value for this parameter is the `opc-next-page` or the `opc-prev-page` response header from the previous `List` call. See `List Pagination`__.
+
+            __ https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine
+
+        :param str name: (optional)
+            Used to filter by the name of the object.
+
+        :param str sort_order: (optional)
+            Specifies sort order to use, either `ASC` (ascending) or `DESC` (descending).
+
+            Allowed values are: "ASC", "DESC"
+
+        :param str sort_by: (optional)
+            Specifies the field to sort by. Accepts only one field. By default, when you sort by time fields, results are shown in descending order. All other fields default to ascending order. Sorting related parameters are ignored when parameter `query` is present (search operation and sorting order is by relevance score in descending order).
+
+            Allowed values are: "TIME_CREATED", "DISPLAY_NAME", "TIME_UPDATED"
+
+        :param str copy_status: (optional)
+            Specifies copy status to use, either -  ALL, SUCCESSFUL, IN_PROGRESS, QUEUED, FAILED .
+
+            Allowed values are: "IN_PROGRESS", "SUCCESSFUL", "QUEUED", "TERMINATING", "TERMINATED", "FAILED", "ALL"
+
+        :param str projection: (optional)
+            This parameter allows users to specify which view of the copy object response to return. SUMMARY - Summary of the copy object response will be returned. This is the default option when no value is specified. DETAILS - Details of copy object response will be returned. This will include details of all the objects to be copied.
+
+            Allowed values are: "SUMMARY", "DETAILS"
+
+        :param int time_started_in_millis: (optional)
+            Specifies start time of a copy object request.
+
+        :param int time_ended_in_millis: (optional)
+            Specifies end time of a copy object request.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type :class:`~oci.data_integration.models.CopyObjectRequestSummaryCollection`
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_copy_object_requests.py.html>`__ to see an example of how to use list_copy_object_requests API.
+        """
+        resource_path = "/workspaces/{workspaceId}/copyObjectRequests"
+        method = "GET"
+        operation_name = "list_copy_object_requests"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/CopyObjectRequestSummaryCollection/ListCopyObjectRequests"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "opc_request_id",
+            "limit",
+            "page",
+            "name",
+            "sort_order",
+            "sort_by",
+            "copy_status",
+            "projection",
+            "time_started_in_millis",
+            "time_ended_in_millis"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "list_copy_object_requests got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "workspaceId": workspace_id
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        if 'sort_order' in kwargs:
+            sort_order_allowed_values = ["ASC", "DESC"]
+            if kwargs['sort_order'] not in sort_order_allowed_values:
+                raise ValueError(
+                    "Invalid value for `sort_order`, must be one of {0}".format(sort_order_allowed_values)
+                )
+
+        if 'sort_by' in kwargs:
+            sort_by_allowed_values = ["TIME_CREATED", "DISPLAY_NAME", "TIME_UPDATED"]
+            if kwargs['sort_by'] not in sort_by_allowed_values:
+                raise ValueError(
+                    "Invalid value for `sort_by`, must be one of {0}".format(sort_by_allowed_values)
+                )
+
+        if 'copy_status' in kwargs:
+            copy_status_allowed_values = ["IN_PROGRESS", "SUCCESSFUL", "QUEUED", "TERMINATING", "TERMINATED", "FAILED", "ALL"]
+            if kwargs['copy_status'] not in copy_status_allowed_values:
+                raise ValueError(
+                    "Invalid value for `copy_status`, must be one of {0}".format(copy_status_allowed_values)
+                )
+
+        if 'projection' in kwargs:
+            projection_allowed_values = ["SUMMARY", "DETAILS"]
+            if kwargs['projection'] not in projection_allowed_values:
+                raise ValueError(
+                    "Invalid value for `projection`, must be one of {0}".format(projection_allowed_values)
+                )
+
+        query_params = {
+            "limit": kwargs.get("limit", missing),
+            "page": kwargs.get("page", missing),
+            "name": kwargs.get("name", missing),
+            "sortOrder": kwargs.get("sort_order", missing),
+            "sortBy": kwargs.get("sort_by", missing),
+            "copyStatus": kwargs.get("copy_status", missing),
+            "projection": kwargs.get("projection", missing),
+            "timeStartedInMillis": kwargs.get("time_started_in_millis", missing),
+            "timeEndedInMillis": kwargs.get("time_ended_in_millis", missing)
+        }
+        query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                query_params=query_params,
+                header_params=header_params,
+                response_type="CopyObjectRequestSummaryCollection",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                query_params=query_params,
+                header_params=header_params,
+                response_type="CopyObjectRequestSummaryCollection",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def list_data_assets(self, workspace_id, **kwargs):
         """
         Retrieves a list of all data asset summaries.
@@ -9127,7 +10336,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_data_assets.py.html>`__ to see an example of how to use list_data_assets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_data_assets.py.html>`__ to see an example of how to use list_data_assets API.
         """
         resource_path = "/workspaces/{workspaceId}/dataAssets"
         method = "GET"
@@ -9299,7 +10508,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_data_entities.py.html>`__ to see an example of how to use list_data_entities API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_data_entities.py.html>`__ to see an example of how to use list_data_entities API.
         """
         resource_path = "/workspaces/{workspaceId}/connections/{connectionKey}/schemas/{schemaResourceName}/dataEntities"
         method = "GET"
@@ -9467,7 +10676,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_data_flow_validations.py.html>`__ to see an example of how to use list_data_flow_validations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_data_flow_validations.py.html>`__ to see an example of how to use list_data_flow_validations API.
         """
         resource_path = "/workspaces/{workspaceId}/dataFlowValidations"
         method = "GET"
@@ -9629,7 +10838,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_data_flows.py.html>`__ to see an example of how to use list_data_flows API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_data_flows.py.html>`__ to see an example of how to use list_data_flows API.
         """
         resource_path = "/workspaces/{workspaceId}/dataFlows"
         method = "GET"
@@ -9804,7 +11013,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_dependent_objects.py.html>`__ to see an example of how to use list_dependent_objects API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_dependent_objects.py.html>`__ to see an example of how to use list_dependent_objects API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/dependentObjects"
         method = "GET"
@@ -9980,7 +11189,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_dis_application_task_run_lineages.py.html>`__ to see an example of how to use list_dis_application_task_run_lineages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_dis_application_task_run_lineages.py.html>`__ to see an example of how to use list_dis_application_task_run_lineages API.
         """
         resource_path = "/workspaces/{workspaceId}/disApplications/{disApplicationId}/taskRunLineages"
         method = "GET"
@@ -10150,7 +11359,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_dis_applications.py.html>`__ to see an example of how to use list_dis_applications API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_dis_applications.py.html>`__ to see an example of how to use list_dis_applications API.
         """
         resource_path = "/workspaces/{workspaceId}/disApplications"
         method = "GET"
@@ -10313,7 +11522,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_external_publication_validations.py.html>`__ to see an example of how to use list_external_publication_validations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_external_publication_validations.py.html>`__ to see an example of how to use list_external_publication_validations API.
         """
         resource_path = "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublicationValidations"
         method = "GET"
@@ -10471,7 +11680,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_external_publications.py.html>`__ to see an example of how to use list_external_publications API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_external_publications.py.html>`__ to see an example of how to use list_external_publications API.
         """
         resource_path = "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublications"
         method = "GET"
@@ -10633,7 +11842,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_folders.py.html>`__ to see an example of how to use list_folders API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_folders.py.html>`__ to see an example of how to use list_folders API.
         """
         resource_path = "/workspaces/{workspaceId}/folders"
         method = "GET"
@@ -10797,7 +12006,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_function_libraries.py.html>`__ to see an example of how to use list_function_libraries API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_function_libraries.py.html>`__ to see an example of how to use list_function_libraries API.
         """
         resource_path = "/workspaces/{workspaceId}/functionLibraries"
         method = "GET"
@@ -10959,7 +12168,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_patch_changes.py.html>`__ to see an example of how to use list_patch_changes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_patch_changes.py.html>`__ to see an example of how to use list_patch_changes API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/patchChanges"
         method = "GET"
@@ -11120,7 +12329,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_patches.py.html>`__ to see an example of how to use list_patches API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_patches.py.html>`__ to see an example of how to use list_patches API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/patches"
         method = "GET"
@@ -11281,7 +12490,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_pipeline_validations.py.html>`__ to see an example of how to use list_pipeline_validations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_pipeline_validations.py.html>`__ to see an example of how to use list_pipeline_validations API.
         """
         resource_path = "/workspaces/{workspaceId}/pipelineValidations"
         method = "GET"
@@ -11443,7 +12652,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_pipelines.py.html>`__ to see an example of how to use list_pipelines API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_pipelines.py.html>`__ to see an example of how to use list_pipelines API.
         """
         resource_path = "/workspaces/{workspaceId}/pipelines"
         method = "GET"
@@ -11605,7 +12814,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_projects.py.html>`__ to see an example of how to use list_projects API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_projects.py.html>`__ to see an example of how to use list_projects API.
         """
         resource_path = "/workspaces/{workspaceId}/projects"
         method = "GET"
@@ -11783,7 +12992,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_published_objects.py.html>`__ to see an example of how to use list_published_objects API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_published_objects.py.html>`__ to see an example of how to use list_published_objects API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/publishedObjects"
         method = "GET"
@@ -11946,7 +13155,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_references.py.html>`__ to see an example of how to use list_references API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_references.py.html>`__ to see an example of how to use list_references API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/references"
         method = "GET"
@@ -12112,7 +13321,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_runtime_operators.py.html>`__ to see an example of how to use list_runtime_operators API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_runtime_operators.py.html>`__ to see an example of how to use list_runtime_operators API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/runtimePipelines/{runtimePipelineKey}/runtimeOperators"
         method = "GET"
@@ -12290,7 +13499,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_runtime_pipelines.py.html>`__ to see an example of how to use list_runtime_pipelines API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_runtime_pipelines.py.html>`__ to see an example of how to use list_runtime_pipelines API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/runtimePipelines"
         method = "GET"
@@ -12462,7 +13671,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_schedules.py.html>`__ to see an example of how to use list_schedules API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_schedules.py.html>`__ to see an example of how to use list_schedules API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/schedules"
         method = "GET"
@@ -12631,7 +13840,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_schemas.py.html>`__ to see an example of how to use list_schemas API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_schemas.py.html>`__ to see an example of how to use list_schemas API.
         """
         resource_path = "/workspaces/{workspaceId}/connections/{connectionKey}/schemas"
         method = "GET"
@@ -12804,7 +14013,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_task_run_lineages.py.html>`__ to see an example of how to use list_task_run_lineages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_task_run_lineages.py.html>`__ to see an example of how to use list_task_run_lineages API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/taskRunLineages"
         method = "GET"
@@ -12965,7 +14174,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_task_run_logs.py.html>`__ to see an example of how to use list_task_run_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_task_run_logs.py.html>`__ to see an example of how to use list_task_run_logs API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/taskRuns/{taskRunKey}/logs"
         method = "GET"
@@ -13117,6 +14326,9 @@ class DataIntegrationClient(object):
         :param str name_starts_with: (optional)
             This parameter can be used to filter objects by the names starting with the given value.
 
+        :param str name_contains: (optional)
+            This parameter can be used to filter objects by the names that match partially or fully with the given value.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -13133,7 +14345,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_task_runs.py.html>`__ to see an example of how to use list_task_runs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_task_runs.py.html>`__ to see an example of how to use list_task_runs API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/taskRuns"
         method = "GET"
@@ -13155,7 +14367,8 @@ class DataIntegrationClient(object):
             "sort_order",
             "sort_by",
             "filter",
-            "name_starts_with"
+            "name_starts_with",
+            "name_contains"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -13198,7 +14411,8 @@ class DataIntegrationClient(object):
             "sortOrder": kwargs.get("sort_order", missing),
             "sortBy": kwargs.get("sort_by", missing),
             "filter": self.base_client.generate_collection_format_param(kwargs.get("filter", missing), 'multi'),
-            "nameStartsWith": kwargs.get("name_starts_with", missing)
+            "nameStartsWith": kwargs.get("name_starts_with", missing),
+            "nameContains": kwargs.get("name_contains", missing)
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -13308,7 +14522,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_task_schedules.py.html>`__ to see an example of how to use list_task_schedules API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_task_schedules.py.html>`__ to see an example of how to use list_task_schedules API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/taskSchedules"
         method = "GET"
@@ -13473,7 +14687,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_task_validations.py.html>`__ to see an example of how to use list_task_validations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_task_validations.py.html>`__ to see an example of how to use list_task_validations API.
         """
         resource_path = "/workspaces/{workspaceId}/taskValidations"
         method = "GET"
@@ -13641,7 +14855,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_tasks.py.html>`__ to see an example of how to use list_tasks API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_tasks.py.html>`__ to see an example of how to use list_tasks API.
         """
         resource_path = "/workspaces/{workspaceId}/tasks"
         method = "GET"
@@ -13746,6 +14960,163 @@ class DataIntegrationClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def list_templates(self, workspace_id, **kwargs):
+        """
+        This endpoint can be used to list application templates with filtering options.
+
+
+        :param str workspace_id: (required)
+            The workspace ID.
+
+        :param str name: (optional)
+            Used to filter by the name of the object.
+
+        :param list[str] identifier: (optional)
+            Used to filter by the identifier of the published object.
+
+        :param list[str] fields: (optional)
+            Specifies the fields to get for an object.
+
+        :param int limit: (optional)
+            Sets the maximum number of results per page, or items to return in a paginated `List` call. See `List Pagination`__.
+
+            __ https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine
+
+        :param str page: (optional)
+            For list pagination. The value for this parameter is the `opc-next-page` or the `opc-prev-page` response header from the previous `List` call. See `List Pagination`__.
+
+            __ https://docs.cloud.oracle.com/iaas/Content/API/Concepts/usingapi.htm#nine
+
+        :param str sort_order: (optional)
+            Specifies sort order to use, either `ASC` (ascending) or `DESC` (descending).
+
+            Allowed values are: "ASC", "DESC"
+
+        :param str sort_by: (optional)
+            Specifies the field to sort by. Accepts only one field. By default, when you sort by time fields, results are shown in descending order. All other fields default to ascending order. Sorting related parameters are ignored when parameter `query` is present (search operation and sorting order is by relevance score in descending order).
+
+            Allowed values are: "TIME_CREATED", "DISPLAY_NAME", "TIME_UPDATED"
+
+        :param str opc_request_id: (optional)
+            Unique Oracle-assigned identifier for the request. If
+            you need to contact Oracle about a particular request,
+            please provide the request ID.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type :class:`~oci.data_integration.models.TemplateSummaryCollection`
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_templates.py.html>`__ to see an example of how to use list_templates API.
+        """
+        resource_path = "/workspaces/{workspaceId}/templates"
+        method = "GET"
+        operation_name = "list_templates"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Template/ListTemplates"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "name",
+            "identifier",
+            "fields",
+            "limit",
+            "page",
+            "sort_order",
+            "sort_by",
+            "opc_request_id"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "list_templates got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "workspaceId": workspace_id
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        if 'sort_order' in kwargs:
+            sort_order_allowed_values = ["ASC", "DESC"]
+            if kwargs['sort_order'] not in sort_order_allowed_values:
+                raise ValueError(
+                    "Invalid value for `sort_order`, must be one of {0}".format(sort_order_allowed_values)
+                )
+
+        if 'sort_by' in kwargs:
+            sort_by_allowed_values = ["TIME_CREATED", "DISPLAY_NAME", "TIME_UPDATED"]
+            if kwargs['sort_by'] not in sort_by_allowed_values:
+                raise ValueError(
+                    "Invalid value for `sort_by`, must be one of {0}".format(sort_by_allowed_values)
+                )
+
+        query_params = {
+            "name": kwargs.get("name", missing),
+            "identifier": self.base_client.generate_collection_format_param(kwargs.get("identifier", missing), 'multi'),
+            "fields": self.base_client.generate_collection_format_param(kwargs.get("fields", missing), 'multi'),
+            "limit": kwargs.get("limit", missing),
+            "page": kwargs.get("page", missing),
+            "sortOrder": kwargs.get("sort_order", missing),
+            "sortBy": kwargs.get("sort_by", missing)
+        }
+        query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                query_params=query_params,
+                header_params=header_params,
+                response_type="TemplateSummaryCollection",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                query_params=query_params,
+                header_params=header_params,
+                response_type="TemplateSummaryCollection",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def list_user_defined_function_validations(self, workspace_id, **kwargs):
         """
         Retrieves a list of UserDefinedFunctionvalidations within the specified workspace.
@@ -13807,7 +15178,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_user_defined_function_validations.py.html>`__ to see an example of how to use list_user_defined_function_validations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_user_defined_function_validations.py.html>`__ to see an example of how to use list_user_defined_function_validations API.
         """
         resource_path = "/workspaces/{workspaceId}/userDefinedFunctionValidations"
         method = "GET"
@@ -13969,7 +15340,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_user_defined_functions.py.html>`__ to see an example of how to use list_user_defined_functions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_user_defined_functions.py.html>`__ to see an example of how to use list_user_defined_functions API.
         """
         resource_path = "/workspaces/{workspaceId}/userDefinedFunctions"
         method = "GET"
@@ -14119,7 +15490,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/workRequestErrors"
         method = "GET"
@@ -14261,7 +15632,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -14411,7 +15782,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -14561,7 +15932,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/list_workspaces.py.html>`__ to see an example of how to use list_workspaces API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/list_workspaces.py.html>`__ to see an example of how to use list_workspaces API.
         """
         resource_path = "/workspaces"
         method = "GET"
@@ -14691,7 +16062,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/start_workspace.py.html>`__ to see an example of how to use start_workspace API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/start_workspace.py.html>`__ to see an example of how to use start_workspace API.
         """
         resource_path = "/workspaces/{workspaceId}/actions/start"
         method = "POST"
@@ -14802,7 +16173,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/stop_workspace.py.html>`__ to see an example of how to use stop_workspace API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/stop_workspace.py.html>`__ to see an example of how to use stop_workspace API.
         """
         resource_path = "/workspaces/{workspaceId}/actions/stop"
         method = "POST"
@@ -14920,7 +16291,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/update_application.py.html>`__ to see an example of how to use update_application API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_application.py.html>`__ to see an example of how to use update_application API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}"
         method = "PUT"
@@ -14990,6 +16361,116 @@ class DataIntegrationClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def update_application_detailed_description(self, workspace_id, application_key, update_application_detailed_description_details, **kwargs):
+        """
+        Updates the detailed description of an Application.
+
+
+        :param str workspace_id: (required)
+            The workspace ID.
+
+        :param str application_key: (required)
+            The application key.
+
+        :param oci.data_integration.models.UpdateDetailedDescriptionDetails update_application_detailed_description_details: (required)
+            The details needed to update the detailed description of Application
+
+        :param str opc_request_id: (optional)
+            Unique Oracle-assigned identifier for the request. If
+            you need to contact Oracle about a particular request,
+            please provide the request ID.
+
+        :param str if_match: (optional)
+            For optimistic concurrency control. In the PUT or DELETE call for a resource, set the `if-match` parameter to the value of the `etag` from a previous GET or POST response for that resource.
+            The resource will be updated or deleted only if the `etag` you provide matches the resource's current `etag` value.
+            When 'if-match' is provided and its value does not exactly match the 'etag' of the resource on the server, the request fails with the 412 response code.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type :class:`~oci.data_integration.models.DetailedDescription`
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_application_detailed_description.py.html>`__ to see an example of how to use update_application_detailed_description API.
+        """
+        resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/detailedDescription"
+        method = "PUT"
+        operation_name = "update_application_detailed_description"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DetailedDescription/UpdateApplicationDetailedDescription"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "opc_request_id",
+            "if_match"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "update_application_detailed_description got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "workspaceId": workspace_id,
+            "applicationKey": application_key
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-request-id": kwargs.get("opc_request_id", missing),
+            "if-match": kwargs.get("if_match", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=update_application_detailed_description_details,
+                response_type="DetailedDescription",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=update_application_detailed_description_details,
+                response_type="DetailedDescription",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def update_connection(self, workspace_id, connection_key, update_connection_details, **kwargs):
         """
         Updates a connection under a data asset.
@@ -15030,7 +16511,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/update_connection.py.html>`__ to see an example of how to use update_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_connection.py.html>`__ to see an example of how to use update_connection API.
         """
         resource_path = "/workspaces/{workspaceId}/connections/{connectionKey}"
         method = "PUT"
@@ -15100,6 +16581,116 @@ class DataIntegrationClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def update_copy_object_request(self, workspace_id, copy_object_request_key, update_copy_object_request_details, **kwargs):
+        """
+        Updates the status of a copy object request.
+
+
+        :param str workspace_id: (required)
+            The workspace ID.
+
+        :param str copy_object_request_key: (required)
+            The key of the object to be copied, for example this could be the key of a project.
+
+        :param oci.data_integration.models.UpdateCopyObjectRequestDetails update_copy_object_request_details: (required)
+            The details needed to update the status of a copy object request.
+
+        :param str opc_request_id: (optional)
+            Unique Oracle-assigned identifier for the request. If
+            you need to contact Oracle about a particular request,
+            please provide the request ID.
+
+        :param str if_match: (optional)
+            For optimistic concurrency control. In the PUT or DELETE call for a resource, set the `if-match` parameter to the value of the `etag` from a previous GET or POST response for that resource.
+            The resource will be updated or deleted only if the `etag` you provide matches the resource's current `etag` value.
+            When 'if-match' is provided and its value does not exactly match the 'etag' of the resource on the server, the request fails with the 412 response code.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type :class:`~oci.data_integration.models.CopyObjectRequest`
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_copy_object_request.py.html>`__ to see an example of how to use update_copy_object_request API.
+        """
+        resource_path = "/workspaces/{workspaceId}/copyObjectRequests/{copyObjectRequestKey}"
+        method = "PUT"
+        operation_name = "update_copy_object_request"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/Workspace/UpdateCopyObjectRequest"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "opc_request_id",
+            "if_match"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "update_copy_object_request got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "workspaceId": workspace_id,
+            "copyObjectRequestKey": copy_object_request_key
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-request-id": kwargs.get("opc_request_id", missing),
+            "if-match": kwargs.get("if_match", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=update_copy_object_request_details,
+                response_type="CopyObjectRequest",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=update_copy_object_request_details,
+                response_type="CopyObjectRequest",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def update_data_asset(self, workspace_id, data_asset_key, update_data_asset_details, **kwargs):
         """
         Updates a specific data asset with default connection.
@@ -15140,7 +16731,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/update_data_asset.py.html>`__ to see an example of how to use update_data_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_data_asset.py.html>`__ to see an example of how to use update_data_asset API.
         """
         resource_path = "/workspaces/{workspaceId}/dataAssets/{dataAssetKey}"
         method = "PUT"
@@ -15250,7 +16841,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/update_data_flow.py.html>`__ to see an example of how to use update_data_flow API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_data_flow.py.html>`__ to see an example of how to use update_data_flow API.
         """
         resource_path = "/workspaces/{workspaceId}/dataFlows/{dataFlowKey}"
         method = "PUT"
@@ -15360,7 +16951,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/update_dis_application.py.html>`__ to see an example of how to use update_dis_application API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_dis_application.py.html>`__ to see an example of how to use update_dis_application API.
         """
         resource_path = "/workspaces/{workspaceId}/disApplications/{disApplicationId}"
         method = "PUT"
@@ -15430,6 +17021,116 @@ class DataIntegrationClient(object):
                 operation_name=operation_name,
                 api_reference_link=api_reference_link)
 
+    def update_dis_application_detailed_description(self, workspace_id, application_key, update_dis_application_detailed_description_details, **kwargs):
+        """
+        Updates the detailed description of an Application.
+
+
+        :param str workspace_id: (required)
+            The workspace ID.
+
+        :param str application_key: (required)
+            The application key.
+
+        :param oci.data_integration.models.UpdateDetailedDescriptionDetails update_dis_application_detailed_description_details: (required)
+            The details needed to update the detailed description of Application.
+
+        :param str opc_request_id: (optional)
+            Unique Oracle-assigned identifier for the request. If
+            you need to contact Oracle about a particular request,
+            please provide the request ID.
+
+        :param str if_match: (optional)
+            For optimistic concurrency control. In the PUT or DELETE call for a resource, set the `if-match` parameter to the value of the `etag` from a previous GET or POST response for that resource.
+            The resource will be updated or deleted only if the `etag` you provide matches the resource's current `etag` value.
+            When 'if-match' is provided and its value does not exactly match the 'etag' of the resource on the server, the request fails with the 412 response code.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation will not retry by default, users can also use the convenient :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` provided by the SDK to enable retries for it.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :return: A :class:`~oci.response.Response` object with data of type :class:`~oci.data_integration.models.DetailedDescription`
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_dis_application_detailed_description.py.html>`__ to see an example of how to use update_dis_application_detailed_description API.
+        """
+        resource_path = "/workspaces/{workspaceId}/disApplications/{applicationKey}/detailedDescription"
+        method = "PUT"
+        operation_name = "update_dis_application_detailed_description"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/data-integration/20200430/DetailedDescription/UpdateDisApplicationDetailedDescription"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "retry_strategy",
+            "opc_request_id",
+            "if_match"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                "update_dis_application_detailed_description got unknown kwargs: {!r}".format(extra_kwargs))
+
+        path_params = {
+            "workspaceId": workspace_id,
+            "applicationKey": application_key
+        }
+
+        path_params = {k: v for (k, v) in six.iteritems(path_params) if v is not missing}
+
+        for (k, v) in six.iteritems(path_params):
+            if v is None or (isinstance(v, six.string_types) and len(v.strip()) == 0):
+                raise ValueError('Parameter {} cannot be None, whitespace or empty string'.format(k))
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-request-id": kwargs.get("opc_request_id", missing),
+            "if-match": kwargs.get("if_match", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=update_dis_application_detailed_description_details,
+                response_type="DetailedDescription",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                path_params=path_params,
+                header_params=header_params,
+                body=update_dis_application_detailed_description_details,
+                response_type="DetailedDescription",
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link)
+
     def update_external_publication(self, workspace_id, task_key, external_publications_key, update_external_publication_details, **kwargs):
         """
         Updates the external publication object.
@@ -15473,7 +17174,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/update_external_publication.py.html>`__ to see an example of how to use update_external_publication API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_external_publication.py.html>`__ to see an example of how to use update_external_publication API.
         """
         resource_path = "/workspaces/{workspaceId}/tasks/{taskKey}/externalPublications/{externalPublicationsKey}"
         method = "PUT"
@@ -15584,7 +17285,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/update_folder.py.html>`__ to see an example of how to use update_folder API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_folder.py.html>`__ to see an example of how to use update_folder API.
         """
         resource_path = "/workspaces/{workspaceId}/folders/{folderKey}"
         method = "PUT"
@@ -15694,7 +17395,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/update_function_library.py.html>`__ to see an example of how to use update_function_library API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_function_library.py.html>`__ to see an example of how to use update_function_library API.
         """
         resource_path = "/workspaces/{workspaceId}/functionLibraries/{functionLibraryKey}"
         method = "PUT"
@@ -15804,7 +17505,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/update_pipeline.py.html>`__ to see an example of how to use update_pipeline API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_pipeline.py.html>`__ to see an example of how to use update_pipeline API.
         """
         resource_path = "/workspaces/{workspaceId}/pipelines/{pipelineKey}"
         method = "PUT"
@@ -15914,7 +17615,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/update_project.py.html>`__ to see an example of how to use update_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_project.py.html>`__ to see an example of how to use update_project API.
         """
         resource_path = "/workspaces/{workspaceId}/projects/{projectKey}"
         method = "PUT"
@@ -16030,7 +17731,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/update_reference.py.html>`__ to see an example of how to use update_reference API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_reference.py.html>`__ to see an example of how to use update_reference API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/references/{referenceKey}"
         method = "PUT"
@@ -16147,7 +17848,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/update_schedule.py.html>`__ to see an example of how to use update_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_schedule.py.html>`__ to see an example of how to use update_schedule API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/schedules/{scheduleKey}"
         method = "PUT"
@@ -16258,7 +17959,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/update_task.py.html>`__ to see an example of how to use update_task API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_task.py.html>`__ to see an example of how to use update_task API.
         """
         resource_path = "/workspaces/{workspaceId}/tasks/{taskKey}"
         method = "PUT"
@@ -16371,7 +18072,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/update_task_run.py.html>`__ to see an example of how to use update_task_run API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_task_run.py.html>`__ to see an example of how to use update_task_run API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/taskRuns/{taskRunKey}"
         method = "PUT"
@@ -16485,7 +18186,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/update_task_schedule.py.html>`__ to see an example of how to use update_task_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_task_schedule.py.html>`__ to see an example of how to use update_task_schedule API.
         """
         resource_path = "/workspaces/{workspaceId}/applications/{applicationKey}/taskSchedules/{taskScheduleKey}"
         method = "PUT"
@@ -16596,7 +18297,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/update_user_defined_function.py.html>`__ to see an example of how to use update_user_defined_function API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_user_defined_function.py.html>`__ to see an example of how to use update_user_defined_function API.
         """
         resource_path = "/workspaces/{workspaceId}/userDefinedFunctions/{userDefinedFunctionKey}"
         method = "PUT"
@@ -16703,7 +18404,7 @@ class DataIntegrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataintegration/update_workspace.py.html>`__ to see an example of how to use update_workspace API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataintegration/update_workspace.py.html>`__ to see an example of how to use update_workspace API.
         """
         resource_path = "/workspaces/{workspaceId}"
         method = "PUT"

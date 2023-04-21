@@ -148,7 +148,7 @@ class OrganizationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/approve_organization_tenancy_for_transfer.py.html>`__ to see an example of how to use approve_organization_tenancy_for_transfer API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/tenantmanagercontrolplane/approve_organization_tenancy_for_transfer.py.html>`__ to see an example of how to use approve_organization_tenancy_for_transfer API.
         """
         resource_path = "/organizationTenancies/{organizationTenancyId}/actions/approveForTransfer"
         method = "POST"
@@ -259,7 +259,7 @@ class OrganizationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/create_child_tenancy.py.html>`__ to see an example of how to use create_child_tenancy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/tenantmanagercontrolplane/create_child_tenancy.py.html>`__ to see an example of how to use create_child_tenancy API.
         """
         resource_path = "/childTenancies"
         method = "POST"
@@ -356,7 +356,7 @@ class OrganizationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/delete_organization_tenancy.py.html>`__ to see an example of how to use delete_organization_tenancy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/tenantmanagercontrolplane/delete_organization_tenancy.py.html>`__ to see an example of how to use delete_organization_tenancy API.
         """
         resource_path = "/organizationTenancies/{organizationTenancyId}"
         method = "DELETE"
@@ -451,7 +451,7 @@ class OrganizationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/get_organization.py.html>`__ to see an example of how to use get_organization API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/tenantmanagercontrolplane/get_organization.py.html>`__ to see an example of how to use get_organization API.
         """
         resource_path = "/organizations/{organizationId}"
         method = "GET"
@@ -546,7 +546,7 @@ class OrganizationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/get_organization_tenancy.py.html>`__ to see an example of how to use get_organization_tenancy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/tenantmanagercontrolplane/get_organization_tenancy.py.html>`__ to see an example of how to use get_organization_tenancy API.
         """
         resource_path = "/organizations/{organizationId}/tenancies/{tenancyId}"
         method = "GET"
@@ -645,7 +645,7 @@ class OrganizationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/list_organization_tenancies.py.html>`__ to see an example of how to use list_organization_tenancies API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/tenantmanagercontrolplane/list_organization_tenancies.py.html>`__ to see an example of how to use list_organization_tenancies API.
         """
         resource_path = "/organizations/{organizationId}/tenancies"
         method = "GET"
@@ -753,7 +753,7 @@ class OrganizationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/list_organizations.py.html>`__ to see an example of how to use list_organizations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/tenantmanagercontrolplane/list_organizations.py.html>`__ to see an example of how to use list_organizations API.
         """
         resource_path = "/organizations"
         method = "GET"
@@ -851,7 +851,7 @@ class OrganizationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/restore_organization_tenancy.py.html>`__ to see an example of how to use restore_organization_tenancy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/tenantmanagercontrolplane/restore_organization_tenancy.py.html>`__ to see an example of how to use restore_organization_tenancy API.
         """
         resource_path = "/organizationTenancies/{organizationTenancyId}/actions/restore"
         method = "POST"
@@ -960,7 +960,7 @@ class OrganizationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/unapprove_organization_tenancy_for_transfer.py.html>`__ to see an example of how to use unapprove_organization_tenancy_for_transfer API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/tenantmanagercontrolplane/unapprove_organization_tenancy_for_transfer.py.html>`__ to see an example of how to use unapprove_organization_tenancy_for_transfer API.
         """
         resource_path = "/organizationTenancies/{organizationTenancyId}/actions/unapproveForTransfer"
         method = "POST"
@@ -1081,7 +1081,7 @@ class OrganizationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/update_organization.py.html>`__ to see an example of how to use update_organization API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/tenantmanagercontrolplane/update_organization.py.html>`__ to see an example of how to use update_organization API.
         """
         resource_path = "/organizations/{organizationId}"
         method = "PUT"

@@ -135,7 +135,7 @@ class AccountClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/get_launch_eligibility.py.html>`__ to see an example of how to use get_launch_eligibility API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/marketplace/get_launch_eligibility.py.html>`__ to see an example of how to use get_launch_eligibility API.
         """
         resource_path = "/launchEligibility"
         method = "GET"
@@ -226,7 +226,7 @@ class AccountClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/marketplace/get_third_party_paid_listing_eligibility.py.html>`__ to see an example of how to use get_third_party_paid_listing_eligibility API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/marketplace/get_third_party_paid_listing_eligibility.py.html>`__ to see an example of how to use get_third_party_paid_listing_eligibility API.
         """
         resource_path = "/thirdPartyPaidListingEligibility"
         method = "GET"

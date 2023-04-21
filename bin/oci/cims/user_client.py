@@ -137,7 +137,7 @@ class UserClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cims/create_user.py.html>`__ to see an example of how to use create_user API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cims/create_user.py.html>`__ to see an example of how to use create_user API.
         """
         resource_path = "/v2/users"
         method = "POST"

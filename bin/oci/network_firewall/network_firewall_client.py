@@ -138,7 +138,7 @@ class NetworkFirewallClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkfirewall/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkfirewall/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "DELETE"
@@ -244,7 +244,7 @@ class NetworkFirewallClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkfirewall/change_network_firewall_compartment.py.html>`__ to see an example of how to use change_network_firewall_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkfirewall/change_network_firewall_compartment.py.html>`__ to see an example of how to use change_network_firewall_compartment API.
         """
         resource_path = "/networkFirewalls/{networkFirewallId}/actions/changeCompartment"
         method = "POST"
@@ -357,7 +357,7 @@ class NetworkFirewallClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkfirewall/change_network_firewall_policy_compartment.py.html>`__ to see an example of how to use change_network_firewall_policy_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkfirewall/change_network_firewall_policy_compartment.py.html>`__ to see an example of how to use change_network_firewall_policy_compartment API.
         """
         resource_path = "/networkFirewallPolicies/{networkFirewallPolicyId}/actions/changeCompartment"
         method = "POST"
@@ -463,7 +463,7 @@ class NetworkFirewallClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkfirewall/create_network_firewall.py.html>`__ to see an example of how to use create_network_firewall API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkfirewall/create_network_firewall.py.html>`__ to see an example of how to use create_network_firewall API.
         """
         resource_path = "/networkFirewalls"
         method = "POST"
@@ -557,7 +557,7 @@ class NetworkFirewallClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkfirewall/create_network_firewall_policy.py.html>`__ to see an example of how to use create_network_firewall_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkfirewall/create_network_firewall_policy.py.html>`__ to see an example of how to use create_network_firewall_policy API.
         """
         resource_path = "/networkFirewallPolicies"
         method = "POST"
@@ -653,7 +653,7 @@ class NetworkFirewallClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkfirewall/delete_network_firewall.py.html>`__ to see an example of how to use delete_network_firewall API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkfirewall/delete_network_firewall.py.html>`__ to see an example of how to use delete_network_firewall API.
         """
         resource_path = "/networkFirewalls/{networkFirewallId}"
         method = "DELETE"
@@ -754,7 +754,7 @@ class NetworkFirewallClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkfirewall/delete_network_firewall_policy.py.html>`__ to see an example of how to use delete_network_firewall_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkfirewall/delete_network_firewall_policy.py.html>`__ to see an example of how to use delete_network_firewall_policy API.
         """
         resource_path = "/networkFirewallPolicies/{networkFirewallPolicyId}"
         method = "DELETE"
@@ -850,7 +850,7 @@ class NetworkFirewallClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkfirewall/get_network_firewall.py.html>`__ to see an example of how to use get_network_firewall API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkfirewall/get_network_firewall.py.html>`__ to see an example of how to use get_network_firewall API.
         """
         resource_path = "/networkFirewalls/{networkFirewallId}"
         method = "GET"
@@ -944,7 +944,7 @@ class NetworkFirewallClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkfirewall/get_network_firewall_policy.py.html>`__ to see an example of how to use get_network_firewall_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkfirewall/get_network_firewall_policy.py.html>`__ to see an example of how to use get_network_firewall_policy API.
         """
         resource_path = "/networkFirewallPolicies/{networkFirewallPolicyId}"
         method = "GET"
@@ -1038,7 +1038,7 @@ class NetworkFirewallClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkfirewall/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkfirewall/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -1159,7 +1159,7 @@ class NetworkFirewallClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkfirewall/list_network_firewall_policies.py.html>`__ to see an example of how to use list_network_firewall_policies API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkfirewall/list_network_firewall_policies.py.html>`__ to see an example of how to use list_network_firewall_policies API.
         """
         resource_path = "/networkFirewallPolicies"
         method = "GET"
@@ -1320,7 +1320,7 @@ class NetworkFirewallClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkfirewall/list_network_firewalls.py.html>`__ to see an example of how to use list_network_firewalls API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkfirewall/list_network_firewalls.py.html>`__ to see an example of how to use list_network_firewalls API.
         """
         resource_path = "/networkFirewalls"
         method = "GET"
@@ -1464,7 +1464,7 @@ class NetworkFirewallClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkfirewall/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkfirewall/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -1602,7 +1602,7 @@ class NetworkFirewallClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkfirewall/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkfirewall/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -1751,7 +1751,7 @@ class NetworkFirewallClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkfirewall/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkfirewall/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -1887,7 +1887,7 @@ class NetworkFirewallClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkfirewall/update_network_firewall.py.html>`__ to see an example of how to use update_network_firewall API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkfirewall/update_network_firewall.py.html>`__ to see an example of how to use update_network_firewall API.
         """
         resource_path = "/networkFirewalls/{networkFirewallId}"
         method = "PUT"
@@ -1993,7 +1993,7 @@ class NetworkFirewallClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/networkfirewall/update_network_firewall_policy.py.html>`__ to see an example of how to use update_network_firewall_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/networkfirewall/update_network_firewall_policy.py.html>`__ to see an example of how to use update_network_firewall_policy API.
         """
         resource_path = "/networkFirewallPolicies/{networkFirewallPolicyId}"
         method = "PUT"

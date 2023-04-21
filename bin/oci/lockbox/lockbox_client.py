@@ -140,7 +140,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "DELETE"
@@ -249,7 +249,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/change_approval_template_compartment.py.html>`__ to see an example of how to use change_approval_template_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/change_approval_template_compartment.py.html>`__ to see an example of how to use change_approval_template_compartment API.
         """
         resource_path = "/approvalTemplates/{approvalTemplateId}/actions/changeCompartment"
         method = "POST"
@@ -363,7 +363,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/change_lockbox_compartment.py.html>`__ to see an example of how to use change_lockbox_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/change_lockbox_compartment.py.html>`__ to see an example of how to use change_lockbox_compartment API.
         """
         resource_path = "/lockboxes/{lockboxId}/actions/changeCompartment"
         method = "POST"
@@ -467,7 +467,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/create_access_request.py.html>`__ to see an example of how to use create_access_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/create_access_request.py.html>`__ to see an example of how to use create_access_request API.
         """
         resource_path = "/accessRequests"
         method = "POST"
@@ -559,7 +559,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/create_approval_template.py.html>`__ to see an example of how to use create_approval_template API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/create_approval_template.py.html>`__ to see an example of how to use create_approval_template API.
         """
         resource_path = "/approvalTemplates"
         method = "POST"
@@ -651,7 +651,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/create_lockbox.py.html>`__ to see an example of how to use create_lockbox API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/create_lockbox.py.html>`__ to see an example of how to use create_lockbox API.
         """
         resource_path = "/lockboxes"
         method = "POST"
@@ -743,7 +743,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/delete_approval_template.py.html>`__ to see an example of how to use delete_approval_template API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/delete_approval_template.py.html>`__ to see an example of how to use delete_approval_template API.
         """
         resource_path = "/approvalTemplates/{approvalTemplateId}"
         method = "DELETE"
@@ -849,7 +849,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/delete_lockbox.py.html>`__ to see an example of how to use delete_lockbox API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/delete_lockbox.py.html>`__ to see an example of how to use delete_lockbox API.
         """
         resource_path = "/lockboxes/{lockboxId}"
         method = "DELETE"
@@ -944,7 +944,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/get_access_materials.py.html>`__ to see an example of how to use get_access_materials API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/get_access_materials.py.html>`__ to see an example of how to use get_access_materials API.
         """
         resource_path = "/accessRequests/{accessRequestId}/accessMaterials"
         method = "GET"
@@ -1036,7 +1036,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/get_access_request.py.html>`__ to see an example of how to use get_access_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/get_access_request.py.html>`__ to see an example of how to use get_access_request API.
         """
         resource_path = "/accessRequests/{accessRequestId}"
         method = "GET"
@@ -1128,7 +1128,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/get_approval_template.py.html>`__ to see an example of how to use get_approval_template API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/get_approval_template.py.html>`__ to see an example of how to use get_approval_template API.
         """
         resource_path = "/approvalTemplates/{approvalTemplateId}"
         method = "GET"
@@ -1220,7 +1220,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/get_lockbox.py.html>`__ to see an example of how to use get_lockbox API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/get_lockbox.py.html>`__ to see an example of how to use get_lockbox API.
         """
         resource_path = "/lockboxes/{lockboxId}"
         method = "GET"
@@ -1312,7 +1312,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -1421,7 +1421,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/handle_access_request.py.html>`__ to see an example of how to use handle_access_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/handle_access_request.py.html>`__ to see an example of how to use handle_access_request API.
         """
         resource_path = "/accessRequests/{accessRequestId}/actions/handle"
         method = "POST"
@@ -1553,7 +1553,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/list_access_requests.py.html>`__ to see an example of how to use list_access_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/list_access_requests.py.html>`__ to see an example of how to use list_access_requests API.
         """
         resource_path = "/accessRequests"
         method = "GET"
@@ -1714,7 +1714,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/list_approval_templates.py.html>`__ to see an example of how to use list_approval_templates API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/list_approval_templates.py.html>`__ to see an example of how to use list_approval_templates API.
         """
         resource_path = "/approvalTemplates"
         method = "GET"
@@ -1872,7 +1872,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/list_lockboxes.py.html>`__ to see an example of how to use list_lockboxes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/list_lockboxes.py.html>`__ to see an example of how to use list_lockboxes API.
         """
         resource_path = "/lockboxes"
         method = "GET"
@@ -2022,7 +2022,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -2158,7 +2158,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -2305,7 +2305,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -2438,7 +2438,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/update_approval_template.py.html>`__ to see an example of how to use update_approval_template API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/update_approval_template.py.html>`__ to see an example of how to use update_approval_template API.
         """
         resource_path = "/approvalTemplates/{approvalTemplateId}"
         method = "PUT"
@@ -2544,7 +2544,7 @@ class LockboxClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/lockbox/update_lockbox.py.html>`__ to see an example of how to use update_lockbox API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/lockbox/update_lockbox.py.html>`__ to see an example of how to use update_lockbox API.
         """
         resource_path = "/lockboxes/{lockboxId}"
         method = "PUT"

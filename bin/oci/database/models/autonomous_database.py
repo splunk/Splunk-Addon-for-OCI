@@ -97,6 +97,14 @@ class AutonomousDatabase(object):
     #: This constant has a value of "STANDBY"
     LIFECYCLE_STATE_STANDBY = "STANDBY"
 
+    #: A constant which can be used with the compute_model property of a AutonomousDatabase.
+    #: This constant has a value of "ECPU"
+    COMPUTE_MODEL_ECPU = "ECPU"
+
+    #: A constant which can be used with the compute_model property of a AutonomousDatabase.
+    #: This constant has a value of "OCPU"
+    COMPUTE_MODEL_OCPU = "OCPU"
+
     #: A constant which can be used with the infrastructure_type property of a AutonomousDatabase.
     #: This constant has a value of "CLOUD"
     INFRASTRUCTURE_TYPE_CLOUD = "CLOUD"
@@ -241,6 +249,14 @@ class AutonomousDatabase(object):
     #: This constant has a value of "DISABLED_STANDBY"
     ROLE_DISABLED_STANDBY = "DISABLED_STANDBY"
 
+    #: A constant which can be used with the role property of a AutonomousDatabase.
+    #: This constant has a value of "BACKUP_COPY"
+    ROLE_BACKUP_COPY = "BACKUP_COPY"
+
+    #: A constant which can be used with the role property of a AutonomousDatabase.
+    #: This constant has a value of "SNAPSHOT_STANDBY"
+    ROLE_SNAPSHOT_STANDBY = "SNAPSHOT_STANDBY"
+
     #: A constant which can be used with the dataguard_region_type property of a AutonomousDatabase.
     #: This constant has a value of "PRIMARY_DG_REGION"
     DATAGUARD_REGION_TYPE_PRIMARY_DG_REGION = "PRIMARY_DG_REGION"
@@ -264,6 +280,14 @@ class AutonomousDatabase(object):
     #: A constant which can be used with the database_edition property of a AutonomousDatabase.
     #: This constant has a value of "ENTERPRISE_EDITION"
     DATABASE_EDITION_ENTERPRISE_EDITION = "ENTERPRISE_EDITION"
+
+    #: A constant which can be used with the disaster_recovery_region_type property of a AutonomousDatabase.
+    #: This constant has a value of "PRIMARY"
+    DISASTER_RECOVERY_REGION_TYPE_PRIMARY = "PRIMARY"
+
+    #: A constant which can be used with the disaster_recovery_region_type property of a AutonomousDatabase.
+    #: This constant has a value of "REMOTE"
+    DISASTER_RECOVERY_REGION_TYPE_REMOTE = "REMOTE"
 
     def __init__(self, **kwargs):
         """
@@ -316,6 +340,14 @@ class AutonomousDatabase(object):
             The value to assign to the ncharacter_set property of this AutonomousDatabase.
         :type ncharacter_set: str
 
+        :param next_long_term_backup_time_stamp:
+            The value to assign to the next_long_term_backup_time_stamp property of this AutonomousDatabase.
+        :type next_long_term_backup_time_stamp: datetime
+
+        :param long_term_backup_schedule:
+            The value to assign to the long_term_backup_schedule property of this AutonomousDatabase.
+        :type long_term_backup_schedule: oci.database.models.LongTermBackUpScheduleDetails
+
         :param is_free_tier:
             The value to assign to the is_free_tier property of this AutonomousDatabase.
         :type is_free_tier: bool
@@ -343,6 +375,24 @@ class AutonomousDatabase(object):
         :param cpu_core_count:
             The value to assign to the cpu_core_count property of this AutonomousDatabase.
         :type cpu_core_count: int
+
+        :param compute_model:
+            The value to assign to the compute_model property of this AutonomousDatabase.
+            Allowed values for this property are: "ECPU", "OCPU", 'UNKNOWN_ENUM_VALUE'.
+            Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
+        :type compute_model: str
+
+        :param compute_count:
+            The value to assign to the compute_count property of this AutonomousDatabase.
+        :type compute_count: float
+
+        :param backup_retention_period_in_days:
+            The value to assign to the backup_retention_period_in_days property of this AutonomousDatabase.
+        :type backup_retention_period_in_days: int
+
+        :param total_backup_storage_size_in_gbs:
+            The value to assign to the total_backup_storage_size_in_gbs property of this AutonomousDatabase.
+        :type total_backup_storage_size_in_gbs: float
 
         :param ocpu_count:
             The value to assign to the ocpu_count property of this AutonomousDatabase.
@@ -578,7 +628,7 @@ class AutonomousDatabase(object):
 
         :param role:
             The value to assign to the role property of this AutonomousDatabase.
-            Allowed values for this property are: "PRIMARY", "STANDBY", "DISABLED_STANDBY", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for this property are: "PRIMARY", "STANDBY", "DISABLED_STANDBY", "BACKUP_COPY", "SNAPSHOT_STANDBY", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type role: str
 
@@ -664,6 +714,28 @@ class AutonomousDatabase(object):
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type database_edition: str
 
+        :param db_tools_details:
+            The value to assign to the db_tools_details property of this AutonomousDatabase.
+        :type db_tools_details: list[oci.database.models.DatabaseTool]
+
+        :param local_disaster_recovery_type:
+            The value to assign to the local_disaster_recovery_type property of this AutonomousDatabase.
+        :type local_disaster_recovery_type: str
+
+        :param disaster_recovery_region_type:
+            The value to assign to the disaster_recovery_region_type property of this AutonomousDatabase.
+            Allowed values for this property are: "PRIMARY", "REMOTE", 'UNKNOWN_ENUM_VALUE'.
+            Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
+        :type disaster_recovery_region_type: str
+
+        :param time_disaster_recovery_role_changed:
+            The value to assign to the time_disaster_recovery_role_changed property of this AutonomousDatabase.
+        :type time_disaster_recovery_role_changed: datetime
+
+        :param remote_disaster_recovery_configuration:
+            The value to assign to the remote_disaster_recovery_configuration property of this AutonomousDatabase.
+        :type remote_disaster_recovery_configuration: oci.database.models.DisasterRecoveryConfiguration
+
         """
         self.swagger_types = {
             'id': 'str',
@@ -677,6 +749,8 @@ class AutonomousDatabase(object):
             'db_name': 'str',
             'character_set': 'str',
             'ncharacter_set': 'str',
+            'next_long_term_backup_time_stamp': 'datetime',
+            'long_term_backup_schedule': 'LongTermBackUpScheduleDetails',
             'is_free_tier': 'bool',
             'system_tags': 'dict(str, dict(str, object))',
             'time_reclamation_of_free_autonomous_database': 'datetime',
@@ -684,6 +758,10 @@ class AutonomousDatabase(object):
             'backup_config': 'AutonomousDatabaseBackupConfig',
             'key_history_entry': 'list[AutonomousDatabaseKeyHistoryEntry]',
             'cpu_core_count': 'int',
+            'compute_model': 'str',
+            'compute_count': 'float',
+            'backup_retention_period_in_days': 'int',
+            'total_backup_storage_size_in_gbs': 'float',
             'ocpu_count': 'float',
             'provisionable_cpus': 'list[float]',
             'data_storage_size_in_tbs': 'int',
@@ -756,7 +834,12 @@ class AutonomousDatabase(object):
             'allocated_storage_size_in_tbs': 'float',
             'actual_used_data_storage_size_in_tbs': 'float',
             'max_cpu_core_count': 'int',
-            'database_edition': 'str'
+            'database_edition': 'str',
+            'db_tools_details': 'list[DatabaseTool]',
+            'local_disaster_recovery_type': 'str',
+            'disaster_recovery_region_type': 'str',
+            'time_disaster_recovery_role_changed': 'datetime',
+            'remote_disaster_recovery_configuration': 'DisasterRecoveryConfiguration'
         }
 
         self.attribute_map = {
@@ -771,6 +854,8 @@ class AutonomousDatabase(object):
             'db_name': 'dbName',
             'character_set': 'characterSet',
             'ncharacter_set': 'ncharacterSet',
+            'next_long_term_backup_time_stamp': 'nextLongTermBackupTimeStamp',
+            'long_term_backup_schedule': 'longTermBackupSchedule',
             'is_free_tier': 'isFreeTier',
             'system_tags': 'systemTags',
             'time_reclamation_of_free_autonomous_database': 'timeReclamationOfFreeAutonomousDatabase',
@@ -778,6 +863,10 @@ class AutonomousDatabase(object):
             'backup_config': 'backupConfig',
             'key_history_entry': 'keyHistoryEntry',
             'cpu_core_count': 'cpuCoreCount',
+            'compute_model': 'computeModel',
+            'compute_count': 'computeCount',
+            'backup_retention_period_in_days': 'backupRetentionPeriodInDays',
+            'total_backup_storage_size_in_gbs': 'totalBackupStorageSizeInGBs',
             'ocpu_count': 'ocpuCount',
             'provisionable_cpus': 'provisionableCpus',
             'data_storage_size_in_tbs': 'dataStorageSizeInTBs',
@@ -850,7 +939,12 @@ class AutonomousDatabase(object):
             'allocated_storage_size_in_tbs': 'allocatedStorageSizeInTBs',
             'actual_used_data_storage_size_in_tbs': 'actualUsedDataStorageSizeInTBs',
             'max_cpu_core_count': 'maxCpuCoreCount',
-            'database_edition': 'databaseEdition'
+            'database_edition': 'databaseEdition',
+            'db_tools_details': 'dbToolsDetails',
+            'local_disaster_recovery_type': 'localDisasterRecoveryType',
+            'disaster_recovery_region_type': 'disasterRecoveryRegionType',
+            'time_disaster_recovery_role_changed': 'timeDisasterRecoveryRoleChanged',
+            'remote_disaster_recovery_configuration': 'remoteDisasterRecoveryConfiguration'
         }
 
         self._id = None
@@ -864,6 +958,8 @@ class AutonomousDatabase(object):
         self._db_name = None
         self._character_set = None
         self._ncharacter_set = None
+        self._next_long_term_backup_time_stamp = None
+        self._long_term_backup_schedule = None
         self._is_free_tier = None
         self._system_tags = None
         self._time_reclamation_of_free_autonomous_database = None
@@ -871,6 +967,10 @@ class AutonomousDatabase(object):
         self._backup_config = None
         self._key_history_entry = None
         self._cpu_core_count = None
+        self._compute_model = None
+        self._compute_count = None
+        self._backup_retention_period_in_days = None
+        self._total_backup_storage_size_in_gbs = None
         self._ocpu_count = None
         self._provisionable_cpus = None
         self._data_storage_size_in_tbs = None
@@ -944,6 +1044,11 @@ class AutonomousDatabase(object):
         self._actual_used_data_storage_size_in_tbs = None
         self._max_cpu_core_count = None
         self._database_edition = None
+        self._db_tools_details = None
+        self._local_disaster_recovery_type = None
+        self._disaster_recovery_region_type = None
+        self._time_disaster_recovery_role_changed = None
+        self._remote_disaster_recovery_configuration = None
 
     @property
     def id(self):
@@ -1236,10 +1341,56 @@ class AutonomousDatabase(object):
         self._ncharacter_set = ncharacter_set
 
     @property
+    def next_long_term_backup_time_stamp(self):
+        """
+        Gets the next_long_term_backup_time_stamp of this AutonomousDatabase.
+        The date and time when the next long-term backup would be created.
+
+
+        :return: The next_long_term_backup_time_stamp of this AutonomousDatabase.
+        :rtype: datetime
+        """
+        return self._next_long_term_backup_time_stamp
+
+    @next_long_term_backup_time_stamp.setter
+    def next_long_term_backup_time_stamp(self, next_long_term_backup_time_stamp):
+        """
+        Sets the next_long_term_backup_time_stamp of this AutonomousDatabase.
+        The date and time when the next long-term backup would be created.
+
+
+        :param next_long_term_backup_time_stamp: The next_long_term_backup_time_stamp of this AutonomousDatabase.
+        :type: datetime
+        """
+        self._next_long_term_backup_time_stamp = next_long_term_backup_time_stamp
+
+    @property
+    def long_term_backup_schedule(self):
+        """
+        Gets the long_term_backup_schedule of this AutonomousDatabase.
+
+        :return: The long_term_backup_schedule of this AutonomousDatabase.
+        :rtype: oci.database.models.LongTermBackUpScheduleDetails
+        """
+        return self._long_term_backup_schedule
+
+    @long_term_backup_schedule.setter
+    def long_term_backup_schedule(self, long_term_backup_schedule):
+        """
+        Sets the long_term_backup_schedule of this AutonomousDatabase.
+
+        :param long_term_backup_schedule: The long_term_backup_schedule of this AutonomousDatabase.
+        :type: oci.database.models.LongTermBackUpScheduleDetails
+        """
+        self._long_term_backup_schedule = long_term_backup_schedule
+
+    @property
     def is_free_tier(self):
         """
         Gets the is_free_tier of this AutonomousDatabase.
         Indicates if this is an Always Free resource. The default value is false. Note that Always Free Autonomous Databases have 1 CPU and 20GB of memory. For Always Free databases, memory and CPU cannot be scaled.
+
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isLocalDataGuardEnabled
 
 
         :return: The is_free_tier of this AutonomousDatabase.
@@ -1252,6 +1403,8 @@ class AutonomousDatabase(object):
         """
         Sets the is_free_tier of this AutonomousDatabase.
         Indicates if this is an Always Free resource. The default value is false. Note that Always Free Autonomous Databases have 1 CPU and 20GB of memory. For Always Free databases, memory and CPU cannot be scaled.
+
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isLocalDataGuardEnabled
 
 
         :param is_free_tier: The is_free_tier of this AutonomousDatabase.
@@ -1384,7 +1537,7 @@ class AutonomousDatabase(object):
     @property
     def cpu_core_count(self):
         """
-        **[Required]** Gets the cpu_core_count of this AutonomousDatabase.
+        Gets the cpu_core_count of this AutonomousDatabase.
         The number of OCPU cores to be made available to the database. When the ECPU is selected, the value for cpuCoreCount is 0. For Autonomous Databases on dedicated Exadata infrastructure, the maximum number of cores is determined by the infrastructure shape. See `Characteristics of Infrastructure Shapes`__ for shape details.
 
         **Note:** This parameter cannot be used with the `ocpuCount` parameter.
@@ -1412,6 +1565,110 @@ class AutonomousDatabase(object):
         :type: int
         """
         self._cpu_core_count = cpu_core_count
+
+    @property
+    def compute_model(self):
+        """
+        Gets the compute_model of this AutonomousDatabase.
+        The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value.
+
+        Allowed values for this property are: "ECPU", "OCPU", 'UNKNOWN_ENUM_VALUE'.
+        Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
+
+
+        :return: The compute_model of this AutonomousDatabase.
+        :rtype: str
+        """
+        return self._compute_model
+
+    @compute_model.setter
+    def compute_model(self, compute_model):
+        """
+        Sets the compute_model of this AutonomousDatabase.
+        The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value.
+
+
+        :param compute_model: The compute_model of this AutonomousDatabase.
+        :type: str
+        """
+        allowed_values = ["ECPU", "OCPU"]
+        if not value_allowed_none_or_none_sentinel(compute_model, allowed_values):
+            compute_model = 'UNKNOWN_ENUM_VALUE'
+        self._compute_model = compute_model
+
+    @property
+    def compute_count(self):
+        """
+        Gets the compute_count of this AutonomousDatabase.
+        The compute amount available to the database. Minimum and maximum values depend on the compute model and whether the database is on Shared or Dedicated infrastructure.
+        For an Autonomous Database on Shared infrastructure, the 'ECPU' compute model requires values in multiples of two. Required when using the `computeModel` parameter. When using `cpuCoreCount` parameter, it is an error to specify computeCount to a non-null value.
+
+
+        :return: The compute_count of this AutonomousDatabase.
+        :rtype: float
+        """
+        return self._compute_count
+
+    @compute_count.setter
+    def compute_count(self, compute_count):
+        """
+        Sets the compute_count of this AutonomousDatabase.
+        The compute amount available to the database. Minimum and maximum values depend on the compute model and whether the database is on Shared or Dedicated infrastructure.
+        For an Autonomous Database on Shared infrastructure, the 'ECPU' compute model requires values in multiples of two. Required when using the `computeModel` parameter. When using `cpuCoreCount` parameter, it is an error to specify computeCount to a non-null value.
+
+
+        :param compute_count: The compute_count of this AutonomousDatabase.
+        :type: float
+        """
+        self._compute_count = compute_count
+
+    @property
+    def backup_retention_period_in_days(self):
+        """
+        Gets the backup_retention_period_in_days of this AutonomousDatabase.
+        Retention period, in days, for long-term backups
+
+
+        :return: The backup_retention_period_in_days of this AutonomousDatabase.
+        :rtype: int
+        """
+        return self._backup_retention_period_in_days
+
+    @backup_retention_period_in_days.setter
+    def backup_retention_period_in_days(self, backup_retention_period_in_days):
+        """
+        Sets the backup_retention_period_in_days of this AutonomousDatabase.
+        Retention period, in days, for long-term backups
+
+
+        :param backup_retention_period_in_days: The backup_retention_period_in_days of this AutonomousDatabase.
+        :type: int
+        """
+        self._backup_retention_period_in_days = backup_retention_period_in_days
+
+    @property
+    def total_backup_storage_size_in_gbs(self):
+        """
+        Gets the total_backup_storage_size_in_gbs of this AutonomousDatabase.
+        The backup storage to the database.
+
+
+        :return: The total_backup_storage_size_in_gbs of this AutonomousDatabase.
+        :rtype: float
+        """
+        return self._total_backup_storage_size_in_gbs
+
+    @total_backup_storage_size_in_gbs.setter
+    def total_backup_storage_size_in_gbs(self, total_backup_storage_size_in_gbs):
+        """
+        Sets the total_backup_storage_size_in_gbs of this AutonomousDatabase.
+        The backup storage to the database.
+
+
+        :param total_backup_storage_size_in_gbs: The total_backup_storage_size_in_gbs of this AutonomousDatabase.
+        :type: float
+        """
+        self._total_backup_storage_size_in_gbs = total_backup_storage_size_in_gbs
 
     @property
     def ocpu_count(self):
@@ -1509,7 +1766,7 @@ class AutonomousDatabase(object):
     def memory_per_oracle_compute_unit_in_gbs(self):
         """
         Gets the memory_per_oracle_compute_unit_in_gbs of this AutonomousDatabase.
-        The amount of memory (in GBs) enabled per each OCPU core in Autonomous VM Cluster.
+        The amount of memory (in GBs) enabled per each CPU in the Autonomous VM Cluster.
 
 
         :return: The memory_per_oracle_compute_unit_in_gbs of this AutonomousDatabase.
@@ -1521,7 +1778,7 @@ class AutonomousDatabase(object):
     def memory_per_oracle_compute_unit_in_gbs(self, memory_per_oracle_compute_unit_in_gbs):
         """
         Sets the memory_per_oracle_compute_unit_in_gbs of this AutonomousDatabase.
-        The amount of memory (in GBs) enabled per each OCPU core in Autonomous VM Cluster.
+        The amount of memory (in GBs) enabled per each CPU in the Autonomous VM Cluster.
 
 
         :param memory_per_oracle_compute_unit_in_gbs: The memory_per_oracle_compute_unit_in_gbs of this AutonomousDatabase.
@@ -1764,6 +2021,8 @@ class AutonomousDatabase(object):
         Note that when provisioning an Autonomous Database on `dedicated Exadata infrastructure`__, this attribute must be null because the attribute is already set at the
         Autonomous Exadata Infrastructure level. When using `shared Exadata infrastructure`__, if a value is not specified, the system will supply the value of `BRING_YOUR_OWN_LICENSE`.
 
+        This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
 
@@ -1784,6 +2043,8 @@ class AutonomousDatabase(object):
         License Included allows you to subscribe to new Oracle Database software licenses and the Database service.
         Note that when provisioning an Autonomous Database on `dedicated Exadata infrastructure`__, this attribute must be null because the attribute is already set at the
         Autonomous Exadata Infrastructure level. When using `shared Exadata infrastructure`__, if a value is not specified, the system will supply the value of `BRING_YOUR_OWN_LICENSE`.
+
+        This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
 
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
@@ -1993,7 +2254,9 @@ class AutonomousDatabase(object):
     def private_endpoint_label(self):
         """
         Gets the private_endpoint_label of this AutonomousDatabase.
-        The private endpoint label for the resource. Setting this to an empty string, after the private endpoint database gets created, will change the same private endpoint database to the public endpoint database.
+        The resource's private endpoint label. Setting this to an empty string, after the creation of the private endpoint database, changes the private endpoint database to a public endpoint database.
+
+        This setting cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, dbWorkload, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
 
 
         :return: The private_endpoint_label of this AutonomousDatabase.
@@ -2005,7 +2268,9 @@ class AutonomousDatabase(object):
     def private_endpoint_label(self, private_endpoint_label):
         """
         Sets the private_endpoint_label of this AutonomousDatabase.
-        The private endpoint label for the resource. Setting this to an empty string, after the private endpoint database gets created, will change the same private endpoint database to the public endpoint database.
+        The resource's private endpoint label. Setting this to an empty string, after the creation of the private endpoint database, changes the private endpoint database to a public endpoint database.
+
+        This setting cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, dbWorkload, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
 
 
         :param private_endpoint_label: The private_endpoint_label of this AutonomousDatabase.
@@ -2096,6 +2361,8 @@ class AutonomousDatabase(object):
         - AJD - indicates an Autonomous JSON Database
         - APEX - indicates an Autonomous Database with the Oracle APEX Application Development workload type.
 
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
+
         Allowed values for this property are: "OLTP", "DW", "AJD", "APEX", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
 
@@ -2115,6 +2382,8 @@ class AutonomousDatabase(object):
         - DW - indicates an Autonomous Data Warehouse database
         - AJD - indicates an Autonomous JSON Database
         - APEX - indicates an Autonomous Database with the Oracle APEX Application Development workload type.
+
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
 
 
         :param db_workload: The db_workload of this AutonomousDatabase.
@@ -2176,6 +2445,8 @@ class AutonomousDatabase(object):
 
         For an update operation, if you want to delete all the IPs in the ACL, use an array with a single empty string entry.
 
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
+
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
 
 
@@ -2198,6 +2469,8 @@ class AutonomousDatabase(object):
         Example: `[\"1.1.1.1\",\"1.1.1.0/24\",\"1.1.2.25\"]`
 
         For an update operation, if you want to delete all the IPs in the ACL, use an array with a single empty string entry.
+
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
 
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
 
@@ -2250,6 +2523,8 @@ class AutonomousDatabase(object):
 
         For an update operation, if you want to delete all the IPs in the ACL, use an array with a single empty string entry.
 
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
+
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
 
 
@@ -2272,6 +2547,8 @@ class AutonomousDatabase(object):
         Example: `[\"1.1.1.1\",\"1.1.1.0/24\",\"1.1.2.25\"]`
 
         For an update operation, if you want to delete all the IPs in the ACL, use an array with a single empty string entry.
+
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
 
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
 
@@ -2471,7 +2748,9 @@ class AutonomousDatabase(object):
     def is_refreshable_clone(self):
         """
         Gets the is_refreshable_clone of this AutonomousDatabase.
-        Indicates whether the Autonomous Database is a refreshable clone.
+        Indicates if the Autonomous Database is a refreshable clone.
+
+        This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
 
 
         :return: The is_refreshable_clone of this AutonomousDatabase.
@@ -2483,7 +2762,9 @@ class AutonomousDatabase(object):
     def is_refreshable_clone(self, is_refreshable_clone):
         """
         Sets the is_refreshable_clone of this AutonomousDatabase.
-        Indicates whether the Autonomous Database is a refreshable clone.
+        Indicates if the Autonomous Database is a refreshable clone.
+
+        This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
 
 
         :param is_refreshable_clone: The is_refreshable_clone of this AutonomousDatabase.
@@ -2567,7 +2848,9 @@ class AutonomousDatabase(object):
     def open_mode(self):
         """
         Gets the open_mode of this AutonomousDatabase.
-        The `DATABASE OPEN` mode. You can open the database in `READ_ONLY` or `READ_WRITE` mode.
+        Indicates the Autonomous Database mode. The database can be opened in `READ_ONLY` or `READ_WRITE` mode.
+
+        This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
 
         Allowed values for this property are: "READ_ONLY", "READ_WRITE", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
@@ -2582,7 +2865,9 @@ class AutonomousDatabase(object):
     def open_mode(self, open_mode):
         """
         Sets the open_mode of this AutonomousDatabase.
-        The `DATABASE OPEN` mode. You can open the database in `READ_ONLY` or `READ_WRITE` mode.
+        Indicates the Autonomous Database mode. The database can be opened in `READ_ONLY` or `READ_WRITE` mode.
+
+        This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
 
 
         :param open_mode: The open_mode of this AutonomousDatabase.
@@ -2685,7 +2970,9 @@ class AutonomousDatabase(object):
     def permission_level(self):
         """
         Gets the permission_level of this AutonomousDatabase.
-        The Autonomous Database permission level. Restricted mode allows access only to admin users.
+        The Autonomous Database permission level. Restricted mode allows access only by admin users.
+
+        This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
 
         Allowed values for this property are: "RESTRICTED", "UNRESTRICTED", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
@@ -2700,7 +2987,9 @@ class AutonomousDatabase(object):
     def permission_level(self, permission_level):
         """
         Sets the permission_level of this AutonomousDatabase.
-        The Autonomous Database permission level. Restricted mode allows access only to admin users.
+        The Autonomous Database permission level. Restricted mode allows access only by admin users.
+
+        This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
 
 
         :param permission_level: The permission_level of this AutonomousDatabase.
@@ -2905,7 +3194,7 @@ class AutonomousDatabase(object):
         Gets the role of this AutonomousDatabase.
         The Data Guard role of the Autonomous Container Database or Autonomous Database, if Autonomous Data Guard is enabled.
 
-        Allowed values for this property are: "PRIMARY", "STANDBY", "DISABLED_STANDBY", 'UNKNOWN_ENUM_VALUE'.
+        Allowed values for this property are: "PRIMARY", "STANDBY", "DISABLED_STANDBY", "BACKUP_COPY", "SNAPSHOT_STANDBY", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
 
 
@@ -2924,7 +3213,7 @@ class AutonomousDatabase(object):
         :param role: The role of this AutonomousDatabase.
         :type: str
         """
-        allowed_values = ["PRIMARY", "STANDBY", "DISABLED_STANDBY"]
+        allowed_values = ["PRIMARY", "STANDBY", "DISABLED_STANDBY", "BACKUP_COPY", "SNAPSHOT_STANDBY"]
         if not value_allowed_none_or_none_sentinel(role, allowed_values):
             role = 'UNKNOWN_ENUM_VALUE'
         self._role = role
@@ -3163,7 +3452,17 @@ class AutonomousDatabase(object):
     def is_mtls_connection_required(self):
         """
         Gets the is_mtls_connection_required of this AutonomousDatabase.
-        Indicates whether the Autonomous Database requires mTLS connections.
+        Specifies if the Autonomous Database requires mTLS connections.
+
+        This may not be updated in parallel with any of the following: licenseModel, databaseEdition, cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, whitelistedIps, openMode, permissionLevel, db-workload, privateEndpointLabel, nsgIds, customerContacts, dbVersion, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
+
+        Service Change: The default value of the isMTLSConnectionRequired attribute will change from true to false on July 1, 2023 in the following APIs:
+        - CreateAutonomousDatabase
+        - GetAutonomousDatabase
+        - UpdateAutonomousDatabase
+        Details: Prior to the July 1, 2023 change, the isMTLSConnectionRequired attribute default value was true. This applies to Autonomous Databases on shared Exadata infrastructure.
+        Does this impact me? If you use or maintain custom scripts or Terraform scripts referencing the CreateAutonomousDatabase, GetAutonomousDatabase, or UpdateAutonomousDatabase APIs, you want to check, and possibly modify, the scripts for the changed default value of the attribute. Should you choose not to leave your scripts unchanged, the API calls containing this attribute will continue to work, but the default value will switch from true to false.
+        How do I make this change? Using either OCI SDKs or command line tools, update your custom scripts to explicitly set the isMTLSConnectionRequired attribute to true.
 
 
         :return: The is_mtls_connection_required of this AutonomousDatabase.
@@ -3175,7 +3474,17 @@ class AutonomousDatabase(object):
     def is_mtls_connection_required(self, is_mtls_connection_required):
         """
         Sets the is_mtls_connection_required of this AutonomousDatabase.
-        Indicates whether the Autonomous Database requires mTLS connections.
+        Specifies if the Autonomous Database requires mTLS connections.
+
+        This may not be updated in parallel with any of the following: licenseModel, databaseEdition, cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, whitelistedIps, openMode, permissionLevel, db-workload, privateEndpointLabel, nsgIds, customerContacts, dbVersion, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
+
+        Service Change: The default value of the isMTLSConnectionRequired attribute will change from true to false on July 1, 2023 in the following APIs:
+        - CreateAutonomousDatabase
+        - GetAutonomousDatabase
+        - UpdateAutonomousDatabase
+        Details: Prior to the July 1, 2023 change, the isMTLSConnectionRequired attribute default value was true. This applies to Autonomous Databases on shared Exadata infrastructure.
+        Does this impact me? If you use or maintain custom scripts or Terraform scripts referencing the CreateAutonomousDatabase, GetAutonomousDatabase, or UpdateAutonomousDatabase APIs, you want to check, and possibly modify, the scripts for the changed default value of the attribute. Should you choose not to leave your scripts unchanged, the API calls containing this attribute will continue to work, but the default value will switch from true to false.
+        How do I make this change? Using either OCI SDKs or command line tools, update your custom scripts to explicitly set the isMTLSConnectionRequired attribute to true.
 
 
         :param is_mtls_connection_required: The is_mtls_connection_required of this AutonomousDatabase.
@@ -3267,7 +3576,9 @@ class AutonomousDatabase(object):
     def scheduled_operations(self):
         """
         Gets the scheduled_operations of this AutonomousDatabase.
-        list of scheduled operations
+        The list of scheduled operations.
+
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
 
 
         :return: The scheduled_operations of this AutonomousDatabase.
@@ -3279,7 +3590,9 @@ class AutonomousDatabase(object):
     def scheduled_operations(self, scheduled_operations):
         """
         Sets the scheduled_operations of this AutonomousDatabase.
-        list of scheduled operations
+        The list of scheduled operations.
+
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
 
 
         :param scheduled_operations: The scheduled_operations of this AutonomousDatabase.
@@ -3416,6 +3729,136 @@ class AutonomousDatabase(object):
         if not value_allowed_none_or_none_sentinel(database_edition, allowed_values):
             database_edition = 'UNKNOWN_ENUM_VALUE'
         self._database_edition = database_edition
+
+    @property
+    def db_tools_details(self):
+        """
+        Gets the db_tools_details of this AutonomousDatabase.
+        The list of database tools details.
+
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, isLocalDataGuardEnabled, or isFreeTier.
+
+
+        :return: The db_tools_details of this AutonomousDatabase.
+        :rtype: list[oci.database.models.DatabaseTool]
+        """
+        return self._db_tools_details
+
+    @db_tools_details.setter
+    def db_tools_details(self, db_tools_details):
+        """
+        Sets the db_tools_details of this AutonomousDatabase.
+        The list of database tools details.
+
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, isLocalDataGuardEnabled, or isFreeTier.
+
+
+        :param db_tools_details: The db_tools_details of this AutonomousDatabase.
+        :type: list[oci.database.models.DatabaseTool]
+        """
+        self._db_tools_details = db_tools_details
+
+    @property
+    def local_disaster_recovery_type(self):
+        """
+        Gets the local_disaster_recovery_type of this AutonomousDatabase.
+        Indicates the local disaster recovery (DR) type of the Shared Autonomous Database.
+        Autonomous Data Guard (ADG) DR type provides business critical DR with a faster recovery time objective (RTO) during failover or switchover.
+        Backup-based DR type provides lower cost DR with a slower RTO during failover or switchover.
+
+
+        :return: The local_disaster_recovery_type of this AutonomousDatabase.
+        :rtype: str
+        """
+        return self._local_disaster_recovery_type
+
+    @local_disaster_recovery_type.setter
+    def local_disaster_recovery_type(self, local_disaster_recovery_type):
+        """
+        Sets the local_disaster_recovery_type of this AutonomousDatabase.
+        Indicates the local disaster recovery (DR) type of the Shared Autonomous Database.
+        Autonomous Data Guard (ADG) DR type provides business critical DR with a faster recovery time objective (RTO) during failover or switchover.
+        Backup-based DR type provides lower cost DR with a slower RTO during failover or switchover.
+
+
+        :param local_disaster_recovery_type: The local_disaster_recovery_type of this AutonomousDatabase.
+        :type: str
+        """
+        self._local_disaster_recovery_type = local_disaster_recovery_type
+
+    @property
+    def disaster_recovery_region_type(self):
+        """
+        Gets the disaster_recovery_region_type of this AutonomousDatabase.
+        The disaster recovery (DR) region type of the Autonomous Database. For Shared Autonomous Databases, DR associations have designated primary and standby regions. These region types do not change when the database changes roles. The standby region in DR associations can be the same region as the primary region, or they can be in a remote regions. Some database administration operations may be available only in the primary region of the DR association, and cannot be performed when the database using the primary role is operating in a remote region.
+
+        Allowed values for this property are: "PRIMARY", "REMOTE", 'UNKNOWN_ENUM_VALUE'.
+        Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
+
+
+        :return: The disaster_recovery_region_type of this AutonomousDatabase.
+        :rtype: str
+        """
+        return self._disaster_recovery_region_type
+
+    @disaster_recovery_region_type.setter
+    def disaster_recovery_region_type(self, disaster_recovery_region_type):
+        """
+        Sets the disaster_recovery_region_type of this AutonomousDatabase.
+        The disaster recovery (DR) region type of the Autonomous Database. For Shared Autonomous Databases, DR associations have designated primary and standby regions. These region types do not change when the database changes roles. The standby region in DR associations can be the same region as the primary region, or they can be in a remote regions. Some database administration operations may be available only in the primary region of the DR association, and cannot be performed when the database using the primary role is operating in a remote region.
+
+
+        :param disaster_recovery_region_type: The disaster_recovery_region_type of this AutonomousDatabase.
+        :type: str
+        """
+        allowed_values = ["PRIMARY", "REMOTE"]
+        if not value_allowed_none_or_none_sentinel(disaster_recovery_region_type, allowed_values):
+            disaster_recovery_region_type = 'UNKNOWN_ENUM_VALUE'
+        self._disaster_recovery_region_type = disaster_recovery_region_type
+
+    @property
+    def time_disaster_recovery_role_changed(self):
+        """
+        Gets the time_disaster_recovery_role_changed of this AutonomousDatabase.
+        The date and time the Disaster Recovery role was switched for the standby Autonomous Database.
+
+
+        :return: The time_disaster_recovery_role_changed of this AutonomousDatabase.
+        :rtype: datetime
+        """
+        return self._time_disaster_recovery_role_changed
+
+    @time_disaster_recovery_role_changed.setter
+    def time_disaster_recovery_role_changed(self, time_disaster_recovery_role_changed):
+        """
+        Sets the time_disaster_recovery_role_changed of this AutonomousDatabase.
+        The date and time the Disaster Recovery role was switched for the standby Autonomous Database.
+
+
+        :param time_disaster_recovery_role_changed: The time_disaster_recovery_role_changed of this AutonomousDatabase.
+        :type: datetime
+        """
+        self._time_disaster_recovery_role_changed = time_disaster_recovery_role_changed
+
+    @property
+    def remote_disaster_recovery_configuration(self):
+        """
+        Gets the remote_disaster_recovery_configuration of this AutonomousDatabase.
+
+        :return: The remote_disaster_recovery_configuration of this AutonomousDatabase.
+        :rtype: oci.database.models.DisasterRecoveryConfiguration
+        """
+        return self._remote_disaster_recovery_configuration
+
+    @remote_disaster_recovery_configuration.setter
+    def remote_disaster_recovery_configuration(self, remote_disaster_recovery_configuration):
+        """
+        Sets the remote_disaster_recovery_configuration of this AutonomousDatabase.
+
+        :param remote_disaster_recovery_configuration: The remote_disaster_recovery_configuration of this AutonomousDatabase.
+        :type: oci.database.models.DisasterRecoveryConfiguration
+        """
+        self._remote_disaster_recovery_configuration = remote_disaster_recovery_configuration
 
     def __repr__(self):
         return formatted_flat_dict(self)

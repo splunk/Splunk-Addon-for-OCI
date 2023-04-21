@@ -51,6 +51,7 @@ from .build_run_progress_summary import BuildRunProgressSummary
 from .build_run_source import BuildRunSource
 from .build_run_summary import BuildRunSummary
 from .build_run_summary_collection import BuildRunSummaryCollection
+from .build_runner_shape_config import BuildRunnerShapeConfig
 from .build_source import BuildSource
 from .build_source_collection import BuildSourceCollection
 from .build_stage import BuildStage
@@ -95,6 +96,9 @@ from .compute_instance_group_selector_collection import ComputeInstanceGroupSele
 from .connection import Connection
 from .connection_collection import ConnectionCollection
 from .connection_summary import ConnectionSummary
+from .connection_validation_result import ConnectionValidationResult
+from .container_config import ContainerConfig
+from .container_instance_config import ContainerInstanceConfig
 from .container_registry_delivered_artifact import ContainerRegistryDeliveredArtifact
 from .count_based_approval_policy import CountBasedApprovalPolicy
 from .create_absolute_wait_criteria_details import CreateAbsoluteWaitCriteriaDetails
@@ -144,6 +148,7 @@ from .create_oke_deploy_stage_details import CreateOkeDeployStageDetails
 from .create_oke_helm_chart_deploy_stage_details import CreateOkeHelmChartDeployStageDetails
 from .create_project_details import CreateProjectDetails
 from .create_repository_details import CreateRepositoryDetails
+from .create_shell_deploy_stage_details import CreateShellDeployStageDetails
 from .create_single_deploy_stage_deployment_details import CreateSingleDeployStageDeploymentDetails
 from .create_single_deploy_stage_redeployment_details import CreateSingleDeployStageRedeploymentDetails
 from .create_trigger_deployment_stage_details import CreateTriggerDeploymentStageDetails
@@ -153,6 +158,8 @@ from .create_vbs_trigger_details import CreateVbsTriggerDetails
 from .create_wait_criteria_details import CreateWaitCriteriaDetails
 from .create_wait_deploy_stage_details import CreateWaitDeployStageDetails
 from .create_wait_stage_details import CreateWaitStageDetails
+from .custom_build_runner_shape_config import CustomBuildRunnerShapeConfig
+from .default_build_runner_shape_config import DefaultBuildRunnerShapeConfig
 from .deliver_artifact import DeliverArtifact
 from .deliver_artifact_collection import DeliverArtifactCollection
 from .deliver_artifact_stage import DeliverArtifactStage
@@ -260,7 +267,10 @@ from .gitlab_trigger import GitlabTrigger
 from .gitlab_trigger_create_result import GitlabTriggerCreateResult
 from .gitlab_trigger_summary import GitlabTriggerSummary
 from .helm_repository_deploy_artifact_source import HelmRepositoryDeployArtifactSource
+from .helm_set_value import HelmSetValue
+from .helm_set_value_collection import HelmSetValueCollection
 from .inline_deploy_artifact_source import InlineDeployArtifactSource
+from .inline_public_key_verification_key_source import InlinePublicKeyVerificationKeySource
 from .invoke_function_deploy_stage import InvokeFunctionDeployStage
 from .invoke_function_deploy_stage_execution_progress import InvokeFunctionDeployStageExecutionProgress
 from .invoke_function_deploy_stage_summary import InvokeFunctionDeployStageSummary
@@ -278,6 +288,7 @@ from .network_channel import NetworkChannel
 from .nginx_blue_green_strategy import NginxBlueGreenStrategy
 from .nginx_canary_strategy import NginxCanaryStrategy
 from .no_deploy_stage_rollback_policy import NoDeployStageRollbackPolicy
+from .none_verification_key_source import NoneVerificationKeySource
 from .notification_config import NotificationConfig
 from .ocir_deploy_artifact_source import OcirDeployArtifactSource
 from .oke_blue_green_deploy_stage import OkeBlueGreenDeployStage
@@ -335,6 +346,10 @@ from .repository_summary import RepositorySummary
 from .repository_tag import RepositoryTag
 from .repository_tag_summary import RepositoryTagSummary
 from .service_vnic_channel import ServiceVnicChannel
+from .shape_config import ShapeConfig
+from .shell_deploy_stage import ShellDeployStage
+from .shell_deploy_stage_execution_progress import ShellDeployStageExecutionProgress
+from .shell_deploy_stage_summary import ShellDeployStageSummary
 from .single_deploy_stage_deployment import SingleDeployStageDeployment
 from .single_deploy_stage_deployment_summary import SingleDeployStageDeploymentSummary
 from .single_deploy_stage_redeployment import SingleDeployStageRedeployment
@@ -398,6 +413,7 @@ from .update_oke_deploy_stage_details import UpdateOkeDeployStageDetails
 from .update_oke_helm_chart_deploy_stage_details import UpdateOkeHelmChartDeployStageDetails
 from .update_project_details import UpdateProjectDetails
 from .update_repository_details import UpdateRepositoryDetails
+from .update_shell_deploy_stage_details import UpdateShellDeployStageDetails
 from .update_single_deploy_stage_deployment_details import UpdateSingleDeployStageDeploymentDetails
 from .update_single_deploy_stage_redeployment_details import UpdateSingleDeployStageRedeploymentDetails
 from .update_trigger_deployment_stage_details import UpdateTriggerDeploymentStageDetails
@@ -407,6 +423,7 @@ from .update_vbs_trigger_details import UpdateVbsTriggerDetails
 from .update_wait_criteria_details import UpdateWaitCriteriaDetails
 from .update_wait_deploy_stage_details import UpdateWaitDeployStageDetails
 from .update_wait_stage_details import UpdateWaitStageDetails
+from .vault_secret_verification_key_source import VaultSecretVerificationKeySource
 from .vbs_access_token_connection import VbsAccessTokenConnection
 from .vbs_access_token_connection_summary import VbsAccessTokenConnectionSummary
 from .vbs_build_run_source import VbsBuildRunSource
@@ -417,6 +434,7 @@ from .vbs_filter_exclusion_attributes import VbsFilterExclusionAttributes
 from .vbs_trigger import VbsTrigger
 from .vbs_trigger_create_result import VbsTriggerCreateResult
 from .vbs_trigger_summary import VbsTriggerSummary
+from .verification_key_source import VerificationKeySource
 from .vulnerability_audit_summary import VulnerabilityAuditSummary
 from .vulnerability_audit_summary_collection import VulnerabilityAuditSummaryCollection
 from .wait_criteria import WaitCriteria
@@ -485,6 +503,7 @@ devops_type_mapping = {
     "BuildRunSource": BuildRunSource,
     "BuildRunSummary": BuildRunSummary,
     "BuildRunSummaryCollection": BuildRunSummaryCollection,
+    "BuildRunnerShapeConfig": BuildRunnerShapeConfig,
     "BuildSource": BuildSource,
     "BuildSourceCollection": BuildSourceCollection,
     "BuildStage": BuildStage,
@@ -529,6 +548,9 @@ devops_type_mapping = {
     "Connection": Connection,
     "ConnectionCollection": ConnectionCollection,
     "ConnectionSummary": ConnectionSummary,
+    "ConnectionValidationResult": ConnectionValidationResult,
+    "ContainerConfig": ContainerConfig,
+    "ContainerInstanceConfig": ContainerInstanceConfig,
     "ContainerRegistryDeliveredArtifact": ContainerRegistryDeliveredArtifact,
     "CountBasedApprovalPolicy": CountBasedApprovalPolicy,
     "CreateAbsoluteWaitCriteriaDetails": CreateAbsoluteWaitCriteriaDetails,
@@ -578,6 +600,7 @@ devops_type_mapping = {
     "CreateOkeHelmChartDeployStageDetails": CreateOkeHelmChartDeployStageDetails,
     "CreateProjectDetails": CreateProjectDetails,
     "CreateRepositoryDetails": CreateRepositoryDetails,
+    "CreateShellDeployStageDetails": CreateShellDeployStageDetails,
     "CreateSingleDeployStageDeploymentDetails": CreateSingleDeployStageDeploymentDetails,
     "CreateSingleDeployStageRedeploymentDetails": CreateSingleDeployStageRedeploymentDetails,
     "CreateTriggerDeploymentStageDetails": CreateTriggerDeploymentStageDetails,
@@ -587,6 +610,8 @@ devops_type_mapping = {
     "CreateWaitCriteriaDetails": CreateWaitCriteriaDetails,
     "CreateWaitDeployStageDetails": CreateWaitDeployStageDetails,
     "CreateWaitStageDetails": CreateWaitStageDetails,
+    "CustomBuildRunnerShapeConfig": CustomBuildRunnerShapeConfig,
+    "DefaultBuildRunnerShapeConfig": DefaultBuildRunnerShapeConfig,
     "DeliverArtifact": DeliverArtifact,
     "DeliverArtifactCollection": DeliverArtifactCollection,
     "DeliverArtifactStage": DeliverArtifactStage,
@@ -694,7 +719,10 @@ devops_type_mapping = {
     "GitlabTriggerCreateResult": GitlabTriggerCreateResult,
     "GitlabTriggerSummary": GitlabTriggerSummary,
     "HelmRepositoryDeployArtifactSource": HelmRepositoryDeployArtifactSource,
+    "HelmSetValue": HelmSetValue,
+    "HelmSetValueCollection": HelmSetValueCollection,
     "InlineDeployArtifactSource": InlineDeployArtifactSource,
+    "InlinePublicKeyVerificationKeySource": InlinePublicKeyVerificationKeySource,
     "InvokeFunctionDeployStage": InvokeFunctionDeployStage,
     "InvokeFunctionDeployStageExecutionProgress": InvokeFunctionDeployStageExecutionProgress,
     "InvokeFunctionDeployStageSummary": InvokeFunctionDeployStageSummary,
@@ -712,6 +740,7 @@ devops_type_mapping = {
     "NginxBlueGreenStrategy": NginxBlueGreenStrategy,
     "NginxCanaryStrategy": NginxCanaryStrategy,
     "NoDeployStageRollbackPolicy": NoDeployStageRollbackPolicy,
+    "NoneVerificationKeySource": NoneVerificationKeySource,
     "NotificationConfig": NotificationConfig,
     "OcirDeployArtifactSource": OcirDeployArtifactSource,
     "OkeBlueGreenDeployStage": OkeBlueGreenDeployStage,
@@ -769,6 +798,10 @@ devops_type_mapping = {
     "RepositoryTag": RepositoryTag,
     "RepositoryTagSummary": RepositoryTagSummary,
     "ServiceVnicChannel": ServiceVnicChannel,
+    "ShapeConfig": ShapeConfig,
+    "ShellDeployStage": ShellDeployStage,
+    "ShellDeployStageExecutionProgress": ShellDeployStageExecutionProgress,
+    "ShellDeployStageSummary": ShellDeployStageSummary,
     "SingleDeployStageDeployment": SingleDeployStageDeployment,
     "SingleDeployStageDeploymentSummary": SingleDeployStageDeploymentSummary,
     "SingleDeployStageRedeployment": SingleDeployStageRedeployment,
@@ -832,6 +865,7 @@ devops_type_mapping = {
     "UpdateOkeHelmChartDeployStageDetails": UpdateOkeHelmChartDeployStageDetails,
     "UpdateProjectDetails": UpdateProjectDetails,
     "UpdateRepositoryDetails": UpdateRepositoryDetails,
+    "UpdateShellDeployStageDetails": UpdateShellDeployStageDetails,
     "UpdateSingleDeployStageDeploymentDetails": UpdateSingleDeployStageDeploymentDetails,
     "UpdateSingleDeployStageRedeploymentDetails": UpdateSingleDeployStageRedeploymentDetails,
     "UpdateTriggerDeploymentStageDetails": UpdateTriggerDeploymentStageDetails,
@@ -841,6 +875,7 @@ devops_type_mapping = {
     "UpdateWaitCriteriaDetails": UpdateWaitCriteriaDetails,
     "UpdateWaitDeployStageDetails": UpdateWaitDeployStageDetails,
     "UpdateWaitStageDetails": UpdateWaitStageDetails,
+    "VaultSecretVerificationKeySource": VaultSecretVerificationKeySource,
     "VbsAccessTokenConnection": VbsAccessTokenConnection,
     "VbsAccessTokenConnectionSummary": VbsAccessTokenConnectionSummary,
     "VbsBuildRunSource": VbsBuildRunSource,
@@ -851,6 +886,7 @@ devops_type_mapping = {
     "VbsTrigger": VbsTrigger,
     "VbsTriggerCreateResult": VbsTriggerCreateResult,
     "VbsTriggerSummary": VbsTriggerSummary,
+    "VerificationKeySource": VerificationKeySource,
     "VulnerabilityAuditSummary": VulnerabilityAuditSummary,
     "VulnerabilityAuditSummaryCollection": VulnerabilityAuditSummaryCollection,
     "WaitCriteria": WaitCriteria,

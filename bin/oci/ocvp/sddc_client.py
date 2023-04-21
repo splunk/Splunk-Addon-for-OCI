@@ -149,7 +149,7 @@ class SddcClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/cancel_downgrade_hcx.py.html>`__ to see an example of how to use cancel_downgrade_hcx API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ocvp/cancel_downgrade_hcx.py.html>`__ to see an example of how to use cancel_downgrade_hcx API.
         """
         resource_path = "/sddcs/{sddcId}/actions/cancelDowngradeHcx"
         method = "POST"
@@ -270,7 +270,7 @@ class SddcClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/change_sddc_compartment.py.html>`__ to see an example of how to use change_sddc_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ocvp/change_sddc_compartment.py.html>`__ to see an example of how to use change_sddc_compartment API.
         """
         resource_path = "/sddcs/{sddcId}/actions/changeCompartment"
         method = "POST"
@@ -384,7 +384,7 @@ class SddcClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/create_sddc.py.html>`__ to see an example of how to use create_sddc API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ocvp/create_sddc.py.html>`__ to see an example of how to use create_sddc API.
         """
         resource_path = "/sddcs"
         method = "POST"
@@ -484,7 +484,7 @@ class SddcClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/delete_sddc.py.html>`__ to see an example of how to use delete_sddc API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ocvp/delete_sddc.py.html>`__ to see an example of how to use delete_sddc API.
         """
         resource_path = "/sddcs/{sddcId}"
         method = "DELETE"
@@ -601,7 +601,7 @@ class SddcClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/downgrade_hcx.py.html>`__ to see an example of how to use downgrade_hcx API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ocvp/downgrade_hcx.py.html>`__ to see an example of how to use downgrade_hcx API.
         """
         resource_path = "/sddcs/{sddcId}/actions/downgradeHcx"
         method = "POST"
@@ -703,7 +703,7 @@ class SddcClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/get_sddc.py.html>`__ to see an example of how to use get_sddc API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ocvp/get_sddc.py.html>`__ to see an example of how to use get_sddc API.
         """
         resource_path = "/sddcs/{sddcId}"
         method = "GET"
@@ -846,7 +846,7 @@ class SddcClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/list_sddcs.py.html>`__ to see an example of how to use list_sddcs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ocvp/list_sddcs.py.html>`__ to see an example of how to use list_sddcs API.
         """
         resource_path = "/sddcs"
         method = "GET"
@@ -995,7 +995,7 @@ class SddcClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/list_supported_host_shapes.py.html>`__ to see an example of how to use list_supported_host_shapes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ocvp/list_supported_host_shapes.py.html>`__ to see an example of how to use list_supported_host_shapes API.
         """
         resource_path = "/supportedHostShapes"
         method = "GET"
@@ -1116,7 +1116,7 @@ class SddcClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/list_supported_skus.py.html>`__ to see an example of how to use list_supported_skus API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ocvp/list_supported_skus.py.html>`__ to see an example of how to use list_supported_skus API.
         """
         resource_path = "/supportedSkus"
         method = "GET"
@@ -1227,7 +1227,7 @@ class SddcClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/list_supported_vmware_software_versions.py.html>`__ to see an example of how to use list_supported_vmware_software_versions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ocvp/list_supported_vmware_software_versions.py.html>`__ to see an example of how to use list_supported_vmware_software_versions API.
         """
         resource_path = "/supportedVmwareSoftwareVersions"
         method = "GET"
@@ -1337,7 +1337,7 @@ class SddcClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/refresh_hcx_license_status.py.html>`__ to see an example of how to use refresh_hcx_license_status API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ocvp/refresh_hcx_license_status.py.html>`__ to see an example of how to use refresh_hcx_license_status API.
         """
         resource_path = "/sddcs/{sddcId}/actions/refreshHcxLicenses"
         method = "POST"
@@ -1452,7 +1452,7 @@ class SddcClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/update_sddc.py.html>`__ to see an example of how to use update_sddc API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ocvp/update_sddc.py.html>`__ to see an example of how to use update_sddc API.
         """
         resource_path = "/sddcs/{sddcId}"
         method = "PUT"
@@ -1567,7 +1567,7 @@ class SddcClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ocvp/upgrade_hcx.py.html>`__ to see an example of how to use upgrade_hcx API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ocvp/upgrade_hcx.py.html>`__ to see an example of how to use upgrade_hcx API.
         """
         resource_path = "/sddcs/{sddcId}/actions/upgradeHcx"
         method = "POST"

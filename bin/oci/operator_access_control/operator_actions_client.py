@@ -134,7 +134,7 @@ class OperatorActionsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/get_operator_action.py.html>`__ to see an example of how to use get_operator_action API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/operatoraccesscontrol/get_operator_action.py.html>`__ to see an example of how to use get_operator_action API.
         """
         resource_path = "/operatorActions/{operatorActionId}"
         method = "GET"
@@ -253,7 +253,7 @@ class OperatorActionsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/operatoraccesscontrol/list_operator_actions.py.html>`__ to see an example of how to use list_operator_actions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/operatoraccesscontrol/list_operator_actions.py.html>`__ to see an example of how to use list_operator_actions API.
         """
         resource_path = "/operatorActions"
         method = "GET"

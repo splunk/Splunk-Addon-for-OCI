@@ -132,7 +132,7 @@ class StreamClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/consumer_commit.py.html>`__ to see an example of how to use consumer_commit API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/consumer_commit.py.html>`__ to see an example of how to use consumer_commit API.
         """
         resource_path = "/streams/{streamId}/commit"
         method = "POST"
@@ -237,7 +237,7 @@ class StreamClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/consumer_heartbeat.py.html>`__ to see an example of how to use consumer_heartbeat API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/consumer_heartbeat.py.html>`__ to see an example of how to use consumer_heartbeat API.
         """
         resource_path = "/streams/{streamId}/heartbeat"
         method = "POST"
@@ -346,7 +346,7 @@ class StreamClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/create_cursor.py.html>`__ to see an example of how to use create_cursor API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/create_cursor.py.html>`__ to see an example of how to use create_cursor API.
         """
         resource_path = "/streams/{streamId}/cursors"
         method = "POST"
@@ -446,7 +446,7 @@ class StreamClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/create_group_cursor.py.html>`__ to see an example of how to use create_group_cursor API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/create_group_cursor.py.html>`__ to see an example of how to use create_group_cursor API.
         """
         resource_path = "/streams/{streamId}/groupCursors"
         method = "POST"
@@ -546,7 +546,7 @@ class StreamClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/get_group.py.html>`__ to see an example of how to use get_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/get_group.py.html>`__ to see an example of how to use get_group API.
         """
         resource_path = "/streams/{streamId}/groups/{groupName}"
         method = "GET"
@@ -651,7 +651,7 @@ class StreamClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/get_messages.py.html>`__ to see an example of how to use get_messages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/get_messages.py.html>`__ to see an example of how to use get_messages API.
         """
         resource_path = "/streams/{streamId}/messages"
         method = "GET"
@@ -761,7 +761,7 @@ class StreamClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/put_messages.py.html>`__ to see an example of how to use put_messages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/put_messages.py.html>`__ to see an example of how to use put_messages API.
         """
         resource_path = "/streams/{streamId}/messages"
         method = "POST"
@@ -864,7 +864,7 @@ class StreamClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/update_group.py.html>`__ to see an example of how to use update_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/update_group.py.html>`__ to see an example of how to use update_group API.
         """
         resource_path = "/streams/{streamId}/groups/{groupName}"
         method = "PUT"

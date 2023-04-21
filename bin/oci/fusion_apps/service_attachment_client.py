@@ -134,7 +134,7 @@ class ServiceAttachmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/get_service_attachment.py.html>`__ to see an example of how to use get_service_attachment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/get_service_attachment.py.html>`__ to see an example of how to use get_service_attachment API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/serviceAttachments/{serviceAttachmentId}"
         method = "GET"
@@ -256,7 +256,7 @@ class ServiceAttachmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_service_attachments.py.html>`__ to see an example of how to use list_service_attachments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/list_service_attachments.py.html>`__ to see an example of how to use list_service_attachments API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/serviceAttachments"
         method = "GET"

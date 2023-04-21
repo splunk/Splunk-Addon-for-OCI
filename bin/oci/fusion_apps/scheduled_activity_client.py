@@ -134,7 +134,7 @@ class ScheduledActivityClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/get_scheduled_activity.py.html>`__ to see an example of how to use get_scheduled_activity API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/get_scheduled_activity.py.html>`__ to see an example of how to use get_scheduled_activity API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/scheduledActivities/{scheduledActivityId}"
         method = "GET"
@@ -262,7 +262,7 @@ class ScheduledActivityClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_scheduled_activities.py.html>`__ to see an example of how to use list_scheduled_activities API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/list_scheduled_activities.py.html>`__ to see an example of how to use list_scheduled_activities API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/scheduledActivities"
         method = "GET"

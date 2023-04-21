@@ -138,7 +138,7 @@ class OpensearchClusterBackupClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/delete_opensearch_cluster_backup.py.html>`__ to see an example of how to use delete_opensearch_cluster_backup API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/delete_opensearch_cluster_backup.py.html>`__ to see an example of how to use delete_opensearch_cluster_backup API.
         """
         resource_path = "/opensearchClusterBackups/{opensearchClusterBackupId}"
         method = "DELETE"
@@ -230,7 +230,7 @@ class OpensearchClusterBackupClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/get_opensearch_cluster_backup.py.html>`__ to see an example of how to use get_opensearch_cluster_backup API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/get_opensearch_cluster_backup.py.html>`__ to see an example of how to use get_opensearch_cluster_backup API.
         """
         resource_path = "/opensearchClusterBackups/{opensearchClusterBackupId}"
         method = "GET"
@@ -352,7 +352,7 @@ class OpensearchClusterBackupClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/list_opensearch_cluster_backups.py.html>`__ to see an example of how to use list_opensearch_cluster_backups API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/list_opensearch_cluster_backups.py.html>`__ to see an example of how to use list_opensearch_cluster_backups API.
         """
         resource_path = "/opensearchClusterBackups"
         method = "GET"
@@ -486,7 +486,7 @@ class OpensearchClusterBackupClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/update_opensearch_cluster_backup.py.html>`__ to see an example of how to use update_opensearch_cluster_backup API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/update_opensearch_cluster_backup.py.html>`__ to see an example of how to use update_opensearch_cluster_backup API.
         """
         resource_path = "/opensearchClusterBackups/{opensearchClusterBackupId}"
         method = "PUT"

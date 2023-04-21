@@ -174,7 +174,7 @@ class DiagnosabilityClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_alert_logs.py.html>`__ to see an example of how to use list_alert_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/databasemanagement/list_alert_logs.py.html>`__ to see an example of how to use list_alert_logs API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/alertLogs"
         method = "GET"
@@ -361,7 +361,7 @@ class DiagnosabilityClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/list_attention_logs.py.html>`__ to see an example of how to use list_attention_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/databasemanagement/list_attention_logs.py.html>`__ to see an example of how to use list_attention_logs API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/attentionLogs"
         method = "GET"
@@ -543,7 +543,7 @@ class DiagnosabilityClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/summarize_alert_log_counts.py.html>`__ to see an example of how to use summarize_alert_log_counts API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/databasemanagement/summarize_alert_log_counts.py.html>`__ to see an example of how to use summarize_alert_log_counts API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/alertLogCounts"
         method = "GET"
@@ -716,7 +716,7 @@ class DiagnosabilityClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/databasemanagement/summarize_attention_log_counts.py.html>`__ to see an example of how to use summarize_attention_log_counts API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/databasemanagement/summarize_attention_log_counts.py.html>`__ to see an example of how to use summarize_attention_log_counts API.
         """
         resource_path = "/managedDatabases/{managedDatabaseId}/attentionLogCounts"
         method = "GET"

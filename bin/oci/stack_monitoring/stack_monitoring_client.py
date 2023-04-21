@@ -146,7 +146,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/associate_monitored_resources.py.html>`__ to see an example of how to use associate_monitored_resources API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/associate_monitored_resources.py.html>`__ to see an example of how to use associate_monitored_resources API.
         """
         resource_path = "/monitoredResources/actions/associateMonitoredResources"
         method = "POST"
@@ -253,7 +253,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/change_monitored_resource_compartment.py.html>`__ to see an example of how to use change_monitored_resource_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/change_monitored_resource_compartment.py.html>`__ to see an example of how to use change_monitored_resource_compartment API.
         """
         resource_path = "/monitoredResources/{monitoredResourceId}/actions/changeCompartment"
         method = "POST"
@@ -358,7 +358,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/create_discovery_job.py.html>`__ to see an example of how to use create_discovery_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/create_discovery_job.py.html>`__ to see an example of how to use create_discovery_job API.
         """
         resource_path = "/discoveryJobs"
         method = "POST"
@@ -457,7 +457,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/create_monitored_resource.py.html>`__ to see an example of how to use create_monitored_resource API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/create_monitored_resource.py.html>`__ to see an example of how to use create_monitored_resource API.
         """
         resource_path = "/monitoredResources"
         method = "POST"
@@ -552,7 +552,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/delete_discovery_job.py.html>`__ to see an example of how to use delete_discovery_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/delete_discovery_job.py.html>`__ to see an example of how to use delete_discovery_job API.
         """
         resource_path = "/discoveryJobs/{discoveryJobId}"
         method = "DELETE"
@@ -659,7 +659,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/delete_monitored_resource.py.html>`__ to see an example of how to use delete_monitored_resource API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/delete_monitored_resource.py.html>`__ to see an example of how to use delete_monitored_resource API.
         """
         resource_path = "/monitoredResources/{monitoredResourceId}"
         method = "DELETE"
@@ -776,7 +776,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/disable_external_database.py.html>`__ to see an example of how to use disable_external_database API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/disable_external_database.py.html>`__ to see an example of how to use disable_external_database API.
         """
         resource_path = "/monitoredResources/{monitoredResourceId}/actions/disableExternalDatabase"
         method = "POST"
@@ -886,7 +886,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/disassociate_monitored_resources.py.html>`__ to see an example of how to use disassociate_monitored_resources API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/disassociate_monitored_resources.py.html>`__ to see an example of how to use disassociate_monitored_resources API.
         """
         resource_path = "/monitoredResources/actions/disassociateMonitoredResources"
         method = "POST"
@@ -972,7 +972,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/get_discovery_job.py.html>`__ to see an example of how to use get_discovery_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/get_discovery_job.py.html>`__ to see an example of how to use get_discovery_job API.
         """
         resource_path = "/discoveryJobs/{discoveryJobId}"
         method = "GET"
@@ -1069,7 +1069,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/get_monitored_resource.py.html>`__ to see an example of how to use get_monitored_resource API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/get_monitored_resource.py.html>`__ to see an example of how to use get_monitored_resource API.
         """
         resource_path = "/monitoredResources/{monitoredResourceId}"
         method = "GET"
@@ -1166,7 +1166,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -1290,7 +1290,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/list_discovery_job_logs.py.html>`__ to see an example of how to use list_discovery_job_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/list_discovery_job_logs.py.html>`__ to see an example of how to use list_discovery_job_logs API.
         """
         resource_path = "/discoveryJobs/{discoveryJobId}/logs"
         method = "GET"
@@ -1449,7 +1449,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/list_discovery_jobs.py.html>`__ to see an example of how to use list_discovery_jobs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/list_discovery_jobs.py.html>`__ to see an example of how to use list_discovery_jobs API.
         """
         resource_path = "/discoveryJobs"
         method = "GET"
@@ -1589,7 +1589,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -1738,7 +1738,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -1896,7 +1896,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -2073,7 +2073,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/search_associated_resources.py.html>`__ to see an example of how to use search_associated_resources API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/search_associated_resources.py.html>`__ to see an example of how to use search_associated_resources API.
         """
         resource_path = "/monitoredResources/actions/searchAssociatedResources"
         method = "POST"
@@ -2205,7 +2205,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/search_monitored_resource_associations.py.html>`__ to see an example of how to use search_monitored_resource_associations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/search_monitored_resource_associations.py.html>`__ to see an example of how to use search_monitored_resource_associations API.
         """
         resource_path = "/monitoredResources/actions/searchAssociations"
         method = "POST"
@@ -2348,7 +2348,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/search_monitored_resource_members.py.html>`__ to see an example of how to use search_monitored_resource_members API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/search_monitored_resource_members.py.html>`__ to see an example of how to use search_monitored_resource_members API.
         """
         resource_path = "/monitoredResources/{monitoredResourceId}/actions/listMembers"
         method = "POST"
@@ -2530,7 +2530,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/search_monitored_resources.py.html>`__ to see an example of how to use search_monitored_resources API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/search_monitored_resources.py.html>`__ to see an example of how to use search_monitored_resources API.
         """
         resource_path = "/monitoredResources/actions/search"
         method = "POST"
@@ -2646,7 +2646,7 @@ class StackMonitoringClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/stackmonitoring/update_monitored_resource.py.html>`__ to see an example of how to use update_monitored_resource API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/stackmonitoring/update_monitored_resource.py.html>`__ to see an example of how to use update_monitored_resource API.
         """
         resource_path = "/monitoredResources/{monitoredResourceId}"
         method = "PUT"

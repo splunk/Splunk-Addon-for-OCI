@@ -156,7 +156,7 @@ class BillingScheduleClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/onesubscription/list_billing_schedules.py.html>`__ to see an example of how to use list_billing_schedules API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/onesubscription/list_billing_schedules.py.html>`__ to see an example of how to use list_billing_schedules API.
         """
         resource_path = "/billingSchedules"
         method = "GET"

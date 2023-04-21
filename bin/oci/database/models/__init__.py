@@ -7,12 +7,16 @@ from __future__ import absolute_import
 from .activate_exadata_infrastructure_details import ActivateExadataInfrastructureDetails
 from .add_virtual_machine_to_cloud_vm_cluster_details import AddVirtualMachineToCloudVmClusterDetails
 from .add_virtual_machine_to_vm_cluster_details import AddVirtualMachineToVmClusterDetails
+from .app_version_summary import AppVersionSummary
+from .application_vip import ApplicationVip
+from .application_vip_summary import ApplicationVipSummary
 from .associated_database_details import AssociatedDatabaseDetails
 from .automated_mount_details import AutomatedMountDetails
 from .autonomous_container_database import AutonomousContainerDatabase
 from .autonomous_container_database_backup_config import AutonomousContainerDatabaseBackupConfig
 from .autonomous_container_database_dataguard_association import AutonomousContainerDatabaseDataguardAssociation
 from .autonomous_container_database_summary import AutonomousContainerDatabaseSummary
+from .autonomous_container_database_version_summary import AutonomousContainerDatabaseVersionSummary
 from .autonomous_data_warehouse import AutonomousDataWarehouse
 from .autonomous_data_warehouse_connection_strings import AutonomousDataWarehouseConnectionStrings
 from .autonomous_data_warehouse_summary import AutonomousDataWarehouseSummary
@@ -38,6 +42,8 @@ from .autonomous_exadata_infrastructure_shape_summary import AutonomousExadataIn
 from .autonomous_exadata_infrastructure_summary import AutonomousExadataInfrastructureSummary
 from .autonomous_patch import AutonomousPatch
 from .autonomous_patch_summary import AutonomousPatchSummary
+from .autonomous_virtual_machine import AutonomousVirtualMachine
+from .autonomous_virtual_machine_summary import AutonomousVirtualMachineSummary
 from .autonomous_vm_cluster import AutonomousVmCluster
 from .autonomous_vm_cluster_summary import AutonomousVmClusterSummary
 from .backup import Backup
@@ -50,6 +56,8 @@ from .change_cloud_autonomous_vm_cluster_compartment_details import ChangeCloudA
 from .change_cloud_exadata_infrastructure_compartment_details import ChangeCloudExadataInfrastructureCompartmentDetails
 from .change_cloud_vm_cluster_compartment_details import ChangeCloudVmClusterCompartmentDetails
 from .change_compartment_details import ChangeCompartmentDetails
+from .change_dataguard_role_details import ChangeDataguardRoleDetails
+from .change_disaster_recovery_configuration_details import ChangeDisasterRecoveryConfigurationDetails
 from .change_exadata_infrastructure_compartment_details import ChangeExadataInfrastructureCompartmentDetails
 from .change_key_store_compartment_details import ChangeKeyStoreCompartmentDetails
 from .change_vm_cluster_compartment_details import ChangeVmClusterCompartmentDetails
@@ -70,6 +78,7 @@ from .console_connection import ConsoleConnection
 from .console_connection_summary import ConsoleConnectionSummary
 from .convert_to_pdb_details import ConvertToPdbDetails
 from .convert_to_pdb_target_base import ConvertToPdbTargetBase
+from .create_application_vip_details import CreateApplicationVipDetails
 from .create_autonomous_container_database_details import CreateAutonomousContainerDatabaseDetails
 from .create_autonomous_database_backup_details import CreateAutonomousDatabaseBackupDetails
 from .create_autonomous_database_base import CreateAutonomousDatabaseBase
@@ -85,6 +94,7 @@ from .create_cloud_exadata_infrastructure_details import CreateCloudExadataInfra
 from .create_cloud_vm_cluster_details import CreateCloudVmClusterDetails
 from .create_console_connection_details import CreateConsoleConnectionDetails
 from .create_cross_region_autonomous_database_data_guard_details import CreateCrossRegionAutonomousDatabaseDataGuardDetails
+from .create_cross_region_disaster_recovery_details import CreateCrossRegionDisasterRecoveryDetails
 from .create_data_guard_association_details import CreateDataGuardAssociationDetails
 from .create_data_guard_association_to_existing_db_system_details import CreateDataGuardAssociationToExistingDbSystemDetails
 from .create_data_guard_association_to_existing_vm_cluster_details import CreateDataGuardAssociationToExistingVmClusterDetails
@@ -138,6 +148,7 @@ from .database_software_image import DatabaseSoftwareImage
 from .database_software_image_summary import DatabaseSoftwareImageSummary
 from .database_ssl_connection_credentials import DatabaseSslConnectionCredentials
 from .database_summary import DatabaseSummary
+from .database_tool import DatabaseTool
 from .database_upgrade_history_entry import DatabaseUpgradeHistoryEntry
 from .database_upgrade_history_entry_summary import DatabaseUpgradeHistoryEntrySummary
 from .database_upgrade_source_base import DatabaseUpgradeSourceBase
@@ -168,6 +179,7 @@ from .db_system_upgrade_history_entry import DbSystemUpgradeHistoryEntry
 from .db_system_upgrade_history_entry_summary import DbSystemUpgradeHistoryEntrySummary
 from .db_version_summary import DbVersionSummary
 from .deregister_autonomous_database_data_safe_details import DeregisterAutonomousDatabaseDataSafeDetails
+from .disaster_recovery_configuration import DisasterRecoveryConfiguration
 from .disk_performance_details import DiskPerformanceDetails
 from .enable_database_management_details import EnableDatabaseManagementDetails
 from .enable_external_container_database_database_management_details import EnableExternalContainerDatabaseDatabaseManagementDetails
@@ -223,6 +235,7 @@ from .launch_db_system_from_backup_details import LaunchDbSystemFromBackupDetail
 from .launch_db_system_from_database_details import LaunchDbSystemFromDatabaseDetails
 from .launch_db_system_from_db_system_details import LaunchDbSystemFromDbSystemDetails
 from .local_clone_pluggable_database_details import LocalClonePluggableDatabaseDetails
+from .long_term_back_up_schedule_details import LongTermBackUpScheduleDetails
 from .maintenance_run import MaintenanceRun
 from .maintenance_run_history import MaintenanceRunHistory
 from .maintenance_run_history_summary import MaintenanceRunHistorySummary
@@ -259,6 +272,8 @@ from .remove_virtual_machine_from_vm_cluster_details import RemoveVirtualMachine
 from .resize_vm_cluster_network_details import ResizeVmClusterNetworkDetails
 from .restore_autonomous_database_details import RestoreAutonomousDatabaseDetails
 from .restore_database_details import RestoreDatabaseDetails
+from .rotate_autonomous_vm_cluster_ords_certs_details import RotateAutonomousVmClusterOrdsCertsDetails
+from .rotate_autonomous_vm_cluster_ssl_certs_details import RotateAutonomousVmClusterSslCertsDetails
 from .scan_details import ScanDetails
 from .scheduled_operation_details import ScheduledOperationDetails
 from .self_mount_details import SelfMountDetails
@@ -268,6 +283,7 @@ from .switchover_data_guard_association_details import SwitchoverDataGuardAssoci
 from .update import Update
 from .update_autonomous_container_database_data_guard_association_details import UpdateAutonomousContainerDatabaseDataGuardAssociationDetails
 from .update_autonomous_container_database_details import UpdateAutonomousContainerDatabaseDetails
+from .update_autonomous_database_backup_details import UpdateAutonomousDatabaseBackupDetails
 from .update_autonomous_database_details import UpdateAutonomousDatabaseDetails
 from .update_autonomous_database_wallet_details import UpdateAutonomousDatabaseWalletDetails
 from .update_autonomous_exadata_infrastructure_details import UpdateAutonomousExadataInfrastructureDetails
@@ -317,12 +333,16 @@ database_type_mapping = {
     "ActivateExadataInfrastructureDetails": ActivateExadataInfrastructureDetails,
     "AddVirtualMachineToCloudVmClusterDetails": AddVirtualMachineToCloudVmClusterDetails,
     "AddVirtualMachineToVmClusterDetails": AddVirtualMachineToVmClusterDetails,
+    "AppVersionSummary": AppVersionSummary,
+    "ApplicationVip": ApplicationVip,
+    "ApplicationVipSummary": ApplicationVipSummary,
     "AssociatedDatabaseDetails": AssociatedDatabaseDetails,
     "AutomatedMountDetails": AutomatedMountDetails,
     "AutonomousContainerDatabase": AutonomousContainerDatabase,
     "AutonomousContainerDatabaseBackupConfig": AutonomousContainerDatabaseBackupConfig,
     "AutonomousContainerDatabaseDataguardAssociation": AutonomousContainerDatabaseDataguardAssociation,
     "AutonomousContainerDatabaseSummary": AutonomousContainerDatabaseSummary,
+    "AutonomousContainerDatabaseVersionSummary": AutonomousContainerDatabaseVersionSummary,
     "AutonomousDataWarehouse": AutonomousDataWarehouse,
     "AutonomousDataWarehouseConnectionStrings": AutonomousDataWarehouseConnectionStrings,
     "AutonomousDataWarehouseSummary": AutonomousDataWarehouseSummary,
@@ -348,6 +368,8 @@ database_type_mapping = {
     "AutonomousExadataInfrastructureSummary": AutonomousExadataInfrastructureSummary,
     "AutonomousPatch": AutonomousPatch,
     "AutonomousPatchSummary": AutonomousPatchSummary,
+    "AutonomousVirtualMachine": AutonomousVirtualMachine,
+    "AutonomousVirtualMachineSummary": AutonomousVirtualMachineSummary,
     "AutonomousVmCluster": AutonomousVmCluster,
     "AutonomousVmClusterSummary": AutonomousVmClusterSummary,
     "Backup": Backup,
@@ -360,6 +382,8 @@ database_type_mapping = {
     "ChangeCloudExadataInfrastructureCompartmentDetails": ChangeCloudExadataInfrastructureCompartmentDetails,
     "ChangeCloudVmClusterCompartmentDetails": ChangeCloudVmClusterCompartmentDetails,
     "ChangeCompartmentDetails": ChangeCompartmentDetails,
+    "ChangeDataguardRoleDetails": ChangeDataguardRoleDetails,
+    "ChangeDisasterRecoveryConfigurationDetails": ChangeDisasterRecoveryConfigurationDetails,
     "ChangeExadataInfrastructureCompartmentDetails": ChangeExadataInfrastructureCompartmentDetails,
     "ChangeKeyStoreCompartmentDetails": ChangeKeyStoreCompartmentDetails,
     "ChangeVmClusterCompartmentDetails": ChangeVmClusterCompartmentDetails,
@@ -380,6 +404,7 @@ database_type_mapping = {
     "ConsoleConnectionSummary": ConsoleConnectionSummary,
     "ConvertToPdbDetails": ConvertToPdbDetails,
     "ConvertToPdbTargetBase": ConvertToPdbTargetBase,
+    "CreateApplicationVipDetails": CreateApplicationVipDetails,
     "CreateAutonomousContainerDatabaseDetails": CreateAutonomousContainerDatabaseDetails,
     "CreateAutonomousDatabaseBackupDetails": CreateAutonomousDatabaseBackupDetails,
     "CreateAutonomousDatabaseBase": CreateAutonomousDatabaseBase,
@@ -395,6 +420,7 @@ database_type_mapping = {
     "CreateCloudVmClusterDetails": CreateCloudVmClusterDetails,
     "CreateConsoleConnectionDetails": CreateConsoleConnectionDetails,
     "CreateCrossRegionAutonomousDatabaseDataGuardDetails": CreateCrossRegionAutonomousDatabaseDataGuardDetails,
+    "CreateCrossRegionDisasterRecoveryDetails": CreateCrossRegionDisasterRecoveryDetails,
     "CreateDataGuardAssociationDetails": CreateDataGuardAssociationDetails,
     "CreateDataGuardAssociationToExistingDbSystemDetails": CreateDataGuardAssociationToExistingDbSystemDetails,
     "CreateDataGuardAssociationToExistingVmClusterDetails": CreateDataGuardAssociationToExistingVmClusterDetails,
@@ -448,6 +474,7 @@ database_type_mapping = {
     "DatabaseSoftwareImageSummary": DatabaseSoftwareImageSummary,
     "DatabaseSslConnectionCredentials": DatabaseSslConnectionCredentials,
     "DatabaseSummary": DatabaseSummary,
+    "DatabaseTool": DatabaseTool,
     "DatabaseUpgradeHistoryEntry": DatabaseUpgradeHistoryEntry,
     "DatabaseUpgradeHistoryEntrySummary": DatabaseUpgradeHistoryEntrySummary,
     "DatabaseUpgradeSourceBase": DatabaseUpgradeSourceBase,
@@ -478,6 +505,7 @@ database_type_mapping = {
     "DbSystemUpgradeHistoryEntrySummary": DbSystemUpgradeHistoryEntrySummary,
     "DbVersionSummary": DbVersionSummary,
     "DeregisterAutonomousDatabaseDataSafeDetails": DeregisterAutonomousDatabaseDataSafeDetails,
+    "DisasterRecoveryConfiguration": DisasterRecoveryConfiguration,
     "DiskPerformanceDetails": DiskPerformanceDetails,
     "EnableDatabaseManagementDetails": EnableDatabaseManagementDetails,
     "EnableExternalContainerDatabaseDatabaseManagementDetails": EnableExternalContainerDatabaseDatabaseManagementDetails,
@@ -533,6 +561,7 @@ database_type_mapping = {
     "LaunchDbSystemFromDatabaseDetails": LaunchDbSystemFromDatabaseDetails,
     "LaunchDbSystemFromDbSystemDetails": LaunchDbSystemFromDbSystemDetails,
     "LocalClonePluggableDatabaseDetails": LocalClonePluggableDatabaseDetails,
+    "LongTermBackUpScheduleDetails": LongTermBackUpScheduleDetails,
     "MaintenanceRun": MaintenanceRun,
     "MaintenanceRunHistory": MaintenanceRunHistory,
     "MaintenanceRunHistorySummary": MaintenanceRunHistorySummary,
@@ -569,6 +598,8 @@ database_type_mapping = {
     "ResizeVmClusterNetworkDetails": ResizeVmClusterNetworkDetails,
     "RestoreAutonomousDatabaseDetails": RestoreAutonomousDatabaseDetails,
     "RestoreDatabaseDetails": RestoreDatabaseDetails,
+    "RotateAutonomousVmClusterOrdsCertsDetails": RotateAutonomousVmClusterOrdsCertsDetails,
+    "RotateAutonomousVmClusterSslCertsDetails": RotateAutonomousVmClusterSslCertsDetails,
     "ScanDetails": ScanDetails,
     "ScheduledOperationDetails": ScheduledOperationDetails,
     "SelfMountDetails": SelfMountDetails,
@@ -578,6 +609,7 @@ database_type_mapping = {
     "Update": Update,
     "UpdateAutonomousContainerDatabaseDataGuardAssociationDetails": UpdateAutonomousContainerDatabaseDataGuardAssociationDetails,
     "UpdateAutonomousContainerDatabaseDetails": UpdateAutonomousContainerDatabaseDetails,
+    "UpdateAutonomousDatabaseBackupDetails": UpdateAutonomousDatabaseBackupDetails,
     "UpdateAutonomousDatabaseDetails": UpdateAutonomousDatabaseDetails,
     "UpdateAutonomousDatabaseWalletDetails": UpdateAutonomousDatabaseWalletDetails,
     "UpdateAutonomousExadataInfrastructureDetails": UpdateAutonomousExadataInfrastructureDetails,

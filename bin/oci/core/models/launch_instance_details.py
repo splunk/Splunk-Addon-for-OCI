@@ -59,6 +59,10 @@ class LaunchInstanceDetails(object):
             The value to assign to the freeform_tags property of this LaunchInstanceDetails.
         :type freeform_tags: dict(str, str)
 
+        :param compute_cluster_id:
+            The value to assign to the compute_cluster_id property of this LaunchInstanceDetails.
+        :type compute_cluster_id: str
+
         :param hostname_label:
             The value to assign to the hostname_label property of this LaunchInstanceDetails.
         :type hostname_label: str
@@ -131,6 +135,7 @@ class LaunchInstanceDetails(object):
             'extended_metadata': 'dict(str, object)',
             'fault_domain': 'str',
             'freeform_tags': 'dict(str, str)',
+            'compute_cluster_id': 'str',
             'hostname_label': 'str',
             'image_id': 'str',
             'ipxe_script': 'str',
@@ -159,6 +164,7 @@ class LaunchInstanceDetails(object):
             'extended_metadata': 'extendedMetadata',
             'fault_domain': 'faultDomain',
             'freeform_tags': 'freeformTags',
+            'compute_cluster_id': 'computeClusterId',
             'hostname_label': 'hostnameLabel',
             'image_id': 'imageId',
             'ipxe_script': 'ipxeScript',
@@ -186,6 +192,7 @@ class LaunchInstanceDetails(object):
         self._extended_metadata = None
         self._fault_domain = None
         self._freeform_tags = None
+        self._compute_cluster_id = None
         self._hostname_label = None
         self._image_id = None
         self._ipxe_script = None
@@ -310,7 +317,7 @@ class LaunchInstanceDetails(object):
     def dedicated_vm_host_id(self):
         """
         Gets the dedicated_vm_host_id of this LaunchInstanceDetails.
-        The OCID of the dedicated VM host.
+        The OCID of the dedicated virtual machine host to place the instance on.
 
 
         :return: The dedicated_vm_host_id of this LaunchInstanceDetails.
@@ -322,7 +329,7 @@ class LaunchInstanceDetails(object):
     def dedicated_vm_host_id(self, dedicated_vm_host_id):
         """
         Sets the dedicated_vm_host_id of this LaunchInstanceDetails.
-        The OCID of the dedicated VM host.
+        The OCID of the dedicated virtual machine host to place the instance on.
 
 
         :param dedicated_vm_host_id: The dedicated_vm_host_id of this LaunchInstanceDetails.
@@ -511,6 +518,36 @@ class LaunchInstanceDetails(object):
         :type: dict(str, str)
         """
         self._freeform_tags = freeform_tags
+
+    @property
+    def compute_cluster_id(self):
+        """
+        Gets the compute_cluster_id of this LaunchInstanceDetails.
+        The `OCID`__ of the `compute cluster`__ that the instance will be created in.
+
+        __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
+        __ https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm
+
+
+        :return: The compute_cluster_id of this LaunchInstanceDetails.
+        :rtype: str
+        """
+        return self._compute_cluster_id
+
+    @compute_cluster_id.setter
+    def compute_cluster_id(self, compute_cluster_id):
+        """
+        Sets the compute_cluster_id of this LaunchInstanceDetails.
+        The `OCID`__ of the `compute cluster`__ that the instance will be created in.
+
+        __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
+        __ https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/compute-clusters.htm
+
+
+        :param compute_cluster_id: The compute_cluster_id of this LaunchInstanceDetails.
+        :type: str
+        """
+        self._compute_cluster_id = compute_cluster_id
 
     @property
     def hostname_label(self):

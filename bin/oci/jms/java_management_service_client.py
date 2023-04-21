@@ -150,7 +150,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/add_fleet_installation_sites.py.html>`__ to see an example of how to use add_fleet_installation_sites API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/add_fleet_installation_sites.py.html>`__ to see an example of how to use add_fleet_installation_sites API.
         """
         resource_path = "/fleets/{fleetId}/actions/addInstallationSites"
         method = "POST"
@@ -258,7 +258,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "DELETE"
@@ -371,7 +371,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/change_fleet_compartment.py.html>`__ to see an example of how to use change_fleet_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/change_fleet_compartment.py.html>`__ to see an example of how to use change_fleet_compartment API.
         """
         resource_path = "/fleets/{fleetId}/actions/changeCompartment"
         method = "POST"
@@ -482,7 +482,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/create_blocklist.py.html>`__ to see an example of how to use create_blocklist API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/create_blocklist.py.html>`__ to see an example of how to use create_blocklist API.
         """
         resource_path = "/fleets/{fleetId}/blocklists"
         method = "POST"
@@ -596,7 +596,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/create_fleet.py.html>`__ to see an example of how to use create_fleet API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/create_fleet.py.html>`__ to see an example of how to use create_fleet API.
         """
         resource_path = "/fleets"
         method = "POST"
@@ -693,7 +693,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/delete_blocklist.py.html>`__ to see an example of how to use delete_blocklist API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/delete_blocklist.py.html>`__ to see an example of how to use delete_blocklist API.
         """
         resource_path = "/fleets/{fleetId}/blocklists/{blocklistKey}"
         method = "DELETE"
@@ -800,7 +800,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/delete_crypto_analysis_result.py.html>`__ to see an example of how to use delete_crypto_analysis_result API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/delete_crypto_analysis_result.py.html>`__ to see an example of how to use delete_crypto_analysis_result API.
         """
         resource_path = "/fleets/{fleetId}/cryptoAnalysisResults/{cryptoAnalysisResultId}"
         method = "DELETE"
@@ -904,7 +904,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/delete_fleet.py.html>`__ to see an example of how to use delete_fleet API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/delete_fleet.py.html>`__ to see an example of how to use delete_fleet API.
         """
         resource_path = "/fleets/{fleetId}"
         method = "DELETE"
@@ -1003,7 +1003,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/generate_agent_deploy_script.py.html>`__ to see an example of how to use generate_agent_deploy_script API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/generate_agent_deploy_script.py.html>`__ to see an example of how to use generate_agent_deploy_script API.
         """
         resource_path = "/fleets/{fleetId}/actions/generateAgentDeployScript"
         method = "POST"
@@ -1104,7 +1104,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/get_crypto_analysis_result.py.html>`__ to see an example of how to use get_crypto_analysis_result API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/get_crypto_analysis_result.py.html>`__ to see an example of how to use get_crypto_analysis_result API.
         """
         resource_path = "/fleets/{fleetId}/cryptoAnalysisResults/{cryptoAnalysisResultId}"
         method = "GET"
@@ -1201,7 +1201,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/get_fleet.py.html>`__ to see an example of how to use get_fleet API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/get_fleet.py.html>`__ to see an example of how to use get_fleet API.
         """
         resource_path = "/fleets/{fleetId}"
         method = "GET"
@@ -1304,7 +1304,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/get_fleet_advanced_feature_configuration.py.html>`__ to see an example of how to use get_fleet_advanced_feature_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/get_fleet_advanced_feature_configuration.py.html>`__ to see an example of how to use get_fleet_advanced_feature_configuration API.
         """
         resource_path = "/fleets/{fleetId}/advancedFeatureConfiguration"
         method = "GET"
@@ -1402,7 +1402,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/get_fleet_agent_configuration.py.html>`__ to see an example of how to use get_fleet_agent_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/get_fleet_agent_configuration.py.html>`__ to see an example of how to use get_fleet_agent_configuration API.
         """
         resource_path = "/fleets/{fleetId}/agentConfiguration"
         method = "GET"
@@ -1496,7 +1496,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/get_java_family.py.html>`__ to see an example of how to use get_java_family API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/get_java_family.py.html>`__ to see an example of how to use get_java_family API.
         """
         resource_path = "/javaFamilies/{familyVersion}"
         method = "GET"
@@ -1590,7 +1590,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/get_java_release.py.html>`__ to see an example of how to use get_java_release API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/get_java_release.py.html>`__ to see an example of how to use get_java_release API.
         """
         resource_path = "/javaReleases/{releaseVersion}"
         method = "GET"
@@ -1686,7 +1686,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -1808,7 +1808,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/list_blocklists.py.html>`__ to see an example of how to use list_blocklists API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/list_blocklists.py.html>`__ to see an example of how to use list_blocklists API.
         """
         resource_path = "/fleets/{fleetId}/blocklists"
         method = "GET"
@@ -1980,7 +1980,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/list_crypto_analysis_results.py.html>`__ to see an example of how to use list_crypto_analysis_results API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/list_crypto_analysis_results.py.html>`__ to see an example of how to use list_crypto_analysis_results API.
         """
         resource_path = "/fleets/{fleetId}/cryptoAnalysisResults"
         method = "GET"
@@ -2154,7 +2154,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/list_fleets.py.html>`__ to see an example of how to use list_fleets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/list_fleets.py.html>`__ to see an example of how to use list_fleets API.
         """
         resource_path = "/fleets"
         method = "GET"
@@ -2343,7 +2343,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/list_installation_sites.py.html>`__ to see an example of how to use list_installation_sites API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/list_installation_sites.py.html>`__ to see an example of how to use list_installation_sites API.
         """
         resource_path = "/fleets/{fleetId}/installationSites"
         method = "GET"
@@ -2522,7 +2522,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/list_java_families.py.html>`__ to see an example of how to use list_java_families API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/list_java_families.py.html>`__ to see an example of how to use list_java_families API.
         """
         resource_path = "/javaFamilies"
         method = "GET"
@@ -2670,7 +2670,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/list_java_releases.py.html>`__ to see an example of how to use list_java_releases API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/list_java_releases.py.html>`__ to see an example of how to use list_java_releases API.
         """
         resource_path = "/javaReleases"
         method = "GET"
@@ -2855,7 +2855,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/list_jre_usage.py.html>`__ to see an example of how to use list_jre_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/list_jre_usage.py.html>`__ to see an example of how to use list_jre_usage API.
         """
         resource_path = "/listJreUsage"
         method = "GET"
@@ -2985,7 +2985,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/list_work_items.py.html>`__ to see an example of how to use list_work_items API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/list_work_items.py.html>`__ to see an example of how to use list_work_items API.
         """
         resource_path = "/workRequests/{workRequestId}/workItems"
         method = "GET"
@@ -3097,7 +3097,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -3209,7 +3209,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -3329,7 +3329,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -3446,7 +3446,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/remove_fleet_installation_sites.py.html>`__ to see an example of how to use remove_fleet_installation_sites API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/remove_fleet_installation_sites.py.html>`__ to see an example of how to use remove_fleet_installation_sites API.
         """
         resource_path = "/fleets/{fleetId}/actions/removeInstallationSites"
         method = "POST"
@@ -3551,7 +3551,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/request_crypto_analyses.py.html>`__ to see an example of how to use request_crypto_analyses API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/request_crypto_analyses.py.html>`__ to see an example of how to use request_crypto_analyses API.
         """
         resource_path = "/fleets/{fleetId}/actions/requestCryptoAnalyses"
         method = "POST"
@@ -3651,7 +3651,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/request_jfr_recordings.py.html>`__ to see an example of how to use request_jfr_recordings API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/request_jfr_recordings.py.html>`__ to see an example of how to use request_jfr_recordings API.
         """
         resource_path = "/fleets/{fleetId}/actions/requestJfrRecordings"
         method = "POST"
@@ -3764,7 +3764,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/scan_java_server_usage.py.html>`__ to see an example of how to use scan_java_server_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/scan_java_server_usage.py.html>`__ to see an example of how to use scan_java_server_usage API.
         """
         resource_path = "/fleets/{fleetId}/actions/scanJavaServerUsage"
         method = "POST"
@@ -3882,7 +3882,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/scan_library_usage.py.html>`__ to see an example of how to use scan_library_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/scan_library_usage.py.html>`__ to see an example of how to use scan_library_usage API.
         """
         resource_path = "/fleets/{fleetId}/actions/scanLibraryUsage"
         method = "POST"
@@ -4055,7 +4055,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/summarize_application_usage.py.html>`__ to see an example of how to use summarize_application_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/summarize_application_usage.py.html>`__ to see an example of how to use summarize_application_usage API.
         """
         resource_path = "/fleets/{fleetId}/actions/summarizeApplicationUsage"
         method = "GET"
@@ -4271,7 +4271,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/summarize_deployed_application_usage.py.html>`__ to see an example of how to use summarize_deployed_application_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/summarize_deployed_application_usage.py.html>`__ to see an example of how to use summarize_deployed_application_usage API.
         """
         resource_path = "/fleets/{fleetId}/actions/summarizeDeployedApplicationUsage"
         method = "GET"
@@ -4475,7 +4475,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/summarize_installation_usage.py.html>`__ to see an example of how to use summarize_installation_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/summarize_installation_usage.py.html>`__ to see an example of how to use summarize_installation_usage API.
         """
         resource_path = "/fleets/{fleetId}/actions/summarizeInstallationUsage"
         method = "GET"
@@ -4685,7 +4685,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/summarize_java_server_instance_usage.py.html>`__ to see an example of how to use summarize_java_server_instance_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/summarize_java_server_instance_usage.py.html>`__ to see an example of how to use summarize_java_server_instance_usage API.
         """
         resource_path = "/fleets/{fleetId}/actions/summarizeJavaServerInstanceUsage"
         method = "GET"
@@ -4866,7 +4866,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/summarize_java_server_usage.py.html>`__ to see an example of how to use summarize_java_server_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/summarize_java_server_usage.py.html>`__ to see an example of how to use summarize_java_server_usage API.
         """
         resource_path = "/fleets/{fleetId}/actions/summarizeJavaServerUsage"
         method = "GET"
@@ -5068,7 +5068,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/summarize_jre_usage.py.html>`__ to see an example of how to use summarize_jre_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/summarize_jre_usage.py.html>`__ to see an example of how to use summarize_jre_usage API.
         """
         resource_path = "/fleets/{fleetId}/actions/summarizeJreUsage"
         method = "GET"
@@ -5282,7 +5282,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/summarize_library_usage.py.html>`__ to see an example of how to use summarize_library_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/summarize_library_usage.py.html>`__ to see an example of how to use summarize_library_usage API.
         """
         resource_path = "/fleets/{fleetId}/actions/summarizeLibraryUsage"
         method = "GET"
@@ -5493,7 +5493,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/summarize_managed_instance_usage.py.html>`__ to see an example of how to use summarize_managed_instance_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/summarize_managed_instance_usage.py.html>`__ to see an example of how to use summarize_managed_instance_usage API.
         """
         resource_path = "/fleets/{fleetId}/actions/summarizeManagedInstanceUsage"
         method = "GET"
@@ -5676,7 +5676,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/summarize_resource_inventory.py.html>`__ to see an example of how to use summarize_resource_inventory API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/summarize_resource_inventory.py.html>`__ to see an example of how to use summarize_resource_inventory API.
         """
         resource_path = "/summarizeResourceInventory"
         method = "GET"
@@ -5782,7 +5782,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/update_fleet.py.html>`__ to see an example of how to use update_fleet API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/update_fleet.py.html>`__ to see an example of how to use update_fleet API.
         """
         resource_path = "/fleets/{fleetId}"
         method = "PUT"
@@ -5898,7 +5898,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/update_fleet_advanced_feature_configuration.py.html>`__ to see an example of how to use update_fleet_advanced_feature_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/update_fleet_advanced_feature_configuration.py.html>`__ to see an example of how to use update_fleet_advanced_feature_configuration API.
         """
         resource_path = "/fleets/{fleetId}/advancedFeatureConfiguration"
         method = "PUT"
@@ -6011,7 +6011,7 @@ class JavaManagementServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/jms/update_fleet_agent_configuration.py.html>`__ to see an example of how to use update_fleet_agent_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/jms/update_fleet_agent_configuration.py.html>`__ to see an example of how to use update_fleet_agent_configuration API.
         """
         resource_path = "/fleets/{fleetId}/agentConfiguration"
         method = "PUT"

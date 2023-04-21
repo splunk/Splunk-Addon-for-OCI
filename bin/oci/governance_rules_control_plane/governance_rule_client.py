@@ -138,7 +138,7 @@ class GovernanceRuleClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/governancerulescontrolplane/create_governance_rule.py.html>`__ to see an example of how to use create_governance_rule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/governancerulescontrolplane/create_governance_rule.py.html>`__ to see an example of how to use create_governance_rule API.
         """
         resource_path = "/governanceRules"
         method = "POST"
@@ -230,7 +230,7 @@ class GovernanceRuleClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/governancerulescontrolplane/create_inclusion_criterion.py.html>`__ to see an example of how to use create_inclusion_criterion API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/governancerulescontrolplane/create_inclusion_criterion.py.html>`__ to see an example of how to use create_inclusion_criterion API.
         """
         resource_path = "/inclusionCriteria"
         method = "POST"
@@ -322,7 +322,7 @@ class GovernanceRuleClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/governancerulescontrolplane/delete_governance_rule.py.html>`__ to see an example of how to use delete_governance_rule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/governancerulescontrolplane/delete_governance_rule.py.html>`__ to see an example of how to use delete_governance_rule API.
         """
         resource_path = "/governanceRules/{governanceRuleId}"
         method = "DELETE"
@@ -421,7 +421,7 @@ class GovernanceRuleClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/governancerulescontrolplane/delete_inclusion_criterion.py.html>`__ to see an example of how to use delete_inclusion_criterion API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/governancerulescontrolplane/delete_inclusion_criterion.py.html>`__ to see an example of how to use delete_inclusion_criterion API.
         """
         resource_path = "/inclusionCriteria/{inclusionCriterionId}"
         method = "DELETE"
@@ -513,7 +513,7 @@ class GovernanceRuleClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/governancerulescontrolplane/get_enforced_governance_rule.py.html>`__ to see an example of how to use get_enforced_governance_rule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/governancerulescontrolplane/get_enforced_governance_rule.py.html>`__ to see an example of how to use get_enforced_governance_rule API.
         """
         resource_path = "/enforcedGovernanceRules/{enforcedGovernanceRuleId}"
         method = "GET"
@@ -605,7 +605,7 @@ class GovernanceRuleClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/governancerulescontrolplane/get_governance_rule.py.html>`__ to see an example of how to use get_governance_rule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/governancerulescontrolplane/get_governance_rule.py.html>`__ to see an example of how to use get_governance_rule API.
         """
         resource_path = "/governanceRules/{governanceRuleId}"
         method = "GET"
@@ -697,7 +697,7 @@ class GovernanceRuleClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/governancerulescontrolplane/get_inclusion_criterion.py.html>`__ to see an example of how to use get_inclusion_criterion API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/governancerulescontrolplane/get_inclusion_criterion.py.html>`__ to see an example of how to use get_inclusion_criterion API.
         """
         resource_path = "/inclusionCriteria/{inclusionCriterionId}"
         method = "GET"
@@ -789,7 +789,7 @@ class GovernanceRuleClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/governancerulescontrolplane/get_tenancy_attachment.py.html>`__ to see an example of how to use get_tenancy_attachment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/governancerulescontrolplane/get_tenancy_attachment.py.html>`__ to see an example of how to use get_tenancy_attachment API.
         """
         resource_path = "/tenancyAttachments/{tenancyAttachmentId}"
         method = "GET"
@@ -909,7 +909,7 @@ class GovernanceRuleClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/governancerulescontrolplane/list_enforced_governance_rules.py.html>`__ to see an example of how to use list_enforced_governance_rules API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/governancerulescontrolplane/list_enforced_governance_rules.py.html>`__ to see an example of how to use list_enforced_governance_rules API.
         """
         resource_path = "/enforcedGovernanceRules"
         method = "GET"
@@ -1065,7 +1065,7 @@ class GovernanceRuleClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/governancerulescontrolplane/list_governance_rules.py.html>`__ to see an example of how to use list_governance_rules API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/governancerulescontrolplane/list_governance_rules.py.html>`__ to see an example of how to use list_governance_rules API.
         """
         resource_path = "/governanceRules"
         method = "GET"
@@ -1222,7 +1222,7 @@ class GovernanceRuleClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/governancerulescontrolplane/list_inclusion_criteria.py.html>`__ to see an example of how to use list_inclusion_criteria API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/governancerulescontrolplane/list_inclusion_criteria.py.html>`__ to see an example of how to use list_inclusion_criteria API.
         """
         resource_path = "/inclusionCriteria"
         method = "GET"
@@ -1373,7 +1373,7 @@ class GovernanceRuleClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/governancerulescontrolplane/list_tenancy_attachments.py.html>`__ to see an example of how to use list_tenancy_attachments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/governancerulescontrolplane/list_tenancy_attachments.py.html>`__ to see an example of how to use list_tenancy_attachments API.
         """
         resource_path = "/tenancyAttachments"
         method = "GET"
@@ -1514,7 +1514,7 @@ class GovernanceRuleClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/governancerulescontrolplane/retry_governance_rule.py.html>`__ to see an example of how to use retry_governance_rule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/governancerulescontrolplane/retry_governance_rule.py.html>`__ to see an example of how to use retry_governance_rule API.
         """
         resource_path = "/governanceRules/{governanceRuleId}/actions/retry"
         method = "POST"
@@ -1624,7 +1624,7 @@ class GovernanceRuleClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/governancerulescontrolplane/retry_tenancy_attachment.py.html>`__ to see an example of how to use retry_tenancy_attachment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/governancerulescontrolplane/retry_tenancy_attachment.py.html>`__ to see an example of how to use retry_tenancy_attachment API.
         """
         resource_path = "/tenancyAttachments/{tenancyAttachmentId}/actions/retry"
         method = "POST"
@@ -1729,7 +1729,7 @@ class GovernanceRuleClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/governancerulescontrolplane/update_governance_rule.py.html>`__ to see an example of how to use update_governance_rule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/governancerulescontrolplane/update_governance_rule.py.html>`__ to see an example of how to use update_governance_rule API.
         """
         resource_path = "/governanceRules/{governanceRuleId}"
         method = "PUT"

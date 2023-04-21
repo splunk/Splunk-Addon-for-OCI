@@ -138,7 +138,7 @@ class TransferDeviceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dts/create_transfer_device.py.html>`__ to see an example of how to use create_transfer_device API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dts/create_transfer_device.py.html>`__ to see an example of how to use create_transfer_device API.
         """
         resource_path = "/transferJobs/{id}/transferDevices"
         method = "POST"
@@ -240,7 +240,7 @@ class TransferDeviceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dts/delete_transfer_device.py.html>`__ to see an example of how to use delete_transfer_device API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dts/delete_transfer_device.py.html>`__ to see an example of how to use delete_transfer_device API.
         """
         resource_path = "/transferJobs/{id}/transferDevices/{transferDeviceLabel}"
         method = "DELETE"
@@ -332,7 +332,7 @@ class TransferDeviceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dts/get_transfer_device.py.html>`__ to see an example of how to use get_transfer_device API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dts/get_transfer_device.py.html>`__ to see an example of how to use get_transfer_device API.
         """
         resource_path = "/transferJobs/{id}/transferDevices/{transferDeviceLabel}"
         method = "GET"
@@ -423,7 +423,7 @@ class TransferDeviceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dts/list_transfer_devices.py.html>`__ to see an example of how to use list_transfer_devices API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dts/list_transfer_devices.py.html>`__ to see an example of how to use list_transfer_devices API.
         """
         resource_path = "/transferJobs/{id}/transferDevices"
         method = "GET"
@@ -536,7 +536,7 @@ class TransferDeviceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dts/update_transfer_device.py.html>`__ to see an example of how to use update_transfer_device API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dts/update_transfer_device.py.html>`__ to see an example of how to use update_transfer_device API.
         """
         resource_path = "/transferJobs/{id}/transferDevices/{transferDeviceLabel}"
         method = "PUT"

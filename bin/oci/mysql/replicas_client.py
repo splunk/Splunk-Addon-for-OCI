@@ -141,7 +141,7 @@ class ReplicasClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/create_replica.py.html>`__ to see an example of how to use create_replica API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mysql/create_replica.py.html>`__ to see an example of how to use create_replica API.
         """
         resource_path = "/replicas"
         method = "POST"
@@ -239,7 +239,7 @@ class ReplicasClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/delete_replica.py.html>`__ to see an example of how to use delete_replica API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mysql/delete_replica.py.html>`__ to see an example of how to use delete_replica API.
         """
         resource_path = "/replicas/{replicaId}"
         method = "DELETE"
@@ -344,7 +344,7 @@ class ReplicasClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/get_replica.py.html>`__ to see an example of how to use get_replica API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mysql/get_replica.py.html>`__ to see an example of how to use get_replica API.
         """
         resource_path = "/replicas/{replicaId}"
         method = "GET"
@@ -485,7 +485,7 @@ class ReplicasClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/list_replicas.py.html>`__ to see an example of how to use list_replicas API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mysql/list_replicas.py.html>`__ to see an example of how to use list_replicas API.
         """
         resource_path = "/replicas"
         method = "GET"
@@ -625,7 +625,7 @@ class ReplicasClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mysql/update_replica.py.html>`__ to see an example of how to use update_replica API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mysql/update_replica.py.html>`__ to see an example of how to use update_replica API.
         """
         resource_path = "/replicas/{replicaId}"
         method = "PUT"

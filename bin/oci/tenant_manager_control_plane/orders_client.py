@@ -141,7 +141,7 @@ class OrdersClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/activate_order.py.html>`__ to see an example of how to use activate_order API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/tenantmanagercontrolplane/activate_order.py.html>`__ to see an example of how to use activate_order API.
         """
         resource_path = "/orders/{activationToken}/actions/activate"
         method = "POST"
@@ -236,7 +236,7 @@ class OrdersClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/get_order.py.html>`__ to see an example of how to use get_order API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/tenantmanagercontrolplane/get_order.py.html>`__ to see an example of how to use get_order API.
         """
         resource_path = "/orders/{activationToken}"
         method = "GET"

@@ -34,6 +34,10 @@ class DeploymentTypeSummary(object):
     DEPLOYMENT_TYPE_BIGDATA = "BIGDATA"
 
     #: A constant which can be used with the deployment_type property of a DeploymentTypeSummary.
+    #: This constant has a value of "DATABASE_MICROSOFT_SQLSERVER"
+    DEPLOYMENT_TYPE_DATABASE_MICROSOFT_SQLSERVER = "DATABASE_MICROSOFT_SQLSERVER"
+
+    #: A constant which can be used with the deployment_type property of a DeploymentTypeSummary.
     #: This constant has a value of "DATABASE_MYSQL"
     DEPLOYMENT_TYPE_DATABASE_MYSQL = "DATABASE_MYSQL"
 
@@ -58,6 +62,14 @@ class DeploymentTypeSummary(object):
     CONNECTION_TYPES_MYSQL = "MYSQL"
 
     #: A constant which can be used with the connection_types property of a DeploymentTypeSummary.
+    #: This constant has a value of "JAVA_MESSAGE_SERVICE"
+    CONNECTION_TYPES_JAVA_MESSAGE_SERVICE = "JAVA_MESSAGE_SERVICE"
+
+    #: A constant which can be used with the connection_types property of a DeploymentTypeSummary.
+    #: This constant has a value of "MICROSOFT_SQLSERVER"
+    CONNECTION_TYPES_MICROSOFT_SQLSERVER = "MICROSOFT_SQLSERVER"
+
+    #: A constant which can be used with the connection_types property of a DeploymentTypeSummary.
     #: This constant has a value of "OCI_OBJECT_STORAGE"
     CONNECTION_TYPES_OCI_OBJECT_STORAGE = "OCI_OBJECT_STORAGE"
 
@@ -77,6 +89,26 @@ class DeploymentTypeSummary(object):
     #: This constant has a value of "AZURE_SYNAPSE_ANALYTICS"
     CONNECTION_TYPES_AZURE_SYNAPSE_ANALYTICS = "AZURE_SYNAPSE_ANALYTICS"
 
+    #: A constant which can be used with the connection_types property of a DeploymentTypeSummary.
+    #: This constant has a value of "SNOWFLAKE"
+    CONNECTION_TYPES_SNOWFLAKE = "SNOWFLAKE"
+
+    #: A constant which can be used with the connection_types property of a DeploymentTypeSummary.
+    #: This constant has a value of "AMAZON_S3"
+    CONNECTION_TYPES_AMAZON_S3 = "AMAZON_S3"
+
+    #: A constant which can be used with the connection_types property of a DeploymentTypeSummary.
+    #: This constant has a value of "HDFS"
+    CONNECTION_TYPES_HDFS = "HDFS"
+
+    #: A constant which can be used with the connection_types property of a DeploymentTypeSummary.
+    #: This constant has a value of "ORACLE_NOSQL"
+    CONNECTION_TYPES_ORACLE_NOSQL = "ORACLE_NOSQL"
+
+    #: A constant which can be used with the connection_types property of a DeploymentTypeSummary.
+    #: This constant has a value of "MONGODB"
+    CONNECTION_TYPES_MONGODB = "MONGODB"
+
     def __init__(self, **kwargs):
         """
         Initializes a new DeploymentTypeSummary object with values from keyword arguments.
@@ -94,13 +126,13 @@ class DeploymentTypeSummary(object):
 
         :param deployment_type:
             The value to assign to the deployment_type property of this DeploymentTypeSummary.
-            Allowed values for this property are: "OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MYSQL", "DATABASE_POSTGRESQL", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for this property are: "OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MICROSOFT_SQLSERVER", "DATABASE_MYSQL", "DATABASE_POSTGRESQL", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type deployment_type: str
 
         :param connection_types:
             The value to assign to the connection_types property of this DeploymentTypeSummary.
-            Allowed values for items in this list are: "GOLDENGATE", "KAFKA", "KAFKA_SCHEMA_REGISTRY", "MYSQL", "OCI_OBJECT_STORAGE", "ORACLE", "AZURE_DATA_LAKE_STORAGE", "POSTGRESQL", "AZURE_SYNAPSE_ANALYTICS", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for items in this list are: "GOLDENGATE", "KAFKA", "KAFKA_SCHEMA_REGISTRY", "MYSQL", "JAVA_MESSAGE_SERVICE", "MICROSOFT_SQLSERVER", "OCI_OBJECT_STORAGE", "ORACLE", "AZURE_DATA_LAKE_STORAGE", "POSTGRESQL", "AZURE_SYNAPSE_ANALYTICS", "SNOWFLAKE", "AMAZON_S3", "HDFS", "ORACLE_NOSQL", "MONGODB", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type connection_types: list[str]
 
@@ -112,6 +144,10 @@ class DeploymentTypeSummary(object):
             The value to assign to the target_technologies property of this DeploymentTypeSummary.
         :type target_technologies: list[str]
 
+        :param ogg_version:
+            The value to assign to the ogg_version property of this DeploymentTypeSummary.
+        :type ogg_version: str
+
         """
         self.swagger_types = {
             'category': 'str',
@@ -119,7 +155,8 @@ class DeploymentTypeSummary(object):
             'deployment_type': 'str',
             'connection_types': 'list[str]',
             'source_technologies': 'list[str]',
-            'target_technologies': 'list[str]'
+            'target_technologies': 'list[str]',
+            'ogg_version': 'str'
         }
 
         self.attribute_map = {
@@ -128,7 +165,8 @@ class DeploymentTypeSummary(object):
             'deployment_type': 'deploymentType',
             'connection_types': 'connectionTypes',
             'source_technologies': 'sourceTechnologies',
-            'target_technologies': 'targetTechnologies'
+            'target_technologies': 'targetTechnologies',
+            'ogg_version': 'oggVersion'
         }
 
         self._category = None
@@ -137,6 +175,7 @@ class DeploymentTypeSummary(object):
         self._connection_types = None
         self._source_technologies = None
         self._target_technologies = None
+        self._ogg_version = None
 
     @property
     def category(self):
@@ -198,11 +237,11 @@ class DeploymentTypeSummary(object):
     def deployment_type(self):
         """
         **[Required]** Gets the deployment_type of this DeploymentTypeSummary.
-        The type of deployment, the value determines the exact 'type' of service executed in the Deployment.
-        NOTE: Use of the value 'OGG' is maintained for backward compatibility purposes.  Its use is discouraged
-              in favor of the equivalent 'DATABASE_ORACLE' value.
+        The type of deployment, which can be any one of the Allowed values.
+        NOTE: Use of the value 'OGG' is maintained for backward compatibility purposes.
+            Its use is discouraged in favor of 'DATABASE_ORACLE'.
 
-        Allowed values for this property are: "OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MYSQL", "DATABASE_POSTGRESQL", 'UNKNOWN_ENUM_VALUE'.
+        Allowed values for this property are: "OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MICROSOFT_SQLSERVER", "DATABASE_MYSQL", "DATABASE_POSTGRESQL", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
 
 
@@ -215,15 +254,15 @@ class DeploymentTypeSummary(object):
     def deployment_type(self, deployment_type):
         """
         Sets the deployment_type of this DeploymentTypeSummary.
-        The type of deployment, the value determines the exact 'type' of service executed in the Deployment.
-        NOTE: Use of the value 'OGG' is maintained for backward compatibility purposes.  Its use is discouraged
-              in favor of the equivalent 'DATABASE_ORACLE' value.
+        The type of deployment, which can be any one of the Allowed values.
+        NOTE: Use of the value 'OGG' is maintained for backward compatibility purposes.
+            Its use is discouraged in favor of 'DATABASE_ORACLE'.
 
 
         :param deployment_type: The deployment_type of this DeploymentTypeSummary.
         :type: str
         """
-        allowed_values = ["OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MYSQL", "DATABASE_POSTGRESQL"]
+        allowed_values = ["OGG", "DATABASE_ORACLE", "BIGDATA", "DATABASE_MICROSOFT_SQLSERVER", "DATABASE_MYSQL", "DATABASE_POSTGRESQL"]
         if not value_allowed_none_or_none_sentinel(deployment_type, allowed_values):
             deployment_type = 'UNKNOWN_ENUM_VALUE'
         self._deployment_type = deployment_type
@@ -234,7 +273,7 @@ class DeploymentTypeSummary(object):
         Gets the connection_types of this DeploymentTypeSummary.
         An array of connectionTypes.
 
-        Allowed values for items in this list are: "GOLDENGATE", "KAFKA", "KAFKA_SCHEMA_REGISTRY", "MYSQL", "OCI_OBJECT_STORAGE", "ORACLE", "AZURE_DATA_LAKE_STORAGE", "POSTGRESQL", "AZURE_SYNAPSE_ANALYTICS", 'UNKNOWN_ENUM_VALUE'.
+        Allowed values for items in this list are: "GOLDENGATE", "KAFKA", "KAFKA_SCHEMA_REGISTRY", "MYSQL", "JAVA_MESSAGE_SERVICE", "MICROSOFT_SQLSERVER", "OCI_OBJECT_STORAGE", "ORACLE", "AZURE_DATA_LAKE_STORAGE", "POSTGRESQL", "AZURE_SYNAPSE_ANALYTICS", "SNOWFLAKE", "AMAZON_S3", "HDFS", "ORACLE_NOSQL", "MONGODB", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
 
 
@@ -253,7 +292,7 @@ class DeploymentTypeSummary(object):
         :param connection_types: The connection_types of this DeploymentTypeSummary.
         :type: list[str]
         """
-        allowed_values = ["GOLDENGATE", "KAFKA", "KAFKA_SCHEMA_REGISTRY", "MYSQL", "OCI_OBJECT_STORAGE", "ORACLE", "AZURE_DATA_LAKE_STORAGE", "POSTGRESQL", "AZURE_SYNAPSE_ANALYTICS"]
+        allowed_values = ["GOLDENGATE", "KAFKA", "KAFKA_SCHEMA_REGISTRY", "MYSQL", "JAVA_MESSAGE_SERVICE", "MICROSOFT_SQLSERVER", "OCI_OBJECT_STORAGE", "ORACLE", "AZURE_DATA_LAKE_STORAGE", "POSTGRESQL", "AZURE_SYNAPSE_ANALYTICS", "SNOWFLAKE", "AMAZON_S3", "HDFS", "ORACLE_NOSQL", "MONGODB"]
         if connection_types:
             connection_types[:] = ['UNKNOWN_ENUM_VALUE' if not value_allowed_none_or_none_sentinel(x, allowed_values) else x for x in connection_types]
         self._connection_types = connection_types
@@ -313,6 +352,30 @@ class DeploymentTypeSummary(object):
         :type: list[str]
         """
         self._target_technologies = target_technologies
+
+    @property
+    def ogg_version(self):
+        """
+        Gets the ogg_version of this DeploymentTypeSummary.
+        Version of OGG
+
+
+        :return: The ogg_version of this DeploymentTypeSummary.
+        :rtype: str
+        """
+        return self._ogg_version
+
+    @ogg_version.setter
+    def ogg_version(self, ogg_version):
+        """
+        Sets the ogg_version of this DeploymentTypeSummary.
+        Version of OGG
+
+
+        :param ogg_version: The ogg_version of this DeploymentTypeSummary.
+        :type: str
+        """
+        self._ogg_version = ogg_version
 
     def __repr__(self):
         return formatted_flat_dict(self)

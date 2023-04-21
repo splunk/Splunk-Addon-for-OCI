@@ -149,7 +149,7 @@ class FusionEnvironmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/change_fusion_environment_compartment.py.html>`__ to see an example of how to use change_fusion_environment_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/change_fusion_environment_compartment.py.html>`__ to see an example of how to use change_fusion_environment_compartment API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/actions/changeCompartment"
         method = "POST"
@@ -253,7 +253,7 @@ class FusionEnvironmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/create_fusion_environment.py.html>`__ to see an example of how to use create_fusion_environment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/create_fusion_environment.py.html>`__ to see an example of how to use create_fusion_environment API.
         """
         resource_path = "/fusionEnvironments"
         method = "POST"
@@ -346,7 +346,7 @@ class FusionEnvironmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/create_fusion_environment_admin_user.py.html>`__ to see an example of how to use create_fusion_environment_admin_user API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/create_fusion_environment_admin_user.py.html>`__ to see an example of how to use create_fusion_environment_admin_user API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/adminUsers"
         method = "POST"
@@ -448,7 +448,7 @@ class FusionEnvironmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/delete_fusion_environment.py.html>`__ to see an example of how to use delete_fusion_environment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/delete_fusion_environment.py.html>`__ to see an example of how to use delete_fusion_environment API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}"
         method = "DELETE"
@@ -550,7 +550,7 @@ class FusionEnvironmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/delete_fusion_environment_admin_user.py.html>`__ to see an example of how to use delete_fusion_environment_admin_user API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/delete_fusion_environment_admin_user.py.html>`__ to see an example of how to use delete_fusion_environment_admin_user API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/adminUsers/{adminUsername}"
         method = "DELETE"
@@ -643,7 +643,7 @@ class FusionEnvironmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/get_fusion_environment.py.html>`__ to see an example of how to use get_fusion_environment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/get_fusion_environment.py.html>`__ to see an example of how to use get_fusion_environment API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}"
         method = "GET"
@@ -735,7 +735,7 @@ class FusionEnvironmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/get_fusion_environment_status.py.html>`__ to see an example of how to use get_fusion_environment_status API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/get_fusion_environment_status.py.html>`__ to see an example of how to use get_fusion_environment_status API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/status"
         method = "GET"
@@ -827,7 +827,7 @@ class FusionEnvironmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -919,7 +919,7 @@ class FusionEnvironmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_admin_users.py.html>`__ to see an example of how to use list_admin_users API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/list_admin_users.py.html>`__ to see an example of how to use list_admin_users API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/adminUsers"
         method = "GET"
@@ -1038,7 +1038,7 @@ class FusionEnvironmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_fusion_environments.py.html>`__ to see an example of how to use list_fusion_environments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/list_fusion_environments.py.html>`__ to see an example of how to use list_fusion_environments API.
         """
         resource_path = "/fusionEnvironments"
         method = "GET"
@@ -1176,7 +1176,7 @@ class FusionEnvironmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -1312,7 +1312,7 @@ class FusionEnvironmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -1456,7 +1456,7 @@ class FusionEnvironmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -1596,7 +1596,7 @@ class FusionEnvironmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/reset_fusion_environment_password.py.html>`__ to see an example of how to use reset_fusion_environment_password API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/reset_fusion_environment_password.py.html>`__ to see an example of how to use reset_fusion_environment_password API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/adminUsers/{adminUsername}/actions/resetPassword"
         method = "POST"
@@ -1704,7 +1704,7 @@ class FusionEnvironmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/update_fusion_environment.py.html>`__ to see an example of how to use update_fusion_environment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/update_fusion_environment.py.html>`__ to see an example of how to use update_fusion_environment API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}"
         method = "PUT"

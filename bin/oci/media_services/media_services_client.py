@@ -150,7 +150,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/change_media_asset_compartment.py.html>`__ to see an example of how to use change_media_asset_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/change_media_asset_compartment.py.html>`__ to see an example of how to use change_media_asset_compartment API.
         """
         resource_path = "/mediaAssets/{mediaAssetId}/actions/changeCompartment"
         method = "POST"
@@ -266,7 +266,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/change_media_workflow_compartment.py.html>`__ to see an example of how to use change_media_workflow_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/change_media_workflow_compartment.py.html>`__ to see an example of how to use change_media_workflow_compartment API.
         """
         resource_path = "/mediaWorkflows/{mediaWorkflowId}/actions/changeCompartment"
         method = "POST"
@@ -382,7 +382,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/change_media_workflow_configuration_compartment.py.html>`__ to see an example of how to use change_media_workflow_configuration_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/change_media_workflow_configuration_compartment.py.html>`__ to see an example of how to use change_media_workflow_configuration_compartment API.
         """
         resource_path = "/mediaWorkflowConfigurations/{mediaWorkflowConfigurationId}/actions/changeCompartment"
         method = "POST"
@@ -498,7 +498,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/change_media_workflow_job_compartment.py.html>`__ to see an example of how to use change_media_workflow_job_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/change_media_workflow_job_compartment.py.html>`__ to see an example of how to use change_media_workflow_job_compartment API.
         """
         resource_path = "/mediaWorkflowJobs/{mediaWorkflowJobId}/actions/changeCompartment"
         method = "POST"
@@ -614,7 +614,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/change_stream_distribution_channel_compartment.py.html>`__ to see an example of how to use change_stream_distribution_channel_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/change_stream_distribution_channel_compartment.py.html>`__ to see an example of how to use change_stream_distribution_channel_compartment API.
         """
         resource_path = "/streamDistributionChannels/{streamDistributionChannelId}/actions/changeCompartment"
         method = "POST"
@@ -720,7 +720,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/create_media_asset.py.html>`__ to see an example of how to use create_media_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/create_media_asset.py.html>`__ to see an example of how to use create_media_asset API.
         """
         resource_path = "/mediaAssets"
         method = "POST"
@@ -814,7 +814,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/create_media_workflow.py.html>`__ to see an example of how to use create_media_workflow API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/create_media_workflow.py.html>`__ to see an example of how to use create_media_workflow API.
         """
         resource_path = "/mediaWorkflows"
         method = "POST"
@@ -908,7 +908,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/create_media_workflow_configuration.py.html>`__ to see an example of how to use create_media_workflow_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/create_media_workflow_configuration.py.html>`__ to see an example of how to use create_media_workflow_configuration API.
         """
         resource_path = "/mediaWorkflowConfigurations"
         method = "POST"
@@ -1002,7 +1002,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/create_media_workflow_job.py.html>`__ to see an example of how to use create_media_workflow_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/create_media_workflow_job.py.html>`__ to see an example of how to use create_media_workflow_job API.
         """
         resource_path = "/mediaWorkflowJobs"
         method = "POST"
@@ -1096,7 +1096,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/create_stream_cdn_config.py.html>`__ to see an example of how to use create_stream_cdn_config API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/create_stream_cdn_config.py.html>`__ to see an example of how to use create_stream_cdn_config API.
         """
         resource_path = "/streamCdnConfigs"
         method = "POST"
@@ -1190,7 +1190,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/create_stream_distribution_channel.py.html>`__ to see an example of how to use create_stream_distribution_channel API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/create_stream_distribution_channel.py.html>`__ to see an example of how to use create_stream_distribution_channel API.
         """
         resource_path = "/streamDistributionChannels"
         method = "POST"
@@ -1284,7 +1284,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/create_stream_packaging_config.py.html>`__ to see an example of how to use create_stream_packaging_config API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/create_stream_packaging_config.py.html>`__ to see an example of how to use create_stream_packaging_config API.
         """
         resource_path = "/streamPackagingConfigs"
         method = "POST"
@@ -1383,7 +1383,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/delete_media_asset.py.html>`__ to see an example of how to use delete_media_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/delete_media_asset.py.html>`__ to see an example of how to use delete_media_asset API.
         """
         resource_path = "/mediaAssets/{mediaAssetId}"
         method = "DELETE"
@@ -1505,7 +1505,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/delete_media_asset_distribution_channel_attachment.py.html>`__ to see an example of how to use delete_media_asset_distribution_channel_attachment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/delete_media_asset_distribution_channel_attachment.py.html>`__ to see an example of how to use delete_media_asset_distribution_channel_attachment API.
         """
         resource_path = "/mediaAssets/{mediaAssetId}/distributionChannelAttachments/{distributionChannelId}"
         method = "DELETE"
@@ -1615,7 +1615,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/delete_media_workflow.py.html>`__ to see an example of how to use delete_media_workflow API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/delete_media_workflow.py.html>`__ to see an example of how to use delete_media_workflow API.
         """
         resource_path = "/mediaWorkflows/{mediaWorkflowId}"
         method = "DELETE"
@@ -1716,7 +1716,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/delete_media_workflow_configuration.py.html>`__ to see an example of how to use delete_media_workflow_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/delete_media_workflow_configuration.py.html>`__ to see an example of how to use delete_media_workflow_configuration API.
         """
         resource_path = "/mediaWorkflowConfigurations/{mediaWorkflowConfigurationId}"
         method = "DELETE"
@@ -1817,7 +1817,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/delete_media_workflow_job.py.html>`__ to see an example of how to use delete_media_workflow_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/delete_media_workflow_job.py.html>`__ to see an example of how to use delete_media_workflow_job API.
         """
         resource_path = "/mediaWorkflowJobs/{mediaWorkflowJobId}"
         method = "DELETE"
@@ -1918,7 +1918,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/delete_stream_cdn_config.py.html>`__ to see an example of how to use delete_stream_cdn_config API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/delete_stream_cdn_config.py.html>`__ to see an example of how to use delete_stream_cdn_config API.
         """
         resource_path = "/streamCdnConfigs/{streamCdnConfigId}"
         method = "DELETE"
@@ -2019,7 +2019,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/delete_stream_distribution_channel.py.html>`__ to see an example of how to use delete_stream_distribution_channel API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/delete_stream_distribution_channel.py.html>`__ to see an example of how to use delete_stream_distribution_channel API.
         """
         resource_path = "/streamDistributionChannels/{streamDistributionChannelId}"
         method = "DELETE"
@@ -2120,7 +2120,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/delete_stream_packaging_config.py.html>`__ to see an example of how to use delete_stream_packaging_config API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/delete_stream_packaging_config.py.html>`__ to see an example of how to use delete_stream_packaging_config API.
         """
         resource_path = "/streamPackagingConfigs/{streamPackagingConfigId}"
         method = "DELETE"
@@ -2214,7 +2214,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/get_media_asset.py.html>`__ to see an example of how to use get_media_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/get_media_asset.py.html>`__ to see an example of how to use get_media_asset API.
         """
         resource_path = "/mediaAssets/{mediaAssetId}"
         method = "GET"
@@ -2314,7 +2314,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/get_media_asset_distribution_channel_attachment.py.html>`__ to see an example of how to use get_media_asset_distribution_channel_attachment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/get_media_asset_distribution_channel_attachment.py.html>`__ to see an example of how to use get_media_asset_distribution_channel_attachment API.
         """
         resource_path = "/mediaAssets/{mediaAssetId}/distributionChannelAttachments/{distributionChannelId}"
         method = "GET"
@@ -2417,7 +2417,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/get_media_workflow.py.html>`__ to see an example of how to use get_media_workflow API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/get_media_workflow.py.html>`__ to see an example of how to use get_media_workflow API.
         """
         resource_path = "/mediaWorkflows/{mediaWorkflowId}"
         method = "GET"
@@ -2511,7 +2511,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/get_media_workflow_configuration.py.html>`__ to see an example of how to use get_media_workflow_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/get_media_workflow_configuration.py.html>`__ to see an example of how to use get_media_workflow_configuration API.
         """
         resource_path = "/mediaWorkflowConfigurations/{mediaWorkflowConfigurationId}"
         method = "GET"
@@ -2605,7 +2605,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/get_media_workflow_job.py.html>`__ to see an example of how to use get_media_workflow_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/get_media_workflow_job.py.html>`__ to see an example of how to use get_media_workflow_job API.
         """
         resource_path = "/mediaWorkflowJobs/{mediaWorkflowJobId}"
         method = "GET"
@@ -2702,7 +2702,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/get_media_workflow_job_fact.py.html>`__ to see an example of how to use get_media_workflow_job_fact API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/get_media_workflow_job_fact.py.html>`__ to see an example of how to use get_media_workflow_job_fact API.
         """
         resource_path = "/mediaWorkflowJobs/{mediaWorkflowJobId}/facts/{key}"
         method = "GET"
@@ -2797,7 +2797,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/get_stream_cdn_config.py.html>`__ to see an example of how to use get_stream_cdn_config API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/get_stream_cdn_config.py.html>`__ to see an example of how to use get_stream_cdn_config API.
         """
         resource_path = "/streamCdnConfigs/{streamCdnConfigId}"
         method = "GET"
@@ -2891,7 +2891,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/get_stream_distribution_channel.py.html>`__ to see an example of how to use get_stream_distribution_channel API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/get_stream_distribution_channel.py.html>`__ to see an example of how to use get_stream_distribution_channel API.
         """
         resource_path = "/streamDistributionChannels/{streamDistributionChannelId}"
         method = "GET"
@@ -2985,7 +2985,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/get_stream_packaging_config.py.html>`__ to see an example of how to use get_stream_packaging_config API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/get_stream_packaging_config.py.html>`__ to see an example of how to use get_stream_packaging_config API.
         """
         resource_path = "/streamPackagingConfigs/{streamPackagingConfigId}"
         method = "GET"
@@ -3089,7 +3089,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/ingest_stream_distribution_channel.py.html>`__ to see an example of how to use ingest_stream_distribution_channel API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/ingest_stream_distribution_channel.py.html>`__ to see an example of how to use ingest_stream_distribution_channel API.
         """
         resource_path = "/streamDistributionChannels/{streamDistributionChannelId}/actions/ingest"
         method = "POST"
@@ -3211,7 +3211,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/list_media_asset_distribution_channel_attachments.py.html>`__ to see an example of how to use list_media_asset_distribution_channel_attachments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/list_media_asset_distribution_channel_attachments.py.html>`__ to see an example of how to use list_media_asset_distribution_channel_attachments API.
         """
         resource_path = "/mediaAssets/{mediaAssetId}/distributionChannelAttachments"
         method = "GET"
@@ -3391,7 +3391,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/list_media_assets.py.html>`__ to see an example of how to use list_media_assets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/list_media_assets.py.html>`__ to see an example of how to use list_media_assets API.
         """
         resource_path = "/mediaAssets"
         method = "GET"
@@ -3568,7 +3568,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/list_media_workflow_configurations.py.html>`__ to see an example of how to use list_media_workflow_configurations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/list_media_workflow_configurations.py.html>`__ to see an example of how to use list_media_workflow_configurations API.
         """
         resource_path = "/mediaWorkflowConfigurations"
         method = "GET"
@@ -3718,7 +3718,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/list_media_workflow_job_facts.py.html>`__ to see an example of how to use list_media_workflow_job_facts API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/list_media_workflow_job_facts.py.html>`__ to see an example of how to use list_media_workflow_job_facts API.
         """
         resource_path = "/mediaWorkflowJobs/{mediaWorkflowJobId}/facts"
         method = "GET"
@@ -3882,7 +3882,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/list_media_workflow_jobs.py.html>`__ to see an example of how to use list_media_workflow_jobs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/list_media_workflow_jobs.py.html>`__ to see an example of how to use list_media_workflow_jobs API.
         """
         resource_path = "/mediaWorkflowJobs"
         method = "GET"
@@ -4035,7 +4035,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/list_media_workflow_task_declarations.py.html>`__ to see an example of how to use list_media_workflow_task_declarations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/list_media_workflow_task_declarations.py.html>`__ to see an example of how to use list_media_workflow_task_declarations API.
         """
         resource_path = "/mediaWorkflowTaskDeclarations"
         method = "GET"
@@ -4182,7 +4182,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/list_media_workflows.py.html>`__ to see an example of how to use list_media_workflows API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/list_media_workflows.py.html>`__ to see an example of how to use list_media_workflows API.
         """
         resource_path = "/mediaWorkflows"
         method = "GET"
@@ -4336,7 +4336,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/list_stream_cdn_configs.py.html>`__ to see an example of how to use list_stream_cdn_configs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/list_stream_cdn_configs.py.html>`__ to see an example of how to use list_stream_cdn_configs API.
         """
         resource_path = "/streamCdnConfigs"
         method = "GET"
@@ -4489,7 +4489,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/list_stream_distribution_channels.py.html>`__ to see an example of how to use list_stream_distribution_channels API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/list_stream_distribution_channels.py.html>`__ to see an example of how to use list_stream_distribution_channels API.
         """
         resource_path = "/streamDistributionChannels"
         method = "GET"
@@ -4643,7 +4643,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/list_stream_packaging_configs.py.html>`__ to see an example of how to use list_stream_packaging_configs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/list_stream_packaging_configs.py.html>`__ to see an example of how to use list_stream_packaging_configs API.
         """
         resource_path = "/streamPackagingConfigs"
         method = "GET"
@@ -4782,7 +4782,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/list_system_media_workflows.py.html>`__ to see an example of how to use list_system_media_workflows API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/list_system_media_workflows.py.html>`__ to see an example of how to use list_system_media_workflows API.
         """
         resource_path = "/systemMediaWorkflows"
         method = "GET"
@@ -4897,7 +4897,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/update_media_asset.py.html>`__ to see an example of how to use update_media_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/update_media_asset.py.html>`__ to see an example of how to use update_media_asset API.
         """
         resource_path = "/mediaAssets/{mediaAssetId}"
         method = "PUT"
@@ -5005,7 +5005,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/update_media_workflow.py.html>`__ to see an example of how to use update_media_workflow API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/update_media_workflow.py.html>`__ to see an example of how to use update_media_workflow API.
         """
         resource_path = "/mediaWorkflows/{mediaWorkflowId}"
         method = "PUT"
@@ -5113,7 +5113,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/update_media_workflow_configuration.py.html>`__ to see an example of how to use update_media_workflow_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/update_media_workflow_configuration.py.html>`__ to see an example of how to use update_media_workflow_configuration API.
         """
         resource_path = "/mediaWorkflowConfigurations/{mediaWorkflowConfigurationId}"
         method = "PUT"
@@ -5221,7 +5221,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/update_media_workflow_job.py.html>`__ to see an example of how to use update_media_workflow_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/update_media_workflow_job.py.html>`__ to see an example of how to use update_media_workflow_job API.
         """
         resource_path = "/mediaWorkflowJobs/{mediaWorkflowJobId}"
         method = "PUT"
@@ -5329,7 +5329,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/update_stream_cdn_config.py.html>`__ to see an example of how to use update_stream_cdn_config API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/update_stream_cdn_config.py.html>`__ to see an example of how to use update_stream_cdn_config API.
         """
         resource_path = "/streamCdnConfigs/{streamCdnConfigId}"
         method = "PUT"
@@ -5437,7 +5437,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/update_stream_distribution_channel.py.html>`__ to see an example of how to use update_stream_distribution_channel API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/update_stream_distribution_channel.py.html>`__ to see an example of how to use update_stream_distribution_channel API.
         """
         resource_path = "/streamDistributionChannels/{streamDistributionChannelId}"
         method = "PUT"
@@ -5545,7 +5545,7 @@ class MediaServicesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/update_stream_packaging_config.py.html>`__ to see an example of how to use update_stream_packaging_config API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/update_stream_packaging_config.py.html>`__ to see an example of how to use update_stream_packaging_config API.
         """
         resource_path = "/streamPackagingConfigs/{streamPackagingConfigId}"
         method = "PUT"

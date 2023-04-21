@@ -141,7 +141,7 @@ class RefreshActivityClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/create_refresh_activity.py.html>`__ to see an example of how to use create_refresh_activity API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/create_refresh_activity.py.html>`__ to see an example of how to use create_refresh_activity API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/refreshActivities"
         method = "POST"
@@ -239,7 +239,7 @@ class RefreshActivityClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/get_refresh_activity.py.html>`__ to see an example of how to use get_refresh_activity API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/get_refresh_activity.py.html>`__ to see an example of how to use get_refresh_activity API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/refreshActivities/{refreshActivityId}"
         method = "GET"
@@ -362,7 +362,7 @@ class RefreshActivityClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_refresh_activities.py.html>`__ to see an example of how to use list_refresh_activities API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/list_refresh_activities.py.html>`__ to see an example of how to use list_refresh_activities API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/refreshActivities"
         method = "GET"
@@ -513,7 +513,7 @@ class RefreshActivityClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/fusionapps/list_time_available_for_refreshes.py.html>`__ to see an example of how to use list_time_available_for_refreshes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/fusionapps/list_time_available_for_refreshes.py.html>`__ to see an example of how to use list_time_available_for_refreshes API.
         """
         resource_path = "/fusionEnvironments/{fusionEnvironmentId}/timeAvailableForRefresh"
         method = "GET"

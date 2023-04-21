@@ -140,7 +140,7 @@ class QueryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmtraces/list_quick_picks.py.html>`__ to see an example of how to use list_quick_picks API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmtraces/list_quick_picks.py.html>`__ to see an example of how to use list_quick_picks API.
         """
         resource_path = "/queries/quickPicks"
         method = "GET"
@@ -252,7 +252,7 @@ class QueryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmtraces/query.py.html>`__ to see an example of how to use query API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmtraces/query.py.html>`__ to see an example of how to use query API.
         """
         resource_path = "/queries/actions/runQuery"
         method = "POST"

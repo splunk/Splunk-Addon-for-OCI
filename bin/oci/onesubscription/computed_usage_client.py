@@ -140,7 +140,7 @@ class ComputedUsageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/onesubscription/get_computed_usage.py.html>`__ to see an example of how to use get_computed_usage API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/onesubscription/get_computed_usage.py.html>`__ to see an example of how to use get_computed_usage API.
         """
         resource_path = "/computedUsages/{computedUsageId}"
         method = "GET"
@@ -266,7 +266,7 @@ class ComputedUsageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/onesubscription/list_aggregated_computed_usages.py.html>`__ to see an example of how to use list_aggregated_computed_usages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/onesubscription/list_aggregated_computed_usages.py.html>`__ to see an example of how to use list_aggregated_computed_usages API.
         """
         resource_path = "/aggregatedComputedUsages"
         method = "GET"
@@ -404,7 +404,7 @@ class ComputedUsageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/onesubscription/list_computed_usages.py.html>`__ to see an example of how to use list_computed_usages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/onesubscription/list_computed_usages.py.html>`__ to see an example of how to use list_computed_usages API.
         """
         resource_path = "/computedUsages"
         method = "GET"

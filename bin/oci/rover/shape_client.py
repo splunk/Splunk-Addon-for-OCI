@@ -147,7 +147,7 @@ class ShapeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/list_shapes.py.html>`__ to see an example of how to use list_shapes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/list_shapes.py.html>`__ to see an example of how to use list_shapes API.
         """
         resource_path = "/shapes"
         method = "GET"
