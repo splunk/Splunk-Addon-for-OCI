@@ -156,7 +156,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/change_container_repository_compartment.py.html>`__ to see an example of how to use change_container_repository_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/change_container_repository_compartment.py.html>`__ to see an example of how to use change_container_repository_compartment API.
         """
         resource_path = "/container/repositories/{repositoryId}/actions/changeCompartment"
         method = "POST"
@@ -277,7 +277,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/change_repository_compartment.py.html>`__ to see an example of how to use change_repository_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/change_repository_compartment.py.html>`__ to see an example of how to use change_repository_compartment API.
         """
         resource_path = "/repositories/{repositoryId}/actions/changeCompartment"
         method = "POST"
@@ -387,7 +387,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/create_container_image_signature.py.html>`__ to see an example of how to use create_container_image_signature API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/create_container_image_signature.py.html>`__ to see an example of how to use create_container_image_signature API.
         """
         resource_path = "/container/imageSignatures"
         method = "POST"
@@ -482,7 +482,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/create_container_repository.py.html>`__ to see an example of how to use create_container_repository API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/create_container_repository.py.html>`__ to see an example of how to use create_container_repository API.
         """
         resource_path = "/container/repositories"
         method = "POST"
@@ -575,7 +575,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/create_repository.py.html>`__ to see an example of how to use create_repository API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/create_repository.py.html>`__ to see an example of how to use create_repository API.
         """
         resource_path = "/repositories"
         method = "POST"
@@ -670,7 +670,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/delete_container_image.py.html>`__ to see an example of how to use delete_container_image API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/delete_container_image.py.html>`__ to see an example of how to use delete_container_image API.
         """
         resource_path = "/container/images/{imageId}"
         method = "DELETE"
@@ -772,7 +772,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/delete_container_image_signature.py.html>`__ to see an example of how to use delete_container_image_signature API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/delete_container_image_signature.py.html>`__ to see an example of how to use delete_container_image_signature API.
         """
         resource_path = "/container/imageSignatures/{imageSignatureId}"
         method = "DELETE"
@@ -874,7 +874,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/delete_container_repository.py.html>`__ to see an example of how to use delete_container_repository API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/delete_container_repository.py.html>`__ to see an example of how to use delete_container_repository API.
         """
         resource_path = "/container/repositories/{repositoryId}"
         method = "DELETE"
@@ -978,7 +978,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/delete_generic_artifact.py.html>`__ to see an example of how to use delete_generic_artifact API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/delete_generic_artifact.py.html>`__ to see an example of how to use delete_generic_artifact API.
         """
         resource_path = "/generic/artifacts/{artifactId}"
         method = "DELETE"
@@ -1090,7 +1090,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/delete_generic_artifact_by_path.py.html>`__ to see an example of how to use delete_generic_artifact_by_path API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/delete_generic_artifact_by_path.py.html>`__ to see an example of how to use delete_generic_artifact_by_path API.
         """
         resource_path = "/generic/repositories/{repositoryId}/artifactPaths/{artifactPath}/versions/{version}"
         method = "DELETE"
@@ -1194,7 +1194,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/delete_repository.py.html>`__ to see an example of how to use delete_repository API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/delete_repository.py.html>`__ to see an example of how to use delete_repository API.
         """
         resource_path = "/repositories/{repositoryId}"
         method = "DELETE"
@@ -1289,7 +1289,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/get_container_configuration.py.html>`__ to see an example of how to use get_container_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/get_container_configuration.py.html>`__ to see an example of how to use get_container_configuration API.
         """
         resource_path = "/container/configuration"
         method = "GET"
@@ -1381,7 +1381,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/get_container_image.py.html>`__ to see an example of how to use get_container_image API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/get_container_image.py.html>`__ to see an example of how to use get_container_image API.
         """
         resource_path = "/container/images/{imageId}"
         method = "GET"
@@ -1478,7 +1478,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/get_container_image_signature.py.html>`__ to see an example of how to use get_container_image_signature API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/get_container_image_signature.py.html>`__ to see an example of how to use get_container_image_signature API.
         """
         resource_path = "/container/imageSignatures/{imageSignatureId}"
         method = "GET"
@@ -1575,7 +1575,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/get_container_repository.py.html>`__ to see an example of how to use get_container_repository API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/get_container_repository.py.html>`__ to see an example of how to use get_container_repository API.
         """
         resource_path = "/container/repositories/{repositoryId}"
         method = "GET"
@@ -1674,7 +1674,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/get_generic_artifact.py.html>`__ to see an example of how to use get_generic_artifact API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/get_generic_artifact.py.html>`__ to see an example of how to use get_generic_artifact API.
         """
         resource_path = "/generic/artifacts/{artifactId}"
         method = "GET"
@@ -1781,7 +1781,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/get_generic_artifact_by_path.py.html>`__ to see an example of how to use get_generic_artifact_by_path API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/get_generic_artifact_by_path.py.html>`__ to see an example of how to use get_generic_artifact_by_path API.
         """
         resource_path = "/generic/repositories/{repositoryId}/artifactPaths/{artifactPath}/versions/{version}"
         method = "GET"
@@ -1880,7 +1880,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/get_repository.py.html>`__ to see an example of how to use get_repository API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/get_repository.py.html>`__ to see an example of how to use get_repository API.
         """
         resource_path = "/repositories/{repositoryId}"
         method = "GET"
@@ -2054,7 +2054,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/list_container_image_signatures.py.html>`__ to see an example of how to use list_container_image_signatures API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/list_container_image_signatures.py.html>`__ to see an example of how to use list_container_image_signatures API.
         """
         resource_path = "/container/imageSignatures"
         method = "GET"
@@ -2257,7 +2257,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/list_container_images.py.html>`__ to see an example of how to use list_container_images API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/list_container_images.py.html>`__ to see an example of how to use list_container_images API.
         """
         resource_path = "/container/images"
         method = "GET"
@@ -2438,7 +2438,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/list_container_repositories.py.html>`__ to see an example of how to use list_container_repositories API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/list_container_repositories.py.html>`__ to see an example of how to use list_container_repositories API.
         """
         resource_path = "/container/repositories"
         method = "GET"
@@ -2615,7 +2615,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/list_generic_artifacts.py.html>`__ to see an example of how to use list_generic_artifacts API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/list_generic_artifacts.py.html>`__ to see an example of how to use list_generic_artifacts API.
         """
         resource_path = "/generic/artifacts"
         method = "GET"
@@ -2786,7 +2786,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/list_repositories.py.html>`__ to see an example of how to use list_repositories API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/list_repositories.py.html>`__ to see an example of how to use list_repositories API.
         """
         resource_path = "/repositories"
         method = "GET"
@@ -2923,7 +2923,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/remove_container_version.py.html>`__ to see an example of how to use remove_container_version API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/remove_container_version.py.html>`__ to see an example of how to use remove_container_version API.
         """
         resource_path = "/container/images/{imageId}/actions/removeVersion"
         method = "POST"
@@ -3042,7 +3042,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/restore_container_image.py.html>`__ to see an example of how to use restore_container_image API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/restore_container_image.py.html>`__ to see an example of how to use restore_container_image API.
         """
         resource_path = "/container/images/{imageId}/actions/restore"
         method = "POST"
@@ -3152,7 +3152,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/update_container_configuration.py.html>`__ to see an example of how to use update_container_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/update_container_configuration.py.html>`__ to see an example of how to use update_container_configuration API.
         """
         resource_path = "/container/configuration"
         method = "PUT"
@@ -3256,7 +3256,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/update_container_repository.py.html>`__ to see an example of how to use update_container_repository API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/update_container_repository.py.html>`__ to see an example of how to use update_container_repository API.
         """
         resource_path = "/container/repositories/{repositoryId}"
         method = "PUT"
@@ -3369,7 +3369,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/update_generic_artifact.py.html>`__ to see an example of how to use update_generic_artifact API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/update_generic_artifact.py.html>`__ to see an example of how to use update_generic_artifact API.
         """
         resource_path = "/generic/artifacts/{artifactId}"
         method = "PUT"
@@ -3488,7 +3488,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/update_generic_artifact_by_path.py.html>`__ to see an example of how to use update_generic_artifact_by_path API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/update_generic_artifact_by_path.py.html>`__ to see an example of how to use update_generic_artifact_by_path API.
         """
         resource_path = "/generic/repositories/{repositoryId}/artifactPaths/{artifactPath}/versions/{version}"
         method = "PUT"
@@ -3599,7 +3599,7 @@ class ArtifactsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/artifacts/update_repository.py.html>`__ to see an example of how to use update_repository API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/artifacts/update_repository.py.html>`__ to see an example of how to use update_repository API.
         """
         resource_path = "/repositories/{repositoryId}"
         method = "PUT"

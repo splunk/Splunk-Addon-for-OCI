@@ -131,7 +131,7 @@ class CommitmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/onesubscription/get_commitment.py.html>`__ to see an example of how to use get_commitment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/onesubscription/get_commitment.py.html>`__ to see an example of how to use get_commitment API.
         """
         resource_path = "/commitments/{commitmentId}"
         method = "GET"
@@ -244,7 +244,7 @@ class CommitmentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/onesubscription/list_commitments.py.html>`__ to see an example of how to use list_commitments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/onesubscription/list_commitments.py.html>`__ to see an example of how to use list_commitments API.
         """
         resource_path = "/commitments"
         method = "GET"

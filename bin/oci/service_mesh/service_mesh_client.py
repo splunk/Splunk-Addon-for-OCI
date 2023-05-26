@@ -138,7 +138,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "DELETE"
@@ -249,7 +249,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/change_access_policy_compartment.py.html>`__ to see an example of how to use change_access_policy_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/change_access_policy_compartment.py.html>`__ to see an example of how to use change_access_policy_compartment API.
         """
         resource_path = "/accessPolicies/{accessPolicyId}/actions/changeCompartment"
         method = "POST"
@@ -365,7 +365,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/change_ingress_gateway_compartment.py.html>`__ to see an example of how to use change_ingress_gateway_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/change_ingress_gateway_compartment.py.html>`__ to see an example of how to use change_ingress_gateway_compartment API.
         """
         resource_path = "/ingressGateways/{ingressGatewayId}/actions/changeCompartment"
         method = "POST"
@@ -481,7 +481,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/change_ingress_gateway_route_table_compartment.py.html>`__ to see an example of how to use change_ingress_gateway_route_table_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/change_ingress_gateway_route_table_compartment.py.html>`__ to see an example of how to use change_ingress_gateway_route_table_compartment API.
         """
         resource_path = "/ingressGatewayRouteTables/{ingressGatewayRouteTableId}/actions/changeCompartment"
         method = "POST"
@@ -597,7 +597,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/change_mesh_compartment.py.html>`__ to see an example of how to use change_mesh_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/change_mesh_compartment.py.html>`__ to see an example of how to use change_mesh_compartment API.
         """
         resource_path = "/meshes/{meshId}/actions/changeCompartment"
         method = "POST"
@@ -713,7 +713,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/change_virtual_deployment_compartment.py.html>`__ to see an example of how to use change_virtual_deployment_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/change_virtual_deployment_compartment.py.html>`__ to see an example of how to use change_virtual_deployment_compartment API.
         """
         resource_path = "/virtualDeployments/{virtualDeploymentId}/actions/changeCompartment"
         method = "POST"
@@ -829,7 +829,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/change_virtual_service_compartment.py.html>`__ to see an example of how to use change_virtual_service_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/change_virtual_service_compartment.py.html>`__ to see an example of how to use change_virtual_service_compartment API.
         """
         resource_path = "/virtualServices/{virtualServiceId}/actions/changeCompartment"
         method = "POST"
@@ -945,7 +945,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/change_virtual_service_route_table_compartment.py.html>`__ to see an example of how to use change_virtual_service_route_table_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/change_virtual_service_route_table_compartment.py.html>`__ to see an example of how to use change_virtual_service_route_table_compartment API.
         """
         resource_path = "/virtualServiceRouteTables/{virtualServiceRouteTableId}/actions/changeCompartment"
         method = "POST"
@@ -1051,7 +1051,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/create_access_policy.py.html>`__ to see an example of how to use create_access_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/create_access_policy.py.html>`__ to see an example of how to use create_access_policy API.
         """
         resource_path = "/accessPolicies"
         method = "POST"
@@ -1145,7 +1145,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/create_ingress_gateway.py.html>`__ to see an example of how to use create_ingress_gateway API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/create_ingress_gateway.py.html>`__ to see an example of how to use create_ingress_gateway API.
         """
         resource_path = "/ingressGateways"
         method = "POST"
@@ -1239,7 +1239,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/create_ingress_gateway_route_table.py.html>`__ to see an example of how to use create_ingress_gateway_route_table API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/create_ingress_gateway_route_table.py.html>`__ to see an example of how to use create_ingress_gateway_route_table API.
         """
         resource_path = "/ingressGatewayRouteTables"
         method = "POST"
@@ -1333,7 +1333,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/create_mesh.py.html>`__ to see an example of how to use create_mesh API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/create_mesh.py.html>`__ to see an example of how to use create_mesh API.
         """
         resource_path = "/meshes"
         method = "POST"
@@ -1427,7 +1427,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/create_virtual_deployment.py.html>`__ to see an example of how to use create_virtual_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/create_virtual_deployment.py.html>`__ to see an example of how to use create_virtual_deployment API.
         """
         resource_path = "/virtualDeployments"
         method = "POST"
@@ -1521,7 +1521,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/create_virtual_service.py.html>`__ to see an example of how to use create_virtual_service API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/create_virtual_service.py.html>`__ to see an example of how to use create_virtual_service API.
         """
         resource_path = "/virtualServices"
         method = "POST"
@@ -1615,7 +1615,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/create_virtual_service_route_table.py.html>`__ to see an example of how to use create_virtual_service_route_table API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/create_virtual_service_route_table.py.html>`__ to see an example of how to use create_virtual_service_route_table API.
         """
         resource_path = "/virtualServiceRouteTables"
         method = "POST"
@@ -1709,7 +1709,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/delete_access_policy.py.html>`__ to see an example of how to use delete_access_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/delete_access_policy.py.html>`__ to see an example of how to use delete_access_policy API.
         """
         resource_path = "/accessPolicies/{accessPolicyId}"
         method = "DELETE"
@@ -1810,7 +1810,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/delete_ingress_gateway.py.html>`__ to see an example of how to use delete_ingress_gateway API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/delete_ingress_gateway.py.html>`__ to see an example of how to use delete_ingress_gateway API.
         """
         resource_path = "/ingressGateways/{ingressGatewayId}"
         method = "DELETE"
@@ -1911,7 +1911,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/delete_ingress_gateway_route_table.py.html>`__ to see an example of how to use delete_ingress_gateway_route_table API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/delete_ingress_gateway_route_table.py.html>`__ to see an example of how to use delete_ingress_gateway_route_table API.
         """
         resource_path = "/ingressGatewayRouteTables/{ingressGatewayRouteTableId}"
         method = "DELETE"
@@ -2012,7 +2012,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/delete_mesh.py.html>`__ to see an example of how to use delete_mesh API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/delete_mesh.py.html>`__ to see an example of how to use delete_mesh API.
         """
         resource_path = "/meshes/{meshId}"
         method = "DELETE"
@@ -2113,7 +2113,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/delete_virtual_deployment.py.html>`__ to see an example of how to use delete_virtual_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/delete_virtual_deployment.py.html>`__ to see an example of how to use delete_virtual_deployment API.
         """
         resource_path = "/virtualDeployments/{virtualDeploymentId}"
         method = "DELETE"
@@ -2214,7 +2214,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/delete_virtual_service.py.html>`__ to see an example of how to use delete_virtual_service API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/delete_virtual_service.py.html>`__ to see an example of how to use delete_virtual_service API.
         """
         resource_path = "/virtualServices/{virtualServiceId}"
         method = "DELETE"
@@ -2315,7 +2315,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/delete_virtual_service_route_table.py.html>`__ to see an example of how to use delete_virtual_service_route_table API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/delete_virtual_service_route_table.py.html>`__ to see an example of how to use delete_virtual_service_route_table API.
         """
         resource_path = "/virtualServiceRouteTables/{virtualServiceRouteTableId}"
         method = "DELETE"
@@ -2409,7 +2409,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/get_access_policy.py.html>`__ to see an example of how to use get_access_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/get_access_policy.py.html>`__ to see an example of how to use get_access_policy API.
         """
         resource_path = "/accessPolicies/{accessPolicyId}"
         method = "GET"
@@ -2503,7 +2503,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/get_ingress_gateway.py.html>`__ to see an example of how to use get_ingress_gateway API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/get_ingress_gateway.py.html>`__ to see an example of how to use get_ingress_gateway API.
         """
         resource_path = "/ingressGateways/{ingressGatewayId}"
         method = "GET"
@@ -2597,7 +2597,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/get_ingress_gateway_route_table.py.html>`__ to see an example of how to use get_ingress_gateway_route_table API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/get_ingress_gateway_route_table.py.html>`__ to see an example of how to use get_ingress_gateway_route_table API.
         """
         resource_path = "/ingressGatewayRouteTables/{ingressGatewayRouteTableId}"
         method = "GET"
@@ -2691,7 +2691,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/get_mesh.py.html>`__ to see an example of how to use get_mesh API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/get_mesh.py.html>`__ to see an example of how to use get_mesh API.
         """
         resource_path = "/meshes/{meshId}"
         method = "GET"
@@ -2782,7 +2782,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/get_proxy_details.py.html>`__ to see an example of how to use get_proxy_details API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/get_proxy_details.py.html>`__ to see an example of how to use get_proxy_details API.
         """
         resource_path = "/proxyDetails"
         method = "GET"
@@ -2864,7 +2864,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/get_virtual_deployment.py.html>`__ to see an example of how to use get_virtual_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/get_virtual_deployment.py.html>`__ to see an example of how to use get_virtual_deployment API.
         """
         resource_path = "/virtualDeployments/{virtualDeploymentId}"
         method = "GET"
@@ -2958,7 +2958,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/get_virtual_service.py.html>`__ to see an example of how to use get_virtual_service API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/get_virtual_service.py.html>`__ to see an example of how to use get_virtual_service API.
         """
         resource_path = "/virtualServices/{virtualServiceId}"
         method = "GET"
@@ -3052,7 +3052,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/get_virtual_service_route_table.py.html>`__ to see an example of how to use get_virtual_service_route_table API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/get_virtual_service_route_table.py.html>`__ to see an example of how to use get_virtual_service_route_table API.
         """
         resource_path = "/virtualServiceRouteTables/{virtualServiceRouteTableId}"
         method = "GET"
@@ -3146,7 +3146,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -3270,7 +3270,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/list_access_policies.py.html>`__ to see an example of how to use list_access_policies API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/list_access_policies.py.html>`__ to see an example of how to use list_access_policies API.
         """
         resource_path = "/accessPolicies"
         method = "GET"
@@ -3426,7 +3426,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/list_ingress_gateway_route_tables.py.html>`__ to see an example of how to use list_ingress_gateway_route_tables API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/list_ingress_gateway_route_tables.py.html>`__ to see an example of how to use list_ingress_gateway_route_tables API.
         """
         resource_path = "/ingressGatewayRouteTables"
         method = "GET"
@@ -3582,7 +3582,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/list_ingress_gateways.py.html>`__ to see an example of how to use list_ingress_gateways API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/list_ingress_gateways.py.html>`__ to see an example of how to use list_ingress_gateways API.
         """
         resource_path = "/ingressGateways"
         method = "GET"
@@ -3735,7 +3735,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/list_meshes.py.html>`__ to see an example of how to use list_meshes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/list_meshes.py.html>`__ to see an example of how to use list_meshes API.
         """
         resource_path = "/meshes"
         method = "GET"
@@ -3889,7 +3889,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/list_virtual_deployments.py.html>`__ to see an example of how to use list_virtual_deployments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/list_virtual_deployments.py.html>`__ to see an example of how to use list_virtual_deployments API.
         """
         resource_path = "/virtualDeployments"
         method = "GET"
@@ -4045,7 +4045,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/list_virtual_service_route_tables.py.html>`__ to see an example of how to use list_virtual_service_route_tables API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/list_virtual_service_route_tables.py.html>`__ to see an example of how to use list_virtual_service_route_tables API.
         """
         resource_path = "/virtualServiceRouteTables"
         method = "GET"
@@ -4201,7 +4201,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/list_virtual_services.py.html>`__ to see an example of how to use list_virtual_services API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/list_virtual_services.py.html>`__ to see an example of how to use list_virtual_services API.
         """
         resource_path = "/virtualServices"
         method = "GET"
@@ -4343,7 +4343,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -4481,7 +4481,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -4630,7 +4630,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -4771,7 +4771,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/update_access_policy.py.html>`__ to see an example of how to use update_access_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/update_access_policy.py.html>`__ to see an example of how to use update_access_policy API.
         """
         resource_path = "/accessPolicies/{accessPolicyId}"
         method = "PUT"
@@ -4887,7 +4887,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/update_ingress_gateway.py.html>`__ to see an example of how to use update_ingress_gateway API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/update_ingress_gateway.py.html>`__ to see an example of how to use update_ingress_gateway API.
         """
         resource_path = "/ingressGateways/{ingressGatewayId}"
         method = "PUT"
@@ -5003,7 +5003,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/update_ingress_gateway_route_table.py.html>`__ to see an example of how to use update_ingress_gateway_route_table API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/update_ingress_gateway_route_table.py.html>`__ to see an example of how to use update_ingress_gateway_route_table API.
         """
         resource_path = "/ingressGatewayRouteTables/{ingressGatewayRouteTableId}"
         method = "PUT"
@@ -5119,7 +5119,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/update_mesh.py.html>`__ to see an example of how to use update_mesh API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/update_mesh.py.html>`__ to see an example of how to use update_mesh API.
         """
         resource_path = "/meshes/{meshId}"
         method = "PUT"
@@ -5235,7 +5235,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/update_virtual_deployment.py.html>`__ to see an example of how to use update_virtual_deployment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/update_virtual_deployment.py.html>`__ to see an example of how to use update_virtual_deployment API.
         """
         resource_path = "/virtualDeployments/{virtualDeploymentId}"
         method = "PUT"
@@ -5351,7 +5351,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/update_virtual_service.py.html>`__ to see an example of how to use update_virtual_service API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/update_virtual_service.py.html>`__ to see an example of how to use update_virtual_service API.
         """
         resource_path = "/virtualServices/{virtualServiceId}"
         method = "PUT"
@@ -5467,7 +5467,7 @@ class ServiceMeshClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemesh/update_virtual_service_route_table.py.html>`__ to see an example of how to use update_virtual_service_route_table API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemesh/update_virtual_service_route_table.py.html>`__ to see an example of how to use update_virtual_service_route_table API.
         """
         resource_path = "/virtualServiceRouteTables/{virtualServiceRouteTableId}"
         method = "PUT"

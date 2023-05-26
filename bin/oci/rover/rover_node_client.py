@@ -148,7 +148,7 @@ class RoverNodeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/change_rover_node_compartment.py.html>`__ to see an example of how to use change_rover_node_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/change_rover_node_compartment.py.html>`__ to see an example of how to use change_rover_node_compartment API.
         """
         resource_path = "/roverNodes/{roverNodeId}/actions/changeCompartment"
         method = "POST"
@@ -254,7 +254,7 @@ class RoverNodeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/create_rover_node.py.html>`__ to see an example of how to use create_rover_node API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/create_rover_node.py.html>`__ to see an example of how to use create_rover_node API.
         """
         resource_path = "/roverNodes"
         method = "POST"
@@ -355,7 +355,7 @@ class RoverNodeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/delete_rover_node.py.html>`__ to see an example of how to use delete_rover_node API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/delete_rover_node.py.html>`__ to see an example of how to use delete_rover_node API.
         """
         resource_path = "/roverNodes/{roverNodeId}"
         method = "DELETE"
@@ -452,7 +452,7 @@ class RoverNodeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/get_rover_node.py.html>`__ to see an example of how to use get_rover_node API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/get_rover_node.py.html>`__ to see an example of how to use get_rover_node API.
         """
         resource_path = "/roverNodes/{roverNodeId}"
         method = "GET"
@@ -546,7 +546,7 @@ class RoverNodeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/get_rover_node_certificate.py.html>`__ to see an example of how to use get_rover_node_certificate API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/get_rover_node_certificate.py.html>`__ to see an example of how to use get_rover_node_certificate API.
         """
         resource_path = "/roverNodes/{roverNodeId}/certificate"
         method = "GET"
@@ -640,7 +640,7 @@ class RoverNodeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/get_rover_node_encryption_key.py.html>`__ to see an example of how to use get_rover_node_encryption_key API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/get_rover_node_encryption_key.py.html>`__ to see an example of how to use get_rover_node_encryption_key API.
         """
         resource_path = "/roverNodes/{roverNodeId}/encryptionKey"
         method = "GET"
@@ -738,7 +738,7 @@ class RoverNodeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/get_rover_node_get_rpt.py.html>`__ to see an example of how to use get_rover_node_get_rpt API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/get_rover_node_get_rpt.py.html>`__ to see an example of how to use get_rover_node_get_rpt API.
         """
         resource_path = "/roverNodes/{roverNodeId}/getRpt"
         method = "GET"
@@ -865,7 +865,7 @@ class RoverNodeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/list_rover_nodes.py.html>`__ to see an example of how to use list_rover_nodes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/list_rover_nodes.py.html>`__ to see an example of how to use list_rover_nodes API.
         """
         resource_path = "/roverNodes"
         method = "GET"
@@ -1019,7 +1019,7 @@ class RoverNodeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/rover_node_action_set_key.py.html>`__ to see an example of how to use rover_node_action_set_key API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/rover_node_action_set_key.py.html>`__ to see an example of how to use rover_node_action_set_key API.
         """
         resource_path = "/roverNodes/{roverNodeId}/actions/setKey"
         method = "POST"
@@ -1131,7 +1131,7 @@ class RoverNodeClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/update_rover_node.py.html>`__ to see an example of how to use update_rover_node API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/update_rover_node.py.html>`__ to see an example of how to use update_rover_node API.
         """
         resource_path = "/roverNodes/{roverNodeId}"
         method = "PUT"

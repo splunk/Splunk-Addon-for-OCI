@@ -135,7 +135,7 @@ class TraceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmtraces/get_aggregated_snapshot.py.html>`__ to see an example of how to use get_aggregated_snapshot API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmtraces/get_aggregated_snapshot.py.html>`__ to see an example of how to use get_aggregated_snapshot API.
         """
         resource_path = "/traces/{traceKey}/aggregatedSnapshotData"
         method = "GET"
@@ -241,7 +241,7 @@ class TraceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmtraces/get_span.py.html>`__ to see an example of how to use get_span API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmtraces/get_span.py.html>`__ to see an example of how to use get_span API.
         """
         resource_path = "/spans/{traceKey}/{spanKey}"
         method = "GET"
@@ -345,7 +345,7 @@ class TraceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmtraces/get_trace.py.html>`__ to see an example of how to use get_trace API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmtraces/get_trace.py.html>`__ to see an example of how to use get_trace API.
         """
         resource_path = "/traces/{traceKey}"
         method = "GET"
@@ -457,7 +457,7 @@ class TraceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmtraces/get_trace_snapshot.py.html>`__ to see an example of how to use get_trace_snapshot API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmtraces/get_trace_snapshot.py.html>`__ to see an example of how to use get_trace_snapshot API.
         """
         resource_path = "/traces/{traceKey}/snapshotData"
         method = "GET"

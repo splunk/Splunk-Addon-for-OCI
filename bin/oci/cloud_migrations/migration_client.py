@@ -139,7 +139,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "DELETE"
@@ -250,7 +250,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/change_migration_compartment.py.html>`__ to see an example of how to use change_migration_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/change_migration_compartment.py.html>`__ to see an example of how to use change_migration_compartment API.
         """
         resource_path = "/migrations/{migrationId}/actions/changeCompartment"
         method = "POST"
@@ -366,7 +366,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/change_migration_plan_compartment.py.html>`__ to see an example of how to use change_migration_plan_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/change_migration_plan_compartment.py.html>`__ to see an example of how to use change_migration_plan_compartment API.
         """
         resource_path = "/migrationPlans/{migrationPlanId}/actions/changeCompartment"
         method = "POST"
@@ -482,7 +482,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/change_replication_schedule_compartment.py.html>`__ to see an example of how to use change_replication_schedule_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/change_replication_schedule_compartment.py.html>`__ to see an example of how to use change_replication_schedule_compartment API.
         """
         resource_path = "/replicationSchedules/{replicationScheduleId}/actions/changeCompartment"
         method = "POST"
@@ -588,7 +588,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/create_migration.py.html>`__ to see an example of how to use create_migration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/create_migration.py.html>`__ to see an example of how to use create_migration API.
         """
         resource_path = "/migrations"
         method = "POST"
@@ -682,7 +682,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/create_migration_asset.py.html>`__ to see an example of how to use create_migration_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/create_migration_asset.py.html>`__ to see an example of how to use create_migration_asset API.
         """
         resource_path = "/migrationAssets"
         method = "POST"
@@ -776,7 +776,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/create_migration_plan.py.html>`__ to see an example of how to use create_migration_plan API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/create_migration_plan.py.html>`__ to see an example of how to use create_migration_plan API.
         """
         resource_path = "/migrationPlans"
         method = "POST"
@@ -870,7 +870,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/create_replication_schedule.py.html>`__ to see an example of how to use create_replication_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/create_replication_schedule.py.html>`__ to see an example of how to use create_replication_schedule API.
         """
         resource_path = "/replicationSchedules"
         method = "POST"
@@ -964,7 +964,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/create_target_asset.py.html>`__ to see an example of how to use create_target_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/create_target_asset.py.html>`__ to see an example of how to use create_target_asset API.
         """
         resource_path = "/targetAssets"
         method = "POST"
@@ -1058,7 +1058,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/delete_migration.py.html>`__ to see an example of how to use delete_migration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/delete_migration.py.html>`__ to see an example of how to use delete_migration API.
         """
         resource_path = "/migrations/{migrationId}"
         method = "DELETE"
@@ -1159,7 +1159,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/delete_migration_asset.py.html>`__ to see an example of how to use delete_migration_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/delete_migration_asset.py.html>`__ to see an example of how to use delete_migration_asset API.
         """
         resource_path = "/migrationAssets/{migrationAssetId}"
         method = "DELETE"
@@ -1260,7 +1260,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/delete_migration_plan.py.html>`__ to see an example of how to use delete_migration_plan API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/delete_migration_plan.py.html>`__ to see an example of how to use delete_migration_plan API.
         """
         resource_path = "/migrationPlans/{migrationPlanId}"
         method = "DELETE"
@@ -1361,7 +1361,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/delete_replication_schedule.py.html>`__ to see an example of how to use delete_replication_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/delete_replication_schedule.py.html>`__ to see an example of how to use delete_replication_schedule API.
         """
         resource_path = "/replicationSchedules/{replicationScheduleId}"
         method = "DELETE"
@@ -1462,7 +1462,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/delete_target_asset.py.html>`__ to see an example of how to use delete_target_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/delete_target_asset.py.html>`__ to see an example of how to use delete_target_asset API.
         """
         resource_path = "/targetAssets/{targetAssetId}"
         method = "DELETE"
@@ -1570,7 +1570,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/execute_migration_plan.py.html>`__ to see an example of how to use execute_migration_plan API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/execute_migration_plan.py.html>`__ to see an example of how to use execute_migration_plan API.
         """
         resource_path = "/migrationPlans/{migrationPlanId}/actions/execute"
         method = "POST"
@@ -1667,7 +1667,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/export_migration_plan.py.html>`__ to see an example of how to use export_migration_plan API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/export_migration_plan.py.html>`__ to see an example of how to use export_migration_plan API.
         """
         resource_path = "/migrationPlans/{migrationPlanId}/actions/export"
         method = "GET"
@@ -1761,7 +1761,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/get_migration.py.html>`__ to see an example of how to use get_migration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/get_migration.py.html>`__ to see an example of how to use get_migration API.
         """
         resource_path = "/migrations/{migrationId}"
         method = "GET"
@@ -1855,7 +1855,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/get_migration_asset.py.html>`__ to see an example of how to use get_migration_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/get_migration_asset.py.html>`__ to see an example of how to use get_migration_asset API.
         """
         resource_path = "/migrationAssets/{migrationAssetId}"
         method = "GET"
@@ -1949,7 +1949,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/get_migration_plan.py.html>`__ to see an example of how to use get_migration_plan API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/get_migration_plan.py.html>`__ to see an example of how to use get_migration_plan API.
         """
         resource_path = "/migrationPlans/{migrationPlanId}"
         method = "GET"
@@ -2043,7 +2043,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/get_replication_progress.py.html>`__ to see an example of how to use get_replication_progress API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/get_replication_progress.py.html>`__ to see an example of how to use get_replication_progress API.
         """
         resource_path = "/migrationAssets/{migrationAssetId}/actions/replicationProgress"
         method = "GET"
@@ -2137,7 +2137,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/get_replication_schedule.py.html>`__ to see an example of how to use get_replication_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/get_replication_schedule.py.html>`__ to see an example of how to use get_replication_schedule API.
         """
         resource_path = "/replicationSchedules/{replicationScheduleId}"
         method = "GET"
@@ -2231,7 +2231,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/get_target_asset.py.html>`__ to see an example of how to use get_target_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/get_target_asset.py.html>`__ to see an example of how to use get_target_asset API.
         """
         resource_path = "/targetAssets/{targetAssetId}"
         method = "GET"
@@ -2325,7 +2325,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -2443,7 +2443,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/import_migration_plan.py.html>`__ to see an example of how to use import_migration_plan API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/import_migration_plan.py.html>`__ to see an example of how to use import_migration_plan API.
         """
         resource_path = "/migrationPlans/{migrationPlanId}/actions/import"
         method = "POST"
@@ -2591,7 +2591,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/list_available_shapes.py.html>`__ to see an example of how to use list_available_shapes API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/list_available_shapes.py.html>`__ to see an example of how to use list_available_shapes API.
         """
         resource_path = "/migrationPlans/{migrationPlanId}/availableShapes"
         method = "GET"
@@ -2748,7 +2748,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/list_migration_assets.py.html>`__ to see an example of how to use list_migration_assets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/list_migration_assets.py.html>`__ to see an example of how to use list_migration_assets API.
         """
         resource_path = "/migrationAssets"
         method = "GET"
@@ -2903,7 +2903,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/list_migration_plans.py.html>`__ to see an example of how to use list_migration_plans API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/list_migration_plans.py.html>`__ to see an example of how to use list_migration_plans API.
         """
         resource_path = "/migrationPlans"
         method = "GET"
@@ -3057,7 +3057,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/list_migrations.py.html>`__ to see an example of how to use list_migrations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/list_migrations.py.html>`__ to see an example of how to use list_migrations API.
         """
         resource_path = "/migrations"
         method = "GET"
@@ -3209,7 +3209,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/list_replication_schedules.py.html>`__ to see an example of how to use list_replication_schedules API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/list_replication_schedules.py.html>`__ to see an example of how to use list_replication_schedules API.
         """
         resource_path = "/replicationSchedules"
         method = "GET"
@@ -3361,7 +3361,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/list_target_assets.py.html>`__ to see an example of how to use list_target_assets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/list_target_assets.py.html>`__ to see an example of how to use list_target_assets API.
         """
         resource_path = "/targetAssets"
         method = "GET"
@@ -3502,7 +3502,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -3640,7 +3640,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -3794,7 +3794,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -3942,7 +3942,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/refresh_migration.py.html>`__ to see an example of how to use refresh_migration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/refresh_migration.py.html>`__ to see an example of how to use refresh_migration API.
         """
         resource_path = "/migrations/{migrationId}/actions/refresh"
         method = "POST"
@@ -4053,7 +4053,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/refresh_migration_asset.py.html>`__ to see an example of how to use refresh_migration_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/refresh_migration_asset.py.html>`__ to see an example of how to use refresh_migration_asset API.
         """
         resource_path = "/migrationAssets/{migrationAssetId}/actions/refresh"
         method = "POST"
@@ -4164,7 +4164,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/refresh_migration_plan.py.html>`__ to see an example of how to use refresh_migration_plan API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/refresh_migration_plan.py.html>`__ to see an example of how to use refresh_migration_plan API.
         """
         resource_path = "/migrationPlans/{migrationPlanId}/actions/refresh"
         method = "POST"
@@ -4275,7 +4275,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/start_asset_replication.py.html>`__ to see an example of how to use start_asset_replication API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/start_asset_replication.py.html>`__ to see an example of how to use start_asset_replication API.
         """
         resource_path = "/migrationAssets/{migrationAssetId}/actions/startAssetReplication"
         method = "POST"
@@ -4386,7 +4386,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/start_migration_replication.py.html>`__ to see an example of how to use start_migration_replication API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/start_migration_replication.py.html>`__ to see an example of how to use start_migration_replication API.
         """
         resource_path = "/migrations/{migrationId}/actions/startMigrationReplication"
         method = "POST"
@@ -4493,7 +4493,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/update_migration.py.html>`__ to see an example of how to use update_migration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/update_migration.py.html>`__ to see an example of how to use update_migration API.
         """
         resource_path = "/migrations/{migrationId}"
         method = "PUT"
@@ -4601,7 +4601,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/update_migration_asset.py.html>`__ to see an example of how to use update_migration_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/update_migration_asset.py.html>`__ to see an example of how to use update_migration_asset API.
         """
         resource_path = "/migrationAssets/{migrationAssetId}"
         method = "PUT"
@@ -4716,7 +4716,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/update_migration_plan.py.html>`__ to see an example of how to use update_migration_plan API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/update_migration_plan.py.html>`__ to see an example of how to use update_migration_plan API.
         """
         resource_path = "/migrationPlans/{migrationPlanId}"
         method = "PUT"
@@ -4832,7 +4832,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/update_replication_schedule.py.html>`__ to see an example of how to use update_replication_schedule API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/update_replication_schedule.py.html>`__ to see an example of how to use update_replication_schedule API.
         """
         resource_path = "/replicationSchedules/{replicationScheduleId}"
         method = "PUT"
@@ -4948,7 +4948,7 @@ class MigrationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudmigrations/update_target_asset.py.html>`__ to see an example of how to use update_target_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudmigrations/update_target_asset.py.html>`__ to see an example of how to use update_target_asset API.
         """
         resource_path = "/targetAssets/{targetAssetId}"
         method = "PUT"

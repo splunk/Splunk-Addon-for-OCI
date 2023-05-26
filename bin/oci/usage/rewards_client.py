@@ -154,7 +154,7 @@ class RewardsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usage/create_redeemable_user.py.html>`__ to see an example of how to use create_redeemable_user API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/usage/create_redeemable_user.py.html>`__ to see an example of how to use create_redeemable_user API.
         """
         resource_path = "/subscriptions/{subscriptionId}/redeemableUsers"
         method = "POST"
@@ -275,7 +275,7 @@ class RewardsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usage/delete_redeemable_user.py.html>`__ to see an example of how to use delete_redeemable_user API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/usage/delete_redeemable_user.py.html>`__ to see an example of how to use delete_redeemable_user API.
         """
         resource_path = "/subscriptions/{subscriptionId}/redeemableUsers"
         method = "DELETE"
@@ -402,7 +402,7 @@ class RewardsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usage/list_products.py.html>`__ to see an example of how to use list_products API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/usage/list_products.py.html>`__ to see an example of how to use list_products API.
         """
         resource_path = "/subscriptions/{subscriptionId}/products"
         method = "GET"
@@ -552,7 +552,7 @@ class RewardsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usage/list_redeemable_users.py.html>`__ to see an example of how to use list_redeemable_users API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/usage/list_redeemable_users.py.html>`__ to see an example of how to use list_redeemable_users API.
         """
         resource_path = "/subscriptions/{subscriptionId}/redeemableUsers"
         method = "GET"
@@ -698,7 +698,7 @@ class RewardsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usage/list_redemptions.py.html>`__ to see an example of how to use list_redemptions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/usage/list_redemptions.py.html>`__ to see an example of how to use list_redemptions API.
         """
         resource_path = "/subscriptions/{subscriptionId}/redemptions"
         method = "GET"
@@ -826,7 +826,7 @@ class RewardsClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/usage/list_rewards.py.html>`__ to see an example of how to use list_rewards API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/usage/list_rewards.py.html>`__ to see an example of how to use list_rewards API.
         """
         resource_path = "/subscriptions/{subscriptionId}/rewards"
         method = "GET"

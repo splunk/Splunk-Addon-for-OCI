@@ -134,7 +134,7 @@ class KmsCryptoClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/keymanagement/decrypt.py.html>`__ to see an example of how to use decrypt API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/keymanagement/decrypt.py.html>`__ to see an example of how to use decrypt API.
         """
         resource_path = "/20180608/decrypt"
         method = "POST"
@@ -221,7 +221,7 @@ class KmsCryptoClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/keymanagement/encrypt.py.html>`__ to see an example of how to use encrypt API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/keymanagement/encrypt.py.html>`__ to see an example of how to use encrypt API.
         """
         resource_path = "/20180608/encrypt"
         method = "POST"
@@ -302,7 +302,7 @@ class KmsCryptoClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/keymanagement/export_key.py.html>`__ to see an example of how to use export_key API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/keymanagement/export_key.py.html>`__ to see an example of how to use export_key API.
         """
         resource_path = "/20180608/exportKey"
         method = "POST"
@@ -379,7 +379,7 @@ class KmsCryptoClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/keymanagement/generate_data_encryption_key.py.html>`__ to see an example of how to use generate_data_encryption_key API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/keymanagement/generate_data_encryption_key.py.html>`__ to see an example of how to use generate_data_encryption_key API.
         """
         resource_path = "/20180608/generateDataEncryptionKey"
         method = "POST"
@@ -467,7 +467,7 @@ class KmsCryptoClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/keymanagement/sign.py.html>`__ to see an example of how to use sign API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/keymanagement/sign.py.html>`__ to see an example of how to use sign API.
         """
         resource_path = "/20180608/sign"
         method = "POST"
@@ -555,7 +555,7 @@ class KmsCryptoClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/keymanagement/verify.py.html>`__ to see an example of how to use verify API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/keymanagement/verify.py.html>`__ to see an example of how to use verify API.
         """
         resource_path = "/20180608/verify"
         method = "POST"

@@ -20,6 +20,14 @@ class CreateAutonomousDatabaseBase(object):
     **Warning:** Oracle recommends that you avoid using any confidential information when you supply string values using the API.
     """
 
+    #: A constant which can be used with the compute_model property of a CreateAutonomousDatabaseBase.
+    #: This constant has a value of "ECPU"
+    COMPUTE_MODEL_ECPU = "ECPU"
+
+    #: A constant which can be used with the compute_model property of a CreateAutonomousDatabaseBase.
+    #: This constant has a value of "OCPU"
+    COMPUTE_MODEL_OCPU = "OCPU"
+
     #: A constant which can be used with the db_workload property of a CreateAutonomousDatabaseBase.
     #: This constant has a value of "OLTP"
     DB_WORKLOAD_OLTP = "OLTP"
@@ -68,6 +76,10 @@ class CreateAutonomousDatabaseBase(object):
     #: This constant has a value of "CROSS_REGION_DATAGUARD"
     SOURCE_CROSS_REGION_DATAGUARD = "CROSS_REGION_DATAGUARD"
 
+    #: A constant which can be used with the source property of a CreateAutonomousDatabaseBase.
+    #: This constant has a value of "CROSS_REGION_DISASTER_RECOVERY"
+    SOURCE_CROSS_REGION_DISASTER_RECOVERY = "CROSS_REGION_DISASTER_RECOVERY"
+
     #: A constant which can be used with the autonomous_maintenance_schedule_type property of a CreateAutonomousDatabaseBase.
     #: This constant has a value of "EARLY"
     AUTONOMOUS_MAINTENANCE_SCHEDULE_TYPE_EARLY = "EARLY"
@@ -84,6 +96,7 @@ class CreateAutonomousDatabaseBase(object):
         * :class:`~oci.database.models.CreateAutonomousDatabaseCloneDetails`
         * :class:`~oci.database.models.CreateRefreshableAutonomousDatabaseCloneDetails`
         * :class:`~oci.database.models.CreateAutonomousDatabaseFromBackupDetails`
+        * :class:`~oci.database.models.CreateCrossRegionDisasterRecoveryDetails`
         * :class:`~oci.database.models.CreateAutonomousDatabaseFromBackupTimestampDetails`
         * :class:`~oci.database.models.CreateCrossRegionAutonomousDatabaseDataGuardDetails`
         * :class:`~oci.database.models.CreateAutonomousDatabaseDetails`
@@ -109,6 +122,15 @@ class CreateAutonomousDatabaseBase(object):
         :param cpu_core_count:
             The value to assign to the cpu_core_count property of this CreateAutonomousDatabaseBase.
         :type cpu_core_count: int
+
+        :param compute_model:
+            The value to assign to the compute_model property of this CreateAutonomousDatabaseBase.
+            Allowed values for this property are: "ECPU", "OCPU"
+        :type compute_model: str
+
+        :param compute_count:
+            The value to assign to the compute_count property of this CreateAutonomousDatabaseBase.
+        :type compute_count: float
 
         :param ocpu_count:
             The value to assign to the ocpu_count property of this CreateAutonomousDatabaseBase.
@@ -222,7 +244,7 @@ class CreateAutonomousDatabaseBase(object):
 
         :param source:
             The value to assign to the source property of this CreateAutonomousDatabaseBase.
-            Allowed values for this property are: "NONE", "DATABASE", "BACKUP_FROM_ID", "BACKUP_FROM_TIMESTAMP", "CLONE_TO_REFRESHABLE", "CROSS_REGION_DATAGUARD"
+            Allowed values for this property are: "NONE", "DATABASE", "BACKUP_FROM_ID", "BACKUP_FROM_TIMESTAMP", "CLONE_TO_REFRESHABLE", "CROSS_REGION_DATAGUARD", "CROSS_REGION_DISASTER_RECOVERY"
         :type source: str
 
         :param customer_contacts:
@@ -254,6 +276,18 @@ class CreateAutonomousDatabaseBase(object):
             The value to assign to the database_edition property of this CreateAutonomousDatabaseBase.
         :type database_edition: str
 
+        :param db_tools_details:
+            The value to assign to the db_tools_details property of this CreateAutonomousDatabaseBase.
+        :type db_tools_details: list[oci.database.models.DatabaseTool]
+
+        :param secret_id:
+            The value to assign to the secret_id property of this CreateAutonomousDatabaseBase.
+        :type secret_id: str
+
+        :param secret_version_number:
+            The value to assign to the secret_version_number property of this CreateAutonomousDatabaseBase.
+        :type secret_version_number: int
+
         """
         self.swagger_types = {
             'compartment_id': 'str',
@@ -261,6 +295,8 @@ class CreateAutonomousDatabaseBase(object):
             'ncharacter_set': 'str',
             'db_name': 'str',
             'cpu_core_count': 'int',
+            'compute_model': 'str',
+            'compute_count': 'float',
             'ocpu_count': 'float',
             'db_workload': 'str',
             'data_storage_size_in_tbs': 'int',
@@ -295,7 +331,10 @@ class CreateAutonomousDatabaseBase(object):
             'scheduled_operations': 'list[ScheduledOperationDetails]',
             'is_auto_scaling_for_storage_enabled': 'bool',
             'max_cpu_core_count': 'int',
-            'database_edition': 'str'
+            'database_edition': 'str',
+            'db_tools_details': 'list[DatabaseTool]',
+            'secret_id': 'str',
+            'secret_version_number': 'int'
         }
 
         self.attribute_map = {
@@ -304,6 +343,8 @@ class CreateAutonomousDatabaseBase(object):
             'ncharacter_set': 'ncharacterSet',
             'db_name': 'dbName',
             'cpu_core_count': 'cpuCoreCount',
+            'compute_model': 'computeModel',
+            'compute_count': 'computeCount',
             'ocpu_count': 'ocpuCount',
             'db_workload': 'dbWorkload',
             'data_storage_size_in_tbs': 'dataStorageSizeInTBs',
@@ -338,7 +379,10 @@ class CreateAutonomousDatabaseBase(object):
             'scheduled_operations': 'scheduledOperations',
             'is_auto_scaling_for_storage_enabled': 'isAutoScalingForStorageEnabled',
             'max_cpu_core_count': 'maxCpuCoreCount',
-            'database_edition': 'databaseEdition'
+            'database_edition': 'databaseEdition',
+            'db_tools_details': 'dbToolsDetails',
+            'secret_id': 'secretId',
+            'secret_version_number': 'secretVersionNumber'
         }
 
         self._compartment_id = None
@@ -346,6 +390,8 @@ class CreateAutonomousDatabaseBase(object):
         self._ncharacter_set = None
         self._db_name = None
         self._cpu_core_count = None
+        self._compute_model = None
+        self._compute_count = None
         self._ocpu_count = None
         self._db_workload = None
         self._data_storage_size_in_tbs = None
@@ -381,6 +427,9 @@ class CreateAutonomousDatabaseBase(object):
         self._is_auto_scaling_for_storage_enabled = None
         self._max_cpu_core_count = None
         self._database_edition = None
+        self._db_tools_details = None
+        self._secret_id = None
+        self._secret_version_number = None
 
     @staticmethod
     def get_subtype(object_dictionary):
@@ -398,6 +447,9 @@ class CreateAutonomousDatabaseBase(object):
 
         if type == 'BACKUP_FROM_ID':
             return 'CreateAutonomousDatabaseFromBackupDetails'
+
+        if type == 'CROSS_REGION_DISASTER_RECOVERY':
+            return 'CreateCrossRegionDisasterRecoveryDetails'
 
         if type == 'BACKUP_FROM_TIMESTAMP':
             return 'CreateAutonomousDatabaseFromBackupTimestampDetails'
@@ -506,7 +558,7 @@ class CreateAutonomousDatabaseBase(object):
     def db_name(self):
         """
         Gets the db_name of this CreateAutonomousDatabaseBase.
-        The database name. The name must begin with an alphabetic character and can contain a maximum of 14 alphanumeric characters. Special characters are not permitted. The database name must be unique in the tenancy.
+        The database name. The name must begin with an alphabetic character and can contain a maximum of 14 alphanumeric characters. Special characters are not permitted. The database name must be unique in the tenancy. It is required in all cases except when creating a cross-region Autonomous Data Guard standby instance or a cross-region disaster recovery standby instance.
 
 
         :return: The db_name of this CreateAutonomousDatabaseBase.
@@ -518,7 +570,7 @@ class CreateAutonomousDatabaseBase(object):
     def db_name(self, db_name):
         """
         Sets the db_name of this CreateAutonomousDatabaseBase.
-        The database name. The name must begin with an alphabetic character and can contain a maximum of 14 alphanumeric characters. Special characters are not permitted. The database name must be unique in the tenancy.
+        The database name. The name must begin with an alphabetic character and can contain a maximum of 14 alphanumeric characters. Special characters are not permitted. The database name must be unique in the tenancy. It is required in all cases except when creating a cross-region Autonomous Data Guard standby instance or a cross-region disaster recovery standby instance.
 
 
         :param db_name: The db_name of this CreateAutonomousDatabaseBase.
@@ -559,16 +611,72 @@ class CreateAutonomousDatabaseBase(object):
         self._cpu_core_count = cpu_core_count
 
     @property
+    def compute_model(self):
+        """
+        Gets the compute_model of this CreateAutonomousDatabaseBase.
+        The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value.
+
+        Allowed values for this property are: "ECPU", "OCPU"
+
+
+        :return: The compute_model of this CreateAutonomousDatabaseBase.
+        :rtype: str
+        """
+        return self._compute_model
+
+    @compute_model.setter
+    def compute_model(self, compute_model):
+        """
+        Sets the compute_model of this CreateAutonomousDatabaseBase.
+        The compute model of the Autonomous Database. This is required if using the `computeCount` parameter. If using `cpuCoreCount` then it is an error to specify `computeModel` to a non-null value.
+
+
+        :param compute_model: The compute_model of this CreateAutonomousDatabaseBase.
+        :type: str
+        """
+        allowed_values = ["ECPU", "OCPU"]
+        if not value_allowed_none_or_none_sentinel(compute_model, allowed_values):
+            raise ValueError(
+                "Invalid value for `compute_model`, must be None or one of {0}"
+                .format(allowed_values)
+            )
+        self._compute_model = compute_model
+
+    @property
+    def compute_count(self):
+        """
+        Gets the compute_count of this CreateAutonomousDatabaseBase.
+        The compute amount available to the database. Minimum and maximum values depend on the compute model and whether the database is on Shared or Dedicated infrastructure. For an Autonomous Database on Shared infrastructure, the 'ECPU' compute model requires values in multiples of two. Required when using the `computeModel` parameter. When using `cpuCoreCount` parameter, it is an error to specify computeCount to a non-null value.
+
+
+        :return: The compute_count of this CreateAutonomousDatabaseBase.
+        :rtype: float
+        """
+        return self._compute_count
+
+    @compute_count.setter
+    def compute_count(self, compute_count):
+        """
+        Sets the compute_count of this CreateAutonomousDatabaseBase.
+        The compute amount available to the database. Minimum and maximum values depend on the compute model and whether the database is on Shared or Dedicated infrastructure. For an Autonomous Database on Shared infrastructure, the 'ECPU' compute model requires values in multiples of two. Required when using the `computeModel` parameter. When using `cpuCoreCount` parameter, it is an error to specify computeCount to a non-null value.
+
+
+        :param compute_count: The compute_count of this CreateAutonomousDatabaseBase.
+        :type: float
+        """
+        self._compute_count = compute_count
+
+    @property
     def ocpu_count(self):
         """
         Gets the ocpu_count of this CreateAutonomousDatabaseBase.
         The number of OCPU cores to be made available to the database.
 
         The following points apply:
-        - For Autonomous Databases on dedicated Exadata infrastructure, to provision less than 1 core, enter a fractional value in an increment of 0.1. For example, you can provision 0.3 or 0.4 cores, but not 0.35 cores. (Note that fractional OCPU values are not supported for Autonomous Databasese on shared Exadata infrastructure.)
+        - For Autonomous Databases on Dedicated Exadata infrastructure, to provision less than 1 core, enter a fractional value in an increment of 0.1. For example, you can provision 0.3 or 0.4 cores, but not 0.35 cores. (Note that fractional OCPU values are not supported for Autonomous Databasese on shared Exadata infrastructure.)
         - To provision 1 or more cores, you must enter an integer between 1 and the maximum number of cores available for the infrastructure shape. For example, you can provision 2 cores or 3 cores, but not 2.5 cores. This applies to Autonomous Databases on both shared and dedicated Exadata infrastructure.
 
-        For Autonomous Databases on dedicated Exadata infrastructure, the maximum number of cores is determined by the infrastructure shape. See `Characteristics of Infrastructure Shapes`__ for shape details.
+        For Autonomous Databases on Dedicated Exadata infrastructure, the maximum number of cores is determined by the infrastructure shape. See `Characteristics of Infrastructure Shapes`__ for shape details.
 
         **Note:** This parameter cannot be used with the `cpuCoreCount` parameter.
 
@@ -587,10 +695,10 @@ class CreateAutonomousDatabaseBase(object):
         The number of OCPU cores to be made available to the database.
 
         The following points apply:
-        - For Autonomous Databases on dedicated Exadata infrastructure, to provision less than 1 core, enter a fractional value in an increment of 0.1. For example, you can provision 0.3 or 0.4 cores, but not 0.35 cores. (Note that fractional OCPU values are not supported for Autonomous Databasese on shared Exadata infrastructure.)
+        - For Autonomous Databases on Dedicated Exadata infrastructure, to provision less than 1 core, enter a fractional value in an increment of 0.1. For example, you can provision 0.3 or 0.4 cores, but not 0.35 cores. (Note that fractional OCPU values are not supported for Autonomous Databasese on shared Exadata infrastructure.)
         - To provision 1 or more cores, you must enter an integer between 1 and the maximum number of cores available for the infrastructure shape. For example, you can provision 2 cores or 3 cores, but not 2.5 cores. This applies to Autonomous Databases on both shared and dedicated Exadata infrastructure.
 
-        For Autonomous Databases on dedicated Exadata infrastructure, the maximum number of cores is determined by the infrastructure shape. See `Characteristics of Infrastructure Shapes`__ for shape details.
+        For Autonomous Databases on Dedicated Exadata infrastructure, the maximum number of cores is determined by the infrastructure shape. See `Characteristics of Infrastructure Shapes`__ for shape details.
 
         **Note:** This parameter cannot be used with the `cpuCoreCount` parameter.
 
@@ -613,6 +721,8 @@ class CreateAutonomousDatabaseBase(object):
         - AJD - indicates an Autonomous JSON Database
         - APEX - indicates an Autonomous Database with the Oracle APEX Application Development workload type.
 
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
+
         Allowed values for this property are: "OLTP", "DW", "AJD", "APEX"
 
 
@@ -631,6 +741,8 @@ class CreateAutonomousDatabaseBase(object):
         - DW - indicates an Autonomous Data Warehouse database
         - AJD - indicates an Autonomous JSON Database
         - APEX - indicates an Autonomous Database with the Oracle APEX Application Development workload type.
+
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
 
 
         :param db_workload: The db_workload of this CreateAutonomousDatabaseBase.
@@ -718,6 +830,8 @@ class CreateAutonomousDatabaseBase(object):
         Gets the is_free_tier of this CreateAutonomousDatabaseBase.
         Indicates if this is an Always Free resource. The default value is false. Note that Always Free Autonomous Databases have 1 CPU and 20GB of memory. For Always Free databases, memory and CPU cannot be scaled.
 
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isLocalDataGuardEnabled
+
 
         :return: The is_free_tier of this CreateAutonomousDatabaseBase.
         :rtype: bool
@@ -729,6 +843,8 @@ class CreateAutonomousDatabaseBase(object):
         """
         Sets the is_free_tier of this CreateAutonomousDatabaseBase.
         Indicates if this is an Always Free resource. The default value is false. Note that Always Free Autonomous Databases have 1 CPU and 20GB of memory. For Always Free databases, memory and CPU cannot be scaled.
+
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isLocalDataGuardEnabled
 
 
         :param is_free_tier: The is_free_tier of this CreateAutonomousDatabaseBase.
@@ -847,6 +963,8 @@ class CreateAutonomousDatabaseBase(object):
         Note that when provisioning an Autonomous Database on `dedicated Exadata infrastructure`__, this attribute must be null because the attribute is already set at the
         Autonomous Exadata Infrastructure level. When using `shared Exadata infrastructure`__, if a value is not specified, the system will supply the value of `BRING_YOUR_OWN_LICENSE`.
 
+        This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
 
@@ -866,6 +984,8 @@ class CreateAutonomousDatabaseBase(object):
         License Included allows you to subscribe to new Oracle Database software licenses and the Database service.
         Note that when provisioning an Autonomous Database on `dedicated Exadata infrastructure`__, this attribute must be null because the attribute is already set at the
         Autonomous Exadata Infrastructure level. When using `shared Exadata infrastructure`__, if a value is not specified, the system will supply the value of `BRING_YOUR_OWN_LICENSE`.
+
+        This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
 
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
@@ -1041,6 +1161,8 @@ class CreateAutonomousDatabaseBase(object):
 
         For an update operation, if you want to delete all the IPs in the ACL, use an array with a single empty string entry.
 
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
+
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
 
 
@@ -1063,6 +1185,8 @@ class CreateAutonomousDatabaseBase(object):
         Example: `[\"1.1.1.1\",\"1.1.1.0/24\",\"1.1.2.25\"]`
 
         For an update operation, if you want to delete all the IPs in the ACL, use an array with a single empty string entry.
+
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
 
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
 
@@ -1115,6 +1239,8 @@ class CreateAutonomousDatabaseBase(object):
 
         For an update operation, if you want to delete all the IPs in the ACL, use an array with a single empty string entry.
 
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
+
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
 
 
@@ -1137,6 +1263,8 @@ class CreateAutonomousDatabaseBase(object):
         Example: `[\"1.1.1.1\",\"1.1.1.0/24\",\"1.1.2.25\"]`
 
         For an update operation, if you want to delete all the IPs in the ACL, use an array with a single empty string entry.
+
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
 
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
 
@@ -1278,7 +1406,9 @@ class CreateAutonomousDatabaseBase(object):
     def private_endpoint_label(self):
         """
         Gets the private_endpoint_label of this CreateAutonomousDatabaseBase.
-        The private endpoint label for the resource. Setting this to an empty string, after the private endpoint database gets created, will change the same private endpoint database to the public endpoint database.
+        The resource's private endpoint label. Setting this to an empty string, after the creation of the private endpoint database, changes the private endpoint database to a public endpoint database.
+
+        This setting cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, dbWorkload, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
 
 
         :return: The private_endpoint_label of this CreateAutonomousDatabaseBase.
@@ -1290,7 +1420,9 @@ class CreateAutonomousDatabaseBase(object):
     def private_endpoint_label(self, private_endpoint_label):
         """
         Sets the private_endpoint_label of this CreateAutonomousDatabaseBase.
-        The private endpoint label for the resource. Setting this to an empty string, after the private endpoint database gets created, will change the same private endpoint database to the public endpoint database.
+        The resource's private endpoint label. Setting this to an empty string, after the creation of the private endpoint database, changes the private endpoint database to a public endpoint database.
+
+        This setting cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, adminPassword, whitelistedIps, isMTLSConnectionRequired, dbWorkload, dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
 
 
         :param private_endpoint_label: The private_endpoint_label of this CreateAutonomousDatabaseBase.
@@ -1421,7 +1553,7 @@ class CreateAutonomousDatabaseBase(object):
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/clone-autonomous-database.html#GUID-D771796F-5081-4CFB-A7FF-0F893EABD7BC
 
-        Allowed values for this property are: "NONE", "DATABASE", "BACKUP_FROM_ID", "BACKUP_FROM_TIMESTAMP", "CLONE_TO_REFRESHABLE", "CROSS_REGION_DATAGUARD"
+        Allowed values for this property are: "NONE", "DATABASE", "BACKUP_FROM_ID", "BACKUP_FROM_TIMESTAMP", "CLONE_TO_REFRESHABLE", "CROSS_REGION_DATAGUARD", "CROSS_REGION_DISASTER_RECOVERY"
 
 
         :return: The source of this CreateAutonomousDatabaseBase.
@@ -1444,7 +1576,7 @@ class CreateAutonomousDatabaseBase(object):
         :param source: The source of this CreateAutonomousDatabaseBase.
         :type: str
         """
-        allowed_values = ["NONE", "DATABASE", "BACKUP_FROM_ID", "BACKUP_FROM_TIMESTAMP", "CLONE_TO_REFRESHABLE", "CROSS_REGION_DATAGUARD"]
+        allowed_values = ["NONE", "DATABASE", "BACKUP_FROM_ID", "BACKUP_FROM_TIMESTAMP", "CLONE_TO_REFRESHABLE", "CROSS_REGION_DATAGUARD", "CROSS_REGION_DISASTER_RECOVERY"]
         if not value_allowed_none_or_none_sentinel(source, allowed_values):
             raise ValueError(
                 "Invalid value for `source`, must be None or one of {0}"
@@ -1480,7 +1612,17 @@ class CreateAutonomousDatabaseBase(object):
     def is_mtls_connection_required(self):
         """
         Gets the is_mtls_connection_required of this CreateAutonomousDatabaseBase.
-        Indicates whether the Autonomous Database requires mTLS connections.
+        Specifies if the Autonomous Database requires mTLS connections.
+
+        This may not be updated in parallel with any of the following: licenseModel, databaseEdition, cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, whitelistedIps, openMode, permissionLevel, db-workload, privateEndpointLabel, nsgIds, customerContacts, dbVersion, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
+
+        Service Change: The default value of the isMTLSConnectionRequired attribute will change from true to false on July 1, 2023 in the following APIs:
+        - CreateAutonomousDatabase
+        - GetAutonomousDatabase
+        - UpdateAutonomousDatabase
+        Details: Prior to the July 1, 2023 change, the isMTLSConnectionRequired attribute default value was true. This applies to Autonomous Databases on shared Exadata infrastructure.
+        Does this impact me? If you use or maintain custom scripts or Terraform scripts referencing the CreateAutonomousDatabase, GetAutonomousDatabase, or UpdateAutonomousDatabase APIs, you want to check, and possibly modify, the scripts for the changed default value of the attribute. Should you choose not to leave your scripts unchanged, the API calls containing this attribute will continue to work, but the default value will switch from true to false.
+        How do I make this change? Using either OCI SDKs or command line tools, update your custom scripts to explicitly set the isMTLSConnectionRequired attribute to true.
 
 
         :return: The is_mtls_connection_required of this CreateAutonomousDatabaseBase.
@@ -1492,7 +1634,17 @@ class CreateAutonomousDatabaseBase(object):
     def is_mtls_connection_required(self, is_mtls_connection_required):
         """
         Sets the is_mtls_connection_required of this CreateAutonomousDatabaseBase.
-        Indicates whether the Autonomous Database requires mTLS connections.
+        Specifies if the Autonomous Database requires mTLS connections.
+
+        This may not be updated in parallel with any of the following: licenseModel, databaseEdition, cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, whitelistedIps, openMode, permissionLevel, db-workload, privateEndpointLabel, nsgIds, customerContacts, dbVersion, scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
+
+        Service Change: The default value of the isMTLSConnectionRequired attribute will change from true to false on July 1, 2023 in the following APIs:
+        - CreateAutonomousDatabase
+        - GetAutonomousDatabase
+        - UpdateAutonomousDatabase
+        Details: Prior to the July 1, 2023 change, the isMTLSConnectionRequired attribute default value was true. This applies to Autonomous Databases on shared Exadata infrastructure.
+        Does this impact me? If you use or maintain custom scripts or Terraform scripts referencing the CreateAutonomousDatabase, GetAutonomousDatabase, or UpdateAutonomousDatabase APIs, you want to check, and possibly modify, the scripts for the changed default value of the attribute. Should you choose not to leave your scripts unchanged, the API calls containing this attribute will continue to work, but the default value will switch from true to false.
+        How do I make this change? Using either OCI SDKs or command line tools, update your custom scripts to explicitly set the isMTLSConnectionRequired attribute to true.
 
 
         :param is_mtls_connection_required: The is_mtls_connection_required of this CreateAutonomousDatabaseBase.
@@ -1538,7 +1690,9 @@ class CreateAutonomousDatabaseBase(object):
     def scheduled_operations(self):
         """
         Gets the scheduled_operations of this CreateAutonomousDatabaseBase.
-        list of scheduled operations
+        The list of scheduled operations.
+
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
 
 
         :return: The scheduled_operations of this CreateAutonomousDatabaseBase.
@@ -1550,7 +1704,9 @@ class CreateAutonomousDatabaseBase(object):
     def scheduled_operations(self, scheduled_operations):
         """
         Sets the scheduled_operations of this CreateAutonomousDatabaseBase.
-        list of scheduled operations
+        The list of scheduled operations.
+
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
 
 
         :param scheduled_operations: The scheduled_operations of this CreateAutonomousDatabaseBase.
@@ -1629,6 +1785,82 @@ class CreateAutonomousDatabaseBase(object):
         :type: str
         """
         self._database_edition = database_edition
+
+    @property
+    def db_tools_details(self):
+        """
+        Gets the db_tools_details of this CreateAutonomousDatabaseBase.
+        The list of database tools details.
+
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, isLocalDataGuardEnabled, or isFreeTier.
+
+
+        :return: The db_tools_details of this CreateAutonomousDatabaseBase.
+        :rtype: list[oci.database.models.DatabaseTool]
+        """
+        return self._db_tools_details
+
+    @db_tools_details.setter
+    def db_tools_details(self, db_tools_details):
+        """
+        Sets the db_tools_details of this CreateAutonomousDatabaseBase.
+        The list of database tools details.
+
+        This cannot be updated in parallel with any of the following: licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel, whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName, scheduledOperations, isLocalDataGuardEnabled, or isFreeTier.
+
+
+        :param db_tools_details: The db_tools_details of this CreateAutonomousDatabaseBase.
+        :type: list[oci.database.models.DatabaseTool]
+        """
+        self._db_tools_details = db_tools_details
+
+    @property
+    def secret_id(self):
+        """
+        Gets the secret_id of this CreateAutonomousDatabaseBase.
+        The OCI vault secret [/Content/General/Concepts/identifiers.htm]OCID.
+
+
+        :return: The secret_id of this CreateAutonomousDatabaseBase.
+        :rtype: str
+        """
+        return self._secret_id
+
+    @secret_id.setter
+    def secret_id(self, secret_id):
+        """
+        Sets the secret_id of this CreateAutonomousDatabaseBase.
+        The OCI vault secret [/Content/General/Concepts/identifiers.htm]OCID.
+
+
+        :param secret_id: The secret_id of this CreateAutonomousDatabaseBase.
+        :type: str
+        """
+        self._secret_id = secret_id
+
+    @property
+    def secret_version_number(self):
+        """
+        Gets the secret_version_number of this CreateAutonomousDatabaseBase.
+        The version of the vault secret. If no version is specified, the latest version will be used.
+
+
+        :return: The secret_version_number of this CreateAutonomousDatabaseBase.
+        :rtype: int
+        """
+        return self._secret_version_number
+
+    @secret_version_number.setter
+    def secret_version_number(self, secret_version_number):
+        """
+        Sets the secret_version_number of this CreateAutonomousDatabaseBase.
+        The version of the vault secret. If no version is specified, the latest version will be used.
+
+
+        :param secret_version_number: The secret_version_number of this CreateAutonomousDatabaseBase.
+        :type: int
+        """
+        self._secret_version_number = secret_version_number
 
     def __repr__(self):
         return formatted_flat_dict(self)

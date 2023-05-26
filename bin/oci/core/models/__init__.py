@@ -19,6 +19,8 @@ from .added_network_security_group_security_rules import AddedNetworkSecurityGro
 from .allowed_ike_ip_sec_parameters import AllowedIkeIPSecParameters
 from .allowed_phase_one_parameters import AllowedPhaseOneParameters
 from .allowed_phase_two_parameters import AllowedPhaseTwoParameters
+from .amd_milan_bm_gpu_launch_instance_platform_config import AmdMilanBmGpuLaunchInstancePlatformConfig
+from .amd_milan_bm_gpu_platform_config import AmdMilanBmGpuPlatformConfig
 from .amd_milan_bm_launch_instance_platform_config import AmdMilanBmLaunchInstancePlatformConfig
 from .amd_milan_bm_platform_config import AmdMilanBmPlatformConfig
 from .amd_rome_bm_gpu_launch_instance_platform_config import AmdRomeBmGpuLaunchInstancePlatformConfig
@@ -78,6 +80,7 @@ from .change_byoip_range_compartment_details import ChangeByoipRangeCompartmentD
 from .change_capture_filter_compartment_details import ChangeCaptureFilterCompartmentDetails
 from .change_cluster_network_compartment_details import ChangeClusterNetworkCompartmentDetails
 from .change_compute_capacity_reservation_compartment_details import ChangeComputeCapacityReservationCompartmentDetails
+from .change_compute_cluster_compartment_details import ChangeComputeClusterCompartmentDetails
 from .change_compute_image_capability_schema_compartment_details import ChangeComputeImageCapabilitySchemaCompartmentDetails
 from .change_cpe_compartment_details import ChangeCpeCompartmentDetails
 from .change_cross_connect_compartment_details import ChangeCrossConnectCompartmentDetails
@@ -109,6 +112,7 @@ from .change_volume_compartment_details import ChangeVolumeCompartmentDetails
 from .change_volume_group_backup_compartment_details import ChangeVolumeGroupBackupCompartmentDetails
 from .change_volume_group_compartment_details import ChangeVolumeGroupCompartmentDetails
 from .change_vtap_compartment_details import ChangeVtapCompartmentDetails
+from .cluster_config_details import ClusterConfigDetails
 from .cluster_network import ClusterNetwork
 from .cluster_network_placement_configuration_details import ClusterNetworkPlacementConfigurationDetails
 from .cluster_network_summary import ClusterNetworkSummary
@@ -116,6 +120,9 @@ from .compartment_internal import CompartmentInternal
 from .compute_capacity_reservation import ComputeCapacityReservation
 from .compute_capacity_reservation_instance_shape_summary import ComputeCapacityReservationInstanceShapeSummary
 from .compute_capacity_reservation_summary import ComputeCapacityReservationSummary
+from .compute_cluster import ComputeCluster
+from .compute_cluster_collection import ComputeClusterCollection
+from .compute_cluster_summary import ComputeClusterSummary
 from .compute_global_image_capability_schema import ComputeGlobalImageCapabilitySchema
 from .compute_global_image_capability_schema_summary import ComputeGlobalImageCapabilitySchemaSummary
 from .compute_global_image_capability_schema_version import ComputeGlobalImageCapabilitySchemaVersion
@@ -143,6 +150,7 @@ from .create_capture_filter_details import CreateCaptureFilterDetails
 from .create_cluster_network_details import CreateClusterNetworkDetails
 from .create_cluster_network_instance_pool_details import CreateClusterNetworkInstancePoolDetails
 from .create_compute_capacity_reservation_details import CreateComputeCapacityReservationDetails
+from .create_compute_cluster_details import CreateComputeClusterDetails
 from .create_compute_image_capability_schema_details import CreateComputeImageCapabilitySchemaDetails
 from .create_cpe_details import CreateCpeDetails
 from .create_cross_connect_details import CreateCrossConnectDetails
@@ -268,6 +276,7 @@ from .instance_agent_features import InstanceAgentFeatures
 from .instance_agent_plugin_config_details import InstanceAgentPluginConfigDetails
 from .instance_availability_config import InstanceAvailabilityConfig
 from .instance_configuration import InstanceConfiguration
+from .instance_configuration_amd_milan_bm_gpu_launch_instance_platform_config import InstanceConfigurationAmdMilanBmGpuLaunchInstancePlatformConfig
 from .instance_configuration_amd_milan_bm_launch_instance_platform_config import InstanceConfigurationAmdMilanBmLaunchInstancePlatformConfig
 from .instance_configuration_amd_rome_bm_gpu_launch_instance_platform_config import InstanceConfigurationAmdRomeBmGpuLaunchInstancePlatformConfig
 from .instance_configuration_amd_rome_bm_launch_instance_platform_config import InstanceConfigurationAmdRomeBmLaunchInstancePlatformConfig
@@ -389,6 +398,7 @@ from .shape_alternative_object import ShapeAlternativeObject
 from .shape_input_output_memory_management_unit_enabled_platform_options import ShapeInputOutputMemoryManagementUnitEnabledPlatformOptions
 from .shape_max_vnic_attachment_options import ShapeMaxVnicAttachmentOptions
 from .shape_measured_boot_options import ShapeMeasuredBootOptions
+from .shape_memory_encryption_options import ShapeMemoryEncryptionOptions
 from .shape_memory_options import ShapeMemoryOptions
 from .shape_networking_bandwidth_options import ShapeNetworkingBandwidthOptions
 from .shape_numa_nodes_per_socket_platform_options import ShapeNumaNodesPerSocketPlatformOptions
@@ -426,6 +436,7 @@ from .update_capture_filter_details import UpdateCaptureFilterDetails
 from .update_cluster_network_details import UpdateClusterNetworkDetails
 from .update_cluster_network_instance_pool_details import UpdateClusterNetworkInstancePoolDetails
 from .update_compute_capacity_reservation_details import UpdateComputeCapacityReservationDetails
+from .update_compute_cluster_details import UpdateComputeClusterDetails
 from .update_compute_image_capability_schema_details import UpdateComputeImageCapabilitySchemaDetails
 from .update_console_history_details import UpdateConsoleHistoryDetails
 from .update_cpe_details import UpdateCpeDetails
@@ -542,6 +553,8 @@ core_type_mapping = {
     "AllowedIkeIPSecParameters": AllowedIkeIPSecParameters,
     "AllowedPhaseOneParameters": AllowedPhaseOneParameters,
     "AllowedPhaseTwoParameters": AllowedPhaseTwoParameters,
+    "AmdMilanBmGpuLaunchInstancePlatformConfig": AmdMilanBmGpuLaunchInstancePlatformConfig,
+    "AmdMilanBmGpuPlatformConfig": AmdMilanBmGpuPlatformConfig,
     "AmdMilanBmLaunchInstancePlatformConfig": AmdMilanBmLaunchInstancePlatformConfig,
     "AmdMilanBmPlatformConfig": AmdMilanBmPlatformConfig,
     "AmdRomeBmGpuLaunchInstancePlatformConfig": AmdRomeBmGpuLaunchInstancePlatformConfig,
@@ -601,6 +614,7 @@ core_type_mapping = {
     "ChangeCaptureFilterCompartmentDetails": ChangeCaptureFilterCompartmentDetails,
     "ChangeClusterNetworkCompartmentDetails": ChangeClusterNetworkCompartmentDetails,
     "ChangeComputeCapacityReservationCompartmentDetails": ChangeComputeCapacityReservationCompartmentDetails,
+    "ChangeComputeClusterCompartmentDetails": ChangeComputeClusterCompartmentDetails,
     "ChangeComputeImageCapabilitySchemaCompartmentDetails": ChangeComputeImageCapabilitySchemaCompartmentDetails,
     "ChangeCpeCompartmentDetails": ChangeCpeCompartmentDetails,
     "ChangeCrossConnectCompartmentDetails": ChangeCrossConnectCompartmentDetails,
@@ -632,6 +646,7 @@ core_type_mapping = {
     "ChangeVolumeGroupBackupCompartmentDetails": ChangeVolumeGroupBackupCompartmentDetails,
     "ChangeVolumeGroupCompartmentDetails": ChangeVolumeGroupCompartmentDetails,
     "ChangeVtapCompartmentDetails": ChangeVtapCompartmentDetails,
+    "ClusterConfigDetails": ClusterConfigDetails,
     "ClusterNetwork": ClusterNetwork,
     "ClusterNetworkPlacementConfigurationDetails": ClusterNetworkPlacementConfigurationDetails,
     "ClusterNetworkSummary": ClusterNetworkSummary,
@@ -639,6 +654,9 @@ core_type_mapping = {
     "ComputeCapacityReservation": ComputeCapacityReservation,
     "ComputeCapacityReservationInstanceShapeSummary": ComputeCapacityReservationInstanceShapeSummary,
     "ComputeCapacityReservationSummary": ComputeCapacityReservationSummary,
+    "ComputeCluster": ComputeCluster,
+    "ComputeClusterCollection": ComputeClusterCollection,
+    "ComputeClusterSummary": ComputeClusterSummary,
     "ComputeGlobalImageCapabilitySchema": ComputeGlobalImageCapabilitySchema,
     "ComputeGlobalImageCapabilitySchemaSummary": ComputeGlobalImageCapabilitySchemaSummary,
     "ComputeGlobalImageCapabilitySchemaVersion": ComputeGlobalImageCapabilitySchemaVersion,
@@ -666,6 +684,7 @@ core_type_mapping = {
     "CreateClusterNetworkDetails": CreateClusterNetworkDetails,
     "CreateClusterNetworkInstancePoolDetails": CreateClusterNetworkInstancePoolDetails,
     "CreateComputeCapacityReservationDetails": CreateComputeCapacityReservationDetails,
+    "CreateComputeClusterDetails": CreateComputeClusterDetails,
     "CreateComputeImageCapabilitySchemaDetails": CreateComputeImageCapabilitySchemaDetails,
     "CreateCpeDetails": CreateCpeDetails,
     "CreateCrossConnectDetails": CreateCrossConnectDetails,
@@ -791,6 +810,7 @@ core_type_mapping = {
     "InstanceAgentPluginConfigDetails": InstanceAgentPluginConfigDetails,
     "InstanceAvailabilityConfig": InstanceAvailabilityConfig,
     "InstanceConfiguration": InstanceConfiguration,
+    "InstanceConfigurationAmdMilanBmGpuLaunchInstancePlatformConfig": InstanceConfigurationAmdMilanBmGpuLaunchInstancePlatformConfig,
     "InstanceConfigurationAmdMilanBmLaunchInstancePlatformConfig": InstanceConfigurationAmdMilanBmLaunchInstancePlatformConfig,
     "InstanceConfigurationAmdRomeBmGpuLaunchInstancePlatformConfig": InstanceConfigurationAmdRomeBmGpuLaunchInstancePlatformConfig,
     "InstanceConfigurationAmdRomeBmLaunchInstancePlatformConfig": InstanceConfigurationAmdRomeBmLaunchInstancePlatformConfig,
@@ -912,6 +932,7 @@ core_type_mapping = {
     "ShapeInputOutputMemoryManagementUnitEnabledPlatformOptions": ShapeInputOutputMemoryManagementUnitEnabledPlatformOptions,
     "ShapeMaxVnicAttachmentOptions": ShapeMaxVnicAttachmentOptions,
     "ShapeMeasuredBootOptions": ShapeMeasuredBootOptions,
+    "ShapeMemoryEncryptionOptions": ShapeMemoryEncryptionOptions,
     "ShapeMemoryOptions": ShapeMemoryOptions,
     "ShapeNetworkingBandwidthOptions": ShapeNetworkingBandwidthOptions,
     "ShapeNumaNodesPerSocketPlatformOptions": ShapeNumaNodesPerSocketPlatformOptions,
@@ -949,6 +970,7 @@ core_type_mapping = {
     "UpdateClusterNetworkDetails": UpdateClusterNetworkDetails,
     "UpdateClusterNetworkInstancePoolDetails": UpdateClusterNetworkInstancePoolDetails,
     "UpdateComputeCapacityReservationDetails": UpdateComputeCapacityReservationDetails,
+    "UpdateComputeClusterDetails": UpdateComputeClusterDetails,
     "UpdateComputeImageCapabilitySchemaDetails": UpdateComputeImageCapabilitySchemaDetails,
     "UpdateConsoleHistoryDetails": UpdateConsoleHistoryDetails,
     "UpdateCpeDetails": UpdateCpeDetails,

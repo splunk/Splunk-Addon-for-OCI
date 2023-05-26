@@ -38,13 +38,18 @@ class CreateOggDeploymentDetails(object):
             The value to assign to the key property of this CreateOggDeploymentDetails.
         :type key: str
 
+        :param ogg_version:
+            The value to assign to the ogg_version property of this CreateOggDeploymentDetails.
+        :type ogg_version: str
+
         """
         self.swagger_types = {
             'deployment_name': 'str',
             'admin_username': 'str',
             'admin_password': 'str',
             'certificate': 'str',
-            'key': 'str'
+            'key': 'str',
+            'ogg_version': 'str'
         }
 
         self.attribute_map = {
@@ -52,7 +57,8 @@ class CreateOggDeploymentDetails(object):
             'admin_username': 'adminUsername',
             'admin_password': 'adminPassword',
             'certificate': 'certificate',
-            'key': 'key'
+            'key': 'key',
+            'ogg_version': 'oggVersion'
         }
 
         self._deployment_name = None
@@ -60,6 +66,7 @@ class CreateOggDeploymentDetails(object):
         self._admin_password = None
         self._certificate = None
         self._key = None
+        self._ogg_version = None
 
     @property
     def deployment_name(self):
@@ -117,8 +124,7 @@ class CreateOggDeploymentDetails(object):
         **[Required]** Gets the admin_password of this CreateOggDeploymentDetails.
         The password associated with the GoldenGate deployment console username.
         The password must be 8 to 30 characters long and must contain at least 1 uppercase, 1 lowercase, 1 numeric,
-        and 1 special character. Special characters such as \u2018$\u2019, \u2018^\u2019, or \u2018?\u2019 are not allowed.
-        This field will be deprecated and replaced by \"passwordSecretId\".
+        and 1 special character. Special characters such as '$', '^', or '?' are not allowed.
 
 
         :return: The admin_password of this CreateOggDeploymentDetails.
@@ -132,8 +138,7 @@ class CreateOggDeploymentDetails(object):
         Sets the admin_password of this CreateOggDeploymentDetails.
         The password associated with the GoldenGate deployment console username.
         The password must be 8 to 30 characters long and must contain at least 1 uppercase, 1 lowercase, 1 numeric,
-        and 1 special character. Special characters such as \u2018$\u2019, \u2018^\u2019, or \u2018?\u2019 are not allowed.
-        This field will be deprecated and replaced by \"passwordSecretId\".
+        and 1 special character. Special characters such as '$', '^', or '?' are not allowed.
 
 
         :param admin_password: The admin_password of this CreateOggDeploymentDetails.
@@ -188,6 +193,30 @@ class CreateOggDeploymentDetails(object):
         :type: str
         """
         self._key = key
+
+    @property
+    def ogg_version(self):
+        """
+        Gets the ogg_version of this CreateOggDeploymentDetails.
+        Version of OGG
+
+
+        :return: The ogg_version of this CreateOggDeploymentDetails.
+        :rtype: str
+        """
+        return self._ogg_version
+
+    @ogg_version.setter
+    def ogg_version(self, ogg_version):
+        """
+        Sets the ogg_version of this CreateOggDeploymentDetails.
+        Version of OGG
+
+
+        :param ogg_version: The ogg_version of this CreateOggDeploymentDetails.
+        :type: str
+        """
+        self._ogg_version = ogg_version
 
     def __repr__(self):
         return formatted_flat_dict(self)

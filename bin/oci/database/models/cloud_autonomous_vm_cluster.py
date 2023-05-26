@@ -41,6 +41,14 @@ class CloudAutonomousVmCluster(object):
     #: This constant has a value of "MAINTENANCE_IN_PROGRESS"
     LIFECYCLE_STATE_MAINTENANCE_IN_PROGRESS = "MAINTENANCE_IN_PROGRESS"
 
+    #: A constant which can be used with the compute_model property of a CloudAutonomousVmCluster.
+    #: This constant has a value of "ECPU"
+    COMPUTE_MODEL_ECPU = "ECPU"
+
+    #: A constant which can be used with the compute_model property of a CloudAutonomousVmCluster.
+    #: This constant has a value of "OCPU"
+    COMPUTE_MODEL_OCPU = "OCPU"
+
     #: A constant which can be used with the license_model property of a CloudAutonomousVmCluster.
     #: This constant has a value of "LICENSE_INCLUDED"
     LICENSE_MODEL_LICENSE_INCLUDED = "LICENSE_INCLUDED"
@@ -144,6 +152,12 @@ class CloudAutonomousVmCluster(object):
             The value to assign to the ocpu_count property of this CloudAutonomousVmCluster.
         :type ocpu_count: float
 
+        :param compute_model:
+            The value to assign to the compute_model property of this CloudAutonomousVmCluster.
+            Allowed values for this property are: "ECPU", "OCPU", 'UNKNOWN_ENUM_VALUE'.
+            Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
+        :type compute_model: str
+
         :param cpu_core_count_per_node:
             The value to assign to the cpu_core_count_per_node property of this CloudAutonomousVmCluster.
         :type cpu_core_count_per_node: int
@@ -234,6 +248,7 @@ class CloudAutonomousVmCluster(object):
             'data_storage_size_in_gbs': 'float',
             'cpu_core_count': 'int',
             'ocpu_count': 'float',
+            'compute_model': 'str',
             'cpu_core_count_per_node': 'int',
             'memory_size_in_gbs': 'int',
             'license_model': 'str',
@@ -275,6 +290,7 @@ class CloudAutonomousVmCluster(object):
             'data_storage_size_in_gbs': 'dataStorageSizeInGBs',
             'cpu_core_count': 'cpuCoreCount',
             'ocpu_count': 'ocpuCount',
+            'compute_model': 'computeModel',
             'cpu_core_count_per_node': 'cpuCoreCountPerNode',
             'memory_size_in_gbs': 'memorySizeInGBs',
             'license_model': 'licenseModel',
@@ -315,6 +331,7 @@ class CloudAutonomousVmCluster(object):
         self._data_storage_size_in_gbs = None
         self._cpu_core_count = None
         self._ocpu_count = None
+        self._compute_model = None
         self._cpu_core_count_per_node = None
         self._memory_size_in_gbs = None
         self._license_model = None
@@ -911,10 +928,44 @@ class CloudAutonomousVmCluster(object):
         self._ocpu_count = ocpu_count
 
     @property
+    def compute_model(self):
+        """
+        Gets the compute_model of this CloudAutonomousVmCluster.
+        The compute model of the Cloud Autonomous VM Cluster. See `Compute Models in Autonomous Database on Dedicated Exadata Infrastructure`__ for more details.
+
+        __ https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak
+
+        Allowed values for this property are: "ECPU", "OCPU", 'UNKNOWN_ENUM_VALUE'.
+        Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
+
+
+        :return: The compute_model of this CloudAutonomousVmCluster.
+        :rtype: str
+        """
+        return self._compute_model
+
+    @compute_model.setter
+    def compute_model(self, compute_model):
+        """
+        Sets the compute_model of this CloudAutonomousVmCluster.
+        The compute model of the Cloud Autonomous VM Cluster. See `Compute Models in Autonomous Database on Dedicated Exadata Infrastructure`__ for more details.
+
+        __ https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak
+
+
+        :param compute_model: The compute_model of this CloudAutonomousVmCluster.
+        :type: str
+        """
+        allowed_values = ["ECPU", "OCPU"]
+        if not value_allowed_none_or_none_sentinel(compute_model, allowed_values):
+            compute_model = 'UNKNOWN_ENUM_VALUE'
+        self._compute_model = compute_model
+
+    @property
     def cpu_core_count_per_node(self):
         """
         Gets the cpu_core_count_per_node of this CloudAutonomousVmCluster.
-        The number of OCPU cores enabled per VM cluster node.
+        The number of CPU cores enabled per VM cluster node.
 
 
         :return: The cpu_core_count_per_node of this CloudAutonomousVmCluster.
@@ -926,7 +977,7 @@ class CloudAutonomousVmCluster(object):
     def cpu_core_count_per_node(self, cpu_core_count_per_node):
         """
         Sets the cpu_core_count_per_node of this CloudAutonomousVmCluster.
-        The number of OCPU cores enabled per VM cluster node.
+        The number of CPU cores enabled per VM cluster node.
 
 
         :param cpu_core_count_per_node: The cpu_core_count_per_node of this CloudAutonomousVmCluster.
@@ -967,6 +1018,8 @@ class CloudAutonomousVmCluster(object):
         Note that when provisioning an Autonomous Database on `dedicated Exadata infrastructure`__, this attribute must be null because the attribute is already set at the
         Autonomous Exadata Infrastructure level. When using `shared Exadata infrastructure`__, if a value is not specified, the system will supply the value of `BRING_YOUR_OWN_LICENSE`.
 
+        This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
 
@@ -987,6 +1040,8 @@ class CloudAutonomousVmCluster(object):
         License Included allows you to subscribe to new Oracle Database software licenses and the Database service.
         Note that when provisioning an Autonomous Database on `dedicated Exadata infrastructure`__, this attribute must be null because the attribute is already set at the
         Autonomous Exadata Infrastructure level. When using `shared Exadata infrastructure`__, if a value is not specified, the system will supply the value of `BRING_YOUR_OWN_LICENSE`.
+
+        This cannot be updated in parallel with any of the following: cpuCoreCount, computeCount, maxCpuCoreCount, dataStorageSizeInTBs, adminPassword, isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
 
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
         __ https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html
@@ -1168,7 +1223,11 @@ class CloudAutonomousVmCluster(object):
     def reclaimable_cpus(self):
         """
         Gets the reclaimable_cpus of this CloudAutonomousVmCluster.
-        CPU cores that continue to be included in the count of OCPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available OCPUs at its parent AVMC level by restarting the Autonomous Container Database.
+        For Autonomous Databases on Dedicated Exadata Infrastructure:
+        - These are the CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database.
+        - The CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. See `Compute Models in Autonomous Database on Dedicated Exadata Infrastructure`__ for more details.
+
+        __ https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak
 
 
         :return: The reclaimable_cpus of this CloudAutonomousVmCluster.
@@ -1180,7 +1239,11 @@ class CloudAutonomousVmCluster(object):
     def reclaimable_cpus(self, reclaimable_cpus):
         """
         Sets the reclaimable_cpus of this CloudAutonomousVmCluster.
-        CPU cores that continue to be included in the count of OCPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available OCPUs at its parent AVMC level by restarting the Autonomous Container Database.
+        For Autonomous Databases on Dedicated Exadata Infrastructure:
+        - These are the CPUs that continue to be included in the count of CPUs available to the Autonomous Container Database even after one of its Autonomous Database is terminated or scaled down. You can release them to the available CPUs at its parent Autonomous VM Cluster level by restarting the Autonomous Container Database.
+        - The CPU type (OCPUs or ECPUs) is determined by the parent Autonomous Exadata VM Cluster's compute model. See `Compute Models in Autonomous Database on Dedicated Exadata Infrastructure`__ for more details.
+
+        __ https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak
 
 
         :param reclaimable_cpus: The reclaimable_cpus of this CloudAutonomousVmCluster.
@@ -1312,7 +1375,7 @@ class CloudAutonomousVmCluster(object):
     def memory_per_oracle_compute_unit_in_gbs(self):
         """
         Gets the memory_per_oracle_compute_unit_in_gbs of this CloudAutonomousVmCluster.
-        The amount of memory (in GBs) enabled per each OCPU core.
+        The amount of memory (in GBs) enabled per each CPU core.
 
 
         :return: The memory_per_oracle_compute_unit_in_gbs of this CloudAutonomousVmCluster.
@@ -1324,7 +1387,7 @@ class CloudAutonomousVmCluster(object):
     def memory_per_oracle_compute_unit_in_gbs(self, memory_per_oracle_compute_unit_in_gbs):
         """
         Sets the memory_per_oracle_compute_unit_in_gbs of this CloudAutonomousVmCluster.
-        The amount of memory (in GBs) enabled per each OCPU core.
+        The amount of memory (in GBs) enabled per each CPU core.
 
 
         :param memory_per_oracle_compute_unit_in_gbs: The memory_per_oracle_compute_unit_in_gbs of this CloudAutonomousVmCluster.

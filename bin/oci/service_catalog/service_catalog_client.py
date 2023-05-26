@@ -140,7 +140,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/bulk_replace_service_catalog_associations.py.html>`__ to see an example of how to use bulk_replace_service_catalog_associations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/bulk_replace_service_catalog_associations.py.html>`__ to see an example of how to use bulk_replace_service_catalog_associations API.
         """
         resource_path = "/serviceCatalogs/{serviceCatalogId}/actions/bulkReplaceAssociations"
         method = "PUT"
@@ -243,7 +243,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/change_private_application_compartment.py.html>`__ to see an example of how to use change_private_application_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/change_private_application_compartment.py.html>`__ to see an example of how to use change_private_application_compartment API.
         """
         resource_path = "/privateApplications/{privateApplicationId}/actions/changeCompartment"
         method = "POST"
@@ -346,7 +346,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/change_service_catalog_compartment.py.html>`__ to see an example of how to use change_service_catalog_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/change_service_catalog_compartment.py.html>`__ to see an example of how to use change_service_catalog_compartment API.
         """
         resource_path = "/serviceCatalogs/{serviceCatalogId}/actions/changeCompartment"
         method = "POST"
@@ -447,7 +447,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/create_private_application.py.html>`__ to see an example of how to use create_private_application API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/create_private_application.py.html>`__ to see an example of how to use create_private_application API.
         """
         resource_path = "/privateApplications"
         method = "POST"
@@ -539,7 +539,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/create_service_catalog.py.html>`__ to see an example of how to use create_service_catalog API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/create_service_catalog.py.html>`__ to see an example of how to use create_service_catalog API.
         """
         resource_path = "/serviceCatalogs"
         method = "POST"
@@ -631,7 +631,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/create_service_catalog_association.py.html>`__ to see an example of how to use create_service_catalog_association API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/create_service_catalog_association.py.html>`__ to see an example of how to use create_service_catalog_association API.
         """
         resource_path = "/serviceCatalogAssociations"
         method = "POST"
@@ -722,7 +722,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/delete_private_application.py.html>`__ to see an example of how to use delete_private_application API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/delete_private_application.py.html>`__ to see an example of how to use delete_private_application API.
         """
         resource_path = "/privateApplications/{privateApplicationId}"
         method = "DELETE"
@@ -820,7 +820,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/delete_service_catalog.py.html>`__ to see an example of how to use delete_service_catalog API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/delete_service_catalog.py.html>`__ to see an example of how to use delete_service_catalog API.
         """
         resource_path = "/serviceCatalogs/{serviceCatalogId}"
         method = "DELETE"
@@ -918,7 +918,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/delete_service_catalog_association.py.html>`__ to see an example of how to use delete_service_catalog_association API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/delete_service_catalog_association.py.html>`__ to see an example of how to use delete_service_catalog_association API.
         """
         resource_path = "/serviceCatalogAssociations/{serviceCatalogAssociationId}"
         method = "DELETE"
@@ -1011,7 +1011,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/get_private_application.py.html>`__ to see an example of how to use get_private_application API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/get_private_application.py.html>`__ to see an example of how to use get_private_application API.
         """
         resource_path = "/privateApplications/{privateApplicationId}"
         method = "GET"
@@ -1104,7 +1104,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/get_private_application_action_download_logo.py.html>`__ to see an example of how to use get_private_application_action_download_logo API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/get_private_application_action_download_logo.py.html>`__ to see an example of how to use get_private_application_action_download_logo API.
         """
         resource_path = "/privateApplications/{privateApplicationId}/actions/downloadLogo"
         method = "GET"
@@ -1197,7 +1197,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/get_private_application_package.py.html>`__ to see an example of how to use get_private_application_package API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/get_private_application_package.py.html>`__ to see an example of how to use get_private_application_package API.
         """
         resource_path = "/privateApplicationPackages/{privateApplicationPackageId}"
         method = "GET"
@@ -1290,7 +1290,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/get_private_application_package_action_download_config.py.html>`__ to see an example of how to use get_private_application_package_action_download_config API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/get_private_application_package_action_download_config.py.html>`__ to see an example of how to use get_private_application_package_action_download_config API.
         """
         resource_path = "/privateApplicationPackages/{privateApplicationPackageId}/actions/downloadConfig"
         method = "GET"
@@ -1383,7 +1383,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/get_service_catalog.py.html>`__ to see an example of how to use get_service_catalog API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/get_service_catalog.py.html>`__ to see an example of how to use get_service_catalog API.
         """
         resource_path = "/serviceCatalogs/{serviceCatalogId}"
         method = "GET"
@@ -1476,7 +1476,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/get_service_catalog_association.py.html>`__ to see an example of how to use get_service_catalog_association API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/get_service_catalog_association.py.html>`__ to see an example of how to use get_service_catalog_association API.
         """
         resource_path = "/serviceCatalogAssociations/{serviceCatalogAssociationId}"
         method = "GET"
@@ -1569,7 +1569,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -1705,7 +1705,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/list_applications.py.html>`__ to see an example of how to use list_applications API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/list_applications.py.html>`__ to see an example of how to use list_applications API.
         """
         resource_path = "/applications"
         method = "GET"
@@ -1869,7 +1869,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/list_private_application_packages.py.html>`__ to see an example of how to use list_private_application_packages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/list_private_application_packages.py.html>`__ to see an example of how to use list_private_application_packages API.
         """
         resource_path = "/privateApplicationPackages"
         method = "GET"
@@ -2016,7 +2016,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/list_private_applications.py.html>`__ to see an example of how to use list_private_applications API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/list_private_applications.py.html>`__ to see an example of how to use list_private_applications API.
         """
         resource_path = "/privateApplications"
         method = "GET"
@@ -2155,7 +2155,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/list_service_catalog_associations.py.html>`__ to see an example of how to use list_service_catalog_associations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/list_service_catalog_associations.py.html>`__ to see an example of how to use list_service_catalog_associations API.
         """
         resource_path = "/serviceCatalogAssociations"
         method = "GET"
@@ -2294,7 +2294,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/list_service_catalogs.py.html>`__ to see an example of how to use list_service_catalogs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/list_service_catalogs.py.html>`__ to see an example of how to use list_service_catalogs API.
         """
         resource_path = "/serviceCatalogs"
         method = "GET"
@@ -2424,7 +2424,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -2561,7 +2561,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -2709,7 +2709,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -2841,7 +2841,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/update_private_application.py.html>`__ to see an example of how to use update_private_application API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/update_private_application.py.html>`__ to see an example of how to use update_private_application API.
         """
         resource_path = "/privateApplications/{privateApplicationId}"
         method = "PUT"
@@ -2946,7 +2946,7 @@ class ServiceCatalogClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicecatalog/update_service_catalog.py.html>`__ to see an example of how to use update_service_catalog API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicecatalog/update_service_catalog.py.html>`__ to see an example of how to use update_service_catalog API.
         """
         resource_path = "/serviceCatalogs/{serviceCatalogId}"
         method = "PUT"

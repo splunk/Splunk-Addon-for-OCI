@@ -38,7 +38,7 @@ class AmdRomeBmGpuPlatformConfig(PlatformConfig):
 
         :param type:
             The value to assign to the type property of this AmdRomeBmGpuPlatformConfig.
-            Allowed values for this property are: "AMD_MILAN_BM", "AMD_ROME_BM", "AMD_ROME_BM_GPU", "INTEL_ICELAKE_BM", "INTEL_SKYLAKE_BM", "AMD_VM", "INTEL_VM", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for this property are: "AMD_MILAN_BM", "AMD_MILAN_BM_GPU", "AMD_ROME_BM", "AMD_ROME_BM_GPU", "INTEL_ICELAKE_BM", "INTEL_SKYLAKE_BM", "AMD_VM", "INTEL_VM", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type type: str
 
@@ -53,6 +53,10 @@ class AmdRomeBmGpuPlatformConfig(PlatformConfig):
         :param is_measured_boot_enabled:
             The value to assign to the is_measured_boot_enabled property of this AmdRomeBmGpuPlatformConfig.
         :type is_measured_boot_enabled: bool
+
+        :param is_memory_encryption_enabled:
+            The value to assign to the is_memory_encryption_enabled property of this AmdRomeBmGpuPlatformConfig.
+        :type is_memory_encryption_enabled: bool
 
         :param numa_nodes_per_socket:
             The value to assign to the numa_nodes_per_socket property of this AmdRomeBmGpuPlatformConfig.
@@ -82,6 +86,7 @@ class AmdRomeBmGpuPlatformConfig(PlatformConfig):
             'is_secure_boot_enabled': 'bool',
             'is_trusted_platform_module_enabled': 'bool',
             'is_measured_boot_enabled': 'bool',
+            'is_memory_encryption_enabled': 'bool',
             'numa_nodes_per_socket': 'str',
             'is_symmetric_multi_threading_enabled': 'bool',
             'is_access_control_service_enabled': 'bool',
@@ -94,6 +99,7 @@ class AmdRomeBmGpuPlatformConfig(PlatformConfig):
             'is_secure_boot_enabled': 'isSecureBootEnabled',
             'is_trusted_platform_module_enabled': 'isTrustedPlatformModuleEnabled',
             'is_measured_boot_enabled': 'isMeasuredBootEnabled',
+            'is_memory_encryption_enabled': 'isMemoryEncryptionEnabled',
             'numa_nodes_per_socket': 'numaNodesPerSocket',
             'is_symmetric_multi_threading_enabled': 'isSymmetricMultiThreadingEnabled',
             'is_access_control_service_enabled': 'isAccessControlServiceEnabled',
@@ -105,6 +111,7 @@ class AmdRomeBmGpuPlatformConfig(PlatformConfig):
         self._is_secure_boot_enabled = None
         self._is_trusted_platform_module_enabled = None
         self._is_measured_boot_enabled = None
+        self._is_memory_encryption_enabled = None
         self._numa_nodes_per_socket = None
         self._is_symmetric_multi_threading_enabled = None
         self._is_access_control_service_enabled = None

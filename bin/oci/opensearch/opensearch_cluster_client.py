@@ -148,7 +148,7 @@ class OpensearchClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/backup_opensearch_cluster.py.html>`__ to see an example of how to use backup_opensearch_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/backup_opensearch_cluster.py.html>`__ to see an example of how to use backup_opensearch_cluster API.
         """
         resource_path = "/opensearchClusters/{opensearchClusterId}/actions/backup"
         method = "POST"
@@ -252,7 +252,7 @@ class OpensearchClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/create_opensearch_cluster.py.html>`__ to see an example of how to use create_opensearch_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/create_opensearch_cluster.py.html>`__ to see an example of how to use create_opensearch_cluster API.
         """
         resource_path = "/opensearchClusters"
         method = "POST"
@@ -342,7 +342,7 @@ class OpensearchClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/delete_opensearch_cluster.py.html>`__ to see an example of how to use delete_opensearch_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/delete_opensearch_cluster.py.html>`__ to see an example of how to use delete_opensearch_cluster API.
         """
         resource_path = "/opensearchClusters/{opensearchClusterId}"
         method = "DELETE"
@@ -434,7 +434,7 @@ class OpensearchClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/get_opensearch_cluster.py.html>`__ to see an example of how to use get_opensearch_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/get_opensearch_cluster.py.html>`__ to see an example of how to use get_opensearch_cluster API.
         """
         resource_path = "/opensearchClusters/{opensearchClusterId}"
         method = "GET"
@@ -526,7 +526,7 @@ class OpensearchClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -645,7 +645,7 @@ class OpensearchClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/list_opensearch_clusters.py.html>`__ to see an example of how to use list_opensearch_clusters API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/list_opensearch_clusters.py.html>`__ to see an example of how to use list_opensearch_clusters API.
         """
         resource_path = "/opensearchClusters"
         method = "GET"
@@ -770,7 +770,7 @@ class OpensearchClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/list_opensearch_versions.py.html>`__ to see an example of how to use list_opensearch_versions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/list_opensearch_versions.py.html>`__ to see an example of how to use list_opensearch_versions API.
         """
         resource_path = "/opensearch/versions"
         method = "GET"
@@ -864,7 +864,7 @@ class OpensearchClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -972,7 +972,7 @@ class OpensearchClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -1086,7 +1086,7 @@ class OpensearchClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -1198,7 +1198,7 @@ class OpensearchClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/opensearch_cluster_restore.py.html>`__ to see an example of how to use opensearch_cluster_restore API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/opensearch_cluster_restore.py.html>`__ to see an example of how to use opensearch_cluster_restore API.
         """
         resource_path = "/opensearchClusters/{opensearchClusterId}/actions/restore"
         method = "POST"
@@ -1312,7 +1312,7 @@ class OpensearchClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/resize_opensearch_cluster_horizontal.py.html>`__ to see an example of how to use resize_opensearch_cluster_horizontal API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/resize_opensearch_cluster_horizontal.py.html>`__ to see an example of how to use resize_opensearch_cluster_horizontal API.
         """
         resource_path = "/opensearchClusters/{opensearchClusterId}/actions/resizeHorizontal"
         method = "POST"
@@ -1426,7 +1426,7 @@ class OpensearchClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/resize_opensearch_cluster_vertical.py.html>`__ to see an example of how to use resize_opensearch_cluster_vertical API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/resize_opensearch_cluster_vertical.py.html>`__ to see an example of how to use resize_opensearch_cluster_vertical API.
         """
         resource_path = "/opensearchClusters/{opensearchClusterId}/actions/resizeVertical"
         method = "POST"
@@ -1533,7 +1533,7 @@ class OpensearchClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/opensearch/update_opensearch_cluster.py.html>`__ to see an example of how to use update_opensearch_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/opensearch/update_opensearch_cluster.py.html>`__ to see an example of how to use update_opensearch_cluster API.
         """
         resource_path = "/opensearchClusters/{opensearchClusterId}"
         method = "PUT"

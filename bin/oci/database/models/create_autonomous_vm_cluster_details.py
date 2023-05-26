@@ -21,6 +21,14 @@ class CreateAutonomousVmClusterDetails(object):
     #: This constant has a value of "BRING_YOUR_OWN_LICENSE"
     LICENSE_MODEL_BRING_YOUR_OWN_LICENSE = "BRING_YOUR_OWN_LICENSE"
 
+    #: A constant which can be used with the compute_model property of a CreateAutonomousVmClusterDetails.
+    #: This constant has a value of "ECPU"
+    COMPUTE_MODEL_ECPU = "ECPU"
+
+    #: A constant which can be used with the compute_model property of a CreateAutonomousVmClusterDetails.
+    #: This constant has a value of "OCPU"
+    COMPUTE_MODEL_OCPU = "OCPU"
+
     def __init__(self, **kwargs):
         """
         Initializes a new CreateAutonomousVmClusterDetails object with values from keyword arguments.
@@ -63,6 +71,11 @@ class CreateAutonomousVmClusterDetails(object):
             The value to assign to the cpu_core_count_per_node property of this CreateAutonomousVmClusterDetails.
         :type cpu_core_count_per_node: int
 
+        :param compute_model:
+            The value to assign to the compute_model property of this CreateAutonomousVmClusterDetails.
+            Allowed values for this property are: "ECPU", "OCPU"
+        :type compute_model: str
+
         :param memory_per_oracle_compute_unit_in_gbs:
             The value to assign to the memory_per_oracle_compute_unit_in_gbs property of this CreateAutonomousVmClusterDetails.
         :type memory_per_oracle_compute_unit_in_gbs: int
@@ -74,6 +87,10 @@ class CreateAutonomousVmClusterDetails(object):
         :param maintenance_window_details:
             The value to assign to the maintenance_window_details property of this CreateAutonomousVmClusterDetails.
         :type maintenance_window_details: oci.database.models.MaintenanceWindow
+
+        :param db_servers:
+            The value to assign to the db_servers property of this CreateAutonomousVmClusterDetails.
+        :type db_servers: list[str]
 
         :param freeform_tags:
             The value to assign to the freeform_tags property of this CreateAutonomousVmClusterDetails.
@@ -106,9 +123,11 @@ class CreateAutonomousVmClusterDetails(object):
             'license_model': 'str',
             'total_container_databases': 'int',
             'cpu_core_count_per_node': 'int',
+            'compute_model': 'str',
             'memory_per_oracle_compute_unit_in_gbs': 'int',
             'autonomous_data_storage_size_in_tbs': 'float',
             'maintenance_window_details': 'MaintenanceWindow',
+            'db_servers': 'list[str]',
             'freeform_tags': 'dict(str, str)',
             'defined_tags': 'dict(str, dict(str, object))',
             'scan_listener_port_tls': 'int',
@@ -126,9 +145,11 @@ class CreateAutonomousVmClusterDetails(object):
             'license_model': 'licenseModel',
             'total_container_databases': 'totalContainerDatabases',
             'cpu_core_count_per_node': 'cpuCoreCountPerNode',
+            'compute_model': 'computeModel',
             'memory_per_oracle_compute_unit_in_gbs': 'memoryPerOracleComputeUnitInGBs',
             'autonomous_data_storage_size_in_tbs': 'autonomousDataStorageSizeInTBs',
             'maintenance_window_details': 'maintenanceWindowDetails',
+            'db_servers': 'dbServers',
             'freeform_tags': 'freeformTags',
             'defined_tags': 'definedTags',
             'scan_listener_port_tls': 'scanListenerPortTls',
@@ -145,9 +166,11 @@ class CreateAutonomousVmClusterDetails(object):
         self._license_model = None
         self._total_container_databases = None
         self._cpu_core_count_per_node = None
+        self._compute_model = None
         self._memory_per_oracle_compute_unit_in_gbs = None
         self._autonomous_data_storage_size_in_tbs = None
         self._maintenance_window_details = None
+        self._db_servers = None
         self._freeform_tags = None
         self._defined_tags = None
         self._scan_listener_port_tls = None
@@ -395,10 +418,46 @@ class CreateAutonomousVmClusterDetails(object):
         self._cpu_core_count_per_node = cpu_core_count_per_node
 
     @property
+    def compute_model(self):
+        """
+        Gets the compute_model of this CreateAutonomousVmClusterDetails.
+        The compute model of the Autonomous VM Cluster. See `Compute Models in Autonomous Database on Dedicated Exadata Infrastructure`__ for more details.
+
+        __ https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak
+
+        Allowed values for this property are: "ECPU", "OCPU"
+
+
+        :return: The compute_model of this CreateAutonomousVmClusterDetails.
+        :rtype: str
+        """
+        return self._compute_model
+
+    @compute_model.setter
+    def compute_model(self, compute_model):
+        """
+        Sets the compute_model of this CreateAutonomousVmClusterDetails.
+        The compute model of the Autonomous VM Cluster. See `Compute Models in Autonomous Database on Dedicated Exadata Infrastructure`__ for more details.
+
+        __ https://docs.oracle.com/en/cloud/paas/autonomous-database/dedicated/adbak
+
+
+        :param compute_model: The compute_model of this CreateAutonomousVmClusterDetails.
+        :type: str
+        """
+        allowed_values = ["ECPU", "OCPU"]
+        if not value_allowed_none_or_none_sentinel(compute_model, allowed_values):
+            raise ValueError(
+                "Invalid value for `compute_model`, must be None or one of {0}"
+                .format(allowed_values)
+            )
+        self._compute_model = compute_model
+
+    @property
     def memory_per_oracle_compute_unit_in_gbs(self):
         """
         Gets the memory_per_oracle_compute_unit_in_gbs of this CreateAutonomousVmClusterDetails.
-        The amount of memory (in GBs) to be enabled per each OCPU core.
+        The amount of memory (in GBs) to be enabled per each CPU core.
 
 
         :return: The memory_per_oracle_compute_unit_in_gbs of this CreateAutonomousVmClusterDetails.
@@ -410,7 +469,7 @@ class CreateAutonomousVmClusterDetails(object):
     def memory_per_oracle_compute_unit_in_gbs(self, memory_per_oracle_compute_unit_in_gbs):
         """
         Sets the memory_per_oracle_compute_unit_in_gbs of this CreateAutonomousVmClusterDetails.
-        The amount of memory (in GBs) to be enabled per each OCPU core.
+        The amount of memory (in GBs) to be enabled per each CPU core.
 
 
         :param memory_per_oracle_compute_unit_in_gbs: The memory_per_oracle_compute_unit_in_gbs of this CreateAutonomousVmClusterDetails.
@@ -461,6 +520,34 @@ class CreateAutonomousVmClusterDetails(object):
         :type: oci.database.models.MaintenanceWindow
         """
         self._maintenance_window_details = maintenance_window_details
+
+    @property
+    def db_servers(self):
+        """
+        Gets the db_servers of this CreateAutonomousVmClusterDetails.
+        The list of `OCIDs`__ of the Db servers.
+
+        __ https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm
+
+
+        :return: The db_servers of this CreateAutonomousVmClusterDetails.
+        :rtype: list[str]
+        """
+        return self._db_servers
+
+    @db_servers.setter
+    def db_servers(self, db_servers):
+        """
+        Sets the db_servers of this CreateAutonomousVmClusterDetails.
+        The list of `OCIDs`__ of the Db servers.
+
+        __ https://docs.cloud.oracle.com/Content/General/Concepts/identifiers.htm
+
+
+        :param db_servers: The db_servers of this CreateAutonomousVmClusterDetails.
+        :type: list[str]
+        """
+        self._db_servers = db_servers
 
     @property
     def freeform_tags(self):

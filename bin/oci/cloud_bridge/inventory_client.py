@@ -168,7 +168,7 @@ class InventoryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/analyze_assets.py.html>`__ to see an example of how to use analyze_assets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudbridge/analyze_assets.py.html>`__ to see an example of how to use analyze_assets API.
         """
         resource_path = "/assetAnalytics"
         method = "GET"
@@ -314,7 +314,7 @@ class InventoryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/change_asset_compartment.py.html>`__ to see an example of how to use change_asset_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudbridge/change_asset_compartment.py.html>`__ to see an example of how to use change_asset_compartment API.
         """
         resource_path = "/assets/{assetId}/actions/changeCompartment"
         method = "POST"
@@ -430,7 +430,7 @@ class InventoryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/change_asset_tags.py.html>`__ to see an example of how to use change_asset_tags API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudbridge/change_asset_tags.py.html>`__ to see an example of how to use change_asset_tags API.
         """
         resource_path = "/assets/{assetId}/actions/changeTags"
         method = "POST"
@@ -538,7 +538,7 @@ class InventoryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/create_asset.py.html>`__ to see an example of how to use create_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudbridge/create_asset.py.html>`__ to see an example of how to use create_asset API.
         """
         resource_path = "/assets"
         method = "POST"
@@ -632,7 +632,7 @@ class InventoryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/create_inventory.py.html>`__ to see an example of how to use create_inventory API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudbridge/create_inventory.py.html>`__ to see an example of how to use create_inventory API.
         """
         resource_path = "/inventories"
         method = "POST"
@@ -724,7 +724,7 @@ class InventoryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/delete_asset.py.html>`__ to see an example of how to use delete_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudbridge/delete_asset.py.html>`__ to see an example of how to use delete_asset API.
         """
         resource_path = "/assets/{assetId}"
         method = "DELETE"
@@ -825,7 +825,7 @@ class InventoryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/delete_inventory.py.html>`__ to see an example of how to use delete_inventory API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudbridge/delete_inventory.py.html>`__ to see an example of how to use delete_inventory API.
         """
         resource_path = "/inventories/{inventoryId}"
         method = "DELETE"
@@ -919,7 +919,7 @@ class InventoryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/get_asset.py.html>`__ to see an example of how to use get_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudbridge/get_asset.py.html>`__ to see an example of how to use get_asset API.
         """
         resource_path = "/assets/{assetId}"
         method = "GET"
@@ -1013,7 +1013,7 @@ class InventoryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/get_inventory.py.html>`__ to see an example of how to use get_inventory API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudbridge/get_inventory.py.html>`__ to see an example of how to use get_inventory API.
         """
         resource_path = "/inventories/{inventoryId}"
         method = "GET"
@@ -1117,7 +1117,7 @@ class InventoryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/import_inventory.py.html>`__ to see an example of how to use import_inventory API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudbridge/import_inventory.py.html>`__ to see an example of how to use import_inventory API.
         """
         resource_path = "/inventories/{inventoryId}/actions/import"
         method = "POST"
@@ -1255,7 +1255,7 @@ class InventoryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/list_assets.py.html>`__ to see an example of how to use list_assets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudbridge/list_assets.py.html>`__ to see an example of how to use list_assets API.
         """
         resource_path = "/assets"
         method = "GET"
@@ -1410,7 +1410,7 @@ class InventoryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/list_historical_metrics.py.html>`__ to see an example of how to use list_historical_metrics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudbridge/list_historical_metrics.py.html>`__ to see an example of how to use list_historical_metrics API.
         """
         resource_path = "/assets/{assetId}/historicalMetrics"
         method = "GET"
@@ -1553,7 +1553,7 @@ class InventoryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/list_inventories.py.html>`__ to see an example of how to use list_inventories API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudbridge/list_inventories.py.html>`__ to see an example of how to use list_inventories API.
         """
         resource_path = "/inventories"
         method = "GET"
@@ -1683,7 +1683,7 @@ class InventoryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/submit_historical_metrics.py.html>`__ to see an example of how to use submit_historical_metrics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudbridge/submit_historical_metrics.py.html>`__ to see an example of how to use submit_historical_metrics API.
         """
         resource_path = "/assets/{assetId}/actions/submitHistoricalMetrics"
         method = "POST"
@@ -1791,7 +1791,7 @@ class InventoryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/update_asset.py.html>`__ to see an example of how to use update_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudbridge/update_asset.py.html>`__ to see an example of how to use update_asset API.
         """
         resource_path = "/assets/{assetId}"
         method = "PUT"
@@ -1899,7 +1899,7 @@ class InventoryClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/cloudbridge/update_inventory.py.html>`__ to see an example of how to use update_inventory API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/cloudbridge/update_inventory.py.html>`__ to see an example of how to use update_inventory API.
         """
         resource_path = "/inventories/{inventoryId}"
         method = "PUT"

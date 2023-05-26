@@ -148,7 +148,7 @@ class DataLabelingManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservice/add_dataset_labels.py.html>`__ to see an example of how to use add_dataset_labels API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/datalabelingservice/add_dataset_labels.py.html>`__ to see an example of how to use add_dataset_labels API.
         """
         resource_path = "/datasets/{datasetId}/actions/addLabels"
         method = "POST"
@@ -257,7 +257,7 @@ class DataLabelingManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservice/change_dataset_compartment.py.html>`__ to see an example of how to use change_dataset_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/datalabelingservice/change_dataset_compartment.py.html>`__ to see an example of how to use change_dataset_compartment API.
         """
         resource_path = "/datasets/{datasetId}/actions/changeCompartment"
         method = "POST"
@@ -360,7 +360,7 @@ class DataLabelingManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservice/create_dataset.py.html>`__ to see an example of how to use create_dataset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/datalabelingservice/create_dataset.py.html>`__ to see an example of how to use create_dataset API.
         """
         resource_path = "/datasets"
         method = "POST"
@@ -454,7 +454,7 @@ class DataLabelingManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservice/delete_dataset.py.html>`__ to see an example of how to use delete_dataset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/datalabelingservice/delete_dataset.py.html>`__ to see an example of how to use delete_dataset API.
         """
         resource_path = "/datasets/{datasetId}"
         method = "DELETE"
@@ -565,7 +565,7 @@ class DataLabelingManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservice/generate_dataset_records.py.html>`__ to see an example of how to use generate_dataset_records API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/datalabelingservice/generate_dataset_records.py.html>`__ to see an example of how to use generate_dataset_records API.
         """
         resource_path = "/datasets/{datasetId}/actions/generateDatasetRecords"
         method = "POST"
@@ -664,7 +664,7 @@ class DataLabelingManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservice/get_dataset.py.html>`__ to see an example of how to use get_dataset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/datalabelingservice/get_dataset.py.html>`__ to see an example of how to use get_dataset API.
         """
         resource_path = "/datasets/{datasetId}"
         method = "GET"
@@ -758,7 +758,7 @@ class DataLabelingManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservice/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/datalabelingservice/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -863,7 +863,7 @@ class DataLabelingManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservice/list_annotation_formats.py.html>`__ to see an example of how to use list_annotation_formats API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/datalabelingservice/list_annotation_formats.py.html>`__ to see an example of how to use list_annotation_formats API.
         """
         resource_path = "/annotationFormats"
         method = "GET"
@@ -995,7 +995,7 @@ class DataLabelingManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservice/list_datasets.py.html>`__ to see an example of how to use list_datasets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/datalabelingservice/list_datasets.py.html>`__ to see an example of how to use list_datasets API.
         """
         resource_path = "/datasets"
         method = "GET"
@@ -1127,7 +1127,7 @@ class DataLabelingManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservice/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/datalabelingservice/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -1237,7 +1237,7 @@ class DataLabelingManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservice/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/datalabelingservice/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -1350,7 +1350,7 @@ class DataLabelingManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservice/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/datalabelingservice/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -1462,7 +1462,7 @@ class DataLabelingManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservice/remove_dataset_labels.py.html>`__ to see an example of how to use remove_dataset_labels API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/datalabelingservice/remove_dataset_labels.py.html>`__ to see an example of how to use remove_dataset_labels API.
         """
         resource_path = "/datasets/{datasetId}/actions/removeLabels"
         method = "POST"
@@ -1578,7 +1578,7 @@ class DataLabelingManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservice/rename_dataset_labels.py.html>`__ to see an example of how to use rename_dataset_labels API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/datalabelingservice/rename_dataset_labels.py.html>`__ to see an example of how to use rename_dataset_labels API.
         """
         resource_path = "/datasets/{datasetId}/actions/renameLabels"
         method = "POST"
@@ -1695,7 +1695,7 @@ class DataLabelingManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservice/snapshot_dataset.py.html>`__ to see an example of how to use snapshot_dataset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/datalabelingservice/snapshot_dataset.py.html>`__ to see an example of how to use snapshot_dataset API.
         """
         resource_path = "/datasets/{datasetId}/actions/snapshot"
         method = "POST"
@@ -1804,7 +1804,7 @@ class DataLabelingManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/datalabelingservice/update_dataset.py.html>`__ to see an example of how to use update_dataset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/datalabelingservice/update_dataset.py.html>`__ to see an example of how to use update_dataset API.
         """
         resource_path = "/datasets/{datasetId}"
         method = "PUT"

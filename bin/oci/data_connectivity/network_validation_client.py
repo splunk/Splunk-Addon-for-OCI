@@ -159,7 +159,7 @@ class NetworkValidationClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/get_network_connectivity_status_collection.py.html>`__ to see an example of how to use get_network_connectivity_status_collection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/get_network_connectivity_status_collection.py.html>`__ to see an example of how to use get_network_connectivity_status_collection API.
         """
         resource_path = "/registries/{registryId}/endpoints/{endpointKey}/networkConnectivityStatusCollection"
         method = "GET"

@@ -145,7 +145,7 @@ class AIServiceSpeechClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aispeech/cancel_transcription_job.py.html>`__ to see an example of how to use cancel_transcription_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aispeech/cancel_transcription_job.py.html>`__ to see an example of how to use cancel_transcription_job API.
         """
         resource_path = "/transcriptionJobs/{transcriptionJobId}/actions/cancel"
         method = "POST"
@@ -257,7 +257,7 @@ class AIServiceSpeechClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aispeech/cancel_transcription_task.py.html>`__ to see an example of how to use cancel_transcription_task API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aispeech/cancel_transcription_task.py.html>`__ to see an example of how to use cancel_transcription_task API.
         """
         resource_path = "/transcriptionJobs/{transcriptionJobId}/transcriptionTasks/{transcriptionTaskId}/actions/cancel"
         method = "POST"
@@ -370,7 +370,7 @@ class AIServiceSpeechClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aispeech/change_transcription_job_compartment.py.html>`__ to see an example of how to use change_transcription_job_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aispeech/change_transcription_job_compartment.py.html>`__ to see an example of how to use change_transcription_job_compartment API.
         """
         resource_path = "/transcriptionJobs/{transcriptionJobId}/actions/changeCompartment"
         method = "POST"
@@ -474,7 +474,7 @@ class AIServiceSpeechClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aispeech/create_transcription_job.py.html>`__ to see an example of how to use create_transcription_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aispeech/create_transcription_job.py.html>`__ to see an example of how to use create_transcription_job API.
         """
         resource_path = "/transcriptionJobs"
         method = "POST"
@@ -559,7 +559,7 @@ class AIServiceSpeechClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aispeech/get_transcription_job.py.html>`__ to see an example of how to use get_transcription_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aispeech/get_transcription_job.py.html>`__ to see an example of how to use get_transcription_job API.
         """
         resource_path = "/transcriptionJobs/{transcriptionJobId}"
         method = "GET"
@@ -654,7 +654,7 @@ class AIServiceSpeechClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aispeech/get_transcription_task.py.html>`__ to see an example of how to use get_transcription_task API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aispeech/get_transcription_task.py.html>`__ to see an example of how to use get_transcription_task API.
         """
         resource_path = "/transcriptionJobs/{transcriptionJobId}/transcriptionTasks/{transcriptionTaskId}"
         method = "GET"
@@ -774,7 +774,7 @@ class AIServiceSpeechClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aispeech/list_transcription_jobs.py.html>`__ to see an example of how to use list_transcription_jobs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aispeech/list_transcription_jobs.py.html>`__ to see an example of how to use list_transcription_jobs API.
         """
         resource_path = "/transcriptionJobs"
         method = "GET"
@@ -924,7 +924,7 @@ class AIServiceSpeechClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aispeech/list_transcription_tasks.py.html>`__ to see an example of how to use list_transcription_tasks API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aispeech/list_transcription_tasks.py.html>`__ to see an example of how to use list_transcription_tasks API.
         """
         resource_path = "/transcriptionJobs/{transcriptionJobId}/transcriptionTasks"
         method = "GET"
@@ -1067,7 +1067,7 @@ class AIServiceSpeechClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aispeech/update_transcription_job.py.html>`__ to see an example of how to use update_transcription_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aispeech/update_transcription_job.py.html>`__ to see an example of how to use update_transcription_job API.
         """
         resource_path = "/transcriptionJobs/{transcriptionJobId}"
         method = "PUT"

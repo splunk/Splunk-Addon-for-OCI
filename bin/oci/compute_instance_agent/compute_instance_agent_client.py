@@ -144,7 +144,7 @@ class ComputeInstanceAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/computeinstanceagent/cancel_instance_agent_command.py.html>`__ to see an example of how to use cancel_instance_agent_command API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/computeinstanceagent/cancel_instance_agent_command.py.html>`__ to see an example of how to use cancel_instance_agent_command API.
         """
         resource_path = "/instanceAgentCommands/{instanceAgentCommandId}"
         method = "DELETE"
@@ -250,7 +250,7 @@ class ComputeInstanceAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/computeinstanceagent/create_instance_agent_command.py.html>`__ to see an example of how to use create_instance_agent_command API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/computeinstanceagent/create_instance_agent_command.py.html>`__ to see an example of how to use create_instance_agent_command API.
         """
         resource_path = "/instanceAgentCommands"
         method = "POST"
@@ -338,7 +338,7 @@ class ComputeInstanceAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/computeinstanceagent/get_instance_agent_command.py.html>`__ to see an example of how to use get_instance_agent_command API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/computeinstanceagent/get_instance_agent_command.py.html>`__ to see an example of how to use get_instance_agent_command API.
         """
         resource_path = "/instanceAgentCommands/{instanceAgentCommandId}"
         method = "GET"
@@ -438,7 +438,7 @@ class ComputeInstanceAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/computeinstanceagent/get_instance_agent_command_execution.py.html>`__ to see an example of how to use get_instance_agent_command_execution API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/computeinstanceagent/get_instance_agent_command_execution.py.html>`__ to see an example of how to use get_instance_agent_command_execution API.
         """
         resource_path = "/instanceAgentCommands/{instanceAgentCommandId}/status"
         method = "GET"
@@ -582,7 +582,7 @@ class ComputeInstanceAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/computeinstanceagent/list_instance_agent_command_executions.py.html>`__ to see an example of how to use list_instance_agent_command_executions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/computeinstanceagent/list_instance_agent_command_executions.py.html>`__ to see an example of how to use list_instance_agent_command_executions API.
         """
         resource_path = "/instanceAgentCommandExecutions"
         method = "GET"
@@ -735,7 +735,7 @@ class ComputeInstanceAgentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/computeinstanceagent/list_instance_agent_commands.py.html>`__ to see an example of how to use list_instance_agent_commands API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/computeinstanceagent/list_instance_agent_commands.py.html>`__ to see an example of how to use list_instance_agent_commands API.
         """
         resource_path = "/instanceAgentCommands"
         method = "GET"

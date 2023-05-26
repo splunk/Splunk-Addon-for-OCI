@@ -145,7 +145,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/aggregate_network_data.py.html>`__ to see an example of how to use aggregate_network_data API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/aggregate_network_data.py.html>`__ to see an example of how to use aggregate_network_data API.
         """
         resource_path = "/monitors/{monitorId}/actions/aggregateNetworkData"
         method = "POST"
@@ -262,7 +262,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/create_dedicated_vantage_point.py.html>`__ to see an example of how to use create_dedicated_vantage_point API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/create_dedicated_vantage_point.py.html>`__ to see an example of how to use create_dedicated_vantage_point API.
         """
         resource_path = "/dedicatedVantagePoints"
         method = "POST"
@@ -367,7 +367,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/create_monitor.py.html>`__ to see an example of how to use create_monitor API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/create_monitor.py.html>`__ to see an example of how to use create_monitor API.
         """
         resource_path = "/monitors"
         method = "POST"
@@ -472,7 +472,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/create_script.py.html>`__ to see an example of how to use create_script API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/create_script.py.html>`__ to see an example of how to use create_script API.
         """
         resource_path = "/scripts"
         method = "POST"
@@ -577,7 +577,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/delete_dedicated_vantage_point.py.html>`__ to see an example of how to use delete_dedicated_vantage_point API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/delete_dedicated_vantage_point.py.html>`__ to see an example of how to use delete_dedicated_vantage_point API.
         """
         resource_path = "/dedicatedVantagePoints/{dedicatedVantagePointId}"
         method = "DELETE"
@@ -689,7 +689,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/delete_monitor.py.html>`__ to see an example of how to use delete_monitor API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/delete_monitor.py.html>`__ to see an example of how to use delete_monitor API.
         """
         resource_path = "/monitors/{monitorId}"
         method = "DELETE"
@@ -801,7 +801,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/delete_script.py.html>`__ to see an example of how to use delete_script API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/delete_script.py.html>`__ to see an example of how to use delete_script API.
         """
         resource_path = "/scripts/{scriptId}"
         method = "DELETE"
@@ -906,7 +906,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/get_dedicated_vantage_point.py.html>`__ to see an example of how to use get_dedicated_vantage_point API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/get_dedicated_vantage_point.py.html>`__ to see an example of how to use get_dedicated_vantage_point API.
         """
         resource_path = "/dedicatedVantagePoints/{dedicatedVantagePointId}"
         method = "GET"
@@ -1011,7 +1011,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/get_monitor.py.html>`__ to see an example of how to use get_monitor API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/get_monitor.py.html>`__ to see an example of how to use get_monitor API.
         """
         resource_path = "/monitors/{monitorId}"
         method = "GET"
@@ -1128,7 +1128,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/get_monitor_result.py.html>`__ to see an example of how to use get_monitor_result API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/get_monitor_result.py.html>`__ to see an example of how to use get_monitor_result API.
         """
         resource_path = "/monitors/{monitorId}/results/{executionTime}"
         method = "GET"
@@ -1237,7 +1237,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/get_script.py.html>`__ to see an example of how to use get_script API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/get_script.py.html>`__ to see an example of how to use get_script API.
         """
         resource_path = "/scripts/{scriptId}"
         method = "GET"
@@ -1375,7 +1375,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/list_dedicated_vantage_points.py.html>`__ to see an example of how to use list_dedicated_vantage_points API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/list_dedicated_vantage_points.py.html>`__ to see an example of how to use list_dedicated_vantage_points API.
         """
         resource_path = "/dedicatedVantagePoints"
         method = "GET"
@@ -1549,7 +1549,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/list_monitors.py.html>`__ to see an example of how to use list_monitors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/list_monitors.py.html>`__ to see an example of how to use list_monitors API.
         """
         resource_path = "/monitors"
         method = "GET"
@@ -1711,7 +1711,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/list_public_vantage_points.py.html>`__ to see an example of how to use list_public_vantage_points API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/list_public_vantage_points.py.html>`__ to see an example of how to use list_public_vantage_points API.
         """
         resource_path = "/publicVantagePoints"
         method = "GET"
@@ -1858,7 +1858,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/list_scripts.py.html>`__ to see an example of how to use list_scripts API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/list_scripts.py.html>`__ to see an example of how to use list_scripts API.
         """
         resource_path = "/scripts"
         method = "GET"
@@ -1987,7 +1987,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/update_dedicated_vantage_point.py.html>`__ to see an example of how to use update_dedicated_vantage_point API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/update_dedicated_vantage_point.py.html>`__ to see an example of how to use update_dedicated_vantage_point API.
         """
         resource_path = "/dedicatedVantagePoints/{dedicatedVantagePointId}"
         method = "PUT"
@@ -2106,7 +2106,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/update_monitor.py.html>`__ to see an example of how to use update_monitor API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/update_monitor.py.html>`__ to see an example of how to use update_monitor API.
         """
         resource_path = "/monitors/{monitorId}"
         method = "PUT"
@@ -2225,7 +2225,7 @@ class ApmSyntheticClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apmsynthetics/update_script.py.html>`__ to see an example of how to use update_script API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apmsynthetics/update_script.py.html>`__ to see an example of how to use update_script API.
         """
         resource_path = "/scripts/{scriptId}"
         method = "PUT"

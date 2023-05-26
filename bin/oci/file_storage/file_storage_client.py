@@ -147,7 +147,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/change_file_system_compartment.py.html>`__ to see an example of how to use change_file_system_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/change_file_system_compartment.py.html>`__ to see an example of how to use change_file_system_compartment API.
         """
         resource_path = "/fileSystems/{fileSystemId}/actions/changeCompartment"
         method = "POST"
@@ -256,7 +256,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/change_mount_target_compartment.py.html>`__ to see an example of how to use change_mount_target_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/change_mount_target_compartment.py.html>`__ to see an example of how to use change_mount_target_compartment API.
         """
         resource_path = "/mountTargets/{mountTargetId}/actions/changeCompartment"
         method = "POST"
@@ -366,7 +366,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/change_replication_compartment.py.html>`__ to see an example of how to use change_replication_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/change_replication_compartment.py.html>`__ to see an example of how to use change_replication_compartment API.
         """
         resource_path = "/replications/{replicationId}/actions/changeCompartment"
         method = "POST"
@@ -469,7 +469,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/create_export.py.html>`__ to see an example of how to use create_export API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/create_export.py.html>`__ to see an example of how to use create_export API.
         """
         resource_path = "/exports"
         method = "POST"
@@ -595,7 +595,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/create_file_system.py.html>`__ to see an example of how to use create_file_system API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/create_file_system.py.html>`__ to see an example of how to use create_file_system API.
         """
         resource_path = "/fileSystems"
         method = "POST"
@@ -723,7 +723,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/create_mount_target.py.html>`__ to see an example of how to use create_mount_target API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/create_mount_target.py.html>`__ to see an example of how to use create_mount_target API.
         """
         resource_path = "/mountTargets"
         method = "POST"
@@ -847,7 +847,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/create_replication.py.html>`__ to see an example of how to use create_replication API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/create_replication.py.html>`__ to see an example of how to use create_replication API.
         """
         resource_path = "/replications"
         method = "POST"
@@ -941,7 +941,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/create_snapshot.py.html>`__ to see an example of how to use create_snapshot API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/create_snapshot.py.html>`__ to see an example of how to use create_snapshot API.
         """
         resource_path = "/snapshots"
         method = "POST"
@@ -1036,7 +1036,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/delete_export.py.html>`__ to see an example of how to use delete_export API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/delete_export.py.html>`__ to see an example of how to use delete_export API.
         """
         resource_path = "/exports/{exportId}"
         method = "DELETE"
@@ -1140,7 +1140,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/delete_file_system.py.html>`__ to see an example of how to use delete_file_system API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/delete_file_system.py.html>`__ to see an example of how to use delete_file_system API.
         """
         resource_path = "/fileSystems/{fileSystemId}"
         method = "DELETE"
@@ -1243,7 +1243,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/delete_mount_target.py.html>`__ to see an example of how to use delete_mount_target API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/delete_mount_target.py.html>`__ to see an example of how to use delete_mount_target API.
         """
         resource_path = "/mountTargets/{mountTargetId}"
         method = "DELETE"
@@ -1353,7 +1353,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/delete_replication.py.html>`__ to see an example of how to use delete_replication API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/delete_replication.py.html>`__ to see an example of how to use delete_replication API.
         """
         resource_path = "/replications/{replicationId}"
         method = "DELETE"
@@ -1473,7 +1473,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/delete_replication_target.py.html>`__ to see an example of how to use delete_replication_target API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/delete_replication_target.py.html>`__ to see an example of how to use delete_replication_target API.
         """
         resource_path = "/replicationTargets/{replicationTargetId}"
         method = "DELETE"
@@ -1575,7 +1575,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/delete_snapshot.py.html>`__ to see an example of how to use delete_snapshot API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/delete_snapshot.py.html>`__ to see an example of how to use delete_snapshot API.
         """
         resource_path = "/snapshots/{snapshotId}"
         method = "DELETE"
@@ -1680,7 +1680,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/estimate_replication.py.html>`__ to see an example of how to use estimate_replication API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/estimate_replication.py.html>`__ to see an example of how to use estimate_replication API.
         """
         resource_path = "/fileSystems/{fileSystemId}/actions/estimateReplication"
         method = "POST"
@@ -1785,7 +1785,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/get_export.py.html>`__ to see an example of how to use get_export API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/get_export.py.html>`__ to see an example of how to use get_export API.
         """
         resource_path = "/exports/{exportId}"
         method = "GET"
@@ -1880,7 +1880,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/get_export_set.py.html>`__ to see an example of how to use get_export_set API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/get_export_set.py.html>`__ to see an example of how to use get_export_set API.
         """
         resource_path = "/exportSets/{exportSetId}"
         method = "GET"
@@ -1975,7 +1975,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/get_file_system.py.html>`__ to see an example of how to use get_file_system API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/get_file_system.py.html>`__ to see an example of how to use get_file_system API.
         """
         resource_path = "/fileSystems/{fileSystemId}"
         method = "GET"
@@ -2070,7 +2070,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/get_mount_target.py.html>`__ to see an example of how to use get_mount_target API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/get_mount_target.py.html>`__ to see an example of how to use get_mount_target API.
         """
         resource_path = "/mountTargets/{mountTargetId}"
         method = "GET"
@@ -2165,7 +2165,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/get_replication.py.html>`__ to see an example of how to use get_replication API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/get_replication.py.html>`__ to see an example of how to use get_replication API.
         """
         resource_path = "/replications/{replicationId}"
         method = "GET"
@@ -2260,7 +2260,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/get_replication_target.py.html>`__ to see an example of how to use get_replication_target API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/get_replication_target.py.html>`__ to see an example of how to use get_replication_target API.
         """
         resource_path = "/replicationTargets/{replicationTargetId}"
         method = "GET"
@@ -2355,7 +2355,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/get_snapshot.py.html>`__ to see an example of how to use get_snapshot API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/get_snapshot.py.html>`__ to see an example of how to use get_snapshot API.
         """
         resource_path = "/snapshots/{snapshotId}"
         method = "GET"
@@ -2508,7 +2508,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/list_export_sets.py.html>`__ to see an example of how to use list_export_sets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/list_export_sets.py.html>`__ to see an example of how to use list_export_sets API.
         """
         resource_path = "/exportSets"
         method = "GET"
@@ -2694,7 +2694,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/list_exports.py.html>`__ to see an example of how to use list_exports API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/list_exports.py.html>`__ to see an example of how to use list_exports API.
         """
         resource_path = "/exports"
         method = "GET"
@@ -2892,7 +2892,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/list_file_systems.py.html>`__ to see an example of how to use list_file_systems API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/list_file_systems.py.html>`__ to see an example of how to use list_file_systems API.
         """
         resource_path = "/fileSystems"
         method = "GET"
@@ -3085,7 +3085,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/list_mount_targets.py.html>`__ to see an example of how to use list_mount_targets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/list_mount_targets.py.html>`__ to see an example of how to use list_mount_targets API.
         """
         resource_path = "/mountTargets"
         method = "GET"
@@ -3271,7 +3271,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/list_replication_targets.py.html>`__ to see an example of how to use list_replication_targets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/list_replication_targets.py.html>`__ to see an example of how to use list_replication_targets API.
         """
         resource_path = "/replicationTargets"
         method = "GET"
@@ -3460,7 +3460,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/list_replications.py.html>`__ to see an example of how to use list_replications API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/list_replications.py.html>`__ to see an example of how to use list_replications API.
         """
         resource_path = "/replications"
         method = "GET"
@@ -3628,7 +3628,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/list_snapshots.py.html>`__ to see an example of how to use list_snapshots API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/list_snapshots.py.html>`__ to see an example of how to use list_snapshots API.
         """
         resource_path = "/snapshots"
         method = "GET"
@@ -3752,7 +3752,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/update_export.py.html>`__ to see an example of how to use update_export API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/update_export.py.html>`__ to see an example of how to use update_export API.
         """
         resource_path = "/exports/{exportId}"
         method = "PUT"
@@ -3861,7 +3861,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/update_export_set.py.html>`__ to see an example of how to use update_export_set API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/update_export_set.py.html>`__ to see an example of how to use update_export_set API.
         """
         resource_path = "/exportSets/{exportSetId}"
         method = "PUT"
@@ -3971,7 +3971,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/update_file_system.py.html>`__ to see an example of how to use update_file_system API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/update_file_system.py.html>`__ to see an example of how to use update_file_system API.
         """
         resource_path = "/fileSystems/{fileSystemId}"
         method = "PUT"
@@ -4080,7 +4080,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/update_mount_target.py.html>`__ to see an example of how to use update_mount_target API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/update_mount_target.py.html>`__ to see an example of how to use update_mount_target API.
         """
         resource_path = "/mountTargets/{mountTargetId}"
         method = "PUT"
@@ -4189,7 +4189,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/update_replication.py.html>`__ to see an example of how to use update_replication API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/update_replication.py.html>`__ to see an example of how to use update_replication API.
         """
         resource_path = "/replications/{replicationId}"
         method = "PUT"
@@ -4298,7 +4298,7 @@ class FileStorageClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/filestorage/update_snapshot.py.html>`__ to see an example of how to use update_snapshot API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/filestorage/update_snapshot.py.html>`__ to see an example of how to use update_snapshot API.
         """
         resource_path = "/snapshots/{snapshotId}"
         method = "PUT"

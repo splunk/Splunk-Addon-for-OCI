@@ -150,7 +150,7 @@ class SubscribersClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/change_subscriber_compartment.py.html>`__ to see an example of how to use change_subscriber_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apigateway/change_subscriber_compartment.py.html>`__ to see an example of how to use change_subscriber_compartment API.
         """
         resource_path = "/subscribers/{subscriberId}/actions/changeCompartment"
         method = "POST"
@@ -254,7 +254,7 @@ class SubscribersClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/create_subscriber.py.html>`__ to see an example of how to use create_subscriber API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apigateway/create_subscriber.py.html>`__ to see an example of how to use create_subscriber API.
         """
         resource_path = "/subscribers"
         method = "POST"
@@ -348,7 +348,7 @@ class SubscribersClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/delete_subscriber.py.html>`__ to see an example of how to use delete_subscriber API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apigateway/delete_subscriber.py.html>`__ to see an example of how to use delete_subscriber API.
         """
         resource_path = "/subscribers/{subscriberId}"
         method = "DELETE"
@@ -440,7 +440,7 @@ class SubscribersClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/get_subscriber.py.html>`__ to see an example of how to use get_subscriber API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apigateway/get_subscriber.py.html>`__ to see an example of how to use get_subscriber API.
         """
         resource_path = "/subscribers/{subscriberId}"
         method = "GET"
@@ -564,7 +564,7 @@ class SubscribersClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/list_subscribers.py.html>`__ to see an example of how to use list_subscribers API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apigateway/list_subscribers.py.html>`__ to see an example of how to use list_subscribers API.
         """
         resource_path = "/subscribers"
         method = "GET"
@@ -696,7 +696,7 @@ class SubscribersClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/apigateway/update_subscriber.py.html>`__ to see an example of how to use update_subscriber API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/apigateway/update_subscriber.py.html>`__ to see an example of how to use update_subscriber API.
         """
         resource_path = "/subscribers/{subscriberId}"
         method = "PUT"

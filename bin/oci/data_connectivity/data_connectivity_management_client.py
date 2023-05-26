@@ -147,7 +147,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/change_endpoint_compartment.py.html>`__ to see an example of how to use change_endpoint_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/change_endpoint_compartment.py.html>`__ to see an example of how to use change_endpoint_compartment API.
         """
         resource_path = "/endpoints/{endpointId}/actions/changeCompartment"
         method = "POST"
@@ -265,7 +265,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/change_registry_compartment.py.html>`__ to see an example of how to use change_registry_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/change_registry_compartment.py.html>`__ to see an example of how to use change_registry_compartment API.
         """
         resource_path = "/registries/{registryId}/actions/changeCompartment"
         method = "POST"
@@ -378,7 +378,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/create_attach_data_asset.py.html>`__ to see an example of how to use create_attach_data_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/create_attach_data_asset.py.html>`__ to see an example of how to use create_attach_data_asset API.
         """
         resource_path = "/registries/{registryId}/endpoints/{endpointId}/actions/attachDataAssets"
         method = "POST"
@@ -486,7 +486,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/create_connection.py.html>`__ to see an example of how to use create_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/create_connection.py.html>`__ to see an example of how to use create_connection API.
         """
         resource_path = "/registries/{registryId}/connections"
         method = "POST"
@@ -596,7 +596,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/create_connection_validation.py.html>`__ to see an example of how to use create_connection_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/create_connection_validation.py.html>`__ to see an example of how to use create_connection_validation API.
         """
         resource_path = "/registries/{registryId}/connectionValidations"
         method = "POST"
@@ -714,7 +714,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/create_connectivity_validation.py.html>`__ to see an example of how to use create_connectivity_validation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/create_connectivity_validation.py.html>`__ to see an example of how to use create_connectivity_validation API.
         """
         resource_path = "/registries/{registryId}/actions/connectivityValidation"
         method = "POST"
@@ -829,7 +829,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/create_data_asset.py.html>`__ to see an example of how to use create_data_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/create_data_asset.py.html>`__ to see an example of how to use create_data_asset API.
         """
         resource_path = "/registries/{registryId}/dataAssets"
         method = "POST"
@@ -944,7 +944,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/create_data_preview.py.html>`__ to see an example of how to use create_data_preview API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/create_data_preview.py.html>`__ to see an example of how to use create_data_preview API.
         """
         resource_path = "/registries/{registryId}/actions/dataPreview"
         method = "POST"
@@ -1069,7 +1069,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/create_data_profile.py.html>`__ to see an example of how to use create_data_profile API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/create_data_profile.py.html>`__ to see an example of how to use create_data_profile API.
         """
         resource_path = "/registries/{registryId}/actions/dataProfile"
         method = "POST"
@@ -1194,7 +1194,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/create_de_reference_artifact.py.html>`__ to see an example of how to use create_de_reference_artifact API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/create_de_reference_artifact.py.html>`__ to see an example of how to use create_de_reference_artifact API.
         """
         resource_path = "/registries/{registryId}/dcmsArtifacts/{dcmsArtifactId}/actions/deReferenceArtifact"
         method = "POST"
@@ -1312,7 +1312,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/create_detach_data_asset.py.html>`__ to see an example of how to use create_detach_data_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/create_detach_data_asset.py.html>`__ to see an example of how to use create_detach_data_asset API.
         """
         resource_path = "/registries/{registryId}/endpoints/{endpointId}/actions/detachDataAssets"
         method = "POST"
@@ -1420,7 +1420,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/create_endpoint.py.html>`__ to see an example of how to use create_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/create_endpoint.py.html>`__ to see an example of how to use create_endpoint API.
         """
         resource_path = "/endpoints"
         method = "POST"
@@ -1538,7 +1538,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/create_entity_shape.py.html>`__ to see an example of how to use create_entity_shape API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/create_entity_shape.py.html>`__ to see an example of how to use create_entity_shape API.
         """
         resource_path = "/registries/{registryId}/connections/{connectionKey}/schemas/{schemaResourceName}/actions/entityShapes"
         method = "POST"
@@ -1675,7 +1675,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/create_execute_operation_job.py.html>`__ to see an example of how to use create_execute_operation_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/create_execute_operation_job.py.html>`__ to see an example of how to use create_execute_operation_job API.
         """
         resource_path = "/registries/{registryId}/connections/{connectionKey}/schemas/{schemaResourceName}/actions/executeOperationJobs"
         method = "POST"
@@ -1790,7 +1790,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/create_folder.py.html>`__ to see an example of how to use create_folder API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/create_folder.py.html>`__ to see an example of how to use create_folder API.
         """
         resource_path = "/registries/{registryId}/folders"
         method = "POST"
@@ -1905,7 +1905,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/create_full_push_down_task.py.html>`__ to see an example of how to use create_full_push_down_task API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/create_full_push_down_task.py.html>`__ to see an example of how to use create_full_push_down_task API.
         """
         resource_path = "/registries/{registryId}/actions/fullPushDownTask"
         method = "POST"
@@ -2030,7 +2030,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/create_reference_artifact.py.html>`__ to see an example of how to use create_reference_artifact API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/create_reference_artifact.py.html>`__ to see an example of how to use create_reference_artifact API.
         """
         resource_path = "/registries/{registryId}/dcmsArtifacts/{dcmsArtifactId}/actions/referenceArtifact"
         method = "POST"
@@ -2137,7 +2137,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/create_registry.py.html>`__ to see an example of how to use create_registry API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/create_registry.py.html>`__ to see an example of how to use create_registry API.
         """
         resource_path = "/registries"
         method = "POST"
@@ -2236,7 +2236,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/create_test_network_connectivity.py.html>`__ to see an example of how to use create_test_network_connectivity API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/create_test_network_connectivity.py.html>`__ to see an example of how to use create_test_network_connectivity API.
         """
         resource_path = "/registries/{registryId}/actions/testNetworkConnectivity"
         method = "POST"
@@ -2353,7 +2353,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/delete_connection.py.html>`__ to see an example of how to use delete_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/delete_connection.py.html>`__ to see an example of how to use delete_connection API.
         """
         resource_path = "/registries/{registryId}/connections/{connectionKey}"
         method = "DELETE"
@@ -2456,7 +2456,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/delete_data_asset.py.html>`__ to see an example of how to use delete_data_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/delete_data_asset.py.html>`__ to see an example of how to use delete_data_asset API.
         """
         resource_path = "/registries/{registryId}/dataAssets/{dataAssetKey}"
         method = "DELETE"
@@ -2562,7 +2562,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/delete_endpoint.py.html>`__ to see an example of how to use delete_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/delete_endpoint.py.html>`__ to see an example of how to use delete_endpoint API.
         """
         resource_path = "/endpoints/{endpointId}"
         method = "DELETE"
@@ -2674,7 +2674,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/delete_folder.py.html>`__ to see an example of how to use delete_folder API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/delete_folder.py.html>`__ to see an example of how to use delete_folder API.
         """
         resource_path = "/registries/{registryId}/folders/{folderKey}"
         method = "DELETE"
@@ -2777,7 +2777,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/delete_network_connectivity_status.py.html>`__ to see an example of how to use delete_network_connectivity_status API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/delete_network_connectivity_status.py.html>`__ to see an example of how to use delete_network_connectivity_status API.
         """
         resource_path = "/registries/{registryId}/networkConnectivityStatus/{networkValidationStatusKey}"
         method = "DELETE"
@@ -2880,7 +2880,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/delete_registry.py.html>`__ to see an example of how to use delete_registry API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/delete_registry.py.html>`__ to see an example of how to use delete_registry API.
         """
         resource_path = "/registries/{registryId}"
         method = "DELETE"
@@ -2988,7 +2988,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/derive_entities.py.html>`__ to see an example of how to use derive_entities API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/derive_entities.py.html>`__ to see an example of how to use derive_entities API.
         """
         resource_path = "/registries/{registryId}/actions/deriveEntities"
         method = "POST"
@@ -3090,7 +3090,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/get_connection.py.html>`__ to see an example of how to use get_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/get_connection.py.html>`__ to see an example of how to use get_connection API.
         """
         resource_path = "/registries/{registryId}/connections/{connectionKey}"
         method = "GET"
@@ -3190,7 +3190,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/get_data_asset.py.html>`__ to see an example of how to use get_data_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/get_data_asset.py.html>`__ to see an example of how to use get_data_asset API.
         """
         resource_path = "/registries/{registryId}/dataAssets/{dataAssetKey}"
         method = "GET"
@@ -3299,7 +3299,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/get_data_entity.py.html>`__ to see an example of how to use get_data_entity API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/get_data_entity.py.html>`__ to see an example of how to use get_data_entity API.
         """
         resource_path = "/registries/{registryId}/connections/{connectionKey}/schemas/{schemaResourceName}/dataEntities/{dataEntityKey}"
         method = "GET"
@@ -3409,7 +3409,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/get_endpoint.py.html>`__ to see an example of how to use get_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/get_endpoint.py.html>`__ to see an example of how to use get_endpoint API.
         """
         resource_path = "/endpoints/{endpointId}"
         method = "GET"
@@ -3521,7 +3521,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/get_engine_configurations.py.html>`__ to see an example of how to use get_engine_configurations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/get_engine_configurations.py.html>`__ to see an example of how to use get_engine_configurations API.
         """
         resource_path = "/registries/{registryId}/connections/{connectionKey}/engineConfigurations"
         method = "GET"
@@ -3643,7 +3643,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/get_execute_operation_job.py.html>`__ to see an example of how to use get_execute_operation_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/get_execute_operation_job.py.html>`__ to see an example of how to use get_execute_operation_job API.
         """
         resource_path = "/registries/{registryId}/connections/{connectionKey}/schemas/{schemaResourceName}/executeOperationJobs/{executeOperationJobKey}"
         method = "GET"
@@ -3753,7 +3753,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/get_folder.py.html>`__ to see an example of how to use get_folder API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/get_folder.py.html>`__ to see an example of how to use get_folder API.
         """
         resource_path = "/registries/{registryId}/folders/{folderKey}"
         method = "GET"
@@ -3864,7 +3864,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/get_network_connectivity_status.py.html>`__ to see an example of how to use get_network_connectivity_status API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/get_network_connectivity_status.py.html>`__ to see an example of how to use get_network_connectivity_status API.
         """
         resource_path = "/registries/{registryId}/dataAssets/{dataAssetKey}/networkConnectivityStatus"
         method = "GET"
@@ -3986,7 +3986,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/get_operation.py.html>`__ to see an example of how to use get_operation API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/get_operation.py.html>`__ to see an example of how to use get_operation API.
         """
         resource_path = "/registries/{registryId}/connections/{connectionKey}/schemas/{schemaResourceName}/operations/{operationResourceName}"
         method = "GET"
@@ -4093,7 +4093,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/get_registry.py.html>`__ to see an example of how to use get_registry API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/get_registry.py.html>`__ to see an example of how to use get_registry API.
         """
         resource_path = "/registries/{registryId}"
         method = "GET"
@@ -4198,7 +4198,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/get_schema.py.html>`__ to see an example of how to use get_schema API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/get_schema.py.html>`__ to see an example of how to use get_schema API.
         """
         resource_path = "/registries/{registryId}/connections/{connectionKey}/schemas/{schemaResourceName}"
         method = "GET"
@@ -4310,7 +4310,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/get_type.py.html>`__ to see an example of how to use get_type API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/get_type.py.html>`__ to see an example of how to use get_type API.
         """
         resource_path = "/registries/{registryId}/types/{typeKey}"
         method = "GET"
@@ -4415,7 +4415,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -4548,7 +4548,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/list_connections.py.html>`__ to see an example of how to use list_connections API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/list_connections.py.html>`__ to see an example of how to use list_connections API.
         """
         resource_path = "/registries/{registryId}/connections"
         method = "GET"
@@ -4734,7 +4734,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/list_data_assets.py.html>`__ to see an example of how to use list_data_assets API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/list_data_assets.py.html>`__ to see an example of how to use list_data_assets API.
         """
         resource_path = "/registries/{registryId}/dataAssets"
         method = "GET"
@@ -4933,7 +4933,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/list_data_entities.py.html>`__ to see an example of how to use list_data_entities API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/list_data_entities.py.html>`__ to see an example of how to use list_data_entities API.
         """
         resource_path = "/registries/{registryId}/connections/{connectionKey}/schemas/{schemaResourceName}/dataEntities"
         method = "GET"
@@ -5113,7 +5113,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/list_endpoints.py.html>`__ to see an example of how to use list_endpoints API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/list_endpoints.py.html>`__ to see an example of how to use list_endpoints API.
         """
         resource_path = "/endpoints"
         method = "GET"
@@ -5273,7 +5273,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/list_folders.py.html>`__ to see an example of how to use list_folders API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/list_folders.py.html>`__ to see an example of how to use list_folders API.
         """
         resource_path = "/registries/{registryId}/folders"
         method = "GET"
@@ -5444,7 +5444,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/list_operations.py.html>`__ to see an example of how to use list_operations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/list_operations.py.html>`__ to see an example of how to use list_operations API.
         """
         resource_path = "/registries/{registryId}/connections/{connectionKey}/schemas/{schemaResourceName}/operations"
         method = "GET"
@@ -5617,7 +5617,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/list_reference_artifacts.py.html>`__ to see an example of how to use list_reference_artifacts API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/list_reference_artifacts.py.html>`__ to see an example of how to use list_reference_artifacts API.
         """
         resource_path = "/registries/{registryId}/dcmsArtifacts/{dcmsArtifactId}/referenceArtifacts"
         method = "GET"
@@ -5782,7 +5782,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/list_registries.py.html>`__ to see an example of how to use list_registries API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/list_registries.py.html>`__ to see an example of how to use list_registries API.
         """
         resource_path = "/registries"
         method = "GET"
@@ -5931,7 +5931,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/list_schemas.py.html>`__ to see an example of how to use list_schemas API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/list_schemas.py.html>`__ to see an example of how to use list_schemas API.
         """
         resource_path = "/registries/{registryId}/connections/{connectionKey}/schemas"
         method = "GET"
@@ -6094,7 +6094,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/list_types.py.html>`__ to see an example of how to use list_types API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/list_types.py.html>`__ to see an example of how to use list_types API.
         """
         resource_path = "/registries/{registryId}/types"
         method = "GET"
@@ -6232,7 +6232,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/workRequestErrors"
         method = "GET"
@@ -6348,7 +6348,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -6472,7 +6472,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -6589,7 +6589,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/update_connection.py.html>`__ to see an example of how to use update_connection API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/update_connection.py.html>`__ to see an example of how to use update_connection API.
         """
         resource_path = "/registries/{registryId}/connections/{connectionKey}"
         method = "PUT"
@@ -6699,7 +6699,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/update_data_asset.py.html>`__ to see an example of how to use update_data_asset API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/update_data_asset.py.html>`__ to see an example of how to use update_data_asset API.
         """
         resource_path = "/registries/{registryId}/dataAssets/{dataAssetKey}"
         method = "PUT"
@@ -6809,7 +6809,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/update_endpoint.py.html>`__ to see an example of how to use update_endpoint API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/update_endpoint.py.html>`__ to see an example of how to use update_endpoint API.
         """
         resource_path = "/endpoints/{endpointId}"
         method = "PUT"
@@ -6926,7 +6926,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/update_folder.py.html>`__ to see an example of how to use update_folder API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/update_folder.py.html>`__ to see an example of how to use update_folder API.
         """
         resource_path = "/registries/{registryId}/folders/{folderKey}"
         method = "PUT"
@@ -7033,7 +7033,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/update_registry.py.html>`__ to see an example of how to use update_registry API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/update_registry.py.html>`__ to see an example of how to use update_registry API.
         """
         resource_path = "/registries/{registryId}"
         method = "PUT"
@@ -7142,7 +7142,7 @@ class DataConnectivityManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/dataconnectivity/validate_data_asset_network_reachablity.py.html>`__ to see an example of how to use validate_data_asset_network_reachablity API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/dataconnectivity/validate_data_asset_network_reachablity.py.html>`__ to see an example of how to use validate_data_asset_network_reachablity API.
         """
         resource_path = "/endpoints/{endpointId}/actions/validateDataAssetNetworkReachablity"
         method = "POST"

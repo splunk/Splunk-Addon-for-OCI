@@ -138,7 +138,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/change_connect_harness_compartment.py.html>`__ to see an example of how to use change_connect_harness_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/change_connect_harness_compartment.py.html>`__ to see an example of how to use change_connect_harness_compartment API.
         """
         resource_path = "/connectharnesses/{connectHarnessId}/actions/changeCompartment"
         method = "POST"
@@ -243,7 +243,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/change_stream_compartment.py.html>`__ to see an example of how to use change_stream_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/change_stream_compartment.py.html>`__ to see an example of how to use change_stream_compartment API.
         """
         resource_path = "/streams/{streamId}/actions/changeCompartment"
         method = "POST"
@@ -346,7 +346,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/change_stream_pool_compartment.py.html>`__ to see an example of how to use change_stream_pool_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/change_stream_pool_compartment.py.html>`__ to see an example of how to use change_stream_pool_compartment API.
         """
         resource_path = "/streampools/{streamPoolId}/actions/changeCompartment"
         method = "POST"
@@ -447,7 +447,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/create_connect_harness.py.html>`__ to see an example of how to use create_connect_harness API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/create_connect_harness.py.html>`__ to see an example of how to use create_connect_harness API.
         """
         resource_path = "/connectharnesses"
         method = "POST"
@@ -539,7 +539,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/create_stream.py.html>`__ to see an example of how to use create_stream API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/create_stream.py.html>`__ to see an example of how to use create_stream API.
         """
         resource_path = "/streams"
         method = "POST"
@@ -629,7 +629,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/create_stream_pool.py.html>`__ to see an example of how to use create_stream_pool API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/create_stream_pool.py.html>`__ to see an example of how to use create_stream_pool API.
         """
         resource_path = "/streampools"
         method = "POST"
@@ -724,7 +724,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/delete_connect_harness.py.html>`__ to see an example of how to use delete_connect_harness API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/delete_connect_harness.py.html>`__ to see an example of how to use delete_connect_harness API.
         """
         resource_path = "/connectharnesses/{connectHarnessId}"
         method = "DELETE"
@@ -826,7 +826,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/delete_stream.py.html>`__ to see an example of how to use delete_stream API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/delete_stream.py.html>`__ to see an example of how to use delete_stream API.
         """
         resource_path = "/streams/{streamId}"
         method = "DELETE"
@@ -925,7 +925,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/delete_stream_pool.py.html>`__ to see an example of how to use delete_stream_pool API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/delete_stream_pool.py.html>`__ to see an example of how to use delete_stream_pool API.
         """
         resource_path = "/streampools/{streamPoolId}"
         method = "DELETE"
@@ -1020,7 +1020,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/get_connect_harness.py.html>`__ to see an example of how to use get_connect_harness API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/get_connect_harness.py.html>`__ to see an example of how to use get_connect_harness API.
         """
         resource_path = "/connectharnesses/{connectHarnessId}"
         method = "GET"
@@ -1115,7 +1115,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/get_stream.py.html>`__ to see an example of how to use get_stream API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/get_stream.py.html>`__ to see an example of how to use get_stream API.
         """
         resource_path = "/streams/{streamId}"
         method = "GET"
@@ -1210,7 +1210,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/get_stream_pool.py.html>`__ to see an example of how to use get_stream_pool API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/get_stream_pool.py.html>`__ to see an example of how to use get_stream_pool API.
         """
         resource_path = "/streampools/{streamPoolId}"
         method = "GET"
@@ -1332,7 +1332,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/list_connect_harnesses.py.html>`__ to see an example of how to use list_connect_harnesses API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/list_connect_harnesses.py.html>`__ to see an example of how to use list_connect_harnesses API.
         """
         resource_path = "/connectharnesses"
         method = "GET"
@@ -1484,7 +1484,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/list_stream_pools.py.html>`__ to see an example of how to use list_stream_pools API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/list_stream_pools.py.html>`__ to see an example of how to use list_stream_pools API.
         """
         resource_path = "/streampools"
         method = "GET"
@@ -1642,7 +1642,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/list_streams.py.html>`__ to see an example of how to use list_streams API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/list_streams.py.html>`__ to see an example of how to use list_streams API.
         """
         resource_path = "/streams"
         method = "GET"
@@ -1776,7 +1776,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/update_connect_harness.py.html>`__ to see an example of how to use update_connect_harness API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/update_connect_harness.py.html>`__ to see an example of how to use update_connect_harness API.
         """
         resource_path = "/connectharnesses/{connectHarnessId}"
         method = "PUT"
@@ -1881,7 +1881,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/update_stream.py.html>`__ to see an example of how to use update_stream API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/update_stream.py.html>`__ to see an example of how to use update_stream API.
         """
         resource_path = "/streams/{streamId}"
         method = "PUT"
@@ -1986,7 +1986,7 @@ class StreamAdminClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/streaming/update_stream_pool.py.html>`__ to see an example of how to use update_stream_pool API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/streaming/update_stream_pool.py.html>`__ to see an example of how to use update_stream_pool API.
         """
         resource_path = "/streampools/{streamPoolId}"
         method = "PUT"

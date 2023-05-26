@@ -140,7 +140,7 @@ class AppmgmtControlClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/appmgmtcontrol/activate_monitoring_plugin.py.html>`__ to see an example of how to use activate_monitoring_plugin API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/appmgmtcontrol/activate_monitoring_plugin.py.html>`__ to see an example of how to use activate_monitoring_plugin API.
         """
         resource_path = "/monitoredInstances/{monitoredInstanceId}/actions/activateMonitoringPlugin"
         method = "POST"
@@ -232,7 +232,7 @@ class AppmgmtControlClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/appmgmtcontrol/get_monitored_instance.py.html>`__ to see an example of how to use get_monitored_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/appmgmtcontrol/get_monitored_instance.py.html>`__ to see an example of how to use get_monitored_instance API.
         """
         resource_path = "/monitoredInstances/{monitoredInstanceId}"
         method = "GET"
@@ -326,7 +326,7 @@ class AppmgmtControlClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/appmgmtcontrol/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/appmgmtcontrol/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -439,7 +439,7 @@ class AppmgmtControlClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/appmgmtcontrol/list_monitored_instances.py.html>`__ to see an example of how to use list_monitored_instances API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/appmgmtcontrol/list_monitored_instances.py.html>`__ to see an example of how to use list_monitored_instances API.
         """
         resource_path = "/monitoredInstances"
         method = "GET"
@@ -558,7 +558,7 @@ class AppmgmtControlClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/appmgmtcontrol/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/appmgmtcontrol/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -668,7 +668,7 @@ class AppmgmtControlClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/appmgmtcontrol/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/appmgmtcontrol/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -781,7 +781,7 @@ class AppmgmtControlClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/appmgmtcontrol/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/appmgmtcontrol/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -883,7 +883,7 @@ class AppmgmtControlClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/appmgmtcontrol/publish_top_processes_metrics.py.html>`__ to see an example of how to use publish_top_processes_metrics API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/appmgmtcontrol/publish_top_processes_metrics.py.html>`__ to see an example of how to use publish_top_processes_metrics API.
         """
         resource_path = "/monitoredInstances/{monitoredInstanceId}/actions/publishTopProcessesMetrics"
         method = "POST"

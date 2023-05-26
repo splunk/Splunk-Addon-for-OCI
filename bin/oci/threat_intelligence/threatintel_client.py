@@ -134,7 +134,7 @@ class ThreatintelClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/threatintelligence/get_indicator.py.html>`__ to see an example of how to use get_indicator API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/threatintelligence/get_indicator.py.html>`__ to see an example of how to use get_indicator API.
         """
         resource_path = "/indicators/{indicatorId}"
         method = "GET"
@@ -240,7 +240,7 @@ class ThreatintelClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/threatintelligence/list_indicator_counts.py.html>`__ to see an example of how to use list_indicator_counts API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/threatintelligence/list_indicator_counts.py.html>`__ to see an example of how to use list_indicator_counts API.
         """
         resource_path = "/indicatorCounts"
         method = "GET"
@@ -386,7 +386,7 @@ class ThreatintelClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/threatintelligence/list_indicators.py.html>`__ to see an example of how to use list_indicators API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/threatintelligence/list_indicators.py.html>`__ to see an example of how to use list_indicators API.
         """
         resource_path = "/indicators"
         method = "GET"
@@ -536,7 +536,7 @@ class ThreatintelClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/threatintelligence/list_threat_types.py.html>`__ to see an example of how to use list_threat_types API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/threatintelligence/list_threat_types.py.html>`__ to see an example of how to use list_threat_types API.
         """
         resource_path = "/threatTypes"
         method = "GET"
@@ -647,7 +647,7 @@ class ThreatintelClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/threatintelligence/summarize_indicators.py.html>`__ to see an example of how to use summarize_indicators API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/threatintelligence/summarize_indicators.py.html>`__ to see an example of how to use summarize_indicators API.
         """
         resource_path = "/indicators/actions/summarize"
         method = "POST"

@@ -132,7 +132,7 @@ class CertificatesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/certificates/get_ca_bundle.py.html>`__ to see an example of how to use get_ca_bundle API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/certificates/get_ca_bundle.py.html>`__ to see an example of how to use get_ca_bundle API.
         """
         resource_path = "/caBundles/{caBundleId}"
         method = "GET"
@@ -237,7 +237,7 @@ class CertificatesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/certificates/get_certificate_authority_bundle.py.html>`__ to see an example of how to use get_certificate_authority_bundle API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/certificates/get_certificate_authority_bundle.py.html>`__ to see an example of how to use get_certificate_authority_bundle API.
         """
         resource_path = "/certificateAuthorityBundles/{certificateAuthorityId}"
         method = "GET"
@@ -369,7 +369,7 @@ class CertificatesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/certificates/get_certificate_bundle.py.html>`__ to see an example of how to use get_certificate_bundle API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/certificates/get_certificate_bundle.py.html>`__ to see an example of how to use get_certificate_bundle API.
         """
         resource_path = "/certificateBundles/{certificateId}"
         method = "GET"
@@ -501,7 +501,7 @@ class CertificatesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/certificates/list_certificate_authority_bundle_versions.py.html>`__ to see an example of how to use list_certificate_authority_bundle_versions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/certificates/list_certificate_authority_bundle_versions.py.html>`__ to see an example of how to use list_certificate_authority_bundle_versions API.
         """
         resource_path = "/certificateAuthorityBundles/{certificateAuthorityId}/versions"
         method = "GET"
@@ -629,7 +629,7 @@ class CertificatesClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/certificates/list_certificate_bundle_versions.py.html>`__ to see an example of how to use list_certificate_bundle_versions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/certificates/list_certificate_bundle_versions.py.html>`__ to see an example of how to use list_certificate_bundle_versions API.
         """
         resource_path = "/certificateBundles/{certificateId}/versions"
         method = "GET"

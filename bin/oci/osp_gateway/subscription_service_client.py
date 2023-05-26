@@ -154,7 +154,7 @@ class SubscriptionServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ospgateway/authorize_subscription_payment.py.html>`__ to see an example of how to use authorize_subscription_payment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ospgateway/authorize_subscription_payment.py.html>`__ to see an example of how to use authorize_subscription_payment API.
         """
         resource_path = "/subscriptions/{subscriptionId}/actions/psd2auth"
         method = "POST"
@@ -270,7 +270,7 @@ class SubscriptionServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ospgateway/get_subscription.py.html>`__ to see an example of how to use get_subscription API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ospgateway/get_subscription.py.html>`__ to see an example of how to use get_subscription API.
         """
         resource_path = "/subscriptions/{subscriptionId}"
         method = "GET"
@@ -392,7 +392,7 @@ class SubscriptionServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ospgateway/list_subscriptions.py.html>`__ to see an example of how to use list_subscriptions API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ospgateway/list_subscriptions.py.html>`__ to see an example of how to use list_subscriptions API.
         """
         resource_path = "/subscriptions"
         method = "GET"
@@ -525,7 +525,7 @@ class SubscriptionServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ospgateway/pay_subscription.py.html>`__ to see an example of how to use pay_subscription API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ospgateway/pay_subscription.py.html>`__ to see an example of how to use pay_subscription API.
         """
         resource_path = "/subscriptions/{subscriptionId}/actions/pay"
         method = "POST"
@@ -651,7 +651,7 @@ class SubscriptionServiceClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/ospgateway/update_subscription.py.html>`__ to see an example of how to use update_subscription API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/ospgateway/update_subscription.py.html>`__ to see an example of how to use update_subscription API.
         """
         resource_path = "/subscriptions/{subscriptionId}"
         method = "PUT"

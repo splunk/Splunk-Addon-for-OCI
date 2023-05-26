@@ -138,7 +138,7 @@ class DomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/create_domain.py.html>`__ to see an example of how to use create_domain API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/tenantmanagercontrolplane/create_domain.py.html>`__ to see an example of how to use create_domain API.
         """
         resource_path = "/domains"
         method = "POST"
@@ -230,7 +230,7 @@ class DomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/delete_domain.py.html>`__ to see an example of how to use delete_domain API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/tenantmanagercontrolplane/delete_domain.py.html>`__ to see an example of how to use delete_domain API.
         """
         resource_path = "/domains/{domainId}"
         method = "DELETE"
@@ -322,7 +322,7 @@ class DomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/get_domain.py.html>`__ to see an example of how to use get_domain API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/tenantmanagercontrolplane/get_domain.py.html>`__ to see an example of how to use get_domain API.
         """
         resource_path = "/domains/{domainId}"
         method = "GET"
@@ -449,7 +449,7 @@ class DomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/list_domains.py.html>`__ to see an example of how to use list_domains API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/tenantmanagercontrolplane/list_domains.py.html>`__ to see an example of how to use list_domains API.
         """
         resource_path = "/domains"
         method = "GET"
@@ -590,7 +590,7 @@ class DomainClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/tenantmanagercontrolplane/update_domain.py.html>`__ to see an example of how to use update_domain API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/tenantmanagercontrolplane/update_domain.py.html>`__ to see an example of how to use update_domain API.
         """
         resource_path = "/domains/{domainId}"
         method = "PUT"

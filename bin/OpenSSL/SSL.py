@@ -59,7 +59,6 @@ __all__ = [
     "OP_NO_TLSv1",
     "OP_NO_TLSv1_1",
     "OP_NO_TLSv1_2",
-    "OP_NO_TLSv1_3",
     "MODE_RELEASE_BUFFERS",
     "OP_SINGLE_DH_USE",
     "OP_SINGLE_ECDH_USE",
@@ -84,8 +83,6 @@ __all__ = [
     "OP_NO_QUERY_MTU",
     "OP_COOKIE_EXCHANGE",
     "OP_NO_TICKET",
-    "OP_NO_RENEGOTIATION",
-    "OP_IGNORE_UNEXPECTED_EOF",
     "OP_ALL",
     "VERIFY_PEER",
     "VERIFY_FAIL_IF_NO_PEER_CERT",
@@ -172,6 +169,7 @@ OP_NO_TLSv1_1 = _lib.SSL_OP_NO_TLSv1_1
 OP_NO_TLSv1_2 = _lib.SSL_OP_NO_TLSv1_2
 try:
     OP_NO_TLSv1_3 = _lib.SSL_OP_NO_TLSv1_3
+    __all__.append("OP_NO_TLSv1_3")
 except AttributeError:
     pass
 
@@ -208,11 +206,13 @@ OP_NO_TICKET = _lib.SSL_OP_NO_TICKET
 
 try:
     OP_NO_RENEGOTIATION = _lib.SSL_OP_NO_RENEGOTIATION
+    __all__.append("OP_NO_RENEGOTIATION")
 except AttributeError:
     pass
 
 try:
     OP_IGNORE_UNEXPECTED_EOF = _lib.SSL_OP_IGNORE_UNEXPECTED_EOF
+    __all__.append("OP_IGNORE_UNEXPECTED_EOF")
 except AttributeError:
     pass
 
@@ -1916,7 +1916,6 @@ class Connection:
         buf = _text_to_bytes_and_warn("buf", buf)
 
         with _ffi.from_buffer(buf) as data:
-
             left_to_send = len(buf)
             total_sent = 0
 
@@ -2159,6 +2158,37 @@ class Connection:
             raise WantReadError()
         if result < 0:
             self._raise_ssl_error(self._ssl, result)
+
+    def DTLSv1_get_timeout(self):
+        """
+        Determine when the DTLS SSL object next needs to perform internal
+        processing due to the passage of time.
+
+        When the returned number of seconds have passed, the
+        :meth:`DTLSv1_handle_timeout` method needs to be called.
+
+        :return: The time left in seconds before the next timeout or `None`
+            if no timeout is currently active.
+        """
+        ptv_sec = _ffi.new("time_t *")
+        ptv_usec = _ffi.new("long *")
+        if _lib.Cryptography_DTLSv1_get_timeout(self._ssl, ptv_sec, ptv_usec):
+            return ptv_sec[0] + (ptv_usec[0] / 1000000)
+        else:
+            return None
+
+    def DTLSv1_handle_timeout(self):
+        """
+        Handles any timeout events which have become pending on a DTLS SSL
+        object.
+
+        :return: `True` if there was a pending timeout, `False` otherwise.
+        """
+        result = _lib.DTLSv1_handle_timeout(self._ssl)
+        if result < 0:
+            self._raise_ssl_error(self._ssl, result)
+        else:
+            return bool(result)
 
     def bio_shutdown(self):
         """

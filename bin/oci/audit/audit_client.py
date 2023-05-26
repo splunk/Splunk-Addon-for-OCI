@@ -131,7 +131,7 @@ class AuditClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/audit/get_configuration.py.html>`__ to see an example of how to use get_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/audit/get_configuration.py.html>`__ to see an example of how to use get_configuration API.
         """
         resource_path = "/configuration"
         method = "GET"
@@ -244,7 +244,7 @@ class AuditClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/audit/list_events.py.html>`__ to see an example of how to use list_events API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/audit/list_events.py.html>`__ to see an example of how to use list_events API.
         """
         resource_path = "/auditEvents"
         method = "GET"
@@ -335,7 +335,7 @@ class AuditClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/audit/update_configuration.py.html>`__ to see an example of how to use update_configuration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/audit/update_configuration.py.html>`__ to see an example of how to use update_configuration API.
         """
         resource_path = "/configuration"
         method = "PUT"

@@ -135,7 +135,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/add_packages_to_software_source.py.html>`__ to see an example of how to use add_packages_to_software_source API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/add_packages_to_software_source.py.html>`__ to see an example of how to use add_packages_to_software_source API.
         """
         resource_path = "/softwareSources/{softwareSourceId}/actions/addPackages"
         method = "POST"
@@ -239,7 +239,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/attach_child_software_source_to_managed_instance.py.html>`__ to see an example of how to use attach_child_software_source_to_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/attach_child_software_source_to_managed_instance.py.html>`__ to see an example of how to use attach_child_software_source_to_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/actions/attachChildSoftwareSource"
         method = "POST"
@@ -347,7 +347,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/attach_managed_instance_to_managed_instance_group.py.html>`__ to see an example of how to use attach_managed_instance_to_managed_instance_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/attach_managed_instance_to_managed_instance_group.py.html>`__ to see an example of how to use attach_managed_instance_to_managed_instance_group API.
         """
         resource_path = "/managedInstanceGroups/{managedInstanceGroupId}/actions/attachManagedInstance"
         method = "POST"
@@ -460,7 +460,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/attach_parent_software_source_to_managed_instance.py.html>`__ to see an example of how to use attach_parent_software_source_to_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/attach_parent_software_source_to_managed_instance.py.html>`__ to see an example of how to use attach_parent_software_source_to_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/actions/attachParentSoftwareSource"
         method = "POST"
@@ -573,7 +573,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/change_managed_instance_group_compartment.py.html>`__ to see an example of how to use change_managed_instance_group_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/change_managed_instance_group_compartment.py.html>`__ to see an example of how to use change_managed_instance_group_compartment API.
         """
         resource_path = "/managedInstanceGroups/{managedInstanceGroupId}/actions/changeCompartment"
         method = "POST"
@@ -688,7 +688,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/change_scheduled_job_compartment.py.html>`__ to see an example of how to use change_scheduled_job_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/change_scheduled_job_compartment.py.html>`__ to see an example of how to use change_scheduled_job_compartment API.
         """
         resource_path = "/scheduledJobs/{scheduledJobId}/actions/changeCompartment"
         method = "POST"
@@ -803,7 +803,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/change_software_source_compartment.py.html>`__ to see an example of how to use change_software_source_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/change_software_source_compartment.py.html>`__ to see an example of how to use change_software_source_compartment API.
         """
         resource_path = "/softwareSources/{softwareSourceId}/actions/changeCompartment"
         method = "POST"
@@ -909,7 +909,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/create_managed_instance_group.py.html>`__ to see an example of how to use create_managed_instance_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/create_managed_instance_group.py.html>`__ to see an example of how to use create_managed_instance_group API.
         """
         resource_path = "/managedInstanceGroups"
         method = "POST"
@@ -1004,7 +1004,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/create_scheduled_job.py.html>`__ to see an example of how to use create_scheduled_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/create_scheduled_job.py.html>`__ to see an example of how to use create_scheduled_job API.
         """
         resource_path = "/scheduledJobs"
         method = "POST"
@@ -1098,7 +1098,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/create_software_source.py.html>`__ to see an example of how to use create_software_source API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/create_software_source.py.html>`__ to see an example of how to use create_software_source API.
         """
         resource_path = "/softwareSources"
         method = "POST"
@@ -1190,7 +1190,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/delete_managed_instance_group.py.html>`__ to see an example of how to use delete_managed_instance_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/delete_managed_instance_group.py.html>`__ to see an example of how to use delete_managed_instance_group API.
         """
         resource_path = "/managedInstanceGroups/{managedInstanceGroupId}"
         method = "DELETE"
@@ -1289,7 +1289,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/delete_scheduled_job.py.html>`__ to see an example of how to use delete_scheduled_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/delete_scheduled_job.py.html>`__ to see an example of how to use delete_scheduled_job API.
         """
         resource_path = "/scheduledJobs/{scheduledJobId}"
         method = "DELETE"
@@ -1388,7 +1388,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/delete_software_source.py.html>`__ to see an example of how to use delete_software_source API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/delete_software_source.py.html>`__ to see an example of how to use delete_software_source API.
         """
         resource_path = "/softwareSources/{softwareSourceId}"
         method = "DELETE"
@@ -1491,7 +1491,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/detach_child_software_source_from_managed_instance.py.html>`__ to see an example of how to use detach_child_software_source_from_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/detach_child_software_source_from_managed_instance.py.html>`__ to see an example of how to use detach_child_software_source_from_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/actions/detachChildSoftwareSource"
         method = "POST"
@@ -1596,7 +1596,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/detach_managed_instance_from_managed_instance_group.py.html>`__ to see an example of how to use detach_managed_instance_from_managed_instance_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/detach_managed_instance_from_managed_instance_group.py.html>`__ to see an example of how to use detach_managed_instance_from_managed_instance_group API.
         """
         resource_path = "/managedInstanceGroups/{managedInstanceGroupId}/actions/detachManagedInstance"
         method = "POST"
@@ -1707,7 +1707,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/detach_parent_software_source_from_managed_instance.py.html>`__ to see an example of how to use detach_parent_software_source_from_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/detach_parent_software_source_from_managed_instance.py.html>`__ to see an example of how to use detach_parent_software_source_from_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/actions/detachParentSoftwareSource"
         method = "POST"
@@ -1826,7 +1826,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/disable_module_stream_on_managed_instance.py.html>`__ to see an example of how to use disable_module_stream_on_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/disable_module_stream_on_managed_instance.py.html>`__ to see an example of how to use disable_module_stream_on_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/actions/moduleStreams/disable"
         method = "POST"
@@ -1955,7 +1955,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/enable_module_stream_on_managed_instance.py.html>`__ to see an example of how to use enable_module_stream_on_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/enable_module_stream_on_managed_instance.py.html>`__ to see an example of how to use enable_module_stream_on_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/actions/moduleStreams/enable"
         method = "POST"
@@ -2059,7 +2059,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/get_erratum.py.html>`__ to see an example of how to use get_erratum API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/get_erratum.py.html>`__ to see an example of how to use get_erratum API.
         """
         resource_path = "/errata/{erratumId}"
         method = "GET"
@@ -2151,7 +2151,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/get_managed_instance.py.html>`__ to see an example of how to use get_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/get_managed_instance.py.html>`__ to see an example of how to use get_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}"
         method = "GET"
@@ -2243,7 +2243,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/get_managed_instance_group.py.html>`__ to see an example of how to use get_managed_instance_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/get_managed_instance_group.py.html>`__ to see an example of how to use get_managed_instance_group API.
         """
         resource_path = "/managedInstanceGroups/{managedInstanceGroupId}"
         method = "GET"
@@ -2341,7 +2341,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/get_module_stream.py.html>`__ to see an example of how to use get_module_stream API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/get_module_stream.py.html>`__ to see an example of how to use get_module_stream API.
         """
         resource_path = "/softwareSources/{softwareSourceId}/modules/{moduleName}/streams/{streamName}"
         method = "GET"
@@ -2444,7 +2444,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/get_module_stream_profile.py.html>`__ to see an example of how to use get_module_stream_profile API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/get_module_stream_profile.py.html>`__ to see an example of how to use get_module_stream_profile API.
         """
         resource_path = "/softwareSources/{softwareSourceId}/modules/{moduleName}/streams/{streamName}/profiles/{profileName}"
         method = "GET"
@@ -2539,7 +2539,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/get_scheduled_job.py.html>`__ to see an example of how to use get_scheduled_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/get_scheduled_job.py.html>`__ to see an example of how to use get_scheduled_job API.
         """
         resource_path = "/scheduledJobs/{scheduledJobId}"
         method = "GET"
@@ -2634,7 +2634,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/get_software_package.py.html>`__ to see an example of how to use get_software_package API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/get_software_package.py.html>`__ to see an example of how to use get_software_package API.
         """
         resource_path = "/softwareSources/{softwareSourceId}/softwarePackages/{softwarePackageName}"
         method = "GET"
@@ -2727,7 +2727,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/get_software_source.py.html>`__ to see an example of how to use get_software_source API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/get_software_source.py.html>`__ to see an example of how to use get_software_source API.
         """
         resource_path = "/softwareSources/{softwareSourceId}"
         method = "GET"
@@ -2819,7 +2819,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/get_windows_update.py.html>`__ to see an example of how to use get_windows_update API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/get_windows_update.py.html>`__ to see an example of how to use get_windows_update API.
         """
         resource_path = "/updates/{windowsUpdate}"
         method = "GET"
@@ -2911,7 +2911,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -3015,7 +3015,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/install_all_package_updates_on_managed_instance.py.html>`__ to see an example of how to use install_all_package_updates_on_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/install_all_package_updates_on_managed_instance.py.html>`__ to see an example of how to use install_all_package_updates_on_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/actions/packages/updateAll"
         method = "POST"
@@ -3135,7 +3135,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/install_all_updates_on_managed_instance_group.py.html>`__ to see an example of how to use install_all_updates_on_managed_instance_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/install_all_updates_on_managed_instance_group.py.html>`__ to see an example of how to use install_all_updates_on_managed_instance_group API.
         """
         resource_path = "/managedInstanceGroups/{managedInstanceGroupId}/actions/updates/installAll"
         method = "POST"
@@ -3255,7 +3255,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/install_all_windows_updates_on_managed_instance.py.html>`__ to see an example of how to use install_all_windows_updates_on_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/install_all_windows_updates_on_managed_instance.py.html>`__ to see an example of how to use install_all_windows_updates_on_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/actions/updates/installAll"
         method = "POST"
@@ -3389,7 +3389,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/install_module_stream_profile_on_managed_instance.py.html>`__ to see an example of how to use install_module_stream_profile_on_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/install_module_stream_profile_on_managed_instance.py.html>`__ to see an example of how to use install_module_stream_profile_on_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/actions/streamProfiles/install"
         method = "POST"
@@ -3505,7 +3505,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/install_package_on_managed_instance.py.html>`__ to see an example of how to use install_package_on_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/install_package_on_managed_instance.py.html>`__ to see an example of how to use install_package_on_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/actions/packages/install"
         method = "POST"
@@ -3615,7 +3615,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/install_package_update_on_managed_instance.py.html>`__ to see an example of how to use install_package_update_on_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/install_package_update_on_managed_instance.py.html>`__ to see an example of how to use install_package_update_on_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/actions/packages/update"
         method = "POST"
@@ -3727,7 +3727,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/install_windows_update_on_managed_instance.py.html>`__ to see an example of how to use install_windows_update_on_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/install_windows_update_on_managed_instance.py.html>`__ to see an example of how to use install_windows_update_on_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/actions/updates/install"
         method = "POST"
@@ -3851,7 +3851,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_available_packages_for_managed_instance.py.html>`__ to see an example of how to use list_available_packages_for_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_available_packages_for_managed_instance.py.html>`__ to see an example of how to use list_available_packages_for_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/packages/available"
         method = "GET"
@@ -3999,7 +3999,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_available_software_sources_for_managed_instance.py.html>`__ to see an example of how to use list_available_software_sources_for_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_available_software_sources_for_managed_instance.py.html>`__ to see an example of how to use list_available_software_sources_for_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/availableSoftwareSources"
         method = "GET"
@@ -4147,7 +4147,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_available_updates_for_managed_instance.py.html>`__ to see an example of how to use list_available_updates_for_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_available_updates_for_managed_instance.py.html>`__ to see an example of how to use list_available_updates_for_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/packages/updates"
         method = "GET"
@@ -4300,7 +4300,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_available_windows_updates_for_managed_instance.py.html>`__ to see an example of how to use list_available_windows_updates_for_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_available_windows_updates_for_managed_instance.py.html>`__ to see an example of how to use list_available_windows_updates_for_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/updates/available"
         method = "GET"
@@ -4467,7 +4467,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_errata.py.html>`__ to see an example of how to use list_errata API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_errata.py.html>`__ to see an example of how to use list_errata API.
         """
         resource_path = "/errata"
         method = "GET"
@@ -4609,7 +4609,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_managed_instance_errata.py.html>`__ to see an example of how to use list_managed_instance_errata API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_managed_instance_errata.py.html>`__ to see an example of how to use list_managed_instance_errata API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/errata"
         method = "GET"
@@ -4764,7 +4764,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_managed_instance_groups.py.html>`__ to see an example of how to use list_managed_instance_groups API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_managed_instance_groups.py.html>`__ to see an example of how to use list_managed_instance_groups API.
         """
         resource_path = "/managedInstanceGroups"
         method = "GET"
@@ -4919,7 +4919,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_managed_instances.py.html>`__ to see an example of how to use list_managed_instances API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_managed_instances.py.html>`__ to see an example of how to use list_managed_instances API.
         """
         resource_path = "/managedInstances"
         method = "GET"
@@ -5081,7 +5081,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_module_stream_profiles.py.html>`__ to see an example of how to use list_module_stream_profiles API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_module_stream_profiles.py.html>`__ to see an example of how to use list_module_stream_profiles API.
         """
         resource_path = "/softwareSources/{softwareSourceId}/streamProfiles"
         method = "GET"
@@ -5273,7 +5273,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_module_stream_profiles_on_managed_instance.py.html>`__ to see an example of how to use list_module_stream_profiles_on_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_module_stream_profiles_on_managed_instance.py.html>`__ to see an example of how to use list_module_stream_profiles_on_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/streamProfiles"
         method = "GET"
@@ -5453,7 +5453,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_module_streams.py.html>`__ to see an example of how to use list_module_streams API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_module_streams.py.html>`__ to see an example of how to use list_module_streams API.
         """
         resource_path = "/softwareSources/{softwareSourceId}/moduleStreams"
         method = "GET"
@@ -5644,7 +5644,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_module_streams_on_managed_instance.py.html>`__ to see an example of how to use list_module_streams_on_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_module_streams_on_managed_instance.py.html>`__ to see an example of how to use list_module_streams_on_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/moduleStreams"
         method = "GET"
@@ -5803,7 +5803,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_packages_installed_on_managed_instance.py.html>`__ to see an example of how to use list_packages_installed_on_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_packages_installed_on_managed_instance.py.html>`__ to see an example of how to use list_packages_installed_on_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/packages"
         method = "GET"
@@ -5972,7 +5972,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_scheduled_jobs.py.html>`__ to see an example of how to use list_scheduled_jobs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_scheduled_jobs.py.html>`__ to see an example of how to use list_scheduled_jobs API.
         """
         resource_path = "/scheduledJobs"
         method = "GET"
@@ -6140,7 +6140,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_software_source_packages.py.html>`__ to see an example of how to use list_software_source_packages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_software_source_packages.py.html>`__ to see an example of how to use list_software_source_packages API.
         """
         resource_path = "/softwareSources/{softwareSourceId}/softwarePackages"
         method = "GET"
@@ -6290,7 +6290,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_software_sources.py.html>`__ to see an example of how to use list_software_sources API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_software_sources.py.html>`__ to see an example of how to use list_software_sources API.
         """
         resource_path = "/softwareSources"
         method = "GET"
@@ -6452,7 +6452,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_upcoming_scheduled_jobs.py.html>`__ to see an example of how to use list_upcoming_scheduled_jobs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_upcoming_scheduled_jobs.py.html>`__ to see an example of how to use list_upcoming_scheduled_jobs API.
         """
         resource_path = "/scheduledJobs/upcomingSchedules"
         method = "GET"
@@ -6607,7 +6607,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_windows_updates.py.html>`__ to see an example of how to use list_windows_updates API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_windows_updates.py.html>`__ to see an example of how to use list_windows_updates API.
         """
         resource_path = "/updates"
         method = "GET"
@@ -6743,7 +6743,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_windows_updates_installed_on_managed_instance.py.html>`__ to see an example of how to use list_windows_updates_installed_on_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_windows_updates_installed_on_managed_instance.py.html>`__ to see an example of how to use list_windows_updates_installed_on_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/updates/installed"
         method = "GET"
@@ -6883,7 +6883,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -7019,7 +7019,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -7168,7 +7168,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -7366,7 +7366,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/manage_module_streams_on_managed_instance.py.html>`__ to see an example of how to use manage_module_streams_on_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/manage_module_streams_on_managed_instance.py.html>`__ to see an example of how to use manage_module_streams_on_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/actions/moduleStreams/manage"
         method = "POST"
@@ -7489,7 +7489,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/remove_module_stream_profile_from_managed_instance.py.html>`__ to see an example of how to use remove_module_stream_profile_from_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/remove_module_stream_profile_from_managed_instance.py.html>`__ to see an example of how to use remove_module_stream_profile_from_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/actions/streamProfiles/remove"
         method = "POST"
@@ -7605,7 +7605,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/remove_package_from_managed_instance.py.html>`__ to see an example of how to use remove_package_from_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/remove_package_from_managed_instance.py.html>`__ to see an example of how to use remove_package_from_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/actions/packages/remove"
         method = "POST"
@@ -7708,7 +7708,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/remove_packages_from_software_source.py.html>`__ to see an example of how to use remove_packages_from_software_source API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/remove_packages_from_software_source.py.html>`__ to see an example of how to use remove_packages_from_software_source API.
         """
         resource_path = "/softwareSources/{softwareSourceId}/actions/removePackages"
         method = "POST"
@@ -7815,7 +7815,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/run_scheduled_job_now.py.html>`__ to see an example of how to use run_scheduled_job_now API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/run_scheduled_job_now.py.html>`__ to see an example of how to use run_scheduled_job_now API.
         """
         resource_path = "/scheduledJobs/{scheduledJobId}/actions/runNow"
         method = "POST"
@@ -7936,7 +7936,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/search_software_packages.py.html>`__ to see an example of how to use search_software_packages API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/search_software_packages.py.html>`__ to see an example of how to use search_software_packages API.
         """
         resource_path = "/softwareSources/softwarePackages"
         method = "GET"
@@ -8065,7 +8065,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/skip_next_scheduled_job_execution.py.html>`__ to see an example of how to use skip_next_scheduled_job_execution API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/skip_next_scheduled_job_execution.py.html>`__ to see an example of how to use skip_next_scheduled_job_execution API.
         """
         resource_path = "/scheduledJobs/{scheduledJobId}/actions/skipNextExecution"
         method = "POST"
@@ -8184,7 +8184,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/switch_module_stream_on_managed_instance.py.html>`__ to see an example of how to use switch_module_stream_on_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/switch_module_stream_on_managed_instance.py.html>`__ to see an example of how to use switch_module_stream_on_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}/actions/moduleStreams/switch"
         method = "POST"
@@ -8298,7 +8298,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/update_managed_instance.py.html>`__ to see an example of how to use update_managed_instance API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/update_managed_instance.py.html>`__ to see an example of how to use update_managed_instance API.
         """
         resource_path = "/managedInstances/{managedInstanceId}"
         method = "PUT"
@@ -8404,7 +8404,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/update_managed_instance_group.py.html>`__ to see an example of how to use update_managed_instance_group API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/update_managed_instance_group.py.html>`__ to see an example of how to use update_managed_instance_group API.
         """
         resource_path = "/managedInstanceGroups/{managedInstanceGroupId}"
         method = "PUT"
@@ -8510,7 +8510,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/update_scheduled_job.py.html>`__ to see an example of how to use update_scheduled_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/update_scheduled_job.py.html>`__ to see an example of how to use update_scheduled_job API.
         """
         resource_path = "/scheduledJobs/{scheduledJobId}"
         method = "PUT"
@@ -8616,7 +8616,7 @@ class OsManagementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/osmanagement/update_software_source.py.html>`__ to see an example of how to use update_software_source API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/osmanagement/update_software_source.py.html>`__ to see an example of how to use update_software_source API.
         """
         resource_path = "/softwareSources/{softwareSourceId}"
         method = "PUT"

@@ -21,7 +21,7 @@ class InstanceConfigurationIntelVmLaunchInstancePlatformConfig(InstanceConfigura
 
         :param type:
             The value to assign to the type property of this InstanceConfigurationIntelVmLaunchInstancePlatformConfig.
-            Allowed values for this property are: "AMD_MILAN_BM", "AMD_ROME_BM", "AMD_ROME_BM_GPU", "INTEL_ICELAKE_BM", "INTEL_SKYLAKE_BM", "AMD_VM", "INTEL_VM"
+            Allowed values for this property are: "AMD_MILAN_BM", "AMD_MILAN_BM_GPU", "AMD_ROME_BM", "AMD_ROME_BM_GPU", "INTEL_ICELAKE_BM", "INTEL_SKYLAKE_BM", "AMD_VM", "INTEL_VM"
         :type type: str
 
         :param is_secure_boot_enabled:
@@ -36,25 +36,32 @@ class InstanceConfigurationIntelVmLaunchInstancePlatformConfig(InstanceConfigura
             The value to assign to the is_measured_boot_enabled property of this InstanceConfigurationIntelVmLaunchInstancePlatformConfig.
         :type is_measured_boot_enabled: bool
 
+        :param is_memory_encryption_enabled:
+            The value to assign to the is_memory_encryption_enabled property of this InstanceConfigurationIntelVmLaunchInstancePlatformConfig.
+        :type is_memory_encryption_enabled: bool
+
         """
         self.swagger_types = {
             'type': 'str',
             'is_secure_boot_enabled': 'bool',
             'is_trusted_platform_module_enabled': 'bool',
-            'is_measured_boot_enabled': 'bool'
+            'is_measured_boot_enabled': 'bool',
+            'is_memory_encryption_enabled': 'bool'
         }
 
         self.attribute_map = {
             'type': 'type',
             'is_secure_boot_enabled': 'isSecureBootEnabled',
             'is_trusted_platform_module_enabled': 'isTrustedPlatformModuleEnabled',
-            'is_measured_boot_enabled': 'isMeasuredBootEnabled'
+            'is_measured_boot_enabled': 'isMeasuredBootEnabled',
+            'is_memory_encryption_enabled': 'isMemoryEncryptionEnabled'
         }
 
         self._type = None
         self._is_secure_boot_enabled = None
         self._is_trusted_platform_module_enabled = None
         self._is_measured_boot_enabled = None
+        self._is_memory_encryption_enabled = None
         self._type = 'INTEL_VM'
 
     def __repr__(self):

@@ -142,7 +142,7 @@ class GenericArtifactsContentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/genericartifactscontent/get_generic_artifact_content.py.html>`__ to see an example of how to use get_generic_artifact_content API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/genericartifactscontent/get_generic_artifact_content.py.html>`__ to see an example of how to use get_generic_artifact_content API.
         """
         resource_path = "/generic/artifacts/{artifactId}/content"
         method = "GET"
@@ -253,7 +253,7 @@ class GenericArtifactsContentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/genericartifactscontent/get_generic_artifact_content_by_path.py.html>`__ to see an example of how to use get_generic_artifact_content_by_path API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/genericartifactscontent/get_generic_artifact_content_by_path.py.html>`__ to see an example of how to use get_generic_artifact_content_by_path API.
         """
         resource_path = "/generic/repositories/{repositoryId}/artifactPaths/{artifactPath}/versions/{version}/content"
         method = "GET"
@@ -379,7 +379,7 @@ class GenericArtifactsContentClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/genericartifactscontent/put_generic_artifact_content_by_path.py.html>`__ to see an example of how to use put_generic_artifact_content_by_path API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/genericartifactscontent/put_generic_artifact_content_by_path.py.html>`__ to see an example of how to use put_generic_artifact_content_by_path API.
         """
         resource_path = "/generic/repositories/{repositoryId}/artifactPaths/{artifactPath}/versions/{version}/content"
         method = "PUT"

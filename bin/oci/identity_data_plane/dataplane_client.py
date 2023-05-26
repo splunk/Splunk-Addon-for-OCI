@@ -128,7 +128,7 @@ class DataplaneClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/identitydataplane/generate_scoped_access_token.py.html>`__ to see an example of how to use generate_scoped_access_token API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/identitydataplane/generate_scoped_access_token.py.html>`__ to see an example of how to use generate_scoped_access_token API.
         """
         resource_path = "/actions/generateScopedAccessToken"
         method = "POST"

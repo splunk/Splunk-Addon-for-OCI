@@ -144,7 +144,7 @@ class WaaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/waa/change_web_app_acceleration_compartment.py.html>`__ to see an example of how to use change_web_app_acceleration_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/waa/change_web_app_acceleration_compartment.py.html>`__ to see an example of how to use change_web_app_acceleration_compartment API.
         """
         resource_path = "/webAppAccelerations/{webAppAccelerationId}/actions/changeCompartment"
         method = "POST"
@@ -249,7 +249,7 @@ class WaaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/waa/change_web_app_acceleration_policy_compartment.py.html>`__ to see an example of how to use change_web_app_acceleration_policy_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/waa/change_web_app_acceleration_policy_compartment.py.html>`__ to see an example of how to use change_web_app_acceleration_policy_compartment API.
         """
         resource_path = "/webAppAccelerationPolicies/{webAppAccelerationPolicyId}/actions/changeCompartment"
         method = "POST"
@@ -349,7 +349,7 @@ class WaaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/waa/create_web_app_acceleration.py.html>`__ to see an example of how to use create_web_app_acceleration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/waa/create_web_app_acceleration.py.html>`__ to see an example of how to use create_web_app_acceleration API.
         """
         resource_path = "/webAppAccelerations"
         method = "POST"
@@ -440,7 +440,7 @@ class WaaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/waa/create_web_app_acceleration_policy.py.html>`__ to see an example of how to use create_web_app_acceleration_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/waa/create_web_app_acceleration_policy.py.html>`__ to see an example of how to use create_web_app_acceleration_policy API.
         """
         resource_path = "/webAppAccelerationPolicies"
         method = "POST"
@@ -532,7 +532,7 @@ class WaaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/waa/delete_web_app_acceleration.py.html>`__ to see an example of how to use delete_web_app_acceleration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/waa/delete_web_app_acceleration.py.html>`__ to see an example of how to use delete_web_app_acceleration API.
         """
         resource_path = "/webAppAccelerations/{webAppAccelerationId}"
         method = "DELETE"
@@ -631,7 +631,7 @@ class WaaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/waa/delete_web_app_acceleration_policy.py.html>`__ to see an example of how to use delete_web_app_acceleration_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/waa/delete_web_app_acceleration_policy.py.html>`__ to see an example of how to use delete_web_app_acceleration_policy API.
         """
         resource_path = "/webAppAccelerationPolicies/{webAppAccelerationPolicyId}"
         method = "DELETE"
@@ -725,7 +725,7 @@ class WaaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/waa/get_web_app_acceleration.py.html>`__ to see an example of how to use get_web_app_acceleration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/waa/get_web_app_acceleration.py.html>`__ to see an example of how to use get_web_app_acceleration API.
         """
         resource_path = "/webAppAccelerations/{webAppAccelerationId}"
         method = "GET"
@@ -819,7 +819,7 @@ class WaaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/waa/get_web_app_acceleration_policy.py.html>`__ to see an example of how to use get_web_app_acceleration_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/waa/get_web_app_acceleration_policy.py.html>`__ to see an example of how to use get_web_app_acceleration_policy API.
         """
         resource_path = "/webAppAccelerationPolicies/{webAppAccelerationPolicyId}"
         method = "GET"
@@ -944,7 +944,7 @@ class WaaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/waa/list_web_app_acceleration_policies.py.html>`__ to see an example of how to use list_web_app_acceleration_policies API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/waa/list_web_app_acceleration_policies.py.html>`__ to see an example of how to use list_web_app_acceleration_policies API.
         """
         resource_path = "/webAppAccelerationPolicies"
         method = "GET"
@@ -1098,7 +1098,7 @@ class WaaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/waa/list_web_app_accelerations.py.html>`__ to see an example of how to use list_web_app_accelerations API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/waa/list_web_app_accelerations.py.html>`__ to see an example of how to use list_web_app_accelerations API.
         """
         resource_path = "/webAppAccelerations"
         method = "GET"
@@ -1221,7 +1221,7 @@ class WaaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/waa/purge_web_app_acceleration_cache.py.html>`__ to see an example of how to use purge_web_app_acceleration_cache API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/waa/purge_web_app_acceleration_cache.py.html>`__ to see an example of how to use purge_web_app_acceleration_cache API.
         """
         resource_path = "/webAppAccelerations/{webAppAccelerationId}/actions/purgeCache"
         method = "POST"
@@ -1323,7 +1323,7 @@ class WaaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/waa/update_web_app_acceleration.py.html>`__ to see an example of how to use update_web_app_acceleration API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/waa/update_web_app_acceleration.py.html>`__ to see an example of how to use update_web_app_acceleration API.
         """
         resource_path = "/webAppAccelerations/{webAppAccelerationId}"
         method = "PUT"
@@ -1427,7 +1427,7 @@ class WaaClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/waa/update_web_app_acceleration_policy.py.html>`__ to see an example of how to use update_web_app_acceleration_policy API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/waa/update_web_app_acceleration_policy.py.html>`__ to see an example of how to use update_web_app_acceleration_policy API.
         """
         resource_path = "/webAppAccelerationPolicies/{webAppAccelerationPolicyId}"
         method = "PUT"

@@ -168,10 +168,32 @@ def _set_asn1_time(boundary: Any, when: bytes) -> None:
     """
     if not isinstance(when, bytes):
         raise TypeError("when must be a byte string")
+    # ASN1_TIME_set_string validates the string without writing anything
+    # when the destination is NULL.
+    _openssl_assert(boundary != _ffi.NULL)
 
     set_result = _lib.ASN1_TIME_set_string(boundary, when)
     if set_result == 0:
         raise ValueError("Invalid string")
+
+
+def _new_asn1_time(when: bytes) -> Any:
+    """
+    Behaves like _set_asn1_time but returns a new ASN1_TIME object.
+
+    @param when: A string representation of the desired time value.
+
+    @raise TypeError: If C{when} is not a L{bytes} string.
+    @raise ValueError: If C{when} does not represent a time in the required
+        format.
+    @raise RuntimeError: If the time value cannot be set for some other
+        (unspecified) reason.
+    """
+    ret = _lib.ASN1_TIME_new()
+    _openssl_assert(ret != _ffi.NULL)
+    ret = _ffi.gc(ret, _lib.ASN1_TIME_free)
+    _set_asn1_time(ret, when)
+    return ret
 
 
 def _get_asn1_time(timestamp: Any) -> Optional[bytes]:
@@ -762,7 +784,8 @@ class X509Extension:
         :param bool critical: A flag indicating whether this is a critical
             extension.
 
-        :param value: The value of the extension.
+        :param value: The OpenSSL textual representation of the extension's
+            value.
         :type value: :py:data:`bytes`
 
         :param subject: Optional X509 certificate to use as subject.
@@ -881,7 +904,14 @@ class X509Extension:
         """
         obj = _lib.X509_EXTENSION_get_object(self._extension)
         nid = _lib.OBJ_obj2nid(obj)
-        return _ffi.string(_lib.OBJ_nid2sn(nid))
+        # OpenSSL 3.1.0 has a bug where nid2sn returns NULL for NIDs that
+        # previously returned UNDEF. This is a workaround for that issue.
+        # https://github.com/openssl/openssl/commit/908ba3ed9adbb3df90f76
+        buf = _lib.OBJ_nid2sn(nid)
+        if buf != _ffi.NULL:
+            return _ffi.string(buf)
+        else:
+            return b"UNDEF"
 
     def get_data(self) -> bytes:
         """
@@ -1611,6 +1641,7 @@ class X509StoreFlags:
     INHIBIT_MAP: int = _lib.X509_V_FLAG_INHIBIT_MAP
     NOTIFY_POLICY: int = _lib.X509_V_FLAG_NOTIFY_POLICY
     CHECK_SS_SIGNATURE: int = _lib.X509_V_FLAG_CHECK_SS_SIGNATURE
+    PARTIAL_CHAIN: int = _lib.X509_V_FLAG_PARTIAL_CHAIN
 
 
 class X509Store:
@@ -2282,8 +2313,11 @@ class Revoked:
             as ASN.1 TIME.
         :return: ``None``
         """
-        dt = _lib.X509_REVOKED_get0_revocationDate(self._revoked)
-        return _set_asn1_time(dt, when)
+        revocationDate = _new_asn1_time(when)
+        ret = _lib.X509_REVOKED_set_revocationDate(
+            self._revoked, revocationDate
+        )
+        _openssl_assert(ret == 1)
 
     def get_rev_date(self) -> Optional[bytes]:
         """
@@ -2405,11 +2439,6 @@ class CRL:
         """
         _openssl_assert(_lib.X509_CRL_set_version(self._crl, version) != 0)
 
-    def _set_boundary_time(
-        self, which: Callable[..., Any], when: bytes
-    ) -> None:
-        return _set_asn1_time(which(self._crl), when)
-
     def set_lastUpdate(self, when: bytes) -> None:
         """
         Set when the CRL was last updated.
@@ -2423,7 +2452,9 @@ class CRL:
         :param bytes when: A timestamp string.
         :return: ``None``
         """
-        return self._set_boundary_time(_lib.X509_CRL_get0_lastUpdate, when)
+        lastUpdate = _new_asn1_time(when)
+        ret = _lib.X509_CRL_set1_lastUpdate(self._crl, lastUpdate)
+        _openssl_assert(ret == 1)
 
     def set_nextUpdate(self, when: bytes) -> None:
         """
@@ -2438,7 +2469,9 @@ class CRL:
         :param bytes when: A timestamp string.
         :return: ``None``
         """
-        return self._set_boundary_time(_lib.X509_CRL_get0_nextUpdate, when)
+        nextUpdate = _new_asn1_time(when)
+        ret = _lib.X509_CRL_set1_nextUpdate(self._crl, nextUpdate)
+        _openssl_assert(ret == 1)
 
     def sign(self, issuer_cert: X509, issuer_key: PKey, digest: bytes) -> None:
         """
@@ -2501,23 +2534,26 @@ class CRL:
         if digest_obj == _ffi.NULL:
             raise ValueError("No such digest method")
 
-        bio = _lib.BIO_new(_lib.BIO_s_mem())
-        _openssl_assert(bio != _ffi.NULL)
-
         # A scratch time object to give different values to different CRL
         # fields
         sometime = _lib.ASN1_TIME_new()
         _openssl_assert(sometime != _ffi.NULL)
+        sometime = _ffi.gc(sometime, _lib.ASN1_TIME_free)
 
-        _lib.X509_gmtime_adj(sometime, 0)
-        _lib.X509_CRL_set1_lastUpdate(self._crl, sometime)
+        ret = _lib.X509_gmtime_adj(sometime, 0)
+        _openssl_assert(ret != _ffi.NULL)
+        ret = _lib.X509_CRL_set1_lastUpdate(self._crl, sometime)
+        _openssl_assert(ret == 1)
 
-        _lib.X509_gmtime_adj(sometime, days * 24 * 60 * 60)
-        _lib.X509_CRL_set1_nextUpdate(self._crl, sometime)
+        ret = _lib.X509_gmtime_adj(sometime, days * 24 * 60 * 60)
+        _openssl_assert(ret != _ffi.NULL)
+        ret = _lib.X509_CRL_set1_nextUpdate(self._crl, sometime)
+        _openssl_assert(ret == 1)
 
-        _lib.X509_CRL_set_issuer_name(
+        ret = _lib.X509_CRL_set_issuer_name(
             self._crl, _lib.X509_get_subject_name(cert._x509)
         )
+        _openssl_assert(ret == 1)
 
         sign_result = _lib.X509_CRL_sign(self._crl, key._pkey, digest_obj)
         if not sign_result:
@@ -2527,7 +2563,6 @@ class CRL:
 
 
 class PKCS7:
-
     _pkcs7: Any
 
     def type_is_signed(self) -> bool:
@@ -2891,7 +2926,6 @@ class _PassphraseHelper:
 
     def raise_if_problem(self, exceptionType: Type[Exception] = Error) -> None:
         if self._problems:
-
             # Flush the OpenSSL error queue
             try:
                 _exception_from_error_queue(exceptionType)

@@ -134,7 +134,7 @@ class AnnouncementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/get_announcement.py.html>`__ to see an example of how to use get_announcement API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/announcementsservice/get_announcement.py.html>`__ to see an example of how to use get_announcement API.
         """
         resource_path = "/announcements/{announcementId}"
         method = "GET"
@@ -229,7 +229,7 @@ class AnnouncementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/get_announcement_user_status.py.html>`__ to see an example of how to use get_announcement_user_status API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/announcementsservice/get_announcement_user_status.py.html>`__ to see an example of how to use get_announcement_user_status API.
         """
         resource_path = "/announcements/{announcementId}/userStatus"
         method = "GET"
@@ -371,7 +371,7 @@ class AnnouncementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/list_announcements.py.html>`__ to see an example of how to use list_announcements API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/announcementsservice/list_announcements.py.html>`__ to see an example of how to use list_announcements API.
         """
         resource_path = "/announcements"
         method = "GET"
@@ -521,7 +521,7 @@ class AnnouncementClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/announcementsservice/update_announcement_user_status.py.html>`__ to see an example of how to use update_announcement_user_status API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/announcementsservice/update_announcement_user_status.py.html>`__ to see an example of how to use update_announcement_user_status API.
         """
         resource_path = "/announcements/{announcementId}/userStatus"
         method = "PUT"

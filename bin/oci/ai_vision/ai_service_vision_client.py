@@ -131,7 +131,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/analyze_document.py.html>`__ to see an example of how to use analyze_document API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/analyze_document.py.html>`__ to see an example of how to use analyze_document API.
         """
         resource_path = "/actions/analyzeDocument"
         method = "POST"
@@ -215,7 +215,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/analyze_image.py.html>`__ to see an example of how to use analyze_image API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/analyze_image.py.html>`__ to see an example of how to use analyze_image API.
         """
         resource_path = "/actions/analyzeImage"
         method = "POST"
@@ -306,7 +306,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/cancel_document_job.py.html>`__ to see an example of how to use cancel_document_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/cancel_document_job.py.html>`__ to see an example of how to use cancel_document_job API.
         """
         resource_path = "/documentJobs/{documentJobId}/actions/cancel"
         method = "POST"
@@ -405,7 +405,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/cancel_image_job.py.html>`__ to see an example of how to use cancel_image_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/cancel_image_job.py.html>`__ to see an example of how to use cancel_image_job API.
         """
         resource_path = "/imageJobs/{imageJobId}/actions/cancel"
         method = "POST"
@@ -504,7 +504,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/cancel_work_request.py.html>`__ to see an example of how to use cancel_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "DELETE"
@@ -606,7 +606,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/change_model_compartment.py.html>`__ to see an example of how to use change_model_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/change_model_compartment.py.html>`__ to see an example of how to use change_model_compartment API.
         """
         resource_path = "/models/{modelId}/actions/changeCompartment"
         method = "POST"
@@ -710,7 +710,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/change_project_compartment.py.html>`__ to see an example of how to use change_project_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/change_project_compartment.py.html>`__ to see an example of how to use change_project_compartment API.
         """
         resource_path = "/projects/{projectId}/actions/changeCompartment"
         method = "POST"
@@ -811,7 +811,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/create_document_job.py.html>`__ to see an example of how to use create_document_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/create_document_job.py.html>`__ to see an example of how to use create_document_job API.
         """
         resource_path = "/documentJobs"
         method = "POST"
@@ -903,7 +903,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/create_image_job.py.html>`__ to see an example of how to use create_image_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/create_image_job.py.html>`__ to see an example of how to use create_image_job API.
         """
         resource_path = "/imageJobs"
         method = "POST"
@@ -995,7 +995,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/create_model.py.html>`__ to see an example of how to use create_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/create_model.py.html>`__ to see an example of how to use create_model API.
         """
         resource_path = "/models"
         method = "POST"
@@ -1087,7 +1087,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/create_project.py.html>`__ to see an example of how to use create_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/create_project.py.html>`__ to see an example of how to use create_project API.
         """
         resource_path = "/projects"
         method = "POST"
@@ -1179,7 +1179,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/delete_model.py.html>`__ to see an example of how to use delete_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/delete_model.py.html>`__ to see an example of how to use delete_model API.
         """
         resource_path = "/models/{modelId}"
         method = "DELETE"
@@ -1278,7 +1278,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/delete_project.py.html>`__ to see an example of how to use delete_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/delete_project.py.html>`__ to see an example of how to use delete_project API.
         """
         resource_path = "/projects/{projectId}"
         method = "DELETE"
@@ -1370,7 +1370,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/get_document_job.py.html>`__ to see an example of how to use get_document_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/get_document_job.py.html>`__ to see an example of how to use get_document_job API.
         """
         resource_path = "/documentJobs/{documentJobId}"
         method = "GET"
@@ -1462,7 +1462,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/get_image_job.py.html>`__ to see an example of how to use get_image_job API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/get_image_job.py.html>`__ to see an example of how to use get_image_job API.
         """
         resource_path = "/imageJobs/{imageJobId}"
         method = "GET"
@@ -1554,7 +1554,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/get_model.py.html>`__ to see an example of how to use get_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/get_model.py.html>`__ to see an example of how to use get_model API.
         """
         resource_path = "/models/{modelId}"
         method = "GET"
@@ -1646,7 +1646,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/get_project.py.html>`__ to see an example of how to use get_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/get_project.py.html>`__ to see an example of how to use get_project API.
         """
         resource_path = "/projects/{projectId}"
         method = "GET"
@@ -1738,7 +1738,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/get_work_request.py.html>`__ to see an example of how to use get_work_request API.
         """
         resource_path = "/workRequests/{workRequestId}"
         method = "GET"
@@ -1860,7 +1860,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/list_models.py.html>`__ to see an example of how to use list_models API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/list_models.py.html>`__ to see an example of how to use list_models API.
         """
         resource_path = "/models"
         method = "GET"
@@ -2012,7 +2012,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/list_projects.py.html>`__ to see an example of how to use list_projects API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/list_projects.py.html>`__ to see an example of how to use list_projects API.
         """
         resource_path = "/projects"
         method = "GET"
@@ -2151,7 +2151,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/list_work_request_errors.py.html>`__ to see an example of how to use list_work_request_errors API.
         """
         resource_path = "/workRequests/{workRequestId}/errors"
         method = "GET"
@@ -2287,7 +2287,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/list_work_request_logs.py.html>`__ to see an example of how to use list_work_request_logs API.
         """
         resource_path = "/workRequests/{workRequestId}/logs"
         method = "GET"
@@ -2434,7 +2434,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/list_work_requests.py.html>`__ to see an example of how to use list_work_requests API.
         """
         resource_path = "/workRequests"
         method = "GET"
@@ -2567,7 +2567,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/update_model.py.html>`__ to see an example of how to use update_model API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/update_model.py.html>`__ to see an example of how to use update_model API.
         """
         resource_path = "/models/{modelId}"
         method = "PUT"
@@ -2671,7 +2671,7 @@ class AIServiceVisionClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/aivision/update_project.py.html>`__ to see an example of how to use update_project API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/aivision/update_project.py.html>`__ to see an example of how to use update_project API.
         """
         resource_path = "/projects/{projectId}"
         method = "PUT"

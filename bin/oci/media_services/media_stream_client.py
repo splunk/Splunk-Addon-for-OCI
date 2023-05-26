@@ -139,7 +139,7 @@ class MediaStreamClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/generate_playlist.py.html>`__ to see an example of how to use generate_playlist API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/generate_playlist.py.html>`__ to see an example of how to use generate_playlist API.
         """
         resource_path = "/actions/generatePlaylist"
         method = "GET"
@@ -231,7 +231,7 @@ class MediaStreamClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/mediaservices/generate_session_token.py.html>`__ to see an example of how to use generate_session_token API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/mediaservices/generate_session_token.py.html>`__ to see an example of how to use generate_session_token API.
         """
         resource_path = "/actions/generateSessionToken"
         method = "POST"

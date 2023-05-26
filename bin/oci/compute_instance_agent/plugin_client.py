@@ -141,7 +141,7 @@ class PluginClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/computeinstanceagent/get_instance_agent_plugin.py.html>`__ to see an example of how to use get_instance_agent_plugin API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/computeinstanceagent/get_instance_agent_plugin.py.html>`__ to see an example of how to use get_instance_agent_plugin API.
         """
         resource_path = "/instanceagents/{instanceagentId}/plugins/{pluginName}"
         method = "GET"
@@ -286,7 +286,7 @@ class PluginClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/computeinstanceagent/list_instance_agent_plugins.py.html>`__ to see an example of how to use list_instance_agent_plugins API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/computeinstanceagent/list_instance_agent_plugins.py.html>`__ to see an example of how to use list_instance_agent_plugins API.
         """
         resource_path = "/instanceagents/{instanceagentId}/plugins"
         method = "GET"

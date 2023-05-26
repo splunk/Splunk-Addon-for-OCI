@@ -148,7 +148,7 @@ class RoverClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/change_rover_cluster_compartment.py.html>`__ to see an example of how to use change_rover_cluster_compartment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/change_rover_cluster_compartment.py.html>`__ to see an example of how to use change_rover_cluster_compartment API.
         """
         resource_path = "/roverClusters/{roverClusterId}/actions/changeCompartment"
         method = "POST"
@@ -254,7 +254,7 @@ class RoverClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/create_rover_cluster.py.html>`__ to see an example of how to use create_rover_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/create_rover_cluster.py.html>`__ to see an example of how to use create_rover_cluster API.
         """
         resource_path = "/roverClusters"
         method = "POST"
@@ -355,7 +355,7 @@ class RoverClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/delete_rover_cluster.py.html>`__ to see an example of how to use delete_rover_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/delete_rover_cluster.py.html>`__ to see an example of how to use delete_rover_cluster API.
         """
         resource_path = "/roverClusters/{roverClusterId}"
         method = "DELETE"
@@ -452,7 +452,7 @@ class RoverClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/get_rover_cluster.py.html>`__ to see an example of how to use get_rover_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/get_rover_cluster.py.html>`__ to see an example of how to use get_rover_cluster API.
         """
         resource_path = "/roverClusters/{roverClusterId}"
         method = "GET"
@@ -546,7 +546,7 @@ class RoverClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/get_rover_cluster_certificate.py.html>`__ to see an example of how to use get_rover_cluster_certificate API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/get_rover_cluster_certificate.py.html>`__ to see an example of how to use get_rover_cluster_certificate API.
         """
         resource_path = "/roverClusters/{roverClusterId}/certificate"
         method = "GET"
@@ -669,7 +669,7 @@ class RoverClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/list_rover_clusters.py.html>`__ to see an example of how to use list_rover_clusters API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/list_rover_clusters.py.html>`__ to see an example of how to use list_rover_clusters API.
         """
         resource_path = "/roverClusters"
         method = "GET"
@@ -810,7 +810,7 @@ class RoverClusterClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/rover/update_rover_cluster.py.html>`__ to see an example of how to use update_rover_cluster API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/rover/update_rover_cluster.py.html>`__ to see an example of how to use update_rover_cluster API.
         """
         resource_path = "/roverClusters/{roverClusterId}"
         method = "PUT"

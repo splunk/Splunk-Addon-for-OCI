@@ -27,6 +27,14 @@ class AutonomousDatabaseDataguardAssociation(object):
     #: This constant has a value of "DISABLED_STANDBY"
     ROLE_DISABLED_STANDBY = "DISABLED_STANDBY"
 
+    #: A constant which can be used with the role property of a AutonomousDatabaseDataguardAssociation.
+    #: This constant has a value of "BACKUP_COPY"
+    ROLE_BACKUP_COPY = "BACKUP_COPY"
+
+    #: A constant which can be used with the role property of a AutonomousDatabaseDataguardAssociation.
+    #: This constant has a value of "SNAPSHOT_STANDBY"
+    ROLE_SNAPSHOT_STANDBY = "SNAPSHOT_STANDBY"
+
     #: A constant which can be used with the lifecycle_state property of a AutonomousDatabaseDataguardAssociation.
     #: This constant has a value of "PROVISIONING"
     LIFECYCLE_STATE_PROVISIONING = "PROVISIONING"
@@ -55,6 +63,10 @@ class AutonomousDatabaseDataguardAssociation(object):
     #: This constant has a value of "UNAVAILABLE"
     LIFECYCLE_STATE_UNAVAILABLE = "UNAVAILABLE"
 
+    #: A constant which can be used with the lifecycle_state property of a AutonomousDatabaseDataguardAssociation.
+    #: This constant has a value of "UPDATING"
+    LIFECYCLE_STATE_UPDATING = "UPDATING"
+
     #: A constant which can be used with the peer_role property of a AutonomousDatabaseDataguardAssociation.
     #: This constant has a value of "PRIMARY"
     PEER_ROLE_PRIMARY = "PRIMARY"
@@ -66,6 +78,14 @@ class AutonomousDatabaseDataguardAssociation(object):
     #: A constant which can be used with the peer_role property of a AutonomousDatabaseDataguardAssociation.
     #: This constant has a value of "DISABLED_STANDBY"
     PEER_ROLE_DISABLED_STANDBY = "DISABLED_STANDBY"
+
+    #: A constant which can be used with the peer_role property of a AutonomousDatabaseDataguardAssociation.
+    #: This constant has a value of "BACKUP_COPY"
+    PEER_ROLE_BACKUP_COPY = "BACKUP_COPY"
+
+    #: A constant which can be used with the peer_role property of a AutonomousDatabaseDataguardAssociation.
+    #: This constant has a value of "SNAPSHOT_STANDBY"
+    PEER_ROLE_SNAPSHOT_STANDBY = "SNAPSHOT_STANDBY"
 
     #: A constant which can be used with the peer_autonomous_database_life_cycle_state property of a AutonomousDatabaseDataguardAssociation.
     #: This constant has a value of "PROVISIONING"
@@ -95,6 +115,10 @@ class AutonomousDatabaseDataguardAssociation(object):
     #: This constant has a value of "UNAVAILABLE"
     PEER_AUTONOMOUS_DATABASE_LIFE_CYCLE_STATE_UNAVAILABLE = "UNAVAILABLE"
 
+    #: A constant which can be used with the peer_autonomous_database_life_cycle_state property of a AutonomousDatabaseDataguardAssociation.
+    #: This constant has a value of "UPDATING"
+    PEER_AUTONOMOUS_DATABASE_LIFE_CYCLE_STATE_UPDATING = "UPDATING"
+
     #: A constant which can be used with the protection_mode property of a AutonomousDatabaseDataguardAssociation.
     #: This constant has a value of "MAXIMUM_AVAILABILITY"
     PROTECTION_MODE_MAXIMUM_AVAILABILITY = "MAXIMUM_AVAILABILITY"
@@ -118,13 +142,13 @@ class AutonomousDatabaseDataguardAssociation(object):
 
         :param role:
             The value to assign to the role property of this AutonomousDatabaseDataguardAssociation.
-            Allowed values for this property are: "PRIMARY", "STANDBY", "DISABLED_STANDBY", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for this property are: "PRIMARY", "STANDBY", "DISABLED_STANDBY", "BACKUP_COPY", "SNAPSHOT_STANDBY", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type role: str
 
         :param lifecycle_state:
             The value to assign to the lifecycle_state property of this AutonomousDatabaseDataguardAssociation.
-            Allowed values for this property are: "PROVISIONING", "AVAILABLE", "ROLE_CHANGE_IN_PROGRESS", "TERMINATING", "TERMINATED", "FAILED", "UNAVAILABLE", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for this property are: "PROVISIONING", "AVAILABLE", "ROLE_CHANGE_IN_PROGRESS", "TERMINATING", "TERMINATED", "FAILED", "UNAVAILABLE", "UPDATING", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type lifecycle_state: str
 
@@ -134,7 +158,7 @@ class AutonomousDatabaseDataguardAssociation(object):
 
         :param peer_role:
             The value to assign to the peer_role property of this AutonomousDatabaseDataguardAssociation.
-            Allowed values for this property are: "PRIMARY", "STANDBY", "DISABLED_STANDBY", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for this property are: "PRIMARY", "STANDBY", "DISABLED_STANDBY", "BACKUP_COPY", "SNAPSHOT_STANDBY", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type peer_role: str
 
@@ -144,7 +168,7 @@ class AutonomousDatabaseDataguardAssociation(object):
 
         :param peer_autonomous_database_life_cycle_state:
             The value to assign to the peer_autonomous_database_life_cycle_state property of this AutonomousDatabaseDataguardAssociation.
-            Allowed values for this property are: "PROVISIONING", "AVAILABLE", "ROLE_CHANGE_IN_PROGRESS", "TERMINATING", "TERMINATED", "FAILED", "UNAVAILABLE", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for this property are: "PROVISIONING", "AVAILABLE", "ROLE_CHANGE_IN_PROGRESS", "TERMINATING", "TERMINATED", "FAILED", "UNAVAILABLE", "UPDATING", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type peer_autonomous_database_life_cycle_state: str
 
@@ -296,7 +320,7 @@ class AutonomousDatabaseDataguardAssociation(object):
         **[Required]** Gets the role of this AutonomousDatabaseDataguardAssociation.
         The Data Guard role of the Autonomous Container Database or Autonomous Database, if Autonomous Data Guard is enabled.
 
-        Allowed values for this property are: "PRIMARY", "STANDBY", "DISABLED_STANDBY", 'UNKNOWN_ENUM_VALUE'.
+        Allowed values for this property are: "PRIMARY", "STANDBY", "DISABLED_STANDBY", "BACKUP_COPY", "SNAPSHOT_STANDBY", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
 
 
@@ -315,7 +339,7 @@ class AutonomousDatabaseDataguardAssociation(object):
         :param role: The role of this AutonomousDatabaseDataguardAssociation.
         :type: str
         """
-        allowed_values = ["PRIMARY", "STANDBY", "DISABLED_STANDBY"]
+        allowed_values = ["PRIMARY", "STANDBY", "DISABLED_STANDBY", "BACKUP_COPY", "SNAPSHOT_STANDBY"]
         if not value_allowed_none_or_none_sentinel(role, allowed_values):
             role = 'UNKNOWN_ENUM_VALUE'
         self._role = role
@@ -326,7 +350,7 @@ class AutonomousDatabaseDataguardAssociation(object):
         **[Required]** Gets the lifecycle_state of this AutonomousDatabaseDataguardAssociation.
         The current state of Autonomous Data Guard.
 
-        Allowed values for this property are: "PROVISIONING", "AVAILABLE", "ROLE_CHANGE_IN_PROGRESS", "TERMINATING", "TERMINATED", "FAILED", "UNAVAILABLE", 'UNKNOWN_ENUM_VALUE'.
+        Allowed values for this property are: "PROVISIONING", "AVAILABLE", "ROLE_CHANGE_IN_PROGRESS", "TERMINATING", "TERMINATED", "FAILED", "UNAVAILABLE", "UPDATING", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
 
 
@@ -345,7 +369,7 @@ class AutonomousDatabaseDataguardAssociation(object):
         :param lifecycle_state: The lifecycle_state of this AutonomousDatabaseDataguardAssociation.
         :type: str
         """
-        allowed_values = ["PROVISIONING", "AVAILABLE", "ROLE_CHANGE_IN_PROGRESS", "TERMINATING", "TERMINATED", "FAILED", "UNAVAILABLE"]
+        allowed_values = ["PROVISIONING", "AVAILABLE", "ROLE_CHANGE_IN_PROGRESS", "TERMINATING", "TERMINATED", "FAILED", "UNAVAILABLE", "UPDATING"]
         if not value_allowed_none_or_none_sentinel(lifecycle_state, allowed_values):
             lifecycle_state = 'UNKNOWN_ENUM_VALUE'
         self._lifecycle_state = lifecycle_state
@@ -380,7 +404,7 @@ class AutonomousDatabaseDataguardAssociation(object):
         **[Required]** Gets the peer_role of this AutonomousDatabaseDataguardAssociation.
         The Data Guard role of the Autonomous Container Database or Autonomous Database, if Autonomous Data Guard is enabled.
 
-        Allowed values for this property are: "PRIMARY", "STANDBY", "DISABLED_STANDBY", 'UNKNOWN_ENUM_VALUE'.
+        Allowed values for this property are: "PRIMARY", "STANDBY", "DISABLED_STANDBY", "BACKUP_COPY", "SNAPSHOT_STANDBY", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
 
 
@@ -399,7 +423,7 @@ class AutonomousDatabaseDataguardAssociation(object):
         :param peer_role: The peer_role of this AutonomousDatabaseDataguardAssociation.
         :type: str
         """
-        allowed_values = ["PRIMARY", "STANDBY", "DISABLED_STANDBY"]
+        allowed_values = ["PRIMARY", "STANDBY", "DISABLED_STANDBY", "BACKUP_COPY", "SNAPSHOT_STANDBY"]
         if not value_allowed_none_or_none_sentinel(peer_role, allowed_values):
             peer_role = 'UNKNOWN_ENUM_VALUE'
         self._peer_role = peer_role
@@ -438,7 +462,7 @@ class AutonomousDatabaseDataguardAssociation(object):
         Gets the peer_autonomous_database_life_cycle_state of this AutonomousDatabaseDataguardAssociation.
         The current state of Autonomous Data Guard.
 
-        Allowed values for this property are: "PROVISIONING", "AVAILABLE", "ROLE_CHANGE_IN_PROGRESS", "TERMINATING", "TERMINATED", "FAILED", "UNAVAILABLE", 'UNKNOWN_ENUM_VALUE'.
+        Allowed values for this property are: "PROVISIONING", "AVAILABLE", "ROLE_CHANGE_IN_PROGRESS", "TERMINATING", "TERMINATED", "FAILED", "UNAVAILABLE", "UPDATING", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
 
 
@@ -457,7 +481,7 @@ class AutonomousDatabaseDataguardAssociation(object):
         :param peer_autonomous_database_life_cycle_state: The peer_autonomous_database_life_cycle_state of this AutonomousDatabaseDataguardAssociation.
         :type: str
         """
-        allowed_values = ["PROVISIONING", "AVAILABLE", "ROLE_CHANGE_IN_PROGRESS", "TERMINATING", "TERMINATED", "FAILED", "UNAVAILABLE"]
+        allowed_values = ["PROVISIONING", "AVAILABLE", "ROLE_CHANGE_IN_PROGRESS", "TERMINATING", "TERMINATED", "FAILED", "UNAVAILABLE", "UPDATING"]
         if not value_allowed_none_or_none_sentinel(peer_autonomous_database_life_cycle_state, allowed_values):
             peer_autonomous_database_life_cycle_state = 'UNKNOWN_ENUM_VALUE'
         self._peer_autonomous_database_life_cycle_state = peer_autonomous_database_life_cycle_state

@@ -142,7 +142,7 @@ class ServiceManagerProxyClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemanagerproxy/get_service_environment.py.html>`__ to see an example of how to use get_service_environment API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemanagerproxy/get_service_environment.py.html>`__ to see an example of how to use get_service_environment API.
         """
         resource_path = "/serviceEnvironments/{serviceEnvironmentId}"
         method = "GET"
@@ -275,7 +275,7 @@ class ServiceManagerProxyClient(object):
         :rtype: :class:`~oci.response.Response`
 
         :example:
-        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.90.3/servicemanagerproxy/list_service_environments.py.html>`__ to see an example of how to use list_service_environments API.
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/2.99.0/servicemanagerproxy/list_service_environments.py.html>`__ to see an example of how to use list_service_environments API.
         """
         resource_path = "/serviceEnvironments"
         method = "GET"

@@ -1,5 +1,8 @@
 # OCI Logging Add-On v2
-
+## Release 2.3.2
+- Added retry logic for 50x responses from OCI Streaming
+- Moved README.txt for Splunkbase AppInspect 
+- Update OCI SDK to 2.99.0
 ## Release 2.3.0
 - Native integration for Cloud Guard problems written to OCI Streams via OCI Events.
     - This allows any OCI Event written to the OCI Stream to be written into Splunk

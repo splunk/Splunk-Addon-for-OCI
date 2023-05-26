@@ -192,13 +192,13 @@ Directions: https://docs.splunk.com/Documentation/AddOns/released/Overview/Singl
         - Instructions for creating the key are located here - [https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm)
         - If there is a valid API Key getting `Splitted: 1` in your Splunk logs
             - CLRF - windows line feed – plugin can’t parse
-- Ensure you have the current version of the OCI Splunk Logging plugin. The current version is available [here](https://objectstorage.us-phoenix-1.oraclecloud.com/n/pcainkar/b/Public_Files/o/oci_logging_addon%2Flatest.html)
+- Ensure you have the current version of the OCI Splunk Logging plugin. The current version is available [here](https://splunkbase.splunk.com/app/5222)
 - Check your Splunk python3 version `$SPLUNK_HOME/bin/python3 --version` is python 3.7.11 or below
 -  'Search and Reporting" and search for the following `index=_internal error oci`
     - Authentication Error will appear here
     - Ignore UI related issues
 - Enable Debug Logging: 
-    - Edit $SPLUNK_HOME/etc/apps/oci-logging-addon-v2/bin/oci_logging.py
+    - Edit `$SPLUNK_HOME/etc/apps/TA-oci-logging-addon/bin//bin/oci_logging.py`
     - Change: `logger.basicConfig(level=logger.ERROR, format='%(asctime)s %(levelname)s %(message)s',` 
     - To: `logger.basicConfig(level=logger.DEBUG, format='%(asctime)s %(levelname)s %(message)s',`
     - Go to the Heavy Forwarder:
