@@ -10,7 +10,7 @@ from oci.exceptions import ServiceError
 
 import oci.retry
 import os.path
-from oci._vendor import six
+import six
 import threading
 import logging
 import pprint
