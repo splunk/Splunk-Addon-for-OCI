@@ -27,7 +27,6 @@ import oci
 import multiprocess as mp
 import uuid
 import logging as logger
-import certifi
 # Imports for Splunk Libraries
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".", "lib"))
 from base64 import b64encode, b64decode
@@ -36,7 +35,6 @@ from splunklib import six
 from connectivity_lib.stream import *
 import splunklib.client as client
 from splunklib.modularinput import *
-
 
 # For debugging change ERROR to DEBUG
 logger.basicConfig(level=logger.ERROR, format='%(asctime)s %(levelname)s %(message)s',
