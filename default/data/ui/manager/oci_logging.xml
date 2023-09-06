@@ -46,7 +46,12 @@
           <view name="create"/>
           <view name="list"/>
         </element>
-            <element name="private_key_location" label="OCI API Key File Location">
+        <element name="private_key" type="simplepassword" label="Private Key">
+          <view name="create"/>
+          <view name="edit"/>
+          <key name="exampleText">You paste in your OCI API Key content here. The key should be Private RSA Key in PEM format or OCI Console key from LOCAL USER. Directions for RSA key creation are <![CDATA[<a target="_blank" href="https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm#two">]]>here<![CDATA[</a>]]></key>
+        </element>        
+        <element name="private_key_location" label="OCI API Key File Location">
               <key name="exampleText">Fully qualified file name of the OCI API Key on the Heavy Forwarder's file system. Example: /opt/splunk/etc/apps/TA-oci-logging-addon/keys/key.pem</key>
               <view name="list"/>
               <view name="edit"/>
@@ -175,10 +180,6 @@
           <view name="edit"/>
           <view name="create"/>
           <elements>
-          <element name="private_key" type="fileupload" label="Private Key">
-          <view name="create"/>
-          <key name="exampleText">DEPRECIATED - You can upload a Private RSA Key in PEM format. Directions for RSA key creation are <![CDATA[<a target="_blank" href="https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm#two">]]>here<![CDATA[</a>]]></key>
-        </element>
             <element name="partition" label="Worker Processes">
               <key name="exampleText">Number of partitions in the <![CDATA[<a target="_blank" href="https://docs.oracle.com/en-us/iaas/Content/Streaming/Concepts/partitioningastream.htm#partitioning_a_stream">]]>OCI Stream Pool<![CDATA[</a>]]></key>
               <view name="list"/>
