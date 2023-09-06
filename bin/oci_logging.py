@@ -417,8 +417,8 @@ class Stream(Script):
 
                 logger.debug("function: stream_event: Stream Client Created for file system API Key")
             
-            ## Using Uploaded OCI API Key
-            elif "-----BEGIN RSA PRIVATE KEY-----" in self.input_item["private_key"]:
+            ## Using OCI API Key as simplepassword
+            elif "-----BEGIN " in self.input_item["private_key"]:
                 logger.debug("function: stream_event: Using UI uploaded API Key")
                 global_user_ocid = self.input_item["user_ocid"]
                 global_tenancy_ocid = self.input_item["tenancy_ocid"]
