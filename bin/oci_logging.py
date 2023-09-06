@@ -424,15 +424,16 @@ class Stream(Script):
                 global_tenancy_ocid = self.input_item["tenancy_ocid"]
                 global_fingerprint = self.input_item["fingerprint"]
                 global_private_key = self.input_item["private_key"]
-                splitted = global_private_key.split('-----BEGIN RSA PRIVATE KEY-----')
-                if len(splitted) != 2:
-                    logger.error("Invalid API Key, must be an RSA Key. Spiltted: " + str(len(splitted)))
-                    exit()
-                replaced = splitted[1]
-                private_key = ("-----BEGIN RSA PRIVATE KEY-----" + replaced[:-2]).replace('\\n', '\n')
-                WINDOWS_LINE_ENDING = '\r\n'
-                UNIX_LINE_ENDING = '\n'
-                private_key = private_key.replace(WINDOWS_LINE_ENDING, UNIX_LINE_ENDING)
+
+                if "-----BEGIN RSA PRIVATE KEY-----" in global_private_key:
+                    raw_key = global_private_key.split("-----BEGIN RSA PRIVATE KEY-----")[1].split("-----END RSA PRIVATE KEY-----")[0]
+                    raw_key = raw_key.replace(" ", "\n")
+                    private_key = "-----BEGIN RSA PRIVATE KEY-----\n" + raw_key + "-----END RSA PRIVATE KEY-----"
+
+                if "-----BEGIN PRIVATE KEY-----" in global_private_key:
+                    raw_key = global_private_key.split("-----BEGIN PRIVATE KEY----- ")[1].split("-----END PRIVATE KEY-----")[0]
+                    raw_key = raw_key.replace(" ", "\n")
+                    private_key = "-----BEGIN PRIVATE KEY-----\n" + raw_key + "-----END PRIVATE KEY-----"
 
                 if global_private_key_password is None:
                     logger.debug("function: stream_event: API Key is not using a password")
