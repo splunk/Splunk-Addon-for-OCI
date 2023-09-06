@@ -308,7 +308,10 @@ class Stream(Script):
         return scheme
 
     def validate_input(self, definition):
-        return
+        stream_endpoint = definition.parameters["stream_endpoint"] 
+        try:
+            if not stream_endpoint.startswith("https://") : raise ValueError("%s is not valid HTTPS Streaming Endpoint" % stream_endpoint)   
+        except ValueError: raise ValueError("%s is not valid HTTPS Streaming Endpoint" % stream_endpoint)   
 
     def disable_input(self, input_name):
         global active
