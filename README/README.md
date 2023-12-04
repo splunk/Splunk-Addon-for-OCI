@@ -1,4 +1,4 @@
-# oci-arch-logging-splunk
+
 
 ## Table of Contents
 1. [Overview](#arch)
