@@ -1,4 +1,9 @@
-# OCI Logging Add-On v2
+# OCI Logging Add-On 
+## Release 3.0.0
+- Validating OCI Streaming endpoint URL for HTTPS 
+- Added support for pasting in OCI API Key.  This can be an RSA key or an OCI Console Key for a LOCAL OCI IAM user.
+- Depreciated OCI API key upload feature
+
 ## Release 2.3.2
 - Added retry logic for 50x responses from OCI Streaming
 - Moved README.txt for Splunkbase AppInspect 
