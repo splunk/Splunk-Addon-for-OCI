@@ -49,7 +49,7 @@
         <element name="private_key" type="simplepassword" label="Private Key">
           <view name="create"/>
           <view name="edit"/>
-          <key name="exampleText">You paste in your OCI API Key content here. The key should be Private RSA Key in PEM format or OCI Console key from LOCAL USER. Directions for RSA key creation are <![CDATA[<a target="_blank" href="https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm#two">]]>here<![CDATA[</a>]]></key>
+          <key name="exampleText">Paste in your OCI API Key content here. The key should be Private RSA Key in PEM format or OCI Console key from LOCAL USER. Directions for RSA key creation are <![CDATA[<a target="_blank" href="https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm#two">]]>here<![CDATA[</a>]]></key>
         </element>        
         <element name="private_key_location" label="OCI API Key File Location">
               <key name="exampleText">Fully qualified file name of the OCI API Key on the Heavy Forwarder's file system. Example: /opt/splunk/etc/apps/TA-oci-logging-addon/keys/key.pem</key>
@@ -59,7 +59,7 @@
             </element>
         <element name="private_key_password" type="simplepassword" label="Private Key Passphrase">
           <view name="create"/>
-          <key name="exampleText">If your OCI API Key is password protect please enter the passowrd here. For either an OCI API key on the local file system or uploaded.</key>
+          <key name="exampleText">If your OCI API Key is password protect please enter the password here. For either an OCI API key on the local file system or uploaded.</key>
         </element>
         <element name="tenancy_ocid" label="Tenancy OCID">
           <key name="exampleText">Example: ocid1.tenancy.oc1..</key>
