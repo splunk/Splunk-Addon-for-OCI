@@ -3,8 +3,8 @@
 ## Table of Contents
 1. [Overview](#arch)
 1. [OCI Configuration](#oci-config)
-1. [Splunk Plugin Installation and Setup](#splunk-install)
-1. [Prerequisites for OCI Splunk Logging Pluggin 2.2.0 and up](#prereqs)
+1. [Splunk add-on Installation and Setup](#splunk-install)
+1. [Prerequisites for OCI Splunk Logging Add-on 2.2.0 and up](#prereqs)
 1. [Troubleshooting](#troubleshooting)
 1. [Additional Resources](#resources)
 1. [Release Notes](./README/release-notes.md)
@@ -12,9 +12,9 @@
 
 A security information and event management (SIEM) system is a critical operations tool to manage the security of your cloud resources. Oracle Cloud Infrastructure includes native threat detection, prevention, and response capabilities, which you can leverage to implement an efficient SIEM system using Splunk.
 
-Splunk Enterprise administrators can use the Logging and Streaming services with the Logging Addon for Splunk, to stream logs from resources in the cloud to an existing or new Splunk environment. Administrators can also integrate with other Splunk plugins and data sources, such as threat intelligence feeds, to augment the generation of alerts based on log data.
+Splunk Enterprise administrators can use the Logging and Streaming services with the Logging Addon for Splunk, to stream logs from resources in the cloud to an existing or new Splunk environment. Administrators can also integrate with other Splunk add-ons and data sources, such as threat intelligence feeds, to augment the generation of alerts based on log data.
 
-![OCI Logging Plugin for Splunk Architecture](./README/images/Architecture.png)
+![OCI Logging add-on for Splunk Architecture](./README/images/Architecture.png)
 
 ## <a name="oci-config"></a>OCI Configuration 
 ### Step 1: Create a Stream
@@ -107,12 +107,12 @@ Depending on the access method that you choose, define a least-privilege policy 
 
         `Allow group <Splunk_User_Group> to use stream-pull in compartment <compartment_of_stream>`
 
-## <a name="splunk-install"></a>OCI Configuration Splunk Plugin Installation and Setup
-### Step 1: Download the Plugin
+## <a name="splunk-install"></a>OCI Configuration Splunk Add-on Installation and Setup
+### Step 1: Download the Add-on
 
-Download plugin: https://splunkbase.splunk.com/app/5222
+Download add-on: https://splunkbase.splunk.com/app/5222
 
-### Step 2: Install the Plugin on the Splunk Heavy Forwarder (v8 or greater)
+### Step 2: Install the add-on on the Splunk Heavy Forwarder (v8 or greater)
 
 Directions: https://docs.splunk.com/Documentation/AddOns/released/Overview/Singleserverinstall
 
@@ -121,7 +121,7 @@ Directions: https://docs.splunk.com/Documentation/AddOns/released/Overview/Singl
 1. If Splunk Enterprise prompts you to restart, do so.
 1. Verify that the add-on appears in the list of apps and add-ons. You can also find it on the server at $SPLUNK_HOME/etc/apps/<Name_of_add-on>.
 
-### Step 3: Setup the Plugin on the Heavy Forwarder
+### Step 3: Setup the add-on on the Heavy Forwarder
 
 1. On the Splunk console, navigate to **Settings** then **Data Inputs**
 1. Click on **OCI Logging**
@@ -178,7 +178,7 @@ Directions: https://docs.splunk.com/Documentation/AddOns/released/Overview/Singl
     - Splunk Cloud
 
 ## <a name="troubleshooting"></a>Troubleshooting
-- When trying to install the plugin get following: **"Error connecting to /services/apps/local: The read operation timed out"** 
+- When trying to install the add-on get following: **"Error connecting to /services/apps/local: The read operation timed out"** 
     - Please follow the instructions here [https://community.splunk.com/t5/All-Apps-and-Add-ons/install-add-on-Error-connecting-to-services-apps-local-The-read/m-p/490613](https://community.splunk.com/t5/All-Apps-and-Add-ons/install-add-on-Error-connecting-to-services-apps-local-The-read/m-p/490613)
         ```
         and increase the following timeout in the web.conf
@@ -191,8 +191,8 @@ Directions: https://docs.splunk.com/Documentation/AddOns/released/Overview/Singl
     - If there is an issue with the OCI API key uploaded via the Web UI, have them validate that its a valid RSA key
         - Instructions for creating the key are located here - [https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm)
         - If there is a valid API Key getting `Splitted: 1` in your Splunk logs
-            - CLRF - windows line feed – plugin can’t parse
-- Ensure you have the current version of the OCI Splunk Logging plugin. The current version is available [here](https://objectstorage.us-phoenix-1.oraclecloud.com/n/pcainkar/b/Public_Files/o/oci_logging_addon%2Flatest.html)
+            - CLRF - windows line feed – add-on can’t parse
+- Ensure you have the current version of the OCI Splunk Logging add-on. The current version is available [here](https://objectstorage.us-phoenix-1.oraclecloud.com/n/pcainkar/b/Public_Files/o/oci_logging_addon%2Flatest.html)
 - Check your Splunk python3 version `$SPLUNK_HOME/bin/python3 --version` is python 3.7.11 or below
 -  'Search and Reporting" and search for the following `index=_internal error oci`
     - Authentication Error will appear here
