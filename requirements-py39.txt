@@ -1,0 +1,27 @@
+# Vendored runtime dependencies for Splunk-Addon-for-OCI — Python 3.9 build (v3.1.0)
+#
+# These are unpacked into bin/ by scripts/vendor-bin.sh (or .ps1), which fetches the
+# correct per-platform wheels for Linux x86_64 + Windows x86_64. Pins are the SINGLE
+# SOURCE OF TRUTH the script reads with `grep '^name=='`.
+#
+# Versions are intentionally held where they already support Python 3.9: oci 2.99.0 pins
+# cryptography<40, so 39.0.2 is the ceiling for this branch. The Python 3.13 build lives on
+# a separate branch (see requirements-py313.txt) and bumps oci to lift that ceiling.
+
+# --- compiled deps (fetched per-platform by the vendor script) ---
+oci==2.99.0
+cryptography==39.0.2     # cp36-abi3 wheel; runs on 3.9. Fetched for linux + win.
+cffi==1.15.1             # version-specific _cffi_backend; fetched cp39 for linux + win.
+pycparser==2.21          # cffi dependency (pure python)
+
+# --- pure-python deps (universal wheels) ---
+certifi==2022.12.7
+pyOpenSSL==23.1.1
+pytz==2023.3
+python-dateutil==2.8.2
+six==1.16.0
+circuitbreaker==2.0.0
+
+# --- kept on the 3.9 branch (per maintainer decision); version-tagged pure wheels ---
+multiprocess==0.70.14
+dill==0.3.6

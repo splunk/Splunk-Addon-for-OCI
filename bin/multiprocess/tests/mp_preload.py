@@ -1,6 +1,6 @@
-import multiprocessing as multiprocess
+import multiprocessing
 
-multiprocess.Lock()
+multiprocessing.Lock()
 
 
 def f():
@@ -8,7 +8,7 @@ def f():
 
 
 if __name__ == "__main__":
-    ctx = multiprocess.get_context("forkserver")
+    ctx = multiprocessing.get_context("forkserver")
     modname = "test.mp_preload"
     # Make sure it's importable
     __import__(modname)

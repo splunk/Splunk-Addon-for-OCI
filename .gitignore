@@ -1,4 +1,5 @@
 __pycache__/
+*.pyc
 output/
 local.meta
 .venv
@@ -7,6 +8,8 @@ local.meta
 .env
 .pypirc
 *.so
+# Allow vendored cffi Linux extension (version-specific ABI filename keeps it unambiguous)
+!bin/_cffi_backend.cpython-*.so
 *.log
 *.pdf
 dist/

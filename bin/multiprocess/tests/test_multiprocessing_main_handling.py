@@ -65,6 +65,7 @@ if __name__ == '__main__':
             dt = getattr(time,'monotonic',time.time)() - start_time
             if dt > 60.0:
                 raise RuntimeError("Timed out waiting for results (%.1f sec)" % dt)
+
     results.sort()
     print(start_method, "->", results)
 

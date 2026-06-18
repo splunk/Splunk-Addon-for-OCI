@@ -1,4 +1,15 @@
 # OCI Logging Add-On 
+## Release 3.1.0
+- Upgraded vendored compiled binaries from CPython 3.7 to 3.9 (cffi, cryptography, multiprocess) for Splunk 9.x, which ships Python 3.9. Fixes the `invalid syntax (pool.py)` crash seen on `python3.7m`.
+- Added the previously missing Windows `cryptography` bindings (`_openssl.pyd`, `_rust.pyd`).
+- `inputs.conf`: `python.version` changed from `python3.7` to `python3`.
+- Removed `default/server.conf` (which pinned an app-level `python.version = python3.9`). The
+  modular-input interpreter is now driven solely by `inputs.conf`, making `python.version` the single
+  source of truth and letting Splunk select its bundled Python 3 across 9.x/10.x.
+
+  This release is **dependency-only** — `bin/oci_logging.py` is unchanged from 3.0.x. Validated on
+  Splunk 9.4 (Python 3.9): the addon launches on `python3.9` and ingests live OCI Streaming events.
+
 ## Release 3.0.0
 - Validating OCI Streaming endpoint URL for HTTPS 
 - Added support for pasting in OCI API Key.  This can be an RSA key or an OCI Console Key for a LOCAL OCI IAM user.

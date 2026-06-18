@@ -1,0 +1,27 @@
+# Vendored runtime dependencies for Splunk-Addon-for-OCI — Python 3.13 build (v3.2.0)
+#
+# Built on a SEPARATE branch from the 3.9 bundle. Unpacked into bin/ by
+# scripts/vendor-bin.sh 313 (or .ps1 -PyVersion 313).
+#
+# IMPORTANT: oci must be bumped here — oci 2.99.0 pins cryptography<40, which has NO 3.13
+# wheels. A newer oci lifts the ceiling to cryptography>=43 (cp39-abi3 wheels that also run
+# on 3.13). VERIFY the chosen oci release lists Python 3.13 in its classifiers and that its
+# Requires-Dist permits the cryptography pin below before locking.
+#
+# multiprocess/dill are intentionally ABSENT on this branch: bin/oci_logging.py switches
+# `import multiprocess as mp` -> `import multiprocessing as mp` (stdlib), removing the only
+# version-tagged pure dependency. See the plan / Part B.
+
+# --- compiled deps (fetched per-platform by the vendor script) ---
+oci==2.149.0             # VERIFY: classifiers include Python 3.13 AND pin allows cryptography 43.x
+cryptography==43.0.3     # cp39-abi3 wheel; runs on 3.13. Fetched for linux + win.
+cffi==1.17.1             # first release with cp313 wheels; fetched cp313 for linux + win.
+pycparser==2.22          # cffi dependency (pure python)
+
+# --- pure-python deps (universal wheels) ---
+certifi==2024.8.30
+pyOpenSSL==24.2.1
+pytz==2024.2
+python-dateutil==2.9.0.post0
+six==1.16.0
+circuitbreaker==2.0.0
