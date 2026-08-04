@@ -1,13 +1,47 @@
+# Python bytecode
 __pycache__/
-output/
+*.pyc
+*.pyo
+
+# Ignore compiled binaries generally
+*.so
+*.pyd
+
+# Exception: Do NOT ignore the vendored binaries needed for the add-on to run
+!bin/**/*.so
+!bin/**/*.pyd
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Splunk local changes and metadata
+/local/
+/lookups/*.csv
 local.meta
+
+# Packaging & dist artifacts
+*.tgz
+*.tar.gz
+dist/
+output/
+
+# Virtual environments & developer configurations
 .venv
 .vscode
-.DS_Store
 .env
 .pypirc
-*.so
+.pytest_cache
+
+# Documents & logs
 *.log
 *.pdf
-dist/
-.pytest_cache
+
+# SBOM / dependency scan output (syft, grype, etc.)
+*.cyclonedx.json
+/test.json
+
+# Temp files
+tmp/
+temp_wheel_download/
+

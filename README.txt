@@ -1,4 +1,5 @@
 # Binary File Declaration
-bin/_cffi_backend.cpython-37m-x86_64-linux-gnu.so: This binary file is provided along with oci module and source code for the same can be found at https://pypi.org/project/oci/
-bin/cryptography/hazmat/bindings/_rust.abi3.so: This binary file is provided along with oci module and source code for the same can be found at https://pypi.org/project/oci/
-bin/cryptography/hazmat/bindings/_openssl.abi3.so:  This binary file is provided along with oci module and source code for the same can be found at https://pypi.org/project/oci/
+bin/lib/_cffi_backend.cpython-39-x86_64-linux-gnu.so: This binary file is provided along with the cffi module (required by the vendored cryptography build) and source code for the same can be found at https://pypi.org/project/cffi/
+bin/lib/_cffi_backend.cpython-313-x86_64-linux-gnu.so: This binary file is provided along with the cffi module (required by the vendored cryptography build) and source code for the same can be found at https://pypi.org/project/cffi/
+bin/lib/cryptography/hazmat/bindings/_rust.abi3.so: This binary file is provided along with the cryptography module (cp39-abi3, covers Python 3.9-3.13) and source code for the same can be found at https://pypi.org/project/cryptography/
+bin/lib/cryptography/hazmat/bindings/_rust.pyd: This binary file is provided along with the cryptography module (cp39-abi3, covers Python 3.9-3.13) and source code for the same can be found at https://pypi.org/project/cryptography/

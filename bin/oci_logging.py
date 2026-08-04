@@ -17,9 +17,11 @@
 
 # encoding = utf-8
 # module imports
-import traceback
 import os
 import sys
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".", "lib"))
+
+import traceback
 import time
 import signal
 import json
@@ -29,7 +31,23 @@ import uuid
 import logging as logger
 import certifi
 # Imports for Splunk Libraries
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".", "lib"))
+class SplunklibSixRedirectFinder:
+    def find_spec(self, fullname, path, target=None):
+        if fullname.startswith("splunklib.six"):
+            global_name = fullname.replace("splunklib.six", "six", 1)
+            try:
+                mod = sys.modules.get(global_name)
+                if not mod:
+                    __import__(global_name)
+                    mod = sys.modules[global_name]
+                sys.modules[fullname] = mod
+                return getattr(mod, "__spec__", None)
+            except Exception:
+                pass
+        return None
+
+sys.meta_path.insert(0, SplunklibSixRedirectFinder())
+
 from base64 import b64encode, b64decode
 from urllib.parse import urlparse
 from splunklib import six
@@ -496,72 +514,60 @@ class Stream(Script):
                     results = [pool.apply_async(get_messages, t) for t in TASKS]
                     posi = 0
                     logger.debug("Stream events: Start Posi is: " + str(posi))
-                    if isinstance(results, str):
-                        logger.debug(str(results))
+                    for r in results:
+                        logger.debug("function: stream_event: result is: " + str(r))
+                        logger.debug("function: stream_event: Start of results loop Posi is: " + str(posi))
+                        get_response = r.get()
                         errors = ["400 Cursor Invalid","400 Cursor Expired","400 Cursor Old", "Unknown Error"]
-                        if any(x in results for x in errors):
-                            logger.debug("function: stream_event 400 is: " + str(x))
-                        errors = ["429 Slow Down"]
-                        if any(x in results for x in errors):
-                            logger.debug("function: stream_event 429 Slow Down is: " + str(x))
-                    elif isinstance(results, int):
-                        logger.debug("function: stream_event result is: No messages")
-                        time.sleep(global_interval)
-                    else:
-                        for r in results:
-                            logger.debug("function: stream_event: result is: " + str(r))    
-                            logger.debug("function: stream_event: Start of results loop Posi is: " + str(posi))
-                            get_response = r.get()
-                            errors = ["400 Cursor Invalid","400 Cursor Expired","400 Cursor Old", "Unknown Error"]
-                            logger.debug("function: stream_event get_response is: " + str(get_response))
-                            if get_response is not None:
-                                get_response_str = str(get_response)
-                                logger.debug("function: stream_event get_response has data: " + str(get_response))
-                                logger.debug("function: stream_event: With data of results loop Posi is: " + str(posi))
-                                if any(x in get_response_str for x in errors):
-                                    global_retries[str(posi)] = global_retries[str(posi)] + 1
-                                    logger.debug("Stream events: With Errors of results loop Posi is: " + str(posi))
-                                    global_cursors[str(i)] = get_cursor_by_group(global_stream_clients[i], stream_id, stream_id, str(posi))
-                                    logger.debug("function: stream_event: With data of post cursor loop Posi is: " + str(posi))
-                                    if int(global_retries[str(posi)]) == int(retries):
-                                        ew.log("2","Cursor not valid or no data")
-                                        global_retries[str(posi)] = 0 
-                                if hasattr(get_response, 'data'):
-                                    for message in get_response.data:
-                                        data = b64decode(message.value.encode().decode()).decode("utf-8")
-                                        if data:
-                                            try:
-                                                y = json.loads(data)
-                                                logger.debug("function: stream_event: Loaded JSON from stream")
-                                                if 'subject' in y:
-                                                    logger.debug("function: stream_event: Record has Subject")
-                                                    host = y["subject"]
-                                                    record_time = y["time"]
-                                                elif 'oracle' in y:
-                                                    # Code for Audit Logs
-                                                    logger.debug("function: stream_event: Record has ['oracle']['compartmentid']")
-                                                    host = y["oracle"]["compartmentid"]
-                                                    record_time = y["time"]
+                        logger.debug("function: stream_event get_response is: " + str(get_response))
+                        if get_response is not None:
+                            get_response_str = str(get_response)
+                            logger.debug("function: stream_event get_response has data: " + str(get_response))
+                            logger.debug("function: stream_event: With data of results loop Posi is: " + str(posi))
+                            if any(x in get_response_str for x in errors):
+                                global_retries[str(posi)] = global_retries[str(posi)] + 1
+                                logger.debug("Stream events: With Errors of results loop Posi is: " + str(posi))
+                                global_cursors[str(i)] = get_cursor_by_group(global_stream_clients[i], stream_id, stream_id, str(posi))
+                                logger.debug("function: stream_event: With data of post cursor loop Posi is: " + str(posi))
+                                if int(global_retries[str(posi)]) == int(retries):
+                                    ew.log("2","Cursor not valid or no data")
+                                    global_retries[str(posi)] = 0
+                            if hasattr(get_response, 'data'):
+                                for message in get_response.data:
+                                    data = b64decode(message.value.encode().decode()).decode("utf-8")
+                                    if data:
+                                        try:
+                                            y = json.loads(data)
+                                            logger.debug("function: stream_event: Loaded JSON from stream")
+                                            if 'subject' in y:
+                                                logger.debug("function: stream_event: Record has Subject")
+                                                host = y["subject"]
+                                                record_time = y["time"]
+                                            elif 'oracle' in y:
+                                                # Code for Audit Logs
+                                                logger.debug("function: stream_event: Record has ['oracle']['compartmentid']")
+                                                host = y["oracle"]["compartmentid"]
+                                                record_time = y["time"]
 
-                                                else:
-                                                    # Code for Events
-                                                    logger.info("Cloud Guard Event: " + str(data))
-                                                    logger.debug("function: stream_event: Record has Source")
-                                                    host = y["source"]
-                                                    record_time = y["eventTime"]
+                                            else:
+                                                # Code for Events
+                                                logger.info("Cloud Guard Event: " + str(data))
+                                                logger.debug("function: stream_event: Record has Source")
+                                                host = y["source"]
+                                                record_time = y["eventTime"]
 
 
-                                                logevent = Event(data=data, time=record_time, host=host, index=output_index, done=True, unbroken=True)
-                                                ew.write_event(logevent)
-                                                logger.debug("function: stream_event: Wrote Event to Splunk")
-                                                global_cursors[str(posi)] = get_response.headers["opc-next-cursor"]
-                                                global_retries[str(posi)] = 0 
-                                            except Exception as e:
-                                                logger.info("function: stream_event: Unsupported Record: " + str(data))
-                                                logger.info("function: stream_event: Message: " + str(e))
+                                            logevent = Event(data=data, time=record_time, host=host, index=output_index, done=True, unbroken=True)
+                                            ew.write_event(logevent)
+                                            logger.debug("function: stream_event: Wrote Event to Splunk")
+                                            global_cursors[str(posi)] = get_response.headers["opc-next-cursor"]
+                                            global_retries[str(posi)] = 0
+                                        except Exception as e:
+                                            logger.info("function: stream_event: Unsupported Record: " + str(data))
+                                            logger.info("function: stream_event: Message: " + str(e))
 
-                            posi = posi + 1
-                            logger.debug("function: stream_event: End of for R Posi is: " + str(posi))
+                        posi = posi + 1
+                        logger.debug("function: stream_event: End of for R Posi is: " + str(posi))
                 except Exception as e:
                     logger.debug("function: stream_event: pool exception: " + str(e))
                     pool.close()

@@ -1,4 +1,21 @@
 # OCI Logging Add-On 
+## Release 3.2.0
+- Upgraded Python dependencies to resolve security vulnerabilities: `cryptography` to `48.0.1`, `pyopenssl` to `26.0.0`, and `certifi` to `2024.7.4` (0 vulnerabilities reported by `grype` scan).
+- Added multi-platform binary support for `cryptography` by bundling both Linux `_rust.abi3.so` and Windows `_rust.pyd` extensions.
+- Resolved Python 3.12+ (Splunk 10.x+) compatibility issues by introducing `SplunklibSixRedirectFinder` inside `oci_logging.py` to dynamically intercept and redirect legacy `splunklib.six.moves` imports.
+- Moved all vendored third-party libraries from `bin/` into `bin/lib/` to stop generically-named packages (`OpenSSL`, `cryptography`, `six`, `certifi`, `oci`, etc.) from shadowing, or being shadowed by, other Splunk apps' same-named vendored copies when Splunk reuses a shared Python worker process across apps.
+- Removed the stale `bin/linux_x86_64/bin/oci_logging.py` duplicate (2021-era, inert — outside the path Splunk actually resolves platform-specific scripts from).
+- Completed `README/inputs.conf.spec` to also declare the bare `[oci_logging]` stanza (matching the scheme-default values in `default/inputs.conf`), clearing "Invalid key in stanza [oci_logging]" warnings at Splunk startup.
+- Removed unreachable dead code in `stream_events()`'s multiprocessing result handling (`isinstance(results, str)`/`isinstance(results, int)` branches could never match, since `results` is always a list of `AsyncResult` objects).
+- Added a GitHub Actions CI matrix (`tests/test_bin_lib_imports.py`, Python 3.9/3.13 on Windows and Linux — the exact CPython tags `cffi`'s `_cffi_backend` is vendored for) exercising the vendored `bin/lib` import chain on clean runners. This is what caught two real gaps that manual verification had missed, both masked by ambient packages already present on the machines used to verify by hand (this dev machine and the Splunk Docker container): `cffi`/`_cffi_backend` actually being required by the vendored `cryptography` build (a same-day attempt to remove it as "unused" got reverted once CI caught it), and `typing_extensions` (needed by `pyOpenSSL` 26.0.0's `OpenSSL/crypto.py` for Python 3.8-3.12) never having been vendored at all.
+- Confirmed and documented that Python 3.7 is **not** supported: `cryptography` 48.0.1's vendored wheel is built `cp39-abi3` (checked the actual `WHEEL` metadata, not just classifiers) and hard-fails to load under 3.7 (`DLL load failed`) — an ABI floor, not a missing file. The now-unusable cp37 `_cffi_backend` binary was removed accordingly.
+
+## Release 3.1.0
+- Added Python 3.9 compatibility support for Splunk Enterprise 9.x+ (Linux and Windows x86_64).
+- Bundled Python 3.9 compiled libraries for both Linux (`bin/_cffi_backend.cpython-39-x86_64-linux-gnu.so`) and Windows (`bin/_cffi_backend.cp39-win_amd64.pyd`).
+- Scoped the `python.version = python3.9` configuration strictly under the `[oci_logging]` modular input stanza in `default/inputs.conf`.
+- Removed global `default/server.conf` configuration to prevent settings pollution and dependency conflicts with other Splunk add-ons (Sophos, AWS, GCP, MSCS).
+
 ## Release 3.0.0
 - Validating OCI Streaming endpoint URL for HTTPS 
 - Added support for pasting in OCI API Key.  This can be an RSA key or an OCI Console Key for a LOCAL OCI IAM user.
